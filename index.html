@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI模型选型工作台 - 榜单、对比、价格与教程 | DataLearnerAI</title>
+  <style>
+    :root {
+      --primary: #2563EB;
+      --primary-hover: #1d4ed8;
+      --accent: #3B82F6;
+      --bg: #FFFFFF;
+      --bg-secondary: #F8FAFC;
+      --text: #1E293B;
+      --text-secondary: #64748B;
+      --border: #E2E8F0;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      --max-width: 1200px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0F172A;
+      --bg-secondary: #1E293B;
+      --text: #F1F5F9;
+      --text-secondary: #94A3B8;
+      --border: #334155;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text);
+    }
+
+    .logo img {
+      height: 32px;
+    }
+
+    nav {
+      display: flex;
+      gap: 8px;
+    }
+
+    nav a {
+      color: var(--text-secondary);
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      background: var(--bg-secondary);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 12px;
+      gap: 8px;
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 14px;
+      color: var(--text);
+      width: 120px;
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-secondary);
+    }
+
+    .theme-toggle, .lang-toggle {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    .theme-toggle:hover, .lang-toggle:hover {
+      background: var(--border);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg) 100%);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto 40px;
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .feature-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      width: 280px;
+      text-align: left;
+    }
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .feature-card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+
+    .hero-btns {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--primary);
+      padding: 12px 24px;
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-secondary);
+      text-decoration: none;
+    }
+
+    /* Steps Section */
+    .steps-section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 8px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .section-desc {
+      text-align: center;
+      color: var(--text-secondary);
+      margin-bottom: 40px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .step-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      position: relative;
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .step-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .step-card p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .step-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .step-links a {
+      font-size: 14px;
+      padding: 6px 12px;
+      background: var(--bg-secondary);
+      border-radius: 6px;
+      color: var(--text);
+    }
+
+    .step-links a:hover {
+      background: var(--border);
+      text-decoration: none;
+    }
+
+    /* Stats */
+    .stats-section {
+      padding: 40px 0;
+      background: var(--bg-secondary);
+    }
+
+    .stats-grid {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: ui-monospace, monospace;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    /* Tasks Section */
+    .tasks-section {
+      padding: 60px 0;
+    }
+
+    .task-categories {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .task-block {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+    }
+
+    .task-block h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .task-block > p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .task-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .task-links a {
+      font-size: 14px;
+      padding: 8px 16px;
+      background: var(--bg-secondary);
+      border-radius: 6px;
+      color: var(--text);
+    }
+
+    .task-links a:hover {
+      background: var(--border);
+      text-decoration: none;
+    }
+
+    /* Cards Grid */
+    .cards-section {
+      padding: 60px 0;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .card-link {
+      font-weight: 600;
+    }
+
+    /* Browse Section */
+    .browse-section {
+      padding: 60px 0;
+      background: var(--bg-secondary);
+    }
+
+    .browse-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .browse-block {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .browse-block h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .browse-block > p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .browse-block a {
+      display: block;
+      font-size: 14px;
+      padding: 4px 0;
+      color: var(--primary);
+    }
+
+    .browse-block a:hover {
+      text-decoration: underline;
+    }
+
+    /* Tools Section */
+    .tools-section {
+      padding: 60px 0;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+    }
+
+    .tool-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .tool-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .tool-card p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .tool-card .card-link {
+      font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 48px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 4px 0;
+    }
+
+    .footer-col a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .footer-bottom p {
+      margin-bottom: 8px;
+    }
+
+    .footer-bottom a {
+      color: var(--text-secondary);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <div style="width:32px;height:32px;background:var(--primary);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;">D</div>
+        <span>DataLearnerAI</span>
+      </a>
+      <nav>
+        <a href="#">最新AI资讯</a>
+        <a href="#">大模型排行榜</a>
+        <a href="#">大模型评测基准</a>
+        <a href="#">大模型列表</a>
+        <a href="#">大模型对比</a>
+        <a href="#">资源中心</a>
+        <a href="#">工具</a>
+      </nav>
+      <div class="header-right">
+        <div class="search-box">
+          <span style="color:var(--text-secondary);font-size:14px;">搜索博客</span>
+          <input type="text" placeholder="搜索...">
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">深色</button>
+        <button class="lang-toggle">English</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>从评测到落地，更快选对 AI 模型</h1>
+      <p class="hero-desc">覆盖评测榜单、模型对比、API 价格与部署教程，帮助团队从候选筛选到预算评估，一步到位。</p>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon"></div>
+          <p>榜单 + 多维对比，快速锁定候选模型</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"></div>
+          <p>API 价格 + 成本计算，选型前算清预算</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"></div>
+          <p>教程 + 术语 + 数据集，一站补齐背景知识</p>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="#" class="btn-primary">开始模型选型</a>
+        <a href="#" class="btn-secondary">直接进入模型对比</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <div class="container">
+      <h2 class="section-title">模型选型三步走</h2>
+      <p class="section-desc">从发现候选到预算评估，三步完成选型决策。</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>发现候选模型</h3>
+          <p>从评测榜单、模型库和机构页快速建立候选集。</p>
+          <div class="step-links">
+            <a href="#">大模型列表</a>
+            <a href="#">成本计算器</a>
+            <a href="#">部署教程</a>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>进入多维对比</h3>
+          <p>并行查看评测得分、规格参数、上下文与官方资源。</p>
+          <div class="step-links">
+            <a href="#">评测基准</a>
+            <a href="#">模型对比</a>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>核算价格与预算</h3>
+          <p>把 API 价格、成本计算器和 Token 工具串起来估算投入。</p>
+          <div class="step-links">
+            <a href="#">API 价格</a>
+            <a href="#">Token计数器</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num">834</div>
+          <div class="stat-label">收录大模型数量</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">225</div>
+          <div class="stat-label">原创 AI 博客数量</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">64</div>
+          <div class="stat-label">大模型评测数量</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tasks-section">
+    <div class="container">
+      <h2 class="section-title">按任务开始</h2>
+      <p class="section-desc">明确目标，从这四个方向快速找到需要的工具。</p>
+      <div class="task-categories">
+        <div class="task-block">
+          <h3>模型选型</h3>
+          <p>先筛选候选模型</p>
+          <div class="task-links">
+            <a href="#">查看榜单与模型库</a>
+            <a href="#">最新大模型列表</a>
+            <a href="#">AI研究机构</a>
+            <a href="#">基础大模型专题</a>
+          </div>
+        </div>
+        <div class="task-block">
+          <h3>成本预算</h3>
+          <p>先把价格和预算算清楚</p>
+          <div class="task-links">
+            <a href="#">进入价格与成本工具</a>
+            <a href="#">成本计算器</a>
+            <a href="#">Token 计数器</a>
+            <a href="#">在线聊天模型列表</a>
+          </div>
+        </div>
+        <div class="task-block">
+          <h3>榜单追踪</h3>
+          <p>持续追踪模型变化</p>
+          <div class="task-links">
+            <a href="#">查看评测与榜单</a>
+            <a href="#">评测总览</a>
+            <a href="#">全部评测基准</a>
+            <a href="#">AI模型月报</a>
+          </div>
+        </div>
+        <div class="task-block">
+          <h3>学习研究</h3>
+          <p>了解背景知识和实践资料</p>
+          <div class="task-links">
+            <a href="#">进入教程与内容区</a>
+            <a href="#">大模型教程</a>
+            <a href="#">AI数据集</a>
+            <a href="#">原创博客与快讯</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cards-section">
+    <div class="container">
+      <h2 class="section-title">精选推荐</h2>
+      <p class="section-desc">精选站内热门页面，帮你快速找到关注点。</p>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>大模型评测对比</h3>
+          <p>选择多个模型并按 benchmark 做横向比较，适合快速缩小候选范围。</p>
+          <a href="#" class="card-link">立即进入 →</a>
+        </div>
+        <div class="card">
+          <h3>大模型 API 价格</h3>
+          <p>快速查看主流模型价格区间，和上下文、供应商信息一起判断可用性。</p>
+          <a href="#" class="card-link">立即进入 →</a>
+        </div>
+        <div class="card">
+          <h3>部署与实践教程</h3>
+          <p>涵盖部署、推理、微调和调用实践，帮助工程团队快速上手。</p>
+          <a href="#" class="card-link">立即进入 →</a>
+        </div>
+        <div class="card">
+          <h3>AI Agents 应用集</h3>
+          <p>查看热门智能体产品和应用方向，帮助理解模型在产品层的落地形态。</p>
+          <a href="#" class="card-link">立即进入 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="browse-section">
+    <div class="container">
+      <h2 class="section-title">按类型浏览</h2>
+      <p class="section-desc">按内容分类浏览，直接进入对应模块。</p>
+      <div class="browse-grid">
+        <div class="browse-block">
+          <h3>榜单与评测</h3>
+          <p>聚合综合榜单、专项榜单和 benchmark 详情页，适合快速判断性能与趋势。</p>
+          <a href="#">评测总览</a>
+          <a href="#">全部评测基准</a>
+          <a href="#">文本生成榜单</a>
+        </div>
+        <div class="browse-block">
+          <h3>模型库与机构</h3>
+          <p>查看模型详情、发布机构、基础模型专题和月度动态。</p>
+          <a href="#">大模型列表</a>
+          <a href="#">AI研究机构</a>
+          <a href="#">AI模型月报</a>
+        </div>
+        <div class="browse-block">
+          <h3>数据与研究资料</h3>
+          <p>查找数据集、领域任务和术语，支持研究和方案设计。</p>
+          <a href="#">AI数据集</a>
+          <a href="#">AI领域与任务</a>
+          <a href="#">大模型名词解释</a>
+        </div>
+        <div class="browse-block">
+          <h3>内容与教程</h3>
+          <p>原创博客、快讯和教程，适合团队学习和知识同步。</p>
+          <a href="#">原创深度文章</a>
+          <a href="#">AI资讯快讯</a>
+          <a href="#">大模型教程</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tools-section">
+    <div class="container">
+      <h2 class="section-title">核心工具</h2>
+      <p class="section-desc">辅助模型选型的核心工具，帮你对比、估价、做决策。</p>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <h3>大模型对比工具</h3>
+          <p>对多个模型的 benchmark 结果做横向对比，快速缩小候选范围。</p>
+          <a href="#" class="card-link">打开工具 →</a>
+        </div>
+        <div class="tool-card">
+          <h3>API 价格页</h3>
+          <p>快速查找供应商价格和计费方式，为预算评估提供依据。</p>
+          <a href="#" class="card-link">打开工具 →</a>
+        </div>
+        <div class="tool-card">
+          <h3>成本计算器</h3>
+          <p>按输入输出量估算费用，方便在方案评审前做预算规划。</p>
+          <a href="#" class="card-link">打开工具 →</a>
+        </div>
+        <div class="tool-card">
+          <h3>工具导航</h3>
+          <p>浏览常用 AI 工具，快速了解产品生态。</p>
+          <a href="#" class="card-link">打开工具 →</a>
+        </div>
+        <div class="tool-card">
+          <h3>Prompt 美化工具</h3>
+          <p>把粗糙需求整理成更清晰的提示词，适合快速试验和演示。</p>
+          <a href="#" class="card-link">打开工具 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div style="width:32px;height:32px;background:var(--primary);border-radius:6px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;">D</div>
+            <span>DataLearner AI</span>
+          </a>
+          <p>专注大模型评测、数据资源与实践教学的知识平台，持续更新可落地的 AI 能力图谱。</p>
+          <div class="footer-social">
+            <a href="#">X (Twitter)</a>
+            <a href="#">Email</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>产品</h4>
+          <a href="#">评测榜单</a>
+          <a href="#">模型对比</a>
+          <a href="#">数据资源</a>
+        </div>
+        <div class="footer-col">
+          <h4>资源</h4>
+          <a href="#">部署教程</a>
+          <a href="#">原创内容</a>
+          <a href="#">工具导航</a>
+        </div>
+        <div class="footer-col">
+          <h4>关于</h4>
+          <a href="#">关于我们</a>
+          <a href="#">隐私政策</a>
+          <a href="#">数据收集方法</a>
+          <a href="#">联系我们</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 DataLearner AI. DataLearner 持续整合行业数据与案例，为科研、企业与开发者提供可靠的大模型情报与实践指南。</p>
+        <p><a href="#">隐私政策</a> | <a href="#">服务条款</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.querySelector('.theme-toggle');
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.removeAttribute('data-theme');
+        btn.textContent = '深色';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        btn.textContent = '亮色';
+      }
+    }
+  </script>
+</body>
+</html>
