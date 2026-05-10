@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI编程工具排行榜2025 - 最好用的AI代码助手对比 | AICoderRank</title>
-  <meta name="description" content="2025年最新AI编程工具排行榜，涵盖Cursor、GitHub Copilot、Claude Code、Windsurf等热门AI代码助手。提供功能对比、价格、评分等关键数据，帮助开发者快速选择最合适的AI编程工具。">
-  <meta name="keywords" content="AI编程工具排行,AI代码助手,Cursor vs Copilot,Claude Code,Windsurf,AI编程">
-  <meta property="og:title" content="AI编程工具排行榜2025">
-  <meta property="og:description" content="最全的AI代码助手对比，帮助你选择最适合的编程工具">
+  <title>AICoderRank - AI编程工具排行榜2025 | 最全AI代码助手对比平台</title>
+  <meta name="description" content="2025年最新AI编程工具排行榜，涵盖Cursor、GitHub Copilot、Claude Code等AI代码助手。提供大模型价格对比、编程语言流行度排行、数据库分类排行，帮开发者选择最合适的AI开发工具。">
+  <meta name="keywords" content="AI编程工具排行,AI代码助手,Cursor vs Copilot,Claude Code,大模型价格排行,编程语言排行,数据库排行,AI编程">
+  <meta property="og:title" content="AICoderRank - AI编程工具排行榜">
+  <meta property="og:description" content="最全的AI开发工具对比平台，涵盖编程工具、大模型、编程语言、数据库排行">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://aicoderrank.com/">
 
@@ -223,6 +223,209 @@
       border-color: var(--primary);
     }
 
+    .db-filters {
+      padding: 12px 0;
+      margin-bottom: 16px;
+    }
+    .db-filters > div {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .db-columns {
+      display: grid;
+      grid-template-columns: 60px 200px 1fr 120px 100px 120px;
+      padding: 12px 24px;
+      background: var(--bg-secondary);
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-secondary);
+      gap: 16px;
+      border-radius: var(--radius);
+    }
+
+    /* Home Section */
+    .home-section { padding: 48px 0; }
+    .home-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #818CF8 100%);
+      border-radius: var(--radius-lg);
+      padding: 64px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 48px;
+      color: white;
+    }
+    .home-hero-content { flex: 1; }
+    .home-title {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .home-subtitle { font-size: 20px; opacity: 0.9; margin-bottom: 24px; }
+    .home-tags { display: flex; gap: 16px; flex-wrap: wrap; }
+    .home-tag {
+      background: rgba(255,255,255,0.2);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    .home-hero-cta { display: flex; gap: 16px; }
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s;
+    }
+    .cta-btn.primary { background: white; color: var(--primary); }
+    .cta-btn.primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+    .cta-btn.secondary { background: rgba(255,255,255,0.2); color: white; }
+    .cta-btn.secondary:hover { background: rgba(255,255,255,0.3); }
+
+    .home-categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .category-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-align: center;
+    }
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-color: var(--primary);
+    }
+    .category-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: white;
+    }
+    .category-card h3 { font-size: 20px; margin-bottom: 12px; color: var(--text); }
+    .category-card p { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.6; }
+    .category-count {
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .home-featured { margin-bottom: 48px; }
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .featured-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .featured-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 800;
+      color: white;
+      flex-shrink: 0;
+    }
+    .featured-info h4 { font-size: 18px; margin-bottom: 4px; color: var(--text); }
+    .featured-info p { font-size: 13px; color: var(--text-secondary); }
+    .featured-score {
+      margin-left: auto;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .home-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+    }
+    .stat-card .stat-value {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .stat-card .stat-label { font-size: 14px; color: var(--text-secondary); }
+
+    .home-why { margin-bottom: 48px; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .why-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .why-icon { font-size: 48px; margin-bottom: 16px; }
+    .why-card h4 { font-size: 18px; margin-bottom: 12px; color: var(--text); }
+    .why-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+    @media (max-width: 1024px) {
+      .home-categories { grid-template-columns: repeat(2, 1fr); }
+      .featured-grid { grid-template-columns: repeat(2, 1fr); }
+      .home-stats { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .home-hero { flex-direction: column; text-align: center; padding: 40px 24px; }
+      .home-title { font-size: 32px; }
+      .home-hero-cta { flex-direction: column; width: 100%; }
+      .home-categories { grid-template-columns: 1fr; }
+      .featured-grid { grid-template-columns: 1fr; }
+      .home-stats { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: 1fr; }
+    }
+
     .sort-select {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -264,9 +467,15 @@
     }
 
     .table-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .db-columns {
       display: grid;
       grid-template-columns: 60px 200px 1fr 120px 100px 120px;
-      padding: 16px 24px;
+      padding: 12px 24px;
       background: var(--bg-secondary);
       font-weight: 600;
       font-size: 14px;
@@ -621,10 +830,11 @@
         <span>AICoderRank</span>
       </a>
       <nav>
-        <a href="#" class="active">排行榜</a>
-        <a href="#">工具对比</a>
-        <a href="#">价格比较</a>
-        <a href="#">教程</a>
+        <a href="#" class="active" data-tab="home" onclick="switchTab('home'); return false;">🏠 首页</a>
+        <a href="#" data-tab="tools" onclick="switchTab('tools'); return false;">编程工具排行</a>
+        <a href="#" data-tab="models" onclick="switchTab('models'); return false;">大模型排行</a>
+        <a href="#" data-tab="languages" onclick="switchTab('languages'); return false;">编程语言排行</a>
+        <a href="#" data-tab="databases" onclick="switchTab('databases'); return false;">数据库排行</a>
       </nav>
       <div class="header-right">
         <div class="search-box">
@@ -642,7 +852,128 @@
     </div>
   </header>
 
-  <section class="hero">
+  <!-- Home Section -->
+  <section class="home-section">
+    <div class="container">
+      <!-- Hero Banner -->
+      <div class="home-hero">
+        <div class="home-hero-content">
+          <h1 class="home-title">AI编程工具排行榜</h1>
+          <p class="home-subtitle">2025年最新最全的AI开发工具对比平台</p>
+          <div class="home-tags">
+            <span class="home-tag">🛠️ 50+ 工具收录</span>
+            <span class="home-tag">📊 实时数据更新</span>
+            <span class="home-tag">🌐 中英双语</span>
+          </div>
+        </div>
+        <div class="home-hero-cta">
+          <button class="cta-btn primary" onclick="switchTab('tools')">
+            <i data-lucide="trophy" style="width:20px;height:20px;"></i>
+            查看排行榜
+          </button>
+          <button class="cta-btn secondary" onclick="switchTab('models')">
+            <i data-lucide="cpu" style="width:20px;height:20px;"></i>
+            大模型对比
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Categories -->
+      <div class="home-categories">
+        <div class="category-card" onclick="switchTab('tools')">
+          <div class="category-icon" style="background:linear-gradient(135deg,#7C3AED,#A78BFA);">
+            <i data-lucide="code-2" style="width:32px;height:32px;"></i>
+          </div>
+          <h3>AI编程工具</h3>
+          <p>Cursor、Copilot、Claude Code 等主流AI代码助手对比</p>
+          <div class="category-count">15款工具</div>
+        </div>
+        <div class="category-card" onclick="switchTab('models')">
+          <div class="category-icon" style="background:linear-gradient(135deg,#10A37F,#34D399);">
+            <i data-lucide="brain" style="width:32px;height:32px;"></i>
+          </div>
+          <h3>大模型排行</h3>
+          <p>GPT-4o、Claude、Gemini 等大模型能力与价格对比</p>
+          <div class="category-count">4种分类</div>
+        </div>
+        <div class="category-card" onclick="switchTab('languages')">
+          <div class="category-icon" style="background:linear-gradient(135deg,#F97316,#FB923C);">
+            <i data-lucide="terminal" style="width:32px;height:32px;"></i>
+          </div>
+          <h3>编程语言</h3>
+          <p>Python、JavaScript、TypeScript 等语言流行度排行</p>
+          <div class="category-count">10种语言</div>
+        </div>
+        <div class="category-card" onclick="switchTab('databases')">
+          <div class="category-icon" style="background:linear-gradient(135deg,#3B82F6,#60A5FA);">
+            <i data-lucide="database" style="width:32px;height:32px;"></i>
+          </div>
+          <h3>数据库</h3>
+          <p>MySQL、PostgreSQL、MongoDB、Redis 等数据库对比</p>
+          <div class="category-count">9种分类</div>
+        </div>
+      </div>
+
+      <!-- Featured Tools -->
+      <div class="home-featured">
+        <h2 class="section-title">🔥 热门工具</h2>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </div>
+
+      <!-- Stats Overview -->
+      <div class="home-stats">
+        <div class="stat-card">
+          <div class="stat-value">50+</div>
+          <div class="stat-label">收录工具</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">4</div>
+          <div class="stat-label">排行分类</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">92%</div>
+          <div class="stat-label">用户满意度</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">每日</div>
+          <div class="stat-label">数据更新</div>
+        </div>
+      </div>
+
+      <!-- Why Choose Us -->
+      <div class="home-why">
+        <h2 class="section-title">为什么选择我们</h2>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">📊</div>
+            <h4>客观评分</h4>
+            <p>基于代码生成质量、上下文理解、速度性能等多维度综合评估</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🔄</div>
+            <h4>实时更新</h4>
+            <p>追踪最新版本和功能更新，第一时间更新排名数据</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🌐</div>
+            <h4>双语支持</h4>
+            <p>支持中文和英文，随时切换浏览语言</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">📱</div>
+            <h4>响应式设计</h4>
+            <p>完美适配桌面、平板和手机各种设备</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-banner">
+        <span>广告位</span> - 首页横幅广告 728x90
+      </div>
+    </div>
+  </section>
+
+  <section class="hero" style="display:none;">
     <div class="container">
       <h1 id="heroTitle">2025年AI编程工具排行榜</h1>
       <p class="hero-desc" id="heroDesc">最全的AI代码助手对比，帮你选出最适合的编程工具</p>
@@ -672,7 +1003,7 @@
         <div class="stat-label" id="statTools">收录工具</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value">8</div>
+        <div class="stat-value">4</div>
         <div class="stat-label" id="statFree">免费工具</div>
       </div>
       <div class="stat-item">
@@ -686,51 +1017,9 @@
     </div>
 
     <div class="table-container">
-      <div class="table-header">
-        <div>排名</div>
-        <div>工具</div>
-        <div>评分雷达</div>
-        <div>综合评分</div>
-        <div>价格</div>
-        <div>操作</div>
-      </div>
+      <div class="table-header"></div>
       <div id="toolsTable"></div>
     </div>
-
-    <div class="ad-banner" style="margin: 32px 0;">
-      <span>广告位</span> - 内容间广告 728x90
-    </div>
-
-    <section class="top-section">
-      <h2 class="section-title" id="topTitle">🏆 榜单前三甲</h2>
-      <div class="top-cards" id="topCards"></div>
-    </section>
-
-    <section class="charts-section">
-      <div class="chart-card">
-        <h3 id="priceChartTitle">💰 价格对比</h3>
-        <canvas id="priceChart"></canvas>
-      </div>
-      <div class="chart-card">
-        <h3 id="trendChartTitle">📈 热度趋势</h3>
-        <canvas id="trendChart"></canvas>
-      </div>
-    </section>
-
-    <section class="compare-section">
-      <h2 class="section-title" id="compareTitle">🔍 工具对比</h2>
-      <div class="compare-tools" id="compareTools"></div>
-      <div class="compare-table" id="compareTable"></div>
-    </section>
-
-    <div class="ad-banner" style="margin: 32px 0;">
-      <span>广告位</span> - 侧边栏广告 300x250
-    </div>
-
-    <section class="articles-section">
-      <h2 class="section-title" id="articlesTitle">📚 精选教程</h2>
-      <div class="articles-grid" id="articlesGrid"></div>
-    </section>
   </main>
 
   <footer>
@@ -781,21 +1070,21 @@
   <script>
     // ==================== DATA ====================
     const tools = [
-      { id: 1, name: 'Cursor', vendor: 'Anthropic / Cursor', score: 9.4, price: 'freemium', colors: ['#7C3AED','#A78BFA'], tags: ['AI原生', '代码生成', '智能补全'], desc: '基于Claude的AI代码编辑器，支持多行预测、智能重构。' },
-      { id: 2, name: 'GitHub Copilot', vendor: 'Microsoft', score: 9.2, price: 'paid', colors: ['#6E40C9','#A855F7'], tags: ['代码补全', '多语言', 'IDE集成'], desc: '微软出品，业界最成熟的AI编程助手，支持VS Code等主流IDE。' },
-      { id: 3, name: 'Claude Code', vendor: 'Anthropic', score: 9.3, price: 'paid', colors: ['#D97706','#F59E0B'], tags: ['命令行', '深度理解', '代码审查'], desc: 'Anthropic官方CLI工具，擅长代码审查和复杂任务处理。' },
-      { id: 4, name: 'Windsurf', vendor: 'Codeium', score: 8.9, price: 'freemium', colors: ['#059669','#10B981'], tags: ['Flow AI', '免费额度大', '轻量'], desc: 'Codeium出品的AI编程工具，提供大量免费使用额度。' },
-      { id: 5, name: 'JetBrains AI', vendor: 'JetBrains', score: 8.7, price: 'paid', colors: ['#F97316','#FB923C'], tags: ['IDE深度集成', '代码重构', '文档生成'], desc: '与IntelliJ等JetBrains IDE深度集成，提供全面的AI辅助。' },
-      { id: 6, name: 'Tabnine', vendor: 'Tabnine', score: 8.5, price: 'freemium', colors: ['#2563EB','#3B82F6'], tags: ['本地部署', '隐私保护', '快速补全'], desc: '支持本地运行的AI代码补全工具，注重数据隐私。' },
-      { id: 7, name: 'Replit Agent', vendor: 'Replit', score: 8.6, price: 'paid', colors: ['#8B5CF6','#A78BFA'], tags: ['端到端', '快速部署', '云端'], desc: 'Replit的AI智能体，能自主完成整个项目开发流程。' },
-      { id: 8, name: 'Cody', vendor: 'Sourcegraph', score: 8.4, price: 'freemium', colors: ['#0EA5E9','#38BDF8'], tags: ['代码库理解', '语义搜索', '代码导航'], desc: '基于代码库语义的AI助手，擅长代码理解和导航。' },
-      { id: 9, name: 'CodeWhisperer', vendor: 'Amazon', score: 8.3, price: 'free', colors: ['#F59E0B','#FBBF24'], tags: ['AWS集成', '安全扫描', '免费'], desc: '亚马逊出品，与AWS服务深度集成，有免费个人版。' },
-      { id: 10, name: 'CodeRabbit', vendor: 'CodeRabbit', score: 8.2, price: 'freemium', colors: ['#EC4899','#F472B6'], tags: ['PR审查', '代码优化', '自动化'], desc: '专注于代码审查和PR自动化的AI工具。' },
-      { id: 11, name: 'Supermaven', vendor: 'Supermaven', score: 8.8, price: 'paid', colors: ['#10B981','#34D399'], tags: ['超快补全', '低延迟', '智能'], desc: '以超低延迟著称的AI代码补全工具，速度业界领先。' },
-      { id: 12, name: 'Phind', vendor: 'Phind', score: 8.1, price: 'free', colors: ['#6366F1','#818CF8'], tags: ['搜索引擎', '编程问答', '免费'], desc: 'AI编程搜索引擎，专注于解答编程问题。' },
-      { id: 13, name: 'Blackbox AI', vendor: 'Blackbox', score: 8.0, price: 'freemium', colors: ['#1E293B','#334155'], tags: ['代码提取', '多语言', 'API集成'], desc: '能理解并提取GitHub代码的AI工具，支持代码片段搜索。' },
-      { id: 14, name: 'CodeGenie', vendor: 'Samsung', score: 7.9, price: 'free', colors: ['#0EA5E9','#38BDF8'], tags: ['三星开发', '内部工具', '代码生成'], desc: '三星内部推出的AI编程助手，主要服务于三星开发者。' },
-      { id: 15, name: 'Lyram', vendor: 'Lyram AI', score: 7.8, price: 'freemium', colors: ['#8B5CF6','#A78BFA'], tags: ['协作开发', '团队管理', '代码分析'], desc: '面向团队的AI编程助手，支持多人协作和代码库分析。' }
+      { id: 1, name: 'Cursor', vendor: 'Anthropic / Cursor', score: 9.5, price: 'freemium', colors: ['#7C3AED','#A78BFA'], tags: ['AI原生', '代码生成', '智能补全'], desc: '2025年最受欢迎的AI代码编辑器，基于Claude 3.5 Sonnet，多行预测和智能重构能力最强。' },
+      { id: 2, name: 'GitHub Copilot', vendor: 'Microsoft', score: 9.2, price: 'paid', colors: ['#6E40C9','#A855F7'], tags: ['代码补全', '多语言', 'IDE集成'], desc: '业界最成熟的AI编程助手，市场占用率第一，与VS Code深度集成。' },
+      { id: 3, name: 'Claude Code', vendor: 'Anthropic', score: 9.4, price: 'paid', colors: ['#D97706','#F59E0B'], tags: ['命令行', '深度理解', '代码审查'], desc: 'Anthropic官方CLI工具，代码审查和复杂任务处理能力出众，支持直接操作文件系统。' },
+      { id: 4, name: 'Windsurf', vendor: 'Codeium', score: 8.6, price: 'freemium', colors: ['#059669','#10B981'], tags: ['Flow AI', '免费额度大', '轻量'], desc: 'Codeium出品，提供大量免费额度，Flow AI功能覆盖常见编程场景。' },
+      { id: 5, name: 'JetBrains AI', vendor: 'JetBrains', score: 8.5, price: 'paid', colors: ['#F97316','#FB923C'], tags: ['IDE深度集成', '代码重构', '文档生成'], desc: '与IntelliJ等JetBrains IDE原生集成，适合已经使用JetBrains产品的开发者。' },
+      { id: 6, name: 'Tabnine', vendor: 'Tabnine', score: 8.3, price: 'freemium', colors: ['#2563EB','#3B82F6'], tags: ['本地部署', '隐私保护', '快速补全'], desc: '支持本地运行的AI代码补全工具，数据全程本地处理，隐私保护优秀。' },
+      { id: 7, name: 'Replit Agent', vendor: 'Replit', score: 8.4, price: 'paid', colors: ['#8B5CF6','#A78BFA'], tags: ['端到端', '快速部署', '云端'], desc: '能自主完成整个项目开发流程，从需求到部署一键完成，云端开发体验流畅。' },
+      { id: 8, name: 'Cody', vendor: 'Sourcegraph', score: 8.2, price: 'freemium', colors: ['#0EA5E9','#38BDF8'], tags: ['代码库理解', '语义搜索', '代码导航'], desc: '基于代码库语义的AI助手，代码理解和导航能力强大，适合大型代码库。' },
+      { id: 9, name: 'Amazon CodeWhisperer', vendor: 'Amazon', score: 8.0, price: 'free', colors: ['#F59E0B','#FBBF24'], tags: ['AWS集成', '安全扫描', '免费'], desc: '亚马逊出品，与AWS服务深度集成，提供代码安全扫描，个人用户免费。' },
+      { id: 10, name: 'CodeRabbit', vendor: 'CodeRabbit', score: 8.1, price: 'freemium', colors: ['#EC4899','#F472B6'], tags: ['PR审查', '代码优化', '自动化'], desc: '专注于代码审查和PR自动化的AI工具，PR审查体验业界领先。' },
+      { id: 11, name: 'Supermaven', vendor: 'Supermaven', score: 8.4, price: 'paid', colors: ['#10B981','#34D399'], tags: ['超快补全', '低延迟', '智能'], desc: '以超低延迟著称的AI代码补全工具，补全速度业界最快，适合追求效率的开发者。' },
+      { id: 12, name: 'Phind', vendor: 'Phind', score: 7.9, price: 'free', colors: ['#6366F1','#818CF8'], tags: ['搜索引擎', '编程问答', '免费'], desc: 'AI编程搜索引擎，专注于解答编程问题，完全免费使用。' },
+      { id: 13, name: 'Blackbox AI', vendor: 'Blackbox', score: 7.8, price: 'freemium', colors: ['#1E293B','#334155'], tags: ['代码提取', '多语言', 'API集成'], desc: '能理解并提取GitHub代码的AI工具，支持代码片段搜索和API集成。' },
+      { id: 14, name: 'CodeGenie', vendor: 'Samsung', score: 7.5, price: 'free', colors: ['#0EA5E9','#38BDF8'], tags: ['三星开发', '内部工具', '代码生成'], desc: '三星内部推出的AI编程助手，主要服务于三星开发者社区。' },
+      { id: 15, name: 'Continue', vendor: 'Continue', score: 7.7, price: 'free', colors: ['#8B5CF6','#A78BFA'], tags: ['开源', 'VS Code', '本地'], desc: '开源的AI代码助手，VS Code和JetBrains扩展，支持本地部署和自定义模型。' }
     ];
 
     const articles = [
@@ -804,22 +1093,328 @@
       { tag: '趋势', title: '2025年AI编程工具市场分析报告', desc: '从市场份额、用户增长、技术趋势三个维度分析市场。' }
     ];
 
+    // 大模型数据
+    const models = {
+      coding: [
+        { id: 1, name: 'Claude 4 Opus', vendor: 'Anthropic', score: 97.2, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最新旗舰，代码能力最强，复杂推理任务表现最佳。' },
+        { id: 2, name: 'GPT-4o', vendor: 'OpenAI', score: 95.8, context: '128K', colors: ['#10A37F','#34D399'], desc: 'OpenAI主力旗舰，多模态能力强，代码生成稳定可靠。' },
+        { id: 3, name: 'GPT-o1 Pro', vendor: 'OpenAI', score: 96.5, context: '128K', colors: ['#10A37F','#34D399'], desc: 'OpenAI最新推理模型，复杂编程任务能力最强。' },
+        { id: 4, name: 'Cursor', vendor: 'Anthropic/Cursor', score: 94.8, context: '200K', colors: ['#7C3AED','#A78BFA'], desc: '基于Claude的AI代码编辑器，编程场景深度优化。' },
+        { id: 5, name: 'Gemini 2.0 Flash', vendor: 'Google', score: 93.5, context: '1M', colors: ['#3B82F6','#60A5FA'], desc: 'Google最新模型，超长上下文，代码理解能力出众。' },
+        { id: 6, name: 'DeepSeek Coder V2.5', vendor: 'DeepSeek', score: 91.8, context: '128K', colors: ['#6366F1','#818CF8'], desc: '国产开源代码模型旗舰，代码能力比肩GPT-4o。' },
+        { id: 7, name: 'Qwen2.5-Coder 32B', vendor: 'Alibaba', score: 90.2, context: '128K', colors: ['#EC4899','#F472B6'], desc: '阿里开源代码模型，中文编程能力最强。' },
+        { id: 8, name: 'CodeLlama 3.1 70B', vendor: 'Meta', score: 88.9, context: '100K', colors: ['#F97316','#FB923C'], desc: 'Meta开源编程专用模型，70B参数性能出色。' }
+      ],
+      apiPrice: [
+        { id: 1, name: 'GPT-4o', vendor: 'OpenAI', inputPrice: 2.5, outputPrice: 10, context: '128K', colors: ['#10A37F','#34D399'], desc: 'OpenAI旗舰模型，价格下调后性价比更高。' },
+        { id: 2, name: 'Claude 4 Opus', vendor: 'Anthropic', inputPrice: 15, outputPrice: 75, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最贵模型，代码能力最强。' },
+        { id: 3, name: 'Claude 3.5 Sonnet', vendor: 'Anthropic', inputPrice: 3, outputPrice: 15, context: '200K', colors: ['#D97706','#F59E0B'], desc: '性价比最高的选择，能力接近旗舰。' },
+        { id: 4, name: 'Gemini 2.0 Flash', vendor: 'Google', inputPrice: 0, outputPrice: 0, context: '1M', colors: ['#3B82F6','#60A5FA'], desc: 'Google免费模型，超长上下文极具竞争力。' },
+        { id: 5, name: 'DeepSeek V3', vendor: 'DeepSeek', inputPrice: 0.27, outputPrice: 1.1, context: '64K', colors: ['#6366F1','#818CF8'], desc: '国产模型价格杀手，成本极低。' },
+        { id: 6, name: 'Qwen 2.5 72B', vendor: 'Alibaba', inputPrice: 0.9, outputPrice: 2.7, context: '128K', colors: ['#EC4899','#F472B6'], desc: '阿里开源模型，中文能力强。' },
+        { id: 7, name: 'Llama 3.3 70B', vendor: 'Meta', inputPrice: 0, outputPrice: 0, context: '128K', colors: ['#F97316','#FB923C'], desc: 'Meta完全免费开源，70B参数性能强劲。' },
+        { id: 8, name: 'Mistral Large 2', vendor: 'Mistral', inputPrice: 2, outputPrice: 6, context: '128K', colors: ['#8B5CF6','#A78BFA'], desc: '欧洲最强模型，Apache协议免费商用。' }
+      ],
+      openSource: [
+        { id: 1, name: 'Llama 3.3 70B', vendor: 'Meta', score: 94.8, context: '128K', colors: ['#F97316','#FB923C'], desc: '开源最强模型，70B参数性能逼近GPT-4o。' },
+        { id: 2, name: 'DeepSeek V3', vendor: 'DeepSeek', score: 93.5, context: '64K', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰，MoE架构，API价格最低。' },
+        { id: 3, name: 'Qwen 2.5 72B', vendor: 'Alibaba', score: 92.8, context: '128K', colors: ['#EC4899','#F472B6'], desc: '阿里开源旗舰，中文能力最强。' },
+        { id: 4, name: 'Mistral Large 2', vendor: 'Mistral', score: 89.5, context: '128K', colors: ['#8B5CF6','#A78BFA'], desc: '欧洲最强开源，Apache license完全免费。' },
+        { id: 5, name: 'GLM-4', vendor: 'Zhipu', score: 88.2, context: '128K', colors: ['#10A37F','#34D399'], desc: '智谱开源，中文对话能力强。' },
+        { id: 6, name: 'Yi Large', vendor: '01.AI', score: 87.8, context: '200K', colors: ['#B7410E','#B7410E'], desc: '零一万物开源，中英双语优秀。' },
+        { id: 7, name: 'Phi-4', vendor: 'Microsoft', score: 86.5, context: '128K', colors: ['#0078D4','#0078D4'], desc: '微软小而强模型，14B参数表现优异。' },
+        { id: 8, name: 'Qwen2.5-Coder 32B', vendor: 'Alibaba', score: 90.2, context: '128K', colors: ['#EC4899','#F472B6'], desc: '代码专用开源模型，32B参数性价比最高。' }
+      ],
+      multimodal: [
+        { id: 1, name: 'GPT-4o', vendor: 'OpenAI', score: 96.8, vision: '✓', audio: '✓', colors: ['#10A37F','#34D399'], desc: '全模态旗舰，视觉+语音+文本三位一体。' },
+        { id: 2, name: 'Claude 4 Opus', vendor: 'Anthropic', score: 95.5, vision: '✓', audio: '-', colors: ['#D97706','#F59E0B'], desc: '视觉理解能力最强，暂不支持语音。' },
+        { id: 3, name: 'Gemini 2.0 Ultra', vendor: 'Google', score: 97.2, vision: '✓', audio: '✓', colors: ['#3B82F6','#60A5FA'], desc: 'Google最强多模态，支持音视频深度理解。' },
+        { id: 4, name: 'Llama 3.2 Vision', vendor: 'Meta', score: 88.5, vision: '✓', audio: '-', colors: ['#F97316','#FB923C'], desc: 'Meta开源多模态，90B参数可本地部署。' },
+        { id: 5, name: 'Qwen2.5 VL', vendor: 'Alibaba', score: 92.8, vision: '✓', audio: '-', colors: ['#EC4899','#F472B6'], desc: '阿里视觉模型，中文图文视频理解最强。' },
+        { id: 6, name: 'InternVL 3', vendor: 'Shanghai AI Lab', score: 93.5, vision: '✓', audio: '-', colors: ['#6366F1','#818CF8'], desc: '国产视觉旗舰，图文视频理解能力领先。' },
+        { id: 7, name: 'LLaVA 1.6', vendor: 'LLaVA', score: 87.5, vision: '✓', audio: '-', colors: ['#8B5CF6','#A78BFA'], desc: '开源多模态模型，可本地微调部署。' },
+        { id: 8, name: 'Mistral VL', vendor: 'Mistral', score: 88.3, vision: '✓', audio: '-', colors: ['#8B5CF6','#A78BFA'], desc: '欧洲开源多模态，支持图像理解。' }
+      ]
+    };
+
+    // 编程语言排行数据
+    const languages = [
+      { id: 1, name: 'Python', rank: 1, score: 96.7, type: '脚本语言', colors: ['#3776AB','#FFD43B'], desc: 'AI/数据科学领域绝对霸主，语法简洁易学。' },
+      { id: 2, name: 'JavaScript', rank: 2, score: 94.2, type: '脚本语言', colors: ['#F7DF1E','#323330'], desc: 'Web开发核心语言，全栈开发必备。' },
+      { id: 3, name: 'TypeScript', rank: 3, score: 88.4, type: '编译语言', colors: ['#3178C6','#00599C'], desc: 'JS超集，类型安全，大型项目首选。' },
+      { id: 4, name: 'Java', rank: 4, score: 86.5, type: '编译语言', colors: ['#ED8B00','#5382A6'], desc: '企业级应用主力，Android开发语言。' },
+      { id: 5, name: 'C++', rank: 5, score: 84.8, type: '编译语言', colors: ['#00599C','#00599C'], desc: '系统编程、游戏开发、高性能计算。' },
+      { id: 6, name: 'Go', rank: 6, score: 83.5, type: '编译语言', colors: ['#00ADD8','#008080'], desc: '云原生首选，并发支持优秀。' },
+      { id: 7, name: 'Rust', rank: 7, score: 82.1, type: '编译语言', colors: ['#DEA584','#B7410E'], desc: '安全高性能，系统编程新选择。' },
+      { id: 8, name: 'Swift', rank: 8, score: 79.8, type: '编译语言', colors: ['#F05138','#333330'], desc: 'iOS/macOS开发官方语言。' },
+      { id: 9, name: 'Kotlin', rank: 9, score: 78.2, type: '编译语言', colors: ['#7F52FF','#B125E8'], desc: 'Android官方语言，替代Java的选择。' },
+      { id: 10, name: 'C#', rank: 10, score: 77.5, type: '编译语言', colors: ['#512BD4','#239B20'], desc: '.NET主力，游戏开发Unity。' }
+    ];
+
+    // 数据库数据
+    const databases = {
+      rdbms: [
+        { id: 1, name: 'MySQL', vendor: 'Oracle', score: 98.5, type: '开源关系型', colors: ['#00758F','#4479A1'], desc: '最流行的开源关系型数据库，Web应用首选。' },
+        { id: 2, name: 'PostgreSQL', vendor: 'PGDG', score: 97.8, type: '开源关系型', colors: ['#336791','#336791'], desc: '功能最强大的开源关系型数据库，扩展性强。' },
+        { id: 3, name: 'Oracle', vendor: 'Oracle', score: 96.2, type: '商业关系型', colors: ['#F80000','#F80000'], desc: '企业级应用最广泛，功能最全面。' },
+        { id: 4, name: 'SQL Server', vendor: 'Microsoft', score: 94.5, type: '商业关系型', colors: ['#CC2927','#0078D4'], desc: '微软企业级数据库，与Windows生态深度集成。' },
+        { id: 5, name: 'MariaDB', vendor: 'MariaDB', score: 92.1, type: '开源关系型', colors: ['#003545','#003545'], desc: 'MySQL分支，完全开源，兼容MySQL。' },
+        { id: 6, name: 'SQLite', vendor: 'D.R. Hipp', score: 90.8, type: '嵌入式关系型', colors: ['#003545','#003545'], desc: '轻量级嵌入式数据库，移动应用必备。' }
+      ],
+      newsql: [
+        { id: 1, name: 'TiDB', vendor: 'PingCAP', score: 85.6, type: '分布式NewSQL', colors: ['#7F52FF','#A78BFA'], desc: '国产NewSQL代表，MySQL兼容，水平扩展。' },
+        { id: 2, name: 'CockroachDB', vendor: 'Cockroach Labs', score: 83.2, type: '分布式NewSQL', colors: ['#1A1A1A','#4A4A4A'], desc: 'PostgreSQL兼容，全球分布，强一致。' },
+        { id: 3, name: 'Amazon Aurora', vendor: 'AWS', score: 88.5, type: '云原生分布式', colors: ['#FF9900','#232F3E'], desc: '云原生关系型数据库，存储计算分离。' },
+        { id: 4, name: 'Google Spanner', vendor: 'Google', score: 84.8, type: '全球分布式', colors: ['#4285F4','#34A853'], desc: 'Google内部使用，全球分布，强一致性。' },
+        { id: 5, name: 'SingleStore', vendor: 'SingleStore', score: 78.5, type: '内存优化SQL', colors: ['#CC2927','#0078D4'], desc: '内存优化，HTAP场景表现出色。' },
+        { id: 6, name: ' YugabyteDB', vendor: 'Yugabyte', score: 77.2, type: '分布式PostgreSQL', colors: ['#4A4A4A','#4A4A4A'], desc: 'PostgreSQL和Cassandra双重兼容。' }
+      ],
+      kv: [
+        { id: 1, name: 'Redis', vendor: 'Redis Labs', score: 96.5, type: '内存键值', colors: ['#DC382D','#DC382D'], desc: '高性能内存键值存储，缓存首选。' },
+        { id: 2, name: 'Amazon DynamoDB', vendor: 'AWS', score: 92.8, type: '托管键值', colors: ['#FF9900','#232F3E'], desc: '全托管Serverless，AWS深度集成。' },
+        { id: 3, name: 'Etcd', vendor: 'CNCF', score: 78.5, type: '分布式键值', colors: ['#4A4A4A','#4A4A4A'], desc: 'Kubernetes底层存储，服务发现。' },
+        { id: 4, name: 'Memcached', vendor: 'Memcached', score: 85.2, type: '内存缓存', colors: ['#4A4A4A','#4A4A4A'], desc: '简单高效的内存缓存系统。' },
+        { id: 5, name: 'Riak KV', vendor: 'Basho', score: 72.1, type: '分布式键值', colors: ['#4A4A4A','#4A4A4A'], desc: '高可用分布式键值存储。' }
+      ],
+      document: [
+        { id: 1, name: 'MongoDB', vendor: 'MongoDB Inc', score: 94.8, type: '文档数据库', colors: ['#02303A','#47A248'], desc: '最流行的文档数据库，JSON文档存储。' },
+        { id: 2, name: 'Couchbase', vendor: 'Couchbase Inc', score: 85.6, type: '文档数据库', colors: ['#02303A','#47A248'], desc: '高性能文档数据库，支持SQL查询。' },
+        { id: 3, name: 'Elasticsearch', vendor: 'Elastic', score: 88.5, type: '搜索引擎/文档', colors: ['#005571','#F4D03F'], desc: '不只是搜索，文档存储能力也强。' },
+        { id: 4, name: 'CouchDB', vendor: 'Apache', score: 76.3, type: '文档数据库', colors: ['#02303A','#47A248'], desc: 'Apache项目，易用性好，HTTP API。' },
+        { id: 5, name: 'Realm', vendor: 'MongoDB', score: 74.2, type: '移动文档', colors: ['#02303A','#47A248'], desc: '移动端专用，React Native首选。' }
+      ],
+      wideColumn: [
+        { id: 1, name: 'Apache Cassandra', vendor: 'Apache', score: 88.7, type: '列式分布', colors: ['#1287B1','#1287B1'], desc: '高可用分布式列式数据库，无单点。' },
+        { id: 2, name: 'Apache HBase', vendor: 'Apache', score: 82.5, type: '列式NoSQL', colors: ['#00ACE0','#00ACE0'], desc: 'Hadoop生态，HDFS之上的NoSQL。' },
+        { id: 3, name: 'ClickHouse', vendor: 'ClickHouse Inc', score: 86.8, type: '列式分析', colors: ['#FFCC00','#FFCC00'], desc: 'OLAP场景性能极强，实时分析。' },
+        { id: 4, name: 'ScyllaDB', vendor: 'ScyllaDB', score: 79.3, type: 'Cassandra兼容', colors: ['#4A4A4A','#4A4A4A'], desc: 'Cassandra兼容，C++实现高性能。' },
+        { id: 5, name: 'Google Bigtable', vendor: 'Google', score: 83.6, type: '列式存储', colors: ['#4285F4','#34A853'], desc: 'Google内部使用，存储计算分离。' }
+      ],
+      graph: [
+        { id: 1, name: 'Neo4j', vendor: 'Neo4j Inc', score: 85.6, type: '图数据库', colors: ['#008496','#008496'], desc: '图数据库领导者，Cypher查询语言。' },
+        { id: 2, name: 'ArangoDB', vendor: 'ArangoDB Inc', score: 78.2, type: '多模图', colors: ['#4A4A4A','#4A4A4A'], desc: '原生多模数据库，支持图/文档/KV。' },
+        { id: 3, name: 'TigerGraph', vendor: 'TigerGraph', score: 76.5, type: '分布式图', colors: ['#4A4A4A','#4A4A4A'], desc: '高性能分布式图数据库。' },
+        { id: 4, name: 'Amazon Neptune', vendor: 'AWS', score: 74.8, type: '托管图数据库', colors: ['#FF9900','#232F3E'], desc: 'AWS全托管图数据库，支持Gremlin。' },
+        { id: 5, name: 'Microsoft Graph', vendor: 'Azure', score: 72.3, type: '图数据库', colors: ['#0078D4','#0078D4'], desc: '微软图数据库，知识图谱场景。' }
+      ],
+      timeseries: [
+        { id: 1, name: 'InfluxDB', vendor: 'InfluxData', score: 86.5, type: '时序数据库', colors: ['#0182FE','#0182FE'], desc: '时序数据库首选，InfluxQL语言。' },
+        { id: 2, name: 'TimescaleDB', vendor: 'Timescale', score: 83.2, type: '时序PG扩展', colors: ['#0182FE','#0182FE'], desc: 'PostgreSQL扩展，时序分析能力强。' },
+        { id: 3, name: 'Prometheus', vendor: 'CNCF', score: 89.5, type: '监控时序', colors: ['#E6522C','#E6522C'], desc: '云原生监控事实标准，PromQL。' },
+        { id: 4, name: 'QuestDB', vendor: 'QuestDB', score: 75.8, type: '高性能时序', colors: ['#0182FE','#0182FE'], desc: '超高性能，Java实现，SQL接口。' },
+        { id: 5, name: 'KDB+', vendor: 'Kx Systems', score: 72.1, type: '金融时序', colors: ['#0182FE','#0182FE'], desc: '金融领域专用，高性能时序处理。' }
+      ],
+      vector: [
+        { id: 1, name: 'Milvus', vendor: 'Zilliz', score: 84.5, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: '开源向量数据库， billion级向量支持。' },
+        { id: 2, name: 'Pinecone', vendor: 'Pinecone', score: 82.3, type: '云向量', colors: ['#4A4A4A','#4A4A4A'], desc: '云原生向量数据库， Serverless。' },
+        { id: 3, name: 'Weaviate', vendor: 'Weaviate', score: 78.6, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: '开源向量搜索引擎，支持GraphQL。' },
+        { id: 4, name: 'Qdrant', vendor: 'Qdrant', score: 76.8, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'Rust实现，高性能向量搜索。' },
+        { id: 5, name: 'Chroma', vendor: 'Chroma', score: 74.2, type: '嵌入向量', colors: ['#4A4A4A','#4A4A4A'], desc: '轻量级嵌入向量存储， LLM友好。' }
+      ],
+      bigdata: [
+        { id: 1, name: 'Snowflake', vendor: 'Snowflake', score: 92.5, type: '云原生数仓', colors: ['#29B5E8','#29B5E8'], desc: '云原生数据仓库， Data Cloud平台。' },
+        { id: 2, name: 'Google BigQuery', vendor: 'Google', score: 90.8, type: 'Serverless数仓', colors: ['#4285F4','#34A853'], desc: 'Serverless OLAP， PB级分析。' },
+        { id: 3, name: 'Databricks', vendor: 'Databricks', score: 88.6, type: 'Lakehouse平台', colors: ['#FF3621','#FF3621'], desc: 'Lakehouse实现， Spark专家。' },
+        { id: 4, name: 'Amazon Redshift', vendor: 'AWS', score: 86.2, type: '云数仓', colors: ['#FF9900','#232F3E'], desc: 'AWS数据仓库， Redshift Spectrum。' },
+        { id: 5, name: 'Apache Hive', vendor: 'Apache', score: 78.5, type: 'Hadoop数仓', colors: ['#D4A017','#D4A017'], desc: 'Hadoop生态SQL， HQL查询。' },
+        { id: 6, name: 'Azure Synapse', vendor: 'Microsoft', score: 82.1, type: '分析平台', colors: ['#0078D4','#0078D4'], desc: '微软统一分析平台， Lakehouse支持。' }
+      ]
+    };
+
     // ==================== STATE ====================
     let currentLang = localStorage.getItem('lang') || 'zh';
     let currentTheme = localStorage.getItem('theme') || 'light';
     let currentFilter = 'all';
+    let currentToolFilter = 'all';
+    let currentTab = 'tools';
     let selectedCompareTools = [1, 2];
+
+    // ==================== TAB SWITCHING ====================
+    function switchTab(tab) {
+      currentTab = tab;
+      document.querySelectorAll('nav a').forEach(a => {
+        a.classList.toggle('active', a.dataset.tab === tab);
+      });
+
+      const hero = document.querySelector('.hero');
+      const statsBar = document.querySelector('.stats-bar');
+      const tableContainer = document.querySelector('.table-container');
+      const topSection = document.querySelector('.top-section');
+      const chartsSection = document.querySelector('.charts-section');
+      const compareSection = document.querySelector('.compare-section');
+      const articlesSection = document.querySelector('.articles-section');
+      const homeSection = document.querySelector('.home-section');
+
+      if (tab === 'home') {
+        // Show home page
+        if (hero) hero.style.display = 'none';
+        if (statsBar) statsBar.style.display = 'none';
+        if (tableContainer) tableContainer.style.display = 'none';
+        if (topSection) topSection.style.display = 'none';
+        if (chartsSection) chartsSection.style.display = 'none';
+        if (compareSection) compareSection.style.display = 'none';
+        if (articlesSection) articlesSection.style.display = 'none';
+        if (homeSection) homeSection.style.display = '';
+      } else if (tab === 'tools') {
+        if (hero) hero.style.display = 'none';
+        if (statsBar) statsBar.style.display = '';
+        if (tableContainer) tableContainer.style.display = '';
+        if (topSection) topSection.style.display = 'none';
+        if (chartsSection) chartsSection.style.display = 'none';
+        if (compareSection) compareSection.style.display = 'none';
+        if (articlesSection) articlesSection.style.display = 'none';
+        if (homeSection) homeSection.style.display = 'none';
+        const th = document.querySelector('.table-header');
+        if (th) th.innerHTML = `
+          <div class="db-filters">
+            <div>
+              <button class="filter-btn ${currentToolFilter === 'all' ? 'active' : ''}" data-filter="all" onclick="filterTools('all')">全部</button>
+              <button class="filter-btn ${currentToolFilter === 'free' ? 'active' : ''}" data-filter="free" onclick="filterTools('free')">免费</button>
+              <button class="filter-btn ${currentToolFilter === 'paid' ? 'active' : ''}" data-filter="paid" onclick="filterTools('paid')">付费</button>
+              <button class="filter-btn ${currentToolFilter === 'freemium' ? 'active' : ''}" data-filter="freemium" onclick="filterTools('freemium')">免费+付费</button>
+            </div>
+          </div>
+          <div class="db-columns"><div>排名</div><div>工具</div><div>评分雷达</div><div>综合评分</div><div>价格</div><div>操作</div></div>
+        `;
+        renderToolsTable();
+      } else if (tab === 'models') {
+        if (hero) hero.style.display = 'none';
+        if (statsBar) statsBar.style.display = 'none';
+        if (tableContainer) tableContainer.style.display = '';
+        if (topSection) topSection.style.display = 'none';
+        if (chartsSection) chartsSection.style.display = 'none';
+        if (compareSection) compareSection.style.display = 'none';
+        if (articlesSection) articlesSection.style.display = 'none';
+        if (homeSection) homeSection.style.display = 'none';
+        renderModelsTab('coding');
+      } else if (tab === 'languages') {
+        if (hero) hero.style.display = 'none';
+        if (statsBar) statsBar.style.display = 'none';
+        if (tableContainer) tableContainer.style.display = '';
+        if (topSection) topSection.style.display = 'none';
+        if (chartsSection) chartsSection.style.display = 'none';
+        if (compareSection) compareSection.style.display = 'none';
+        if (articlesSection) articlesSection.style.display = 'none';
+        if (homeSection) homeSection.style.display = 'none';
+        const thLang = document.querySelector('.table-header');
+        if (thLang) thLang.innerHTML = '<div class="db-columns"><div>排名</div><div>语言</div><div>评分雷达</div><div>流行度</div><div>TIOBE排名</div><div>操作</div></div>';
+        renderLanguagesTable();
+      } else if (tab === 'databases') {
+        if (hero) hero.style.display = 'none';
+        if (statsBar) statsBar.style.display = 'none';
+        if (tableContainer) tableContainer.style.display = '';
+        if (topSection) topSection.style.display = 'none';
+        if (chartsSection) chartsSection.style.display = 'none';
+        if (compareSection) compareSection.style.display = 'none';
+        if (articlesSection) articlesSection.style.display = 'none';
+        if (homeSection) homeSection.style.display = 'none';
+        renderDatabasesTab('rdbms');
+      }
+    }
+
+    let currentModelCategory = 'coding';
+
+    function renderModelsTab(category) {
+      currentModelCategory = category;
+
+      const thModel = document.querySelector('.table-header');
+      if (thModel) thModel.innerHTML = `
+        <div class="db-filters">
+          <div>
+            <button class="filter-btn ${category === 'coding' ? 'active' : ''}" onclick="renderModelsTab('coding')">编程能力</button>
+            <button class="filter-btn ${category === 'apiPrice' ? 'active' : ''}" onclick="renderModelsTab('apiPrice')">API价格</button>
+            <button class="filter-btn ${category === 'openSource' ? 'active' : ''}" onclick="renderModelsTab('openSource')">开源模型</button>
+            <button class="filter-btn ${category === 'multimodal' ? 'active' : ''}" onclick="renderModelsTab('multimodal')">多模态</button>
+          </div>
+        </div>
+        <div class="db-columns"><div>排名</div><div>模型</div><div>评分雷达</div><div>综合评分</div><div>上下文</div><div>操作</div></div>
+      `;
+
+      renderModelTable(category);
+    }
+
+    function renderModelTable(category) {
+      const container = document.getElementById('toolsTable');
+      const mods = models[category] || [];
+
+      container.innerHTML = mods.map((mod, idx) => `
+        <div class="table-row" data-id="${mod.id}">
+          <div class="rank ${idx < 3 ? 'rank-' + (idx+1) : ''}">${idx + 1}</div>
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, ${mod.colors[0]}, ${mod.colors[1]})">${mod.name[0]}</div>
+            <div>
+              <div class="tool-name">${mod.name}</div>
+              <div class="tool-vendor">${mod.vendor}</div>
+            </div>
+          </div>
+          <div class="chart-cell"><canvas id="model-chart-${mod.id}" height="60"></canvas></div>
+          <div class="score">${mod.score || (mod.inputPrice + mod.outputPrice) / 2}</div>
+          <div><span class="price-tag price-paid">${mod.context}</span></div>
+          <button class="action-btn" onclick="showModelDetail(${mod.id}, '${category}')">查看详情</button>
+        </div>
+      `).join('');
+
+      mods.forEach(mod => {
+        const ctx = document.getElementById(`model-chart-${mod.id}`);
+        if (ctx) {
+          new Chart(ctx, {
+            type: 'radar',
+            data: {
+              labels: ['性能', '易用', '生态', '成本', '前景'],
+              datasets: [{
+                data: [mod.score ? mod.score / 10.5 : 8, mod.score ? mod.score / 11 : 8, mod.score ? mod.score / 10.8 : 8, mod.score ? mod.score / 10.5 : 8, mod.score ? mod.score / 10.3 : 8],
+                backgroundColor: mod.colors[0] + '40',
+                borderColor: mod.colors[0],
+                pointRadius: 0,
+                borderWidth: 2
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: { legend: { display: false } },
+              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
+            }
+          });
+        }
+      });
+    }
+
+    function showModelDetail(id, category) {
+      const mod = models[category]?.find(m => m.id === id);
+      if (!mod) return;
+      let info = `${mod.name} - ${mod.vendor}`;
+      if (mod.score) info += `\n评分: ${mod.score}`;
+      if (mod.inputPrice) info += `\n输入: $${mod.inputPrice}/K 输出: $${mod.outputPrice}/K`;
+      info += `\n上下文: ${mod.context}`;
+      info += `\n\n${currentLang === 'zh' ? mod.desc : 'Coming soon...'}`;
+      alert(info);
+    }
+
+    let currentDbCategory = 'rdbms';
 
     // ==================== INIT ====================
     function init() {
       applyTheme();
       applyLang();
-      renderTable();
-      renderTopCards();
-      renderCharts();
-      renderCompareSection();
-      renderArticles();
+      renderHomeFeatured();
       lucide.createIcons();
+    }
+
+    function renderHomeFeatured() {
+      const container = document.getElementById('featuredGrid');
+      if (!container) return;
+      const featured = tools.slice(0, 6);
+      container.innerHTML = featured.map(t => `
+        <div class="featured-card" onclick="switchTab('tools')">
+          <div class="featured-logo" style="background:linear-gradient(135deg,${t.colors[0]},${t.colors[1]})">${t.name[0]}</div>
+          <div class="featured-info">
+            <h4>${t.name}</h4>
+            <p>${t.vendor}</p>
+          </div>
+          <div class="featured-score">${t.score}</div>
+        </div>
+      `).join('');
     }
 
     // ==================== THEME ====================
@@ -868,14 +1463,10 @@
         const el = document.getElementById(id);
         if (el) el.textContent = text;
       });
-
-      renderTable();
-      renderTopCards();
-      renderArticles();
     }
 
     // ==================== RENDER ====================
-    function renderTable() {
+    function renderToolsTable() {
       const container = document.getElementById('toolsTable');
       let filtered = tools;
 
@@ -883,7 +1474,8 @@
         filtered = tools.filter(t => {
           if (currentFilter === 'free') return t.price === 'free';
           if (currentFilter === 'paid') return t.price === 'paid';
-          if (currentFilter === 'open') return false;
+          if (currentFilter === 'freemium') return t.price === 'freemium';
+          if (currentFilter === 'open') return t.price === 'open';
           return true;
         });
       }
@@ -1071,15 +1663,160 @@
     // ==================== FILTERS ====================
     function filterTools(filter) {
       currentFilter = filter;
+      currentToolFilter = filter;
       document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.filter === filter);
+        if (btn.dataset.filter) btn.classList.toggle('active', btn.dataset.filter === filter);
       });
-      renderTable();
+      renderToolsTable();
     }
 
     function sortTools(sortBy) {
-      // Sort implementation
-      renderTable();
+      renderToolsTable();
+    }
+
+    // ==================== LANGUAGES TABLE ====================
+    function renderLanguagesTable() {
+      const container = document.getElementById('toolsTable');
+      container.innerHTML = languages.map((lang, idx) => `
+        <div class="table-row" data-id="${lang.id}">
+          <div class="rank ${idx < 3 ? 'rank-' + (idx+1) : ''}">${idx + 1}</div>
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, ${lang.colors[0]}, ${lang.colors[1]})">${lang.name[0]}</div>
+            <div>
+              <div class="tool-name">${lang.name}</div>
+              <div class="tool-vendor">${lang.type}</div>
+            </div>
+          </div>
+          <div class="chart-cell"><canvas id="chart-${lang.id}" height="60"></canvas></div>
+          <div class="score">${lang.score}</div>
+          <div><span class="price-tag price-paid">TIOBE #${lang.rank}</span></div>
+          <button class="action-btn" onclick="showLanguageDetail(${lang.id})">查看详情</button>
+        </div>
+      `).join('');
+
+      renderLanguagesCharts();
+    }
+
+    function renderLanguagesCharts() {
+      languages.forEach(lang => {
+        const ctx = document.getElementById(`chart-${lang.id}`);
+        if (ctx) {
+          new Chart(ctx, {
+            type: 'radar',
+            data: {
+              labels: ['流行度', '易学性', '就业', '薪资', '前景'],
+              datasets: [{
+                data: [lang.score / 10, lang.score / 11, lang.score / 10.5, lang.score / 10.8, lang.score / 10.3],
+                backgroundColor: lang.colors[0] + '40',
+                borderColor: lang.colors[0],
+                pointRadius: 0,
+                borderWidth: 2
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: { legend: { display: false } },
+              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
+            }
+          });
+        }
+      });
+    }
+
+    function showLanguageDetail(id) {
+      const lang = languages.find(l => l.id === id);
+      if (!lang) return;
+      alert(`${lang.name} (${lang.type})\nTIOBE排名: #${lang.rank}\n流行度指数: ${lang.score}\n\n${currentLang === 'zh' ? lang.desc : 'Coming soon...'}`);
+    }
+
+    // ==================== DATABASES TABLE ====================
+    function renderDatabasesTab(category) {
+      currentDbCategory = category;
+
+      const thDb = document.querySelector('.table-header');
+      if (thDb) thDb.innerHTML = `
+        <div class="db-filters">
+          <div>
+            <button class="filter-btn ${category === 'rdbms' ? 'active' : ''}" onclick="renderDatabasesTab('rdbms')">关系型</button>
+            <button class="filter-btn ${category === 'newsql' ? 'active' : ''}" onclick="renderDatabasesTab('newsql')">分布式NewSQL</button>
+            <button class="filter-btn ${category === 'kv' ? 'active' : ''}" onclick="renderDatabasesTab('kv')">键值</button>
+            <button class="filter-btn ${category === 'document' ? 'active' : ''}" onclick="renderDatabasesTab('document')">文档</button>
+            <button class="filter-btn ${category === 'wideColumn' ? 'active' : ''}" onclick="renderDatabasesTab('wideColumn')">列式</button>
+            <button class="filter-btn ${category === 'graph' ? 'active' : ''}" onclick="renderDatabasesTab('graph')">图</button>
+            <button class="filter-btn ${category === 'timeseries' ? 'active' : ''}" onclick="renderDatabasesTab('timeseries')">时序</button>
+            <button class="filter-btn ${category === 'vector' ? 'active' : ''}" onclick="renderDatabasesTab('vector')">向量</button>
+            <button class="filter-btn ${category === 'bigdata' ? 'active' : ''}" onclick="renderDatabasesTab('bigdata')">大数据平台</button>
+          </div>
+        </div>
+        <div class="db-columns"><div>排名</div><div>数据库</div><div>评分雷达</div><div>综合评分</div><div>类型</div><div>操作</div></div>
+      `;
+
+      renderDbTable(category);
+    }
+
+    function renderDbTable(category) {
+      const container = document.getElementById('toolsTable');
+      const dbs = databases[category] || [];
+      const categoryNames = {
+        rdbms: '关系型数据库',
+        newsql: '分布式NewSQL',
+        kv: '键值存储',
+        document: '文档数据库',
+        wideColumn: '列式数据库',
+        graph: '图数据库',
+        timeseries: '时序数据库',
+        vector: '向量数据库',
+        bigdata: '大数据平台'
+      };
+
+      container.innerHTML = dbs.map((db, idx) => `
+        <div class="table-row" data-id="${db.id}">
+          <div class="rank ${idx < 3 ? 'rank-' + (idx+1) : ''}">${idx + 1}</div>
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, ${db.colors[0]}, ${db.colors[1]})">${db.name[0]}</div>
+            <div>
+              <div class="tool-name">${db.name}</div>
+              <div class="tool-vendor">${db.vendor}</div>
+            </div>
+          </div>
+          <div class="chart-cell"><canvas id="db-chart-${db.id}" height="60"></canvas></div>
+          <div class="score">${db.score}</div>
+          <div><span class="price-tag price-paid">${db.type}</span></div>
+          <button class="action-btn" onclick="showDbDetail(${db.id}, '${category}')">查看详情</button>
+        </div>
+      `).join('');
+
+      dbs.forEach(db => {
+        const ctx = document.getElementById(`db-chart-${db.id}`);
+        if (ctx) {
+          new Chart(ctx, {
+            type: 'radar',
+            data: {
+              labels: ['性能', '易用', '生态', '社区', '前景'],
+              datasets: [{
+                data: [db.score / 10.5, db.score / 11, db.score / 10.8, db.score / 10.5, db.score / 10.3],
+                backgroundColor: db.colors[0] + '40',
+                borderColor: db.colors[0],
+                pointRadius: 0,
+                borderWidth: 2
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: { legend: { display: false } },
+              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
+            }
+          });
+        }
+      });
+    }
+
+    function showDbDetail(id, category) {
+      const db = databases[category]?.find(d => d.id === id);
+      if (!db) return;
+      alert(`${db.name} - ${db.vendor}\n评分: ${db.score}\n类型: ${db.type}\n\n${currentLang === 'zh' ? db.desc : 'Coming soon...'}`);
     }
 
     // ==================== MODAL ====================
