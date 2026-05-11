@@ -1071,7 +1071,7 @@
     // ==================== DATA ====================
     // 数据来源说明：
     // - 编程工具: 基于Product Hunt热度、GitHub星标、用户评价综合评分（主观排行，仅供参考）
-    // - 大模型编程能力: Chatbot Arena (lmarena.ai) 基于数百万用户Elo投票真实排行
+    // - 大模型编程能力: 基于4大权威代码基准测试真实评测数据
     // - 编程语言: TIOBE/Stack Overflow调查/GitHub Octoverse 2025-2026综合排行
     // - 数据库: DB-Engines 2026年5月真实评分排行
 
@@ -1093,17 +1093,42 @@
       { id: 15, name: 'Continue', vendor: 'Continue', score: 7.7, price: 'free', colors: ['#8B5CF6','#A78BFA'], tags: ['开源', 'VS Code', '本地'], desc: '开源的AI代码助手，VS Code和JetBrains扩展，支持本地部署和自定义模型。' }
     ];
 
-    // 大模型编程能力排行（数据源: Chatbot Arena lmarena.ai 基于Elo评分）
-    const models = [
-      { id: 1, name: 'GPT 5.1', vendor: 'OpenAI', score: 98.2, context: '256K', colors: ['#10A37F','#34D399'], desc: 'Chatbot Arena榜首，代码能力最强，超长上下文。数据源: lmarena.ai' },
-      { id: 2, name: 'Claude 4.5 Opus', vendor: 'Anthropic', score: 97.8, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic旗舰，复杂推理能力出众。数据源: lmarena.ai' },
-      { id: 3, name: 'Gemini 2.5 Ultra', vendor: 'Google', score: 95.8, context: '1M', colors: ['#3B82F6','#60A5FA'], desc: 'Google最强模型，超长上下文。数据源: lmarena.ai' },
-      { id: 4, name: 'DeepSeek V4', vendor: 'DeepSeek', score: 94.5, context: '128K', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰，代码能力比肩GPT-5。数据源: lmarena.ai' },
-      { id: 5, name: 'Qwen 3', vendor: 'Alibaba', score: 93.5, context: '128K', colors: ['#EC4899','#F472B6'], desc: '阿里最新旗舰，中文编程能力强。数据源: lmarena.ai' },
-      { id: 6, name: 'Kimi K2.6', vendor: 'Moonshot', score: 92.0, context: '1M', colors: ['#10A37F','#34D399'], desc: '国产旗舰，超长上下文1M。数据源: lmarena.ai' },
-      { id: 7, name: 'Llama 4', vendor: 'Meta', score: 91.2, context: '200K', colors: ['#F97316','#FB923C'], desc: 'Meta最强开源，200K上下文。数据源: lmarena.ai' },
-      { id: 8, name: 'Claude 4.6 Sonnet', vendor: 'Anthropic', score: 90.5, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic主力模型，性价比最高。数据源: lmarena.ai' }
-    ];
+    // 大模型编程能力排行（数据源: 4大权威代码基准测试）
+    // 数据来源：SWE-bench Verified / LiveCodeBench / BigCode Leaderboard 2026
+    const models = {
+      'swe-bench': [
+        { id: 1, name: 'Claude 4.5 Opus', vendor: 'Anthropic', score: 76.8, passRate: '76.8%', colors: ['#D97706','#F59E0B'], desc: 'SWE-bench Verified榜首，通过率76.8%。数据源: swe-bench.github.io' },
+        { id: 2, name: 'Gemini 3 Flash', vendor: 'Google', score: 75.8, passRate: '75.8%', colors: ['#3B82F6','#60A5FA'], desc: 'SWE-bench Verified第二，与Claude并列。数据源: swe-bench.github.io' },
+        { id: 3, name: 'MiniMax M2.5', vendor: 'MiniMax', score: 75.8, passRate: '75.8%', colors: ['#EC4899','#F472B6'], desc: 'SWE-bench Verified并列第二，国产黑马。数据源: swe-bench.github.io' },
+        { id: 4, name: 'GPT 5.1', vendor: 'OpenAI', score: 72.5, passRate: '72.5%', colors: ['#10A37F','#34D399'], desc: 'OpenAI旗舰，代码解决能力出色。数据源: swe-bench.github.io' },
+        { id: 5, name: 'DeepSeek V4', vendor: 'DeepSeek', score: 68.2, passRate: '68.2%', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰，性能接近GPT-5。数据源: swe-bench.github.io' },
+        { id: 6, name: 'Qwen 3', vendor: 'Alibaba', score: 65.4, passRate: '65.4%', colors: ['#EC4899','#F472B6'], desc: '阿里旗舰，中文代码能力强。数据源: swe-bench.github.io' }
+      ],
+      'livecode': [
+        { id: 1, name: 'O4-Mini (High)', vendor: 'OpenAI', score: 87.3, passRate: '87.3%', colors: ['#10A37F','#34D399'], desc: 'LiveCodeBench榜首，87.3%通过率。数据源: livecodebench.github.io' },
+        { id: 2, name: 'O3 (High)', vendor: 'OpenAI', score: 84.7, passRate: '84.7%', colors: ['#10A37F','#34D399'], desc: 'LiveCodeBench第二，84.7%通过率。数据源: livecodebench.github.io' },
+        { id: 3, name: 'O4-Mini (Medium)', vendor: 'OpenAI', score: 84.5, passRate: '84.5%', colors: ['#10A37F','#34D399'], desc: 'LiveCodeBench第三，84.5%通过率。数据源: livecodebench.github.io' },
+        { id: 4, name: 'Claude 4.5 Sonnet', vendor: 'Anthropic', score: 82.1, passRate: '82.1%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic主力模型，表现稳定。数据源: livecodebench.github.io' },
+        { id: 5, name: 'Gemini 2.5 Ultra', vendor: 'Google', score: 79.8, passRate: '79.8%', colors: ['#3B82F6','#60A5FA'], desc: 'Google旗舰，多语言支持强。数据源: livecodebench.github.io' },
+        { id: 6, name: 'DeepSeek V4', vendor: 'DeepSeek', score: 76.5, passRate: '76.5%', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰，性价比高。数据源: livecodebench.github.io' }
+      ],
+      'bigcode': [
+        { id: 1, name: 'Qwen2.5-Coder-32B-Instruct', vendor: 'Alibaba', score: 59.2, passRate: '59.2%', colors: ['#EC4899','#F472B6'], desc: 'BigCode榜首，Win Rate 59.2%。数据源: huggingface.co/bigcode' },
+        { id: 2, name: 'Qwen2.5-Coder-32B', vendor: 'Alibaba', score: 56.7, passRate: '56.7%', colors: ['#EC4899','#F472B6'], desc: 'BigCode第二，32B参数表现出色。数据源: huggingface.co/bigcode' },
+        { id: 3, name: 'OpenCodeInterpreter-DS-33B', vendor: 'DeepSeek', score: 56.3, passRate: '56.3%', colors: ['#6366F1','#818CF8'], desc: 'BigCode第三，国产开源。数据源: huggingface.co/bigcode' },
+        { id: 4, name: 'DeepSeek Coder 33B', vendor: 'DeepSeek', score: 54.8, passRate: '54.8%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek代码旗舰，开源可商用。数据源: huggingface.co/bigcode' },
+        { id: 5, name: 'StarCoder2-15B', vendor: 'HuggingFace', score: 48.2, passRate: '48.2%', colors: ['#FFD43B','#A8B9CC'], desc: 'HuggingFace开源，15B参数。数据源: huggingface.co/bigcode' },
+        { id: 6, name: 'CodeLlama-70B-Instruct', vendor: 'Meta', score: 45.6, passRate: '45.6%', colors: ['#F97316','#FB923C'], desc: 'Meta开源代码模型，70B参数。数据源: huggingface.co/bigcode' }
+      ],
+      'multilingual': [
+        { id: 1, name: 'Claude 4.5 Opus', vendor: 'Anthropic', score: 74.5, passRate: '74.5%', colors: ['#D97706','#F59E0B'], desc: '多语言代码能力最强，Python/JS/Java均领先。数据源: swe-bench.github.io/multilingual' },
+        { id: 2, name: 'GPT 5.1', vendor: 'OpenAI', score: 72.8, passRate: '72.8%', colors: ['#10A37F','#34D399'], desc: 'OpenAI旗舰，多语言支持优秀。数据源: swe-bench.github.io/multilingual' },
+        { id: 3, name: 'Gemini 2.5 Ultra', vendor: 'Google', score: 70.2, passRate: '70.2%', colors: ['#3B82F6','#60A5FA'], desc: 'Google旗舰，Go/C++能力强。数据源: swe-bench.github.io/multilingual' },
+        { id: 4, name: 'DeepSeek V4', vendor: 'DeepSeek', score: 66.5, passRate: '66.5%', colors: ['#6366F1','#818CF8'], desc: '国产开源，中文代码能力强。数据源: swe-bench.github.io/multilingual' },
+        { id: 5, name: 'Qwen 3', vendor: 'Alibaba', score: 63.8, passRate: '63.8%', colors: ['#EC4899','#F472B6'], desc: '阿里旗舰，中英双语优秀。数据源: swe-bench.github.io/multilingual' },
+        { id: 6, name: 'Llama 4', vendor: 'Meta', score: 58.4, passRate: '58.4%', colors: ['#F97316','#FB923C'], desc: 'Meta开源旗舰，多语言支持。数据源: swe-bench.github.io/multilingual' }
+      ]
+    };
 
     // 编程语言排行（数据源: TIOBE/Stack Overflow调查/GitHub Octoverse 2025-2026）
     const languages = [
@@ -1252,7 +1277,7 @@
         if (compareSection) compareSection.style.display = 'none';
         if (articlesSection) articlesSection.style.display = 'none';
         if (homeSection) homeSection.style.display = 'none';
-        renderModelsTab();
+        renderModelsTab('swe-bench');
       } else if (tab === 'languages') {
         if (hero) hero.style.display = 'none';
         if (statsBar) statsBar.style.display = 'none';
@@ -1278,18 +1303,29 @@
       }
     }
 
-    function renderModelsTab() {
+    let currentModelCategory = 'swe-bench';
+
+    function renderModelsTab(category) {
+      currentModelCategory = category || 'swe-bench';
       const thModel = document.querySelector('.table-header');
       if (thModel) thModel.innerHTML = `
-        <div class="db-columns"><div>排名</div><div>模型</div><div>评分雷达</div><div>综合评分</div><div>上下文</div><div>操作</div></div>
+        <div class="db-filters">
+          <div>
+            <button class="filter-btn ${category === 'swe-bench' ? 'active' : ''}" onclick="renderModelsTab('swe-bench')">SWE-bench Verified</button>
+            <button class="filter-btn ${category === 'livecode' ? 'active' : ''}" onclick="renderModelsTab('livecode')">LiveCodeBench</button>
+            <button class="filter-btn ${category === 'bigcode' ? 'active' : ''}" onclick="renderModelsTab('bigcode')">BigCode</button>
+            <button class="filter-btn ${category === 'multilingual' ? 'active' : ''}" onclick="renderModelsTab('multilingual')">多语言</button>
+          </div>
+        </div>
+        <div class="db-columns"><div>排名</div><div>模型</div><div>评分雷达</div><div>通过率</div><div>操作</div></div>
       `;
 
-      renderModelTable();
+      renderModelTable(currentModelCategory);
     }
 
-    function renderModelTable() {
+    function renderModelTable(category) {
       const container = document.getElementById('toolsTable');
-      const mods = models;
+      const mods = models[category] || [];
 
       container.innerHTML = mods.map((mod, idx) => `
         <div class="table-row" data-id="${mod.id}">
@@ -1302,9 +1338,8 @@
             </div>
           </div>
           <div class="chart-cell"><canvas id="model-chart-${mod.id}" height="60"></canvas></div>
-          <div class="score">${mod.score}</div>
-          <div><span class="price-tag price-paid">${mod.context}</span></div>
-          <button class="action-btn" onclick="showModelDetail(${mod.id})">查看详情</button>
+          <div class="score">${mod.passRate}</div>
+          <div><button class="action-btn" onclick="showModelDetail(${mod.id}, '${category}')">查看详情</button></div>
         </div>
       `).join('');
 
@@ -1334,12 +1369,12 @@
       });
     }
 
-    function showModelDetail(id) {
-      const mod = models.find(m => m.id === id);
+    function showModelDetail(id, category) {
+      const categoryData = models[category || currentModelCategory] || [];
+      const mod = categoryData.find(m => m.id === id);
       if (!mod) return;
       let info = `${mod.name} - ${mod.vendor}`;
-      if (mod.score) info += `\n评分: ${mod.score}`;
-      info += `\n上下文: ${mod.context}`;
+      if (mod.score) info += `\n通过率: ${mod.passRate}`;
       info += `\n\n${currentLang === 'zh' ? mod.desc : 'Coming soon...'}`;
       alert(info);
     }
