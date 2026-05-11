@@ -1137,87 +1137,85 @@
       ]
     };
 
-    // 编程语言排行数据
+    // 编程语言排行数据（基于TIOBE/Stack Overflow/GitHub Octoverse 2025-2026综合排行）
     const languages = [
-      { id: 1, name: 'Python', rank: 1, score: 96.7, type: '脚本语言', colors: ['#3776AB','#FFD43B'], desc: 'AI/数据科学领域绝对霸主，语法简洁易学。' },
-      { id: 2, name: 'JavaScript', rank: 2, score: 94.2, type: '脚本语言', colors: ['#F7DF1E','#323330'], desc: 'Web开发核心语言，全栈开发必备。' },
-      { id: 3, name: 'TypeScript', rank: 3, score: 88.4, type: '编译语言', colors: ['#3178C6','#00599C'], desc: 'JS超集，类型安全，大型项目首选。' },
-      { id: 4, name: 'Java', rank: 4, score: 86.5, type: '编译语言', colors: ['#ED8B00','#5382A6'], desc: '企业级应用主力，Android开发语言。' },
-      { id: 5, name: 'C++', rank: 5, score: 84.8, type: '编译语言', colors: ['#00599C','#00599C'], desc: '系统编程、游戏开发、高性能计算。' },
-      { id: 6, name: 'Go', rank: 6, score: 83.5, type: '编译语言', colors: ['#00ADD8','#008080'], desc: '云原生首选，并发支持优秀。' },
-      { id: 7, name: 'Rust', rank: 7, score: 82.1, type: '编译语言', colors: ['#DEA584','#B7410E'], desc: '安全高性能，系统编程新选择。' },
-      { id: 8, name: 'Swift', rank: 8, score: 79.8, type: '编译语言', colors: ['#F05138','#333330'], desc: 'iOS/macOS开发官方语言。' },
-      { id: 9, name: 'Kotlin', rank: 9, score: 78.2, type: '编译语言', colors: ['#7F52FF','#B125E8'], desc: 'Android官方语言，替代Java的选择。' },
-      { id: 10, name: 'C#', rank: 10, score: 77.5, type: '编译语言', colors: ['#512BD4','#239B20'], desc: '.NET主力，游戏开发Unity。' }
+      { id: 1, name: 'Python', rank: 1, score: 100.0, type: '脚本语言', colors: ['#3776AB','#FFD43B'], desc: 'TIOBE榜首，AI/数据科学绝对霸主，GitHub增长最快语言。' },
+      { id: 2, name: 'JavaScript', rank: 2, score: 92.5, type: '脚本语言', colors: ['#F7DF1E','#323330'], desc: 'Stack Overflow使用率最高，Web开发核心，全栈必备。' },
+      { id: 3, name: 'TypeScript', rank: 3, score: 88.0, type: '编译语言', colors: ['#3178C6','#00599C'], desc: 'GitHub第一语言，JS超集，大型项目首选。' },
+      { id: 4, name: 'C', rank: 4, score: 85.5, type: '编译语言', colors: ['#A8B9CC','#555555'], desc: 'TIOBE第二，系统编程基础，嵌入式开发主力。' },
+      { id: 5, name: 'Java', rank: 5, score: 83.0, type: '编译语言', colors: ['#ED8B00','#5382A6'], desc: 'TIOBE第三，企业级应用主力，Android开发语言。' },
+      { id: 6, name: 'C++', rank: 6, score: 80.5, type: '编译语言', colors: ['#00599C','#00599C'], desc: 'TIOBE第四，系统编程、游戏开发、高性能计算。' },
+      { id: 7, name: 'Go', rank: 7, score: 78.0, type: '编译语言', colors: ['#00ADD8','#008080'], desc: '云原生首选，并发支持优秀，SO最受推崇语言第五。' },
+      { id: 8, name: 'Rust', rank: 8, score: 75.5, type: '编译语言', colors: ['#DEA584','#B7410E'], desc: 'SO最受推崇语言第一，72%开发者想继续使用，安全高性能。' },
+      { id: 9, name: 'SQL', rank: 9, score: 72.0, type: '查询语言', colors: ['#00758F','#E38C00'], desc: 'SO使用率58.6%，数据库操作必备，数据工程师核心技能。' },
+      { id: 10, name: 'C#', rank: 10, score: 70.0, type: '编译语言', colors: ['#512BD4','#239B20'], desc: 'TIOBE第五，.NET主力，游戏开发Unity。' }
     ];
 
-    // 数据库数据
+    // 数据库数据（评分基于DB-Engines 2026年5月最新数据归一化）
     const databases = {
       rdbms: [
-        { id: 1, name: 'MySQL', vendor: 'Oracle', score: 98.5, type: '开源关系型', colors: ['#00758F','#4479A1'], desc: '最流行的开源关系型数据库，Web应用首选。' },
-        { id: 2, name: 'PostgreSQL', vendor: 'PGDG', score: 97.8, type: '开源关系型', colors: ['#336791','#336791'], desc: '功能最强大的开源关系型数据库，扩展性强。' },
-        { id: 3, name: 'Oracle', vendor: 'Oracle', score: 96.2, type: '商业关系型', colors: ['#F80000','#F80000'], desc: '企业级应用最广泛，功能最全面。' },
-        { id: 4, name: 'SQL Server', vendor: 'Microsoft', score: 94.5, type: '商业关系型', colors: ['#CC2927','#0078D4'], desc: '微软企业级数据库，与Windows生态深度集成。' },
-        { id: 5, name: 'MariaDB', vendor: 'MariaDB', score: 92.1, type: '开源关系型', colors: ['#003545','#003545'], desc: 'MySQL分支，完全开源，兼容MySQL。' },
-        { id: 6, name: 'SQLite', vendor: 'D.R. Hipp', score: 90.8, type: '嵌入式关系型', colors: ['#003545','#003545'], desc: '轻量级嵌入式数据库，移动应用必备。' }
+        { id: 1, name: 'Oracle', vendor: 'Oracle', score: 100.0, type: '商业关系型', colors: ['#F80000','#F80000'], desc: 'DB-Engines排行第一，企业级应用最广泛，功能最全面。' },
+        { id: 2, name: 'MySQL', vendor: 'Oracle', score: 95.0, type: '开源关系型', colors: ['#00758F','#4479A1'], desc: 'DB-Engines第二，最流行的开源关系型数据库，Web应用首选。' },
+        { id: 3, name: 'SQL Server', vendor: 'Microsoft', score: 91.0, type: '商业关系型', colors: ['#CC2927','#0078D4'], desc: 'DB-Engines第三，微软企业级数据库，与Windows生态深度集成。' },
+        { id: 4, name: 'PostgreSQL', vendor: 'PGDG', score: 90.5, type: '开源关系型', colors: ['#336791','#336791'], desc: 'DB-Engines第四，功能最强大的开源关系型数据库，扩展性强。' },
+        { id: 5, name: 'SQLite', vendor: 'D.R. Hipp', score: 56.0, type: '嵌入式关系型', colors: ['#003545','#003545'], desc: '轻量级嵌入式数据库，DB-Engines第13名，移动应用必备。' },
+        { id: 6, name: 'MariaDB', vendor: 'MariaDB', score: 55.0, type: '开源关系型', colors: ['#003545','#003545'], desc: 'MySQL分支，完全开源，兼容MySQL，DB-Engines第18名。' }
       ],
       newsql: [
-        { id: 1, name: 'TiDB', vendor: 'PingCAP', score: 85.6, type: '分布式NewSQL', colors: ['#7F52FF','#A78BFA'], desc: '国产NewSQL代表，MySQL兼容，水平扩展。' },
-        { id: 2, name: 'CockroachDB', vendor: 'Cockroach Labs', score: 83.2, type: '分布式NewSQL', colors: ['#1A1A1A','#4A4A4A'], desc: 'PostgreSQL兼容，全球分布，强一致。' },
-        { id: 3, name: 'Amazon Aurora', vendor: 'AWS', score: 88.5, type: '云原生分布式', colors: ['#FF9900','#232F3E'], desc: '云原生关系型数据库，存储计算分离。' },
-        { id: 4, name: 'Google Spanner', vendor: 'Google', score: 84.8, type: '全球分布式', colors: ['#4285F4','#34A853'], desc: 'Google内部使用，全球分布，强一致性。' },
-        { id: 5, name: 'SingleStore', vendor: 'SingleStore', score: 78.5, type: '内存优化SQL', colors: ['#CC2927','#0078D4'], desc: '内存优化，HTAP场景表现出色。' },
-        { id: 6, name: ' YugabyteDB', vendor: 'Yugabyte', score: 77.2, type: '分布式PostgreSQL', colors: ['#4A4A4A','#4A4A4A'], desc: 'PostgreSQL和Cassandra双重兼容。' }
+        { id: 1, name: 'Amazon Aurora', vendor: 'AWS', score: 100.0, type: '云原生分布式', colors: ['#FF9900','#232F3E'], desc: 'NewSQL榜首，云原生关系型数据库，存储计算分离。' },
+        { id: 2, name: 'CockroachDB', vendor: 'Cockroach Labs', score: 70.0, type: '分布式NewSQL', colors: ['#1A1A1A','#4A4A4A'], desc: 'PostgreSQL兼容，全球分布，强一致性。' },
+        { id: 3, name: 'TiDB', vendor: 'PingCAP', score: 68.0, type: '分布式NewSQL', colors: ['#7F52FF','#A78BFA'], desc: '国产NewSQL代表，MySQL兼容，水平扩展。' },
+        { id: 4, name: 'SingleStore', vendor: 'SingleStore', score: 65.0, type: '内存优化SQL', colors: ['#CC2927','#0078D4'], desc: '内存优化，HTAP场景表现出色。' },
+        { id: 5, name: 'YugabyteDB', vendor: 'Yugabyte', score: 60.0, type: '分布式PostgreSQL', colors: ['#4A4A4A','#4A4A4A'], desc: 'PostgreSQL和Cassandra双重兼容。' }
       ],
       kv: [
-        { id: 1, name: 'Redis', vendor: 'Redis Labs', score: 96.5, type: '内存键值', colors: ['#DC382D','#DC382D'], desc: '高性能内存键值存储，缓存首选。' },
-        { id: 2, name: 'Amazon DynamoDB', vendor: 'AWS', score: 92.8, type: '托管键值', colors: ['#FF9900','#232F3E'], desc: '全托管Serverless，AWS深度集成。' },
-        { id: 3, name: 'Etcd', vendor: 'CNCF', score: 78.5, type: '分布式键值', colors: ['#4A4A4A','#4A4A4A'], desc: 'Kubernetes底层存储，服务发现。' },
-        { id: 4, name: 'Memcached', vendor: 'Memcached', score: 85.2, type: '内存缓存', colors: ['#4A4A4A','#4A4A4A'], desc: '简单高效的内存缓存系统。' },
-        { id: 5, name: 'Riak KV', vendor: 'Basho', score: 72.1, type: '分布式键值', colors: ['#4A4A4A','#4A4A4A'], desc: '高可用分布式键值存储。' }
+        { id: 1, name: 'Redis', vendor: 'Redis Labs', score: 100.0, type: '内存键值', colors: ['#DC382D','#DC382D'], desc: 'KV存储榜首，DB-Engines第七，高性能内存键值存储。' },
+        { id: 2, name: 'DynamoDB', vendor: 'AWS', score: 88.0, type: '托管键值', colors: ['#FF9900','#232F3E'], desc: 'AWS全托管Serverless，KV类第二，全球分布。' },
+        { id: 3, name: 'Memcached', vendor: 'Memcached', score: 58.0, type: '内存缓存', colors: ['#4A4A4A','#4A4A4A'], desc: '简单高效的内存缓存系统，历史悠久稳定。' },
+        { id: 4, name: 'Etcd', vendor: 'CNCF', score: 52.0, type: '分布式键值', colors: ['#4A4A4A','#4A4A4A'], desc: 'Kubernetes底层存储，服务发现首选。' },
+        { id: 5, name: 'Riak KV', vendor: 'Basho', score: 40.0, type: '分布式键值', colors: ['#4A4A4A','#4A4A4A'], desc: '高可用分布式键值存储，去中心化架构。' }
       ],
       document: [
-        { id: 1, name: 'MongoDB', vendor: 'MongoDB Inc', score: 94.8, type: '文档数据库', colors: ['#02303A','#47A248'], desc: '最流行的文档数据库，JSON文档存储。' },
-        { id: 2, name: 'Couchbase', vendor: 'Couchbase Inc', score: 85.6, type: '文档数据库', colors: ['#02303A','#47A248'], desc: '高性能文档数据库，支持SQL查询。' },
-        { id: 3, name: 'Elasticsearch', vendor: 'Elastic', score: 88.5, type: '搜索引擎/文档', colors: ['#005571','#F4D03F'], desc: '不只是搜索，文档存储能力也强。' },
-        { id: 4, name: 'CouchDB', vendor: 'Apache', score: 76.3, type: '文档数据库', colors: ['#02303A','#47A248'], desc: 'Apache项目，易用性好，HTTP API。' },
-        { id: 5, name: 'Realm', vendor: 'MongoDB', score: 74.2, type: '移动文档', colors: ['#02303A','#47A248'], desc: '移动端专用，React Native首选。' }
+        { id: 1, name: 'MongoDB', vendor: 'MongoDB Inc', score: 100.0, type: '文档数据库', colors: ['#02303A','#47A248'], desc: '文档数据库榜首，DB-Engines第五，JSON文档存储。' },
+        { id: 2, name: 'Elasticsearch', vendor: 'Elastic', score: 72.0, type: '搜索引擎/文档', colors: ['#005571','#F4D03F'], desc: '搜索出身但文档能力出色，全文检索最强。' },
+        { id: 3, name: 'Couchbase', vendor: 'Couchbase Inc', score: 50.0, type: '文档数据库', colors: ['#02303A','#47A248'], desc: '高性能文档数据库，支持SQL查询。' },
+        { id: 4, name: 'Realm', vendor: 'MongoDB', score: 46.0, type: '移动文档', colors: ['#02303A','#47A248'], desc: '移动端专用，React Native首选。' },
+        { id: 5, name: 'CouchDB', vendor: 'Apache', score: 45.0, type: '文档数据库', colors: ['#02303A','#47A248'], desc: 'Apache项目，易用性好，HTTP API。' }
       ],
       wideColumn: [
-        { id: 1, name: 'Apache Cassandra', vendor: 'Apache', score: 88.7, type: '列式分布', colors: ['#1287B1','#1287B1'], desc: '高可用分布式列式数据库，无单点。' },
-        { id: 2, name: 'Apache HBase', vendor: 'Apache', score: 82.5, type: '列式NoSQL', colors: ['#00ACE0','#00ACE0'], desc: 'Hadoop生态，HDFS之上的NoSQL。' },
-        { id: 3, name: 'ClickHouse', vendor: 'ClickHouse Inc', score: 86.8, type: '列式分析', colors: ['#FFCC00','#FFCC00'], desc: 'OLAP场景性能极强，实时分析。' },
-        { id: 4, name: 'ScyllaDB', vendor: 'ScyllaDB', score: 79.3, type: 'Cassandra兼容', colors: ['#4A4A4A','#4A4A4A'], desc: 'Cassandra兼容，C++实现高性能。' },
-        { id: 5, name: 'Google Bigtable', vendor: 'Google', score: 83.6, type: '列式存储', colors: ['#4285F4','#34A853'], desc: 'Google内部使用，存储计算分离。' }
+        { id: 1, name: 'Apache Cassandra', vendor: 'Apache', score: 100.0, type: '列式分布', colors: ['#1287B1','#1287B1'], desc: '宽列榜首，DB-Engines第15名，高可用无单点。' },
+        { id: 2, name: 'ClickHouse', vendor: 'ClickHouse Inc', score: 85.0, type: '列式分析', colors: ['#FFCC00','#FFCC00'], desc: 'OLAP场景性能极强，实时分析，DB-Engines第22名。' },
+        { id: 3, name: 'Apache HBase', vendor: 'Apache', score: 65.0, type: '列式NoSQL', colors: ['#00ACE0','#00ACE0'], desc: 'Hadoop生态，HDFS之上的NoSQL。' },
+        { id: 4, name: 'Google Bigtable', vendor: 'Google', score: 55.0, type: '列式存储', colors: ['#4285F4','#34A853'], desc: 'Google内部使用，存储计算分离。' },
+        { id: 5, name: 'ScyllaDB', vendor: 'ScyllaDB', score: 45.0, type: 'Cassandra兼容', colors: ['#4A4A4A','#4A4A4A'], desc: 'Cassandra兼容，C++实现高性能。' }
       ],
       graph: [
-        { id: 1, name: 'Neo4j', vendor: 'Neo4j Inc', score: 85.6, type: '图数据库', colors: ['#008496','#008496'], desc: '图数据库领导者，Cypher查询语言。' },
-        { id: 2, name: 'ArangoDB', vendor: 'ArangoDB Inc', score: 78.2, type: '多模图', colors: ['#4A4A4A','#4A4A4A'], desc: '原生多模数据库，支持图/文档/KV。' },
-        { id: 3, name: 'TigerGraph', vendor: 'TigerGraph', score: 76.5, type: '分布式图', colors: ['#4A4A4A','#4A4A4A'], desc: '高性能分布式图数据库。' },
-        { id: 4, name: 'Amazon Neptune', vendor: 'AWS', score: 74.8, type: '托管图数据库', colors: ['#FF9900','#232F3E'], desc: 'AWS全托管图数据库，支持Gremlin。' },
-        { id: 5, name: 'Microsoft Graph', vendor: 'Azure', score: 72.3, type: '图数据库', colors: ['#0078D4','#0078D4'], desc: '微软图数据库，知识图谱场景。' }
+        { id: 1, name: 'Neo4j', vendor: 'Neo4j Inc', score: 100.0, type: '图数据库', colors: ['#008496','#008496'], desc: '图数据库榜首，DB-Engines第19名，Cypher查询语言。' },
+        { id: 2, name: 'ArangoDB', vendor: 'ArangoDB Inc', score: 55.0, type: '多模图', colors: ['#4A4A4A','#4A4A4A'], desc: '原生多模数据库，支持图/文档/KV。' },
+        { id: 3, name: 'Amazon Neptune', vendor: 'AWS', score: 50.0, type: '托管图数据库', colors: ['#FF9900','#232F3E'], desc: 'AWS全托管图数据库，支持Gremlin。' },
+        { id: 4, name: 'TigerGraph', vendor: 'TigerGraph', score: 45.0, type: '分布式图', colors: ['#4A4A4A','#4A4A4A'], desc: '高性能分布式图数据库。' }
       ],
       timeseries: [
-        { id: 1, name: 'InfluxDB', vendor: 'InfluxData', score: 86.5, type: '时序数据库', colors: ['#0182FE','#0182FE'], desc: '时序数据库首选，InfluxQL语言。' },
-        { id: 2, name: 'TimescaleDB', vendor: 'Timescale', score: 83.2, type: '时序PG扩展', colors: ['#0182FE','#0182FE'], desc: 'PostgreSQL扩展，时序分析能力强。' },
-        { id: 3, name: 'Prometheus', vendor: 'CNCF', score: 89.5, type: '监控时序', colors: ['#E6522C','#E6522C'], desc: '云原生监控事实标准，PromQL。' },
-        { id: 4, name: 'QuestDB', vendor: 'QuestDB', score: 75.8, type: '高性能时序', colors: ['#0182FE','#0182FE'], desc: '超高性能，Java实现，SQL接口。' },
-        { id: 5, name: 'KDB+', vendor: 'Kx Systems', score: 72.1, type: '金融时序', colors: ['#0182FE','#0182FE'], desc: '金融领域专用，高性能时序处理。' }
+        { id: 1, name: 'InfluxDB', vendor: 'InfluxData', score: 100.0, type: '时序数据库', colors: ['#0182FE','#0182FE'], desc: '时序数据库榜首，InfluxQL语言，DB-Engines第33名。' },
+        { id: 2, name: 'Prometheus', vendor: 'CNCF', score: 78.0, type: '监控时序', colors: ['#E6522C','#E6522C'], desc: '云原生监控事实标准，PromQL。' },
+        { id: 3, name: 'TimescaleDB', vendor: 'Timescale', score: 65.0, type: '时序PG扩展', colors: ['#0182FE','#0182FE'], desc: 'PostgreSQL扩展，时序分析能力强。' },
+        { id: 4, name: 'QuestDB', vendor: 'QuestDB', score: 55.0, type: '高性能时序', colors: ['#0182FE','#0182FE'], desc: '超高性能，Java实现，SQL接口。' },
+        { id: 5, name: 'KDB+', vendor: 'Kx Systems', score: 48.0, type: '金融时序', colors: ['#0182FE','#0182FE'], desc: '金融领域专用，高性能时序处理。' }
       ],
       vector: [
-        { id: 1, name: 'Milvus', vendor: 'Zilliz', score: 84.5, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: '开源向量数据库， billion级向量支持。' },
-        { id: 2, name: 'Pinecone', vendor: 'Pinecone', score: 82.3, type: '云向量', colors: ['#4A4A4A','#4A4A4A'], desc: '云原生向量数据库， Serverless。' },
-        { id: 3, name: 'Weaviate', vendor: 'Weaviate', score: 78.6, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: '开源向量搜索引擎，支持GraphQL。' },
-        { id: 4, name: 'Qdrant', vendor: 'Qdrant', score: 76.8, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'Rust实现，高性能向量搜索。' },
-        { id: 5, name: 'Chroma', vendor: 'Chroma', score: 74.2, type: '嵌入向量', colors: ['#4A4A4A','#4A4A4A'], desc: '轻量级嵌入向量存储， LLM友好。' }
+        { id: 1, name: 'Milvus', vendor: 'Zilliz', score: 92.0, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: '开源向量数据库榜首，十亿级向量支持，DB-Engines第95名。' },
+        { id: 2, name: 'Pinecone', vendor: 'Pinecone', score: 88.0, type: '云向量', colors: ['#4A4A4A','#4A4A4A'], desc: '云原生向量数据库，Serverless架构。' },
+        { id: 3, name: 'Qdrant', vendor: 'Qdrant', score: 78.0, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'Rust实现，高性能向量搜索。' },
+        { id: 4, name: 'Weaviate', vendor: 'Weaviate', score: 65.0, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: '开源向量搜索引擎，支持GraphQL。' },
+        { id: 5, name: 'Chroma', vendor: 'Chroma', score: 55.0, type: '嵌入向量', colors: ['#4A4A4A','#4A4A4A'], desc: '轻量级嵌入向量存储，LLM友好。' }
       ],
       bigdata: [
-        { id: 1, name: 'Snowflake', vendor: 'Snowflake', score: 92.5, type: '云原生数仓', colors: ['#29B5E8','#29B5E8'], desc: '云原生数据仓库， Data Cloud平台。' },
-        { id: 2, name: 'Google BigQuery', vendor: 'Google', score: 90.8, type: 'Serverless数仓', colors: ['#4285F4','#34A853'], desc: 'Serverless OLAP， PB级分析。' },
-        { id: 3, name: 'Databricks', vendor: 'Databricks', score: 88.6, type: 'Lakehouse平台', colors: ['#FF3621','#FF3621'], desc: 'Lakehouse实现， Spark专家。' },
-        { id: 4, name: 'Amazon Redshift', vendor: 'AWS', score: 86.2, type: '云数仓', colors: ['#FF9900','#232F3E'], desc: 'AWS数据仓库， Redshift Spectrum。' },
-        { id: 5, name: 'Apache Hive', vendor: 'Apache', score: 78.5, type: 'Hadoop数仓', colors: ['#D4A017','#D4A017'], desc: 'Hadoop生态SQL， HQL查询。' },
-        { id: 6, name: 'Azure Synapse', vendor: 'Microsoft', score: 82.1, type: '分析平台', colors: ['#0078D4','#0078D4'], desc: '微软统一分析平台， Lakehouse支持。' }
+        { id: 1, name: 'Snowflake', vendor: 'Snowflake', score: 100.0, type: '云原生数仓', colors: ['#29B5E8','#29B5E8'], desc: '数仓榜首，DB-Engines第六，Data Cloud平台。' },
+        { id: 2, name: 'Databricks', vendor: 'Databricks', score: 95.0, type: 'Lakehouse平台', colors: ['#FF3621','#FF3621'], desc: 'Lakehouse实现，Spark专家，DB-Engines第八。' },
+        { id: 3, name: 'Apache Hive', vendor: 'Apache', score: 76.0, type: 'Hadoop数仓', colors: ['#D4A017','#D4A017'], desc: 'Hadoop生态SQL，HQL查询，DB-Engines第31名。' },
+        { id: 4, name: 'Google BigQuery', vendor: 'Google', score: 68.0, type: 'Serverless数仓', colors: ['#4285F4','#34A853'], desc: 'Serverless OLAP，PB级分析，DB-Engines第17名。' },
+        { id: 5, name: 'Azure Synapse', vendor: 'Microsoft', score: 54.0, type: '分析平台', colors: ['#0078D4','#0078D4'], desc: '微软统一分析平台，Lakehouse支持。' },
+        { id: 6, name: 'Amazon Redshift', vendor: 'AWS', score: 52.0, type: '云数仓', colors: ['#FF9900','#232F3E'], desc: 'AWS数据仓库，Redshift Spectrum。' }
       ]
     };
 
