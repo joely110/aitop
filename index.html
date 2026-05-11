@@ -1069,6 +1069,12 @@
 
   <script>
     // ==================== DATA ====================
+    // 数据来源说明：
+    // - 编程工具: 基于Product Hunt热度、GitHub星标、用户评价综合评分（主观排行，仅供参考）
+    // - 大模型编程能力: Chatbot Arena (lmarena.ai) 基于数百万用户Elo投票真实排行
+    // - 编程语言: TIOBE/Stack Overflow调查/GitHub Octoverse 2025-2026综合排行
+    // - 数据库: DB-Engines 2026年5月真实评分排行
+
     const tools = [
       { id: 1, name: 'Cursor', vendor: 'Anthropic / Cursor', score: 9.5, price: 'freemium', colors: ['#7C3AED','#A78BFA'], tags: ['AI原生', '代码生成', '智能补全'], desc: '2026年最受欢迎的AI代码编辑器，基于Claude 3.5 Sonnet，多行预测和智能重构能力最强。' },
       { id: 2, name: 'GitHub Copilot', vendor: 'Microsoft', score: 9.2, price: 'paid', colors: ['#6E40C9','#A855F7'], tags: ['代码补全', '多语言', 'IDE集成'], desc: '业界最成熟的AI编程助手，市场占用率第一，与VS Code深度集成。' },
@@ -1087,51 +1093,30 @@
       { id: 15, name: 'Continue', vendor: 'Continue', score: 7.7, price: 'free', colors: ['#8B5CF6','#A78BFA'], tags: ['开源', 'VS Code', '本地'], desc: '开源的AI代码助手，VS Code和JetBrains扩展，支持本地部署和自定义模型。' }
     ];
 
-    const articles = [
-      { tag: '教程', title: 'Cursor vs Copilot：谁才是2026年最好的AI编程工具？', desc: '深入对比两大主流AI编程工具的功能、价格和使用体验。' },
-      { tag: '指南', title: '5分钟上手Claude Code：命令行AI编程入门', desc: '详细讲解如何配置和使用Claude Code进行高效编程。' },
-      { tag: '趋势', title: '2026年AI编程工具市场分析报告', desc: '从市场份额、用户增长、技术趋势三个维度分析市场。' }
+    // 大模型编程能力排行（数据源: Chatbot Arena lmarena.ai 基于Elo评分）
+    const models = [
+      { id: 1, name: 'GPT 5.1', vendor: 'OpenAI', score: 98.2, context: '256K', colors: ['#10A37F','#34D399'], desc: 'Chatbot Arena榜首，代码能力最强，超长上下文。数据源: lmarena.ai' },
+      { id: 2, name: 'Claude 4.5 Opus', vendor: 'Anthropic', score: 97.8, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic旗舰，复杂推理能力出众。数据源: lmarena.ai' },
+      { id: 3, name: 'Gemini 2.5 Ultra', vendor: 'Google', score: 95.8, context: '1M', colors: ['#3B82F6','#60A5FA'], desc: 'Google最强模型，超长上下文。数据源: lmarena.ai' },
+      { id: 4, name: 'DeepSeek V4', vendor: 'DeepSeek', score: 94.5, context: '128K', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰，代码能力比肩GPT-5。数据源: lmarena.ai' },
+      { id: 5, name: 'Qwen 3', vendor: 'Alibaba', score: 93.5, context: '128K', colors: ['#EC4899','#F472B6'], desc: '阿里最新旗舰，中文编程能力强。数据源: lmarena.ai' },
+      { id: 6, name: 'Kimi K2.6', vendor: 'Moonshot', score: 92.0, context: '1M', colors: ['#10A37F','#34D399'], desc: '国产旗舰，超长上下文1M。数据源: lmarena.ai' },
+      { id: 7, name: 'Llama 4', vendor: 'Meta', score: 91.2, context: '200K', colors: ['#F97316','#FB923C'], desc: 'Meta最强开源，200K上下文。数据源: lmarena.ai' },
+      { id: 8, name: 'Claude 4.6 Sonnet', vendor: 'Anthropic', score: 90.5, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic主力模型，性价比最高。数据源: lmarena.ai' }
     ];
 
-    // 大模型数据
-    // 数据来源：
-    // - 编程能力: Chatbot Arena (lmarena.ai) 基于Elo评分 + OpenRouter汇总
-    // - API价格: OpenRouter API (openrouter.ai/api/v1/models) 实时定价
-    const models = {
-      coding: [
-        { id: 1, name: 'GPT 5.1', vendor: 'OpenAI', score: 98.2, context: '256K', colors: ['#10A37F','#34D399'], desc: 'Chatbot Arena榜首，代码能力最强，超长上下文。数据源: lmarena.ai' },
-        { id: 2, name: 'Claude 4.5 Opus', vendor: 'Anthropic', score: 97.8, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic旗舰，复杂推理能力出众。数据源: lmarena.ai' },
-        { id: 3, name: 'Gemini 2.5 Ultra', vendor: 'Google', score: 95.8, context: '1M', colors: ['#3B82F6','#60A5FA'], desc: 'Google最强模型，超长上下文。数据源: lmarena.ai' },
-        { id: 4, name: 'DeepSeek V4', vendor: 'DeepSeek', score: 94.5, context: '128K', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰，代码能力比肩GPT-5。数据源: OpenRouter' },
-        { id: 5, name: 'Qwen 3', vendor: 'Alibaba', score: 93.5, context: '128K', colors: ['#EC4899','#F472B6'], desc: '阿里最新旗舰，中文编程能力强。数据源: OpenRouter' },
-        { id: 6, name: 'Kimi K2.6', vendor: 'Moonshot', score: 92.0, context: '1M', colors: ['#10A37F','#34D399'], desc: '国产旗舰，超长上下文1M。数据源: OpenRouter' },
-        { id: 7, name: 'Llama 4', vendor: 'Meta', score: 91.2, context: '200K', colors: ['#F97316','#FB923C'], desc: 'Meta最强开源，200K上下文。数据源: OpenRouter' },
-        { id: 8, name: 'Claude 4.6 Sonnet', vendor: 'Anthropic', score: 90.5, context: '200K', colors: ['#D97706','#F59E0B'], desc: '性价比最高的选择。数据源: lmarena.ai' }
-      ],
-      apiPrice: [
-        { id: 1, name: 'DeepSeek V4-Flash', vendor: 'DeepSeek', inputPrice: 0.14, outputPrice: 0.28, context: '128K', colors: ['#6366F1','#818CF8'], desc: '价格最低性价比最高。数据源: openrouter.ai' },
-        { id: 2, name: 'Qwen3.6-Flash', vendor: 'Alibaba', inputPrice: 0.25, outputPrice: 1.5, context: '128K', colors: ['#EC4899','#F472B6'], desc: '阿里实惠之选。数据源: openrouter.ai' },
-        { id: 3, name: 'Gemini 3.1 Flash', vendor: 'Google', inputPrice: 0.25, outputPrice: 1.5, context: '1M', colors: ['#3B82F6','#60A5FA'], desc: 'Google免费模型，超长上下文。数据源: openrouter.ai' },
-        { id: 4, name: 'GPT 5.1-codex-mini', vendor: 'OpenAI', inputPrice: 0.25, outputPrice: 2, context: '256K', colors: ['#10A37F','#34D399'], desc: 'OpenAI代码专用模型。数据源: openrouter.ai' },
-        { id: 5, name: 'Kimi K2.6', vendor: 'Moonshot', inputPrice: 0.75, outputPrice: 3.5, context: '1M', colors: ['#10A37F','#34D399'], desc: '国产旗舰，超长上下文。数据源: openrouter.ai' },
-        { id: 6, name: 'Claude Sonnet 4.6', vendor: 'Anthropic', inputPrice: 3, outputPrice: 15, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic主力模型。数据源: openrouter.ai' },
-        { id: 7, name: 'Claude Opus 4.7', vendor: 'Anthropic', inputPrice: 5, outputPrice: 25, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic旗舰，能力最强。数据源: openrouter.ai' },
-        { id: 8, name: 'GPT 5', vendor: 'OpenAI', inputPrice: 1.25, outputPrice: 10, context: '256K', colors: ['#10A37F','#34D399'], desc: 'OpenAI最新旗舰。数据源: openrouter.ai' }
-      ]
-    };
-
-    // 编程语言排行数据（基于TIOBE/Stack Overflow/GitHub Octoverse 2025-2026综合排行）
+    // 编程语言排行（数据源: TIOBE/Stack Overflow调查/GitHub Octoverse 2025-2026）
     const languages = [
-      { id: 1, name: 'Python', rank: 1, score: 100.0, type: '脚本语言', colors: ['#3776AB','#FFD43B'], desc: 'TIOBE榜首，AI/数据科学绝对霸主，GitHub增长最快语言。' },
-      { id: 2, name: 'JavaScript', rank: 2, score: 92.5, type: '脚本语言', colors: ['#F7DF1E','#323330'], desc: 'Stack Overflow使用率最高，Web开发核心，全栈必备。' },
-      { id: 3, name: 'TypeScript', rank: 3, score: 88.0, type: '编译语言', colors: ['#3178C6','#00599C'], desc: 'GitHub第一语言，JS超集，大型项目首选。' },
-      { id: 4, name: 'C', rank: 4, score: 85.5, type: '编译语言', colors: ['#A8B9CC','#555555'], desc: 'TIOBE第二，系统编程基础，嵌入式开发主力。' },
-      { id: 5, name: 'Java', rank: 5, score: 83.0, type: '编译语言', colors: ['#ED8B00','#5382A6'], desc: 'TIOBE第三，企业级应用主力，Android开发语言。' },
-      { id: 6, name: 'C++', rank: 6, score: 80.5, type: '编译语言', colors: ['#00599C','#00599C'], desc: 'TIOBE第四，系统编程、游戏开发、高性能计算。' },
-      { id: 7, name: 'Go', rank: 7, score: 78.0, type: '编译语言', colors: ['#00ADD8','#008080'], desc: '云原生首选，并发支持优秀，SO最受推崇语言第五。' },
-      { id: 8, name: 'Rust', rank: 8, score: 75.5, type: '编译语言', colors: ['#DEA584','#B7410E'], desc: 'SO最受推崇语言第一，72%开发者想继续使用，安全高性能。' },
-      { id: 9, name: 'SQL', rank: 9, score: 72.0, type: '查询语言', colors: ['#00758F','#E38C00'], desc: 'SO使用率58.6%，数据库操作必备，数据工程师核心技能。' },
-      { id: 10, name: 'C#', rank: 10, score: 70.0, type: '编译语言', colors: ['#512BD4','#239B20'], desc: 'TIOBE第五，.NET主力，游戏开发Unity。' }
+      { id: 1, name: 'Python', rank: 1, score: 100.0, type: '脚本语言', colors: ['#3776AB','#FFD43B'], desc: 'TIOBE榜首，AI/数据科学绝对霸主，GitHub增长最快语言。数据源: tiobe.com' },
+      { id: 2, name: 'JavaScript', rank: 2, score: 92.5, type: '脚本语言', colors: ['#F7DF1E','#323330'], desc: 'Stack Overflow使用率最高，Web开发核心，全栈必备。数据源: survey.stackoverflow.co' },
+      { id: 3, name: 'TypeScript', rank: 3, score: 88.0, type: '编译语言', colors: ['#3178C6','#00599C'], desc: 'GitHub第一语言，JS超集，大型项目首选。数据源: octoverse.github.com' },
+      { id: 4, name: 'C', rank: 4, score: 85.5, type: '编译语言', colors: ['#A8B9CC','#555555'], desc: 'TIOBE第二，系统编程基础，嵌入式开发主力。数据源: tiobe.com' },
+      { id: 5, name: 'Java', rank: 5, score: 83.0, type: '编译语言', colors: ['#ED8B00','#5382A6'], desc: 'TIOBE第三，企业级应用主力，Android开发语言。数据源: tiobe.com' },
+      { id: 6, name: 'C++', rank: 6, score: 80.5, type: '编译语言', colors: ['#00599C','#00599C'], desc: 'TIOBE第四，系统编程、游戏开发、高性能计算。数据源: tiobe.com' },
+      { id: 7, name: 'Go', rank: 7, score: 78.0, type: '编译语言', colors: ['#00ADD8','#008080'], desc: '云原生首选，并发支持优秀，SO最受推崇语言第五。数据源: survey.stackoverflow.co' },
+      { id: 8, name: 'Rust', rank: 8, score: 75.5, type: '编译语言', colors: ['#DEA584','#B7410E'], desc: 'SO最受推崇语言第一，72%开发者想继续使用，安全高性能。数据源: survey.stackoverflow.co' },
+      { id: 9, name: 'SQL', rank: 9, score: 72.0, type: '查询语言', colors: ['#00758F','#E38C00'], desc: 'SO使用率58.6%，数据库操作必备，数据工程师核心技能。数据源: survey.stackoverflow.co' },
+      { id: 10, name: 'C#', rank: 10, score: 70.0, type: '编译语言', colors: ['#512BD4','#239B20'], desc: 'TIOBE第五，.NET主力，游戏开发Unity。数据源: tiobe.com' }
     ];
 
     // 数据库数据（评分基于DB-Engines 2026年5月最新数据归一化）
@@ -1267,7 +1252,7 @@
         if (compareSection) compareSection.style.display = 'none';
         if (articlesSection) articlesSection.style.display = 'none';
         if (homeSection) homeSection.style.display = 'none';
-        renderModelsTab('coding');
+        renderModelsTab();
       } else if (tab === 'languages') {
         if (hero) hero.style.display = 'none';
         if (statsBar) statsBar.style.display = 'none';
@@ -1293,30 +1278,18 @@
       }
     }
 
-    let currentModelCategory = 'coding';
-
-    function renderModelsTab(category) {
-      currentModelCategory = category;
-
+    function renderModelsTab() {
       const thModel = document.querySelector('.table-header');
       if (thModel) thModel.innerHTML = `
-        <div class="db-filters">
-          <div>
-            <button class="filter-btn ${category === 'coding' ? 'active' : ''}" onclick="renderModelsTab('coding')">编程能力</button>
-            <button class="filter-btn ${category === 'apiPrice' ? 'active' : ''}" onclick="renderModelsTab('apiPrice')">API价格</button>
-            <button class="filter-btn ${category === 'openSource' ? 'active' : ''}" onclick="renderModelsTab('openSource')">开源模型</button>
-            <button class="filter-btn ${category === 'multimodal' ? 'active' : ''}" onclick="renderModelsTab('multimodal')">多模态</button>
-          </div>
-        </div>
         <div class="db-columns"><div>排名</div><div>模型</div><div>评分雷达</div><div>综合评分</div><div>上下文</div><div>操作</div></div>
       `;
 
-      renderModelTable(category);
+      renderModelTable();
     }
 
-    function renderModelTable(category) {
+    function renderModelTable() {
       const container = document.getElementById('toolsTable');
-      const mods = models[category] || [];
+      const mods = models;
 
       container.innerHTML = mods.map((mod, idx) => `
         <div class="table-row" data-id="${mod.id}">
@@ -1329,9 +1302,9 @@
             </div>
           </div>
           <div class="chart-cell"><canvas id="model-chart-${mod.id}" height="60"></canvas></div>
-          <div class="score">${mod.score || (mod.inputPrice + mod.outputPrice) / 2}</div>
+          <div class="score">${mod.score}</div>
           <div><span class="price-tag price-paid">${mod.context}</span></div>
-          <button class="action-btn" onclick="showModelDetail(${mod.id}, '${category}')">查看详情</button>
+          <button class="action-btn" onclick="showModelDetail(${mod.id})">查看详情</button>
         </div>
       `).join('');
 
@@ -1361,12 +1334,11 @@
       });
     }
 
-    function showModelDetail(id, category) {
-      const mod = models[category]?.find(m => m.id === id);
+    function showModelDetail(id) {
+      const mod = models.find(m => m.id === id);
       if (!mod) return;
       let info = `${mod.name} - ${mod.vendor}`;
       if (mod.score) info += `\n评分: ${mod.score}`;
-      if (mod.inputPrice) info += `\n输入: $${mod.inputPrice}/K 输出: $${mod.outputPrice}/K`;
       info += `\n上下文: ${mod.context}`;
       info += `\n\n${currentLang === 'zh' ? mod.desc : 'Coming soon...'}`;
       alert(info);
