@@ -1093,40 +1093,49 @@
       { id: 15, name: 'Continue', vendor: 'Continue', score: 7.7, price: 'free', colors: ['#8B5CF6','#A78BFA'], tags: ['开源', 'VS Code', '本地'], desc: '开源的AI代码助手，VS Code和JetBrains扩展，支持本地部署和自定义模型。' }
     ];
 
-    // 大模型编程能力排行（数据源: 4大权威代码基准测试）
-    // 数据来源：SWE-bench Verified / LiveCodeBench / BigCode Leaderboard 2026
+    // 大模型编程能力排行
+    // 数据来源: https://www.datalearner.com/en/leaderboards/category/code
     const models = {
       'swe-bench': [
-        { id: 1, name: 'Claude 4.5 Opus', vendor: 'Anthropic', score: 76.8, passRate: '76.8%', colors: ['#D97706','#F59E0B'], desc: 'SWE-bench Verified榜首，通过率76.8%。数据源: swe-bench.github.io' },
-        { id: 2, name: 'Gemini 3 Flash', vendor: 'Google', score: 75.8, passRate: '75.8%', colors: ['#3B82F6','#60A5FA'], desc: 'SWE-bench Verified第二，与Claude并列。数据源: swe-bench.github.io' },
-        { id: 3, name: 'MiniMax M2.5', vendor: 'MiniMax', score: 75.8, passRate: '75.8%', colors: ['#EC4899','#F472B6'], desc: 'SWE-bench Verified并列第二，国产黑马。数据源: swe-bench.github.io' },
-        { id: 4, name: 'GPT 5.1', vendor: 'OpenAI', score: 72.5, passRate: '72.5%', colors: ['#10A37F','#34D399'], desc: 'OpenAI旗舰，代码解决能力出色。数据源: swe-bench.github.io' },
-        { id: 5, name: 'DeepSeek V4', vendor: 'DeepSeek', score: 68.2, passRate: '68.2%', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰，性能接近GPT-5。数据源: swe-bench.github.io' },
-        { id: 6, name: 'Qwen 3', vendor: 'Alibaba', score: 65.4, passRate: '65.4%', colors: ['#EC4899','#F472B6'], desc: '阿里旗舰，中文代码能力强。数据源: swe-bench.github.io' }
+        { id: 1, name: 'Claude Mythos Preview', vendor: 'Anthropic', score: 93.9, passRate: '93.9%', colors: ['#D97706','#F59E0B'], desc: 'DataLearner SWE-bench Verified榜首，93.9%通过率。数据源: datalearner.com' },
+        { id: 2, name: 'Opus 4.7', vendor: 'Anthropic', score: 87.6, passRate: '87.6%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最新旗舰，87.6%通过率。数据源: datalearner.com' },
+        { id: 3, name: 'Claude Sonnet 5', vendor: 'Anthropic', score: 82.0, passRate: '82.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic主力模型，82.0%通过率。数据源: datalearner.com' },
+        { id: 4, name: 'Claude Sonnet 4.5', vendor: 'Anthropic', score: 82.0, passRate: '82.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic高性价比模型。数据源: datalearner.com' },
+        { id: 5, name: 'Opus 4.5', vendor: 'Anthropic', score: 80.9, passRate: '80.9%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic旗舰级表现。数据源: datalearner.com' },
+        { id: 6, name: 'Claude Opus 4.6', vendor: 'Anthropic', score: 80.8, passRate: '80.8%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic稳定版本。数据源: datalearner.com' },
+        { id: 7, name: 'DeepSeek-V4-Pro', vendor: 'DeepSeek-AI', score: 80.6, passRate: '80.6%', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰。数据源: datalearner.com' },
+        { id: 8, name: 'Gemini 3.1 Pro Preview', vendor: 'Google', score: 80.6, passRate: '80.6%', colors: ['#3B82F6','#60A5FA'], desc: 'Google旗舰模型。数据源: datalearner.com' },
+        { id: 9, name: 'Claude Sonnet 4', vendor: 'Anthropic', score: 80.2, passRate: '80.2%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic经典版本。数据源: datalearner.com' },
+        { id: 10, name: 'MiniMax M2.5', vendor: 'MiniMaxAI', score: 80.2, passRate: '80.2%', colors: ['#EC4899','#F472B6'], desc: '国产黑马模型。数据源: datalearner.com' }
       ],
       'livecode': [
-        { id: 1, name: 'O4-Mini (High)', vendor: 'OpenAI', score: 87.3, passRate: '87.3%', colors: ['#10A37F','#34D399'], desc: 'LiveCodeBench榜首，87.3%通过率。数据源: livecodebench.github.io' },
-        { id: 2, name: 'O3 (High)', vendor: 'OpenAI', score: 84.7, passRate: '84.7%', colors: ['#10A37F','#34D399'], desc: 'LiveCodeBench第二，84.7%通过率。数据源: livecodebench.github.io' },
-        { id: 3, name: 'O4-Mini (Medium)', vendor: 'OpenAI', score: 84.5, passRate: '84.5%', colors: ['#10A37F','#34D399'], desc: 'LiveCodeBench第三，84.5%通过率。数据源: livecodebench.github.io' },
-        { id: 4, name: 'Claude 4.5 Sonnet', vendor: 'Anthropic', score: 82.1, passRate: '82.1%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic主力模型，表现稳定。数据源: livecodebench.github.io' },
-        { id: 5, name: 'Gemini 2.5 Ultra', vendor: 'Google', score: 79.8, passRate: '79.8%', colors: ['#3B82F6','#60A5FA'], desc: 'Google旗舰，多语言支持强。数据源: livecodebench.github.io' },
-        { id: 6, name: 'DeepSeek V4', vendor: 'DeepSeek', score: 76.5, passRate: '76.5%', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰，性价比高。数据源: livecodebench.github.io' }
+        { id: 1, name: 'Gemini 3.0 Pro Preview', vendor: 'Google', score: 92.0, passRate: '92.0%', colors: ['#3B82F6','#60A5FA'], desc: 'DataLearner LiveCodeBench榜首，92.0%通过率。数据源: datalearner.com' },
+        { id: 2, name: 'Gemini 3.1 Pro Preview', vendor: 'Google', score: 91.7, passRate: '91.7%', colors: ['#3B82F6','#60A5FA'], desc: 'Google最新旗舰，91.7%通过率。数据源: datalearner.com' },
+        { id: 3, name: 'Opus 4.5', vendor: 'Anthropic', score: 87.0, passRate: '87.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最强推理模型。数据源: datalearner.com' },
+        { id: 4, name: 'Step 3.5 Flash', vendor: 'StepFunAI', score: 86.4, passRate: '86.4%', colors: ['#10A37F','#34D399'], desc: '国产AI新秀。数据源: datalearner.com' },
+        { id: 5, name: 'Qwen3-Max-Thinking', vendor: 'Alibaba', score: 85.9, passRate: '85.9%', colors: ['#EC4899','#F472B6'], desc: '阿里思考型旗舰。数据源: datalearner.com' },
+        { id: 6, name: 'GPT-5.1 Codex', vendor: 'OpenAI', score: 85.5, passRate: '85.5%', colors: ['#10A37F','#34D399'], desc: 'OpenAI代码专用模型。数据源: datalearner.com' },
+        { id: 7, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 80.4, passRate: '80.4%', colors: ['#EC4899','#F472B6'], desc: '阿里开源旗舰。数据源: datalearner.com' },
+        { id: 8, name: 'Claude Opus 4', vendor: 'Anthropic', score: 56.6, passRate: '56.6%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic经典旗舰。数据源: datalearner.com' }
       ],
-      'bigcode': [
-        { id: 1, name: 'Qwen2.5-Coder-32B-Instruct', vendor: 'Alibaba', score: 59.2, passRate: '59.2%', colors: ['#EC4899','#F472B6'], desc: 'BigCode榜首，Win Rate 59.2%。数据源: huggingface.co/bigcode' },
-        { id: 2, name: 'Qwen2.5-Coder-32B', vendor: 'Alibaba', score: 56.7, passRate: '56.7%', colors: ['#EC4899','#F472B6'], desc: 'BigCode第二，32B参数表现出色。数据源: huggingface.co/bigcode' },
-        { id: 3, name: 'OpenCodeInterpreter-DS-33B', vendor: 'DeepSeek', score: 56.3, passRate: '56.3%', colors: ['#6366F1','#818CF8'], desc: 'BigCode第三，国产开源。数据源: huggingface.co/bigcode' },
-        { id: 4, name: 'DeepSeek Coder 33B', vendor: 'DeepSeek', score: 54.8, passRate: '54.8%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek代码旗舰，开源可商用。数据源: huggingface.co/bigcode' },
-        { id: 5, name: 'StarCoder2-15B', vendor: 'HuggingFace', score: 48.2, passRate: '48.2%', colors: ['#FFD43B','#A8B9CC'], desc: 'HuggingFace开源，15B参数。数据源: huggingface.co/bigcode' },
-        { id: 6, name: 'CodeLlama-70B-Instruct', vendor: 'Meta', score: 45.6, passRate: '45.6%', colors: ['#F97316','#FB923C'], desc: 'Meta开源代码模型，70B参数。数据源: huggingface.co/bigcode' }
+      'swe-pro': [
+        { id: 1, name: 'Claude Mythos Preview', vendor: 'Anthropic', score: 77.8, passRate: '77.8%', colors: ['#D97706','#F59E0B'], desc: 'DataLearner SWE-Bench Pro榜首，77.8%通过率。数据源: datalearner.com' },
+        { id: 2, name: 'Claude Opus 4.6', vendor: 'Anthropic', score: 72.0, passRate: '72.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic专业版。数据源: datalearner.com' },
+        { id: 3, name: 'Kimi K2.6', vendor: 'Moonshot AI', score: 58.6, passRate: '58.6%', colors: ['#10A37F','#34D399'], desc: '国产旗舰，超长上下文。数据源: datalearner.com' },
+        { id: 4, name: 'GPT-5.2', vendor: 'OpenAI', score: 55.6, passRate: '55.6%', colors: ['#10A37F','#34D399'], desc: 'OpenAI最新旗舰。数据源: datalearner.com' },
+        { id: 5, name: 'MiniMax M2.5', vendor: 'MiniMaxAI', score: 55.4, passRate: '55.4%', colors: ['#EC4899','#F472B6'], desc: '国产高性能模型。数据源: datalearner.com' },
+        { id: 6, name: 'DeepSeek-V4-Pro', vendor: 'DeepSeek-AI', score: 55.4, passRate: '55.4%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek专业版。数据源: datalearner.com' },
+        { id: 7, name: 'DeepSeek-V4-Flash', vendor: 'DeepSeek-AI', score: 52.6, passRate: '52.6%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek轻量版。数据源: datalearner.com' },
+        { id: 8, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 49.5, passRate: '49.5%', colors: ['#EC4899','#F472B6'], desc: '阿里开源代码模型。数据源: datalearner.com' },
+        { id: 9, name: 'GLM-4.7', vendor: 'Zhipu AI', score: 40.6, passRate: '40.6%', colors: ['#10A37F','#34D399'], desc: '智谱最新版本。数据源: datalearner.com' }
       ],
       'multilingual': [
-        { id: 1, name: 'Claude 4.5 Opus', vendor: 'Anthropic', score: 74.5, passRate: '74.5%', colors: ['#D97706','#F59E0B'], desc: '多语言代码能力最强，Python/JS/Java均领先。数据源: swe-bench.github.io/multilingual' },
-        { id: 2, name: 'GPT 5.1', vendor: 'OpenAI', score: 72.8, passRate: '72.8%', colors: ['#10A37F','#34D399'], desc: 'OpenAI旗舰，多语言支持优秀。数据源: swe-bench.github.io/multilingual' },
-        { id: 3, name: 'Gemini 2.5 Ultra', vendor: 'Google', score: 70.2, passRate: '70.2%', colors: ['#3B82F6','#60A5FA'], desc: 'Google旗舰，Go/C++能力强。数据源: swe-bench.github.io/multilingual' },
-        { id: 4, name: 'DeepSeek V4', vendor: 'DeepSeek', score: 66.5, passRate: '66.5%', colors: ['#6366F1','#818CF8'], desc: '国产开源，中文代码能力强。数据源: swe-bench.github.io/multilingual' },
-        { id: 5, name: 'Qwen 3', vendor: 'Alibaba', score: 63.8, passRate: '63.8%', colors: ['#EC4899','#F472B6'], desc: '阿里旗舰，中英双语优秀。数据源: swe-bench.github.io/multilingual' },
-        { id: 6, name: 'Llama 4', vendor: 'Meta', score: 58.4, passRate: '58.4%', colors: ['#F97316','#FB923C'], desc: 'Meta开源旗舰，多语言支持。数据源: swe-bench.github.io/multilingual' }
+        { id: 1, name: 'Claude Mythos Preview', vendor: 'Anthropic', score: 87.3, passRate: '87.3%', colors: ['#D97706','#F59E0B'], desc: 'DataLearner多语言榜首，87.3%通过率。数据源: datalearner.com' },
+        { id: 2, name: 'Kimi K2.6', vendor: 'Moonshot AI', score: 76.7, passRate: '76.7%', colors: ['#10A37F','#34D399'], desc: '国产旗舰，中文代码强。数据源: datalearner.com' },
+        { id: 3, name: 'DeepSeek-V4-Pro', vendor: 'DeepSeek-AI', score: 76.2, passRate: '76.2%', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰。数据源: datalearner.com' },
+        { id: 4, name: 'DeepSeek-V4-Flash', vendor: 'DeepSeek-AI', score: 73.3, passRate: '73.3%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek轻量版。数据源: datalearner.com' },
+        { id: 5, name: 'Qwen3.6-27B', vendor: 'Alibaba', score: 71.3, passRate: '71.3%', colors: ['#EC4899','#F472B6'], desc: '阿里27B参数模型。数据源: datalearner.com' },
+        { id: 6, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 67.2, passRate: '67.2%', colors: ['#EC4899','#F472B6'], desc: '阿里35B参数模型。数据源: datalearner.com' }
       ]
     };
 
@@ -1313,7 +1322,7 @@
           <div>
             <button class="filter-btn ${category === 'swe-bench' ? 'active' : ''}" onclick="renderModelsTab('swe-bench')">SWE-bench Verified</button>
             <button class="filter-btn ${category === 'livecode' ? 'active' : ''}" onclick="renderModelsTab('livecode')">LiveCodeBench</button>
-            <button class="filter-btn ${category === 'bigcode' ? 'active' : ''}" onclick="renderModelsTab('bigcode')">BigCode</button>
+            <button class="filter-btn ${category === 'swe-pro' ? 'active' : ''}" onclick="renderModelsTab('swe-pro')">SWE-Bench Pro</button>
             <button class="filter-btn ${category === 'multilingual' ? 'active' : ''}" onclick="renderModelsTab('multilingual')">多语言</button>
           </div>
         </div>
