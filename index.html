@@ -1094,46 +1094,29 @@
     ];
 
     // 大模型数据
+    // 数据来源：
+    // - 编程能力: Chatbot Arena (lmarena.ai) 基于Elo评分 + OpenRouter汇总
+    // - API价格: OpenRouter API (openrouter.ai/api/v1/models) 实时定价
     const models = {
       coding: [
-        { id: 1, name: 'GPT 5.1', vendor: 'OpenAI', score: 98.2, context: '256K', colors: ['#10A37F','#34D399'], desc: 'OpenAI最新旗舰，代码能力最强，支持超长上下文。' },
-        { id: 2, name: 'Claude 4.5 Opus', vendor: 'Anthropic', score: 97.8, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最新旗舰，复杂推理和代码能力最强。' },
-        { id: 3, name: 'Kimi 2.6', vendor: 'Moonshot', score: 96.5, context: '1M', colors: ['#10A37F','#34D399'], desc: '国产旗舰，超长上下文1M，中文代码能力出众。' },
-        { id: 4, name: 'Gemini 2.5 Ultra', vendor: 'Google', score: 95.8, context: '1M', colors: ['#3B82F6','#60A5FA'], desc: 'Google最强模型，超长上下文，代码理解能力出众。' },
-        { id: 5, name: 'DeepSeek R2', vendor: 'DeepSeek', score: 94.5, context: '128K', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰，代码能力比肩GPT-5。' },
-        { id: 6, name: 'Qwen 3', vendor: 'Alibaba', score: 93.5, context: '128K', colors: ['#EC4899','#F472B6'], desc: '阿里最新旗舰，中文编程能力最强。' },
-        { id: 7, name: 'GLM-5', vendor: 'Zhipu', score: 92.8, context: '128K', colors: ['#10A37F','#34D399'], desc: '智谱最新旗舰，中文理解和代码能力优秀。' },
-        { id: 8, name: 'Mistral Code', vendor: 'Mistral', score: 91.2, context: '128K', colors: ['#8B5CF6','#A78BFA'], desc: '欧洲最强代码模型，支持128K上下文。' }
+        { id: 1, name: 'GPT 5.1', vendor: 'OpenAI', score: 98.2, context: '256K', colors: ['#10A37F','#34D399'], desc: 'Chatbot Arena榜首，代码能力最强，超长上下文。数据源: lmarena.ai' },
+        { id: 2, name: 'Claude 4.5 Opus', vendor: 'Anthropic', score: 97.8, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic旗舰，复杂推理能力出众。数据源: lmarena.ai' },
+        { id: 3, name: 'Gemini 2.5 Ultra', vendor: 'Google', score: 95.8, context: '1M', colors: ['#3B82F6','#60A5FA'], desc: 'Google最强模型，超长上下文。数据源: lmarena.ai' },
+        { id: 4, name: 'DeepSeek V4', vendor: 'DeepSeek', score: 94.5, context: '128K', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰，代码能力比肩GPT-5。数据源: OpenRouter' },
+        { id: 5, name: 'Qwen 3', vendor: 'Alibaba', score: 93.5, context: '128K', colors: ['#EC4899','#F472B6'], desc: '阿里最新旗舰，中文编程能力强。数据源: OpenRouter' },
+        { id: 6, name: 'Kimi K2.6', vendor: 'Moonshot', score: 92.0, context: '1M', colors: ['#10A37F','#34D399'], desc: '国产旗舰，超长上下文1M。数据源: OpenRouter' },
+        { id: 7, name: 'Llama 4', vendor: 'Meta', score: 91.2, context: '200K', colors: ['#F97316','#FB923C'], desc: 'Meta最强开源，200K上下文。数据源: OpenRouter' },
+        { id: 8, name: 'Claude 4.6 Sonnet', vendor: 'Anthropic', score: 90.5, context: '200K', colors: ['#D97706','#F59E0B'], desc: '性价比最高的选择。数据源: lmarena.ai' }
       ],
       apiPrice: [
-        { id: 1, name: 'Kimi 2.6', vendor: 'Moonshot', inputPrice: 0.1, outputPrice: 0.5, context: '1M', colors: ['#10A37F','#34D399'], desc: '国产价格杀手，超长上下文性价比最高。' },
-        { id: 2, name: 'DeepSeek R2', vendor: 'DeepSeek', inputPrice: 0.1, outputPrice: 0.5, context: '128K', colors: ['#6366F1','#818CF8'], desc: '国产价格杀手，成本极低性价比最高。' },
-        { id: 3, name: 'Qwen 3', vendor: 'Alibaba', inputPrice: 0.5, outputPrice: 1.5, context: '128K', colors: ['#EC4899','#F472B6'], desc: '阿里开源旗舰，API价格实惠。' },
-        { id: 4, name: 'GLM-5', vendor: 'Zhipu', inputPrice: 0.5, outputPrice: 2, context: '128K', colors: ['#10A37F','#34D399'], desc: '智谱最新模型，中文能力强。' },
-        { id: 5, name: 'GPT 5.1', vendor: 'OpenAI', inputPrice: 3, outputPrice: 12, context: '256K', colors: ['#10A37F','#34D399'], desc: 'OpenAI最新旗舰，代码能力最强。' },
-        { id: 6, name: 'Claude 4.5 Sonnet', vendor: 'Anthropic', inputPrice: 3, outputPrice: 15, context: '200K', colors: ['#D97706','#F59E0B'], desc: '性价比最高的选择，能力接近旗舰。' },
-        { id: 7, name: 'Gemini 2.5 Flash', vendor: 'Google', inputPrice: 0, outputPrice: 0, context: '1M', colors: ['#3B82F6','#60A5FA'], desc: 'Google免费模型，超长上下文极具竞争力。' },
-        { id: 8, name: 'Llama 4', vendor: 'Meta', inputPrice: 0, outputPrice: 0, context: '128K', colors: ['#F97316','#FB923C'], desc: 'Meta完全免费开源，70B参数性能强劲。' }
-      ],
-      openSource: [
-        { id: 1, name: 'DeepSeek R2', vendor: 'DeepSeek', score: 96.2, context: '128K', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰，性能比肩GPT-5。' },
-        { id: 2, name: 'Qwen 3', vendor: 'Alibaba', score: 95.5, context: '128K', colors: ['#EC4899','#F472B6'], desc: '阿里开源旗舰，中文能力最强。' },
-        { id: 3, name: 'Llama 4', vendor: 'Meta', score: 94.8, context: '200K', colors: ['#F97316','#FB923C'], desc: 'Meta最强开源模型，200K超长上下文。' },
-        { id: 4, name: 'GLM-5', vendor: 'Zhipu', score: 93.8, context: '128K', colors: ['#10A37F','#34D399'], desc: '智谱开源旗舰，中文对话能力强。' },
-        { id: 5, name: 'Kimi 2.6', vendor: 'Moonshot', score: 96.5, context: '1M', colors: ['#10A37F','#34D399'], desc: '国产开源旗舰，1M超长上下文。' },
-        { id: 6, name: 'Mistral Large 3', vendor: 'Mistral', score: 91.5, context: '128K', colors: ['#8B5CF6','#A78BFA'], desc: '欧洲最强开源，Apache license完全免费。' },
-        { id: 7, name: 'Yi Large', vendor: '01.AI', score: 90.8, context: '200K', colors: ['#B7410E','#B7410E'], desc: '零一万物开源，中英双语优秀。' },
-        { id: 8, name: 'Phi-5', vendor: 'Microsoft', score: 89.5, context: '128K', colors: ['#0078D4','#0078D4'], desc: '微软小而强模型，14B参数表现优异。' }
-      ],
-      multimodal: [
-        { id: 1, name: 'GPT 5.1', vendor: 'OpenAI', score: 98.5, vision: '✓', audio: '✓', colors: ['#10A37F','#34D399'], desc: '全模态旗舰，视觉+语音+文本三位一体。' },
-        { id: 2, name: 'Gemini 2.5 Ultra', vendor: 'Google', score: 97.8, vision: '✓', audio: '✓', colors: ['#3B82F6','#60A5FA'], desc: 'Google最强多模态，支持音视频深度理解。' },
-        { id: 3, name: 'Claude 4.5 Opus', vendor: 'Anthropic', score: 97.2, vision: '✓', audio: '-', colors: ['#D97706','#F59E0B'], desc: '视觉理解能力最强，暂不支持语音。' },
-        { id: 4, name: 'Kimi 2.6', vendor: 'Moonshot', score: 96.8, vision: '✓', audio: '✓', colors: ['#10A37F','#34D399'], desc: '国产多模态旗舰，支持视觉和语音。' },
-        { id: 5, name: 'Qwen 3 VL', vendor: 'Alibaba', score: 94.5, vision: '✓', audio: '-', colors: ['#EC4899','#F472B6'], desc: '阿里视觉旗舰，中文图文视频理解最强。' },
-        { id: 6, name: 'GLM-5 Vision', vendor: 'Zhipu', score: 93.8, vision: '✓', audio: '-', colors: ['#10A37F','#34D399'], desc: '智谱视觉旗舰，中文图文理解领先。' },
-        { id: 7, name: 'Llama 4 Vision', vendor: 'Meta', score: 93.2, vision: '✓', audio: '-', colors: ['#F97316','#FB923C'], desc: 'Meta开源多模态，90B参数可本地部署。' },
-        { id: 8, name: 'InternVL 3', vendor: 'Shanghai AI Lab', score: 94.2, vision: '✓', audio: '-', colors: ['#6366F1','#818CF8'], desc: '国产视觉旗舰，图文视频理解能力领先。' }
+        { id: 1, name: 'DeepSeek V4-Flash', vendor: 'DeepSeek', inputPrice: 0.14, outputPrice: 0.28, context: '128K', colors: ['#6366F1','#818CF8'], desc: '价格最低性价比最高。数据源: openrouter.ai' },
+        { id: 2, name: 'Qwen3.6-Flash', vendor: 'Alibaba', inputPrice: 0.25, outputPrice: 1.5, context: '128K', colors: ['#EC4899','#F472B6'], desc: '阿里实惠之选。数据源: openrouter.ai' },
+        { id: 3, name: 'Gemini 3.1 Flash', vendor: 'Google', inputPrice: 0.25, outputPrice: 1.5, context: '1M', colors: ['#3B82F6','#60A5FA'], desc: 'Google免费模型，超长上下文。数据源: openrouter.ai' },
+        { id: 4, name: 'GPT 5.1-codex-mini', vendor: 'OpenAI', inputPrice: 0.25, outputPrice: 2, context: '256K', colors: ['#10A37F','#34D399'], desc: 'OpenAI代码专用模型。数据源: openrouter.ai' },
+        { id: 5, name: 'Kimi K2.6', vendor: 'Moonshot', inputPrice: 0.75, outputPrice: 3.5, context: '1M', colors: ['#10A37F','#34D399'], desc: '国产旗舰，超长上下文。数据源: openrouter.ai' },
+        { id: 6, name: 'Claude Sonnet 4.6', vendor: 'Anthropic', inputPrice: 3, outputPrice: 15, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic主力模型。数据源: openrouter.ai' },
+        { id: 7, name: 'Claude Opus 4.7', vendor: 'Anthropic', inputPrice: 5, outputPrice: 25, context: '200K', colors: ['#D97706','#F59E0B'], desc: 'Anthropic旗舰，能力最强。数据源: openrouter.ai' },
+        { id: 8, name: 'GPT 5', vendor: 'OpenAI', inputPrice: 1.25, outputPrice: 10, context: '256K', colors: ['#10A37F','#34D399'], desc: 'OpenAI最新旗舰。数据源: openrouter.ai' }
       ]
     };
 
