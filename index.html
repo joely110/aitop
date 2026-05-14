@@ -1851,12 +1851,21 @@
       visibleDbs.forEach(db => {
         const ctx = document.getElementById(`db-chart-${db.id}`);
         if (ctx) {
+          // 评分归一化到 0-100 范围 (使用对数归一化处理大范围数据)
+          const maxScore = Math.max(...dbs.map(d => d.score));
+          const minScore = Math.min(...dbs.map(d => d.score));
+          const normalize = (score) => {
+            if (maxScore === minScore) return 50;
+            return ((Math.log10(score + 1) - Math.log10(minScore + 1)) / (Math.log10(maxScore + 1) - Math.log10(minScore + 1))) * 100;
+          };
+          const normalizedScore = normalize(db.score);
+
           new Chart(ctx, {
             type: 'radar',
             data: {
               labels: ['性能', '易用', '生态', '社区', '前景'],
               datasets: [{
-                data: [db.score / 10.5, db.score / 11, db.score / 10.8, db.score / 10.5, db.score / 10.3],
+                data: [normalizedScore * 0.9, normalizedScore * 0.95, normalizedScore * 0.85, normalizedScore * 0.8, normalizedScore * 0.75],
                 backgroundColor: db.colors[0] + '40',
                 borderColor: db.colors[0],
                 pointRadius: 0,
@@ -1867,7 +1876,7 @@
               responsive: true,
               maintainAspectRatio: false,
               plugins: { legend: { display: false } },
-              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
+              scales: { r: { min: 0, max: 100, ticks: { display: false } } }
             }
           });
         }
