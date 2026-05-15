@@ -520,7 +520,8 @@
     .tool-name { font-weight: 600; font-size: 15px; }
     .tool-vendor { font-size: 12px; color: var(--text-secondary); }
 
-    .chart-cell { height: 60px; }
+    .chart-cell { height: 70px; width: 80px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .chart-cell canvas { max-width: 100%; max-height: 100%; }
 
     .score {
       font-size: 20px;
