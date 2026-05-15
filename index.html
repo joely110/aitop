@@ -1444,7 +1444,7 @@
               <button class="filter-btn ${currentToolFilter === 'freemium' ? 'active' : ''}" data-filter="freemium" onclick="filterTools('freemium')">免费+付费</button>
             </div>
           </div>
-          <div class="db-columns"><div>排名</div><div>工具</div><div>评分雷达</div><div>综合评分</div><div>价格</div><div>操作</div></div>
+          <div class="db-columns"><div>${t('tableRank')}</div><div>${currentLang === 'zh' ? '工具' : 'Tool'}</div><div>${currentLang === 'zh' ? '评分雷达' : 'Radar'}</div><div>${t('tableScore')}</div><div>${t('tablePrice')}</div><div>${t('tableAction')}</div></div>
         `;
         renderToolsTable();
       } else if (tab === 'models') {
@@ -1467,7 +1467,7 @@
         if (articlesSection) articlesSection.style.display = 'none';
         if (homeSection) homeSection.style.display = 'none';
         const thLang = document.querySelector('.table-header');
-        if (thLang) thLang.innerHTML = '<div class="db-columns"><div>排名</div><div>语言</div><div>评分雷达</div><div>流行度</div><div>TIOBE排名</div><div>操作</div></div>';
+        if (thLang) thLang.innerHTML = `<div class="db-columns"><div>${t('tableRank')}</div><div>${currentLang === 'zh' ? '语言' : 'Language'}</div><div>${currentLang === 'zh' ? '评分雷达' : 'Radar'}</div><div>${currentLang === 'zh' ? '流行度' : 'Popularity'}</div><div>${currentLang === 'zh' ? 'TIOBE排名' : 'TIOBE Rank'}</div><div>${t('tableAction')}</div></div>`;
         renderLanguagesTable();
       } else if (tab === 'databases') {
         if (hero) hero.style.display = 'none';
@@ -1490,13 +1490,13 @@
       if (thModel) thModel.innerHTML = `
         <div class="db-filters">
           <div>
-            <button class="filter-btn ${category === 'swe-bench' ? 'active' : ''}" onclick="renderModelsTab('swe-bench')">SWE-bench Verified</button>
-            <button class="filter-btn ${category === 'livecode' ? 'active' : ''}" onclick="renderModelsTab('livecode')">LiveCodeBench</button>
-            <button class="filter-btn ${category === 'swe-pro' ? 'active' : ''}" onclick="renderModelsTab('swe-pro')">SWE-Bench Pro</button>
-            <button class="filter-btn ${category === 'multilingual' ? 'active' : ''}" onclick="renderModelsTab('multilingual')">SWE-bench Multilingual</button>
+            <button class="filter-btn ${category === 'swe-bench' ? 'active' : ''}" onclick="renderModelsTab('swe-bench')">${t('modelSwebench')}</button>
+            <button class="filter-btn ${category === 'livecode' ? 'active' : ''}" onclick="renderModelsTab('livecode')">${t('modelLivecode')}</button>
+            <button class="filter-btn ${category === 'swe-pro' ? 'active' : ''}" onclick="renderModelsTab('swe-pro')">${t('modelSwePro')}</button>
+            <button class="filter-btn ${category === 'multilingual' ? 'active' : ''}" onclick="renderModelsTab('multilingual')">${t('modelMultilingual')}</button>
           </div>
         </div>
-        <div class="db-columns"><div>排名</div><div>模型</div><div>评分雷达</div><div>通过率</div><div>操作</div></div>
+        <div class="db-columns"><div>${t('tableRank')}</div><div>${currentLang === 'zh' ? '模型' : 'Model'}</div><div>${currentLang === 'zh' ? '评分雷达' : 'Radar'}</div><div>${currentLang === 'zh' ? '通过率' : 'Pass Rate'}</div><div>${t('tableAction')}</div></div>
       `;
 
       renderModelTable(currentModelCategory);
@@ -1518,7 +1518,7 @@
           </div>
           <div class="chart-cell"><canvas id="model-chart-${mod.id}" height="60"></canvas></div>
           <div class="score">${mod.passRate}</div>
-          <div><button class="action-btn" onclick="showModelDetail(${mod.id}, '${category}')">查看详情</button></div>
+          <div><button class="action-btn" onclick="showModelDetail(${mod.id}, '${category}')">${t('btnDetail')}</button></div>
         </div>
       `).join('');
 
@@ -1612,31 +1612,281 @@
       applyLang();
     }
 
+    // ==================== I18N ====================
+    const i18n = {
+      zh: {
+        // Nav
+        navHome: '🏠 首页',
+        navTools: '编程工具排行',
+        navModels: '大模型排行',
+        navLanguages: '编程语言排行',
+        navDatabases: '数据库排行',
+        // Home
+        homeTitle: '开发者工具排行榜',
+        homeSubtitle: '2026年最新最全的开发工具对比平台',
+        homeTag1: '🛠️ 开发者工具',
+        homeTag2: '📊 真实数据排行',
+        homeTag3: '🌐 中英双语',
+        ctaRankings: '查看排行榜',
+        ctaCompare: '大模型对比',
+        catTools: 'AI编程工具',
+        catToolsDesc: 'Cursor、Copilot、Claude Code 等主流AI代码助手对比',
+        catToolsCount: '款工具',
+        catModels: '大模型排行',
+        catModelsDesc: 'GPT-4o、Claude、Gemini 等大模型能力与价格对比',
+        catModelsCount: '种分类',
+        catLang: '编程语言',
+        catLangDesc: 'Python、JavaScript、TypeScript 等语言流行度排行',
+        catLangCount: '种语言',
+        catDb: '数据库',
+        catDbDesc: 'MySQL、PostgreSQL、MongoDB、Redis 等数据库对比',
+        catDbCount: '种分类',
+        featuredTitle: '🔥 热门工具',
+        statsTools: '收录工具',
+        statsRanking: '排行分类',
+        statsFree: '免费工具',
+        statsAvg: '平均评分',
+        featureTitle: '客观评分',
+        featureDesc: '追踪最新版本和功能更新，第一时间更新排名数据',
+        about: '关于我们',
+        aboutDesc: 'DevRank 是一个致力于为开发者提供最全面、最客观工具对比平台的网站。',
+        dataSourceTitle: '数据来源',
+        dataSourceDesc: '我们的数据来源于权威机构：',
+        dataSource1: 'DB-Engines - 全球数据库排行权威',
+        dataSource2: 'TIOBE - 编程语言流行度指标',
+        dataSource3: 'Stack Overflow - 开发者调研数据',
+        dataSource4: 'GitHub Octoverse - 开源活跃度统计',
+        dataSource5: 'DataLearner - AI模型代码能力评测',
+        footerProduct: '产品',
+        footerResource: '资源',
+        footerAbout: '关于',
+        footerPrivacy: '隐私政策',
+        footerAboutUs: '关于我们',
+        footerContact: '联系我们',
+        footerCopyright: '© 2026 DevRank at virexstar.com. All rights reserved.',
+        // Tools page
+        toolsTitle: 'AI编程工具排行榜',
+        toolsDesc: '最全的AI代码助手对比，帮你选出最适合的编程工具',
+        filterAll: '全部',
+        filterFree: '免费',
+        filterPaid: '付费',
+        filterOpen: '开源',
+        sortRank: '综合排名',
+        sortScore: '评分最高',
+        sortPrice: '价格',
+        tableRank: '排名',
+        tableTool: '工具',
+        tableScore: '评分',
+        tablePrice: '价格',
+        tableAction: '操作',
+        btnDetail: '查看详情',
+        // Languages page
+        langTitle: '编程语言排行',
+        langDesc: 'Python、JavaScript、TypeScript 等语言流行度排行',
+        tableName: '语言',
+        tableType: '类型',
+        // Databases page
+        dbTitle: '数据库排行榜',
+        dbDesc: 'MySQL、PostgreSQL、MongoDB、Redis 等数据库对比',
+        dbRdbms: '关系型',
+        dbKv: '键值',
+        dbDoc: '文档',
+        dbSearch: '搜索引擎',
+        dbWide: '列式',
+        dbGraph: '图',
+        dbTime: '时序',
+        dbVector: '向量',
+        dbBig: '大数据平台',
+        tableVendor: '厂商',
+        loadMore: '加载更多',
+        // Models page
+        modelTitle: '大模型编程能力排行榜',
+        modelDesc: 'GPT-4o、Claude、Gemini 等大模型能力与价格对比',
+        modelSwebench: 'SWE-bench Verified',
+        modelLivecode: 'LiveCodeBench',
+        modelSwePro: 'SWE-Bench Pro',
+        modelMultilingual: 'SWE-bench Multilingual',
+        // Common
+        langBtn: 'EN/中文'
+      },
+      en: {
+        // Nav
+        navHome: '🏠 Home',
+        navTools: 'AI Tools Ranking',
+        navModels: 'LLM Rankings',
+        navLanguages: 'Languages Ranking',
+        navDatabases: 'Databases Ranking',
+        // Home
+        homeTitle: 'Developer Tools Rankings',
+        homeSubtitle: 'Most comprehensive developer tools comparison platform in 2026',
+        homeTag1: '🛠️ Dev Tools',
+        homeTag2: '📊 Real Data',
+        homeTag3: '🌐 Bilingual',
+        ctaRankings: 'View Rankings',
+        ctaCompare: 'LLM Comparison',
+        catTools: 'AI Coding Tools',
+        catToolsDesc: 'Cursor, Copilot, Claude Code and other major AI code assistants',
+        catToolsCount: ' tools',
+        catModels: 'LLM Rankings',
+        catModelsDesc: 'GPT-4o, Claude, Gemini and other LLMs capability & price comparison',
+        catModelsCount: ' categories',
+        catLang: 'Programming Languages',
+        catLangDesc: 'Python, JavaScript, TypeScript and other language popularity rankings',
+        catLangCount: ' languages',
+        catDb: 'Databases',
+        catDbDesc: 'MySQL, PostgreSQL, MongoDB, Redis and other database comparisons',
+        catDbCount: ' categories',
+        featuredTitle: '🔥 Popular Tools',
+        statsTools: 'Tools',
+        statsRanking: 'Categories',
+        statsFree: 'Free Tools',
+        statsAvg: 'Avg Score',
+        featureTitle: 'Objective Scoring',
+        featureDesc: 'Track latest versions and updates, update ranking data第一时间',
+        about: 'About Us',
+        aboutDesc: 'DevRank is a platform dedicated to providing developers with the most comprehensive and objective tool comparisons.',
+        dataSourceTitle: 'Data Sources',
+        dataSourceDesc: 'Our data comes from authoritative sources:',
+        dataSource1: 'DB-Engines - Global database ranking authority',
+        dataSource2: 'TIOBE - Programming language popularity index',
+        dataSource3: 'Stack Overflow - Developer survey data',
+        dataSource4: 'GitHub Octoverse - Open source activity statistics',
+        dataSource5: 'DataLearner - AI model code capability evaluation',
+        footerProduct: 'Product',
+        footerResource: 'Resource',
+        footerAbout: 'About',
+        footerPrivacy: 'Privacy Policy',
+        footerAboutUs: 'About Us',
+        footerContact: 'Contact Us',
+        footerCopyright: '© 2026 DevRank at virexstar.com. All rights reserved.',
+        // Tools page
+        toolsTitle: 'AI Coding Tools Ranking 2026',
+        toolsDesc: 'Most comprehensive AI code assistant comparison to help you choose the best coding tool',
+        filterAll: 'All',
+        filterFree: 'Free',
+        filterPaid: 'Paid',
+        filterOpen: 'Open Source',
+        sortRank: 'Ranking',
+        sortScore: 'Highest Score',
+        sortPrice: 'Price',
+        tableRank: '#',
+        tableTool: 'Tool',
+        tableScore: 'Score',
+        tablePrice: 'Price',
+        tableAction: 'Action',
+        btnDetail: 'Details',
+        // Languages page
+        langTitle: 'Programming Languages Ranking',
+        langDesc: 'Python, JavaScript, TypeScript and other language popularity rankings',
+        tableName: 'Language',
+        tableType: 'Type',
+        // Databases page
+        dbTitle: 'Database Rankings',
+        dbDesc: 'MySQL, PostgreSQL, MongoDB, Redis and other database comparisons',
+        dbRdbms: 'RDBMS',
+        dbKv: 'Key-Value',
+        dbDoc: 'Document',
+        dbSearch: 'Search',
+        dbWide: 'Wide Column',
+        dbGraph: 'Graph',
+        dbTime: 'Time Series',
+        dbVector: 'Vector',
+        dbBig: 'Big Data',
+        tableVendor: 'Vendor',
+        loadMore: 'Load More',
+        // Models page
+        modelTitle: 'LLM Code Capability Ranking',
+        modelDesc: 'GPT-4o, Claude, Gemini and other LLMs capability & price comparison',
+        modelSwebench: 'SWE-bench Verified',
+        modelLivecode: 'LiveCodeBench',
+        modelSwePro: 'SWE-Bench Pro',
+        modelMultilingual: 'SWE-bench Multilingual',
+        // Common
+        langBtn: 'EN/中文'
+      }
+    };
+
+    function t(key) {
+      return i18n[currentLang][key] || key;
+    }
+
     function applyLang() {
       document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
-      document.getElementById('langBtn').textContent = currentLang === 'zh' ? 'English' : '中文';
+      document.getElementById('langBtn').textContent = t('langBtn');
 
-      const texts = {
-        heroTitle: currentLang === 'zh' ? '2026年AI编程工具排行榜' : 'AI Coding Tools Ranking 2026',
-        heroDesc: currentLang === 'zh' ? '最全的AI代码助手对比，帮你选出最适合的编程工具' : 'Complete AI code assistant comparison to help you choose the best coding tool',
-        topTitle: currentLang === 'zh' ? '🏆 榜单前三甲' : '🏆 Top 3 Rankings',
-        priceChartTitle: currentLang === 'zh' ? '💰 价格对比' : '💰 Price Comparison',
-        trendChartTitle: currentLang === 'zh' ? '📈 热度趋势' : '📈 Popularity Trend',
-        compareTitle: currentLang === 'zh' ? '🔍 工具对比' : '🔍 Tool Comparison',
-        articlesTitle: currentLang === 'zh' ? '📚 精选教程' : '📚 Featured Articles',
-        statTools: currentLang === 'zh' ? '收录工具' : 'Tools',
-        statFree: currentLang === 'zh' ? '免费工具' : 'Free Tools',
-        statAvg: currentLang === 'zh' ? '平均评分' : 'Avg Score',
-        statNew: currentLang === 'zh' ? '本月新增' : 'New This Month',
-        footerProduct: currentLang === 'zh' ? '产品' : 'Product',
-        footerResource: currentLang === 'zh' ? '资源' : 'Resource',
-        footerAbout: currentLang === 'zh' ? '关于' : 'About'
-      };
-
-      Object.entries(texts).forEach(([id, text]) => {
-        const el = document.getElementById(id);
-        if (el) el.textContent = text;
+      // Update nav
+      document.querySelectorAll('nav a[data-tab]').forEach(a => {
+        const tab = a.dataset.tab;
+        if (tab === 'home') a.textContent = t('navHome');
+        if (tab === 'tools') a.textContent = t('navTools');
+        if (tab === 'models') a.textContent = t('navModels');
+        if (tab === 'languages') a.textContent = t('navLanguages');
+        if (tab === 'databases') a.textContent = t('navDatabases');
       });
+
+      // Update home page
+      const homeTitle = document.querySelector('.home-title');
+      if (homeTitle) homeTitle.textContent = t('homeTitle');
+      const homeSubtitle = document.querySelector('.home-subtitle');
+      if (homeSubtitle) homeSubtitle.textContent = t('homeSubtitle');
+      document.querySelectorAll('.home-tag').forEach((el, i) => {
+        if (i === 0) el.textContent = t('homeTag1');
+        if (i === 1) el.textContent = t('homeTag2');
+        if (i === 2) el.textContent = t('homeTag3');
+      });
+      document.querySelectorAll('.category-card h3').forEach((el, i) => {
+        if (i === 0) el.textContent = t('catTools');
+        if (i === 1) el.textContent = t('catModels');
+        if (i === 2) el.textContent = t('catLang');
+        if (i === 3) el.textContent = t('catDb');
+      });
+      document.querySelectorAll('.category-card p').forEach((el, i) => {
+        if (i === 0) el.textContent = t('catToolsDesc');
+        if (i === 1) el.textContent = t('catModelsDesc');
+        if (i === 2) el.textContent = t('catLangDesc');
+        if (i === 3) el.textContent = t('catDbDesc');
+      });
+      const featuredTitle = document.querySelector('.section-title');
+      if (featuredTitle) featuredTitle.textContent = t('featuredTitle');
+      document.querySelectorAll('.stat-label').forEach((el, i) => {
+        const labels = [t('statsTools'), t('statsRanking'), t('statsFree'), t('statsAvg')];
+        if (labels[i]) el.textContent = labels[i];
+      });
+
+      // Update tools page filters and table header
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        const f = btn.dataset.filter;
+        if (f === 'all') btn.textContent = t('filterAll');
+        if (f === 'free') btn.textContent = t('filterFree');
+        if (f === 'paid') btn.textContent = t('filterPaid');
+        if (f === 'open') btn.textContent = t('filterOpen');
+      });
+      document.querySelectorAll('.sort-select option').forEach(opt => {
+        if (opt.value === 'rank') opt.textContent = t('sortRank');
+        if (opt.value === 'score') opt.textContent = t('sortScore');
+        if (opt.value === 'price') opt.textContent = t('sortPrice');
+      });
+
+      // Update footer
+      const footerAbouts = document.querySelectorAll('h4');
+      footerAbouts.forEach(el => {
+        if (el.textContent.includes('产品') || el.textContent.includes('Product')) el.textContent = t('footerProduct');
+        if (el.textContent.includes('资源') || el.textContent.includes('Resource')) el.textContent = t('footerResource');
+        if (el.textContent.includes('关于') || el.textContent.includes('About')) el.textContent = t('footerAbout');
+      });
+
+      // Update action buttons in tables
+      document.querySelectorAll('.action-btn').forEach(btn => {
+        if (btn.textContent.includes('查看详情') || btn.textContent.includes('Details')) {
+          btn.textContent = t('btnDetail');
+        }
+      });
+
+      // Re-render tables to update dynamic content
+      if (currentTab === 'tools') renderToolsTable();
+      if (currentTab === 'languages') renderLanguagesTable();
+      if (currentTab === 'databases') renderDatabasesTab(currentDbCategory);
+      if (currentTab === 'models') renderModelsTab(currentModelCategory);
     }
 
     // ==================== RENDER ====================
@@ -1667,7 +1917,7 @@
           <div class="chart-cell"><canvas id="chart-${tool.id}" height="60"></canvas></div>
           <div class="score">${tool.score}</div>
           <div><span class="price-tag price-${tool.price}">${getPriceLabel(tool.price)}</span></div>
-          <button class="action-btn" onclick="showDetail(${tool.id})">查看详情</button>
+          <button class="action-btn" onclick="showDetail(${tool.id})">${t('btnDetail')}</button>
         </div>
       `).join('');
 
@@ -1699,8 +1949,8 @@
     }
 
     function getPriceLabel(price) {
-      const labels = { free: '免费', paid: '付费', freemium: '免费+付费' };
-      return currentLang === 'zh' ? labels[price] : price;
+      const labels = { free: t('filterFree'), paid: t('filterPaid'), freemium: t('filterFree') + '+' + t('filterPaid'), open: t('filterOpen') };
+      return labels[price] || price;
     }
 
     function renderTopCards() {
@@ -1864,7 +2114,7 @@
           <div class="chart-cell"><canvas id="chart-${lang.id}" height="60"></canvas></div>
           <div class="score">${lang.score}</div>
           <div><span class="price-tag price-paid">TIOBE #${lang.rank}</span></div>
-          <button class="action-btn" onclick="showLanguageDetail(${lang.id})">查看详情</button>
+          <button class="action-btn" onclick="showLanguageDetail(${lang.id})">${t('btnDetail')}</button>
         </div>
       `).join('');
 
@@ -1915,18 +2165,18 @@
       if (thDb) thDb.innerHTML = `
         <div class="db-filters">
           <div>
-            <button class="filter-btn ${category === 'rdbms' ? 'active' : ''}" onclick="renderDatabasesTab('rdbms')">关系型</button>
-            <button class="filter-btn ${category === 'kv' ? 'active' : ''}" onclick="renderDatabasesTab('kv')">键值</button>
-            <button class="filter-btn ${category === 'document' ? 'active' : ''}" onclick="renderDatabasesTab('document')">文档</button>
-            <button class="filter-btn ${category === 'search' ? 'active' : ''}" onclick="renderDatabasesTab('search')">搜索引擎</button>
-            <button class="filter-btn ${category === 'wideColumn' ? 'active' : ''}" onclick="renderDatabasesTab('wideColumn')">列式</button>
-            <button class="filter-btn ${category === 'graph' ? 'active' : ''}" onclick="renderDatabasesTab('graph')">图</button>
-            <button class="filter-btn ${category === 'timeseries' ? 'active' : ''}" onclick="renderDatabasesTab('timeseries')">时序</button>
-            <button class="filter-btn ${category === 'vector' ? 'active' : ''}" onclick="renderDatabasesTab('vector')">向量</button>
-            <button class="filter-btn ${category === 'bigdata' ? 'active' : ''}" onclick="renderDatabasesTab('bigdata')">大数据平台</button>
+            <button class="filter-btn ${category === 'rdbms' ? 'active' : ''}" onclick="renderDatabasesTab('rdbms')">${t('dbRdbms')}</button>
+            <button class="filter-btn ${category === 'kv' ? 'active' : ''}" onclick="renderDatabasesTab('kv')">${t('dbKv')}</button>
+            <button class="filter-btn ${category === 'document' ? 'active' : ''}" onclick="renderDatabasesTab('document')">${t('dbDoc')}</button>
+            <button class="filter-btn ${category === 'search' ? 'active' : ''}" onclick="renderDatabasesTab('search')">${t('dbSearch')}</button>
+            <button class="filter-btn ${category === 'wideColumn' ? 'active' : ''}" onclick="renderDatabasesTab('wideColumn')">${t('dbWide')}</button>
+            <button class="filter-btn ${category === 'graph' ? 'active' : ''}" onclick="renderDatabasesTab('graph')">${t('dbGraph')}</button>
+            <button class="filter-btn ${category === 'timeseries' ? 'active' : ''}" onclick="renderDatabasesTab('timeseries')">${t('dbTime')}</button>
+            <button class="filter-btn ${category === 'vector' ? 'active' : ''}" onclick="renderDatabasesTab('vector')">${t('dbVector')}</button>
+            <button class="filter-btn ${category === 'bigdata' ? 'active' : ''}" onclick="renderDatabasesTab('bigdata')">${t('dbBig')}</button>
           </div>
         </div>
-        <div class="db-columns"><div>排名</div><div>数据库</div><div>评分雷达</div><div>综合评分</div><div>类型</div><div>操作</div></div>
+        <div class="db-columns"><div>${t('tableRank')}</div><div>${currentLang === 'zh' ? '数据库' : 'Database'}</div><div>${currentLang === 'zh' ? '评分雷达' : 'Radar'}</div><div>${t('tableScore')}</div><div>${currentLang === 'zh' ? '类型' : 'Type'}</div><div>${t('tableAction')}</div></div>
       `;
 
       renderDbTable(category);
@@ -1965,11 +2215,11 @@
           <div class="chart-cell"><canvas id="db-chart-${db.id}" height="60"></canvas></div>
           <div class="score">${db.score.toFixed(2)}</div>
           <div><span class="price-tag price-paid">${db.type}</span></div>
-          <button class="action-btn" onclick="showDbDetail(${db.id}, '${category}')">查看详情</button>
+          <button class="action-btn" onclick="showDbDetail(${db.id}, '${category}')">${t('btnDetail')}</button>
         </div>
       `).join('') + (hasMore ? `
         <div class="load-more-container">
-          <button class="load-more-btn" onclick="loadMoreDbs('${category}')">加载更多 (${dbVisibleCount}/${dbs.length})</button>
+          <button class="load-more-btn" onclick="loadMoreDbs('${category}')">${t('loadMore')} (${dbVisibleCount}/${dbs.length})</button>
         </div>
       ` : '');
 
