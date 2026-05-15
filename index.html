@@ -1537,9 +1537,17 @@
       const categoryData = models[category || currentModelCategory] || [];
       const mod = categoryData.find(m => m.id === id);
       if (!mod) return;
+      const benchmarkUrls = {
+        'swe-bench': 'https://www.datalearner.com/en/leaderboards/category/code',
+        'livecode': 'https://www.datalearner.com/en/leaderboards/category/code',
+        'swe-pro': 'https://www.datalearner.com/en/leaderboards/category/code',
+        'multilingual': 'https://www.datalearner.com/en/leaderboards/category/code'
+      };
+      const url = benchmarkUrls[category] || 'https://www.datalearner.com/en/leaderboards/category/code';
       let info = `${mod.name} - ${mod.vendor}`;
       if (mod.score) info += `\n通过率: ${mod.passRate}`;
-      info += `\n\n${currentLang === 'zh' ? mod.desc : 'Coming soon...'}`;
+      info += `\n\n数据来源: DataLearner.com`;
+      info += `\n\n官网: ${url}`;
       alert(info);
     }
 
