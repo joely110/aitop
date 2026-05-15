@@ -1050,7 +1050,7 @@
   <main class="container">
     <div class="stats-bar">
       <div class="stat-item">
-        <div class="stat-value">${tools.length}</div>
+        <div class="stat-value" id="toolsCount">${tools.length}</div>
         <div class="stat-label" id="statTools">收录工具</div>
       </div>
       <div class="stat-item">
@@ -1581,7 +1581,13 @@
       applyTheme();
       applyLang();
       renderHomeFeatured();
+      updateStats();
       lucide.createIcons();
+    }
+
+    function updateStats() {
+      const toolsCountEl = document.getElementById('toolsCount');
+      if (toolsCountEl) toolsCountEl.textContent = tools.length;
     }
 
     function renderHomeFeatured() {
