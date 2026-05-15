@@ -1047,7 +1047,7 @@
   <main class="container">
     <div class="stats-bar">
       <div class="stat-item">
-        <div class="stat-value">15</div>
+        <div class="stat-value">${tools.length}</div>
         <div class="stat-label" id="statTools">收录工具</div>
       </div>
       <div class="stat-item">
@@ -1195,21 +1195,26 @@
     // - 数据库: DB-Engines 2026年5月真实评分排行
 
     const tools = [
-      { id: 1, name: 'Cursor', vendor: 'Anthropic / Cursor', score: 9.5, price: 'freemium', colors: ['#7C3AED','#A78BFA'], tags: ['AI原生', '代码生成', '智能补全'], desc: '2026年最受欢迎的AI代码编辑器，基于Claude 3.5 Sonnet，多行预测和智能重构能力最强。' },
-      { id: 2, name: 'GitHub Copilot', vendor: 'Microsoft', score: 9.2, price: 'paid', colors: ['#6E40C9','#A855F7'], tags: ['代码补全', '多语言', 'IDE集成'], desc: '业界最成熟的AI编程助手，市场占用率第一，与VS Code深度集成。' },
-      { id: 3, name: 'Claude Code', vendor: 'Anthropic', score: 9.4, price: 'paid', colors: ['#D97706','#F59E0B'], tags: ['命令行', '深度理解', '代码审查'], desc: 'Anthropic官方CLI工具，代码审查和复杂任务处理能力出众，支持直接操作文件系统。' },
-      { id: 4, name: 'Windsurf', vendor: 'Codeium', score: 8.6, price: 'freemium', colors: ['#059669','#10B981'], tags: ['Flow AI', '免费额度大', '轻量'], desc: 'Codeium出品，提供大量免费额度，Flow AI功能覆盖常见编程场景。' },
-      { id: 5, name: 'JetBrains AI', vendor: 'JetBrains', score: 8.5, price: 'paid', colors: ['#F97316','#FB923C'], tags: ['IDE深度集成', '代码重构', '文档生成'], desc: '与IntelliJ等JetBrains IDE原生集成，适合已经使用JetBrains产品的开发者。' },
-      { id: 6, name: 'Tabnine', vendor: 'Tabnine', score: 8.3, price: 'freemium', colors: ['#2563EB','#3B82F6'], tags: ['本地部署', '隐私保护', '快速补全'], desc: '支持本地运行的AI代码补全工具，数据全程本地处理，隐私保护优秀。' },
-      { id: 7, name: 'Replit Agent', vendor: 'Replit', score: 8.4, price: 'paid', colors: ['#8B5CF6','#A78BFA'], tags: ['端到端', '快速部署', '云端'], desc: '能自主完成整个项目开发流程，从需求到部署一键完成，云端开发体验流畅。' },
-      { id: 8, name: 'Cody', vendor: 'Sourcegraph', score: 8.2, price: 'freemium', colors: ['#0EA5E9','#38BDF8'], tags: ['代码库理解', '语义搜索', '代码导航'], desc: '基于代码库语义的AI助手，代码理解和导航能力强大，适合大型代码库。' },
-      { id: 9, name: 'Amazon CodeWhisperer', vendor: 'Amazon', score: 8.0, price: 'free', colors: ['#F59E0B','#FBBF24'], tags: ['AWS集成', '安全扫描', '免费'], desc: '亚马逊出品，与AWS服务深度集成，提供代码安全扫描，个人用户免费。' },
-      { id: 10, name: 'CodeRabbit', vendor: 'CodeRabbit', score: 8.1, price: 'freemium', colors: ['#EC4899','#F472B6'], tags: ['PR审查', '代码优化', '自动化'], desc: '专注于代码审查和PR自动化的AI工具，PR审查体验业界领先。' },
-      { id: 11, name: 'Supermaven', vendor: 'Supermaven', score: 8.4, price: 'paid', colors: ['#10B981','#34D399'], tags: ['超快补全', '低延迟', '智能'], desc: '以超低延迟著称的AI代码补全工具，补全速度业界最快，适合追求效率的开发者。' },
-      { id: 12, name: 'Phind', vendor: 'Phind', score: 7.9, price: 'free', colors: ['#6366F1','#818CF8'], tags: ['搜索引擎', '编程问答', '免费'], desc: 'AI编程搜索引擎，专注于解答编程问题，完全免费使用。' },
-      { id: 13, name: 'Blackbox AI', vendor: 'Blackbox', score: 7.8, price: 'freemium', colors: ['#1E293B','#334155'], tags: ['代码提取', '多语言', 'API集成'], desc: '能理解并提取GitHub代码的AI工具，支持代码片段搜索和API集成。' },
-      { id: 14, name: 'CodeGenie', vendor: 'Samsung', score: 7.5, price: 'free', colors: ['#0EA5E9','#38BDF8'], tags: ['三星开发', '内部工具', '代码生成'], desc: '三星内部推出的AI编程助手，主要服务于三星开发者社区。' },
-      { id: 15, name: 'Continue', vendor: 'Continue', score: 7.7, price: 'free', colors: ['#8B5CF6','#A78BFA'], tags: ['开源', 'VS Code', '本地'], desc: '开源的AI代码助手，VS Code和JetBrains扩展，支持本地部署和自定义模型。' }
+      { id: 1, name: 'Cursor', vendor: 'Anthropic / Cursor', score: 9.5, price: 'freemium', colors: ['#7C3AED','#A78BFA'], tags: ['AI原生', '代码生成', '智能补全'], desc: '2026年最受欢迎的AI代码编辑器，基于Claude 3.5 Sonnet，多行预测和智能重构能力最强。', website: 'https://cursor.com' },
+      { id: 2, name: 'GitHub Copilot', vendor: 'Microsoft', score: 9.2, price: 'paid', colors: ['#6E40C9','#A855F7'], tags: ['代码补全', '多语言', 'IDE集成'], desc: '业界最成熟的AI编程助手，市场占用率第一，与VS Code深度集成。', website: 'https://github.com/features/copilot' },
+      { id: 3, name: 'Claude Code', vendor: 'Anthropic', score: 9.4, price: 'paid', colors: ['#D97706','#F59E0B'], tags: ['命令行', '深度理解', '代码审查'], desc: 'Anthropic官方CLI工具，代码审查和复杂任务处理能力出众，支持直接操作文件系统。', website: 'https://claude.ai/code' },
+      { id: 4, name: 'Windsurf', vendor: 'Codeium', score: 8.6, price: 'freemium', colors: ['#059669','#10B981'], tags: ['Flow AI', '免费额度大', '轻量'], desc: 'Codeium出品，提供大量免费额度，Flow AI功能覆盖常见编程场景。', website: 'https://windsurf.com' },
+      { id: 5, name: 'JetBrains AI', vendor: 'JetBrains', score: 8.5, price: 'paid', colors: ['#F97316','#FB923C'], tags: ['IDE深度集成', '代码重构', '文档生成'], desc: '与IntelliJ等JetBrains IDE原生集成，适合已经使用JetBrains产品的开发者。', website: 'https://www.jetbrains.com/ai/' },
+      { id: 6, name: 'Tabnine', vendor: 'Tabnine', score: 8.3, price: 'freemium', colors: ['#2563EB','#3B82F6'], tags: ['本地部署', '隐私保护', '快速补全'], desc: '支持本地运行的AI代码补全工具，数据全程本地处理，隐私保护优秀。', website: 'https://tabnine.com' },
+      { id: 7, name: 'Replit Agent', vendor: 'Replit', score: 8.4, price: 'paid', colors: ['#8B5CF6','#A78BFA'], tags: ['端到端', '快速部署', '云端'], desc: '能自主完成整个项目开发流程，从需求到部署一键完成，云端开发体验流畅。', website: 'https://replit.com/agent' },
+      { id: 8, name: 'Cody', vendor: 'Sourcegraph', score: 8.2, price: 'freemium', colors: ['#0EA5E9','#38BDF8'], tags: ['代码库理解', '语义搜索', '代码导航'], desc: '基于代码库语义的AI助手，代码理解和导航能力强大，适合大型代码库。', website: 'https://sourcegraph.com/cody' },
+      { id: 9, name: 'Amazon CodeWhisperer', vendor: 'Amazon', score: 8.0, price: 'free', colors: ['#F59E0B','#FBBF24'], tags: ['AWS集成', '安全扫描', '免费'], desc: '亚马逊出品，与AWS服务深度集成，提供代码安全扫描，个人用户免费。', website: 'https://aws.amazon.com/codewhisperer/' },
+      { id: 10, name: 'CodeRabbit', vendor: 'CodeRabbit', score: 8.1, price: 'freemium', colors: ['#EC4899','#F472B6'], tags: ['PR审查', '代码优化', '自动化'], desc: '专注于代码审查和PR自动化的AI工具，PR审查体验业界领先。', website: 'https://coderabbit.ai' },
+      { id: 11, name: 'Supermaven', vendor: 'Supermaven', score: 8.4, price: 'paid', colors: ['#10B981','#34D399'], tags: ['超快补全', '低延迟', '智能'], desc: '以超低延迟著称的AI代码补全工具，补全速度业界最快，适合追求效率的开发者。', website: 'https://supermaven.com' },
+      { id: 12, name: 'Phind', vendor: 'Phind', score: 7.9, price: 'free', colors: ['#6366F1','#818CF8'], tags: ['搜索引擎', '编程问答', '免费'], desc: 'AI编程搜索引擎，专注于解答编程问题，完全免费使用。', website: 'https://phind.com' },
+      { id: 13, name: 'Blackbox AI', vendor: 'Blackbox', score: 7.8, price: 'freemium', colors: ['#1E293B','#334155'], tags: ['代码提取', '多语言', 'API集成'], desc: '能理解并提取GitHub代码的AI工具，支持代码片段搜索和API集成。', website: 'https://www.blackbox.ai' },
+      { id: 14, name: 'Aider', vendor: 'Aider', score: 7.6, price: 'free', colors: ['#059669','#10B981'], tags: ['开源', '命令行', '多语言'], desc: '开源AI编程助手，支持多语言，命令行友好，适合远程开发。', website: 'https://aider.chat' },
+      { id: 15, name: 'Continue', vendor: 'Continue', score: 7.7, price: 'free', colors: ['#8B5CF6','#A78BFA'], tags: ['开源', 'VS Code', '本地'], desc: '开源的AI代码助手，VS Code和JetBrains扩展，支持本地部署和自定义模型。', website: 'https://continue.dev' },
+      { id: 16, name: 'Devin', vendor: 'Cognition', score: 8.0, price: 'paid', colors: ['#6366F1','#818CF8'], tags: ['自主编码', '端到端', '软件工程师'], desc: 'AI软件工程师，可以独立完成整个项目开发和调试。', website: 'https://devin.ai' },
+      { id: 17, name: 'SWE-agent', vendor: '普林斯顿SNP', score: 7.8, price: 'free', colors: ['#0EA5E9','#38BDF8'], tags: ['开源', 'SWE-bench', '学术'], desc: '普林斯顿开源SWE-bench测试Agent，性能优秀。', website: 'https://github.com/princeton-nlp/SWE-agent' },
+      { id: 18, name: 'Fmemo', vendor: 'Fmemo', score: 7.5, price: 'free', colors: ['#EC4899','#F472B6'], tags: ['中文', '国内', '代码补全'], desc: '中文AI代码助手，专注中文开发者群体。', website: 'https://fmemo.ai' },
+      { id: 19, name: 'CodeGeex', vendor: 'AI21', score: 7.4, price: 'freemium', colors: ['#F97316','#FB923C'], tags: ['多语言', '代码生成', 'IDE插件'], desc: 'AI21出品的代码生成工具，支持多种IDE。', website: 'https://codegeex.ai' },
+      { id: 20, name: 'Junie', vendor: 'JetBrains', score: 7.3, price: 'paid', colors: ['#F97316','#FB923C'], tags: ['IDE集成', '企业级', '代码分析'], desc: 'JetBrains最新AI编码助手，深度集成IDE。', website: 'https://www.jetbrains.com/junie/' }
     ];
 
     // 大模型编程能力排行
@@ -2302,7 +2307,7 @@
           <canvas id="modalChart" height="200"></canvas>
         </div>
         <div style="text-align:center;">
-          <a href="#" class="action-btn" style="display:inline-block;text-decoration:none;">访问官网 →</a>
+          <a href="${tool.website || 'https://'}" target="_blank" rel="noopener" class="action-btn" style="display:inline-block;text-decoration:none;">访问官网 →</a>
         </div>
       `;
 
