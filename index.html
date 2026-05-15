@@ -1872,15 +1872,18 @@
     }
 
     function renderLanguagesCharts() {
+      const maxScore = 100;
+      const logScore = lang => Math.log(lang.score + 1) / Math.log(maxScore + 1) * 100;
       languages.forEach(lang => {
         const ctx = document.getElementById(`chart-${lang.id}`);
         if (ctx) {
+          const base = logScore(lang);
           new Chart(ctx, {
             type: 'radar',
             data: {
               labels: ['流行度', '易学性', '就业', '薪资', '前景'],
               datasets: [{
-                data: [lang.score / 10, lang.score / 11, lang.score / 10.5, lang.score / 10.8, lang.score / 10.3],
+                data: [base, base * 0.95, base * 0.92, base * 0.88, base * 0.90],
                 backgroundColor: lang.colors[0] + '40',
                 borderColor: lang.colors[0],
                 pointRadius: 0,
@@ -1891,7 +1894,7 @@
               responsive: true,
               maintainAspectRatio: false,
               plugins: { legend: { display: false } },
-              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
+              scales: { r: { min: 0, max: 100, ticks: { display: false } } }
             }
           });
         }
