@@ -245,7 +245,7 @@
     /* Home Section */
     .home-section { padding: 48px 0; }
     .home-hero {
-      background: linear-gradient(135deg, var(--primary) 0%, #818CF8 100%);
+      background: linear-gradient(135deg, #1E293B 0%, #334155 50%, #475569 100%);
       border-radius: var(--radius-lg);
       padding: 64px 48px;
       display: flex;
@@ -253,6 +253,7 @@
       align-items: center;
       margin-bottom: 48px;
       color: white;
+      border: 1px solid var(--border);
     }
     .home-hero-content { flex: 1; }
     .home-title {
@@ -926,12 +927,13 @@
       <!-- Hero Banner -->
       <div class="home-hero">
         <div class="home-hero-content">
-          <h1 class="home-title">开发者工具排行榜</h1>
-          <p class="home-subtitle">2026年最新最全的开发工具对比平台</p>
+          <h1 class="home-title">AI编程工具与大模型排行平台</h1>
+          <p class="home-subtitle">专注AI编程工具、大模型、编程语言、数据库的综合排行对比平台</p>
           <div class="home-tags">
-            <span class="home-tag">🛠️ 开发者工具</span>
-            <span class="home-tag">📊 真实数据排行</span>
-            <span class="home-tag">🌐 中英双语</span>
+            <span class="home-tag">🛠️ AI编程工具</span>
+            <span class="home-tag">🤖 大模型排行</span>
+            <span class="home-tag">💻 编程语言</span>
+            <span class="home-tag">🗄️ 数据库</span>
           </div>
         </div>
         <div class="home-hero-cta">
@@ -1670,11 +1672,12 @@
         navLanguages: '编程语言排行',
         navDatabases: '数据库排行',
         // Home
-        homeTitle: '开发者工具排行榜',
-        homeSubtitle: '2026年最新最全的开发工具对比平台',
-        homeTag1: '🛠️ 开发者工具',
-        homeTag2: '📊 真实数据排行',
-        homeTag3: '🌐 中英双语',
+        homeTitle: 'AI编程工具与大模型排行平台',
+        homeSubtitle: '专注AI编程工具、大模型、编程语言、数据库的综合排行对比平台',
+        homeTag1: '🛠️ AI编程工具',
+        homeTag2: '🤖 大模型排行',
+        homeTag3: '💻 编程语言',
+        homeTag4: '🗄️ 数据库',
         ctaRankings: '查看排行榜',
         ctaCompare: '大模型对比',
         catTools: 'AI编程工具',
@@ -1776,11 +1779,12 @@
         navLanguages: 'Languages Ranking',
         navDatabases: 'Databases Ranking',
         // Home
-        homeTitle: 'Developer Tools Rankings',
-        homeSubtitle: 'Most comprehensive developer tools comparison platform in 2026',
-        homeTag1: '🛠️ Dev Tools',
-        homeTag2: '📊 Real Data',
-        homeTag3: '🌐 Bilingual',
+        homeTitle: 'AI Coding Tools & LLM Rankings',
+        homeSubtitle: 'Comprehensive ranking platform for AI coding tools, LLMs, programming languages, and databases',
+        homeTag1: '🛠️ AI Coding Tools',
+        homeTag2: '🤖 LLM Rankings',
+        homeTag3: '💻 Languages',
+        homeTag4: '🗄️ Databases',
         ctaRankings: 'View Rankings',
         ctaCompare: 'LLM Comparison',
         catTools: 'AI Coding Tools',
@@ -1900,9 +1904,8 @@
       const homeSubtitle = document.querySelector('.home-subtitle');
       if (homeSubtitle) homeSubtitle.textContent = t('homeSubtitle');
       document.querySelectorAll('.home-tag').forEach((el, i) => {
-        if (i === 0) el.textContent = t('homeTag1');
-        if (i === 1) el.textContent = t('homeTag2');
-        if (i === 2) el.textContent = t('homeTag3');
+        const tags = [t('homeTag1'), t('homeTag2'), t('homeTag3'), t('homeTag4')];
+        if (tags[i]) el.textContent = tags[i];
       });
       document.querySelectorAll('.category-card h3').forEach((el, i) => {
         if (i === 0) el.textContent = t('catTools');
