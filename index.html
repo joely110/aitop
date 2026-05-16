@@ -245,16 +245,18 @@
     /* Home Section */
     .home-section { padding: 48px 0; }
     .home-hero {
-      background: linear-gradient(135deg, #1E293B 0%, #334155 50%, #475569 100%);
+      background: var(--bg-secondary);
       border-radius: var(--radius-lg);
       padding: 64px 48px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 48px;
-      color: white;
       border: 1px solid var(--border);
     }
+    .home-hero h1 { color: var(--text); }
+    .home-hero p { color: var(--text-secondary); }
+    .home-tag { background: var(--bg-card); color: var(--text); border: 1px solid var(--border); }
     .home-hero-content { flex: 1; }
     .home-title {
       font-size: 48px;
