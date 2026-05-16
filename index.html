@@ -1630,12 +1630,14 @@
       setTimeout(() => {
         const ctx = document.getElementById('modalChart');
         if (ctx) {
+          // Normalize score to 7-10 range for radar display (scores are 40-94)
+          const normalizedScore = 7 + ((mod.score - 40) / 60) * 3;
           new Chart(ctx, {
             type: 'radar',
             data: {
               labels: t('radarModels'),
               datasets: [{
-                data: [mod.score - 2, mod.score - 1.5, mod.score - 1, mod.score + 0.5, mod.score - 1],
+                data: [normalizedScore - 0.5, normalizedScore - 0.3, normalizedScore + 0.2, normalizedScore - 0.2, normalizedScore + 0.4],
                 backgroundColor: mod.colors[0] + '40',
                 borderColor: mod.colors[0],
                 borderWidth: 2
