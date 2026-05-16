@@ -1587,7 +1587,7 @@
               responsive: true,
               maintainAspectRatio: false,
               plugins: { legend: { display: false } },
-              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
+              scales: { r: { min: 7, max: 10, ticks: { display: false }, pointLabels: { font: { size: 10 } }, lines: { lineWidth: 1 } } }
             }
           });
         }
@@ -1613,7 +1613,7 @@
             <div style="color:var(--text-secondary);font-size:11px;">${t('tableScore')}</div>
           </div>
         </div>
-        <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? mod.desc : mod.desc}</p>
+        <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? mod.desc : 'Data source: datalearner.com'}</p>
         <div style="margin-bottom:12px;">
           <h4 style="margin-bottom:6px;font-size:13px;">${t('modalRadarTitle')}</h4>
           <div style="height:120px;display:flex;align-items:center;justify-content:center;">
@@ -1645,7 +1645,7 @@
               responsive: true,
               maintainAspectRatio: false,
               plugins: { legend: { display: false } },
-              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
+              scales: { r: { min: 7, max: 10, ticks: { display: false }, pointLabels: { font: { size: 10 } }, lines: { lineWidth: 1 } } }
             }
           });
         }
@@ -2105,7 +2105,7 @@
               responsive: true,
               maintainAspectRatio: false,
               plugins: { legend: { display: false } },
-              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
+              scales: { r: { min: 7, max: 10, ticks: { display: false }, pointLabels: { font: { size: 10 } }, lines: { lineWidth: 1 } } }
             }
           });
         }
@@ -2333,7 +2333,7 @@
             <div style="color:var(--text-secondary);font-size:11px;">${t('tableRank')}</div>
           </div>
         </div>
-        <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? lang.desc : lang.desc}</p>
+        <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? lang.desc : 'Data source: tiobe.com'}</p>
         <div style="margin-bottom:12px;">
           <h4 style="margin-bottom:6px;font-size:13px;">${t('modalRadarTitle')}</h4>
           <div style="height:120px;display:flex;align-items:center;justify-content:center;">
@@ -2365,7 +2365,7 @@
               responsive: true,
               maintainAspectRatio: false,
               plugins: { legend: { display: false } },
-              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
+              scales: { r: { min: 7, max: 10, ticks: { display: false }, pointLabels: { font: { size: 10 } }, lines: { lineWidth: 1 } } }
             }
           });
         }
@@ -2498,7 +2498,7 @@
             <div style="color:var(--text-secondary);font-size:11px;">${t('tableScore')}</div>
           </div>
         </div>
-        <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? db.desc : db.desc}</p>
+        <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? db.desc : 'Data source: db-engines.com'}</p>
         <div style="margin-bottom:12px;">
           <h4 style="margin-bottom:6px;font-size:13px;">${t('modalRadarTitle')}</h4>
           <div style="height:120px;display:flex;align-items:center;justify-content:center;">
@@ -2530,7 +2530,7 @@
               responsive: true,
               maintainAspectRatio: false,
               plugins: { legend: { display: false } },
-              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
+              scales: { r: { min: 7, max: 10, ticks: { display: false }, pointLabels: { font: { size: 10 } }, lines: { lineWidth: 1 } } }
             }
           });
         }
@@ -2561,7 +2561,7 @@
         <div style="margin-bottom:12px;display:flex;flex-wrap:wrap;gap:6px;">
           ${tool.tags.map(tag => `<span class="top-tag" style="font-size:10px;padding:2px 6px;">${tag}</span>`).join('')}
         </div>
-        <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? tool.desc : 'Coming soon...'}</p>
+        <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? tool.desc : tool.desc_en || 'Coming soon...'}</p>
         <div style="margin-bottom:12px;">
           <h4 id="modalRadarTitle" style="margin-bottom:6px;font-size:13px;">${t('modalRadarTitle')}</h4>
           <div style="height:120px;display:flex;align-items:center;justify-content:center;">
