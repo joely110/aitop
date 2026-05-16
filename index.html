@@ -2354,12 +2354,14 @@
       setTimeout(() => {
         const ctx = document.getElementById('modalChart');
         if (ctx) {
+          // Normalize language score to 7-10 range (scores range 12-150)
+          const normalizedScore = 7 + ((lang.score - 12) / 138) * 3;
           new Chart(ctx, {
             type: 'radar',
             data: {
               labels: t('radarLang'),
               datasets: [{
-                data: [lang.score, lang.score - 1, lang.score + 0.5, lang.score - 0.5, lang.score + 1],
+                data: [normalizedScore - 0.3, normalizedScore - 0.2, normalizedScore, normalizedScore - 0.1, normalizedScore + 0.1],
                 backgroundColor: lang.colors[0] + '40',
                 borderColor: lang.colors[0],
                 borderWidth: 2
@@ -2519,12 +2521,14 @@
       setTimeout(() => {
         const ctx = document.getElementById('modalChart');
         if (ctx) {
+          // Normalize database score to 7-10 range using log scale (scores range 0.5-500+)
+          const normalizedScore = 7 + (Math.log10(db.score + 1) / Math.log10(501)) * 3;
           new Chart(ctx, {
             type: 'radar',
             data: {
               labels: t('radarDb'),
               datasets: [{
-                data: [db.score, db.score - 2, db.score + 1, db.score - 1, db.score + 2],
+                data: [normalizedScore - 0.3, normalizedScore - 0.2, normalizedScore, normalizedScore - 0.1, normalizedScore + 0.1],
                 backgroundColor: db.colors[0] + '40',
                 borderColor: db.colors[0],
                 borderWidth: 2
