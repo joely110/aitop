@@ -1616,7 +1616,7 @@
         <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? mod.desc : mod.desc}</p>
         <div style="margin-bottom:12px;">
           <h4 style="margin-bottom:6px;font-size:13px;">${t('modalRadarTitle')}</h4>
-          <div style="height:150px;display:flex;align-items:center;justify-content:center;">
+          <div style="height:120px;display:flex;align-items:center;justify-content:center;">
             <canvas id="modalChart" style="max-height:100%;"></canvas>
           </div>
         </div>
@@ -1635,7 +1635,7 @@
             data: {
               labels: t('radarModels'),
               datasets: [{
-                data: [mod.score, mod.score - 1, mod.score - 0.5, mod.score + 0.5, mod.score - 1.5],
+                data: [mod.score - 2, mod.score - 1.5, mod.score - 1, mod.score + 0.5, mod.score - 1],
                 backgroundColor: mod.colors[0] + '40',
                 borderColor: mod.colors[0],
                 borderWidth: 2
@@ -1643,9 +1643,9 @@
             },
             options: {
               responsive: true,
-              maintainAspectRatio: true,
+              maintainAspectRatio: false,
               plugins: { legend: { display: false } },
-              scales: { r: { min: 0, max: 100, ticks: { display: false }, pointLabels: { font: { size: 10 } }, lines: { lineWidth: 1 } } }
+              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
             }
           });
         }
@@ -2336,7 +2336,7 @@
         <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? lang.desc : lang.desc}</p>
         <div style="margin-bottom:12px;">
           <h4 style="margin-bottom:6px;font-size:13px;">${t('modalRadarTitle')}</h4>
-          <div style="height:150px;display:flex;align-items:center;justify-content:center;">
+          <div style="height:120px;display:flex;align-items:center;justify-content:center;">
             <canvas id="modalChart" style="max-height:100%;"></canvas>
           </div>
         </div>
@@ -2363,9 +2363,9 @@
             },
             options: {
               responsive: true,
-              maintainAspectRatio: true,
+              maintainAspectRatio: false,
               plugins: { legend: { display: false } },
-              scales: { r: { min: 0, max: 15, ticks: { display: false }, pointLabels: { font: { size: 10 } }, lines: { lineWidth: 1 } } }
+              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
             }
           });
         }
@@ -2501,7 +2501,7 @@
         <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? db.desc : db.desc}</p>
         <div style="margin-bottom:12px;">
           <h4 style="margin-bottom:6px;font-size:13px;">${t('modalRadarTitle')}</h4>
-          <div style="height:150px;display:flex;align-items:center;justify-content:center;">
+          <div style="height:120px;display:flex;align-items:center;justify-content:center;">
             <canvas id="modalChart" style="max-height:100%;"></canvas>
           </div>
         </div>
@@ -2528,9 +2528,9 @@
             },
             options: {
               responsive: true,
-              maintainAspectRatio: true,
+              maintainAspectRatio: false,
               plugins: { legend: { display: false } },
-              scales: { r: { min: 0, max: 10, ticks: { display: false }, pointLabels: { font: { size: 10 } }, lines: { lineWidth: 1 } } }
+              scales: { r: { min: 7, max: 10, ticks: { display: false } } }
             }
           });
         }
@@ -2564,7 +2564,7 @@
         <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? tool.desc : 'Coming soon...'}</p>
         <div style="margin-bottom:12px;">
           <h4 id="modalRadarTitle" style="margin-bottom:6px;font-size:13px;">${t('modalRadarTitle')}</h4>
-          <div style="height:150px;display:flex;align-items:center;justify-content:center;">
+          <div style="height:120px;display:flex;align-items:center;justify-content:center;">
             <canvas id="modalChart" style="max-height:100%;"></canvas>
           </div>
         </div>
@@ -2591,7 +2591,7 @@
             },
             options: {
               responsive: true,
-              maintainAspectRatio: true,
+              maintainAspectRatio: false,
               plugins: { legend: { display: false } },
               scales: { r: { min: 7, max: 10, ticks: { display: false }, pointLabels: { font: { size: 10 } }, lines: { lineWidth: 1 } } }
             }
