@@ -1542,7 +1542,7 @@
             <button class="filter-btn ${category === 'multilingual' ? 'active' : ''}" onclick="renderModelsTab('multilingual')">${t('modelMultilingual')}</button>
           </div>
         </div>
-        <div class="db-columns"><div>${t('tableRank')}</div><div>${currentLang === 'zh' ? '模型' : 'Model'}</div><div>${currentLang === 'zh' ? '评分雷达' : 'Radar'}</div><div>${currentLang === 'zh' ? '通过率' : 'Pass Rate'}</div><div>${t('tableAction')}</div></div>
+        <div class="db-columns"><div>${t('tableRank')}</div><div>${currentLang === 'zh' ? '模型' : 'Model'}</div><div>${currentLang === 'zh' ? '评分雷达' : 'Radar'}</div><div>${t('tableScore')}</div><div>${t('tableAction')}</div></div>
       `;
 
       renderModelTable(currentModelCategory);
@@ -1563,7 +1563,7 @@
             </div>
           </div>
           <div class="chart-cell"><canvas id="model-chart-${mod.id}" height="60"></canvas></div>
-          <div class="score">${mod.passRate}</div>
+          <div class="score">${mod.passRate.replace('%', '')}</div>
           <div><button class="action-btn" onclick="showModelDetail(${mod.id}, '${category}')">${t('btnDetail')}</button></div>
         </div>
       `).join('');
