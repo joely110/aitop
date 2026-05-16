@@ -1111,7 +1111,7 @@
           </div>
           <span>DevRank</span>
           </a>
-          <p>专注AI编程工具评测与对比，帮助开发者快速找到最合适的代码助手。</p>
+          <p id="footerDesc">专注AI编程工具评测与对比，帮助开发者快速找到最合适的代码助手。</p>
         </div>
         <div class="footer-col">
           <h4 id="footerProduct">产品</h4>
@@ -1720,6 +1720,7 @@
         footerHomeLink: '首页',
         footerRankingsLink: '排行榜',
         footerCompareLink: '工具对比',
+        footerDesc: '专注AI编程工具评测与对比，帮助开发者快速找到最合适的代码助手。',
         footerCopyright: '© 2026 DevRank at virexstar.com. All rights reserved.',
         searchPlaceholder: '搜索工具...',
         // Tools page
@@ -1825,6 +1826,7 @@
         footerHomeLink: 'Home',
         footerRankingsLink: 'Rankings',
         footerCompareLink: 'Compare',
+        footerDesc: 'Focused on AI coding tools evaluation and comparison, helping developers quickly find the most suitable code assistant.',
         footerCopyright: '© 2026 DevRank at virexstar.com. All rights reserved.',
         searchPlaceholder: 'Search tools...',
         // Tools page
@@ -1968,6 +1970,8 @@
       });
       const copyrightEl = document.getElementById('footerCopyright');
       if (copyrightEl) copyrightEl.textContent = t('footerCopyright');
+      const footerDescEl = document.getElementById('footerDesc');
+      if (footerDescEl) footerDescEl.textContent = t('footerDesc');
 
       // Update action buttons in tables
       document.querySelectorAll('.action-btn').forEach(btn => {
