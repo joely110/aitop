@@ -1571,12 +1571,14 @@
       mods.forEach(mod => {
         const ctx = document.getElementById(`model-chart-${mod.id}`);
         if (ctx) {
+          // Normalize score to 7-10 range for radar display
+          const normalizedScore = 7 + ((mod.score - 40) / 60) * 3;
           new Chart(ctx, {
             type: 'radar',
             data: {
               labels: ['性能', '易用', '生态', '成本', '前景'],
               datasets: [{
-                data: [mod.score ? mod.score / 10.5 : 8, mod.score ? mod.score / 11 : 8, mod.score ? mod.score / 10.8 : 8, mod.score ? mod.score / 10.5 : 8, mod.score ? mod.score / 10.3 : 8],
+                data: [normalizedScore - 0.3, normalizedScore - 0.2, normalizedScore, normalizedScore - 0.1, normalizedScore + 0.1],
                 backgroundColor: mod.colors[0] + '40',
                 borderColor: mod.colors[0],
                 pointRadius: 0,
