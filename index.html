@@ -1598,17 +1598,60 @@
       const categoryData = models[category || currentModelCategory] || [];
       const mod = categoryData.find(m => m.id === id);
       if (!mod) return;
-      const benchmarkUrls = {
-        'swe-bench': 'https://www.datalearner.com/en/leaderboards/category/code',
-        'livecode': 'https://www.datalearner.com/en/leaderboards/category/code',
-        'swe-pro': 'https://www.datalearner.com/en/leaderboards/category/code',
-        'multilingual': 'https://www.datalearner.com/en/leaderboards/category/code'
-      };
-      const url = benchmarkUrls[category] || 'https://www.datalearner.com/en/leaderboards/category/code';
-      let info = `${mod.name} - ${mod.vendor}`;
-      if (mod.score) info += `\n通过率: ${mod.passRate}`;
-      info += `\n\n官网: ${url}`;
-      alert(info);
+
+      const modal = document.getElementById('modal');
+      document.getElementById('modalTitle').textContent = mod.name;
+      document.getElementById('modalContent').innerHTML = `
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <div class="tool-logo" style="width:40px;height:40px;font-size:18px;background:linear-gradient(135deg,${mod.colors[0]},${mod.colors[1]})">${mod.icon ? `<img src="${mod.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${mod.name[0]}';this.remove();" />` : mod.name[0]}</div>
+          <div>
+            <h2 style="font-size:18px;margin-bottom:2px;">${mod.name}</h2>
+            <span style="color:var(--text-secondary);font-size:12px;">${mod.vendor}</span>
+          </div>
+          <div style="margin-left:auto;text-align:center;">
+            <div style="font-size:24px;font-weight:800;color:var(--accent);">${mod.score}</div>
+            <div style="color:var(--text-secondary);font-size:11px;">${t('tableScore')}</div>
+          </div>
+        </div>
+        <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? mod.desc : mod.desc}</p>
+        <div style="margin-bottom:12px;">
+          <h4 style="margin-bottom:6px;font-size:13px;">${t('modalRadarTitle')}</h4>
+          <div style="height:150px;display:flex;align-items:center;justify-content:center;">
+            <canvas id="modalChart" style="max-height:100%;"></canvas>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <a href="https://www.datalearner.com/en/leaderboards/category/code" target="_blank" rel="noopener" class="action-btn" style="display:inline-block;text-decoration:none;padding:8px 20px;font-size:13px;">${t('viewDataSource')}</a>
+        </div>
+      `;
+
+      modal.classList.add('active');
+
+      setTimeout(() => {
+        const ctx = document.getElementById('modalChart');
+        if (ctx) {
+          new Chart(ctx, {
+            type: 'radar',
+            data: {
+              labels: t('radarModels'),
+              datasets: [{
+                data: [mod.score, mod.score - 1, mod.score - 0.5, mod.score + 0.5, mod.score - 1.5],
+                backgroundColor: mod.colors[0] + '40',
+                borderColor: mod.colors[0],
+                borderWidth: 2
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: true,
+              plugins: { legend: { display: false } },
+              scales: { r: { min: 0, max: 100, ticks: { display: false }, pointLabels: { font: { size: 10 } }, lines: { lineWidth: 1 } } }
+            }
+          });
+        }
+      }, 100);
+
+      lucide.createIcons();
     }
 
     let currentDbCategory = 'rdbms';
@@ -1744,6 +1787,15 @@
         tablePrice: '价格',
         tableAction: '操作',
         btnDetail: '查看详情',
+        btnVisitWebsite: '访问官网 →',
+        modalRadarTitle: '评分详情',
+        viewDataSource: '查看数据来源 →',
+        radarTools: ['代码生成', '上下文理解', '速度性能', '价格', '集成便捷'],
+        radarModels: ['代码能力', '推理速度', '上下文', '准确性', '多语言'],
+        radarLang: ['流行度', '易学性', '生态', '就业', '趋势'],
+        radarDb: ['性能', '稳定性', '生态', '易用性', '社区'],
+        radarHeaderLang: ['流行度', '易用', '生态', '成本', '前景'],
+        radarHeaderDb: ['性能', '易用', '生态', '成本', '前景'],
         // Languages page
         langTitle: '编程语言排行',
         langDesc: 'Python、JavaScript、TypeScript 等语言流行度排行',
@@ -1851,6 +1903,15 @@
         tablePrice: 'Price',
         tableAction: 'Action',
         btnDetail: 'Details',
+        btnVisitWebsite: 'Visit Website →',
+        modalRadarTitle: 'Score Details',
+        viewDataSource: 'View Data Source →',
+        radarTools: ['Code Generation', 'Context', 'Speed', 'Price', 'Integration'],
+        radarModels: ['Code Ability', 'Speed', 'Context', 'Accuracy', 'Multi-lang'],
+        radarLang: ['Popularity', 'Learnability', 'Ecosystem', 'Jobs', 'Trend'],
+        radarDb: ['Performance', 'Stability', 'Ecosystem', 'Usability', 'Community'],
+        radarHeaderLang: ['Popularity', 'Ease', 'Ecosystem', 'Cost', 'Prospects'],
+        radarHeaderDb: ['Performance', 'Ease', 'Ecosystem', 'Cost', 'Prospects'],
         // Languages page
         langTitle: 'Programming Languages Ranking',
         langDesc: 'Python, JavaScript, TypeScript and other language popularity rankings',
@@ -2257,7 +2318,60 @@
     function showLanguageDetail(id) {
       const lang = languages.find(l => l.id === id);
       if (!lang) return;
-      alert(`${lang.name} (${lang.type})\nTIOBE排名: #${lang.rank}\n流行度指数: ${lang.score}\n\n${currentLang === 'zh' ? lang.desc : 'Coming soon...'}`);
+
+      const modal = document.getElementById('modal');
+      document.getElementById('modalTitle').textContent = lang.name;
+      document.getElementById('modalContent').innerHTML = `
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <div class="tool-logo" style="width:40px;height:40px;font-size:18px;background:linear-gradient(135deg,${lang.colors[0]},${lang.colors[1]})">${lang.icon ? `<img src="${lang.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${lang.name[0]}';this.remove();" />` : lang.name[0]}</div>
+          <div>
+            <h2 style="font-size:18px;margin-bottom:2px;">${lang.name}</h2>
+            <span style="color:var(--text-secondary);font-size:12px;">${lang.type}</span>
+          </div>
+          <div style="margin-left:auto;text-align:center;">
+            <div style="font-size:24px;font-weight:800;color:var(--accent);">#${lang.rank}</div>
+            <div style="color:var(--text-secondary);font-size:11px;">${t('tableRank')}</div>
+          </div>
+        </div>
+        <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? lang.desc : lang.desc}</p>
+        <div style="margin-bottom:12px;">
+          <h4 style="margin-bottom:6px;font-size:13px;">${t('modalRadarTitle')}</h4>
+          <div style="height:150px;display:flex;align-items:center;justify-content:center;">
+            <canvas id="modalChart" style="max-height:100%;"></canvas>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <a href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noopener" class="action-btn" style="display:inline-block;text-decoration:none;padding:8px 20px;font-size:13px;">${t('viewDataSource')}</a>
+        </div>
+      `;
+
+      modal.classList.add('active');
+
+      setTimeout(() => {
+        const ctx = document.getElementById('modalChart');
+        if (ctx) {
+          new Chart(ctx, {
+            type: 'radar',
+            data: {
+              labels: t('radarLang'),
+              datasets: [{
+                data: [lang.score, lang.score - 1, lang.score + 0.5, lang.score - 0.5, lang.score + 1],
+                backgroundColor: lang.colors[0] + '40',
+                borderColor: lang.colors[0],
+                borderWidth: 2
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: true,
+              plugins: { legend: { display: false } },
+              scales: { r: { min: 0, max: 15, ticks: { display: false }, pointLabels: { font: { size: 10 } }, lines: { lineWidth: 1 } } }
+            }
+          });
+        }
+      }, 100);
+
+      lucide.createIcons();
     }
 
     // ==================== DATABASES TABLE ====================
@@ -2369,7 +2483,60 @@
     function showDbDetail(id, category) {
       const db = databases[category]?.find(d => d.id === id);
       if (!db) return;
-      alert(`${db.name} - ${db.vendor}\n评分: ${db.score}\n类型: ${db.type}\n\n${currentLang === 'zh' ? db.desc : 'Coming soon...'}`);
+
+      const modal = document.getElementById('modal');
+      document.getElementById('modalTitle').textContent = db.name;
+      document.getElementById('modalContent').innerHTML = `
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <div class="tool-logo" style="width:40px;height:40px;font-size:18px;background:linear-gradient(135deg,${db.colors[0]},${db.colors[1]})">${db.icon ? `<img src="${db.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${db.name[0]}';this.remove();" />` : db.name[0]}</div>
+          <div>
+            <h2 style="font-size:18px;margin-bottom:2px;">${db.name}</h2>
+            <span style="color:var(--text-secondary);font-size:12px;">${db.vendor}</span>
+          </div>
+          <div style="margin-left:auto;text-align:center;">
+            <div style="font-size:24px;font-weight:800;color:var(--accent);">${db.score.toFixed(2)}</div>
+            <div style="color:var(--text-secondary);font-size:11px;">${t('tableScore')}</div>
+          </div>
+        </div>
+        <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? db.desc : db.desc}</p>
+        <div style="margin-bottom:12px;">
+          <h4 style="margin-bottom:6px;font-size:13px;">${t('modalRadarTitle')}</h4>
+          <div style="height:150px;display:flex;align-items:center;justify-content:center;">
+            <canvas id="modalChart" style="max-height:100%;"></canvas>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <a href="https://db-engines.com/en/ranking" target="_blank" rel="noopener" class="action-btn" style="display:inline-block;text-decoration:none;padding:8px 20px;font-size:13px;">${t('viewDataSource')}</a>
+        </div>
+      `;
+
+      modal.classList.add('active');
+
+      setTimeout(() => {
+        const ctx = document.getElementById('modalChart');
+        if (ctx) {
+          new Chart(ctx, {
+            type: 'radar',
+            data: {
+              labels: t('radarDb'),
+              datasets: [{
+                data: [db.score, db.score - 2, db.score + 1, db.score - 1, db.score + 2],
+                backgroundColor: db.colors[0] + '40',
+                borderColor: db.colors[0],
+                borderWidth: 2
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: true,
+              plugins: { legend: { display: false } },
+              scales: { r: { min: 0, max: 10, ticks: { display: false }, pointLabels: { font: { size: 10 } }, lines: { lineWidth: 1 } } }
+            }
+          });
+        }
+      }, 100);
+
+      lucide.createIcons();
     }
 
     // ==================== MODAL ====================
@@ -2388,7 +2555,7 @@
           </div>
           <div style="margin-left:auto;text-align:center;">
             <div style="font-size:24px;font-weight:800;color:var(--accent);">${tool.score}</div>
-            <div style="color:var(--text-secondary);font-size:11px;">评分</div>
+            <div style="color:var(--text-secondary);font-size:11px;">${t('tableScore')}</div>
           </div>
         </div>
         <div style="margin-bottom:12px;display:flex;flex-wrap:wrap;gap:6px;">
@@ -2396,13 +2563,13 @@
         </div>
         <p style="color:var(--text-secondary);font-size:12px;line-height:1.4;margin-bottom:12px;">${currentLang === 'zh' ? tool.desc : 'Coming soon...'}</p>
         <div style="margin-bottom:12px;">
-          <h4 style="margin-bottom:6px;font-size:13px;">评分详情</h4>
+          <h4 id="modalRadarTitle" style="margin-bottom:6px;font-size:13px;">${t('modalRadarTitle')}</h4>
           <div style="height:150px;display:flex;align-items:center;justify-content:center;">
             <canvas id="modalChart" style="max-height:100%;"></canvas>
           </div>
         </div>
         <div style="text-align:center;">
-          <a href="${tool.website || 'https://'}" target="_blank" rel="noopener" class="action-btn" style="display:inline-block;text-decoration:none;padding:8px 20px;font-size:13px;">访问官网 →</a>
+          <a href="${tool.website || 'https://'}" target="_blank" rel="noopener" class="action-btn" style="display:inline-block;text-decoration:none;padding:8px 20px;font-size:13px;">${t('btnVisitWebsite')}</a>
         </div>
       `;
 
@@ -2414,7 +2581,7 @@
           new Chart(ctx, {
             type: 'radar',
             data: {
-              labels: ['代码生成', '上下文理解', '速度性能', '价格', '集成便捷'],
+              labels: t('radarTools'),
               datasets: [{
                 data: [9.2, 9.0, 8.8, 8.5, 9.0],
                 backgroundColor: tool.colors[0] + '40',
