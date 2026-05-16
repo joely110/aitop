@@ -907,7 +907,7 @@
       <div class="header-right">
         <div class="search-box">
           <i data-lucide="search" style="width:16px;height:16px;color:var(--text-secondary);"></i>
-          <input type="text" placeholder="搜索工具..." id="searchInput">
+          <input type="text" placeholder="${currentLang === 'zh' ? '搜索工具...' : 'Search tools...'}" id="searchInput">
         </div>
         <button class="toggle-btn" onclick="toggleLang()">
           <i data-lucide="globe" style="width:16px;height:16px;"></i>
@@ -937,11 +937,11 @@
         <div class="home-hero-cta">
           <button class="cta-btn primary" onclick="switchTab('tools')">
             <i data-lucide="trophy" style="width:20px;height:20px;"></i>
-            查看排行榜
+            <span class="cta-rankings-text">${t('ctaRankings')}</span>
           </button>
           <button class="cta-btn secondary" onclick="switchTab('models')">
             <i data-lucide="cpu" style="width:20px;height:20px;"></i>
-            大模型对比
+            <span class="cta-compare-text">${t('ctaCompare')}</span>
           </button>
         </div>
       </div>
@@ -1709,6 +1709,7 @@
         footerAboutUs: '关于我们',
         footerContact: '联系我们',
         footerCopyright: '© 2026 DevRank at virexstar.com. All rights reserved.',
+        searchPlaceholder: '搜索工具...',
         // Tools page
         toolsTitle: 'AI编程工具排行榜',
         toolsDesc: '最全的AI代码助手对比，帮你选出最适合的编程工具',
@@ -1804,6 +1805,7 @@
         footerAboutUs: 'About Us',
         footerContact: 'Contact Us',
         footerCopyright: '© 2026 DevRank at virexstar.com. All rights reserved.',
+        searchPlaceholder: 'Search tools...',
         // Tools page
         toolsTitle: 'AI Coding Tools Ranking 2026',
         toolsDesc: 'Most comprehensive AI code assistant comparison to help you choose the best coding tool',
@@ -1896,6 +1898,24 @@
       document.querySelectorAll('.stat-label').forEach((el, i) => {
         const labels = [t('statsTools'), t('statsRanking'), t('statsFree'), t('statsAvg')];
         if (labels[i]) el.textContent = labels[i];
+      });
+
+      // Update search placeholder
+      const searchInput = document.getElementById('searchInput');
+      if (searchInput) searchInput.placeholder = t('searchPlaceholder');
+
+      // Update CTA buttons
+      const ctaRankings = document.querySelector('.cta-rankings-text');
+      if (ctaRankings) ctaRankings.textContent = t('ctaRankings');
+      const ctaCompare = document.querySelector('.cta-compare-text');
+      if (ctaCompare) ctaCompare.textContent = t('ctaCompare');
+
+      // Update category counts
+      document.querySelectorAll('.category-count').forEach((el, i) => {
+        if (i === 0) el.textContent = tools.length + t('catToolsCount');
+        if (i === 1) el.textContent = 4 + t('catModelsCount');
+        if (i === 2) el.textContent = languages.length + t('catLangCount');
+        if (i === 3) el.textContent = 9 + t('catDbCount');
       });
 
       // Update tools page filters and table header
