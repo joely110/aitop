@@ -1629,7 +1629,7 @@
       const featured = tools.slice(0, 6);
       container.innerHTML = featured.map(t => `
         <div class="featured-card" onclick="switchTab('tools')">
-          <div class="featured-logo" style="background:linear-gradient(135deg,${t.colors[0]},${t.colors[1]})">${t.name[0]}</div>
+          <div class="featured-logo" style="background:linear-gradient(135deg,${t.colors[0]},${t.colors[1]})">${t.icon ? `<img src="${t.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${t.name[0]}';this.remove();" />` : t.name[0]}</div>
           <div class="featured-info">
             <h4>${t.name}</h4>
             <p>${t.vendor}</p>
