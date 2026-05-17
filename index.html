@@ -15,6 +15,16 @@
   <link rel="alternate" hreflang="zh" href="https://virexstar.com/?lang=zh" />
   <link rel="alternate" hreflang="x-default" href="https://virexstar.com/" />
 
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9D5FXJJ9C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H9D5FXJJ9C');
+</script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1132,6 +1142,7 @@
         <div class="footer-col">
           <h4 id="footerResource">资源</h4>
           <a href="javascript:void(0)" id="footerPrivacyLink" onclick="showPrivacy()">隐私政策</a>
+          <a href="javascript:void(0)" id="footerTermsLink" onclick="showTerms()">使用条款</a>
           <a href="javascript:void(0)" id="footerAboutLink" onclick="showAbout()">关于我们</a>
           <a href="javascript:void(0)" id="footerContactLink" onclick="showContact()">联系我们</a>
         </div>
@@ -1231,6 +1242,38 @@
           <p>Email: ljava1170@gmail.com</p>
           <h3>${isZh ? '合作提议' : 'Business Inquiries'}</h3>
           <p>${isZh ? '如有意向合作或商业合作，请发送邮件至上述地址。' : 'For partnership or business inquiries, please send an email to the address above.'}</p>
+        </div>
+      `;
+      document.getElementById('modal').classList.add('active');
+    }
+
+    function showTerms() {
+      const isZh = currentLang === 'zh';
+      document.getElementById('modalTitle').textContent = isZh ? '使用条款' : 'Terms of Service';
+      document.getElementById('modalContent').innerHTML = `
+        <div class="legal-content">
+          <h2>${isZh ? '使用条款' : 'Terms of Service'}</h2>
+          <p>${isZh ? '最后更新：2026年5月15日' : 'Last updated: May 15, 2026'}</p>
+          <h3>${isZh ? '服务说明' : 'Service Description'}</h3>
+          <p>${isZh ? 'DevRank是一个开发者工具排行榜对比平台，提供AI编程工具、大模型、编程语言和数据库的排名信息。' : 'DevRank is a developer tools ranking and comparison platform, providing ranking information for AI coding tools, large language models, programming languages, and databases.'}</p>
+          <h3>${isZh ? '使用限制' : 'Usage Restrictions'}</h3>
+          <p>${isZh ? '您不得：' : 'You may not:'}</p>
+          <ul>
+            <li>${isZh ? '将本服务用于任何非法目的' : 'Use this service for any illegal purposes'}</li>
+            <li>${isZh ? '试图干扰本网站的正常运作' : 'Attempt to interfere with the normal operation of this website'}</li>
+            <li>${isZh ? '未经授权试图访问本网站的任何部分' : 'Unauthorized attempt to access any part of this website'}</li>
+            <li>${isZh ? '使用自动化工具批量抓取网站数据' : 'Use automated tools to batch scrape website data'}</li>
+          </ul>
+          <h3>${isZh ? '免责声明' : 'Disclaimer'}</h3>
+          <p>${isZh ? '排行榜和评分仅供参考。我们努力确保信息的准确性，但不对内容做任何明示或暗示的保证。因使用本网站信息而造成的任何损失，我们不承担责任。' : 'Rankings and scores are for reference only. We strive to ensure the accuracy of information, but make no express or implied warranties about the content. We are not responsible for any damages caused by using the information on this website.'}</p>
+          <h3>${isZh ? '第三方链接' : 'Third-Party Links'}</h3>
+          <p>${isZh ? '本网站包含指向上第三方网站的链接。我们不对第三方网站的内容或隐私政策负责。' : 'This website contains links to third-party websites. We are not responsible for the content or privacy policies of third-party websites.'}</p>
+          <h3>${isZh ? '广告服务' : 'Advertising Services'}</h3>
+          <p>${isZh ? '我们使用Google AdSense在网站上展示广告。Google AdSense使用Cookie来投放基于用户兴趣的广告。您可以通过访问Google的广告设置来选择退出个性化广告。' : 'We use Google AdSense to display advertisements on this website. Google AdSense uses cookies to serve ads based on user interests. You can opt out of personalized ads through Google\'s ad settings.'}</p>
+          <h3>${isZh ? '条款变更' : 'Terms Changes'}</h3>
+          <p>${isZh ? '我们保留随时修改这些条款的权利。修改后的条款将在网站上发布后生效。' : 'We reserve the right to modify these terms at any time. Modified terms will take effect after being posted on the website.'}</p>
+          <h3>${isZh ? '联系我们' : 'Contact Us'}</h3>
+          <p>${isZh ? '如有关于使用条款的任何问题，请通过以下方式联系我们：ljava1170@gmail.com' : 'For any questions about the terms of service, please contact us at: ljava1170@gmail.com'}</p>
         </div>
       `;
       document.getElementById('modal').classList.add('active');
@@ -1794,6 +1837,7 @@
         footerResource: '资源',
         footerPrivacy: '隐私政策',
         footerPrivacyLink: '隐私政策',
+        footerTermsLink: '使用条款',
         footerAboutLink: '关于我们',
         footerContactLink: '联系我们',
         footerAbout: '关于',
@@ -1933,6 +1977,7 @@
         footerResource: 'Resources',
         footerPrivacy: 'Privacy Policy',
         footerPrivacyLink: 'Privacy Policy',
+        footerTermsLink: 'Terms of Service',
         footerAboutLink: 'About Us',
         footerContactLink: 'Contact Us',
         footerAbout: 'About',
@@ -2108,7 +2153,7 @@
       // Update footer
       const footerIds = [
         'footerProduct', 'footerToolsLink', 'footerModelsLink', 'footerLangLink', 'footerDbLink',
-        'footerResource', 'footerPrivacyLink', 'footerAboutLink', 'footerContactLink',
+        'footerResource', 'footerPrivacyLink', 'footerTermsLink', 'footerAboutLink', 'footerContactLink',
         'footerAbout', 'footerHomeLink', 'footerRankingsLink', 'footerCompareLink'
       ];
       footerIds.forEach(id => {
