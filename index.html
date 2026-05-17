@@ -914,7 +914,7 @@
       <div class="header-right">
         <div class="search-box">
           <i data-lucide="search" style="width:16px;height:16px;color:var(--text-secondary);"></i>
-          <input type="text" placeholder="${currentLang === 'zh' ? '搜索工具...' : 'Search tools...'}" id="searchInput">
+          <input type="text" placeholder="${t('searchPlaceholder')}" id="searchInput">
         </div>
         <button class="toggle-btn" onclick="toggleLang()">
           <i data-lucide="globe" style="width:16px;height:16px;"></i>
@@ -1018,27 +1018,27 @@
 
       <!-- Why Choose Us -->
       <div class="home-why">
-        <h2 class="section-title">为什么选择我们</h2>
+        <h2 id="homeWhyTitle" class="section-title">为什么选择我们</h2>
         <div class="why-grid">
           <div class="why-card">
             <div class="why-icon">📊</div>
-            <h4>客观评分</h4>
-            <p>基于代码生成质量、上下文理解、速度性能等多维度综合评估</p>
+            <h4 id="whyCard1Title">客观评分</h4>
+            <p id="whyCard1Desc">基于代码生成质量、上下文理解、速度性能等多维度综合评估</p>
           </div>
           <div class="why-card">
             <div class="why-icon">🔄</div>
-            <h4>实时更新</h4>
-            <p>追踪最新版本和功能更新，第一时间更新排名数据</p>
+            <h4 id="whyCard2Title">实时更新</h4>
+            <p id="whyCard2Desc">追踪最新版本和功能更新，第一时间更新排名数据</p>
           </div>
           <div class="why-card">
             <div class="why-icon">🌐</div>
-            <h4>双语支持</h4>
-            <p>支持中文和英文，随时切换浏览语言</p>
+            <h4 id="whyCard3Title">双语支持</h4>
+            <p id="whyCard3Desc">支持中文和英文，随时切换浏览语言</p>
           </div>
           <div class="why-card">
             <div class="why-icon">📱</div>
-            <h4>响应式设计</h4>
-            <p>完美适配桌面、平板和手机各种设备</p>
+            <h4 id="whyCard4Title">响应式设计</h4>
+            <p id="whyCard4Desc">完美适配桌面、平板和手机各种设备</p>
           </div>
         </div>
       </div>
@@ -1757,6 +1757,15 @@
         statsNew: '本月新增',
         featureTitle: '客观评分',
         featureDesc: '追踪最新版本和功能更新，第一时间更新排名数据',
+        homeWhyTitle: '为什么选择我们',
+        whyCard1Title: '客观评分',
+        whyCard1Desc: '基于代码生成质量、上下文理解、速度性能等多维度综合评估',
+        whyCard2Title: '实时更新',
+        whyCard2Desc: '追踪最新版本和功能更新，第一时间更新排名数据',
+        whyCard3Title: '双语支持',
+        whyCard3Desc: '支持中文和英文，随时切换浏览语言',
+        whyCard4Title: '响应式设计',
+        whyCard4Desc: '完美适配桌面、平板和手机各种设备',
         about: '关于我们',
         aboutDesc: 'DevRank 是一个致力于为开发者提供最全面、最客观工具对比平台的网站。',
         dataSourceTitle: '数据来源',
@@ -1873,6 +1882,15 @@
         statsNew: 'New This Month',
         featureTitle: 'Objective Scoring',
         featureDesc: 'Track latest versions and updates, update ranking data第一时间',
+        homeWhyTitle: 'Why Choose Us',
+        whyCard1Title: 'Objective Scoring',
+        whyCard1Desc: 'Comprehensive evaluation based on code generation quality, context understanding, speed and performance',
+        whyCard2Title: 'Real-time Updates',
+        whyCard2Desc: 'Track latest versions and updates, update ranking data promptly',
+        whyCard3Title: 'Bilingual Support',
+        whyCard3Desc: 'Support Chinese and English, switch languages anytime',
+        whyCard4Title: 'Responsive Design',
+        whyCard4Desc: 'Perfect adaptation for desktop, tablet and mobile devices',
         about: 'About Us',
         aboutDesc: 'DevRank is a platform dedicated to providing developers with the most comprehensive and objective tool comparisons.',
         dataSourceTitle: 'Data Sources',
@@ -1996,6 +2014,18 @@
       });
       const featuredTitle = document.querySelector('.section-title');
       if (featuredTitle) featuredTitle.textContent = t('featuredTitle');
+
+      // Update "为什么选择我们" title
+      const whyTitle = document.getElementById('homeWhyTitle');
+      if (whyTitle) whyTitle.textContent = t('homeWhyTitle');
+      // Update why cards
+      const whyCardIds = ['whyCard1Title', 'whyCard1Desc', 'whyCard2Title', 'whyCard2Desc', 'whyCard3Title', 'whyCard3Desc', 'whyCard4Title', 'whyCard4Desc'];
+      const whyCardKeys = ['whyCard1Title', 'whyCard1Desc', 'whyCard2Title', 'whyCard2Desc', 'whyCard3Title', 'whyCard3Desc', 'whyCard4Title', 'whyCard4Desc'];
+      whyCardIds.forEach((id, i) => {
+        const el = document.getElementById(id);
+        if (el && whyCardKeys[i]) el.textContent = t(whyCardKeys[i]);
+      });
+
       // Update stats bar
       const statIds = ['statTools', 'statFree', 'statAvg', 'statNew'];
       const statKeys = ['statsTools', 'statsFree', 'statsAvg', 'statsNew'];
