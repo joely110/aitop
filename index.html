@@ -1501,6 +1501,25 @@
     // ==================== TAB SWITCHING ====================
     function switchTab(tab) {
       currentTab = tab;
+
+      // Update page title and meta for SEO
+      const titles = {
+        home: 'DevRank - 开发者工具排行榜2026 | AI编程工具对比平台',
+        tools: 'AI编程工具排行榜2026 - Cursor vs Copilot vs Claude | DevRank',
+        models: '大模型编程能力排行榜2026 - SWE-bench榜单 | DevRank',
+        languages: '编程语言排行榜2026 - TIOBE指数 | DevRank',
+        databases: '数据库排行榜2026 - DB-Engines排名 | DevRank'
+      };
+      const descs = {
+        home: '2026年最新AI编程工具排行榜，涵盖Cursor、GitHub Copilot、Claude Code等AI代码助手。提供大模型代码能力排行、编程语言流行度排行、数据库分类排行。',
+        tools: '2026年AI编程工具对比，Cursor、GitHub Copilot、Claude Code、Windsurf等工具评分排行，帮开发者选择最适合的AI代码助手。',
+        models: '基于SWE-bench、LiveCodeBench等权威基准测试的2026年大模型代码能力排行榜，涵盖GPT、Claude、DeepSeek等模型。',
+        languages: '2026年编程语言流行度排行，基于TIOBE指数、Stack Overflow调查、GitHub Octoverse数据，涵盖Python、JavaScript、Java等。',
+        databases: '2026年数据库排行，涵盖关系型、键值存储、文档型、图数据库等，基于DB-Engines真实评分排名。'
+      };
+      document.title = titles[tab] || titles.home;
+      document.querySelector('meta[name="description"]').setAttribute('content', descs[tab] || descs.home);
+
       document.querySelectorAll('nav a').forEach(a => {
         a.classList.toggle('active', a.dataset.tab === tab);
       });
