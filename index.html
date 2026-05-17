@@ -1044,7 +1044,7 @@
       </div>
 
       <div class="ad-banner">
-        <span>广告位</span> - 首页横幅广告 728x90
+        <span id="adBannerText1">广告位</span> - <span id="adBannerDesc1">首页横幅广告 728x90</span>
       </div>
     </div>
   </section>
@@ -1055,7 +1055,7 @@
       <p class="hero-desc" id="heroDesc">最全的AI代码助手对比，帮你选出最适合的编程工具</p>
 
       <div class="ad-banner">
-        <span>广告位</span> - 728x90 响应式广告banner，支持Google AdSense
+        <span id="adBannerText2">广告位</span> - <span id="adBannerDesc2">728x90 响应式广告banner，支持Google AdSense</span>
       </div>
 
       <div class="filters">
@@ -1498,7 +1498,7 @@
               <button class="filter-btn ${currentToolFilter === 'freemium' ? 'active' : ''}" data-filter="freemium" onclick="filterTools('freemium')">免费+付费</button>
             </div>
           </div>
-          <div class="db-columns"><div>${t('tableRank')}</div><div>${currentLang === 'zh' ? '工具' : 'Tool'}</div><div>${currentLang === 'zh' ? '评分雷达' : 'Radar'}</div><div>${t('tableScore')}</div><div>${t('tablePrice')}</div><div>${t('tableAction')}</div></div>
+          <div class="db-columns"><div>${t('tableRank')}</div><div>${t('tableTool')}</div><div>${t('tableRadar')}</div><div>${t('tableScore')}</div><div>${t('tablePrice')}</div><div>${t('tableAction')}</div></div>
         `;
         renderToolsTable();
       } else if (tab === 'models') {
@@ -1521,7 +1521,7 @@
         if (articlesSection) articlesSection.style.display = 'none';
         if (homeSection) homeSection.style.display = 'none';
         const thLang = document.querySelector('.table-header');
-        if (thLang) thLang.innerHTML = `<div class="db-columns"><div>${t('tableRank')}</div><div>${currentLang === 'zh' ? '语言' : 'Language'}</div><div>${currentLang === 'zh' ? '评分雷达' : 'Radar'}</div><div>${currentLang === 'zh' ? '流行度' : 'Popularity'}</div><div>${currentLang === 'zh' ? 'TIOBE排名' : 'TIOBE Rank'}</div><div>${t('tableAction')}</div></div>`;
+        if (thLang) thLang.innerHTML = `<div class="db-columns"><div>${t('tableRank')}</div><div>${t('tableLanguage')}</div><div>${t('tableRadar')}</div><div>${t('tablePopularity')}</div><div>${t('tableTIOBE')}</div><div>${t('tableAction')}</div></div>`;
         renderLanguagesTable();
       } else if (tab === 'databases') {
         if (hero) hero.style.display = 'none';
@@ -1550,7 +1550,7 @@
             <button class="filter-btn ${category === 'multilingual' ? 'active' : ''}" onclick="renderModelsTab('multilingual')">${t('modelMultilingual')}</button>
           </div>
         </div>
-        <div class="db-columns"><div>${t('tableRank')}</div><div>${currentLang === 'zh' ? '模型' : 'Model'}</div><div>${currentLang === 'zh' ? '评分雷达' : 'Radar'}</div><div>${t('tableScore')}</div><div>${t('tableAction')}</div></div>
+        <div class="db-columns"><div>${t('tableRank')}</div><div>${t('tableModel')}</div><div>${t('tableRadar')}</div><div>${t('tableScore')}</div><div>${t('tableAction')}</div></div>
       `;
 
       renderModelTable(currentModelCategory);
@@ -1749,6 +1749,13 @@
         catDb: '数据库',
         catDbDesc: 'MySQL、PostgreSQL、MongoDB、Redis 等数据库对比',
         catDbCount: '种分类',
+        tableModel: '模型',
+        tableRadar: '评分雷达',
+        tableLanguage: '语言',
+        tablePopularity: '流行度',
+        tableTIOBE: 'TIOBE排名',
+        tableDatabase: '数据库',
+        tableType: '类型',
         featuredTitle: '🔥 热门工具',
         statsTools: '收录工具',
         statsRanking: '排行分类',
@@ -1766,6 +1773,9 @@
         whyCard3Desc: '支持中文和英文，随时切换浏览语言',
         whyCard4Title: '响应式设计',
         whyCard4Desc: '完美适配桌面、平板和手机各种设备',
+        adBannerText: '广告位',
+        adBannerDesc1: '首页横幅广告 728x90',
+        adBannerDesc2: '728x90 响应式广告banner，支持Google AdSense',
         about: '关于我们',
         aboutDesc: 'DevRank 是一个致力于为开发者提供最全面、最客观工具对比平台的网站。',
         dataSourceTitle: '数据来源',
@@ -1806,8 +1816,12 @@
         tableTool: '工具',
         tableScore: '评分',
         tablePrice: '价格',
+        tablePrice: '价格',
         tableAction: '操作',
         btnDetail: '查看详情',
+        tableModel: '模型',
+        tableRadar: '评分雷达',
+        tableTool: '工具',
         btnVisitWebsite: '访问官网 →',
         modalRadarTitle: '评分详情',
         viewDataSource: '查看数据来源 →',
@@ -1874,6 +1888,13 @@
         catDb: 'Databases',
         catDbDesc: 'MySQL, PostgreSQL, MongoDB, Redis and other database comparisons',
         catDbCount: ' categories',
+        tableModel: 'Model',
+        tableRadar: 'Radar',
+        tableLanguage: 'Language',
+        tablePopularity: 'Popularity',
+        tableTIOBE: 'TIOBE Rank',
+        tableDatabase: 'Database',
+        tableType: 'Type',
         featuredTitle: '🔥 Popular Tools',
         statsTools: 'Tools',
         statsRanking: 'Categories',
@@ -1891,6 +1912,9 @@
         whyCard3Desc: 'Support Chinese and English, switch languages anytime',
         whyCard4Title: 'Responsive Design',
         whyCard4Desc: 'Perfect adaptation for desktop, tablet and mobile devices',
+        adBannerText: 'Ad Space',
+        adBannerDesc1: 'Homepage Banner Ad 728x90',
+        adBannerDesc2: '728x90 Responsive Ad Banner, supports Google AdSense',
         about: 'About Us',
         aboutDesc: 'DevRank is a platform dedicated to providing developers with the most comprehensive and objective tool comparisons.',
         dataSourceTitle: 'Data Sources',
@@ -1931,8 +1955,12 @@
         tableTool: 'Tool',
         tableScore: 'Score',
         tablePrice: 'Price',
+        tablePrice: 'Price',
         tableAction: 'Action',
         btnDetail: 'Details',
+        tableModel: 'Model',
+        tableRadar: 'Radar',
+        tableTool: 'Tool',
         btnVisitWebsite: 'Visit Website →',
         modalRadarTitle: 'Score Details',
         viewDataSource: 'View Data Source →',
@@ -2025,6 +2053,16 @@
         const el = document.getElementById(id);
         if (el && whyCardKeys[i]) el.textContent = t(whyCardKeys[i]);
       });
+
+      // Update ad banners
+      const adBannerText1 = document.getElementById('adBannerText1');
+      if (adBannerText1) adBannerText1.textContent = t('adBannerText');
+      const adBannerDesc1 = document.getElementById('adBannerDesc1');
+      if (adBannerDesc1) adBannerDesc1.textContent = t('adBannerDesc1');
+      const adBannerText2 = document.getElementById('adBannerText2');
+      if (adBannerText2) adBannerText2.textContent = t('adBannerText');
+      const adBannerDesc2 = document.getElementById('adBannerDesc2');
+      if (adBannerDesc2) adBannerDesc2.textContent = t('adBannerDesc2');
 
       // Update stats bar
       const statIds = ['statTools', 'statFree', 'statAvg', 'statNew'];
@@ -2437,7 +2475,7 @@
             <button class="filter-btn ${category === 'bigdata' ? 'active' : ''}" onclick="renderDatabasesTab('bigdata')">${t('dbBig')}</button>
           </div>
         </div>
-        <div class="db-columns"><div>${t('tableRank')}</div><div>${currentLang === 'zh' ? '数据库' : 'Database'}</div><div>${currentLang === 'zh' ? '评分雷达' : 'Radar'}</div><div>${t('tableScore')}</div><div>${currentLang === 'zh' ? '类型' : 'Type'}</div><div>${t('tableAction')}</div></div>
+        <div class="db-columns"><div>${t('tableRank')}</div><div>${t('tableDatabase')}</div><div>${t('tableRadar')}</div><div>${t('tableScore')}</div><div>${t('tableType')}</div><div>${t('tableAction')}</div></div>
       `;
 
       renderDbTable(category);
