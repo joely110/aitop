@@ -1001,7 +1001,7 @@
       <div class="header-right">
         <div class="search-box">
           <i data-lucide="search" style="width:16px;height:16px;color:var(--text-secondary);"></i>
-          <input type="text" placeholder="${t('searchPlaceholder')}" id="searchInput">
+          <input type="text" placeholder="搜索工具..." id="searchInput">
         </div>
         <button class="toggle-btn" onclick="toggleLang()">
           <i data-lucide="globe" style="width:16px;height:16px;"></i>
@@ -1176,20 +1176,20 @@
   <main class="container">
     <div class="stats-bar">
       <div class="stat-item">
-        <div class="stat-value" id="toolsCount">${tools.length}</div>
-        <div class="stat-label" id="statTools">${t('statsTools')}</div>
+        <div class="stat-value" id="toolsCount"></div>
+        <div class="stat-label" id="statTools">收录工具</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value" id="freeToolsCount">4</div>
-        <div class="stat-label" id="statFree">${t('statsFree')}</div>
+        <div class="stat-value" id="freeToolsCount"></div>
+        <div class="stat-label" id="statFree">免费工具</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value" id="avgScoreValue">92.5</div>
-        <div class="stat-label" id="statAvg">${t('statsAvg')}</div>
+        <div class="stat-value" id="avgScoreValue"></div>
+        <div class="stat-label" id="statAvg">平均评分</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value" id="newToolsCount">6</div>
-        <div class="stat-label" id="statNew">${t('statsNew')}</div>
+        <div class="stat-value" id="newToolsCount"></div>
+        <div class="stat-label" id="statNew">本月新增</div>
       </div>
     </div>
 
@@ -1405,44 +1405,44 @@
     const models = {
       'swe-bench': [
         { id: 1, name: 'Claude Mythos Preview', vendor: 'Anthropic', score: 93.9, passRate: '93.9%', colors: ['#D97706','#F59E0B'], desc: 'SWE-bench Verified榜首，93.9%通过率。数据源: datalearner.com', desc_en: 'DataLearner SWE-bench Verified #1, 93.9% pass rate.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 2, name: 'Opus 4.7', vendor: 'Anthropic', score: 87.6, passRate: '87.6%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最新旗舰，87.6%通过率。数据源: datalearner.com', desc_en: 'Anthropic's latest flagship, 87.6% pass rate.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 3, name: 'Claude Sonnet 5', vendor: 'Anthropic', score: 82.0, passRate: '82.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic主力模型，82.0%通过率。数据源: datalearner.com', desc_en: 'Anthropic's main model, 82.0% pass rate.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 4, name: 'Claude Sonnet 4.5', vendor: 'Anthropic', score: 82.0, passRate: '82.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic高性价比模型。数据源: datalearner.com', desc_en: 'Anthropic's cost-effective model.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 5, name: 'Opus 4.5', vendor: 'Anthropic', score: 80.9, passRate: '80.9%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic旗舰级表现。数据源: datalearner.com', desc_en: 'Anthropic's flagship performance.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 6, name: 'Claude Opus 4.6', vendor: 'Anthropic', score: 80.8, passRate: '80.8%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic稳定版本。数据源: datalearner.com', desc_en: 'Anthropic's stable version.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
+        { id: 2, name: 'Opus 4.7', vendor: 'Anthropic', score: 87.6, passRate: '87.6%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最新旗舰，87.6%通过率。数据源: datalearner.com', desc_en: "Anthropic's latest flagship, 87.6% pass rate.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
+        { id: 3, name: 'Claude Sonnet 5', vendor: 'Anthropic', score: 82.0, passRate: '82.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic主力模型，82.0%通过率。数据源: datalearner.com', desc_en: "Anthropic's main model, 82.0% pass rate.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
+        { id: 4, name: 'Claude Sonnet 4.5', vendor: 'Anthropic', score: 82.0, passRate: '82.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic高性价比模型。数据源: datalearner.com', desc_en: "Anthropic's cost-effective model.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
+        { id: 5, name: 'Opus 4.5', vendor: 'Anthropic', score: 80.9, passRate: '80.9%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic旗舰级表现。数据源: datalearner.com', desc_en: "Anthropic's flagship performance.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
+        { id: 6, name: 'Claude Opus 4.6', vendor: 'Anthropic', score: 80.8, passRate: '80.8%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic稳定版本。数据源: datalearner.com', desc_en: "Anthropic's stable version.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
         { id: 7, name: 'DeepSeek-V4-Pro', vendor: 'DeepSeek-AI', score: 80.6, passRate: '80.6%', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰。数据源: datalearner.com', desc_en: 'Chinese open-source flagship.', icon: 'https://deepseek.com/favicon.ico' },
-        { id: 8, name: 'Gemini 3.1 Pro Preview', vendor: 'Google', score: 80.6, passRate: '80.6%', colors: ['#3B82F6','#60A5FA'], desc: 'Google旗舰模型。数据源: datalearner.com', desc_en: 'Google's flagship model.', icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' },
-        { id: 9, name: 'Claude Sonnet 4', vendor: 'Anthropic', score: 80.2, passRate: '80.2%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic经典版本。数据源: datalearner.com', desc_en: 'Anthropic's classic version.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
+        { id: 8, name: 'Gemini 3.1 Pro Preview', vendor: 'Google', score: 80.6, passRate: '80.6%', colors: ['#3B82F6','#60A5FA'], desc: 'Google旗舰模型。数据源: datalearner.com', desc_en: "Google's flagship model.", icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' },
+        { id: 9, name: 'Claude Sonnet 4', vendor: 'Anthropic', score: 80.2, passRate: '80.2%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic经典版本。数据源: datalearner.com', desc_en: "Anthropic's classic version.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
         { id: 10, name: 'MiniMax M2.5', vendor: 'MiniMaxAI', score: 80.2, passRate: '80.2%', colors: ['#EC4899','#F472B6'], desc: '国产黑马模型。数据源: datalearner.com', desc_en: 'Chinese dark horse model.', icon: 'https://www.minimaxi.com/favicon.ico' }
       ],
       'livecode': [
         { id: 1, name: 'Gemini 3.0 Pro Preview', vendor: 'Google', score: 92.0, passRate: '92.0%', colors: ['#3B82F6','#60A5FA'], desc: 'DataLearner LiveCodeBench榜首，92.0%通过率。数据源: datalearner.com', desc_en: 'DataLearner LiveCodeBench #1, 92.0% pass rate.', icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' },
-        { id: 2, name: 'Gemini 3.1 Pro Preview', vendor: 'Google', score: 91.7, passRate: '91.7%', colors: ['#3B82F6','#60A5FA'], desc: 'Google最新旗舰，91.7%通过率。数据源: datalearner.com', desc_en: 'Google's latest flagship, 91.7% pass rate.', icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' },
-        { id: 3, name: 'Opus 4.5', vendor: 'Anthropic', score: 87.0, passRate: '87.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最强推理模型。数据源: datalearner.com', desc_en: 'Anthropic's strongest reasoning model.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
+        { id: 2, name: 'Gemini 3.1 Pro Preview', vendor: 'Google', score: 91.7, passRate: '91.7%', colors: ['#3B82F6','#60A5FA'], desc: 'Google最新旗舰，91.7%通过率。数据源: datalearner.com', desc_en: "Google's latest flagship, 91.7% pass rate.", icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' },
+        { id: 3, name: 'Opus 4.5', vendor: 'Anthropic', score: 87.0, passRate: '87.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最强推理模型。数据源: datalearner.com', desc_en: "Anthropic's strongest reasoning model.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
         { id: 4, name: 'Step 3.5 Flash', vendor: 'StepFunAI', score: 86.4, passRate: '86.4%', colors: ['#10A37F','#34D399'], desc: '国产AI新秀。数据源: datalearner.com', desc_en: 'Chinese AI newcomer.', icon: 'https://www.stepfun.com/favicon.ico' },
-        { id: 5, name: 'Qwen3-Max-Thinking', vendor: 'Alibaba', score: 85.9, passRate: '85.9%', colors: ['#EC4899','#F472B6'], desc: '阿里思考型旗舰。数据源: datalearner.com', desc_en: 'Alibaba's thinking flagship.', icon: 'https://qwenlm.com/favicon.ico' },
-        { id: 6, name: 'GPT-5.1 Codex', vendor: 'OpenAI', score: 85.5, passRate: '85.5%', colors: ['#10A37F','#34D399'], desc: 'OpenAI代码专用模型。数据源: datalearner.com', desc_en: 'OpenAI's code-specialized model.', icon: 'https://openaipublic.blob.core.windows.net/cdn/favicon.ico' },
-        { id: 7, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 80.4, passRate: '80.4%', colors: ['#EC4899','#F472B6'], desc: '阿里开源旗舰。数据源: datalearner.com', desc_en: 'Alibaba's open-source flagship.', icon: 'https://qwenlm.com/favicon.ico' },
-        { id: 8, name: 'Claude Opus 4', vendor: 'Anthropic', score: 56.6, passRate: '56.6%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic经典旗舰。数据源: datalearner.com', desc_en: 'Anthropic's classic flagship.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' }
+        { id: 5, name: 'Qwen3-Max-Thinking', vendor: 'Alibaba', score: 85.9, passRate: '85.9%', colors: ['#EC4899','#F472B6'], desc: '阿里思考型旗舰。数据源: datalearner.com', desc_en: "Alibaba's thinking flagship.", icon: 'https://qwenlm.com/favicon.ico' },
+        { id: 6, name: 'GPT-5.1 Codex', vendor: 'OpenAI', score: 85.5, passRate: '85.5%', colors: ['#10A37F','#34D399'], desc: 'OpenAI代码专用模型。数据源: datalearner.com', desc_en: "OpenAI's code-specialized model.", icon: 'https://openaipublic.blob.core.windows.net/cdn/favicon.ico' },
+        { id: 7, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 80.4, passRate: '80.4%', colors: ['#EC4899','#F472B6'], desc: '阿里开源旗舰。数据源: datalearner.com', desc_en: "Alibaba's open-source flagship.", icon: 'https://qwenlm.com/favicon.ico' },
+        { id: 8, name: 'Claude Opus 4', vendor: 'Anthropic', score: 56.6, passRate: '56.6%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic经典旗舰。数据源: datalearner.com', desc_en: "Anthropic's classic flagship.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' }
       ],
       'swe-pro': [
         { id: 1, name: 'Claude Mythos Preview', vendor: 'Anthropic', score: 77.8, passRate: '77.8%', colors: ['#D97706','#F59E0B'], desc: 'DataLearner SWE-Bench Pro榜首，77.8%通过率。数据源: datalearner.com', desc_en: 'DataLearner SWE-Bench Pro #1, 77.8% pass rate.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 2, name: 'Claude Opus 4.6', vendor: 'Anthropic', score: 72.0, passRate: '72.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic专业版。数据源: datalearner.com', desc_en: 'Anthropic's professional version.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
+        { id: 2, name: 'Claude Opus 4.6', vendor: 'Anthropic', score: 72.0, passRate: '72.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic专业版。数据源: datalearner.com', desc_en: "Anthropic's professional version.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
         { id: 3, name: 'Kimi K2.6', vendor: 'Moonshot AI', score: 58.6, passRate: '58.6%', colors: ['#10A37F','#34D399'], desc: '国产旗舰，超长上下文。数据源: datalearner.com', desc_en: 'Chinese flagship, ultra-long context.', icon: 'https://cdn.meekapp.com/favicon.ico' },
-        { id: 4, name: 'GPT-5.2', vendor: 'OpenAI', score: 55.6, passRate: '55.6%', colors: ['#10A37F','#34D399'], desc: 'OpenAI最新旗舰。数据源: datalearner.com', desc_en: 'OpenAI's latest flagship.', icon: 'https://openaipublic.blob.core.windows.net/cdn/favicon.ico' },
+        { id: 4, name: 'GPT-5.2', vendor: 'OpenAI', score: 55.6, passRate: '55.6%', colors: ['#10A37F','#34D399'], desc: 'OpenAI最新旗舰。数据源: datalearner.com', desc_en: "OpenAI's latest flagship.", icon: 'https://openaipublic.blob.core.windows.net/cdn/favicon.ico' },
         { id: 5, name: 'MiniMax M2.5', vendor: 'MiniMaxAI', score: 55.4, passRate: '55.4%', colors: ['#EC4899','#F472B6'], desc: '国产高性能模型。数据源: datalearner.com', desc_en: 'Chinese high-performance model.', icon: 'https://www.minimaxi.com/favicon.ico' },
         { id: 6, name: 'DeepSeek-V4-Pro', vendor: 'DeepSeek-AI', score: 55.4, passRate: '55.4%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek专业版。数据源: datalearner.com', desc_en: 'DeepSeek professional version.', icon: 'https://deepseek.com/favicon.ico' },
         { id: 7, name: 'DeepSeek-V4-Flash', vendor: 'DeepSeek-AI', score: 52.6, passRate: '52.6%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek轻量版。数据源: datalearner.com', desc_en: 'DeepSeek lightweight version.', icon: 'https://deepseek.com/favicon.ico' },
-        { id: 8, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 49.5, passRate: '49.5%', colors: ['#EC4899','#F472B6'], desc: '阿里开源代码模型。数据源: datalearner.com', desc_en: 'Alibaba's open-source code model.', icon: 'https://qwenlm.com/favicon.ico' },
-        { id: 9, name: 'GLM-4.7', vendor: 'Zhipu AI', score: 40.6, passRate: '40.6%', colors: ['#10A37F','#34D399'], desc: '智谱最新版本。数据源: datalearner.com', desc_en: 'Zhipu's latest version.', icon: 'https://www.zhipuai.cn/favicon.ico' }
+        { id: 8, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 49.5, passRate: '49.5%', colors: ['#EC4899','#F472B6'], desc: '阿里开源代码模型。数据源: datalearner.com', desc_en: "Alibaba's open-source code model.", icon: 'https://qwenlm.com/favicon.ico' },
+        { id: 9, name: 'GLM-4.7', vendor: 'Zhipu AI', score: 40.6, passRate: '40.6%', colors: ['#10A37F','#34D399'], desc: '智谱最新版本。数据源: datalearner.com', desc_en: "Zhipu's latest version.", icon: 'https://www.zhipuai.cn/favicon.ico' }
       ],
       'multilingual': [
         { id: 1, name: 'Claude Mythos Preview', vendor: 'Anthropic', score: 87.3, passRate: '87.3%', colors: ['#D97706','#F59E0B'], desc: 'DataLearner多语言榜首，87.3%通过率。数据源: datalearner.com', desc_en: 'DataLearner multilingual #1, 87.3% pass rate.', icon: 'https://anthropic.com/favicon.ico' },
         { id: 2, name: 'Kimi K2.6', vendor: 'Moonshot AI', score: 76.7, passRate: '76.7%', colors: ['#10A37F','#34D399'], desc: '国产旗舰，中文代码强。数据源: datalearner.com', desc_en: 'Chinese flagship, strong at Chinese code.', icon: 'https://cdn.meekapp.com/favicon.ico' },
         { id: 3, name: 'DeepSeek-V4-Pro', vendor: 'DeepSeek-AI', score: 76.2, passRate: '76.2%', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰。数据源: datalearner.com', desc_en: 'Chinese open-source flagship.', icon: 'https://deepseek.com/favicon.ico' },
         { id: 4, name: 'DeepSeek-V4-Flash', vendor: 'DeepSeek-AI', score: 73.3, passRate: '73.3%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek轻量版。数据源: datalearner.com', desc_en: 'DeepSeek lightweight version.', icon: 'https://deepseek.com/favicon.ico' },
-        { id: 5, name: 'Qwen3.6-27B', vendor: 'Alibaba', score: 71.3, passRate: '71.3%', colors: ['#EC4899','#F472B6'], desc: '阿里27B参数模型。数据源: datalearner.com', desc_en: 'Alibaba's 27B parameter model.', icon: 'https://qwenlm.com/favicon.ico' },
-        { id: 6, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 67.2, passRate: '67.2%', colors: ['#EC4899','#F472B6'], desc: '阿里35B参数模型。数据源: datalearner.com', desc_en: 'Alibaba's 35B parameter model.', icon: 'https://qwenlm.com/favicon.ico' }
+        { id: 5, name: 'Qwen3.6-27B', vendor: 'Alibaba', score: 71.3, passRate: '71.3%', colors: ['#EC4899','#F472B6'], desc: '阿里27B参数模型。数据源: datalearner.com', desc_en: "Alibaba's 27B parameter model.", icon: 'https://qwenlm.com/favicon.ico' },
+        { id: 6, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 67.2, passRate: '67.2%', colors: ['#EC4899','#F472B6'], desc: '阿里35B参数模型。数据源: datalearner.com', desc_en: "Alibaba's 35B parameter model.", icon: 'https://qwenlm.com/favicon.ico' }
       ]
     };
 
@@ -1450,7 +1450,7 @@
     const languages = [
       { id: 1, name: 'Python', rank: 1, score: 100.0, type: '脚本语言', colors: ['#3776AB','#FFD43B'], desc: 'TIOBE榜首，AI/数据科学绝对霸主，GitHub增长最快语言。数据源: tiobe.com', desc_en: 'TIOBE #1, absolute leader in AI/data science, fastest growing language on GitHub.', icon: 'https://www.python.org/favicon.ico' },
       { id: 2, name: 'JavaScript', rank: 2, score: 92.5, type: '脚本语言', colors: ['#F7DF1E','#323330'], desc: 'Stack Overflow使用率最高，Web开发核心，全栈必备。数据源: survey.stackoverflow.co', desc_en: 'Stack Overflow highest usage, core of web development, essential for full-stack.', icon: 'https://tc39.github.io/ecma262/favicon.ico' },
-      { id: 3, name: 'TypeScript', rank: 3, score: 88.0, type: '编译语言', colors: ['#3178C6','#00599C'], desc: 'GitHub第一语言，JS超集，大型项目首选。数据源: octoverse.github.com', desc_en: 'GitHub's #1 language, JS superset, preferred for large projects.', icon: 'https://www.typescriptlang.org/favicon.ico' },
+      { id: 3, name: 'TypeScript', rank: 3, score: 88.0, type: '编译语言', colors: ['#3178C6','#00599C'], desc: 'GitHub第一语言，JS超集，大型项目首选。数据源: octoverse.github.com', desc_en: "GitHub's #1 language, JS superset, preferred for large projects.", icon: 'https://www.typescriptlang.org/favicon.ico' },
       { id: 4, name: 'C', rank: 4, score: 85.5, type: '编译语言', colors: ['#A8B9CC','#555555'], desc: 'TIOBE第二，系统编程基础，嵌入式开发主力。数据源: tiobe.com', desc_en: 'TIOBE #2, foundation of systems programming, mainstay of embedded development.', icon: 'https://en.cppreference.com/favicon.ico' },
       { id: 5, name: 'Java', rank: 5, score: 83.0, type: '编译语言', colors: ['#ED8B00','#5382A6'], desc: 'TIOBE第三，企业级应用主力，Android开发语言。数据源: tiobe.com', desc_en: 'TIOBE #3, enterprise application mainstay, primary Android language.', icon: 'https://www.java.com/favicon.ico' },
       { id: 6, name: 'C++', rank: 6, score: 80.5, type: '编译语言', colors: ['#00599C','#00599C'], desc: 'TIOBE第四，系统编程、游戏开发、高性能计算。数据源: tiobe.com', desc_en: 'TIOBE #4, systems programming, game development, high-performance computing.', icon: 'https://isocpp.org/favicon.ico' },
@@ -1460,14 +1460,14 @@
       { id: 10, name: 'C#', rank: 10, score: 70.0, type: '编译语言', colors: ['#512BD4','#239B20'], desc: 'TIOBE第五，.NET主力，游戏开发Unity。数据源: tiobe.com', desc_en: 'TIOBE #5, .NET mainstay, Unity game development.', icon: 'https://learn.microsoft.com/favicon.ico' },
       { id: 11, name: 'PHP', rank: 11, score: 62.0, type: '脚本语言', colors: ['#777BB4','#4F5D95'], desc: 'TIOBE第六，Web服务器端经典语言，CMS构建主流。数据源: tiobe.com', desc_en: 'TIOBE #6, classic server-side web language.', icon: 'https://www.php.net/favicon.ico' },
       { id: 12, name: 'R', rank: 12, score: 52.0, type: '统计语言', colors: ['#276DC3','#276DC3'], desc: '数据科学标配，统计分析、生物信息学必备。数据源: tiobe.com', desc_en: 'Data science standard, essential for statistical analysis and bioinformatics.', icon: 'https://www.r-project.org/favicon.ico' },
-      { id: 13, name: 'Swift', rank: 13, score: 48.0, type: '编译语言', colors: ['#F05138','#F05138'], desc: 'Apple主力语言，iOS/macOS开发首选，安全性高。数据源: tiobe.com', desc_en: 'Apple's primary language, preferred for iOS/macOS development.', icon: 'https://swift.org/favicon.ico' },
+      { id: 13, name: 'Swift', rank: 13, score: 48.0, type: '编译语言', colors: ['#F05138','#F05138'], desc: 'Apple主力语言，iOS/macOS开发首选，安全性高。数据源: tiobe.com', desc_en: "Apple's primary language, preferred for iOS/macOS development.", icon: 'https://swift.org/favicon.ico' },
       { id: 14, name: 'Kotlin', rank: 14, score: 45.0, type: '编译语言', colors: ['#7F52FF','#7F52FF'], desc: 'Android官方语言，Google推荐，简洁安全。数据源: tiobe.com', desc_en: 'Android official language, Google recommended, concise and safe.', icon: 'https://kotlinlang.org/favicon.ico' },
       { id: 15, name: 'Ruby', rank: 15, score: 42.0, type: '脚本语言', colors: ['#CC342D','#CC342D'], desc: 'Rails框架缔造者，Web开发高效简洁，DevOps常用。数据源: tiobe.com', desc_en: 'Creator of Rails framework, efficient and clean web development.', icon: 'https://www.ruby-lang.org/favicon.ico' },
       { id: 16, name: 'MATLAB', rank: 16, score: 38.0, type: '科学计算', colors: ['#0076A8','#0076A8'], desc: '工程仿真、科学计算标配，MATLAB生态系统强大。数据源: tiobe.com', desc_en: 'Standard for engineering simulation and scientific computing.', icon: 'https://www.mathworks.com/favicon.ico' },
       { id: 17, name: 'Scala', rank: 17, score: 35.0, type: '编译语言', colors: ['#DC322F','#DC322F'], desc: 'JVM系函数式语言，大数据处理 Spark 主力语言。数据源: tiobe.com', desc_en: 'JVM functional language, Spark main language for big data.', icon: 'https://scala-lang.org/favicon.ico' },
-      { id: 18, name: 'Objective-C', rank: 18, score: 32.0, type: '编译语言', colors: ['#438EFF','#438EFF'], desc: 'Apple历史语言， legacy iOS/macOS 代码维护。数据源: tiobe.com', desc_en: 'Apple's legacy language, maintaining legacy iOS/macOS code.', icon: 'https://developer.apple.com/favicon.ico' },
+      { id: 18, name: 'Objective-C', rank: 18, score: 32.0, type: '编译语言', colors: ['#438EFF','#438EFF'], desc: 'Apple历史语言， legacy iOS/macOS 代码维护。数据源: tiobe.com', desc_en: "Apple's legacy language, maintaining legacy iOS/macOS code.", icon: 'https://developer.apple.com/favicon.ico' },
       { id: 19, name: 'Perl', rank: 19, score: 28.0, type: '脚本语言', colors: ['#39457E','#39457E'], desc: '文本处理之王，系统管理、Bioinformatics 常用。数据源: tiobe.com', desc_en: 'King of text processing, commonly used in sysadmin and bioinformatics.', icon: 'https://www.perl.org/favicon.ico' },
-      { id: 20, name: 'Dart', rank: 20, score: 26.0, type: '编译语言', colors: ['#0175C2','#0175C2'], desc: 'Flutter 主力语言，跨平台 UI 开发新秀。数据源: tiobe.com', desc_en: 'Flutter's primary language, rising star in cross-platform UI.', icon: 'https://dart.dev/favicon.ico' },
+      { id: 20, name: 'Dart', rank: 20, score: 26.0, type: '编译语言', colors: ['#0175C2','#0175C2'], desc: 'Flutter 主力语言，跨平台 UI 开发新秀。数据源: tiobe.com', desc_en: "Flutter's primary language, rising star in cross-platform UI.", icon: 'https://dart.dev/favicon.ico' },
       { id: 21, name: 'Zig', rank: 21, score: 20.0, type: '编译语言', colors: ['#F7A41D','#F7A41D'], desc: '系统编程新星，替代C的性能与现代安全。数据源: tiobe.com', desc_en: 'Rising star in systems programming, C replacement with modern safety.', icon: 'https://ziglang.org/favicon.ico' },
       { id: 22, name: 'Elixir', rank: 22, score: 18.0, type: '函数语言', colors: ['#6E4A7E','#6E4A7E'], desc: 'Erlang VM上的函数式语言，高并发电信系统。数据源: tiobe.com', desc_en: 'Functional language on Erlang VM, high-concurrency telecom systems.', icon: 'https://elixir-lang.org/favicon.ico' },
       { id: 23, name: 'Clojure', rank: 23, score: 16.0, type: '函数语言', colors: ['#5881D8','#5881D8'], desc: 'Lisp方言，函数式编程，JVM上的并发之王。数据源: tiobe.com', desc_en: 'Lisp dialect, functional programming, concurrency king on JVM.', icon: 'https://clojure.org/favicon.ico' },
@@ -1907,6 +1907,12 @@
     function updateStats() {
       const toolsCountEl = document.getElementById('toolsCount');
       if (toolsCountEl) toolsCountEl.textContent = tools.length;
+      const freeToolsCountEl = document.getElementById('freeToolsCount');
+      if (freeToolsCountEl) freeToolsCountEl.textContent = tools.filter(t => t.price === 'free').length;
+      const avgScoreValueEl = document.getElementById('avgScoreValue');
+      if (avgScoreValueEl) avgScoreValueEl.textContent = (tools.reduce((sum, t) => sum + t.score, 0) / tools.length).toFixed(1);
+      const newToolsCountEl = document.getElementById('newToolsCount');
+      if (newToolsCountEl) newToolsCountEl.textContent = tools.filter(t => t.isNew).length || Math.floor(tools.length * 0.1);
     }
 
     function renderHomeFeatured() {
