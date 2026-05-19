@@ -1,0 +1,1084 @@
+{
+  "rdbms": [
+    {
+      "id": 1,
+      "name": "Oracle",
+      "vendor": "Oracle",
+      "score": 1143.28,
+      "type": "商业关系型",
+      "colors": [
+        "#F80000",
+        "#F80000"
+      ],
+      "desc": "DB-Engines排行第一，1143.28分，企业级应用最广泛。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/oracle.com"
+    },
+    {
+      "id": 2,
+      "name": "MySQL",
+      "vendor": "Oracle",
+      "score": 856.49,
+      "type": "开源关系型",
+      "colors": [
+        "#00758F",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第二，856.49分，最流行的开源数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/mysql.com"
+    },
+    {
+      "id": 3,
+      "name": "SQL Server",
+      "vendor": "Microsoft",
+      "score": 700.99,
+      "type": "商业关系型",
+      "colors": [
+        "#CC2927",
+        "#0078D4"
+      ],
+      "desc": "DB-Engines第三，700.99分，微软企业级数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/microsoft.com"
+    },
+    {
+      "id": 4,
+      "name": "PostgreSQL",
+      "vendor": "PGDG",
+      "score": 682.68,
+      "type": "开源关系型",
+      "colors": [
+        "#336791",
+        "#336791"
+      ],
+      "desc": "DB-Engines第四，682.68分，功能最强大的开源RDBMS。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/postgresql.org"
+    },
+    {
+      "id": 5,
+      "name": "Snowflake",
+      "vendor": "Snowflake",
+      "score": 215.64,
+      "type": "云数仓",
+      "colors": [
+        "#29B5E8",
+        "#29B5E8"
+      ],
+      "desc": "DB-Engines第六，215.64分，云原生数据仓库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/snowflake.com"
+    },
+    {
+      "id": 6,
+      "name": "IBM Db2",
+      "vendor": "IBM",
+      "score": 113.04,
+      "type": "商业关系型",
+      "colors": [
+        "#0078D4",
+        "#0052A5"
+      ],
+      "desc": "DB-Engines第九，113.04分，企业级数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/ibm.com"
+    },
+    {
+      "id": 7,
+      "name": "SQLite",
+      "vendor": "SQLite Consortium",
+      "score": 95.88,
+      "type": "嵌入式关系型",
+      "colors": [
+        "#003545",
+        "#003545"
+      ],
+      "desc": "DB-Engines第十二，95.88分，轻量级嵌入式数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/sqlite.org"
+    },
+    {
+      "id": 8,
+      "name": "MariaDB",
+      "vendor": "MariaDB",
+      "score": 82.74,
+      "type": "开源关系型",
+      "colors": [
+        "#003545",
+        "#003545"
+      ],
+      "desc": "DB-Engines第十三，82.74分，MySQL兼容开源分支。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/mariadb.org"
+    },
+    {
+      "id": 9,
+      "name": "Apache Hive",
+      "vendor": "Apache",
+      "score": 74.7,
+      "type": "Hadoop数仓",
+      "colors": [
+        "#D4A017",
+        "#D4A017"
+      ],
+      "desc": "DB-Engines第十四，74.70分，Hadoop生态SQL。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/hive.apache.org"
+    },
+    {
+      "id": 10,
+      "name": "Azure SQL Database",
+      "vendor": "Microsoft",
+      "score": 73.34,
+      "type": "云关系型",
+      "colors": [
+        "#0078D4",
+        "#0078D4"
+      ],
+      "desc": "DB-Engines第十五，73.34分，Azure云数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/microsoft.com"
+    },
+    {
+      "id": 11,
+      "name": "Microsoft Access",
+      "vendor": "Microsoft",
+      "score": 62.3,
+      "type": "桌面关系型",
+      "colors": [
+        "#CC2927",
+        "#0078D4"
+      ],
+      "desc": "DB-Engines第十七，62.30分，Office数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/microsoft.com"
+    },
+    {
+      "id": 12,
+      "name": "BigQuery",
+      "vendor": "Google",
+      "score": 50.56,
+      "type": "Serverless数仓",
+      "colors": [
+        "#4285F4",
+        "#34A853"
+      ],
+      "desc": "DB-Engines第十九，50.56分，Google云数仓。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/cloud.google.com"
+    },
+    {
+      "id": 13,
+      "name": "SAP HANA",
+      "vendor": "SAP",
+      "score": 32.43,
+      "type": "内存数据库",
+      "colors": [
+        "#0FAAFF",
+        "#003366"
+      ],
+      "desc": "DB-Engines第二十二，32.43分，SAP内存数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/sap.com"
+    },
+    {
+      "id": 14,
+      "name": "Teradata",
+      "vendor": "Teradata",
+      "score": 30.94,
+      "type": "分析数仓",
+      "colors": [
+        "#FF6B00",
+        "#FF6B00"
+      ],
+      "desc": "DB-Engines第二十三，30.94分，企业级数仓。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/teradata.com"
+    },
+    {
+      "id": 15,
+      "name": "ClickHouse",
+      "vendor": "ClickHouse Inc",
+      "score": 23.49,
+      "type": "OLAP列式",
+      "colors": [
+        "#FFCC00",
+        "#FFCC00"
+      ],
+      "desc": "DB-Engines第二十六，23.49分，OLAP列式数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/clickhouse.com"
+    },
+    {
+      "id": 16,
+      "name": "DuckDB",
+      "vendor": "DuckDB Foundation",
+      "score": 9.59,
+      "type": "嵌入式分析",
+      "colors": [
+        "#00D2FF",
+        "#003366"
+      ],
+      "desc": "DB-Engines第四十二，9.59分，嵌入式分析数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/duckdb.org"
+    },
+    {
+      "id": 17,
+      "name": "Amazon Aurora",
+      "vendor": "AWS",
+      "score": 9.18,
+      "type": "云原生关系型",
+      "colors": [
+        "#FF9900",
+        "#232F3E"
+      ],
+      "desc": "DB-Engines第四十五，9.18分，AWS云原生数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/aws.amazon.com"
+    },
+    {
+      "id": 18,
+      "name": "H2",
+      "vendor": "H2 Database Group",
+      "score": 7.73,
+      "type": "Java嵌入式",
+      "colors": [
+        "#1E3A5F",
+        "#4A90D9"
+      ],
+      "desc": "DB-Engines第五十，7.73分，Java嵌入式数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/h2database.com"
+    }
+  ],
+  "kv": [
+    {
+      "id": 1,
+      "name": "Redis",
+      "vendor": "Redis Ltd",
+      "score": 147.63,
+      "type": "内存键值",
+      "colors": [
+        "#DC382D",
+        "#DC382D"
+      ],
+      "desc": "DB-Engines第八，147.63分，高性能内存键值存储。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/redis.com"
+    },
+    {
+      "id": 2,
+      "name": "DynamoDB",
+      "vendor": "AWS",
+      "score": 60.4,
+      "type": "托管键值",
+      "colors": [
+        "#FF9900",
+        "#232F3E"
+      ],
+      "desc": "DB-Engines第十一，60.40分，AWS全托管Serverless。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/aws.amazon.com"
+    },
+    {
+      "id": 3,
+      "name": "Memcached",
+      "vendor": "Memcached Project",
+      "score": 13.0,
+      "type": "内存缓存",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第三十九，13.00分，简单高效的内存缓存。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/memcached.org"
+    },
+    {
+      "id": 4,
+      "name": "etcd",
+      "vendor": "CNCF",
+      "score": 6.92,
+      "type": "分布式键值",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第五十三，6.92分，Kubernetes底层存储。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/etcd.io"
+    },
+    {
+      "id": 5,
+      "name": "Hazelcast",
+      "vendor": "Hazelcast Inc",
+      "score": 4.47,
+      "type": "内存计算",
+      "colors": [
+        "#00D2FF",
+        "#1E3A5F"
+      ],
+      "desc": "DB-Engines第六十八，4.47分，分布式内存计算平台。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/hazelcast.com"
+    },
+    {
+      "id": 6,
+      "name": "RocksDB",
+      "vendor": "Meta",
+      "score": 3.5,
+      "type": "嵌入式键值",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第七十六，3.50分，Facebook开源嵌入式KV。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/rocksdb.org"
+    },
+    {
+      "id": 7,
+      "name": "Riak KV",
+      "vendor": "Basho",
+      "score": 3.11,
+      "type": "分布式键值",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第九十，3.11分，高可用分布式KV。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/riak.com"
+    },
+    {
+      "id": 8,
+      "name": "Ehcache",
+      "vendor": "Apache",
+      "score": 2.97,
+      "type": "Java缓存",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第九十一，2.97分，Java缓存框架。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/ehcache.org"
+    }
+  ],
+  "document": [
+    {
+      "id": 1,
+      "name": "MongoDB",
+      "vendor": "MongoDB Inc",
+      "score": 384.65,
+      "type": "文档数据库",
+      "colors": [
+        "#02303A",
+        "#47A248"
+      ],
+      "desc": "DB-Engines第五，384.65分，最流行的文档数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/mongodb.com"
+    },
+    {
+      "id": 2,
+      "name": "Firebase Realtime Database",
+      "vendor": "Google",
+      "score": 15.01,
+      "type": "实时文档",
+      "colors": [
+        "#FF8C00",
+        "#FF8C00"
+      ],
+      "desc": "DB-Engines第三十六，15.01分，Firebase实时数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/google.com"
+    },
+    {
+      "id": 3,
+      "name": "Cloud Firestore",
+      "vendor": "Google",
+      "score": 9.48,
+      "type": "云文档",
+      "colors": [
+        "#4285F4",
+        "#34A853"
+      ],
+      "desc": "DB-Engines第四十三，9.48分，Google云文档数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/google.com"
+    },
+    {
+      "id": 4,
+      "name": "Realm",
+      "vendor": "MongoDB",
+      "score": 6.42,
+      "type": "移动文档",
+      "colors": [
+        "#02303A",
+        "#47A248"
+      ],
+      "desc": "DB-Engines第五十五，6.42分，移动端专用文档数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/mongodb.com"
+    },
+    {
+      "id": 5,
+      "name": "CouchDB",
+      "vendor": "Apache",
+      "score": 5.84,
+      "type": "文档数据库",
+      "colors": [
+        "#E48213",
+        "#E48213"
+      ],
+      "desc": "DB-Engines第六十二，5.84分，Apache文档数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/couchdb.apache.org"
+    },
+    {
+      "id": 6,
+      "name": "Couchbase",
+      "vendor": "Couchbase Inc",
+      "score": 5.65,
+      "type": "文档数据库",
+      "colors": [
+        "#1E3A5F",
+        "#1E3A5F"
+      ],
+      "desc": "DB-Engines第六十四，5.65分，高性能文档数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/couchbase.com"
+    },
+    {
+      "id": 7,
+      "name": "Google Cloud Datastore",
+      "vendor": "Google",
+      "score": 3.46,
+      "type": "托管文档",
+      "colors": [
+        "#4285F4",
+        "#34A853"
+      ],
+      "desc": "DB-Engines第七十八，3.46分，Google云文档存储。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/google.com"
+    },
+    {
+      "id": 8,
+      "name": "IBM Cloudant",
+      "vendor": "IBM",
+      "score": 2.44,
+      "type": "托管文档",
+      "colors": [
+        "#0078D4",
+        "#0052A5"
+      ],
+      "desc": "DB-Engines第一百零七，2.44分，IBM托管文档数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/ibm.com"
+    },
+    {
+      "id": 9,
+      "name": "RavenDB",
+      "vendor": "RavenDB",
+      "score": 2.29,
+      "type": "文档数据库",
+      "colors": [
+        "#F7941D",
+        "#F7941D"
+      ],
+      "desc": "DB-Engines第一百一十二，2.29分，.NET原生文档数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/ravendb.net"
+    },
+    {
+      "id": 10,
+      "name": "Amazon DocumentDB",
+      "vendor": "AWS",
+      "score": 1.89,
+      "type": "托管文档",
+      "colors": [
+        "#FF9900",
+        "#232F3E"
+      ],
+      "desc": "DB-Engines第一百二十八，1.89分，AWS托管MongoDB兼容。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/aws.amazon.com"
+    }
+  ],
+  "timeseries": [
+    {
+      "id": 1,
+      "name": "InfluxDB",
+      "vendor": "InfluxData",
+      "score": 20.86,
+      "type": "时序数据库",
+      "colors": [
+        "#0182FE",
+        "#0182FE"
+      ],
+      "desc": "DB-Engines第三十，20.86分，时序数据库首选。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/influxdata.com"
+    },
+    {
+      "id": 2,
+      "name": "Prometheus",
+      "vendor": "CNCF",
+      "score": 9.06,
+      "type": "监控时序",
+      "colors": [
+        "#E6522C",
+        "#E6522C"
+      ],
+      "desc": "DB-Engines第四十六，9.06分，云原生监控事实标准。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/prometheus.io"
+    },
+    {
+      "id": 3,
+      "name": "TimescaleDB",
+      "vendor": "Timescale",
+      "score": 5.62,
+      "type": "时序PG扩展",
+      "colors": [
+        "#0182FE",
+        "#0182FE"
+      ],
+      "desc": "DB-Engines第六十三，5.62分，PostgreSQL时序扩展。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/timescale.com"
+    },
+    {
+      "id": 4,
+      "name": "Graphite",
+      "vendor": "Graphite Project",
+      "score": 4.82,
+      "type": "监控时序",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第六十六，4.82分，监控指标存储。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/graphiteapp.org"
+    },
+    {
+      "id": 5,
+      "name": "QuestDB",
+      "vendor": "QuestDB",
+      "score": 3.59,
+      "type": "高性能时序",
+      "colors": [
+        "#0182FE",
+        "#0182FE"
+      ],
+      "desc": "DB-Engines第七十五，3.59分，超高性能时序数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/questdb.io"
+    },
+    {
+      "id": 6,
+      "name": "TDengine",
+      "vendor": "TDengine",
+      "score": 2.74,
+      "type": "工业时序",
+      "colors": [
+        "#00D2FF",
+        "#003366"
+      ],
+      "desc": "DB-Engines第九十八，2.74分，国产工业时序数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/taosdata.com"
+    },
+    {
+      "id": 7,
+      "name": "Apache IoTDB",
+      "vendor": "Apache",
+      "score": 1.64,
+      "type": "IoT时序",
+      "colors": [
+        "#D4A017",
+        "#D4A017"
+      ],
+      "desc": "DB-Engines第一百三十九，1.64分，Apache物联网时序数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/iotdb.apache.org"
+    },
+    {
+      "id": 8,
+      "name": "Amazon Timestream",
+      "vendor": "AWS",
+      "score": 1.28,
+      "type": "托管时序",
+      "colors": [
+        "#FF9900",
+        "#232F3E"
+      ],
+      "desc": "DB-Engines第一百六十四，1.28分，AWS托管时序数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/aws.amazon.com"
+    }
+  ],
+  "vector": [
+    {
+      "id": 1,
+      "name": "Pinecone",
+      "vendor": "Pinecone Systems",
+      "score": 8.33,
+      "type": "云向量",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第四十八，8.33分，云原生向量数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/pinecone.io"
+    },
+    {
+      "id": 2,
+      "name": "Milvus",
+      "vendor": "Zilliz",
+      "score": 6.33,
+      "type": "开源向量",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第五十六，6.33分，开源向量数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/milvus.io"
+    },
+    {
+      "id": 3,
+      "name": "Qdrant",
+      "vendor": "Qdrant Team",
+      "score": 5.16,
+      "type": "开源向量",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第六十五，5.16分，Rust高性能向量搜索。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/qdrant.tech"
+    },
+    {
+      "id": 4,
+      "name": "Weaviate",
+      "vendor": "Weaviate",
+      "score": 4.24,
+      "type": "开源向量",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第七十，4.24分，向量搜索引擎。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/weaviate.io"
+    },
+    {
+      "id": 5,
+      "name": "Chroma",
+      "vendor": "Chroma Team",
+      "score": 2.89,
+      "type": "嵌入向量",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第九十二，2.89分，LLM友好向量数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/trychroma.com"
+    },
+    {
+      "id": 6,
+      "name": "Elasticsearch",
+      "vendor": "Elastic",
+      "score": 2.35,
+      "type": "向量搜索",
+      "colors": [
+        "#005571",
+        "#F4D03F"
+      ],
+      "desc": "DB-Engines第一百零六，2.35分，Elasticsearch向量搜索。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/elastic.co"
+    }
+  ],
+  "graph": [
+    {
+      "id": 1,
+      "name": "Neo4j",
+      "vendor": "Neo4j Inc",
+      "score": 47.59,
+      "type": "图数据库",
+      "colors": [
+        "#008496",
+        "#008496"
+      ],
+      "desc": "DB-Engines第二十，47.59分，图数据库领导者。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/neo4j.com"
+    },
+    {
+      "id": 2,
+      "name": "NebulaGraph",
+      "vendor": "Vesoft",
+      "score": 1.93,
+      "type": "分布式图",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第一百二十四，1.93分，国产高性能图数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/vesoft.com"
+    },
+    {
+      "id": 3,
+      "name": "JanusGraph",
+      "vendor": "JanusGraph",
+      "score": 1.86,
+      "type": "分布式图",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第一百三十一，1.86分，Apache图数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/janusgraph.org"
+    },
+    {
+      "id": 4,
+      "name": "TigerGraph",
+      "vendor": "TigerGraph",
+      "score": 1.86,
+      "type": "分布式图",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第一百三十二，1.86分，高性能图数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/tigergraph.com"
+    },
+    {
+      "id": 5,
+      "name": "Memgraph",
+      "vendor": "Memgraph",
+      "score": 1.69,
+      "type": "实时图",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第一百三十七，1.69分，实时图数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/memgraph.com"
+    },
+    {
+      "id": 6,
+      "name": "Dgraph",
+      "vendor": "Dgraph Labs",
+      "score": 1.27,
+      "type": "分布式图",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第一百六十五，1.27分，分布式图数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/dgraph.io"
+    },
+    {
+      "id": 7,
+      "name": "ArangoDB",
+      "vendor": "ArangoDB Inc",
+      "score": 1.08,
+      "type": "多模图",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第一百八十，1.08分，原生多模数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/arangodb.com"
+    },
+    {
+      "id": 8,
+      "name": "Amazon Neptune",
+      "vendor": "AWS",
+      "score": 0.95,
+      "type": "托管图",
+      "colors": [
+        "#FF9900",
+        "#232F3E"
+      ],
+      "desc": "DB-Engines第二百，0.95分，AWS托管图数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/aws.amazon.com"
+    }
+  ],
+  "wideColumn": [
+    {
+      "id": 1,
+      "name": "Apache HBase",
+      "vendor": "Apache",
+      "score": 19.76,
+      "type": "列式NoSQL",
+      "colors": [
+        "#00ACE0",
+        "#00ACE0"
+      ],
+      "desc": "DB-Engines第三十二，19.76分，Hadoop生态NoSQL。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/hbase.apache.org"
+    },
+    {
+      "id": 2,
+      "name": "Apache Cassandra",
+      "vendor": "Apache",
+      "score": 18.45,
+      "type": "列式分布",
+      "colors": [
+        "#1287B1",
+        "#1287B1"
+      ],
+      "desc": "DB-Engines第三十四，18.45分，高可用分布式数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/cassandra.apache.org"
+    },
+    {
+      "id": 3,
+      "name": "ScyllaDB",
+      "vendor": "ScyllaDB",
+      "score": 4.45,
+      "type": "Cassandra兼容",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第六十九，4.45分，C++高性能Cassandra兼容。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/scylladb.com"
+    },
+    {
+      "id": 4,
+      "name": "DataStax Enterprise",
+      "vendor": "DataStax",
+      "score": 3.23,
+      "type": "Cassandra发行版",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第八十六，3.23分，DataStax Cassandra企业版。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/datastax.com"
+    },
+    {
+      "id": 5,
+      "name": "Azure Table Storage",
+      "vendor": "Microsoft",
+      "score": 2.78,
+      "type": "托管宽列",
+      "colors": [
+        "#0078D4",
+        "#0078D4"
+      ],
+      "desc": "DB-Engines第九十六，2.78分，Azure表存储。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/azure.microsoft.com"
+    },
+    {
+      "id": 6,
+      "name": "Apache Accumulo",
+      "vendor": "Apache",
+      "score": 2.42,
+      "type": "安全列式",
+      "colors": [
+        "#D4A017",
+        "#D4A017"
+      ],
+      "desc": "DB-Engines第一百零八，2.42分，Apache安全列式数据库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/accumulo.apache.org"
+    },
+    {
+      "id": 7,
+      "name": "Google Bigtable",
+      "vendor": "Google",
+      "score": 1.85,
+      "type": "列式存储",
+      "colors": [
+        "#4285F4",
+        "#34A853"
+      ],
+      "desc": "DB-Engines第一百三十五，1.85分，Google内部列式存储。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/google.com"
+    }
+  ],
+  "search": [
+    {
+      "id": 1,
+      "name": "Splunk",
+      "vendor": "Splunk Inc",
+      "score": 72.42,
+      "type": "搜索分析",
+      "colors": [
+        "#00E79A",
+        "#00E79A"
+      ],
+      "desc": "DB-Engines第十六，72.42分，机器数据分析平台。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/splunk.com"
+    },
+    {
+      "id": 2,
+      "name": "Apache Solr",
+      "vendor": "Apache",
+      "score": 32.52,
+      "type": "搜索引擎",
+      "colors": [
+        "#F7931E",
+        "#F7931E"
+      ],
+      "desc": "DB-Engines第二十一，32.52分，Apache全文搜索。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/solr.apache.org"
+    },
+    {
+      "id": 3,
+      "name": "Algolia",
+      "vendor": "Algolia Inc",
+      "score": 6.74,
+      "type": "搜索API",
+      "colors": [
+        "#5468FF",
+        "#5468FF"
+      ],
+      "desc": "DB-Engines第五十四，6.74分，搜索即服务API。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/algolia.com"
+    },
+    {
+      "id": 4,
+      "name": "Azure AI Search",
+      "vendor": "Microsoft",
+      "score": 6.29,
+      "type": "云搜索",
+      "colors": [
+        "#0078D4",
+        "#0078D4"
+      ],
+      "desc": "DB-Engines第五十七，6.29分，Azure认知搜索。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/azure.microsoft.com"
+    },
+    {
+      "id": 5,
+      "name": "Sphinx",
+      "vendor": "Sphinx Search",
+      "score": 5.93,
+      "type": "全文搜索",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第六十一，5.93分，SQL全文搜索引警。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/sphinxsearch.com"
+    },
+    {
+      "id": 6,
+      "name": "Meilisearch",
+      "vendor": "Meilisearch",
+      "score": 2.65,
+      "type": "开源搜索",
+      "colors": [
+        "#FF8C00",
+        "#FF8C00"
+      ],
+      "desc": "DB-Engines第九十九，2.65分，Rust高性能搜索。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/meilisearch.com"
+    },
+    {
+      "id": 7,
+      "name": "Typesense",
+      "vendor": "Typesense",
+      "score": 1.52,
+      "type": "开源搜索",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第一百四十二，1.52分，容错搜索引警。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/typesense.com"
+    }
+  ],
+  "bigdata": [
+    {
+      "id": 1,
+      "name": "Snowflake",
+      "vendor": "Snowflake",
+      "score": 215.64,
+      "type": "云数仓",
+      "colors": [
+        "#29B5E8",
+        "#29B5E8"
+      ],
+      "desc": "DB-Engines第六，215.64分，云原生数据仓库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/snowflake.com"
+    },
+    {
+      "id": 2,
+      "name": "Databricks",
+      "vendor": "Databricks",
+      "score": 151.79,
+      "type": "Lakehouse",
+      "colors": [
+        "#FF3621",
+        "#FF3621"
+      ],
+      "desc": "DB-Engines第八，151.79分，Lakehouse平台。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/databricks.com"
+    },
+    {
+      "id": 3,
+      "name": "Elasticsearch",
+      "vendor": "Elastic",
+      "score": 96.02,
+      "type": "搜索引擎",
+      "colors": [
+        "#005571",
+        "#F4D03F"
+      ],
+      "desc": "DB-Engines第十，96.02分，Elastic Stack核心。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/elastic.co"
+    },
+    {
+      "id": 4,
+      "name": "Apache Hive",
+      "vendor": "Apache",
+      "score": 74.7,
+      "type": "Hadoop数仓",
+      "colors": [
+        "#D4A017",
+        "#D4A017"
+      ],
+      "desc": "DB-Engines第十四，74.70分，Hadoop数据仓库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/hive.apache.org"
+    },
+    {
+      "id": 5,
+      "name": "BigQuery",
+      "vendor": "Google",
+      "score": 50.56,
+      "type": "Serverless数仓",
+      "colors": [
+        "#4285F4",
+        "#34A853"
+      ],
+      "desc": "DB-Engines第十九，50.56分，Google Serverless数仓。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/google.com"
+    },
+    {
+      "id": 6,
+      "name": "Amazon Redshift",
+      "vendor": "AWS",
+      "score": 14.36,
+      "type": "云数仓",
+      "colors": [
+        "#FF9900",
+        "#232F3E"
+      ],
+      "desc": "DB-Engines第四十，14.36分，AWS数据仓库。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/aws.amazon.com"
+    },
+    {
+      "id": 7,
+      "name": "Azure Synapse",
+      "vendor": "Microsoft",
+      "score": 16.79,
+      "type": "分析平台",
+      "colors": [
+        "#0078D4",
+        "#0078D4"
+      ],
+      "desc": "DB-Engines第三十七，16.79分，Azure统一分析平台。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/azure.microsoft.com"
+    },
+    {
+      "id": 8,
+      "name": "Firebolt",
+      "vendor": "Firebolt",
+      "score": 3.85,
+      "type": "分析数仓",
+      "colors": [
+        "#FFD43B",
+        "#1E3A5F"
+      ],
+      "desc": "DB-Engines第七十三，3.85分，新一代云分析数仓。数据源: db-engines.com",
+      "icon": "https://logo.clearbit.com/firebolt.io"
+    },
+    {
+      "id": 9,
+      "name": "Dremio",
+      "vendor": "Dremio",
+      "score": 3.42,
+      "type": "数据湖",
+      "colors": [
+        "#5E5E5E",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第七十七，3.42分，开源数据湖引擎。数据源: db-engines.com"
+    },
+    {
+      "id": 10,
+      "name": "StarRocks",
+      "vendor": "StarRocks",
+      "score": 2.58,
+      "type": "OLAP引擎",
+      "colors": [
+        "#00D2FF",
+        "#003366"
+      ],
+      "desc": "DB-Engines第一百零二，2.58分，国产高性能OLAP。数据源: db-engines.com"
+    }
+  ]
+}

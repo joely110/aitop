@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -971,6 +971,21 @@
   </style>
 </head>
 <body>
+  <!-- Cookie Consent Banner -->
+  <div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1E293B;color:#F8FAFC;padding:16px;z-index:9999;text-align:center;font-size:14px;">
+    <span>🍪 我们使用Cookie来改善用户体验和展示相关广告。</span>
+    <a href="javascript:void(0)" onclick="acceptCookies()" style="background:#6366F1;color:white;padding:8px 16px;border-radius:6px;text-decoration:none;margin-left:16px;font-weight:500;">接受</a>
+    <a href="javascript:void(0)" onclick="showPrivacy()" style="color:#94A3B8;margin-left:12px;text-decoration:underline;">了解更多</a>
+  </div>
+  <script>
+    if (!localStorage.getItem('cookiesAccepted')) {
+      document.getElementById('cookieConsent').style.display = 'block';
+    }
+    function acceptCookies() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookieConsent').style.display = 'none';
+    }
+  </script>
   <header>
     <div class="container header-inner">
       <a href="#" class="logo">
@@ -1378,203 +1393,203 @@
     // - 数据库: DB-Engines 2026年5月真实评分排行
 
     const tools = [
-      { id: 1, name: 'Cursor', vendor: 'Anthropic / Cursor', score: 9.5, price: 'freemium', colors: ['#7C3AED','#A78BFA'], tags: ['AI原生', '代码生成', '智能补全'], desc: '2026年最受欢迎的AI代码编辑器，基于Claude 3.5 Sonnet，多行预测和智能重构能力最强。', desc_en: 'The most popular AI code editor in 2026, powered by Claude 3.5 Sonnet, with best-in-class multi-line prediction and intelligent refactoring.', website: 'https://cursor.com', icon: 'https://cursor.com/favicon.ico' },
-      { id: 2, name: 'GitHub Copilot', vendor: 'Microsoft', score: 9.2, price: 'paid', colors: ['#6E40C9','#A855F7'], tags: ['代码补全', '多语言', 'IDE集成'], desc: '业界最成熟的AI编程助手，市场占用率第一，与VS Code深度集成。', desc_en: 'The most mature AI coding assistant in the industry, #1 market share, deep integration with VS Code.', website: 'https://github.com/features/copilot', icon: 'https://github.githubassets.com/favicons/favicon.svg' },
-      { id: 3, name: 'Claude Code', vendor: 'Anthropic', score: 9.4, price: 'paid', colors: ['#D97706','#F59E0B'], tags: ['命令行', '深度理解', '代码审查'], desc: 'Anthropic官方CLI工具，代码审查和复杂任务处理能力出众，支持直接操作文件系统。', desc_en: "Anthropic's official CLI tool, excels at code review and complex task handling, with direct file system access.", website: 'https://claude.ai/code', icon: 'https://assets.anthropic.com/favicons/favicon.ico' },
-      { id: 4, name: 'Windsurf', vendor: 'Codeium', score: 8.6, price: 'freemium', colors: ['#059669','#10B981'], tags: ['Flow AI', '免费额度大', '轻量'], desc: 'Codeium出品，提供大量免费额度，Flow AI功能覆盖常见编程场景。', desc_en: 'By Codeium, offers generous free tier, Flow AI covers common programming scenarios.', website: 'https://windsurf.com', icon: 'https://windsurf.com/favicon.ico' },
-      { id: 5, name: 'JetBrains AI', vendor: 'JetBrains', score: 8.5, price: 'paid', colors: ['#F97316','#FB923C'], tags: ['IDE深度集成', '代码重构', '文档生成'], desc: '与IntelliJ等JetBrains IDE原生集成，适合已经使用JetBrains产品的开发者。', desc_en: 'Natively integrated with IntelliJ and JetBrains IDEs, ideal for developers already using JetBrains products.', website: 'https://www.jetbrains.com/ai/', icon: 'https://www.jetbrains.com/favicon.ico' },
-      { id: 6, name: 'Tabnine', vendor: 'Tabnine', score: 8.3, price: 'freemium', colors: ['#2563EB','#3B82F6'], tags: ['本地部署', '隐私保护', '快速补全'], desc: '支持本地运行的AI代码补全工具，数据全程本地处理，隐私保护优秀。', desc_en: 'AI code completion tool supporting local deployment, all data processed locally with excellent privacy protection.', website: 'https://tabnine.com', icon: 'https://tabnine.com/favicon.ico' },
-      { id: 7, name: 'Replit Agent', vendor: 'Replit', score: 8.4, price: 'paid', colors: ['#8B5CF6','#A78BFA'], tags: ['端到端', '快速部署', '云端'], desc: '能自主完成整个项目开发流程，从需求到部署一键完成，云端开发体验流畅。', desc_en: 'Autonomously handles entire project development workflow, from requirements to deployment in one click.', website: 'https://replit.com/agent', icon: 'https://replit.com/favicon.ico' },
-      { id: 8, name: 'Cody', vendor: 'Sourcegraph', score: 8.2, price: 'freemium', colors: ['#0EA5E9','#38BDF8'], tags: ['代码库理解', '语义搜索', '代码导航'], desc: '基于代码库语义的AI助手，代码理解和导航能力强大，适合大型代码库。', desc_en: 'By Sourcegraph, AI assistant based on codebase semantics, powerful code understanding for large codebases.', website: 'https://sourcegraph.com/cody', icon: 'https://sourcegraph.com/favicon.ico' },
-      { id: 9, name: 'Amazon CodeWhisperer', vendor: 'Amazon', score: 8.0, price: 'free', colors: ['#F59E0B','#FBBF24'], tags: ['AWS集成', '安全扫描', '免费'], desc: '亚马逊出品，与AWS服务深度集成，提供代码安全扫描，个人用户免费。', desc_en: 'By Amazon, deep integration with AWS services, provides code security scanning, free for individual users.', website: 'https://aws.amazon.com/codewhisperer/', icon: 'https://aws.amazon.com/favicon.ico' },
-      { id: 10, name: 'CodeRabbit', vendor: 'CodeRabbit', score: 8.1, price: 'freemium', colors: ['#EC4899','#F472B6'], tags: ['PR审查', '代码优化', '自动化'], desc: '专注于代码审查和PR自动化的AI工具，PR审查体验业界领先。', desc_en: 'AI tool focused on code review and PR automation, industry-leading PR review experience.', website: 'https://coderabbit.ai', icon: 'https://coderabbit.ai/favicon.ico' },
-      { id: 11, name: 'Supermaven', vendor: 'Supermaven', score: 8.4, price: 'paid', colors: ['#10B981','#34D399'], tags: ['超快补全', '低延迟', '智能'], desc: '以超低延迟著称的AI代码补全工具，补全速度业界最快，适合追求效率的开发者。', desc_en: 'AI code completion tool known for ultra-low latency, fastest completion speed in the industry.', website: 'https://supermaven.com', icon: 'https://supermaven.com/favicon.ico' },
-      { id: 12, name: 'Phind', vendor: 'Phind', score: 7.9, price: 'free', colors: ['#6366F1','#818CF8'], tags: ['搜索引擎', '编程问答', '免费'], desc: 'AI编程搜索引擎，专注于解答编程问题，完全免费使用。', desc_en: 'AI programming search engine focused on answering coding questions, completely free to use.', website: 'https://phind.com', icon: 'https://phind.com/favicon.ico' },
-      { id: 13, name: 'Blackbox AI', vendor: 'Blackbox', score: 7.8, price: 'freemium', colors: ['#1E293B','#334155'], tags: ['代码提取', '多语言', 'API集成'], desc: '能理解并提取GitHub代码的AI工具，支持代码片段搜索和API集成。', desc_en: 'AI tool that understands and extracts GitHub code, supports code snippet search and API integration.', website: 'https://www.blackbox.ai', icon: 'https://www.blackbox.ai/favicon.ico' },
-      { id: 14, name: 'Aider', vendor: 'Aider', score: 7.6, price: 'free', colors: ['#059669','#10B981'], tags: ['开源', '命令行', '多语言'], desc: '开源AI编程助手，支持多语言，命令行友好，适合远程开发。', desc_en: 'Open-source AI coding assistant, multi-language support, CLI-friendly, great for remote development.', website: 'https://aider.chat', icon: 'https://aider.chat/favicon.ico' },
-      { id: 15, name: 'Continue', vendor: 'Continue', score: 7.7, price: 'free', colors: ['#8B5CF6','#A78BFA'], tags: ['开源', 'VS Code', '本地'], desc: '开源的AI代码助手，VS Code和JetBrains扩展，支持本地部署和自定义模型。', desc_en: 'Open-source AI code assistant, VS Code and JetBrains extensions, supports local deployment and custom models.', website: 'https://continue.dev', icon: 'https://continue.dev/favicon.ico' },
-      { id: 16, name: 'Devin', vendor: 'Cognition', score: 8.0, price: 'paid', colors: ['#6366F1','#818CF8'], tags: ['自主编码', '端到端', '软件工程师'], desc: 'AI软件工程师，可以独立完成整个项目开发和调试。', desc_en: 'AI software engineer that can independently complete entire project development and debugging.', website: 'https://devin.ai', icon: 'https://devin.ai/favicon.ico' },
-      { id: 17, name: 'SWE-agent', vendor: '普林斯顿SNP', score: 7.8, price: 'free', colors: ['#0EA5E9','#38BDF8'], tags: ['开源', 'SWE-bench', '学术'], desc: '普林斯顿开源SWE-bench测试Agent，性能优秀。', desc_en: 'Princeton\'s open-source SWE-bench testing agent with excellent performance.', website: 'https://github.com/princeton-nlp/SWE-agent', icon: 'https://github.githubassets.com/favicons/favicon.svg' },
-      { id: 18, name: 'Fmemo', vendor: 'Fmemo', score: 7.5, price: 'free', colors: ['#EC4899','#F472B6'], tags: ['中文', '国内', '代码补全'], desc: '中文AI代码助手，专注中文开发者群体。', desc_en: 'Chinese AI code assistant focused on Chinese developer community.', website: 'https://fmemo.ai', icon: 'https://fmemo.ai/favicon.ico' },
-      { id: 19, name: 'CodeGeex', vendor: 'AI21', score: 7.4, price: 'freemium', colors: ['#F97316','#FB923C'], tags: ['多语言', '代码生成', 'IDE插件'], desc: 'AI21出品的代码生成工具，支持多种IDE。', desc_en: 'By AI21, code generation tool supporting multiple IDEs.', website: 'https://codegeex.ai', icon: 'https://codegeex.ai/favicon.ico' },
-      { id: 20, name: 'Junie', vendor: 'JetBrains', score: 7.3, price: 'paid', colors: ['#F97316','#FB923C'], tags: ['IDE集成', '企业级', '代码分析'], desc: 'JetBrains最新AI编码助手，深度集成IDE。', desc_en: 'JetBrains\' latest AI coding assistant, deeply integrated with IDE.', website: 'https://www.jetbrains.com/junie/', icon: 'https://www.jetbrains.com/favicon.ico' }
+      { id: 1, name: 'Cursor', vendor: 'Anthropic / Cursor', score: 9.5, price: 'freemium', colors: ['#7C3AED','#A78BFA'], tags: ['AI原生', '代码生成', '智能补全'], desc: '2026年最受欢迎的AI代码编辑器，基于Claude 3.5 Sonnet，多行预测和智能重构能力最强。', desc_en: 'The most popular AI code editor in 2026, powered by Claude 3.5 Sonnet, with best-in-class multi-line prediction and intelligent refactoring.', website: 'https://cursor.com', icon: 'https://logo.clearbit.com/cursor.com' },
+      { id: 2, name: 'GitHub Copilot', vendor: 'Microsoft', score: 9.2, price: 'paid', colors: ['#6E40C9','#A855F7'], tags: ['代码补全', '多语言', 'IDE集成'], desc: '业界最成熟的AI编程助手，市场占用率第一，与VS Code深度集成。', desc_en: 'The most mature AI coding assistant in the industry, #1 market share, deep integration with VS Code.', website: 'https://github.com/features/copilot', icon: 'https://logo.clearbit.com/microsoft.com' },
+      { id: 3, name: 'Claude Code', vendor: 'Anthropic', score: 9.4, price: 'paid', colors: ['#D97706','#F59E0B'], tags: ['命令行', '深度理解', '代码审查'], desc: 'Anthropic官方CLI工具，代码审查和复杂任务处理能力出众，支持直接操作文件系统。', desc_en: "Anthropic's official CLI tool, excels at code review and complex task handling, with direct file system access.", website: 'https://claude.ai/code', icon: 'https://logo.clearbit.com/assets.anthropic.com' },
+      { id: 4, name: 'Windsurf', vendor: 'Codeium', score: 8.6, price: 'freemium', colors: ['#059669','#10B981'], tags: ['Flow AI', '免费额度大', '轻量'], desc: 'Codeium出品，提供大量免费额度，Flow AI功能覆盖常见编程场景。', desc_en: 'By Codeium, offers generous free tier, Flow AI covers common programming scenarios.', website: 'https://windsurf.com', icon: 'https://logo.clearbit.com/windsurf.com' },
+      { id: 5, name: 'JetBrains AI', vendor: 'JetBrains', score: 8.5, price: 'paid', colors: ['#F97316','#FB923C'], tags: ['IDE深度集成', '代码重构', '文档生成'], desc: '与IntelliJ等JetBrains IDE原生集成，适合已经使用JetBrains产品的开发者。', desc_en: 'Natively integrated with IntelliJ and JetBrains IDEs, ideal for developers already using JetBrains products.', website: 'https://www.jetbrains.com/ai/', icon: 'https://logo.clearbit.com/jetbrains.com' },
+      { id: 6, name: 'Tabnine', vendor: 'Tabnine', score: 8.3, price: 'freemium', colors: ['#2563EB','#3B82F6'], tags: ['本地部署', '隐私保护', '快速补全'], desc: '支持本地运行的AI代码补全工具，数据全程本地处理，隐私保护优秀。', desc_en: 'AI code completion tool supporting local deployment, all data processed locally with excellent privacy protection.', website: 'https://tabnine.com', icon: 'https://logo.clearbit.com/tabnine.com' },
+      { id: 7, name: 'Replit Agent', vendor: 'Replit', score: 8.4, price: 'paid', colors: ['#8B5CF6','#A78BFA'], tags: ['端到端', '快速部署', '云端'], desc: '能自主完成整个项目开发流程，从需求到部署一键完成，云端开发体验流畅。', desc_en: 'Autonomously handles entire project development workflow, from requirements to deployment in one click.', website: 'https://replit.com/agent', icon: 'https://logo.clearbit.com/replit.com' },
+      { id: 8, name: 'Cody', vendor: 'Sourcegraph', score: 8.2, price: 'freemium', colors: ['#0EA5E9','#38BDF8'], tags: ['代码库理解', '语义搜索', '代码导航'], desc: '基于代码库语义的AI助手，代码理解和导航能力强大，适合大型代码库。', desc_en: 'By Sourcegraph, AI assistant based on codebase semantics, powerful code understanding for large codebases.', website: 'https://sourcegraph.com/cody', icon: 'https://logo.clearbit.com/sourcegraph.com' },
+      { id: 9, name: 'Amazon CodeWhisperer', vendor: 'Amazon', score: 8.0, price: 'free', colors: ['#F59E0B','#FBBF24'], tags: ['AWS集成', '安全扫描', '免费'], desc: '亚马逊出品，与AWS服务深度集成，提供代码安全扫描，个人用户免费。', desc_en: 'By Amazon, deep integration with AWS services, provides code security scanning, free for individual users.', website: 'https://aws.amazon.com/codewhisperer/', icon: 'https://logo.clearbit.com/aws.amazon.com' },
+      { id: 10, name: 'CodeRabbit', vendor: 'CodeRabbit', score: 8.1, price: 'freemium', colors: ['#EC4899','#F472B6'], tags: ['PR审查', '代码优化', '自动化'], desc: '专注于代码审查和PR自动化的AI工具，PR审查体验业界领先。', desc_en: 'AI tool focused on code review and PR automation, industry-leading PR review experience.', website: 'https://coderabbit.ai', icon: 'https://logo.clearbit.com/coderabbit.ai' },
+      { id: 11, name: 'Supermaven', vendor: 'Supermaven', score: 8.4, price: 'paid', colors: ['#10B981','#34D399'], tags: ['超快补全', '低延迟', '智能'], desc: '以超低延迟著称的AI代码补全工具，补全速度业界最快，适合追求效率的开发者。', desc_en: 'AI code completion tool known for ultra-low latency, fastest completion speed in the industry.', website: 'https://supermaven.com', icon: 'https://logo.clearbit.com/supermaven.com' },
+      { id: 12, name: 'Phind', vendor: 'Phind', score: 7.9, price: 'free', colors: ['#6366F1','#818CF8'], tags: ['搜索引擎', '编程问答', '免费'], desc: 'AI编程搜索引擎，专注于解答编程问题，完全免费使用。', desc_en: 'AI programming search engine focused on answering coding questions, completely free to use.', website: 'https://phind.com', icon: 'https://logo.clearbit.com/phind.com' },
+      { id: 13, name: 'Blackbox AI', vendor: 'Blackbox', score: 7.8, price: 'freemium', colors: ['#1E293B','#334155'], tags: ['代码提取', '多语言', 'API集成'], desc: '能理解并提取GitHub代码的AI工具，支持代码片段搜索和API集成。', desc_en: 'AI tool that understands and extracts GitHub code, supports code snippet search and API integration.', website: 'https://www.blackbox.ai', icon: 'https://logo.clearbit.com/blackbox.ai' },
+      { id: 14, name: 'Aider', vendor: 'Aider', score: 7.6, price: 'free', colors: ['#059669','#10B981'], tags: ['开源', '命令行', '多语言'], desc: '开源AI编程助手，支持多语言，命令行友好，适合远程开发。', desc_en: 'Open-source AI coding assistant, multi-language support, CLI-friendly, great for remote development.', website: 'https://aider.chat', icon: 'https://logo.clearbit.com/aider.chat' },
+      { id: 15, name: 'Continue', vendor: 'Continue', score: 7.7, price: 'free', colors: ['#8B5CF6','#A78BFA'], tags: ['开源', 'VS Code', '本地'], desc: '开源的AI代码助手，VS Code和JetBrains扩展，支持本地部署和自定义模型。', desc_en: 'Open-source AI code assistant, VS Code and JetBrains extensions, supports local deployment and custom models.', website: 'https://continue.dev', icon: 'https://logo.clearbit.com/continue.dev' },
+      { id: 16, name: 'Devin', vendor: 'Cognition', score: 8.0, price: 'paid', colors: ['#6366F1','#818CF8'], tags: ['自主编码', '端到端', '软件工程师'], desc: 'AI软件工程师，可以独立完成整个项目开发和调试。', desc_en: 'AI software engineer that can independently complete entire project development and debugging.', website: 'https://devin.ai', icon: 'https://logo.clearbit.com/devin.ai' },
+      { id: 17, name: 'SWE-agent', vendor: '普林斯顿SNP', score: 7.8, price: 'free', colors: ['#0EA5E9','#38BDF8'], tags: ['开源', 'SWE-bench', '学术'], desc: '普林斯顿开源SWE-bench测试Agent，性能优秀。', desc_en: 'Princeton\'s open-source SWE-bench testing agent with excellent performance.', website: 'https://github.com/princeton-nlp/SWE-agent', icon: 'https://logo.clearbit.com/github.com' },
+      { id: 18, name: 'Fmemo', vendor: 'Fmemo', score: 7.5, price: 'free', colors: ['#EC4899','#F472B6'], tags: ['中文', '国内', '代码补全'], desc: '中文AI代码助手，专注中文开发者群体。', desc_en: 'Chinese AI code assistant focused on Chinese developer community.', website: 'https://fmemo.ai', icon: 'https://logo.clearbit.com/fmemo.ai' },
+      { id: 19, name: 'CodeGeex', vendor: 'AI21', score: 7.4, price: 'freemium', colors: ['#F97316','#FB923C'], tags: ['多语言', '代码生成', 'IDE插件'], desc: 'AI21出品的代码生成工具，支持多种IDE。', desc_en: 'By AI21, code generation tool supporting multiple IDEs.', website: 'https://codegeex.ai', icon: 'https://logo.clearbit.com/codegeex.ai' },
+      { id: 20, name: 'Junie', vendor: 'JetBrains', score: 7.3, price: 'paid', colors: ['#F97316','#FB923C'], tags: ['IDE集成', '企业级', '代码分析'], desc: 'JetBrains最新AI编码助手，深度集成IDE。', desc_en: 'JetBrains\' latest AI coding assistant, deeply integrated with IDE.', website: 'https://www.jetbrains.com/junie/', icon: 'https://logo.clearbit.com/jetbrains.com' }
     ];
 
     // 大模型编程能力排行
     // 数据来源: https://www.datalearner.com/en/leaderboards/category/code
     const models = {
       'swe-bench': [
-        { id: 1, name: 'Claude Mythos Preview', vendor: 'Anthropic', score: 93.9, passRate: '93.9%', colors: ['#D97706','#F59E0B'], desc: 'SWE-bench Verified榜首，93.9%通过率。数据源: datalearner.com', desc_en: 'DataLearner SWE-bench Verified #1, 93.9% pass rate.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 2, name: 'Opus 4.7', vendor: 'Anthropic', score: 87.6, passRate: '87.6%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最新旗舰，87.6%通过率。数据源: datalearner.com', desc_en: "Anthropic's latest flagship, 87.6% pass rate.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 3, name: 'Claude Sonnet 5', vendor: 'Anthropic', score: 82.0, passRate: '82.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic主力模型，82.0%通过率。数据源: datalearner.com', desc_en: "Anthropic's main model, 82.0% pass rate.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 4, name: 'Claude Sonnet 4.5', vendor: 'Anthropic', score: 82.0, passRate: '82.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic高性价比模型。数据源: datalearner.com', desc_en: "Anthropic's cost-effective model.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 5, name: 'Opus 4.5', vendor: 'Anthropic', score: 80.9, passRate: '80.9%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic旗舰级表现。数据源: datalearner.com', desc_en: "Anthropic's flagship performance.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 6, name: 'Claude Opus 4.6', vendor: 'Anthropic', score: 80.8, passRate: '80.8%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic稳定版本。数据源: datalearner.com', desc_en: "Anthropic's stable version.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 7, name: 'DeepSeek-V4-Pro', vendor: 'DeepSeek-AI', score: 80.6, passRate: '80.6%', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰。数据源: datalearner.com', desc_en: 'Chinese open-source flagship.', icon: 'https://deepseek.com/favicon.ico' },
-        { id: 8, name: 'Gemini 3.1 Pro Preview', vendor: 'Google', score: 80.6, passRate: '80.6%', colors: ['#3B82F6','#60A5FA'], desc: 'Google旗舰模型。数据源: datalearner.com', desc_en: "Google's flagship model.", icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' },
-        { id: 9, name: 'Claude Sonnet 4', vendor: 'Anthropic', score: 80.2, passRate: '80.2%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic经典版本。数据源: datalearner.com', desc_en: "Anthropic's classic version.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 10, name: 'MiniMax M2.5', vendor: 'MiniMaxAI', score: 80.2, passRate: '80.2%', colors: ['#EC4899','#F472B6'], desc: '国产黑马模型。数据源: datalearner.com', desc_en: 'Chinese dark horse model.', icon: 'https://www.minimaxi.com/favicon.ico' }
+        { id: 1, name: 'Claude Mythos Preview', vendor: 'Anthropic', score: 93.9, passRate: '93.9%', colors: ['#D97706','#F59E0B'], desc: 'SWE-bench Verified榜首，93.9%通过率。数据源: datalearner.com', desc_en: 'DataLearner SWE-bench Verified #1, 93.9% pass rate.', icon: 'https://logo.clearbit.com/anthropic.com' },
+        { id: 2, name: 'Opus 4.7', vendor: 'Anthropic', score: 87.6, passRate: '87.6%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最新旗舰，87.6%通过率。数据源: datalearner.com', desc_en: "Anthropic's latest flagship, 87.6% pass rate.", icon: 'https://logo.clearbit.com/anthropic.com' },
+        { id: 3, name: 'Claude Sonnet 5', vendor: 'Anthropic', score: 82.0, passRate: '82.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic主力模型，82.0%通过率。数据源: datalearner.com', desc_en: "Anthropic's main model, 82.0% pass rate.", icon: 'https://logo.clearbit.com/anthropic.com' },
+        { id: 4, name: 'Claude Sonnet 4.5', vendor: 'Anthropic', score: 82.0, passRate: '82.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic高性价比模型。数据源: datalearner.com', desc_en: "Anthropic's cost-effective model.", icon: 'https://logo.clearbit.com/anthropic.com' },
+        { id: 5, name: 'Opus 4.5', vendor: 'Anthropic', score: 80.9, passRate: '80.9%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic旗舰级表现。数据源: datalearner.com', desc_en: "Anthropic's flagship performance.", icon: 'https://logo.clearbit.com/anthropic.com' },
+        { id: 6, name: 'Claude Opus 4.6', vendor: 'Anthropic', score: 80.8, passRate: '80.8%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic稳定版本。数据源: datalearner.com', desc_en: "Anthropic's stable version.", icon: 'https://logo.clearbit.com/anthropic.com' },
+        { id: 7, name: 'DeepSeek-V4-Pro', vendor: 'DeepSeek-AI', score: 80.6, passRate: '80.6%', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰。数据源: datalearner.com', desc_en: 'Chinese open-source flagship.', icon: 'https://logo.clearbit.com/deepseek.com' },
+        { id: 8, name: 'Gemini 3.1 Pro Preview', vendor: 'Google', score: 80.6, passRate: '80.6%', colors: ['#3B82F6','#60A5FA'], desc: 'Google旗舰模型。数据源: datalearner.com', desc_en: "Google's flagship model.", icon: 'https://logo.clearbit.com/google.com' },
+        { id: 9, name: 'Claude Sonnet 4', vendor: 'Anthropic', score: 80.2, passRate: '80.2%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic经典版本。数据源: datalearner.com', desc_en: "Anthropic's classic version.", icon: 'https://logo.clearbit.com/anthropic.com' },
+        { id: 10, name: 'MiniMax M2.5', vendor: 'MiniMaxAI', score: 80.2, passRate: '80.2%', colors: ['#EC4899','#F472B6'], desc: '国产黑马模型。数据源: datalearner.com', desc_en: 'Chinese dark horse model.', icon: 'https://logo.clearbit.com/minimaxi.com' }
       ],
       'livecode': [
-        { id: 1, name: 'Gemini 3.0 Pro Preview', vendor: 'Google', score: 92.0, passRate: '92.0%', colors: ['#3B82F6','#60A5FA'], desc: 'DataLearner LiveCodeBench榜首，92.0%通过率。数据源: datalearner.com', desc_en: 'DataLearner LiveCodeBench #1, 92.0% pass rate.', icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' },
-        { id: 2, name: 'Gemini 3.1 Pro Preview', vendor: 'Google', score: 91.7, passRate: '91.7%', colors: ['#3B82F6','#60A5FA'], desc: 'Google最新旗舰，91.7%通过率。数据源: datalearner.com', desc_en: "Google's latest flagship, 91.7% pass rate.", icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' },
-        { id: 3, name: 'Opus 4.5', vendor: 'Anthropic', score: 87.0, passRate: '87.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最强推理模型。数据源: datalearner.com', desc_en: "Anthropic's strongest reasoning model.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 4, name: 'Step 3.5 Flash', vendor: 'StepFunAI', score: 86.4, passRate: '86.4%', colors: ['#10A37F','#34D399'], desc: '国产AI新秀。数据源: datalearner.com', desc_en: 'Chinese AI newcomer.', icon: 'https://www.stepfun.com/favicon.ico' },
-        { id: 5, name: 'Qwen3-Max-Thinking', vendor: 'Alibaba', score: 85.9, passRate: '85.9%', colors: ['#EC4899','#F472B6'], desc: '阿里思考型旗舰。数据源: datalearner.com', desc_en: "Alibaba's thinking flagship.", icon: 'https://qwenlm.com/favicon.ico' },
-        { id: 6, name: 'GPT-5.1 Codex', vendor: 'OpenAI', score: 85.5, passRate: '85.5%', colors: ['#10A37F','#34D399'], desc: 'OpenAI代码专用模型。数据源: datalearner.com', desc_en: "OpenAI's code-specialized model.", icon: 'https://openaipublic.blob.core.windows.net/cdn/favicon.ico' },
-        { id: 7, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 80.4, passRate: '80.4%', colors: ['#EC4899','#F472B6'], desc: '阿里开源旗舰。数据源: datalearner.com', desc_en: "Alibaba's open-source flagship.", icon: 'https://qwenlm.com/favicon.ico' },
-        { id: 8, name: 'Claude Opus 4', vendor: 'Anthropic', score: 56.6, passRate: '56.6%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic经典旗舰。数据源: datalearner.com', desc_en: "Anthropic's classic flagship.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' }
+        { id: 1, name: 'Gemini 3.0 Pro Preview', vendor: 'Google', score: 92.0, passRate: '92.0%', colors: ['#3B82F6','#60A5FA'], desc: 'DataLearner LiveCodeBench榜首，92.0%通过率。数据源: datalearner.com', desc_en: 'DataLearner LiveCodeBench #1, 92.0% pass rate.', icon: 'https://logo.clearbit.com/google.com' },
+        { id: 2, name: 'Gemini 3.1 Pro Preview', vendor: 'Google', score: 91.7, passRate: '91.7%', colors: ['#3B82F6','#60A5FA'], desc: 'Google最新旗舰，91.7%通过率。数据源: datalearner.com', desc_en: "Google's latest flagship, 91.7% pass rate.", icon: 'https://logo.clearbit.com/google.com' },
+        { id: 3, name: 'Opus 4.5', vendor: 'Anthropic', score: 87.0, passRate: '87.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic最强推理模型。数据源: datalearner.com', desc_en: "Anthropic's strongest reasoning model.", icon: 'https://logo.clearbit.com/anthropic.com' },
+        { id: 4, name: 'Step 3.5 Flash', vendor: 'StepFunAI', score: 86.4, passRate: '86.4%', colors: ['#10A37F','#34D399'], desc: '国产AI新秀。数据源: datalearner.com', desc_en: 'Chinese AI newcomer.', icon: 'https://logo.clearbit.com/stepfun.com' },
+        { id: 5, name: 'Qwen3-Max-Thinking', vendor: 'Alibaba', score: 85.9, passRate: '85.9%', colors: ['#EC4899','#F472B6'], desc: '阿里思考型旗舰。数据源: datalearner.com', desc_en: "Alibaba's thinking flagship.", icon: 'https://logo.clearbit.com/qwenlm.com' },
+        { id: 6, name: 'GPT-5.1 Codex', vendor: 'OpenAI', score: 85.5, passRate: '85.5%', colors: ['#10A37F','#34D399'], desc: 'OpenAI代码专用模型。数据源: datalearner.com', desc_en: "OpenAI's code-specialized model.", icon: 'https://logo.clearbit.com/openai.com' },
+        { id: 7, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 80.4, passRate: '80.4%', colors: ['#EC4899','#F472B6'], desc: '阿里开源旗舰。数据源: datalearner.com', desc_en: "Alibaba's open-source flagship.", icon: 'https://logo.clearbit.com/qwenlm.com' },
+        { id: 8, name: 'Claude Opus 4', vendor: 'Anthropic', score: 56.6, passRate: '56.6%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic经典旗舰。数据源: datalearner.com', desc_en: "Anthropic's classic flagship.", icon: 'https://logo.clearbit.com/anthropic.com' }
       ],
       'swe-pro': [
-        { id: 1, name: 'Claude Mythos Preview', vendor: 'Anthropic', score: 77.8, passRate: '77.8%', colors: ['#D97706','#F59E0B'], desc: 'DataLearner SWE-Bench Pro榜首，77.8%通过率。数据源: datalearner.com', desc_en: 'DataLearner SWE-Bench Pro #1, 77.8% pass rate.', icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 2, name: 'Claude Opus 4.6', vendor: 'Anthropic', score: 72.0, passRate: '72.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic专业版。数据源: datalearner.com', desc_en: "Anthropic's professional version.", icon: 'https://storage.googleapis.com/faviconbak-anthropic/anthropic-2025-black-favicon.ico' },
-        { id: 3, name: 'Kimi K2.6', vendor: 'Moonshot AI', score: 58.6, passRate: '58.6%', colors: ['#10A37F','#34D399'], desc: '国产旗舰，超长上下文。数据源: datalearner.com', desc_en: 'Chinese flagship, ultra-long context.', icon: 'https://cdn.meekapp.com/favicon.ico' },
-        { id: 4, name: 'GPT-5.2', vendor: 'OpenAI', score: 55.6, passRate: '55.6%', colors: ['#10A37F','#34D399'], desc: 'OpenAI最新旗舰。数据源: datalearner.com', desc_en: "OpenAI's latest flagship.", icon: 'https://openaipublic.blob.core.windows.net/cdn/favicon.ico' },
-        { id: 5, name: 'MiniMax M2.5', vendor: 'MiniMaxAI', score: 55.4, passRate: '55.4%', colors: ['#EC4899','#F472B6'], desc: '国产高性能模型。数据源: datalearner.com', desc_en: 'Chinese high-performance model.', icon: 'https://www.minimaxi.com/favicon.ico' },
-        { id: 6, name: 'DeepSeek-V4-Pro', vendor: 'DeepSeek-AI', score: 55.4, passRate: '55.4%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek专业版。数据源: datalearner.com', desc_en: 'DeepSeek professional version.', icon: 'https://deepseek.com/favicon.ico' },
-        { id: 7, name: 'DeepSeek-V4-Flash', vendor: 'DeepSeek-AI', score: 52.6, passRate: '52.6%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek轻量版。数据源: datalearner.com', desc_en: 'DeepSeek lightweight version.', icon: 'https://deepseek.com/favicon.ico' },
-        { id: 8, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 49.5, passRate: '49.5%', colors: ['#EC4899','#F472B6'], desc: '阿里开源代码模型。数据源: datalearner.com', desc_en: "Alibaba's open-source code model.", icon: 'https://qwenlm.com/favicon.ico' },
-        { id: 9, name: 'GLM-4.7', vendor: 'Zhipu AI', score: 40.6, passRate: '40.6%', colors: ['#10A37F','#34D399'], desc: '智谱最新版本。数据源: datalearner.com', desc_en: "Zhipu's latest version.", icon: 'https://www.zhipuai.cn/favicon.ico' }
+        { id: 1, name: 'Claude Mythos Preview', vendor: 'Anthropic', score: 77.8, passRate: '77.8%', colors: ['#D97706','#F59E0B'], desc: 'DataLearner SWE-Bench Pro榜首，77.8%通过率。数据源: datalearner.com', desc_en: 'DataLearner SWE-Bench Pro #1, 77.8% pass rate.', icon: 'https://logo.clearbit.com/anthropic.com' },
+        { id: 2, name: 'Claude Opus 4.6', vendor: 'Anthropic', score: 72.0, passRate: '72.0%', colors: ['#D97706','#F59E0B'], desc: 'Anthropic专业版。数据源: datalearner.com', desc_en: "Anthropic's professional version.", icon: 'https://logo.clearbit.com/anthropic.com' },
+        { id: 3, name: 'Kimi K2.6', vendor: 'Moonshot AI', score: 58.6, passRate: '58.6%', colors: ['#10A37F','#34D399'], desc: '国产旗舰，超长上下文。数据源: datalearner.com', desc_en: 'Chinese flagship, ultra-long context.', icon: 'https://logo.clearbit.com/cdn.meekapp.com' },
+        { id: 4, name: 'GPT-5.2', vendor: 'OpenAI', score: 55.6, passRate: '55.6%', colors: ['#10A37F','#34D399'], desc: 'OpenAI最新旗舰。数据源: datalearner.com', desc_en: "OpenAI's latest flagship.", icon: 'https://logo.clearbit.com/openai.com' },
+        { id: 5, name: 'MiniMax M2.5', vendor: 'MiniMaxAI', score: 55.4, passRate: '55.4%', colors: ['#EC4899','#F472B6'], desc: '国产高性能模型。数据源: datalearner.com', desc_en: 'Chinese high-performance model.', icon: 'https://logo.clearbit.com/minimaxi.com' },
+        { id: 6, name: 'DeepSeek-V4-Pro', vendor: 'DeepSeek-AI', score: 55.4, passRate: '55.4%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek专业版。数据源: datalearner.com', desc_en: 'DeepSeek professional version.', icon: 'https://logo.clearbit.com/deepseek.com' },
+        { id: 7, name: 'DeepSeek-V4-Flash', vendor: 'DeepSeek-AI', score: 52.6, passRate: '52.6%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek轻量版。数据源: datalearner.com', desc_en: 'DeepSeek lightweight version.', icon: 'https://logo.clearbit.com/deepseek.com' },
+        { id: 8, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 49.5, passRate: '49.5%', colors: ['#EC4899','#F472B6'], desc: '阿里开源代码模型。数据源: datalearner.com', desc_en: "Alibaba's open-source code model.", icon: 'https://logo.clearbit.com/qwenlm.com' },
+        { id: 9, name: 'GLM-4.7', vendor: 'Zhipu AI', score: 40.6, passRate: '40.6%', colors: ['#10A37F','#34D399'], desc: '智谱最新版本。数据源: datalearner.com', desc_en: "Zhipu's latest version.", icon: 'https://logo.clearbit.com/zhipuai.cn' }
       ],
       'multilingual': [
-        { id: 1, name: 'Claude Mythos Preview', vendor: 'Anthropic', score: 87.3, passRate: '87.3%', colors: ['#D97706','#F59E0B'], desc: 'DataLearner多语言榜首，87.3%通过率。数据源: datalearner.com', desc_en: 'DataLearner multilingual #1, 87.3% pass rate.', icon: 'https://anthropic.com/favicon.ico' },
-        { id: 2, name: 'Kimi K2.6', vendor: 'Moonshot AI', score: 76.7, passRate: '76.7%', colors: ['#10A37F','#34D399'], desc: '国产旗舰，中文代码强。数据源: datalearner.com', desc_en: 'Chinese flagship, strong at Chinese code.', icon: 'https://cdn.meekapp.com/favicon.ico' },
-        { id: 3, name: 'DeepSeek-V4-Pro', vendor: 'DeepSeek-AI', score: 76.2, passRate: '76.2%', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰。数据源: datalearner.com', desc_en: 'Chinese open-source flagship.', icon: 'https://deepseek.com/favicon.ico' },
-        { id: 4, name: 'DeepSeek-V4-Flash', vendor: 'DeepSeek-AI', score: 73.3, passRate: '73.3%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek轻量版。数据源: datalearner.com', desc_en: 'DeepSeek lightweight version.', icon: 'https://deepseek.com/favicon.ico' },
-        { id: 5, name: 'Qwen3.6-27B', vendor: 'Alibaba', score: 71.3, passRate: '71.3%', colors: ['#EC4899','#F472B6'], desc: '阿里27B参数模型。数据源: datalearner.com', desc_en: "Alibaba's 27B parameter model.", icon: 'https://qwenlm.com/favicon.ico' },
-        { id: 6, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 67.2, passRate: '67.2%', colors: ['#EC4899','#F472B6'], desc: '阿里35B参数模型。数据源: datalearner.com', desc_en: "Alibaba's 35B parameter model.", icon: 'https://qwenlm.com/favicon.ico' }
+        { id: 1, name: 'Claude Mythos Preview', vendor: 'Anthropic', score: 87.3, passRate: '87.3%', colors: ['#D97706','#F59E0B'], desc: 'DataLearner多语言榜首，87.3%通过率。数据源: datalearner.com', desc_en: 'DataLearner multilingual #1, 87.3% pass rate.', icon: 'https://logo.clearbit.com/anthropic.com' },
+        { id: 2, name: 'Kimi K2.6', vendor: 'Moonshot AI', score: 76.7, passRate: '76.7%', colors: ['#10A37F','#34D399'], desc: '国产旗舰，中文代码强。数据源: datalearner.com', desc_en: 'Chinese flagship, strong at Chinese code.', icon: 'https://logo.clearbit.com/cdn.meekapp.com' },
+        { id: 3, name: 'DeepSeek-V4-Pro', vendor: 'DeepSeek-AI', score: 76.2, passRate: '76.2%', colors: ['#6366F1','#818CF8'], desc: '国产开源旗舰。数据源: datalearner.com', desc_en: 'Chinese open-source flagship.', icon: 'https://logo.clearbit.com/deepseek.com' },
+        { id: 4, name: 'DeepSeek-V4-Flash', vendor: 'DeepSeek-AI', score: 73.3, passRate: '73.3%', colors: ['#6366F1','#818CF8'], desc: 'DeepSeek轻量版。数据源: datalearner.com', desc_en: 'DeepSeek lightweight version.', icon: 'https://logo.clearbit.com/deepseek.com' },
+        { id: 5, name: 'Qwen3.6-27B', vendor: 'Alibaba', score: 71.3, passRate: '71.3%', colors: ['#EC4899','#F472B6'], desc: '阿里27B参数模型。数据源: datalearner.com', desc_en: "Alibaba's 27B parameter model.", icon: 'https://logo.clearbit.com/qwenlm.com' },
+        { id: 6, name: 'Qwen3.6-35B-A3B', vendor: 'Alibaba', score: 67.2, passRate: '67.2%', colors: ['#EC4899','#F472B6'], desc: '阿里35B参数模型。数据源: datalearner.com', desc_en: "Alibaba's 35B parameter model.", icon: 'https://logo.clearbit.com/qwenlm.com' }
       ]
     };
 
     // 编程语言排行（数据源: TIOBE/Stack Overflow调查/GitHub Octoverse 2025-2026）
     const languages = [
-      { id: 1, name: 'Python', rank: 1, score: 100.0, type: '脚本语言', colors: ['#3776AB','#FFD43B'], desc: 'TIOBE榜首，AI/数据科学绝对霸主，GitHub增长最快语言。数据源: tiobe.com', desc_en: 'TIOBE #1, absolute leader in AI/data science, fastest growing language on GitHub.', icon: 'https://www.python.org/favicon.ico' },
+      { id: 1, name: 'Python', rank: 1, score: 100.0, type: '脚本语言', colors: ['#3776AB','#FFD43B'], desc: 'TIOBE榜首，AI/数据科学绝对霸主，GitHub增长最快语言。数据源: tiobe.com', desc_en: 'TIOBE #1, absolute leader in AI/data science, fastest growing language on GitHub.', icon: 'https://logo.clearbit.com/python.org' },
       { id: 2, name: 'JavaScript', rank: 2, score: 92.5, type: '脚本语言', colors: ['#F7DF1E','#323330'], desc: 'Stack Overflow使用率最高，Web开发核心，全栈必备。数据源: survey.stackoverflow.co', desc_en: 'Stack Overflow highest usage, core of web development, essential for full-stack.', icon: 'https://tc39.github.io/ecma262/favicon.ico' },
-      { id: 3, name: 'TypeScript', rank: 3, score: 88.0, type: '编译语言', colors: ['#3178C6','#00599C'], desc: 'GitHub第一语言，JS超集，大型项目首选。数据源: octoverse.github.com', desc_en: "GitHub's #1 language, JS superset, preferred for large projects.", icon: 'https://www.typescriptlang.org/favicon.ico' },
-      { id: 4, name: 'C', rank: 4, score: 85.5, type: '编译语言', colors: ['#A8B9CC','#555555'], desc: 'TIOBE第二，系统编程基础，嵌入式开发主力。数据源: tiobe.com', desc_en: 'TIOBE #2, foundation of systems programming, mainstay of embedded development.', icon: 'https://en.cppreference.com/favicon.ico' },
-      { id: 5, name: 'Java', rank: 5, score: 83.0, type: '编译语言', colors: ['#ED8B00','#5382A6'], desc: 'TIOBE第三，企业级应用主力，Android开发语言。数据源: tiobe.com', desc_en: 'TIOBE #3, enterprise application mainstay, primary Android language.', icon: 'https://www.java.com/favicon.ico' },
-      { id: 6, name: 'C++', rank: 6, score: 80.5, type: '编译语言', colors: ['#00599C','#00599C'], desc: 'TIOBE第四，系统编程、游戏开发、高性能计算。数据源: tiobe.com', desc_en: 'TIOBE #4, systems programming, game development, high-performance computing.', icon: 'https://isocpp.org/favicon.ico' },
-      { id: 7, name: 'Go', rank: 7, score: 78.0, type: '编译语言', colors: ['#00ADD8','#008080'], desc: '云原生首选，并发支持优秀，SO最受推崇语言第五。数据源: survey.stackoverflow.co', desc_en: 'Cloud-native preferred, excellent concurrency support.', icon: 'https://go.dev/favicon.ico' },
-      { id: 8, name: 'Rust', rank: 8, score: 75.5, type: '编译语言', colors: ['#DEA584','#B7410E'], desc: 'SO最受推崇语言第一，72%开发者想继续使用，安全高性能。数据源: survey.stackoverflow.co', desc_en: 'SO #1 most admired language, safe and high-performance.', icon: 'https://www.rust-lang.org/favicon.ico' },
-      { id: 9, name: 'SQL', rank: 9, score: 72.0, type: '查询语言', colors: ['#00758F','#E38C00'], desc: 'SO使用率58.6%，数据库操作必备，数据工程师核心技能。数据源: survey.stackoverflow.co', desc_en: 'SO 58.6% usage, essential for database operations.', icon: 'https://www.mysql.com/favicon.ico' },
-      { id: 10, name: 'C#', rank: 10, score: 70.0, type: '编译语言', colors: ['#512BD4','#239B20'], desc: 'TIOBE第五，.NET主力，游戏开发Unity。数据源: tiobe.com', desc_en: 'TIOBE #5, .NET mainstay, Unity game development.', icon: 'https://learn.microsoft.com/favicon.ico' },
-      { id: 11, name: 'PHP', rank: 11, score: 62.0, type: '脚本语言', colors: ['#777BB4','#4F5D95'], desc: 'TIOBE第六，Web服务器端经典语言，CMS构建主流。数据源: tiobe.com', desc_en: 'TIOBE #6, classic server-side web language.', icon: 'https://www.php.net/favicon.ico' },
-      { id: 12, name: 'R', rank: 12, score: 52.0, type: '统计语言', colors: ['#276DC3','#276DC3'], desc: '数据科学标配，统计分析、生物信息学必备。数据源: tiobe.com', desc_en: 'Data science standard, essential for statistical analysis and bioinformatics.', icon: 'https://www.r-project.org/favicon.ico' },
-      { id: 13, name: 'Swift', rank: 13, score: 48.0, type: '编译语言', colors: ['#F05138','#F05138'], desc: 'Apple主力语言，iOS/macOS开发首选，安全性高。数据源: tiobe.com', desc_en: "Apple's primary language, preferred for iOS/macOS development.", icon: 'https://swift.org/favicon.ico' },
-      { id: 14, name: 'Kotlin', rank: 14, score: 45.0, type: '编译语言', colors: ['#7F52FF','#7F52FF'], desc: 'Android官方语言，Google推荐，简洁安全。数据源: tiobe.com', desc_en: 'Android official language, Google recommended, concise and safe.', icon: 'https://kotlinlang.org/favicon.ico' },
-      { id: 15, name: 'Ruby', rank: 15, score: 42.0, type: '脚本语言', colors: ['#CC342D','#CC342D'], desc: 'Rails框架缔造者，Web开发高效简洁，DevOps常用。数据源: tiobe.com', desc_en: 'Creator of Rails framework, efficient and clean web development.', icon: 'https://www.ruby-lang.org/favicon.ico' },
-      { id: 16, name: 'MATLAB', rank: 16, score: 38.0, type: '科学计算', colors: ['#0076A8','#0076A8'], desc: '工程仿真、科学计算标配，MATLAB生态系统强大。数据源: tiobe.com', desc_en: 'Standard for engineering simulation and scientific computing.', icon: 'https://www.mathworks.com/favicon.ico' },
-      { id: 17, name: 'Scala', rank: 17, score: 35.0, type: '编译语言', colors: ['#DC322F','#DC322F'], desc: 'JVM系函数式语言，大数据处理 Spark 主力语言。数据源: tiobe.com', desc_en: 'JVM functional language, Spark main language for big data.', icon: 'https://scala-lang.org/favicon.ico' },
-      { id: 18, name: 'Objective-C', rank: 18, score: 32.0, type: '编译语言', colors: ['#438EFF','#438EFF'], desc: 'Apple历史语言， legacy iOS/macOS 代码维护。数据源: tiobe.com', desc_en: "Apple's legacy language, maintaining legacy iOS/macOS code.", icon: 'https://developer.apple.com/favicon.ico' },
-      { id: 19, name: 'Perl', rank: 19, score: 28.0, type: '脚本语言', colors: ['#39457E','#39457E'], desc: '文本处理之王，系统管理、Bioinformatics 常用。数据源: tiobe.com', desc_en: 'King of text processing, commonly used in sysadmin and bioinformatics.', icon: 'https://www.perl.org/favicon.ico' },
-      { id: 20, name: 'Dart', rank: 20, score: 26.0, type: '编译语言', colors: ['#0175C2','#0175C2'], desc: 'Flutter 主力语言，跨平台 UI 开发新秀。数据源: tiobe.com', desc_en: "Flutter's primary language, rising star in cross-platform UI.", icon: 'https://dart.dev/favicon.ico' },
-      { id: 21, name: 'Zig', rank: 21, score: 20.0, type: '编译语言', colors: ['#F7A41D','#F7A41D'], desc: '系统编程新星，替代C的性能与现代安全。数据源: tiobe.com', desc_en: 'Rising star in systems programming, C replacement with modern safety.', icon: 'https://ziglang.org/favicon.ico' },
-      { id: 22, name: 'Elixir', rank: 22, score: 18.0, type: '函数语言', colors: ['#6E4A7E','#6E4A7E'], desc: 'Erlang VM上的函数式语言，高并发电信系统。数据源: tiobe.com', desc_en: 'Functional language on Erlang VM, high-concurrency telecom systems.', icon: 'https://elixir-lang.org/favicon.ico' },
-      { id: 23, name: 'Clojure', rank: 23, score: 16.0, type: '函数语言', colors: ['#5881D8','#5881D8'], desc: 'Lisp方言，函数式编程，JVM上的并发之王。数据源: tiobe.com', desc_en: 'Lisp dialect, functional programming, concurrency king on JVM.', icon: 'https://clojure.org/favicon.ico' },
-      { id: 24, name: 'Haskell', rank: 24, score: 14.0, type: '函数语言', colors: ['#5D4F85','#5D4F85'], desc: '纯函数式语言，学术研究、编译器设计常用。数据源: tiobe.com', desc_en: 'Pure functional language, commonly used in academic research.', icon: 'https://www.haskell.org/favicon.ico' },
-      { id: 25, name: 'Lua', rank: 25, score: 12.0, type: '脚本语言', colors: ['#000080','#000080'], desc: '嵌入式脚本之王，游戏开发、配置脚本常用。数据源: tiobe.com', desc_en: 'King of embedded scripting, commonly used in game development.', icon: 'https://www.lua.org/favicon.ico' }
+      { id: 3, name: 'TypeScript', rank: 3, score: 88.0, type: '编译语言', colors: ['#3178C6','#00599C'], desc: 'GitHub第一语言，JS超集，大型项目首选。数据源: octoverse.github.com', desc_en: "GitHub's #1 language, JS superset, preferred for large projects.", icon: 'https://logo.clearbit.com/typescriptlang.org' },
+      { id: 4, name: 'C', rank: 4, score: 85.5, type: '编译语言', colors: ['#A8B9CC','#555555'], desc: 'TIOBE第二，系统编程基础，嵌入式开发主力。数据源: tiobe.com', desc_en: 'TIOBE #2, foundation of systems programming, mainstay of embedded development.', icon: 'https://logo.clearbit.com/en.cppreference.com' },
+      { id: 5, name: 'Java', rank: 5, score: 83.0, type: '编译语言', colors: ['#ED8B00','#5382A6'], desc: 'TIOBE第三，企业级应用主力，Android开发语言。数据源: tiobe.com', desc_en: 'TIOBE #3, enterprise application mainstay, primary Android language.', icon: 'https://logo.clearbit.com/java.com' },
+      { id: 6, name: 'C++', rank: 6, score: 80.5, type: '编译语言', colors: ['#00599C','#00599C'], desc: 'TIOBE第四，系统编程、游戏开发、高性能计算。数据源: tiobe.com', desc_en: 'TIOBE #4, systems programming, game development, high-performance computing.', icon: 'https://logo.clearbit.com/isocpp.org' },
+      { id: 7, name: 'Go', rank: 7, score: 78.0, type: '编译语言', colors: ['#00ADD8','#008080'], desc: '云原生首选，并发支持优秀，SO最受推崇语言第五。数据源: survey.stackoverflow.co', desc_en: 'Cloud-native preferred, excellent concurrency support.', icon: 'https://logo.clearbit.com/go.dev' },
+      { id: 8, name: 'Rust', rank: 8, score: 75.5, type: '编译语言', colors: ['#DEA584','#B7410E'], desc: 'SO最受推崇语言第一，72%开发者想继续使用，安全高性能。数据源: survey.stackoverflow.co', desc_en: 'SO #1 most admired language, safe and high-performance.', icon: 'https://logo.clearbit.com/rust-lang.org' },
+      { id: 9, name: 'SQL', rank: 9, score: 72.0, type: '查询语言', colors: ['#00758F','#E38C00'], desc: 'SO使用率58.6%，数据库操作必备，数据工程师核心技能。数据源: survey.stackoverflow.co', desc_en: 'SO 58.6% usage, essential for database operations.', icon: 'https://logo.clearbit.com/mysql.com' },
+      { id: 10, name: 'C#', rank: 10, score: 70.0, type: '编译语言', colors: ['#512BD4','#239B20'], desc: 'TIOBE第五，.NET主力，游戏开发Unity。数据源: tiobe.com', desc_en: 'TIOBE #5, .NET mainstay, Unity game development.', icon: 'https://logo.clearbit.com/learn.microsoft.com' },
+      { id: 11, name: 'PHP', rank: 11, score: 62.0, type: '脚本语言', colors: ['#777BB4','#4F5D95'], desc: 'TIOBE第六，Web服务器端经典语言，CMS构建主流。数据源: tiobe.com', desc_en: 'TIOBE #6, classic server-side web language.', icon: 'https://logo.clearbit.com/php.net' },
+      { id: 12, name: 'R', rank: 12, score: 52.0, type: '统计语言', colors: ['#276DC3','#276DC3'], desc: '数据科学标配，统计分析、生物信息学必备。数据源: tiobe.com', desc_en: 'Data science standard, essential for statistical analysis and bioinformatics.', icon: 'https://logo.clearbit.com/r-project.org' },
+      { id: 13, name: 'Swift', rank: 13, score: 48.0, type: '编译语言', colors: ['#F05138','#F05138'], desc: 'Apple主力语言，iOS/macOS开发首选，安全性高。数据源: tiobe.com', desc_en: "Apple's primary language, preferred for iOS/macOS development.", icon: 'https://logo.clearbit.com/swift.org' },
+      { id: 14, name: 'Kotlin', rank: 14, score: 45.0, type: '编译语言', colors: ['#7F52FF','#7F52FF'], desc: 'Android官方语言，Google推荐，简洁安全。数据源: tiobe.com', desc_en: 'Android official language, Google recommended, concise and safe.', icon: 'https://logo.clearbit.com/kotlinlang.org' },
+      { id: 15, name: 'Ruby', rank: 15, score: 42.0, type: '脚本语言', colors: ['#CC342D','#CC342D'], desc: 'Rails框架缔造者，Web开发高效简洁，DevOps常用。数据源: tiobe.com', desc_en: 'Creator of Rails framework, efficient and clean web development.', icon: 'https://logo.clearbit.com/ruby-lang.org' },
+      { id: 16, name: 'MATLAB', rank: 16, score: 38.0, type: '科学计算', colors: ['#0076A8','#0076A8'], desc: '工程仿真、科学计算标配，MATLAB生态系统强大。数据源: tiobe.com', desc_en: 'Standard for engineering simulation and scientific computing.', icon: 'https://logo.clearbit.com/mathworks.com' },
+      { id: 17, name: 'Scala', rank: 17, score: 35.0, type: '编译语言', colors: ['#DC322F','#DC322F'], desc: 'JVM系函数式语言，大数据处理 Spark 主力语言。数据源: tiobe.com', desc_en: 'JVM functional language, Spark main language for big data.', icon: 'https://logo.clearbit.com/scala-lang.org' },
+      { id: 18, name: 'Objective-C', rank: 18, score: 32.0, type: '编译语言', colors: ['#438EFF','#438EFF'], desc: 'Apple历史语言， legacy iOS/macOS 代码维护。数据源: tiobe.com', desc_en: "Apple's legacy language, maintaining legacy iOS/macOS code.", icon: 'https://logo.clearbit.com/developer.apple.com' },
+      { id: 19, name: 'Perl', rank: 19, score: 28.0, type: '脚本语言', colors: ['#39457E','#39457E'], desc: '文本处理之王，系统管理、Bioinformatics 常用。数据源: tiobe.com', desc_en: 'King of text processing, commonly used in sysadmin and bioinformatics.', icon: 'https://logo.clearbit.com/perl.org' },
+      { id: 20, name: 'Dart', rank: 20, score: 26.0, type: '编译语言', colors: ['#0175C2','#0175C2'], desc: 'Flutter 主力语言，跨平台 UI 开发新秀。数据源: tiobe.com', desc_en: "Flutter's primary language, rising star in cross-platform UI.", icon: 'https://logo.clearbit.com/dart.dev' },
+      { id: 21, name: 'Zig', rank: 21, score: 20.0, type: '编译语言', colors: ['#F7A41D','#F7A41D'], desc: '系统编程新星，替代C的性能与现代安全。数据源: tiobe.com', desc_en: 'Rising star in systems programming, C replacement with modern safety.', icon: 'https://logo.clearbit.com/ziglang.org' },
+      { id: 22, name: 'Elixir', rank: 22, score: 18.0, type: '函数语言', colors: ['#6E4A7E','#6E4A7E'], desc: 'Erlang VM上的函数式语言，高并发电信系统。数据源: tiobe.com', desc_en: 'Functional language on Erlang VM, high-concurrency telecom systems.', icon: 'https://logo.clearbit.com/elixir-lang.org' },
+      { id: 23, name: 'Clojure', rank: 23, score: 16.0, type: '函数语言', colors: ['#5881D8','#5881D8'], desc: 'Lisp方言，函数式编程，JVM上的并发之王。数据源: tiobe.com', desc_en: 'Lisp dialect, functional programming, concurrency king on JVM.', icon: 'https://logo.clearbit.com/clojure.org' },
+      { id: 24, name: 'Haskell', rank: 24, score: 14.0, type: '函数语言', colors: ['#5D4F85','#5D4F85'], desc: '纯函数式语言，学术研究、编译器设计常用。数据源: tiobe.com', desc_en: 'Pure functional language, commonly used in academic research.', icon: 'https://logo.clearbit.com/haskell.org' },
+      { id: 25, name: 'Lua', rank: 25, score: 12.0, type: '脚本语言', colors: ['#000080','#000080'], desc: '嵌入式脚本之王，游戏开发、配置脚本常用。数据源: tiobe.com', desc_en: 'King of embedded scripting, commonly used in game development.', icon: 'https://logo.clearbit.com/lua.org' }
     ];
 
     // 数据库数据（评分基于DB-Engines 2026年5月最新数据归一化）
     // 数据来源: https://db-engines.com/en/ranking
     const databases = {
       rdbms: [
-        { id: 1, name: 'Oracle', vendor: 'Oracle', score: 1143.28, type: '商业关系型', colors: ['#F80000','#F80000'], desc: 'DB-Engines排行第一，1143.28分，企业级应用最广泛。数据源: db-engines.com', icon: 'https://www.oracle.com/favicon.ico' },
-        { id: 2, name: 'MySQL', vendor: 'Oracle', score: 856.49, type: '开源关系型', colors: ['#00758F','#4479A1'], desc: 'DB-Engines第二，856.49分，最流行的开源数据库。数据源: db-engines.com', icon: 'https://www.mysql.com/favicon.ico' },
-        { id: 3, name: 'SQL Server', vendor: 'Microsoft', score: 700.99, type: '商业关系型', colors: ['#CC2927','#0078D4'], desc: 'DB-Engines第三，700.99分，微软企业级数据库。数据源: db-engines.com', icon: 'https://www.microsoft.com/favicon.ico' },
-        { id: 4, name: 'PostgreSQL', vendor: 'PGDG', score: 682.68, type: '开源关系型', colors: ['#336791','#336791'], desc: 'DB-Engines第四，682.68分，功能最强大的开源RDBMS。数据源: db-engines.com', icon: 'https://www.postgresql.org/favicon.ico' },
-        { id: 5, name: 'Snowflake', vendor: 'Snowflake', score: 215.64, type: '云数仓', colors: ['#29B5E8','#29B5E8'], desc: 'DB-Engines第六，215.64分，云原生数据仓库。数据源: db-engines.com', icon: 'https://www.snowflake.com/favicon.ico' },
-        { id: 6, name: 'IBM Db2', vendor: 'IBM', score: 113.04, type: '商业关系型', colors: ['#0078D4','#0052A5'], desc: 'DB-Engines第九，113.04分，企业级数据库。数据源: db-engines.com', icon: 'https://www.ibm.com/favicon.ico' },
-        { id: 7, name: 'SQLite', vendor: 'SQLite Consortium', score: 95.88, type: '嵌入式关系型', colors: ['#003545','#003545'], desc: 'DB-Engines第十二，95.88分，轻量级嵌入式数据库。数据源: db-engines.com', icon: 'https://www.sqlite.org/favicon.ico' },
-        { id: 8, name: 'MariaDB', vendor: 'MariaDB', score: 82.74, type: '开源关系型', colors: ['#003545','#003545'], desc: 'DB-Engines第十三，82.74分，MySQL兼容开源分支。数据源: db-engines.com', icon: 'https://mariadb.org/favicon.ico' },
-        { id: 9, name: 'Apache Hive', vendor: 'Apache', score: 74.70, type: 'Hadoop数仓', colors: ['#D4A017','#D4A017'], desc: 'DB-Engines第十四，74.70分，Hadoop生态SQL。数据源: db-engines.com', icon: 'https://hive.apache.org/favicon.ico' },
-        { id: 10, name: 'Azure SQL Database', vendor: 'Microsoft', score: 73.34, type: '云关系型', colors: ['#0078D4','#0078D4'], desc: 'DB-Engines第十五，73.34分，Azure云数据库。数据源: db-engines.com', icon: 'https://www.microsoft.com/favicon.ico' },
-        { id: 11, name: 'Microsoft Access', vendor: 'Microsoft', score: 62.30, type: '桌面关系型', colors: ['#CC2927','#0078D4'], desc: 'DB-Engines第十七，62.30分，Office数据库。数据源: db-engines.com', icon: 'https://www.microsoft.com/favicon.ico' },
-        { id: 12, name: 'BigQuery', vendor: 'Google', score: 50.56, type: 'Serverless数仓', colors: ['#4285F4','#34A853'], desc: 'DB-Engines第十九，50.56分，Google云数仓。数据源: db-engines.com', icon: 'https://cloud.google.com/favicon.ico' },
-        { id: 13, name: 'SAP HANA', vendor: 'SAP', score: 32.43, type: '内存数据库', colors: ['#0FAAFF','#003366'], desc: 'DB-Engines第二十二，32.43分，SAP内存数据库。数据源: db-engines.com', icon: 'https://www.sap.com/favicon.ico' },
-        { id: 14, name: 'Teradata', vendor: 'Teradata', score: 30.94, type: '分析数仓', colors: ['#FF6B00','#FF6B00'], desc: 'DB-Engines第二十三，30.94分，企业级数仓。数据源: db-engines.com', icon: 'https://www.teradata.com/favicon.ico' },
-        { id: 15, name: 'ClickHouse', vendor: 'ClickHouse Inc', score: 23.49, type: 'OLAP列式', colors: ['#FFCC00','#FFCC00'], desc: 'DB-Engines第二十六，23.49分，OLAP列式数据库。数据源: db-engines.com', icon: 'https://clickhouse.com/favicon.ico' },
-        { id: 16, name: 'DuckDB', vendor: 'DuckDB Foundation', score: 9.59, type: '嵌入式分析', colors: ['#00D2FF','#003366'], desc: 'DB-Engines第四十二，9.59分，嵌入式分析数据库。数据源: db-engines.com', icon: 'https://duckdb.org/favicon.ico' },
-        { id: 17, name: 'Amazon Aurora', vendor: 'AWS', score: 9.18, type: '云原生关系型', colors: ['#FF9900','#232F3E'], desc: 'DB-Engines第四十五，9.18分，AWS云原生数据库。数据源: db-engines.com', icon: 'https://aws.amazon.com/favicon.ico' },
-        { id: 18, name: 'H2', vendor: 'H2 Database Group', score: 7.73, type: 'Java嵌入式', colors: ['#1E3A5F','#4A90D9'], desc: 'DB-Engines第五十，7.73分，Java嵌入式数据库。数据源: db-engines.com', icon: 'https://www.h2database.com/favicon.ico' }
+        { id: 1, name: 'Oracle', vendor: 'Oracle', score: 1143.28, type: '商业关系型', colors: ['#F80000','#F80000'], desc: 'DB-Engines排行第一，1143.28分，企业级应用最广泛。数据源: db-engines.com', icon: 'https://logo.clearbit.com/oracle.com' },
+        { id: 2, name: 'MySQL', vendor: 'Oracle', score: 856.49, type: '开源关系型', colors: ['#00758F','#4479A1'], desc: 'DB-Engines第二，856.49分，最流行的开源数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/mysql.com' },
+        { id: 3, name: 'SQL Server', vendor: 'Microsoft', score: 700.99, type: '商业关系型', colors: ['#CC2927','#0078D4'], desc: 'DB-Engines第三，700.99分，微软企业级数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/microsoft.com' },
+        { id: 4, name: 'PostgreSQL', vendor: 'PGDG', score: 682.68, type: '开源关系型', colors: ['#336791','#336791'], desc: 'DB-Engines第四，682.68分，功能最强大的开源RDBMS。数据源: db-engines.com', icon: 'https://logo.clearbit.com/postgresql.org' },
+        { id: 5, name: 'Snowflake', vendor: 'Snowflake', score: 215.64, type: '云数仓', colors: ['#29B5E8','#29B5E8'], desc: 'DB-Engines第六，215.64分，云原生数据仓库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/snowflake.com' },
+        { id: 6, name: 'IBM Db2', vendor: 'IBM', score: 113.04, type: '商业关系型', colors: ['#0078D4','#0052A5'], desc: 'DB-Engines第九，113.04分，企业级数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/ibm.com' },
+        { id: 7, name: 'SQLite', vendor: 'SQLite Consortium', score: 95.88, type: '嵌入式关系型', colors: ['#003545','#003545'], desc: 'DB-Engines第十二，95.88分，轻量级嵌入式数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/sqlite.org' },
+        { id: 8, name: 'MariaDB', vendor: 'MariaDB', score: 82.74, type: '开源关系型', colors: ['#003545','#003545'], desc: 'DB-Engines第十三，82.74分，MySQL兼容开源分支。数据源: db-engines.com', icon: 'https://logo.clearbit.com/mariadb.org' },
+        { id: 9, name: 'Apache Hive', vendor: 'Apache', score: 74.70, type: 'Hadoop数仓', colors: ['#D4A017','#D4A017'], desc: 'DB-Engines第十四，74.70分，Hadoop生态SQL。数据源: db-engines.com', icon: 'https://logo.clearbit.com/hive.apache.org' },
+        { id: 10, name: 'Azure SQL Database', vendor: 'Microsoft', score: 73.34, type: '云关系型', colors: ['#0078D4','#0078D4'], desc: 'DB-Engines第十五，73.34分，Azure云数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/microsoft.com' },
+        { id: 11, name: 'Microsoft Access', vendor: 'Microsoft', score: 62.30, type: '桌面关系型', colors: ['#CC2927','#0078D4'], desc: 'DB-Engines第十七，62.30分，Office数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/microsoft.com' },
+        { id: 12, name: 'BigQuery', vendor: 'Google', score: 50.56, type: 'Serverless数仓', colors: ['#4285F4','#34A853'], desc: 'DB-Engines第十九，50.56分，Google云数仓。数据源: db-engines.com', icon: 'https://logo.clearbit.com/cloud.google.com' },
+        { id: 13, name: 'SAP HANA', vendor: 'SAP', score: 32.43, type: '内存数据库', colors: ['#0FAAFF','#003366'], desc: 'DB-Engines第二十二，32.43分，SAP内存数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/sap.com' },
+        { id: 14, name: 'Teradata', vendor: 'Teradata', score: 30.94, type: '分析数仓', colors: ['#FF6B00','#FF6B00'], desc: 'DB-Engines第二十三，30.94分，企业级数仓。数据源: db-engines.com', icon: 'https://logo.clearbit.com/teradata.com' },
+        { id: 15, name: 'ClickHouse', vendor: 'ClickHouse Inc', score: 23.49, type: 'OLAP列式', colors: ['#FFCC00','#FFCC00'], desc: 'DB-Engines第二十六，23.49分，OLAP列式数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/clickhouse.com' },
+        { id: 16, name: 'DuckDB', vendor: 'DuckDB Foundation', score: 9.59, type: '嵌入式分析', colors: ['#00D2FF','#003366'], desc: 'DB-Engines第四十二，9.59分，嵌入式分析数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/duckdb.org' },
+        { id: 17, name: 'Amazon Aurora', vendor: 'AWS', score: 9.18, type: '云原生关系型', colors: ['#FF9900','#232F3E'], desc: 'DB-Engines第四十五，9.18分，AWS云原生数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/aws.amazon.com' },
+        { id: 18, name: 'H2', vendor: 'H2 Database Group', score: 7.73, type: 'Java嵌入式', colors: ['#1E3A5F','#4A90D9'], desc: 'DB-Engines第五十，7.73分，Java嵌入式数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/h2database.com' }
       ],
       kv: [
-        { id: 1, name: 'Redis', vendor: 'Redis Ltd', score: 147.63, type: '内存键值', colors: ['#DC382D','#DC382D'], desc: 'DB-Engines第八，147.63分，高性能内存键值存储。数据源: db-engines.com', icon: 'https://redis.com/favicon.ico' },
-        { id: 2, name: 'DynamoDB', vendor: 'AWS', score: 60.40, type: '托管键值', colors: ['#FF9900','#232F3E'], desc: 'DB-Engines第十一，60.40分，AWS全托管Serverless。数据源: db-engines.com', icon: 'https://aws.amazon.com/favicon.ico' },
-        { id: 3, name: 'Memcached', vendor: 'Memcached Project', score: 13.00, type: '内存缓存', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第三十九，13.00分，简单高效的内存缓存。数据源: db-engines.com', icon: 'https://memcached.org/favicon.ico' },
-        { id: 4, name: 'etcd', vendor: 'CNCF', score: 6.92, type: '分布式键值', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第五十三，6.92分，Kubernetes底层存储。数据源: db-engines.com', icon: 'https://etcd.io/favicon.ico' },
-        { id: 5, name: 'Hazelcast', vendor: 'Hazelcast Inc', score: 4.47, type: '内存计算', colors: ['#00D2FF','#1E3A5F'], desc: 'DB-Engines第六十八，4.47分，分布式内存计算平台。数据源: db-engines.com', icon: 'https://hazelcast.com/favicon.ico' },
-        { id: 6, name: 'RocksDB', vendor: 'Meta', score: 3.50, type: '嵌入式键值', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第七十六，3.50分，Facebook开源嵌入式KV。数据源: db-engines.com', icon: 'https://rocksdb.org/favicon.ico' },
-        { id: 7, name: 'Riak KV', vendor: 'Basho', score: 3.11, type: '分布式键值', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第九十，3.11分，高可用分布式KV。数据源: db-engines.com', icon: 'https://riak.com/favicon.ico' },
-        { id: 8, name: 'Ehcache', vendor: 'Apache', score: 2.97, type: 'Java缓存', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第九十一，2.97分，Java缓存框架。数据源: db-engines.com', icon: 'https://ehcache.org/favicon.ico' }
+        { id: 1, name: 'Redis', vendor: 'Redis Ltd', score: 147.63, type: '内存键值', colors: ['#DC382D','#DC382D'], desc: 'DB-Engines第八，147.63分，高性能内存键值存储。数据源: db-engines.com', icon: 'https://logo.clearbit.com/redis.com' },
+        { id: 2, name: 'DynamoDB', vendor: 'AWS', score: 60.40, type: '托管键值', colors: ['#FF9900','#232F3E'], desc: 'DB-Engines第十一，60.40分，AWS全托管Serverless。数据源: db-engines.com', icon: 'https://logo.clearbit.com/aws.amazon.com' },
+        { id: 3, name: 'Memcached', vendor: 'Memcached Project', score: 13.00, type: '内存缓存', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第三十九，13.00分，简单高效的内存缓存。数据源: db-engines.com', icon: 'https://logo.clearbit.com/memcached.org' },
+        { id: 4, name: 'etcd', vendor: 'CNCF', score: 6.92, type: '分布式键值', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第五十三，6.92分，Kubernetes底层存储。数据源: db-engines.com', icon: 'https://logo.clearbit.com/etcd.io' },
+        { id: 5, name: 'Hazelcast', vendor: 'Hazelcast Inc', score: 4.47, type: '内存计算', colors: ['#00D2FF','#1E3A5F'], desc: 'DB-Engines第六十八，4.47分，分布式内存计算平台。数据源: db-engines.com', icon: 'https://logo.clearbit.com/hazelcast.com' },
+        { id: 6, name: 'RocksDB', vendor: 'Meta', score: 3.50, type: '嵌入式键值', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第七十六，3.50分，Facebook开源嵌入式KV。数据源: db-engines.com', icon: 'https://logo.clearbit.com/rocksdb.org' },
+        { id: 7, name: 'Riak KV', vendor: 'Basho', score: 3.11, type: '分布式键值', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第九十，3.11分，高可用分布式KV。数据源: db-engines.com', icon: 'https://logo.clearbit.com/riak.com' },
+        { id: 8, name: 'Ehcache', vendor: 'Apache', score: 2.97, type: 'Java缓存', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第九十一，2.97分，Java缓存框架。数据源: db-engines.com', icon: 'https://logo.clearbit.com/ehcache.org' }
       ],
       document: [
-        { id: 1, name: 'MongoDB', vendor: 'MongoDB Inc', score: 384.65, type: '文档数据库', colors: ['#02303A','#47A248'], desc: 'DB-Engines第五，384.65分，最流行的文档数据库。数据源: db-engines.com', icon: 'https://www.mongodb.com/favicon.ico' },
-        { id: 2, name: 'Firebase Realtime Database', vendor: 'Google', score: 15.01, type: '实时文档', colors: ['#FF8C00','#FF8C00'], desc: 'DB-Engines第三十六，15.01分，Firebase实时数据库。数据源: db-engines.com', icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' },
-        { id: 3, name: 'Cloud Firestore', vendor: 'Google', score: 9.48, type: '云文档', colors: ['#4285F4','#34A853'], desc: 'DB-Engines第四十三，9.48分，Google云文档数据库。数据源: db-engines.com', icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' },
-        { id: 4, name: 'Realm', vendor: 'MongoDB', score: 6.42, type: '移动文档', colors: ['#02303A','#47A248'], desc: 'DB-Engines第五十五，6.42分，移动端专用文档数据库。数据源: db-engines.com', icon: 'https://www.mongodb.com/favicon.ico' },
-        { id: 5, name: 'CouchDB', vendor: 'Apache', score: 5.84, type: '文档数据库', colors: ['#E48213','#E48213'], desc: 'DB-Engines第六十二，5.84分，Apache文档数据库。数据源: db-engines.com', icon: 'https://couchdb.apache.org/favicon.ico' },
-        { id: 6, name: 'Couchbase', vendor: 'Couchbase Inc', score: 5.65, type: '文档数据库', colors: ['#1E3A5F','#1E3A5F'], desc: 'DB-Engines第六十四，5.65分，高性能文档数据库。数据源: db-engines.com', icon: 'https://www.couchbase.com/favicon.ico' },
-        { id: 7, name: 'Google Cloud Datastore', vendor: 'Google', score: 3.46, type: '托管文档', colors: ['#4285F4','#34A853'], desc: 'DB-Engines第七十八，3.46分，Google云文档存储。数据源: db-engines.com', icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' },
-        { id: 8, name: 'IBM Cloudant', vendor: 'IBM', score: 2.44, type: '托管文档', colors: ['#0078D4','#0052A5'], desc: 'DB-Engines第一百零七，2.44分，IBM托管文档数据库。数据源: db-engines.com', icon: 'https://www.ibm.com/favicon.ico' },
-        { id: 9, name: 'RavenDB', vendor: 'RavenDB', score: 2.29, type: '文档数据库', colors: ['#F7941D','#F7941D'], desc: 'DB-Engines第一百一十二，2.29分，.NET原生文档数据库。数据源: db-engines.com', icon: 'https://ravendb.net/favicon.ico' },
-        { id: 10, name: 'Amazon DocumentDB', vendor: 'AWS', score: 1.89, type: '托管文档', colors: ['#FF9900','#232F3E'], desc: 'DB-Engines第一百二十八，1.89分，AWS托管MongoDB兼容。数据源: db-engines.com', icon: 'https://aws.amazon.com/favicon.ico' }
+        { id: 1, name: 'MongoDB', vendor: 'MongoDB Inc', score: 384.65, type: '文档数据库', colors: ['#02303A','#47A248'], desc: 'DB-Engines第五，384.65分，最流行的文档数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/mongodb.com' },
+        { id: 2, name: 'Firebase Realtime Database', vendor: 'Google', score: 15.01, type: '实时文档', colors: ['#FF8C00','#FF8C00'], desc: 'DB-Engines第三十六，15.01分，Firebase实时数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/google.com' },
+        { id: 3, name: 'Cloud Firestore', vendor: 'Google', score: 9.48, type: '云文档', colors: ['#4285F4','#34A853'], desc: 'DB-Engines第四十三，9.48分，Google云文档数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/google.com' },
+        { id: 4, name: 'Realm', vendor: 'MongoDB', score: 6.42, type: '移动文档', colors: ['#02303A','#47A248'], desc: 'DB-Engines第五十五，6.42分，移动端专用文档数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/mongodb.com' },
+        { id: 5, name: 'CouchDB', vendor: 'Apache', score: 5.84, type: '文档数据库', colors: ['#E48213','#E48213'], desc: 'DB-Engines第六十二，5.84分，Apache文档数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/couchdb.apache.org' },
+        { id: 6, name: 'Couchbase', vendor: 'Couchbase Inc', score: 5.65, type: '文档数据库', colors: ['#1E3A5F','#1E3A5F'], desc: 'DB-Engines第六十四，5.65分，高性能文档数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/couchbase.com' },
+        { id: 7, name: 'Google Cloud Datastore', vendor: 'Google', score: 3.46, type: '托管文档', colors: ['#4285F4','#34A853'], desc: 'DB-Engines第七十八，3.46分，Google云文档存储。数据源: db-engines.com', icon: 'https://logo.clearbit.com/google.com' },
+        { id: 8, name: 'IBM Cloudant', vendor: 'IBM', score: 2.44, type: '托管文档', colors: ['#0078D4','#0052A5'], desc: 'DB-Engines第一百零七，2.44分，IBM托管文档数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/ibm.com' },
+        { id: 9, name: 'RavenDB', vendor: 'RavenDB', score: 2.29, type: '文档数据库', colors: ['#F7941D','#F7941D'], desc: 'DB-Engines第一百一十二，2.29分，.NET原生文档数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/ravendb.net' },
+        { id: 10, name: 'Amazon DocumentDB', vendor: 'AWS', score: 1.89, type: '托管文档', colors: ['#FF9900','#232F3E'], desc: 'DB-Engines第一百二十八，1.89分，AWS托管MongoDB兼容。数据源: db-engines.com', icon: 'https://logo.clearbit.com/aws.amazon.com' }
       ],
       timeseries: [
-        { id: 1, name: 'InfluxDB', vendor: 'InfluxData', score: 20.86, type: '时序数据库', colors: ['#0182FE','#0182FE'], desc: 'DB-Engines第三十，20.86分，时序数据库首选。数据源: db-engines.com', icon: 'https://www.influxdata.com/favicon.ico' },
-        { id: 2, name: 'Prometheus', vendor: 'CNCF', score: 9.06, type: '监控时序', colors: ['#E6522C','#E6522C'], desc: 'DB-Engines第四十六，9.06分，云原生监控事实标准。数据源: db-engines.com', icon: 'https://prometheus.io/favicon.ico' },
-        { id: 3, name: 'TimescaleDB', vendor: 'Timescale', score: 5.62, type: '时序PG扩展', colors: ['#0182FE','#0182FE'], desc: 'DB-Engines第六十三，5.62分，PostgreSQL时序扩展。数据源: db-engines.com', icon: 'https://www.timescale.com/favicon.ico' },
-        { id: 4, name: 'Graphite', vendor: 'Graphite Project', score: 4.82, type: '监控时序', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第六十六，4.82分，监控指标存储。数据源: db-engines.com', icon: 'https://graphiteapp.org/favicon.ico' },
-        { id: 5, name: 'QuestDB', vendor: 'QuestDB', score: 3.59, type: '高性能时序', colors: ['#0182FE','#0182FE'], desc: 'DB-Engines第七十五，3.59分，超高性能时序数据库。数据源: db-engines.com', icon: 'https://questdb.io/favicon.ico' },
-        { id: 6, name: 'TDengine', vendor: 'TDengine', score: 2.74, type: '工业时序', colors: ['#00D2FF','#003366'], desc: 'DB-Engines第九十八，2.74分，国产工业时序数据库。数据源: db-engines.com', icon: 'https://www.taosdata.com/favicon.ico' },
-        { id: 7, name: 'Apache IoTDB', vendor: 'Apache', score: 1.64, type: 'IoT时序', colors: ['#D4A017','#D4A017'], desc: 'DB-Engines第一百三十九，1.64分，Apache物联网时序数据库。数据源: db-engines.com', icon: 'https://iotdb.apache.org/favicon.ico' },
-        { id: 8, name: 'Amazon Timestream', vendor: 'AWS', score: 1.28, type: '托管时序', colors: ['#FF9900','#232F3E'], desc: 'DB-Engines第一百六十四，1.28分，AWS托管时序数据库。数据源: db-engines.com', icon: 'https://aws.amazon.com/favicon.ico' }
+        { id: 1, name: 'InfluxDB', vendor: 'InfluxData', score: 20.86, type: '时序数据库', colors: ['#0182FE','#0182FE'], desc: 'DB-Engines第三十，20.86分，时序数据库首选。数据源: db-engines.com', icon: 'https://logo.clearbit.com/influxdata.com' },
+        { id: 2, name: 'Prometheus', vendor: 'CNCF', score: 9.06, type: '监控时序', colors: ['#E6522C','#E6522C'], desc: 'DB-Engines第四十六，9.06分，云原生监控事实标准。数据源: db-engines.com', icon: 'https://logo.clearbit.com/prometheus.io' },
+        { id: 3, name: 'TimescaleDB', vendor: 'Timescale', score: 5.62, type: '时序PG扩展', colors: ['#0182FE','#0182FE'], desc: 'DB-Engines第六十三，5.62分，PostgreSQL时序扩展。数据源: db-engines.com', icon: 'https://logo.clearbit.com/timescale.com' },
+        { id: 4, name: 'Graphite', vendor: 'Graphite Project', score: 4.82, type: '监控时序', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第六十六，4.82分，监控指标存储。数据源: db-engines.com', icon: 'https://logo.clearbit.com/graphiteapp.org' },
+        { id: 5, name: 'QuestDB', vendor: 'QuestDB', score: 3.59, type: '高性能时序', colors: ['#0182FE','#0182FE'], desc: 'DB-Engines第七十五，3.59分，超高性能时序数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/questdb.io' },
+        { id: 6, name: 'TDengine', vendor: 'TDengine', score: 2.74, type: '工业时序', colors: ['#00D2FF','#003366'], desc: 'DB-Engines第九十八，2.74分，国产工业时序数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/taosdata.com' },
+        { id: 7, name: 'Apache IoTDB', vendor: 'Apache', score: 1.64, type: 'IoT时序', colors: ['#D4A017','#D4A017'], desc: 'DB-Engines第一百三十九，1.64分，Apache物联网时序数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/iotdb.apache.org' },
+        { id: 8, name: 'Amazon Timestream', vendor: 'AWS', score: 1.28, type: '托管时序', colors: ['#FF9900','#232F3E'], desc: 'DB-Engines第一百六十四，1.28分，AWS托管时序数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/aws.amazon.com' }
       ],
       vector: [
-        { id: 1, name: 'Pinecone', vendor: 'Pinecone Systems', score: 8.33, type: '云向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第四十八，8.33分，云原生向量数据库。数据源: db-engines.com', icon: 'https://www.pinecone.io/favicon.ico' },
-        { id: 2, name: 'Milvus', vendor: 'Zilliz', score: 6.33, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第五十六，6.33分，开源向量数据库。数据源: db-engines.com', icon: 'https://milvus.io/favicon.ico' },
-        { id: 3, name: 'Qdrant', vendor: 'Qdrant Team', score: 5.16, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第六十五，5.16分，Rust高性能向量搜索。数据源: db-engines.com', icon: 'https://qdrant.tech/favicon.ico' },
-        { id: 4, name: 'Weaviate', vendor: 'Weaviate', score: 4.24, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第七十，4.24分，向量搜索引擎。数据源: db-engines.com', icon: 'https://weaviate.io/favicon.ico' },
-        { id: 5, name: 'Chroma', vendor: 'Chroma Team', score: 2.89, type: '嵌入向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第九十二，2.89分，LLM友好向量数据库。数据源: db-engines.com', icon: 'https://www.trychroma.com/favicon.ico' },
-        { id: 6, name: 'Elasticsearch', vendor: 'Elastic', score: 2.35, type: '向量搜索', colors: ['#005571','#F4D03F'], desc: 'DB-Engines第一百零六，2.35分，Elasticsearch向量搜索。数据源: db-engines.com', icon: 'https://www.elastic.co/favicon.ico' }
+        { id: 1, name: 'Pinecone', vendor: 'Pinecone Systems', score: 8.33, type: '云向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第四十八，8.33分，云原生向量数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/pinecone.io' },
+        { id: 2, name: 'Milvus', vendor: 'Zilliz', score: 6.33, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第五十六，6.33分，开源向量数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/milvus.io' },
+        { id: 3, name: 'Qdrant', vendor: 'Qdrant Team', score: 5.16, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第六十五，5.16分，Rust高性能向量搜索。数据源: db-engines.com', icon: 'https://logo.clearbit.com/qdrant.tech' },
+        { id: 4, name: 'Weaviate', vendor: 'Weaviate', score: 4.24, type: '开源向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第七十，4.24分，向量搜索引擎。数据源: db-engines.com', icon: 'https://logo.clearbit.com/weaviate.io' },
+        { id: 5, name: 'Chroma', vendor: 'Chroma Team', score: 2.89, type: '嵌入向量', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第九十二，2.89分，LLM友好向量数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/trychroma.com' },
+        { id: 6, name: 'Elasticsearch', vendor: 'Elastic', score: 2.35, type: '向量搜索', colors: ['#005571','#F4D03F'], desc: 'DB-Engines第一百零六，2.35分，Elasticsearch向量搜索。数据源: db-engines.com', icon: 'https://logo.clearbit.com/elastic.co' }
       ],
       graph: [
-        { id: 1, name: 'Neo4j', vendor: 'Neo4j Inc', score: 47.59, type: '图数据库', colors: ['#008496','#008496'], desc: 'DB-Engines第二十，47.59分，图数据库领导者。数据源: db-engines.com', icon: 'https://neo4j.com/favicon.ico' },
-        { id: 2, name: 'NebulaGraph', vendor: 'Vesoft', score: 1.93, type: '分布式图', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百二十四，1.93分，国产高性能图数据库。数据源: db-engines.com', icon: 'https://vesoft.com/favicon.ico' },
-        { id: 3, name: 'JanusGraph', vendor: 'JanusGraph', score: 1.86, type: '分布式图', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百三十一，1.86分，Apache图数据库。数据源: db-engines.com', icon: 'https://janusgraph.org/favicon.ico' },
-        { id: 4, name: 'TigerGraph', vendor: 'TigerGraph', score: 1.86, type: '分布式图', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百三十二，1.86分，高性能图数据库。数据源: db-engines.com', icon: 'https://www.tigergraph.com/favicon.ico' },
-        { id: 5, name: 'Memgraph', vendor: 'Memgraph', score: 1.69, type: '实时图', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百三十七，1.69分，实时图数据库。数据源: db-engines.com', icon: 'https://memgraph.com/favicon.ico' },
-        { id: 6, name: 'Dgraph', vendor: 'Dgraph Labs', score: 1.27, type: '分布式图', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百六十五，1.27分，分布式图数据库。数据源: db-engines.com', icon: 'https://dgraph.io/favicon.ico' },
-        { id: 7, name: 'ArangoDB', vendor: 'ArangoDB Inc', score: 1.08, type: '多模图', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百八十，1.08分，原生多模数据库。数据源: db-engines.com', icon: 'https://www.arangodb.com/favicon.ico' },
-        { id: 8, name: 'Amazon Neptune', vendor: 'AWS', score: 0.95, type: '托管图', colors: ['#FF9900','#232F3E'], desc: 'DB-Engines第二百，0.95分，AWS托管图数据库。数据源: db-engines.com', icon: 'https://aws.amazon.com/favicon.ico' }
+        { id: 1, name: 'Neo4j', vendor: 'Neo4j Inc', score: 47.59, type: '图数据库', colors: ['#008496','#008496'], desc: 'DB-Engines第二十，47.59分，图数据库领导者。数据源: db-engines.com', icon: 'https://logo.clearbit.com/neo4j.com' },
+        { id: 2, name: 'NebulaGraph', vendor: 'Vesoft', score: 1.93, type: '分布式图', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百二十四，1.93分，国产高性能图数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/vesoft.com' },
+        { id: 3, name: 'JanusGraph', vendor: 'JanusGraph', score: 1.86, type: '分布式图', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百三十一，1.86分，Apache图数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/janusgraph.org' },
+        { id: 4, name: 'TigerGraph', vendor: 'TigerGraph', score: 1.86, type: '分布式图', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百三十二，1.86分，高性能图数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/tigergraph.com' },
+        { id: 5, name: 'Memgraph', vendor: 'Memgraph', score: 1.69, type: '实时图', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百三十七，1.69分，实时图数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/memgraph.com' },
+        { id: 6, name: 'Dgraph', vendor: 'Dgraph Labs', score: 1.27, type: '分布式图', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百六十五，1.27分，分布式图数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/dgraph.io' },
+        { id: 7, name: 'ArangoDB', vendor: 'ArangoDB Inc', score: 1.08, type: '多模图', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百八十，1.08分，原生多模数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/arangodb.com' },
+        { id: 8, name: 'Amazon Neptune', vendor: 'AWS', score: 0.95, type: '托管图', colors: ['#FF9900','#232F3E'], desc: 'DB-Engines第二百，0.95分，AWS托管图数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/aws.amazon.com' }
       ],
       wideColumn: [
-        { id: 1, name: 'Apache HBase', vendor: 'Apache', score: 19.76, type: '列式NoSQL', colors: ['#00ACE0','#00ACE0'], desc: 'DB-Engines第三十二，19.76分，Hadoop生态NoSQL。数据源: db-engines.com', icon: 'https://hbase.apache.org/favicon.ico' },
-        { id: 2, name: 'Apache Cassandra', vendor: 'Apache', score: 18.45, type: '列式分布', colors: ['#1287B1','#1287B1'], desc: 'DB-Engines第三十四，18.45分，高可用分布式数据库。数据源: db-engines.com', icon: 'https://cassandra.apache.org/favicon.ico' },
-        { id: 3, name: 'ScyllaDB', vendor: 'ScyllaDB', score: 4.45, type: 'Cassandra兼容', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第六十九，4.45分，C++高性能Cassandra兼容。数据源: db-engines.com', icon: 'https://www.scylladb.com/favicon.ico' },
-        { id: 4, name: 'DataStax Enterprise', vendor: 'DataStax', score: 3.23, type: 'Cassandra发行版', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第八十六，3.23分，DataStax Cassandra企业版。数据源: db-engines.com', icon: 'https://www.datastax.com/favicon.ico' },
-        { id: 5, name: 'Azure Table Storage', vendor: 'Microsoft', score: 2.78, type: '托管宽列', colors: ['#0078D4','#0078D4'], desc: 'DB-Engines第九十六，2.78分，Azure表存储。数据源: db-engines.com', icon: 'https://azure.microsoft.com/favicon.ico' },
-        { id: 6, name: 'Apache Accumulo', vendor: 'Apache', score: 2.42, type: '安全列式', colors: ['#D4A017','#D4A017'], desc: 'DB-Engines第一百零八，2.42分，Apache安全列式数据库。数据源: db-engines.com', icon: 'https://accumulo.apache.org/favicon.ico' },
-        { id: 7, name: 'Google Bigtable', vendor: 'Google', score: 1.85, type: '列式存储', colors: ['#4285F4','#34A853'], desc: 'DB-Engines第一百三十五，1.85分，Google内部列式存储。数据源: db-engines.com', icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' }
+        { id: 1, name: 'Apache HBase', vendor: 'Apache', score: 19.76, type: '列式NoSQL', colors: ['#00ACE0','#00ACE0'], desc: 'DB-Engines第三十二，19.76分，Hadoop生态NoSQL。数据源: db-engines.com', icon: 'https://logo.clearbit.com/hbase.apache.org' },
+        { id: 2, name: 'Apache Cassandra', vendor: 'Apache', score: 18.45, type: '列式分布', colors: ['#1287B1','#1287B1'], desc: 'DB-Engines第三十四，18.45分，高可用分布式数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/cassandra.apache.org' },
+        { id: 3, name: 'ScyllaDB', vendor: 'ScyllaDB', score: 4.45, type: 'Cassandra兼容', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第六十九，4.45分，C++高性能Cassandra兼容。数据源: db-engines.com', icon: 'https://logo.clearbit.com/scylladb.com' },
+        { id: 4, name: 'DataStax Enterprise', vendor: 'DataStax', score: 3.23, type: 'Cassandra发行版', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第八十六，3.23分，DataStax Cassandra企业版。数据源: db-engines.com', icon: 'https://logo.clearbit.com/datastax.com' },
+        { id: 5, name: 'Azure Table Storage', vendor: 'Microsoft', score: 2.78, type: '托管宽列', colors: ['#0078D4','#0078D4'], desc: 'DB-Engines第九十六，2.78分，Azure表存储。数据源: db-engines.com', icon: 'https://logo.clearbit.com/azure.microsoft.com' },
+        { id: 6, name: 'Apache Accumulo', vendor: 'Apache', score: 2.42, type: '安全列式', colors: ['#D4A017','#D4A017'], desc: 'DB-Engines第一百零八，2.42分，Apache安全列式数据库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/accumulo.apache.org' },
+        { id: 7, name: 'Google Bigtable', vendor: 'Google', score: 1.85, type: '列式存储', colors: ['#4285F4','#34A853'], desc: 'DB-Engines第一百三十五，1.85分，Google内部列式存储。数据源: db-engines.com', icon: 'https://logo.clearbit.com/google.com' }
       ],
       search: [
-        { id: 1, name: 'Splunk', vendor: 'Splunk Inc', score: 72.42, type: '搜索分析', colors: ['#00E79A','#00E79A'], desc: 'DB-Engines第十六，72.42分，机器数据分析平台。数据源: db-engines.com', icon: 'https://www.splunk.com/favicon.ico' },
-        { id: 2, name: 'Apache Solr', vendor: 'Apache', score: 32.52, type: '搜索引擎', colors: ['#F7931E','#F7931E'], desc: 'DB-Engines第二十一，32.52分，Apache全文搜索。数据源: db-engines.com', icon: 'https://solr.apache.org/favicon.ico' },
-        { id: 3, name: 'Algolia', vendor: 'Algolia Inc', score: 6.74, type: '搜索API', colors: ['#5468FF','#5468FF'], desc: 'DB-Engines第五十四，6.74分，搜索即服务API。数据源: db-engines.com', icon: 'https://www.algolia.com/favicon.ico' },
-        { id: 4, name: 'Azure AI Search', vendor: 'Microsoft', score: 6.29, type: '云搜索', colors: ['#0078D4','#0078D4'], desc: 'DB-Engines第五十七，6.29分，Azure认知搜索。数据源: db-engines.com', icon: 'https://azure.microsoft.com/favicon.ico' },
-        { id: 5, name: 'Sphinx', vendor: 'Sphinx Search', score: 5.93, type: '全文搜索', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第六十一，5.93分，SQL全文搜索引警。数据源: db-engines.com', icon: 'https://sphinxsearch.com/favicon.ico' },
-        { id: 6, name: 'Meilisearch', vendor: 'Meilisearch', score: 2.65, type: '开源搜索', colors: ['#FF8C00','#FF8C00'], desc: 'DB-Engines第九十九，2.65分，Rust高性能搜索。数据源: db-engines.com', icon: 'https://www.meilisearch.com/favicon.ico' },
-        { id: 7, name: 'Typesense', vendor: 'Typesense', score: 1.52, type: '开源搜索', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百四十二，1.52分，容错搜索引警。数据源: db-engines.com', icon: 'https://typesense.com/favicon.ico' }
+        { id: 1, name: 'Splunk', vendor: 'Splunk Inc', score: 72.42, type: '搜索分析', colors: ['#00E79A','#00E79A'], desc: 'DB-Engines第十六，72.42分，机器数据分析平台。数据源: db-engines.com', icon: 'https://logo.clearbit.com/splunk.com' },
+        { id: 2, name: 'Apache Solr', vendor: 'Apache', score: 32.52, type: '搜索引擎', colors: ['#F7931E','#F7931E'], desc: 'DB-Engines第二十一，32.52分，Apache全文搜索。数据源: db-engines.com', icon: 'https://logo.clearbit.com/solr.apache.org' },
+        { id: 3, name: 'Algolia', vendor: 'Algolia Inc', score: 6.74, type: '搜索API', colors: ['#5468FF','#5468FF'], desc: 'DB-Engines第五十四，6.74分，搜索即服务API。数据源: db-engines.com', icon: 'https://logo.clearbit.com/algolia.com' },
+        { id: 4, name: 'Azure AI Search', vendor: 'Microsoft', score: 6.29, type: '云搜索', colors: ['#0078D4','#0078D4'], desc: 'DB-Engines第五十七，6.29分，Azure认知搜索。数据源: db-engines.com', icon: 'https://logo.clearbit.com/azure.microsoft.com' },
+        { id: 5, name: 'Sphinx', vendor: 'Sphinx Search', score: 5.93, type: '全文搜索', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第六十一，5.93分，SQL全文搜索引警。数据源: db-engines.com', icon: 'https://logo.clearbit.com/sphinxsearch.com' },
+        { id: 6, name: 'Meilisearch', vendor: 'Meilisearch', score: 2.65, type: '开源搜索', colors: ['#FF8C00','#FF8C00'], desc: 'DB-Engines第九十九，2.65分，Rust高性能搜索。数据源: db-engines.com', icon: 'https://logo.clearbit.com/meilisearch.com' },
+        { id: 7, name: 'Typesense', vendor: 'Typesense', score: 1.52, type: '开源搜索', colors: ['#4A4A4A','#4A4A4A'], desc: 'DB-Engines第一百四十二，1.52分，容错搜索引警。数据源: db-engines.com', icon: 'https://logo.clearbit.com/typesense.com' }
       ],
       bigdata: [
-        { id: 1, name: 'Snowflake', vendor: 'Snowflake', score: 215.64, type: '云数仓', colors: ['#29B5E8','#29B5E8'], desc: 'DB-Engines第六，215.64分，云原生数据仓库。数据源: db-engines.com', icon: 'https://www.snowflake.com/favicon.ico' },
-        { id: 2, name: 'Databricks', vendor: 'Databricks', score: 151.79, type: 'Lakehouse', colors: ['#FF3621','#FF3621'], desc: 'DB-Engines第八，151.79分，Lakehouse平台。数据源: db-engines.com', icon: 'https://www.databricks.com/favicon.ico' },
-        { id: 3, name: 'Elasticsearch', vendor: 'Elastic', score: 96.02, type: '搜索引擎', colors: ['#005571','#F4D03F'], desc: 'DB-Engines第十，96.02分，Elastic Stack核心。数据源: db-engines.com', icon: 'https://www.elastic.co/favicon.ico' },
-        { id: 4, name: 'Apache Hive', vendor: 'Apache', score: 74.70, type: 'Hadoop数仓', colors: ['#D4A017','#D4A017'], desc: 'DB-Engines第十四，74.70分，Hadoop数据仓库。数据源: db-engines.com', icon: 'https://hive.apache.org/favicon.ico' },
-        { id: 5, name: 'BigQuery', vendor: 'Google', score: 50.56, type: 'Serverless数仓', colors: ['#4285F4','#34A853'], desc: 'DB-Engines第十九，50.56分，Google Serverless数仓。数据源: db-engines.com', icon: 'https://www.gstatic.com/bs/image/v2/favicon.ico' },
-        { id: 6, name: 'Amazon Redshift', vendor: 'AWS', score: 14.36, type: '云数仓', colors: ['#FF9900','#232F3E'], desc: 'DB-Engines第四十，14.36分，AWS数据仓库。数据源: db-engines.com', icon: 'https://aws.amazon.com/favicon.ico' },
-        { id: 7, name: 'Azure Synapse', vendor: 'Microsoft', score: 16.79, type: '分析平台', colors: ['#0078D4','#0078D4'], desc: 'DB-Engines第三十七，16.79分，Azure统一分析平台。数据源: db-engines.com', icon: 'https://azure.microsoft.com/favicon.ico' },
-        { id: 8, name: 'Firebolt', vendor: 'Firebolt', score: 3.85, type: '分析数仓', colors: ['#FFD43B','#1E3A5F'], desc: 'DB-Engines第七十三，3.85分，新一代云分析数仓。数据源: db-engines.com', icon: 'https://www.firebolt.io/favicon.ico' },
+        { id: 1, name: 'Snowflake', vendor: 'Snowflake', score: 215.64, type: '云数仓', colors: ['#29B5E8','#29B5E8'], desc: 'DB-Engines第六，215.64分，云原生数据仓库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/snowflake.com' },
+        { id: 2, name: 'Databricks', vendor: 'Databricks', score: 151.79, type: 'Lakehouse', colors: ['#FF3621','#FF3621'], desc: 'DB-Engines第八，151.79分，Lakehouse平台。数据源: db-engines.com', icon: 'https://logo.clearbit.com/databricks.com' },
+        { id: 3, name: 'Elasticsearch', vendor: 'Elastic', score: 96.02, type: '搜索引擎', colors: ['#005571','#F4D03F'], desc: 'DB-Engines第十，96.02分，Elastic Stack核心。数据源: db-engines.com', icon: 'https://logo.clearbit.com/elastic.co' },
+        { id: 4, name: 'Apache Hive', vendor: 'Apache', score: 74.70, type: 'Hadoop数仓', colors: ['#D4A017','#D4A017'], desc: 'DB-Engines第十四，74.70分，Hadoop数据仓库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/hive.apache.org' },
+        { id: 5, name: 'BigQuery', vendor: 'Google', score: 50.56, type: 'Serverless数仓', colors: ['#4285F4','#34A853'], desc: 'DB-Engines第十九，50.56分，Google Serverless数仓。数据源: db-engines.com', icon: 'https://logo.clearbit.com/google.com' },
+        { id: 6, name: 'Amazon Redshift', vendor: 'AWS', score: 14.36, type: '云数仓', colors: ['#FF9900','#232F3E'], desc: 'DB-Engines第四十，14.36分，AWS数据仓库。数据源: db-engines.com', icon: 'https://logo.clearbit.com/aws.amazon.com' },
+        { id: 7, name: 'Azure Synapse', vendor: 'Microsoft', score: 16.79, type: '分析平台', colors: ['#0078D4','#0078D4'], desc: 'DB-Engines第三十七，16.79分，Azure统一分析平台。数据源: db-engines.com', icon: 'https://logo.clearbit.com/azure.microsoft.com' },
+        { id: 8, name: 'Firebolt', vendor: 'Firebolt', score: 3.85, type: '分析数仓', colors: ['#FFD43B','#1E3A5F'], desc: 'DB-Engines第七十三，3.85分，新一代云分析数仓。数据源: db-engines.com', icon: 'https://logo.clearbit.com/firebolt.io' },
         { id: 9, name: 'Dremio', vendor: 'Dremio', score: 3.42, type: '数据湖', colors: ['#5E5E5E','#4A4A4A'], desc: 'DB-Engines第七十七，3.42分，开源数据湖引擎。数据源: db-engines.com' },
         { id: 10, name: 'StarRocks', vendor: 'StarRocks', score: 2.58, type: 'OLAP引擎', colors: ['#00D2FF','#003366'], desc: 'DB-Engines第一百零二，2.58分，国产高性能OLAP。数据源: db-engines.com' }
       ]
@@ -1791,7 +1806,7 @@
         <div class="table-row" data-id="${mod.id}">
           <div class="rank ${idx < 3 ? 'rank-' + (idx+1) : ''}">${idx + 1}</div>
           <div class="tool-info">
-            <div class="tool-logo" style="background: linear-gradient(135deg, ${mod.colors[0]}, ${mod.colors[1]})">${mod.icon ? `<img src="${mod.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${mod.name[0]}';this.remove();" />` : mod.name[0]}</div>
+            <div class="tool-logo" style="background: linear-gradient(135deg, ${mod.colors[0]}, ${mod.colors[1]})">${mod.icon ? `<img src="${mod.icon}" alt="${mod.name}" onerror="this.parentElement.textContent='${mod.name[0]}';this.remove();" />` : mod.name[0]}</div>
             <div>
               <div class="tool-name">${mod.name}</div>
               <div class="tool-vendor">${mod.vendor}</div>
@@ -1840,7 +1855,7 @@
       document.getElementById('modalTitle').textContent = mod.name;
       document.getElementById('modalContent').innerHTML = `
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
-          <div class="tool-logo" style="width:40px;height:40px;font-size:18px;background:linear-gradient(135deg,${mod.colors[0]},${mod.colors[1]})">${mod.icon ? `<img src="${mod.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${mod.name[0]}';this.remove();" />` : mod.name[0]}</div>
+          <div class="tool-logo" style="width:40px;height:40px;font-size:18px;background:linear-gradient(135deg,${mod.colors[0]},${mod.colors[1]})">${mod.icon ? `<img src="${mod.icon}" alt="${mod.name}" onerror="this.parentElement.textContent='${mod.name[0]}';this.remove();" />` : mod.name[0]}</div>
           <div>
             <h2 style="font-size:18px;margin-bottom:2px;">${mod.name}</h2>
             <span style="color:var(--text-secondary);font-size:12px;">${mod.vendor}</span>
@@ -1921,7 +1936,7 @@
       const featured = tools.slice(0, 6);
       container.innerHTML = featured.map(t => `
         <div class="featured-card" onclick="switchTab('tools')">
-          <div class="featured-logo" style="background:linear-gradient(135deg,${t.colors[0]},${t.colors[1]})">${t.icon ? `<img src="${t.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${t.name[0]}';this.remove();" />` : t.name[0]}</div>
+          <div class="featured-logo" style="background:linear-gradient(135deg,${t.colors[0]},${t.colors[1]})">${t.icon ? `<img src="${t.icon}" alt="${t.name}" onerror="this.parentElement.textContent='${t.name[0]}';this.remove();" />` : t.name[0]}</div>
           <div class="featured-info">
             <h4>${t.name}</h4>
             <p>${t.vendor}</p>
@@ -2431,7 +2446,7 @@
         <div class="table-row" data-id="${tool.id}">
           <div class="rank ${idx < 3 ? 'rank-' + (idx+1) : ''}">${idx + 1}</div>
           <div class="tool-info">
-            <div class="tool-logo" style="background: linear-gradient(135deg, ${tool.colors[0]}, ${tool.colors[1]})">${tool.icon ? `<img src="${tool.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${tool.name[0]}';this.remove();" />` : tool.name[0]}</div>
+            <div class="tool-logo" style="background: linear-gradient(135deg, ${tool.colors[0]}, ${tool.colors[1]})">${tool.icon ? `<img src="${tool.icon}" alt="${tool.name}" onerror="this.parentElement.textContent='${tool.name[0]}';this.remove();" />` : tool.name[0]}</div>
             <div>
               <div class="tool-name">${tool.name}</div>
               <div class="tool-vendor">${tool.vendor}</div>
@@ -2483,7 +2498,7 @@
         <div class="top-card">
           <div class="top-rank">${idx + 1}</div>
           <div class="tool-info">
-            <div class="tool-logo" style="background: linear-gradient(135deg, ${tool.colors[0]}, ${tool.colors[1]})">${tool.icon ? `<img src="${tool.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${tool.name[0]}';this.remove();" />` : tool.name[0]}</div>
+            <div class="tool-logo" style="background: linear-gradient(135deg, ${tool.colors[0]}, ${tool.colors[1]})">${tool.icon ? `<img src="${tool.icon}" alt="${tool.name}" onerror="this.parentElement.textContent='${tool.name[0]}';this.remove();" />` : tool.name[0]}</div>
             <div>
               <div class="tool-name">${tool.name}</div>
               <div class="tool-vendor">${tool.vendor}</div>
@@ -2628,7 +2643,7 @@
         <div class="table-row" data-id="${lang.id}">
           <div class="rank ${idx < 3 ? 'rank-' + (idx+1) : ''}">${idx + 1}</div>
           <div class="tool-info">
-            <div class="tool-logo" style="background: linear-gradient(135deg, ${lang.colors[0]}, ${lang.colors[1]})">${lang.icon ? `<img src="${lang.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${lang.name[0]}';this.remove();" />` : lang.name[0]}</div>
+            <div class="tool-logo" style="background: linear-gradient(135deg, ${lang.colors[0]}, ${lang.colors[1]})">${lang.icon ? `<img src="${lang.icon}" alt="${lang.name}" onerror="this.parentElement.textContent='${lang.name[0]}';this.remove();" />` : lang.name[0]}</div>
             <div>
               <div class="tool-name">${lang.name}</div>
               <div class="tool-vendor">${lang.type}</div>
@@ -2682,7 +2697,7 @@
       document.getElementById('modalTitle').textContent = lang.name;
       document.getElementById('modalContent').innerHTML = `
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
-          <div class="tool-logo" style="width:40px;height:40px;font-size:18px;background:linear-gradient(135deg,${lang.colors[0]},${lang.colors[1]})">${lang.icon ? `<img src="${lang.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${lang.name[0]}';this.remove();" />` : lang.name[0]}</div>
+          <div class="tool-logo" style="width:40px;height:40px;font-size:18px;background:linear-gradient(135deg,${lang.colors[0]},${lang.colors[1]})">${lang.icon ? `<img src="${lang.icon}" alt="${lang.name}" onerror="this.parentElement.textContent='${lang.name[0]}';this.remove();" />` : lang.name[0]}</div>
           <div>
             <h2 style="font-size:18px;margin-bottom:2px;">${lang.name}</h2>
             <span style="color:var(--text-secondary);font-size:12px;">${lang.type}</span>
@@ -2784,7 +2799,7 @@
         <div class="table-row" data-id="${db.id}">
           <div class="rank ${idx < 3 ? 'rank-' + (idx+1) : ''}">${idx + 1}</div>
           <div class="tool-info">
-            <div class="tool-logo" style="background: linear-gradient(135deg, ${db.colors[0]}, ${db.colors[1]})">${db.icon ? `<img src="${db.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${db.name[0]}';this.remove();" />` : db.name[0]}</div>
+            <div class="tool-logo" style="background: linear-gradient(135deg, ${db.colors[0]}, ${db.colors[1]})">${db.icon ? `<img src="${db.icon}" alt="${db.name}" onerror="this.parentElement.textContent='${db.name[0]}';this.remove();" />` : db.name[0]}</div>
             <div>
               <div class="tool-name">${db.name}</div>
               <div class="tool-vendor">${db.vendor}</div>
@@ -2849,7 +2864,7 @@
       document.getElementById('modalTitle').textContent = db.name;
       document.getElementById('modalContent').innerHTML = `
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
-          <div class="tool-logo" style="width:40px;height:40px;font-size:18px;background:linear-gradient(135deg,${db.colors[0]},${db.colors[1]})">${db.icon ? `<img src="${db.icon}" style="width:100%;height:100%;object-fit:contain;" onerror="this.parentElement.textContent='${db.name[0]}';this.remove();" />` : db.name[0]}</div>
+          <div class="tool-logo" style="width:40px;height:40px;font-size:18px;background:linear-gradient(135deg,${db.colors[0]},${db.colors[1]})">${db.icon ? `<img src="${db.icon}" alt="${db.name}" onerror="this.parentElement.textContent='${db.name[0]}';this.remove();" />` : db.name[0]}</div>
           <div>
             <h2 style="font-size:18px;margin-bottom:2px;">${db.name}</h2>
             <span style="color:var(--text-secondary);font-size:12px;">${db.vendor}</span>
@@ -2925,7 +2940,7 @@
           <div class="rank ${idx < 3 ? 'rank-' + (idx+1) : ''}">${idx + 1}</div>
           <div class="tool-info">
             <div class="tool-logo" style="background: linear-gradient(135deg, #24292e, #586069)">
-              <img src="${app.icon}" style="width:100%;height:100%;object-fit:contain;border-radius:4px;" onerror="this.parentElement.textContent='${app.name[0]}';this.remove();" />
+              <img src="${app.icon}" alt="${app.name}" onerror="this.parentElement.textContent='${app.name[0]}';this.remove();" />
             </div>
             <div>
               <div class="tool-name">${app.name}</div>

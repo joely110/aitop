@@ -1,0 +1,683 @@
+[
+  {
+    "id": 1,
+    "name": "AutoGPT",
+    "repo": "Significant-Gravitas/AutoGPT",
+    "stars": 184370,
+    "language": "Python",
+    "category": "Agent",
+    "desc": "The original autonomous AI agent experiment. Create self-prompting AI agents that achieve goals autonomously.",
+    "topics": [
+      "ai",
+      "autonomous",
+      "agent",
+      "gpt",
+      "autogpt"
+    ],
+    "icon": "https://github.com/Significant-Gravitas.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 2,
+    "name": "TensorFlow",
+    "repo": "tensorflow/tensorflow",
+    "stars": 195134,
+    "language": "C++",
+    "category": "Framework",
+    "desc": "Open source machine learning platform for everyone. Google end-to-end ML framework for production.",
+    "topics": [
+      "machine-learning",
+      "deep-learning",
+      "neural-networks",
+      "google"
+    ],
+    "icon": "https://github.com/tensorflow.png?size=64",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": 3,
+    "name": "Hugging Face Transformers",
+    "repo": "huggingface/transformers",
+    "stars": 160682,
+    "language": "Python",
+    "category": "LLM",
+    "desc": "State-of-the-art ML for PyTorch, TensorFlow, and JAX. Thousands of pretrained models for NLP, vision, and more.",
+    "topics": [
+      "nlp",
+      "deep-learning",
+      "pytorch",
+      "pretrained-models"
+    ],
+    "icon": "https://github.com/huggingface.png?size=64",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": 4,
+    "name": "Stable Diffusion WebUI",
+    "repo": "AUTOMATIC1111/stable-diffusion-webui",
+    "stars": 163097,
+    "language": "Python",
+    "category": "Image",
+    "desc": "Feature-rich web interface for Stable Diffusion with txt2img, img2img, inpainting, and extensive extensions.",
+    "topics": [
+      "stable-diffusion",
+      "ai-art",
+      "webui",
+      "image-generation"
+    ],
+    "icon": "https://github.com/AUTOMATIC1111.png?size=64",
+    "license": "AGPL-3.0"
+  },
+  {
+    "id": 5,
+    "name": "Ollama",
+    "repo": "ollama/ollama",
+    "stars": 171595,
+    "language": "Go",
+    "category": "LLM",
+    "desc": "Get up and running with Llama, Mistral, and other LLMs locally with a single command.",
+    "topics": [
+      "llm",
+      "local-ai",
+      "inference",
+      "ollama"
+    ],
+    "icon": "https://github.com/ollama.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 6,
+    "name": "LangChain",
+    "repo": "langchain-ai/langchain",
+    "stars": 136923,
+    "language": "Python",
+    "category": "Agent",
+    "desc": "Framework for developing applications powered by language models with chains, agents, and retrieval.",
+    "topics": [
+      "llm",
+      "agents",
+      "framework",
+      "rag"
+    ],
+    "icon": "https://github.com/langchain-ai.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 7,
+    "name": "Open-WebUI",
+    "repo": "open-webui/open-webui",
+    "stars": 137430,
+    "language": "Python",
+    "category": "LLM",
+    "desc": "User-friendly AI interface supporting Ollama and various LLM runners. Self-hosted ChatGPT alternative.",
+    "topics": [
+      "llm",
+      "ui",
+      "chatbot",
+      "self-hosted"
+    ],
+    "icon": "https://github.com/open-webui.png?size=64",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "id": 8,
+    "name": "Llama.cpp",
+    "repo": "ggml-org/llama.cpp",
+    "stars": 110550,
+    "language": "C++",
+    "category": "LLM",
+    "desc": "Port of LLaMA model in C/C++ with optimized inference for CPU and GPU, including Apple Silicon.",
+    "topics": [
+      "llm",
+      "inference",
+      "cpp",
+      "quantization"
+    ],
+    "icon": "https://github.com/ggml-org.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 9,
+    "name": "DeepSeek-V3",
+    "repo": "deepseek-ai/DeepSeek-V3",
+    "stars": 103557,
+    "language": "Python",
+    "category": "LLM",
+    "desc": "Advanced LLM with 671B parameters using MoE architecture. Top-performing open-source model.",
+    "topics": [
+      "llm",
+      "deepseek",
+      "moe",
+      "large-model"
+    ],
+    "icon": "https://github.com/deepseek-ai.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 10,
+    "name": "PyTorch",
+    "repo": "pytorch/pytorch",
+    "stars": 99957,
+    "language": "Python",
+    "category": "Framework",
+    "desc": "Tensors and Dynamic neural networks in Python with strong GPU acceleration. Meta AI framework.",
+    "topics": [
+      "deep-learning",
+      "machine-learning",
+      "neural-networks",
+      "meta"
+    ],
+    "icon": "https://github.com/pytorch.png?size=64",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "id": 11,
+    "name": "Whisper",
+    "repo": "openai/whisper",
+    "stars": 99618,
+    "language": "Python",
+    "category": "Voice",
+    "desc": "Robust speech recognition via large-scale weak supervision. OpenAI automatic speech recognition model.",
+    "topics": [
+      "speech-recognition",
+      "asr",
+      "audio",
+      "openai"
+    ],
+    "icon": "https://github.com/openai.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 12,
+    "name": "ComfyUI",
+    "repo": "comfyanonymous/ComfyUI",
+    "stars": 92000,
+    "language": "Python",
+    "category": "Image",
+    "desc": "Most powerful and modular Stable Diffusion GUI with a node/graph interface for complex workflows.",
+    "topics": [
+      "stable-diffusion",
+      "nodes",
+      "workflows",
+      "gui"
+    ],
+    "icon": "https://github.com/comfyanonymous.png?size=64",
+    "license": "GPL-3.0"
+  },
+  {
+    "id": 13,
+    "name": "vLLM",
+    "repo": "vllm-project/vllm",
+    "stars": 80234,
+    "language": "Python",
+    "category": "LLM",
+    "desc": "High-throughput and memory-efficient inference and serving engine for LLMs with PagedAttention.",
+    "topics": [
+      "llm",
+      "inference",
+      "serving",
+      "gpu"
+    ],
+    "icon": "https://github.com/vllm-project.png?size=64",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": 14,
+    "name": "OpenAI Cookbook",
+    "repo": "openai/openai-cookbook",
+    "stars": 73580,
+    "language": "Jupyter Notebook",
+    "category": "Other",
+    "desc": "Examples and guides for using the OpenAI API, including embeddings, RAG, and fine-tuning patterns.",
+    "topics": [
+      "openai",
+      "examples",
+      "embeddings",
+      "rag"
+    ],
+    "icon": "https://github.com/openai.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 15,
+    "name": "Fooocus",
+    "repo": "lllyasviel/Fooocus",
+    "stars": 75000,
+    "language": "Python",
+    "category": "Image",
+    "desc": "Image generation software focused on simplicity. Rethinking Stable Diffusion for ease of use.",
+    "topics": [
+      "image-generation",
+      "stable-diffusion",
+      "ai-art",
+      "ease-of-use"
+    ],
+    "icon": "https://github.com/lllyasviel.png?size=64",
+    "license": "GPL-3.0"
+  },
+  {
+    "id": 16,
+    "name": "Stable Diffusion",
+    "repo": "CompVis/stable-diffusion",
+    "stars": 73000,
+    "language": "Jupyter Notebook",
+    "category": "Image",
+    "desc": "Latent text-to-image diffusion model. The original Stable Diffusion implementation from CompVis.",
+    "topics": [
+      "diffusion",
+      "text-to-image",
+      "ai-art",
+      "generative"
+    ],
+    "icon": "https://github.com/CompVis.png?size=64",
+    "license": "CreativeML-Open"
+  },
+  {
+    "id": 17,
+    "name": "Meta Llama",
+    "repo": "meta-llama/llama",
+    "stars": 59425,
+    "language": "Python",
+    "category": "LLM",
+    "desc": "Official inference code for Llama 2 and Llama 3, the open large language models by Meta AI.",
+    "topics": [
+      "llm",
+      "llama",
+      "meta",
+      "open-source"
+    ],
+    "icon": "https://github.com/meta-llama.png?size=64",
+    "license": "LLAMA-3.1"
+  },
+  {
+    "id": 18,
+    "name": "AutoGen",
+    "repo": "microsoft/autogen",
+    "stars": 58097,
+    "language": "Python",
+    "category": "Agent",
+    "desc": "Multi-agent conversation framework by Microsoft. Build LLM applications via multiple agents.",
+    "topics": [
+      "multi-agent",
+      "llm",
+      "framework",
+      "microsoft"
+    ],
+    "icon": "https://github.com/microsoft.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 19,
+    "name": "LlamaIndex",
+    "repo": "run-llama/llama_index",
+    "stars": 49462,
+    "language": "Python",
+    "category": "RAG",
+    "desc": "Data framework for LLM applications. Connect data sources to LLMs for RAG and search.",
+    "topics": [
+      "rag",
+      "llm",
+      "framework",
+      "data"
+    ],
+    "icon": "https://github.com/run-llama.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 20,
+    "name": "Aider",
+    "repo": "Aider-AI/aider",
+    "stars": 44916,
+    "language": "Python",
+    "category": "Coding",
+    "desc": "AI pair programming in your terminal. Uses GPT-4, Claude, or local LLMs to edit code in your git repo.",
+    "topics": [
+      "ai",
+      "pair-programming",
+      "cli",
+      "git"
+    ],
+    "icon": "https://github.com/Aider-AI.png?size=64",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": 21,
+    "name": "Coqui TTS",
+    "repo": "coqui-ai/TTS",
+    "stars": 45321,
+    "language": "Python",
+    "category": "Voice",
+    "desc": "Deep learning toolkit for Text-to-Speech, battle-tested in research and production.",
+    "topics": [
+      "tts",
+      "text-to-speech",
+      "deep-learning",
+      "voice"
+    ],
+    "icon": "https://github.com/coqui-ai.png?size=64",
+    "license": "MPL-2.0"
+  },
+  {
+    "id": 22,
+    "name": "Whisper.cpp",
+    "repo": "ggerganov/whisper.cpp",
+    "stars": 45000,
+    "language": "C++",
+    "category": "Voice",
+    "desc": "High-performance inference of OpenAI Whisper model in pure C/C++ with no dependencies.",
+    "topics": [
+      "whisper",
+      "asr",
+      "cpp",
+      "audio"
+    ],
+    "icon": "https://github.com/ggerganov.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 23,
+    "name": "FastChat",
+    "repo": "lm-sys/FastChat",
+    "stars": 39469,
+    "language": "Python",
+    "category": "Agent",
+    "desc": "Open platform for training, serving, and evaluating LLM-based chatbots. Vicuna & ChatGPT replicas.",
+    "topics": [
+      "chatbot",
+      "serving",
+      "evaluation",
+      "llm"
+    ],
+    "icon": "https://github.com/lm-sys.png?size=64",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": 24,
+    "name": "LangChain-Chatchat",
+    "repo": "chatchat-space/Langchain-Chatchat",
+    "stars": 38035,
+    "language": "Python",
+    "category": "RAG",
+    "desc": "Local knowledge-based LLM app with RAG. Chat with your documents using local models.",
+    "topics": [
+      "rag",
+      "local-llm",
+      "knowledge-base",
+      "chatbot"
+    ],
+    "icon": "https://github.com/chatchat-space.png?size=64",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": 25,
+    "name": "Khoj",
+    "repo": "khoj-ai/khoj",
+    "stars": 34575,
+    "language": "Python",
+    "category": "Other",
+    "desc": "AI personal assistant for search, chat, and automation. Works offline with local LLMs.",
+    "topics": [
+      "ai",
+      "search",
+      "personal-assistant",
+      "llm"
+    ],
+    "icon": "https://github.com/khoj-ai.png?size=64",
+    "license": "AGPL-3.0"
+  },
+  {
+    "id": 26,
+    "name": "Tabby",
+    "repo": "TabbyML/tabby",
+    "stars": 33524,
+    "language": "Rust",
+    "category": "Coding",
+    "desc": "Self-hosted AI coding assistant with GitHub Copilot parity. Open-source for enterprise teams.",
+    "topics": [
+      "ai",
+      "copilot",
+      "self-hosted",
+      "code-completion"
+    ],
+    "icon": "https://github.com/TabbyML.png?size=64",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": 27,
+    "name": "Continue",
+    "repo": "continuedev/continue",
+    "stars": 33226,
+    "language": "TypeScript",
+    "category": "Coding",
+    "desc": "Open-source AI code assistant bringing ChatGPT and LLMs directly into VS Code and JetBrains IDEs.",
+    "topics": [
+      "ai",
+      "code-completion",
+      "copilot",
+      "vscode"
+    ],
+    "icon": "https://github.com/continuedev.png?size=64",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": 28,
+    "name": "CLIP",
+    "repo": "openai/CLIP",
+    "stars": 33504,
+    "language": "Jupyter Notebook",
+    "category": "Other",
+    "desc": "Connects text and images. Pretrained model for visual understanding from natural language prompts.",
+    "topics": [
+      "vision",
+      "multimodal",
+      "contrastive-learning",
+      "openai"
+    ],
+    "icon": "https://github.com/openai.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 29,
+    "name": "LangGraph",
+    "repo": "langchain-ai/langgraph",
+    "stars": 32220,
+    "language": "Python",
+    "category": "Agent",
+    "desc": "Build stateful, multi-actor applications with LLMs. Create agent workflows with persistence.",
+    "topics": [
+      "agents",
+      "workflows",
+      "state-machine",
+      "llm"
+    ],
+    "icon": "https://github.com/langchain-ai.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 30,
+    "name": "ControlNet",
+    "repo": "lllyasviel/ControlNet",
+    "stars": 48000,
+    "language": "Python",
+    "category": "Image",
+    "desc": "Add conditional control to text-to-image diffusion models for precise image generation.",
+    "topics": [
+      "control",
+      "diffusion",
+      "image-generation",
+      "pose"
+    ],
+    "icon": "https://github.com/lllyasviel.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 31,
+    "name": "Chroma",
+    "repo": "chroma-core/chroma",
+    "stars": 27975,
+    "language": "Rust",
+    "category": "RAG",
+    "desc": "AI-native open-source embedding database for building LLM apps with vector memory.",
+    "topics": [
+      "vector-database",
+      "embeddings",
+      "llm",
+      "ai-native"
+    ],
+    "icon": "https://github.com/chroma-core.png?size=64",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": 32,
+    "name": "Diffusers",
+    "repo": "huggingface/diffusers",
+    "stars": 30500,
+    "language": "Python",
+    "category": "Image",
+    "desc": "State-of-the-art diffusion models for image and audio generation in PyTorch and Flax.",
+    "topics": [
+      "diffusion",
+      "image-generation",
+      "huggingface",
+      "pytorch"
+    ],
+    "icon": "https://github.com/huggingface.png?size=64",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": 33,
+    "name": "DeepSeek-Coder",
+    "repo": "deepseek-ai/DeepSeek-Coder",
+    "stars": 23378,
+    "language": "Python",
+    "category": "Coding",
+    "desc": "State-of-the-art code LLM trained from scratch on 2 trillion tokens including 87% code.",
+    "topics": [
+      "llm",
+      "code-generation",
+      "deepseek",
+      "programming"
+    ],
+    "icon": "https://github.com/deepseek-ai.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 34,
+    "name": "MLC LLM",
+    "repo": "mlc-ai/mlc-llm",
+    "stars": 22646,
+    "language": "Python",
+    "category": "LLM",
+    "desc": "Universal LLM deployment engine with native acceleration on consumer devices including phones.",
+    "topics": [
+      "llm",
+      "mobile",
+      "edge",
+      "inference"
+    ],
+    "icon": "https://github.com/mlc-ai.png?size=64",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": 35,
+    "name": "UniLM",
+    "repo": "microsoft/unilm",
+    "stars": 22128,
+    "language": "Python",
+    "category": "Framework",
+    "desc": "Large-scale Self-supervised Pre-training across Tasks, Languages, and Modalities by Microsoft.",
+    "topics": [
+      "pretraining",
+      "microsoft",
+      "multimodal",
+      "nlp"
+    ],
+    "icon": "https://github.com/microsoft.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 36,
+    "name": "Qwen",
+    "repo": "QwenLM/Qwen",
+    "stars": 21161,
+    "language": "Python",
+    "category": "LLM",
+    "desc": "Alibaba large language model series with multimodal capabilities and strong coding prowess.",
+    "topics": [
+      "llm",
+      "qwen",
+      "multimodal",
+      "alibaba"
+    ],
+    "icon": "https://github.com/QwenLM.png?size=64",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": 37,
+    "name": "RVC",
+    "repo": "RVC-Project/Retrieval-based-Voice-Conversion-WebUI",
+    "stars": 35629,
+    "language": "Python",
+    "category": "Voice",
+    "desc": "Easy-to-use voice conversion framework based on VITS. Change your voice to anyone.",
+    "topics": [
+      "voice-conversion",
+      "rvc",
+      "vits",
+      "audio"
+    ],
+    "icon": "https://github.com/RVC-Project.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 38,
+    "name": "Fish Speech",
+    "repo": "fishaudio/fish-speech",
+    "stars": 30369,
+    "language": "Python",
+    "category": "Voice",
+    "desc": "Open-source TTS model with high-quality voice cloning and multilingual support.",
+    "topics": [
+      "tts",
+      "voice-cloning",
+      "speech-synthesis",
+      "multilingual"
+    ],
+    "icon": "https://github.com/fishaudio.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 39,
+    "name": "Pydantic AI",
+    "repo": "pydantic/pydantic-ai",
+    "stars": 17105,
+    "language": "Python",
+    "category": "Agent",
+    "desc": "Agent framework for Python with Pydantic integration. Type-safe LLM application development.",
+    "topics": [
+      "agent",
+      "pydantic",
+      "python",
+      "type-safe"
+    ],
+    "icon": "https://github.com/pydantic.png?size=64",
+    "license": "MIT"
+  },
+  {
+    "id": 40,
+    "name": "Weaviate",
+    "repo": "weaviate/weaviate",
+    "stars": 16195,
+    "language": "Go",
+    "category": "RAG",
+    "desc": "AI-native vector database with semantic search, hybrid search, and generative AI capabilities.",
+    "topics": [
+      "vector-database",
+      "semantic-search",
+      "graphql",
+      "hybrid-search"
+    ],
+    "icon": "https://github.com/weaviate.png?size=64",
+    "license": "BSD-3-Clause"
+  }
+]

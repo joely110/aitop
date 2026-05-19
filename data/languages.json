@@ -1,0 +1,348 @@
+[
+  {
+    "id": 1,
+    "name": "Python",
+    "rank": 1,
+    "score": 100.0,
+    "type": "脚本语言",
+    "colors": [
+      "#3776AB",
+      "#FFD43B"
+    ],
+    "desc": "TIOBE榜首，AI/数据科学绝对霸主，GitHub增长最快语言。数据源: tiobe.com",
+    "desc_en": "TIOBE #1, absolute leader in AI/data science, fastest growing language on GitHub.",
+    "icon": "./icons/python.org.png"
+  },
+  {
+    "id": 2,
+    "name": "JavaScript",
+    "rank": 2,
+    "score": 92.5,
+    "type": "脚本语言",
+    "colors": [
+      "#F7DF1E",
+      "#323330"
+    ],
+    "desc": "Stack Overflow使用率最高，Web开发核心，全栈必备。数据源: survey.stackoverflow.co",
+    "desc_en": "Stack Overflow highest usage, core of web development, essential for full-stack.",
+    "icon": "./icons/dd2d390305e732cf.png"
+  },
+  {
+    "id": 3,
+    "name": "TypeScript",
+    "rank": 3,
+    "score": 88.0,
+    "type": "编译语言",
+    "colors": [
+      "#3178C6",
+      "#00599C"
+    ],
+    "desc": "GitHub第一语言，JS超集，大型项目首选。数据源: octoverse.github.com",
+    "icon": "./icons/typescriptlang.org.png"
+  },
+  {
+    "id": 4,
+    "name": "C",
+    "rank": 4,
+    "score": 85.5,
+    "type": "编译语言",
+    "colors": [
+      "#A8B9CC",
+      "#555555"
+    ],
+    "desc": "TIOBE第二，系统编程基础，嵌入式开发主力。数据源: tiobe.com",
+    "desc_en": "TIOBE #2, foundation of systems programming, mainstay of embedded development.",
+    "icon": "./icons/en.cppreference.com.png"
+  },
+  {
+    "id": 5,
+    "name": "Java",
+    "rank": 5,
+    "score": 83.0,
+    "type": "编译语言",
+    "colors": [
+      "#ED8B00",
+      "#5382A6"
+    ],
+    "desc": "TIOBE第三，企业级应用主力，Android开发语言。数据源: tiobe.com",
+    "desc_en": "TIOBE #3, enterprise application mainstay, primary Android language.",
+    "icon": "./icons/java.com.png"
+  },
+  {
+    "id": 6,
+    "name": "C++",
+    "rank": 6,
+    "score": 80.5,
+    "type": "编译语言",
+    "colors": [
+      "#00599C",
+      "#00599C"
+    ],
+    "desc": "TIOBE第四，系统编程、游戏开发、高性能计算。数据源: tiobe.com",
+    "desc_en": "TIOBE #4, systems programming, game development, high-performance computing.",
+    "icon": "./icons/isocpp.org.png"
+  },
+  {
+    "id": 7,
+    "name": "Go",
+    "rank": 7,
+    "score": 78.0,
+    "type": "编译语言",
+    "colors": [
+      "#00ADD8",
+      "#008080"
+    ],
+    "desc": "云原生首选，并发支持优秀，SO最受推崇语言第五。数据源: survey.stackoverflow.co",
+    "desc_en": "Cloud-native preferred, excellent concurrency support.",
+    "icon": "./icons/go.dev.png"
+  },
+  {
+    "id": 8,
+    "name": "Rust",
+    "rank": 8,
+    "score": 75.5,
+    "type": "编译语言",
+    "colors": [
+      "#DEA584",
+      "#B7410E"
+    ],
+    "desc": "SO最受推崇语言第一，72%开发者想继续使用，安全高性能。数据源: survey.stackoverflow.co",
+    "desc_en": "SO #1 most admired language, safe and high-performance.",
+    "icon": "./icons/rust-lang.org.png"
+  },
+  {
+    "id": 9,
+    "name": "SQL",
+    "rank": 9,
+    "score": 72.0,
+    "type": "查询语言",
+    "colors": [
+      "#00758F",
+      "#E38C00"
+    ],
+    "desc": "SO使用率58.6%，数据库操作必备，数据工程师核心技能。数据源: survey.stackoverflow.co",
+    "desc_en": "SO 58.6% usage, essential for database operations.",
+    "icon": "./icons/mysql.com.png"
+  },
+  {
+    "id": 10,
+    "name": "C#",
+    "rank": 10,
+    "score": 70.0,
+    "type": "编译语言",
+    "colors": [
+      "#512BD4",
+      "#239B20"
+    ],
+    "desc": "TIOBE第五，.NET主力，游戏开发Unity。数据源: tiobe.com",
+    "desc_en": "TIOBE #5, .NET mainstay, Unity game development.",
+    "icon": "./icons/learn.microsoft.com.png"
+  },
+  {
+    "id": 11,
+    "name": "PHP",
+    "rank": 11,
+    "score": 62.0,
+    "type": "脚本语言",
+    "colors": [
+      "#777BB4",
+      "#4F5D95"
+    ],
+    "desc": "TIOBE第六，Web服务器端经典语言，CMS构建主流。数据源: tiobe.com",
+    "desc_en": "TIOBE #6, classic server-side web language.",
+    "icon": "./icons/php.net.png"
+  },
+  {
+    "id": 12,
+    "name": "R",
+    "rank": 12,
+    "score": 52.0,
+    "type": "统计语言",
+    "colors": [
+      "#276DC3",
+      "#276DC3"
+    ],
+    "desc": "数据科学标配，统计分析、生物信息学必备。数据源: tiobe.com",
+    "desc_en": "Data science standard, essential for statistical analysis and bioinformatics.",
+    "icon": "./icons/r-project.org.png"
+  },
+  {
+    "id": 13,
+    "name": "Swift",
+    "rank": 13,
+    "score": 48.0,
+    "type": "编译语言",
+    "colors": [
+      "#F05138",
+      "#F05138"
+    ],
+    "desc": "Apple主力语言，iOS/macOS开发首选，安全性高。数据源: tiobe.com",
+    "icon": "./icons/swift.org.png"
+  },
+  {
+    "id": 14,
+    "name": "Kotlin",
+    "rank": 14,
+    "score": 45.0,
+    "type": "编译语言",
+    "colors": [
+      "#7F52FF",
+      "#7F52FF"
+    ],
+    "desc": "Android官方语言，Google推荐，简洁安全。数据源: tiobe.com",
+    "desc_en": "Android official language, Google recommended, concise and safe.",
+    "icon": "./icons/kotlinlang.org.png"
+  },
+  {
+    "id": 15,
+    "name": "Ruby",
+    "rank": 15,
+    "score": 42.0,
+    "type": "脚本语言",
+    "colors": [
+      "#CC342D",
+      "#CC342D"
+    ],
+    "desc": "Rails框架缔造者，Web开发高效简洁，DevOps常用。数据源: tiobe.com",
+    "desc_en": "Creator of Rails framework, efficient and clean web development.",
+    "icon": "./icons/ruby-lang.org.png"
+  },
+  {
+    "id": 16,
+    "name": "MATLAB",
+    "rank": 16,
+    "score": 38.0,
+    "type": "科学计算",
+    "colors": [
+      "#0076A8",
+      "#0076A8"
+    ],
+    "desc": "工程仿真、科学计算标配，MATLAB生态系统强大。数据源: tiobe.com",
+    "desc_en": "Standard for engineering simulation and scientific computing.",
+    "icon": "./icons/mathworks.com.png"
+  },
+  {
+    "id": 17,
+    "name": "Scala",
+    "rank": 17,
+    "score": 35.0,
+    "type": "编译语言",
+    "colors": [
+      "#DC322F",
+      "#DC322F"
+    ],
+    "desc": "JVM系函数式语言，大数据处理 Spark 主力语言。数据源: tiobe.com",
+    "desc_en": "JVM functional language, Spark main language for big data.",
+    "icon": "./icons/scala-lang.org.png"
+  },
+  {
+    "id": 18,
+    "name": "Objective-C",
+    "rank": 18,
+    "score": 32.0,
+    "type": "编译语言",
+    "colors": [
+      "#438EFF",
+      "#438EFF"
+    ],
+    "desc": "Apple历史语言， legacy iOS/macOS 代码维护。数据源: tiobe.com",
+    "icon": "./icons/developer.apple.com.png"
+  },
+  {
+    "id": 19,
+    "name": "Perl",
+    "rank": 19,
+    "score": 28.0,
+    "type": "脚本语言",
+    "colors": [
+      "#39457E",
+      "#39457E"
+    ],
+    "desc": "文本处理之王，系统管理、Bioinformatics 常用。数据源: tiobe.com",
+    "desc_en": "King of text processing, commonly used in sysadmin and bioinformatics.",
+    "icon": "./icons/perl.org.png"
+  },
+  {
+    "id": 20,
+    "name": "Dart",
+    "rank": 20,
+    "score": 26.0,
+    "type": "编译语言",
+    "colors": [
+      "#0175C2",
+      "#0175C2"
+    ],
+    "desc": "Flutter 主力语言，跨平台 UI 开发新秀。数据源: tiobe.com",
+    "icon": "./icons/dart.dev.png"
+  },
+  {
+    "id": 21,
+    "name": "Zig",
+    "rank": 21,
+    "score": 20.0,
+    "type": "编译语言",
+    "colors": [
+      "#F7A41D",
+      "#F7A41D"
+    ],
+    "desc": "系统编程新星，替代C的性能与现代安全。数据源: tiobe.com",
+    "desc_en": "Rising star in systems programming, C replacement with modern safety.",
+    "icon": "./icons/ziglang.org.png"
+  },
+  {
+    "id": 22,
+    "name": "Elixir",
+    "rank": 22,
+    "score": 18.0,
+    "type": "函数语言",
+    "colors": [
+      "#6E4A7E",
+      "#6E4A7E"
+    ],
+    "desc": "Erlang VM上的函数式语言，高并发电信系统。数据源: tiobe.com",
+    "desc_en": "Functional language on Erlang VM, high-concurrency telecom systems.",
+    "icon": "./icons/elixir-lang.org.png"
+  },
+  {
+    "id": 23,
+    "name": "Clojure",
+    "rank": 23,
+    "score": 16.0,
+    "type": "函数语言",
+    "colors": [
+      "#5881D8",
+      "#5881D8"
+    ],
+    "desc": "Lisp方言，函数式编程，JVM上的并发之王。数据源: tiobe.com",
+    "desc_en": "Lisp dialect, functional programming, concurrency king on JVM.",
+    "icon": "./icons/clojure.org.png"
+  },
+  {
+    "id": 24,
+    "name": "Haskell",
+    "rank": 24,
+    "score": 14.0,
+    "type": "函数语言",
+    "colors": [
+      "#5D4F85",
+      "#5D4F85"
+    ],
+    "desc": "纯函数式语言，学术研究、编译器设计常用。数据源: tiobe.com",
+    "desc_en": "Pure functional language, commonly used in academic research.",
+    "icon": "./icons/haskell.org.png"
+  },
+  {
+    "id": 25,
+    "name": "Lua",
+    "rank": 25,
+    "score": 12.0,
+    "type": "脚本语言",
+    "colors": [
+      "#000080",
+      "#000080"
+    ],
+    "desc": "嵌入式脚本之王，游戏开发、配置脚本常用。数据源: tiobe.com",
+    "desc_en": "King of embedded scripting, commonly used in game development.",
+    "icon": "./icons/lua.org.png"
+  }
+]
