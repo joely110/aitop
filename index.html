@@ -2319,7 +2319,7 @@
 
     function applyLang() {
       document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
-      document.getElementById('langBtn').textContent = t('langBtn');
+      document.getElementById('langBtn').textContent = currentLang === 'zh' ? 'English' : '中文';
 
       // Update nav
       const navMap = { home: 'navHomeLink', tools: 'navToolsLink', models: 'navModelsLink', languages: 'navLangLink', databases: 'navDbLink', github: 'navGithubLink' };
