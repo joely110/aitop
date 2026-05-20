@@ -91,7 +91,7 @@
       ],
       "desc": "国产开源旗舰。数据源: datalearner.com",
       "desc_en": "Chinese open-source flagship.",
-      "icon": "./icons/deepseek.com.png"
+      "icon": "./icons/github_deepseek-ai.png"
     },
     {
       "id": 8,
@@ -323,7 +323,7 @@
       ],
       "desc": "DeepSeek专业版。数据源: datalearner.com",
       "desc_en": "DeepSeek professional version.",
-      "icon": "./icons/deepseek.com.png"
+      "icon": "./icons/github_deepseek-ai.png"
     },
     {
       "id": 7,
@@ -337,7 +337,7 @@
       ],
       "desc": "DeepSeek轻量版。数据源: datalearner.com",
       "desc_en": "DeepSeek lightweight version.",
-      "icon": "./icons/deepseek.com.png"
+      "icon": "./icons/github_deepseek-ai.png"
     },
     {
       "id": 8,
@@ -407,7 +407,7 @@
       ],
       "desc": "国产开源旗舰。数据源: datalearner.com",
       "desc_en": "Chinese open-source flagship.",
-      "icon": "./icons/deepseek.com.png"
+      "icon": "./icons/github_deepseek-ai.png"
     },
     {
       "id": 4,
@@ -421,7 +421,7 @@
       ],
       "desc": "DeepSeek轻量版。数据源: datalearner.com",
       "desc_en": "DeepSeek lightweight version.",
-      "icon": "./icons/deepseek.com.png"
+      "icon": "./icons/github_deepseek-ai.png"
     },
     {
       "id": 5,

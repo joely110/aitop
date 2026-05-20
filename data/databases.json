@@ -11,7 +11,7 @@
         "#F80000"
       ],
       "desc": "DB-Engines排行第一，1143.28分，企业级应用最广泛。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/oracle.com"
+      "icon": "./icons/oracle.com.png"
     },
     {
       "id": 2,
@@ -24,7 +24,7 @@
         "#4479A1"
       ],
       "desc": "DB-Engines第二，856.49分，最流行的开源数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/mysql.com"
+      "icon": "./icons/mysql.com.png"
     },
     {
       "id": 3,
@@ -37,7 +37,7 @@
         "#0078D4"
       ],
       "desc": "DB-Engines第三，700.99分，微软企业级数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/microsoft.com"
+      "icon": "./icons/microsoft.com.png"
     },
     {
       "id": 4,
@@ -50,7 +50,7 @@
         "#336791"
       ],
       "desc": "DB-Engines第四，682.68分，功能最强大的开源RDBMS。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/postgresql.org"
+      "icon": "./icons/postgresql.org.png"
     },
     {
       "id": 5,
@@ -63,7 +63,7 @@
         "#29B5E8"
       ],
       "desc": "DB-Engines第六，215.64分，云原生数据仓库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/snowflake.com"
+      "icon": "./icons/snowflake.com.png"
     },
     {
       "id": 6,
@@ -76,7 +76,7 @@
         "#0052A5"
       ],
       "desc": "DB-Engines第九，113.04分，企业级数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/ibm.com"
+      "icon": "./icons/ibm.com.png"
     },
     {
       "id": 7,
@@ -102,7 +102,7 @@
         "#003545"
       ],
       "desc": "DB-Engines第十三，82.74分，MySQL兼容开源分支。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/mariadb.org"
+      "icon": "./icons/mariadb.org.png"
     },
     {
       "id": 9,
@@ -115,7 +115,7 @@
         "#D4A017"
       ],
       "desc": "DB-Engines第十四，74.70分，Hadoop生态SQL。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/hive.apache.org"
+      "icon": "./icons/hive.apache.org.png"
     },
     {
       "id": 10,
@@ -128,7 +128,7 @@
         "#0078D4"
       ],
       "desc": "DB-Engines第十五，73.34分，Azure云数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/microsoft.com"
+      "icon": "./icons/microsoft.com.png"
     },
     {
       "id": 11,
@@ -141,7 +141,7 @@
         "#0078D4"
       ],
       "desc": "DB-Engines第十七，62.30分，Office数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/microsoft.com"
+      "icon": "./icons/microsoft.com.png"
     },
     {
       "id": 12,
@@ -154,7 +154,7 @@
         "#34A853"
       ],
       "desc": "DB-Engines第十九，50.56分，Google云数仓。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/cloud.google.com"
+      "icon": "./icons/cloud.google.com.png"
     },
     {
       "id": 13,
@@ -193,7 +193,7 @@
         "#FFCC00"
       ],
       "desc": "DB-Engines第二十六，23.49分，OLAP列式数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/clickhouse.com"
+      "icon": "./icons/clickhouse.com.png"
     },
     {
       "id": 16,
@@ -206,7 +206,7 @@
         "#003366"
       ],
       "desc": "DB-Engines第四十二，9.59分，嵌入式分析数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/duckdb.org"
+      "icon": "./icons/duckdb.org.png"
     },
     {
       "id": 17,
@@ -219,7 +219,7 @@
         "#232F3E"
       ],
       "desc": "DB-Engines第四十五，9.18分，AWS云原生数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/aws.amazon.com"
+      "icon": "./icons/aws.amazon.com.png"
     },
     {
       "id": 18,
@@ -232,7 +232,7 @@
         "#4A90D9"
       ],
       "desc": "DB-Engines第五十，7.73分，Java嵌入式数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/h2database.com"
+      "icon": "./icons/h2database.com.png"
     }
   ],
   "kv": [
@@ -247,7 +247,7 @@
         "#DC382D"
       ],
       "desc": "DB-Engines第八，147.63分，高性能内存键值存储。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/redis.com"
+      "icon": "./icons/redis.com.png"
     },
     {
       "id": 2,
@@ -260,7 +260,7 @@
         "#232F3E"
       ],
       "desc": "DB-Engines第十一，60.40分，AWS全托管Serverless。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/aws.amazon.com"
+      "icon": "./icons/aws.amazon.com.png"
     },
     {
       "id": 3,
@@ -286,7 +286,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第五十三，6.92分，Kubernetes底层存储。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/etcd.io"
+      "icon": "./icons/etcd.io.png"
     },
     {
       "id": 5,
@@ -299,7 +299,7 @@
         "#1E3A5F"
       ],
       "desc": "DB-Engines第六十八，4.47分，分布式内存计算平台。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/hazelcast.com"
+      "icon": "./icons/hazelcast.com.png"
     },
     {
       "id": 6,
@@ -312,7 +312,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第七十六，3.50分，Facebook开源嵌入式KV。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/rocksdb.org"
+      "icon": "./icons/rocksdb.org.png"
     },
     {
       "id": 7,
@@ -325,7 +325,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第九十，3.11分，高可用分布式KV。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/riak.com"
+      "icon": "./icons/riak.com.png"
     },
     {
       "id": 8,
@@ -353,7 +353,7 @@
         "#47A248"
       ],
       "desc": "DB-Engines第五，384.65分，最流行的文档数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/mongodb.com"
+      "icon": "./icons/mongodb.com.png"
     },
     {
       "id": 2,
@@ -366,7 +366,7 @@
         "#FF8C00"
       ],
       "desc": "DB-Engines第三十六，15.01分，Firebase实时数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/google.com"
+      "icon": "./icons/google.com.png"
     },
     {
       "id": 3,
@@ -379,7 +379,7 @@
         "#34A853"
       ],
       "desc": "DB-Engines第四十三，9.48分，Google云文档数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/google.com"
+      "icon": "./icons/google.com.png"
     },
     {
       "id": 4,
@@ -392,7 +392,7 @@
         "#47A248"
       ],
       "desc": "DB-Engines第五十五，6.42分，移动端专用文档数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/mongodb.com"
+      "icon": "./icons/mongodb.com.png"
     },
     {
       "id": 5,
@@ -405,7 +405,7 @@
         "#E48213"
       ],
       "desc": "DB-Engines第六十二，5.84分，Apache文档数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/couchdb.apache.org"
+      "icon": "./icons/couchdb.apache.org.png"
     },
     {
       "id": 6,
@@ -418,7 +418,7 @@
         "#1E3A5F"
       ],
       "desc": "DB-Engines第六十四，5.65分，高性能文档数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/couchbase.com"
+      "icon": "./icons/couchbase.com.png"
     },
     {
       "id": 7,
@@ -431,7 +431,7 @@
         "#34A853"
       ],
       "desc": "DB-Engines第七十八，3.46分，Google云文档存储。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/google.com"
+      "icon": "./icons/google.com.png"
     },
     {
       "id": 8,
@@ -444,7 +444,7 @@
         "#0052A5"
       ],
       "desc": "DB-Engines第一百零七，2.44分，IBM托管文档数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/ibm.com"
+      "icon": "./icons/ibm.com.png"
     },
     {
       "id": 9,
@@ -457,7 +457,7 @@
         "#F7941D"
       ],
       "desc": "DB-Engines第一百一十二，2.29分，.NET原生文档数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/ravendb.net"
+      "icon": "./icons/ravendb.net.png"
     },
     {
       "id": 10,
@@ -470,7 +470,7 @@
         "#232F3E"
       ],
       "desc": "DB-Engines第一百二十八，1.89分，AWS托管MongoDB兼容。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/aws.amazon.com"
+      "icon": "./icons/aws.amazon.com.png"
     }
   ],
   "timeseries": [
@@ -485,7 +485,7 @@
         "#0182FE"
       ],
       "desc": "DB-Engines第三十，20.86分，时序数据库首选。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/influxdata.com"
+      "icon": "./icons/influxdata.com.png"
     },
     {
       "id": 2,
@@ -498,7 +498,7 @@
         "#E6522C"
       ],
       "desc": "DB-Engines第四十六，9.06分，云原生监控事实标准。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/prometheus.io"
+      "icon": "./icons/prometheus.io.png"
     },
     {
       "id": 3,
@@ -511,7 +511,7 @@
         "#0182FE"
       ],
       "desc": "DB-Engines第六十三，5.62分，PostgreSQL时序扩展。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/timescale.com"
+      "icon": "./icons/timescale.com.png"
     },
     {
       "id": 4,
@@ -524,7 +524,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第六十六，4.82分，监控指标存储。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/graphiteapp.org"
+      "icon": "./icons/graphiteapp.org.png"
     },
     {
       "id": 5,
@@ -537,7 +537,7 @@
         "#0182FE"
       ],
       "desc": "DB-Engines第七十五，3.59分，超高性能时序数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/questdb.io"
+      "icon": "./icons/questdb.io.png"
     },
     {
       "id": 6,
@@ -563,7 +563,7 @@
         "#D4A017"
       ],
       "desc": "DB-Engines第一百三十九，1.64分，Apache物联网时序数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/iotdb.apache.org"
+      "icon": "./icons/iotdb.apache.org.png"
     },
     {
       "id": 8,
@@ -576,7 +576,7 @@
         "#232F3E"
       ],
       "desc": "DB-Engines第一百六十四，1.28分，AWS托管时序数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/aws.amazon.com"
+      "icon": "./icons/aws.amazon.com.png"
     }
   ],
   "vector": [
@@ -591,7 +591,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第四十八，8.33分，云原生向量数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/pinecone.io"
+      "icon": "./icons/pinecone.io.png"
     },
     {
       "id": 2,
@@ -604,7 +604,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第五十六，6.33分，开源向量数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/milvus.io"
+      "icon": "./icons/milvus.io.png"
     },
     {
       "id": 3,
@@ -617,7 +617,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第六十五，5.16分，Rust高性能向量搜索。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/qdrant.tech"
+      "icon": "./icons/qdrant.tech.png"
     },
     {
       "id": 4,
@@ -630,7 +630,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第七十，4.24分，向量搜索引擎。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/weaviate.io"
+      "icon": "./icons/weaviate.io.png"
     },
     {
       "id": 5,
@@ -643,7 +643,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第九十二，2.89分，LLM友好向量数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/trychroma.com"
+      "icon": "./icons/trychroma.com.png"
     },
     {
       "id": 6,
@@ -656,7 +656,7 @@
         "#F4D03F"
       ],
       "desc": "DB-Engines第一百零六，2.35分，Elasticsearch向量搜索。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/elastic.co"
+      "icon": "./icons/elastic.co.png"
     }
   ],
   "graph": [
@@ -671,7 +671,7 @@
         "#008496"
       ],
       "desc": "DB-Engines第二十，47.59分，图数据库领导者。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/neo4j.com"
+      "icon": "./icons/neo4j.com.png"
     },
     {
       "id": 2,
@@ -684,7 +684,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第一百二十四，1.93分，国产高性能图数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/vesoft.com"
+      "icon": "./icons/vesoft.com.png"
     },
     {
       "id": 3,
@@ -697,7 +697,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第一百三十一，1.86分，Apache图数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/janusgraph.org"
+      "icon": "./icons/janusgraph.org.png"
     },
     {
       "id": 4,
@@ -710,7 +710,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第一百三十二，1.86分，高性能图数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/tigergraph.com"
+      "icon": "./icons/tigergraph.com.png"
     },
     {
       "id": 5,
@@ -723,7 +723,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第一百三十七，1.69分，实时图数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/memgraph.com"
+      "icon": "./icons/memgraph.com.png"
     },
     {
       "id": 6,
@@ -736,7 +736,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第一百六十五，1.27分，分布式图数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/dgraph.io"
+      "icon": "./icons/dgraph.io.png"
     },
     {
       "id": 7,
@@ -749,7 +749,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第一百八十，1.08分，原生多模数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/arangodb.com"
+      "icon": "./icons/arangodb.com.png"
     },
     {
       "id": 8,
@@ -762,7 +762,7 @@
         "#232F3E"
       ],
       "desc": "DB-Engines第二百，0.95分，AWS托管图数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/aws.amazon.com"
+      "icon": "./icons/aws.amazon.com.png"
     }
   ],
   "wideColumn": [
@@ -777,7 +777,7 @@
         "#00ACE0"
       ],
       "desc": "DB-Engines第三十二，19.76分，Hadoop生态NoSQL。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/hbase.apache.org"
+      "icon": "./icons/hbase.apache.org.png"
     },
     {
       "id": 2,
@@ -790,7 +790,7 @@
         "#1287B1"
       ],
       "desc": "DB-Engines第三十四，18.45分，高可用分布式数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/cassandra.apache.org"
+      "icon": "./icons/cassandra.apache.org.png"
     },
     {
       "id": 3,
@@ -803,7 +803,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第六十九，4.45分，C++高性能Cassandra兼容。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/scylladb.com"
+      "icon": "./icons/scylladb.com.png"
     },
     {
       "id": 4,
@@ -816,7 +816,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第八十六，3.23分，DataStax Cassandra企业版。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/datastax.com"
+      "icon": "./icons/datastax.com.png"
     },
     {
       "id": 5,
@@ -829,7 +829,7 @@
         "#0078D4"
       ],
       "desc": "DB-Engines第九十六，2.78分，Azure表存储。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/azure.microsoft.com"
+      "icon": "./icons/azure.microsoft.com.png"
     },
     {
       "id": 6,
@@ -842,7 +842,7 @@
         "#D4A017"
       ],
       "desc": "DB-Engines第一百零八，2.42分，Apache安全列式数据库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/accumulo.apache.org"
+      "icon": "./icons/accumulo.apache.org.png"
     },
     {
       "id": 7,
@@ -855,7 +855,7 @@
         "#34A853"
       ],
       "desc": "DB-Engines第一百三十五，1.85分，Google内部列式存储。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/google.com"
+      "icon": "./icons/google.com.png"
     }
   ],
   "search": [
@@ -870,7 +870,7 @@
         "#00E79A"
       ],
       "desc": "DB-Engines第十六，72.42分，机器数据分析平台。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/splunk.com"
+      "icon": "./icons/splunk.com.png"
     },
     {
       "id": 2,
@@ -883,7 +883,7 @@
         "#F7931E"
       ],
       "desc": "DB-Engines第二十一，32.52分，Apache全文搜索。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/solr.apache.org"
+      "icon": "./icons/solr.apache.org.png"
     },
     {
       "id": 3,
@@ -896,7 +896,7 @@
         "#5468FF"
       ],
       "desc": "DB-Engines第五十四，6.74分，搜索即服务API。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/algolia.com"
+      "icon": "./icons/algolia.com.png"
     },
     {
       "id": 4,
@@ -909,7 +909,7 @@
         "#0078D4"
       ],
       "desc": "DB-Engines第五十七，6.29分，Azure认知搜索。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/azure.microsoft.com"
+      "icon": "./icons/azure.microsoft.com.png"
     },
     {
       "id": 5,
@@ -935,7 +935,7 @@
         "#FF8C00"
       ],
       "desc": "DB-Engines第九十九，2.65分，Rust高性能搜索。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/meilisearch.com"
+      "icon": "./icons/meilisearch.com.png"
     },
     {
       "id": 7,
@@ -948,7 +948,7 @@
         "#4A4A4A"
       ],
       "desc": "DB-Engines第一百四十二，1.52分，容错搜索引警。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/typesense.com"
+      "icon": "./icons/typesense.com.png"
     }
   ],
   "bigdata": [
@@ -963,7 +963,7 @@
         "#29B5E8"
       ],
       "desc": "DB-Engines第六，215.64分，云原生数据仓库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/snowflake.com"
+      "icon": "./icons/snowflake.com.png"
     },
     {
       "id": 2,
@@ -976,7 +976,7 @@
         "#FF3621"
       ],
       "desc": "DB-Engines第八，151.79分，Lakehouse平台。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/databricks.com"
+      "icon": "./icons/databricks.com.png"
     },
     {
       "id": 3,
@@ -989,7 +989,7 @@
         "#F4D03F"
       ],
       "desc": "DB-Engines第十，96.02分，Elastic Stack核心。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/elastic.co"
+      "icon": "./icons/elastic.co.png"
     },
     {
       "id": 4,
@@ -1002,7 +1002,7 @@
         "#D4A017"
       ],
       "desc": "DB-Engines第十四，74.70分，Hadoop数据仓库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/hive.apache.org"
+      "icon": "./icons/hive.apache.org.png"
     },
     {
       "id": 5,
@@ -1015,7 +1015,7 @@
         "#34A853"
       ],
       "desc": "DB-Engines第十九，50.56分，Google Serverless数仓。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/google.com"
+      "icon": "./icons/google.com.png"
     },
     {
       "id": 6,
@@ -1028,7 +1028,7 @@
         "#232F3E"
       ],
       "desc": "DB-Engines第四十，14.36分，AWS数据仓库。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/aws.amazon.com"
+      "icon": "./icons/aws.amazon.com.png"
     },
     {
       "id": 7,
@@ -1041,7 +1041,7 @@
         "#0078D4"
       ],
       "desc": "DB-Engines第三十七，16.79分，Azure统一分析平台。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/azure.microsoft.com"
+      "icon": "./icons/azure.microsoft.com.png"
     },
     {
       "id": 8,
@@ -1054,7 +1054,7 @@
         "#1E3A5F"
       ],
       "desc": "DB-Engines第七十三，3.85分，新一代云分析数仓。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/firebolt.io"
+      "icon": "./icons/firebolt.io.png"
     },
     {
       "id": 9,

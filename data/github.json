@@ -14,7 +14,7 @@
       "gpt",
       "autogpt"
     ],
-    "icon": "https://github.com/Significant-Gravitas.png?size=64",
+    "icon": "./icons/github_Significant-Gravitas.png",
     "license": "MIT"
   },
   {
@@ -31,7 +31,7 @@
       "neural-networks",
       "google"
     ],
-    "icon": "https://github.com/tensorflow.png?size=64",
+    "icon": "./icons/github_tensorflow.png",
     "license": "Apache-2.0"
   },
   {
@@ -48,7 +48,7 @@
       "pytorch",
       "pretrained-models"
     ],
-    "icon": "https://github.com/huggingface.png?size=64",
+    "icon": "./icons/github_huggingface.png",
     "license": "Apache-2.0"
   },
   {
@@ -65,7 +65,7 @@
       "webui",
       "image-generation"
     ],
-    "icon": "https://github.com/AUTOMATIC1111.png?size=64",
+    "icon": "./icons/github_AUTOMATIC1111.png",
     "license": "AGPL-3.0"
   },
   {
@@ -82,7 +82,7 @@
       "inference",
       "ollama"
     ],
-    "icon": "https://github.com/ollama.png?size=64",
+    "icon": "./icons/github_ollama.png",
     "license": "MIT"
   },
   {
@@ -99,7 +99,7 @@
       "framework",
       "rag"
     ],
-    "icon": "https://github.com/langchain-ai.png?size=64",
+    "icon": "./icons/github_langchain-ai.png",
     "license": "MIT"
   },
   {
@@ -116,7 +116,7 @@
       "chatbot",
       "self-hosted"
     ],
-    "icon": "https://github.com/open-webui.png?size=64",
+    "icon": "./icons/github_open-webui.png",
     "license": "BSD-3-Clause"
   },
   {
@@ -133,7 +133,7 @@
       "cpp",
       "quantization"
     ],
-    "icon": "https://github.com/ggml-org.png?size=64",
+    "icon": "./icons/github_ggml-org.png",
     "license": "MIT"
   },
   {
@@ -150,7 +150,7 @@
       "moe",
       "large-model"
     ],
-    "icon": "https://github.com/deepseek-ai.png?size=64",
+    "icon": "./icons/github_deepseek-ai.png",
     "license": "MIT"
   },
   {
@@ -167,7 +167,7 @@
       "neural-networks",
       "meta"
     ],
-    "icon": "https://github.com/pytorch.png?size=64",
+    "icon": "./icons/github_pytorch.png",
     "license": "BSD-3-Clause"
   },
   {
@@ -184,7 +184,7 @@
       "audio",
       "openai"
     ],
-    "icon": "https://github.com/openai.png?size=64",
+    "icon": "./icons/github_openai.png",
     "license": "MIT"
   },
   {
@@ -201,7 +201,7 @@
       "workflows",
       "gui"
     ],
-    "icon": "https://github.com/comfyanonymous.png?size=64",
+    "icon": "./icons/github_comfyanonymous.png",
     "license": "GPL-3.0"
   },
   {
@@ -218,7 +218,7 @@
       "serving",
       "gpu"
     ],
-    "icon": "https://github.com/vllm-project.png?size=64",
+    "icon": "./icons/github_vllm-project.png",
     "license": "Apache-2.0"
   },
   {
@@ -235,7 +235,7 @@
       "embeddings",
       "rag"
     ],
-    "icon": "https://github.com/openai.png?size=64",
+    "icon": "./icons/github_openai.png",
     "license": "MIT"
   },
   {
@@ -252,7 +252,7 @@
       "ai-art",
       "ease-of-use"
     ],
-    "icon": "https://github.com/lllyasviel.png?size=64",
+    "icon": "./icons/github_lllyasviel.png",
     "license": "GPL-3.0"
   },
   {
@@ -269,7 +269,7 @@
       "ai-art",
       "generative"
     ],
-    "icon": "https://github.com/CompVis.png?size=64",
+    "icon": "./icons/github_CompVis.png",
     "license": "CreativeML-Open"
   },
   {
@@ -286,7 +286,7 @@
       "meta",
       "open-source"
     ],
-    "icon": "https://github.com/meta-llama.png?size=64",
+    "icon": "./icons/github_meta-llama.png",
     "license": "LLAMA-3.1"
   },
   {
@@ -320,7 +320,7 @@
       "framework",
       "data"
     ],
-    "icon": "https://github.com/run-llama.png?size=64",
+    "icon": "./icons/github_run-llama.png",
     "license": "MIT"
   },
   {
@@ -337,7 +337,7 @@
       "cli",
       "git"
     ],
-    "icon": "https://github.com/Aider-AI.png?size=64",
+    "icon": "./icons/github_Aider-AI.png",
     "license": "Apache-2.0"
   },
   {
@@ -354,7 +354,7 @@
       "deep-learning",
       "voice"
     ],
-    "icon": "https://github.com/coqui-ai.png?size=64",
+    "icon": "./icons/github_coqui-ai.png",
     "license": "MPL-2.0"
   },
   {
@@ -371,7 +371,7 @@
       "cpp",
       "audio"
     ],
-    "icon": "https://github.com/ggerganov.png?size=64",
+    "icon": "./icons/github_ggerganov.png",
     "license": "MIT"
   },
   {
@@ -388,7 +388,7 @@
       "evaluation",
       "llm"
     ],
-    "icon": "https://github.com/lm-sys.png?size=64",
+    "icon": "./icons/github_lm-sys.png",
     "license": "Apache-2.0"
   },
   {
@@ -405,7 +405,7 @@
       "knowledge-base",
       "chatbot"
     ],
-    "icon": "https://github.com/chatchat-space.png?size=64",
+    "icon": "./icons/github_chatchat-space.png",
     "license": "Apache-2.0"
   },
   {
@@ -422,7 +422,7 @@
       "personal-assistant",
       "llm"
     ],
-    "icon": "https://github.com/khoj-ai.png?size=64",
+    "icon": "./icons/github_khoj-ai.png",
     "license": "AGPL-3.0"
   },
   {
@@ -439,7 +439,7 @@
       "self-hosted",
       "code-completion"
     ],
-    "icon": "https://github.com/TabbyML.png?size=64",
+    "icon": "./icons/github_TabbyML.png",
     "license": "Apache-2.0"
   },
   {
@@ -456,7 +456,7 @@
       "copilot",
       "vscode"
     ],
-    "icon": "https://github.com/continuedev.png?size=64",
+    "icon": "./icons/github_continuedev.png",
     "license": "Apache-2.0"
   },
   {
@@ -473,7 +473,7 @@
       "contrastive-learning",
       "openai"
     ],
-    "icon": "https://github.com/openai.png?size=64",
+    "icon": "./icons/github_openai.png",
     "license": "MIT"
   },
   {
@@ -490,7 +490,7 @@
       "state-machine",
       "llm"
     ],
-    "icon": "https://github.com/langchain-ai.png?size=64",
+    "icon": "./icons/github_langchain-ai.png",
     "license": "MIT"
   },
   {
@@ -507,7 +507,7 @@
       "image-generation",
       "pose"
     ],
-    "icon": "https://github.com/lllyasviel.png?size=64",
+    "icon": "./icons/github_lllyasviel.png",
     "license": "MIT"
   },
   {
@@ -524,7 +524,7 @@
       "llm",
       "ai-native"
     ],
-    "icon": "https://github.com/chroma-core.png?size=64",
+    "icon": "./icons/github_chroma-core.png",
     "license": "Apache-2.0"
   },
   {
@@ -541,7 +541,7 @@
       "huggingface",
       "pytorch"
     ],
-    "icon": "https://github.com/huggingface.png?size=64",
+    "icon": "./icons/github_huggingface.png",
     "license": "Apache-2.0"
   },
   {
@@ -558,7 +558,7 @@
       "deepseek",
       "programming"
     ],
-    "icon": "https://github.com/deepseek-ai.png?size=64",
+    "icon": "./icons/github_deepseek-ai.png",
     "license": "MIT"
   },
   {
@@ -575,7 +575,7 @@
       "edge",
       "inference"
     ],
-    "icon": "https://github.com/mlc-ai.png?size=64",
+    "icon": "./icons/github_mlc-ai.png",
     "license": "Apache-2.0"
   },
   {
@@ -609,7 +609,7 @@
       "multimodal",
       "alibaba"
     ],
-    "icon": "https://github.com/QwenLM.png?size=64",
+    "icon": "./icons/github_QwenLM.png",
     "license": "Apache-2.0"
   },
   {
@@ -626,7 +626,7 @@
       "vits",
       "audio"
     ],
-    "icon": "https://github.com/RVC-Project.png?size=64",
+    "icon": "./icons/github_RVC-Project.png",
     "license": "MIT"
   },
   {
@@ -643,7 +643,7 @@
       "speech-synthesis",
       "multilingual"
     ],
-    "icon": "https://github.com/fishaudio.png?size=64",
+    "icon": "./icons/github_fishaudio.png",
     "license": "MIT"
   },
   {
@@ -660,7 +660,7 @@
       "python",
       "type-safe"
     ],
-    "icon": "https://github.com/pydantic.png?size=64",
+    "icon": "./icons/github_pydantic.png",
     "license": "MIT"
   },
   {
@@ -677,7 +677,7 @@
       "graphql",
       "hybrid-search"
     ],
-    "icon": "https://github.com/weaviate.png?size=64",
+    "icon": "./icons/github_weaviate.png",
     "license": "BSD-3-Clause"
   }
 ]

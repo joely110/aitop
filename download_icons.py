@@ -70,7 +70,7 @@ def sanitize_filename(url):
 
 def download_icon(url, filepath, timeout=10):
     """Download a single icon with fallback sources"""
-    if not url or not isinstance(url, bool) or not url.startswith('http'):
+    if not url or not isinstance(url, str) or not url.startswith('http'):
         return False
 
     # Extract domain for alternative sources
