@@ -1018,10 +1018,10 @@
           <i data-lucide="search" style="width:16px;height:16px;color:var(--text-secondary);"></i>
           <input type="text" placeholder="搜索工具..." id="searchInput">
         </div>
-        <button class="toggle-btn" onclick="toggleLang()">
-          <i data-lucide="globe" style="width:16px;height:16px;"></i>
-          <span id="langBtn">English</span>
-        </button>
+        <select class="toggle-btn" onchange="toggleLang(this.value)" style="min-width:90px;">
+          <option value="en" selected>🇺🇸 English</option>
+          <option value="zh">🇨🇳 中文</option>
+        </select>
         <button class="toggle-btn" onclick="toggleTheme()">
           <i data-lucide="sun" style="width:16px;height:16px;" id="themeIcon"></i>
         </button>
@@ -1961,8 +1961,8 @@
     }
 
     // ==================== LANG ====================
-    function toggleLang() {
-      currentLang = currentLang === 'zh' ? 'en' : 'zh';
+    function toggleLang(lang) {
+      currentLang = lang;
       localStorage.setItem('lang', currentLang);
       applyLang();
     }
@@ -2319,7 +2319,10 @@
 
     function applyLang() {
       document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
-      document.getElementById('langBtn').textContent = currentLang === 'zh' ? 'English' : '中文';
+
+      // Update language dropdown selection
+      const langSelect = document.querySelector('select[onchange="toggleLang(this.value)"]');
+      if (langSelect) langSelect.value = currentLang;
 
       // Update nav
       const navMap = { home: 'navHomeLink', tools: 'navToolsLink', models: 'navModelsLink', languages: 'navLangLink', databases: 'navDbLink', github: 'navGithubLink' };
