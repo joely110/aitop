@@ -180,7 +180,7 @@
         "#FF6B00"
       ],
       "desc": "DB-Engines第二十三，30.94分，企业级数仓。数据源: db-engines.com",
-      "icon": "https://logo.clearbit.com/teradata.com"
+      "icon": "./icons/teradata.com.png"
     },
     {
       "id": 15,

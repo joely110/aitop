@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Opus 4.7 (thinking)",
+    "score": 1563,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-7",
+    "ci": "+/-11",
+    "vendor": "Anthropic",
+    "rank": 1,
+    "votes": 2866,
+    "thinkingMode": null
+  },
+  {
+    "name": "Opus 4.7",
+    "score": 1551,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-7",
+    "ci": "+/-11",
+    "vendor": "Anthropic",
+    "rank": 2,
+    "votes": 3149,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "Claude Opus 4.6 (thinking)",
+    "score": 1550,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-6",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 3,
+    "votes": 5893,
+    "thinkingMode": null
+  },
+  {
+    "name": "Claude Opus 4.6",
+    "score": 1549,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-6",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 4,
+    "votes": 6738,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "Claude Opus 4 (thinking-32k)",
+    "score": 1531,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4",
+    "ci": "+/-7",
+    "vendor": "Anthropic",
+    "rank": 5,
+    "votes": 7620,
+    "thinkingMode": null
+  },
+  {
+    "name": "Muse Spark",
+    "score": 1530,
+    "license": "Proprietary",
+    "modelCode": "muse-spark",
+    "ci": "+/-11",
+    "vendor": "Facebook AI研究实验室",
+    "rank": 6,
+    "votes": 2702,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "GPT-5.4 (high)",
+    "score": 1527,
+    "license": "Proprietary",
+    "modelCode": "gpt-5-4",
+    "ci": "+/-9",
+    "vendor": "OpenAI",
+    "rank": 7,
+    "votes": 4554,
+    "thinkingMode": null
+  },
+  {
+    "name": "GLM 5.1",
+    "score": 1527,
+    "license": "MIT",
+    "modelCode": "glm-5-1",
+    "ci": "+/-11",
+    "vendor": "智谱AI",
+    "rank": 8,
+    "votes": 2925,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "Gemini 3.1 Pro Preview",
+    "score": 1526,
+    "license": "Proprietary",
+    "modelCode": "gemini-3-1-pro-preview",
+    "ci": "+/-7",
+    "vendor": "Google Deep Mind",
+    "rank": 9,
+    "votes": 7632,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "Claude Sonnet 4.6",
+    "score": 1522,
+    "license": "Proprietary",
+    "modelCode": "claude-sonnet-4-6",
+    "ci": "+/-9",
+    "vendor": "Anthropic",
+    "rank": 10,
+    "votes": 4648,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "Claude Opus 4.6",
+    "score": 1348,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-6",
+    "ci": "",
+    "vendor": "Anthropic",
+    "rank": 1,
+    "votes": 15327,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "Opus 4.7 (thinking)",
+    "score": 1345,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-7",
+    "ci": "",
+    "vendor": "Anthropic",
+    "rank": 2,
+    "votes": 7476,
+    "thinkingMode": null
+  },
+  {
+    "name": "Claude Opus 4.6 (thinking)",
+    "score": 1344,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-6",
+    "ci": "",
+    "vendor": "Anthropic",
+    "rank": 3,
+    "votes": 12796,
+    "thinkingMode": null
+  },
+  {
+    "name": "Kimi K2.6",
+    "score": 1343,
+    "license": "Open Source",
+    "modelCode": "kimi-k2-6",
+    "ci": "",
+    "vendor": "Moonshot AI",
+    "rank": 4,
+    "votes": 10868,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "GLM 5.1",
+    "score": 1338,
+    "license": "Open Source",
+    "modelCode": "glm-5-1",
+    "ci": "",
+    "vendor": "智谱AI",
+    "rank": 5,
+    "votes": 5271,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "Opus 4.7",
+    "score": 1335,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-7",
+    "ci": "",
+    "vendor": "Anthropic",
+    "rank": 6,
+    "votes": 10424,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "GLM-5-Turbo",
+    "score": 1334,
+    "license": "Proprietary",
+    "modelCode": "glm-5-turbo",
+    "ci": "",
+    "vendor": "智谱AI",
+    "rank": 7,
+    "votes": 8606,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "Claude Sonnet 4.6",
+    "score": 1331,
+    "license": "Proprietary",
+    "modelCode": "claude-sonnet-4-6",
+    "ci": "",
+    "vendor": "Anthropic",
+    "rank": 8,
+    "votes": 14613,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "MiMo-V2.5-Pro",
+    "score": 1329,
+    "license": "Open Source",
+    "modelCode": "",
+    "ci": "",
+    "vendor": "Xiaomi",
+    "rank": 9,
+    "votes": 3587,
+    "thinkingMode": "null"
+  },
+  {
+    "name": "GPT-5.5",
+    "score": 1320,
+    "license": "Proprietary",
+    "modelCode": "gpt-5-5",
+    "ci": "",
+    "vendor": "OpenAI",
+    "rank": 10,
+    "votes": 7063,
+    "thinkingMode": "null"
+  }
+]

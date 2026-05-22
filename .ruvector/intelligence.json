@@ -1,0 +1,26 @@
+{
+  "patterns": {},
+  "memories": [],
+  "trajectories": [],
+  "errors": {},
+  "file_sequences": [],
+  "agents": {},
+  "edges": [],
+  "stats": {
+    "total_patterns": 0,
+    "total_memories": 0,
+    "total_trajectories": 0,
+    "total_errors": 0,
+    "session_count": 0,
+    "last_session": 0
+  },
+  "activeTrajectories": {
+    "traj_1779289752270_h9ew6ylml": {
+      "id": "traj_1779289752270_h9ew6ylml",
+      "context": "datalearner all 202 models",
+      "agent": "browser-extract",
+      "steps": [],
+      "startTime": 1779289752270
+    }
+  }
+}

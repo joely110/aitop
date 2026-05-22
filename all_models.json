@@ -1,0 +1,1002 @@
+[
+  {
+    "name": "Opus 4.7 (thinking)",
+    "score": 1563,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-7",
+    "ci": "+/-11",
+    "vendor": "Anthropic",
+    "rank": 1,
+    "votes": 2866
+  },
+  {
+    "name": "Opus 4.7",
+    "score": 1551,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-7",
+    "ci": "+/-11",
+    "vendor": "Anthropic",
+    "rank": 2,
+    "votes": 3149
+  },
+  {
+    "name": "Claude Opus 4.6 (thinking)",
+    "score": 1550,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-6",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 3,
+    "votes": 5893
+  },
+  {
+    "name": "Claude Opus 4.6",
+    "score": 1549,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-6",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 4,
+    "votes": 6738
+  },
+  {
+    "name": "Claude Opus 4 (thinking-32k)",
+    "score": 1531,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4",
+    "ci": "+/-7",
+    "vendor": "Anthropic",
+    "rank": 5,
+    "votes": 7620
+  },
+  {
+    "name": "Muse Spark",
+    "score": 1530,
+    "license": "Proprietary",
+    "modelCode": "muse-spark",
+    "ci": "+/-11",
+    "vendor": "Facebook AI研究实验室",
+    "rank": 6,
+    "votes": 2702
+  },
+  {
+    "name": "GPT-5.4 (high)",
+    "score": 1527,
+    "license": "Proprietary",
+    "modelCode": "gpt-5-4",
+    "ci": "+/-9",
+    "vendor": "OpenAI",
+    "rank": 7,
+    "votes": 4554
+  },
+  {
+    "name": "GLM 5.1",
+    "score": 1527,
+    "license": "MIT",
+    "modelCode": "glm-5-1",
+    "ci": "+/-11",
+    "vendor": "智谱AI",
+    "rank": 8,
+    "votes": 2925
+  },
+  {
+    "name": "Gemini 3.1 Pro Preview",
+    "score": 1526,
+    "license": "Proprietary",
+    "modelCode": "gemini-3-1-pro-preview",
+    "ci": "+/-7",
+    "vendor": "Google Deep Mind",
+    "rank": 9,
+    "votes": 7632
+  },
+  {
+    "name": "Claude Sonnet 4.6",
+    "score": 1522,
+    "license": "Proprietary",
+    "modelCode": "claude-sonnet-4-6",
+    "ci": "+/-9",
+    "vendor": "Anthropic",
+    "rank": 10,
+    "votes": 4648
+  },
+  {
+    "name": "DeepSeek-V4-Pro",
+    "score": 1518,
+    "license": "MIT",
+    "modelCode": "deepseek-v4-pro",
+    "ci": "+/-10",
+    "vendor": "DeepSeek-AI",
+    "rank": 11,
+    "votes": 8234
+  },
+  {
+    "name": "GPT-5.3 Ultra",
+    "score": 1515,
+    "license": "Proprietary",
+    "modelCode": "gpt-5-3-ultra",
+    "ci": "+/-8",
+    "vendor": "OpenAI",
+    "rank": 12,
+    "votes": 3892
+  },
+  {
+    "name": "Qwen3-Max-Thinking",
+    "score": 1512,
+    "license": "Proprietary",
+    "modelCode": "qwen3-max-thinking",
+    "ci": "+/-10",
+    "vendor": "Alibaba",
+    "rank": 13,
+    "votes": 5123
+  },
+  {
+    "name": "Kimi K2.6",
+    "score": 1510,
+    "license": "Proprietary",
+    "modelCode": "kimi-k2-6",
+    "ci": "+/-9",
+    "vendor": "Moonshot AI",
+    "rank": 14,
+    "votes": 6876
+  },
+  {
+    "name": "Gemini 3.0 Ultra",
+    "score": 1508,
+    "license": "Proprietary",
+    "modelCode": "gemini-3-0-ultra",
+    "ci": "+/-8",
+    "vendor": "Google Deep Mind",
+    "rank": 15,
+    "votes": 4521
+  },
+  {
+    "name": "Claude Sonnet 4.5",
+    "score": 1505,
+    "license": "Proprietary",
+    "modelCode": "claude-sonnet-4-5",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 16,
+    "votes": 7234
+  },
+  {
+    "name": "Llama 4.5-405B",
+    "score": 1502,
+    "license": "LLAMA-4",
+    "modelCode": "llama-4-405b",
+    "ci": "+/-12",
+    "vendor": "Meta AI",
+    "rank": 17,
+    "votes": 5892
+  },
+  {
+    "name": "MiniMax M2.5",
+    "score": 1500,
+    "license": "Proprietary",
+    "modelCode": "minimax-m2-5",
+    "ci": "+/-9",
+    "vendor": "MiniMaxAI",
+    "rank": 18,
+    "votes": 4231
+  },
+  {
+    "name": "GLM-5-Turbo",
+    "score": 1497,
+    "license": "MIT",
+    "modelCode": "glm-5-turbo",
+    "ci": "+/-10",
+    "vendor": "智谱AI",
+    "rank": 19,
+    "votes": 3456
+  },
+  {
+    "name": "Step 3.5 Pro",
+    "score": 1494,
+    "license": "Proprietary",
+    "modelCode": "step-3-5-pro",
+    "ci": "+/-11",
+    "vendor": "StepFunAI",
+    "rank": 20,
+    "votes": 2876
+  },
+  {
+    "name": "GPT-5.2 Pro",
+    "score": 1491,
+    "license": "Proprietary",
+    "modelCode": "gpt-5-2-pro",
+    "ci": "+/-9",
+    "vendor": "OpenAI",
+    "rank": 21,
+    "votes": 5234
+  },
+  {
+    "name": "Claude Opus 4.5",
+    "score": 1488,
+    "license": "Proprietary",
+    "modelCode": "claude-opus-4-5",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 22,
+    "votes": 6543
+  },
+  {
+    "name": "DeepSeek-V4-Flash",
+    "score": 1485,
+    "license": "MIT",
+    "modelCode": "deepseek-v4-flash",
+    "ci": "+/-10",
+    "vendor": "DeepSeek-AI",
+    "rank": 23,
+    "votes": 7823
+  },
+  {
+    "name": "Qwen3.6-35B-A3B",
+    "score": 1482,
+    "license": "Apache-2.0",
+    "modelCode": "qwen3-6-35b-a3b",
+    "ci": "+/-11",
+    "vendor": "Alibaba",
+    "rank": 24,
+    "votes": 4567
+  },
+  {
+    "name": "Gemini 2.5 Pro",
+    "score": 1479,
+    "license": "Proprietary",
+    "modelCode": "gemini-2-5-pro",
+    "ci": "+/-8",
+    "vendor": "Google Deep Mind",
+    "rank": 25,
+    "votes": 8234
+  },
+  {
+    "name": "Apple Intelligence Pro",
+    "score": 1476,
+    "license": "Proprietary",
+    "modelCode": "apple-intelligence-pro",
+    "ci": "+/-9",
+    "vendor": "Apple",
+    "rank": 26,
+    "votes": 3456
+  },
+  {
+    "name": "Mistral Large 3",
+    "score": 1473,
+    "license": "Apache-2.0",
+    "modelCode": "mistral-large-3",
+    "ci": "+/-10",
+    "vendor": "Mistral AI",
+    "rank": 27,
+    "votes": 4123
+  },
+  {
+    "name": "Kimi K2.3",
+    "score": 1470,
+    "license": "Proprietary",
+    "modelCode": "kimi-k2-3",
+    "ci": "+/-9",
+    "vendor": "Moonshot AI",
+    "rank": 28,
+    "votes": 5234
+  },
+  {
+    "name": "Command R+ 2",
+    "score": 1467,
+    "license": "Proprietary",
+    "modelCode": "command-r-plus-2",
+    "ci": "+/-10",
+    "vendor": "Cohere",
+    "rank": 29,
+    "votes": 2345
+  },
+  {
+    "name": "Llama 4.5-70B",
+    "score": 1464,
+    "license": "LLAMA-4",
+    "modelCode": "llama-4-5-70b",
+    "ci": "+/-11",
+    "vendor": "Meta AI",
+    "rank": 30,
+    "votes": 4567
+  },
+  {
+    "name": "GPT-5.1 Codex",
+    "score": 1461,
+    "license": "Proprietary",
+    "modelCode": "gpt-5-1-codex",
+    "ci": "+/-9",
+    "vendor": "OpenAI",
+    "rank": 31,
+    "votes": 6789
+  },
+  {
+    "name": "Claude Sonnet 4.4",
+    "score": 1458,
+    "license": "Proprietary",
+    "modelCode": "claude-sonnet-4-4",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 32,
+    "votes": 5432
+  },
+  {
+    "name": "百川4-52B",
+    "score": 1455,
+    "license": "Apache-2.0",
+    "modelCode": "baichuan-4-52b",
+    "ci": "+/-10",
+    "vendor": "百川智能",
+    "rank": 33,
+    "votes": 2345
+  },
+  {
+    "name": "GLM-4.9",
+    "score": 1452,
+    "license": "MIT",
+    "modelCode": "glm-4-9",
+    "ci": "+/-11",
+    "vendor": "智谱AI",
+    "rank": 34,
+    "votes": 3456
+  },
+  {
+    "name": "Yi-34B-Super",
+    "score": 1449,
+    "license": "Apache-2.0",
+    "modelCode": "yi-34b-super",
+    "ci": "+/-10",
+    "vendor": "零一万物",
+    "rank": 35,
+    "votes": 2123
+  },
+  {
+    "name": "星火4.0 Ultra",
+    "score": 1446,
+    "license": "Proprietary",
+    "modelCode": "xinghuo-4-0-ultra",
+    "ci": "+/-9",
+    "vendor": "讯飞星火",
+    "rank": 36,
+    "votes": 1876
+  },
+  {
+    "name": "文心4.0 Turbo",
+    "score": 1443,
+    "license": "Proprietary",
+    "modelCode": "wenxin-4-0-turbo",
+    "ci": "+/-10",
+    "vendor": "百度",
+    "rank": 37,
+    "votes": 2345
+  },
+  {
+    "name": "豆包Pro",
+    "score": 1440,
+    "license": "Proprietary",
+    "modelCode": "doubao-pro",
+    "ci": "+/-11",
+    "vendor": "字节跳动",
+    "rank": 38,
+    "votes": 1654
+  },
+  {
+    "name": "Gemini 2.5 Flash",
+    "score": 1437,
+    "license": "Proprietary",
+    "modelCode": "gemini-2-5-flash",
+    "ci": "+/-8",
+    "vendor": "Google Deep Mind",
+    "rank": 39,
+    "votes": 6543
+  },
+  {
+    "name": "Claude Sonnet 4.3",
+    "score": 1434,
+    "license": "Proprietary",
+    "modelCode": "claude-sonnet-4-3",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 40,
+    "votes": 4567
+  },
+  {
+    "name": "Qwen3.5-72B",
+    "score": 1431,
+    "license": "Apache-2.0",
+    "modelCode": "qwen3-5-72b",
+    "ci": "+/-10",
+    "vendor": "Alibaba",
+    "rank": 41,
+    "votes": 3456
+  },
+  {
+    "name": "DeepSeek-V3-Pro",
+    "score": 1428,
+    "license": "MIT",
+    "modelCode": "deepseek-v3-pro",
+    "ci": "+/-11",
+    "vendor": "DeepSeek-AI",
+    "rank": 42,
+    "votes": 5234
+  },
+  {
+    "name": "GPT-5.0",
+    "score": 1425,
+    "license": "Proprietary",
+    "modelCode": "gpt-5-0",
+    "ci": "+/-9",
+    "vendor": "OpenAI",
+    "rank": 43,
+    "votes": 7654
+  },
+  {
+    "name": "Llama 4-70B",
+    "score": 1422,
+    "license": "LLAMA-4",
+    "modelCode": "llama-4-70b",
+    "ci": "+/-11",
+    "vendor": "Meta AI",
+    "rank": 44,
+    "votes": 4234
+  },
+  {
+    "name": "Mistral Medium 3",
+    "score": 1419,
+    "license": "Apache-2.0",
+    "modelCode": "mistral-medium-3",
+    "ci": "+/-10",
+    "vendor": "Mistral AI",
+    "rank": 45,
+    "votes": 2876
+  },
+  {
+    "name": "MiniMax M2.4",
+    "score": 1416,
+    "license": "Proprietary",
+    "modelCode": "minimax-m2-4",
+    "ci": "+/-9",
+    "vendor": "MiniMaxAI",
+    "rank": 46,
+    "votes": 2345
+  },
+  {
+    "name": "Kimi K2.0",
+    "score": 1413,
+    "license": "Proprietary",
+    "modelCode": "kimi-k2-0",
+    "ci": "+/-10",
+    "vendor": "Moonshot AI",
+    "rank": 47,
+    "votes": 3456
+  },
+  {
+    "name": "GLM-4.7",
+    "score": 1410,
+    "license": "MIT",
+    "modelCode": "glm-4-7",
+    "ci": "+/-11",
+    "vendor": "智谱AI",
+    "rank": 48,
+    "votes": 2876
+  },
+  {
+    "name": "Claude Sonnet 4.2",
+    "score": 1407,
+    "license": "Proprietary",
+    "modelCode": "claude-sonnet-4-2",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 49,
+    "votes": 3456
+  },
+  {
+    "name": "Gemini 2.0 Pro",
+    "score": 1404,
+    "license": "Proprietary",
+    "modelCode": "gemini-2-0-pro",
+    "ci": "+/-9",
+    "vendor": "Google Deep Mind",
+    "rank": 50,
+    "votes": 5234
+  },
+  {
+    "name": "Stability AI Super",
+    "score": 1401,
+    "license": "CreativeML Open RAIL++-M",
+    "modelCode": "stability-super",
+    "ci": "+/-10",
+    "vendor": "Stability AI",
+    "rank": 51,
+    "votes": 1876
+  },
+  {
+    "name": "Qwen3.5-32B",
+    "score": 1398,
+    "license": "Apache-2.0",
+    "modelCode": "qwen3-5-32b",
+    "ci": "+/-10",
+    "vendor": "Alibaba",
+    "rank": 52,
+    "votes": 2876
+  },
+  {
+    "name": "DeepSeek-V3-Flash",
+    "score": 1395,
+    "license": "MIT",
+    "modelCode": "deepseek-v3-flash",
+    "ci": "+/-11",
+    "vendor": "DeepSeek-AI",
+    "rank": 53,
+    "votes": 3456
+  },
+  {
+    "name": "GPT-4.5 Turbo",
+    "score": 1392,
+    "license": "Proprietary",
+    "modelCode": "gpt-4-5-turbo",
+    "ci": "+/-9",
+    "vendor": "OpenAI",
+    "rank": 54,
+    "votes": 8765
+  },
+  {
+    "name": "Llama 3.5-70B",
+    "score": 1389,
+    "license": "LLAMA-3.2",
+    "modelCode": "llama-3-5-70b",
+    "ci": "+/-11",
+    "vendor": "Meta AI",
+    "rank": 55,
+    "votes": 4567
+  },
+  {
+    "name": "Mistral Small 3",
+    "score": 1386,
+    "license": "Apache-2.0",
+    "modelCode": "mistral-small-3",
+    "ci": "+/-10",
+    "vendor": "Mistral AI",
+    "rank": 56,
+    "votes": 2123
+  },
+  {
+    "name": "百川3-33B",
+    "score": 1383,
+    "license": "Apache-2.0",
+    "modelCode": "baichuan-3-33b",
+    "ci": "+/-10",
+    "vendor": "百川智能",
+    "rank": 57,
+    "votes": 1876
+  },
+  {
+    "name": "Apple Intelligence",
+    "score": 1380,
+    "license": "Proprietary",
+    "modelCode": "apple-intelligence",
+    "ci": "+/-9",
+    "vendor": "Apple",
+    "rank": 58,
+    "votes": 4567
+  },
+  {
+    "name": "Claude Sonnet 4.1",
+    "score": 1377,
+    "license": "Proprietary",
+    "modelCode": "claude-sonnet-4-1",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 59,
+    "votes": 2876
+  },
+  {
+    "name": "Kimi K1.6",
+    "score": 1374,
+    "license": "Proprietary",
+    "modelCode": "kimi-k1-6",
+    "ci": "+/-10",
+    "vendor": "Moonshot AI",
+    "rank": 60,
+    "votes": 3456
+  },
+  {
+    "name": "Gemini 1.5 Pro",
+    "score": 1371,
+    "license": "Proprietary",
+    "modelCode": "gemini-1-5-pro",
+    "ci": "+/-9",
+    "vendor": "Google Deep Mind",
+    "rank": 61,
+    "votes": 6543
+  },
+  {
+    "name": "星火3.5",
+    "score": 1368,
+    "license": "Proprietary",
+    "modelCode": "xinghuo-3-5",
+    "ci": "+/-9",
+    "vendor": "讯飞星火",
+    "rank": 62,
+    "votes": 1654
+  },
+  {
+    "name": "文心3.5",
+    "score": 1365,
+    "license": "Proprietary",
+    "modelCode": "wenxin-3-5",
+    "ci": "+/-10",
+    "vendor": "百度",
+    "rank": 63,
+    "votes": 2123
+  },
+  {
+    "name": "豆包Lite",
+    "score": 1362,
+    "license": "Proprietary",
+    "modelCode": "doubao-lite",
+    "ci": "+/-11",
+    "vendor": "字节跳动",
+    "rank": 64,
+    "votes": 1456
+  },
+  {
+    "name": "Command R+",
+    "score": 1359,
+    "license": "Proprietary",
+    "modelCode": "command-r-plus",
+    "ci": "+/-10",
+    "vendor": "Cohere",
+    "rank": 65,
+    "votes": 1876
+  },
+  {
+    "name": "Qwen3.0-72B",
+    "score": 1356,
+    "license": "Apache-2.0",
+    "modelCode": "qwen3-0-72b",
+    "ci": "+/-10",
+    "vendor": "Alibaba",
+    "rank": 66,
+    "votes": 2345
+  },
+  {
+    "name": "MiniMax M2.0",
+    "score": 1353,
+    "license": "Proprietary",
+    "modelCode": "minimax-m2-0",
+    "ci": "+/-9",
+    "vendor": "MiniMaxAI",
+    "rank": 67,
+    "votes": 1876
+  },
+  {
+    "name": "GPT-4.5",
+    "score": 1350,
+    "license": "Proprietary",
+    "modelCode": "gpt-4-5",
+    "ci": "+/-9",
+    "vendor": "OpenAI",
+    "rank": 68,
+    "votes": 9234
+  },
+  {
+    "name": "Llama 3.5-8B",
+    "score": 1347,
+    "license": "LLAMA-3.2",
+    "modelCode": "llama-3-5-8b",
+    "ci": "+/-10",
+    "vendor": "Meta AI",
+    "rank": 69,
+    "votes": 5234
+  },
+  {
+    "name": "Claude Sonnet 4.0",
+    "score": 1344,
+    "license": "Proprietary",
+    "modelCode": "claude-sonnet-4-0",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 70,
+    "votes": 3456
+  },
+  {
+    "name": "Mistral 7B v0.3",
+    "score": 1341,
+    "license": "Apache-2.0",
+    "modelCode": "mistral-7b-v0-3",
+    "ci": "+/-10",
+    "vendor": "Mistral AI",
+    "rank": 71,
+    "votes": 2876
+  },
+  {
+    "name": "GLM-4.5",
+    "score": 1338,
+    "license": "MIT",
+    "modelCode": "glm-4-5",
+    "ci": "+/-11",
+    "vendor": "智谱AI",
+    "rank": 72,
+    "votes": 2123
+  },
+  {
+    "name": "DeepSeek-V2.5-Pro",
+    "score": 1335,
+    "license": "MIT",
+    "modelCode": "deepseek-v2-5-pro",
+    "ci": "+/-11",
+    "vendor": "DeepSeek-AI",
+    "rank": 73,
+    "votes": 3456
+  },
+  {
+    "name": "百川2-13B",
+    "score": 1332,
+    "license": "Apache-2.0",
+    "modelCode": "baichuan-2-13b",
+    "ci": "+/-10",
+    "vendor": "百川智能",
+    "rank": 74,
+    "votes": 1654
+  },
+  {
+    "name": "Yi-13B",
+    "score": 1329,
+    "license": "Apache-2.0",
+    "modelCode": "yi-13b",
+    "ci": "+/-10",
+    "vendor": "零一万物",
+    "rank": 75,
+    "votes": 1876
+  },
+  {
+    "name": "Gemini 1.5 Flash",
+    "score": 1326,
+    "license": "Proprietary",
+    "modelCode": "gemini-1-5-flash",
+    "ci": "+/-9",
+    "vendor": "Google Deep Mind",
+    "rank": 76,
+    "votes": 4567
+  },
+  {
+    "name": "Kimi K1.5",
+    "score": 1323,
+    "license": "Proprietary",
+    "modelCode": "kimi-k1-5",
+    "ci": "+/-10",
+    "vendor": "Moonshot AI",
+    "rank": 77,
+    "votes": 2876
+  },
+  {
+    "name": "Command R",
+    "score": 1320,
+    "license": "Proprietary",
+    "modelCode": "command-r",
+    "ci": "+/-10",
+    "vendor": "Cohere",
+    "rank": 78,
+    "votes": 1654
+  },
+  {
+    "name": "Qwen2.5-72B",
+    "score": 1317,
+    "license": "Apache-2.0",
+    "modelCode": "qwen2-5-72b",
+    "ci": "+/-10",
+    "vendor": "Alibaba",
+    "rank": 79,
+    "votes": 2123
+  },
+  {
+    "name": "星火3.0",
+    "score": 1314,
+    "license": "Proprietary",
+    "modelCode": "xinghuo-3-0",
+    "ci": "+/-9",
+    "vendor": "讯飞星火",
+    "rank": 80,
+    "votes": 1456
+  },
+  {
+    "name": "文心3.0",
+    "score": 1311,
+    "license": "Proprietary",
+    "modelCode": "wenxin-3-0",
+    "ci": "+/-10",
+    "vendor": "百度",
+    "rank": 81,
+    "votes": 1876
+  },
+  {
+    "name": "GPT-4.4 Turbo",
+    "score": 1308,
+    "license": "Proprietary",
+    "modelCode": "gpt-4-4-turbo",
+    "ci": "+/-9",
+    "vendor": "OpenAI",
+    "rank": 82,
+    "votes": 6543
+  },
+  {
+    "name": "Llama 3-70B",
+    "score": 1305,
+    "license": "LLAMA-3",
+    "modelCode": "llama-3-70b",
+    "ci": "+/-11",
+    "vendor": "Meta AI",
+    "rank": 83,
+    "votes": 3456
+  },
+  {
+    "name": "Claude Sonnet 3.6",
+    "score": 1302,
+    "license": "Proprietary",
+    "modelCode": "claude-sonnet-3-6",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 84,
+    "votes": 2876
+  },
+  {
+    "name": "Mistral 8x7B",
+    "score": 1299,
+    "license": "Apache-2.0",
+    "modelCode": "mistral-8x7b",
+    "ci": "+/-11",
+    "vendor": "Mistral AI",
+    "rank": 85,
+    "votes": 2345
+  },
+  {
+    "name": "GLM-4.0",
+    "score": 1296,
+    "license": "MIT",
+    "modelCode": "glm-4-0",
+    "ci": "+/-11",
+    "vendor": "智谱AI",
+    "rank": 86,
+    "votes": 1876
+  },
+  {
+    "name": "DeepSeek-V2-Pro",
+    "score": 1293,
+    "license": "MIT",
+    "modelCode": "deepseek-v2-pro",
+    "ci": "+/-11",
+    "vendor": "DeepSeek-AI",
+    "rank": 87,
+    "votes": 2876
+  },
+  {
+    "name": "百川1-7B",
+    "score": 1290,
+    "license": "Apache-2.0",
+    "modelCode": "baichuan-1-7b",
+    "ci": "+/-10",
+    "vendor": "百川智能",
+    "rank": 88,
+    "votes": 1456
+  },
+  {
+    "name": "Yi-6B",
+    "score": 1287,
+    "license": "Apache-2.0",
+    "modelCode": "yi-6b",
+    "ci": "+/-10",
+    "vendor": "零一万物",
+    "rank": 89,
+    "votes": 1654
+  },
+  {
+    "name": "Gemini 1.0 Ultra",
+    "score": 1284,
+    "license": "Proprietary",
+    "modelCode": "gemini-1-0-ultra",
+    "ci": "+/-9",
+    "vendor": "Google Deep Mind",
+    "rank": 90,
+    "votes": 3456
+  },
+  {
+    "name": "Kimi K1.0",
+    "score": 1281,
+    "license": "Proprietary",
+    "modelCode": "kimi-k1-0",
+    "ci": "+/-10",
+    "vendor": "Moonshot AI",
+    "rank": 91,
+    "votes": 2345
+  },
+  {
+    "name": "MiniMax M1.5",
+    "score": 1278,
+    "license": "Proprietary",
+    "modelCode": "minimax-m1-5",
+    "ci": "+/-9",
+    "vendor": "MiniMaxAI",
+    "rank": 92,
+    "votes": 1567
+  },
+  {
+    "name": "Qwen2.5-7B",
+    "score": 1275,
+    "license": "Apache-2.0",
+    "modelCode": "qwen2-5-7b",
+    "ci": "+/-10",
+    "vendor": "Alibaba",
+    "rank": 93,
+    "votes": 1876
+  },
+  {
+    "name": "GPT-4.4",
+    "score": 1272,
+    "license": "Proprietary",
+    "modelCode": "gpt-4-4",
+    "ci": "+/-9",
+    "vendor": "OpenAI",
+    "rank": 94,
+    "votes": 4567
+  },
+  {
+    "name": "Llama 3-8B",
+    "score": 1269,
+    "license": "LLAMA-3",
+    "modelCode": "llama-3-8b",
+    "ci": "+/-10",
+    "vendor": "Meta AI",
+    "rank": 95,
+    "votes": 2876
+  },
+  {
+    "name": "Claude Sonnet 3.5",
+    "score": 1266,
+    "license": "Proprietary",
+    "modelCode": "claude-sonnet-3-5",
+    "ci": "+/-8",
+    "vendor": "Anthropic",
+    "rank": 96,
+    "votes": 2345
+  },
+  {
+    "name": "Mistral 7B v0.2",
+    "score": 1263,
+    "license": "Apache-2.0",
+    "modelCode": "mistral-7b-v0-2",
+    "ci": "+/-10",
+    "vendor": "Mistral AI",
+    "rank": 97,
+    "votes": 1876
+  },
+  {
+    "name": "GLM-3",
+    "score": 1260,
+    "license": "MIT",
+    "modelCode": "glm-3",
+    "ci": "+/-11",
+    "vendor": "智谱AI",
+    "rank": 98,
+    "votes": 1654
+  },
+  {
+    "name": "星火2.0",
+    "score": 1257,
+    "license": "Proprietary",
+    "modelCode": "xinghuo-2-0",
+    "ci": "+/-9",
+    "vendor": "讯飞星火",
+    "rank": 99,
+    "votes": 1234
+  },
+  {
+    "name": "文心2.0",
+    "score": 1254,
+    "license": "Proprietary",
+    "modelCode": "wenxin-2-0",
+    "ci": "+/-10",
+    "vendor": "百度",
+    "rank": 100,
+    "votes": 1567
+  }
+]
