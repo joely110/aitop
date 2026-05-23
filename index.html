@@ -111,8 +111,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-
   <style>
     :root {
       --bg: #FFFFFF;
@@ -1129,10 +1127,9 @@
         </div>
       </div>
 
-      <!-- Ad Banner Top -->
-      <div class="ad-banner">
-        <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <!-- Ad Banner Placeholder -->
+      <div class="ad-banner" style="min-height:90px;background:#f8f9fa;display:flex;align-items:center;justify-content:center;color:#999;font-size:14px;">
+        广告位
       </div>
 
       <!-- Why Choose Us -->
@@ -1402,20 +1399,17 @@
       { id: 4, name: 'Windsurf', vendor: 'Codeium', score: 8.6, price: 'freemium', colors: ['#059669','#10B981'], tags: ['Flow AI', '免费额度大', '轻量'], desc: 'Codeium出品，提供大量免费额度，Flow AI功能覆盖常见编程场景。', desc_en: 'By Codeium, offers generous free tier, Flow AI covers common programming scenarios.', website: 'https://windsurf.com', icon: './icons/windsurf.com.png' },
       { id: 5, name: 'JetBrains AI', vendor: 'JetBrains', score: 8.5, price: 'paid', colors: ['#F97316','#FB923C'], tags: ['IDE深度集成', '代码重构', '文档生成'], desc: '与IntelliJ等JetBrains IDE原生集成，适合已经使用JetBrains产品的开发者。', desc_en: 'Natively integrated with IntelliJ and JetBrains IDEs, ideal for developers already using JetBrains products.', website: 'https://www.jetbrains.com/ai/', icon: './icons/jetbrains.com.png' },
       { id: 6, name: 'Tabnine', vendor: 'Tabnine', score: 8.3, price: 'freemium', colors: ['#2563EB','#3B82F6'], tags: ['本地部署', '隐私保护', '快速补全'], desc: '支持本地运行的AI代码补全工具，数据全程本地处理，隐私保护优秀。', desc_en: 'AI code completion tool supporting local deployment, all data processed locally with excellent privacy protection.', website: 'https://tabnine.com', icon: './icons/tabnine.com.png' },
-      { id: 7, icon: './icons/replit.png' },
-      { id: 8, name: 'Cody', vendor: 'Sourcegraph', score: 8.2, price: 'freemium', colors: ['#0EA5E9','#38BDF8'], tags: ['代码库理解', '语义搜索', '代码导航'], desc: '基于代码库语义的AI助手，代码理解和导航能力强大，适合大型代码库。', desc_en: 'By Sourcegraph, AI assistant based on codebase semantics, powerful code understanding for large codebases.', website: 'https://sourcegraph.com/cody', icon: './icons/sourcegraph.com.png' },
-      { id: 9, name: 'Amazon CodeWhisperer', vendor: 'Amazon', score: 8.0, price: 'free', colors: ['#F59E0B','#FBBF24'], tags: ['AWS集成', '安全扫描', '免费'], desc: '亚马逊出品，与AWS服务深度集成，提供代码安全扫描，个人用户免费。', desc_en: 'By Amazon, deep integration with AWS services, provides code security scanning, free for individual users.', website: 'https://aws.amazon.com/codewhisperer/', icon: './icons/aws.amazon.com.png' },
-      { id: 10, name: 'CodeRabbit', vendor: 'CodeRabbit', score: 8.1, price: 'freemium', colors: ['#EC4899','#F472B6'], tags: ['PR审查', '代码优化', '自动化'], desc: '专注于代码审查和PR自动化的AI工具，PR审查体验业界领先。', desc_en: 'AI tool focused on code review and PR automation, industry-leading PR review experience.', website: 'https://coderabbit.ai', icon: './icons/coderabbit.ai.png' },
-      { id: 11, name: 'Supermaven', vendor: 'Supermaven', score: 8.4, price: 'paid', colors: ['#10B981','#34D399'], tags: ['超快补全', '低延迟', '智能'], desc: '以超低延迟著称的AI代码补全工具，补全速度业界最快，适合追求效率的开发者。', desc_en: 'AI code completion tool known for ultra-low latency, fastest completion speed in the industry.', website: 'https://supermaven.com', icon: './icons/supermaven.com.png' },
-      { id: 12, icon: './icons/phind.png' },
-      { id: 13, name: 'Blackbox AI', vendor: 'Blackbox', score: 7.8, price: 'freemium', colors: ['#1E293B','#334155'], tags: ['代码提取', '多语言', 'API集成'], desc: '能理解并提取GitHub代码的AI工具，支持代码片段搜索和API集成。', desc_en: 'AI tool that understands and extracts GitHub code, supports code snippet search and API integration.', website: 'https://www.blackbox.ai', icon: './icons/blackbox.ai.png' },
-      { id: 14, name: 'Aider', vendor: 'Aider', score: 7.6, price: 'free', colors: ['#059669','#10B981'], tags: ['开源', '命令行', '多语言'], desc: '开源AI编程助手，支持多语言，命令行友好，适合远程开发。', desc_en: 'Open-source AI coding assistant, multi-language support, CLI-friendly, great for remote development.', website: 'https://aider.chat', icon: './icons/github_Aider-AI.png' },
-      { id: 15, name: 'Continue', vendor: 'Continue', score: 7.7, price: 'free', colors: ['#8B5CF6','#A78BFA'], tags: ['开源', 'VS Code', '本地'], desc: '开源的AI代码助手，VS Code和JetBrains扩展，支持本地部署和自定义模型。', desc_en: 'Open-source AI code assistant, VS Code and JetBrains extensions, supports local deployment and custom models.', website: 'https://continue.dev', icon: './icons/continue.dev.png' },
-      { id: 16, name: 'Devin', vendor: 'Cognition', score: 8.0, price: 'paid', colors: ['#6366F1','#818CF8'], tags: ['自主编码', '端到端', '软件工程师'], desc: 'AI软件工程师，可以独立完成整个项目开发和调试。', desc_en: 'AI software engineer that can independently complete entire project development and debugging.', website: 'https://devin.ai', icon: './icons/devin.ai.png' },
-      { id: 17, name: 'SWE-agent', vendor: '普林斯顿SNP', score: 7.8, price: 'free', colors: ['#0EA5E9','#38BDF8'], tags: ['开源', 'SWE-bench', '学术'], desc: '普林斯顿开源SWE-bench测试Agent，性能优秀。', desc_en: 'Princeton\'s open-source SWE-bench testing agent with excellent performance.', website: 'https://github.com/princeton-nlp/SWE-agent', icon: './icons/github.com.png' },
-      { id: 18, icon: './icons/fmemo.png' },
-      { id: 19, name: 'CodeGeex', vendor: 'AI21', score: 7.4, price: 'freemium', colors: ['#F97316','#FB923C'], tags: ['多语言', '代码生成', 'IDE插件'], desc: 'AI21出品的代码生成工具，支持多种IDE。', desc_en: 'By AI21, code generation tool supporting multiple IDEs.', website: 'https://codegeex.ai', icon: './icons/codegeex.ai.png' },
-      { id: 20, name: 'Junie', vendor: 'JetBrains', score: 7.3, price: 'paid', colors: ['#F97316','#FB923C'], tags: ['IDE集成', '企业级', '代码分析'], desc: 'JetBrains最新AI编码助手，深度集成IDE。', desc_en: 'JetBrains\' latest AI coding assistant, deeply integrated with IDE.', website: 'https://www.jetbrains.com/junie/', icon: './icons/jetbrains.com.png' }
+      { id: 7, name: 'Cody', vendor: 'Sourcegraph', score: 8.2, price: 'freemium', colors: ['#0EA5E9','#38BDF8'], tags: ['代码库理解', '语义搜索', '代码导航'], desc: '基于代码库语义的AI助手，代码理解和导航能力强大，适合大型代码库。', desc_en: 'By Sourcegraph, AI assistant based on codebase semantics, powerful code understanding for large codebases.', website: 'https://sourcegraph.com/cody', icon: './icons/sourcegraph.com.png' },
+      { id: 8, name: 'Amazon CodeWhisperer', vendor: 'Amazon', score: 8.0, price: 'free', colors: ['#F59E0B','#FBBF24'], tags: ['AWS集成', '安全扫描', '免费'], desc: '亚马逊出品，与AWS服务深度集成，提供代码安全扫描，个人用户免费。', desc_en: 'By Amazon, deep integration with AWS services, provides code security scanning, free for individual users.', website: 'https://aws.amazon.com/codewhisperer/', icon: './icons/aws.amazon.com.png' },
+      { id: 9, name: 'CodeRabbit', vendor: 'CodeRabbit', score: 8.1, price: 'freemium', colors: ['#EC4899','#F472B6'], tags: ['PR审查', '代码优化', '自动化'], desc: '专注于代码审查和PR自动化的AI工具，PR审查体验业界领先。', desc_en: 'AI tool focused on code review and PR automation, industry-leading PR review experience.', website: 'https://coderabbit.ai', icon: './icons/coderabbit.ai.png' },
+      { id: 10, name: 'Supermaven', vendor: 'Supermaven', score: 8.4, price: 'paid', colors: ['#10B981','#34D399'], tags: ['超快补全', '低延迟', '智能'], desc: '以超低延迟著称的AI代码补全工具，补全速度业界最快，适合追求效率的开发者。', desc_en: 'AI code completion tool known for ultra-low latency, fastest completion speed in the industry.', website: 'https://supermaven.com', icon: './icons/supermaven.com.png' },
+      { id: 11, name: 'Blackbox AI', vendor: 'Blackbox', score: 7.8, price: 'freemium', colors: ['#1E293B','#334155'], tags: ['代码提取', '多语言', 'API集成'], desc: '能理解并提取GitHub代码的AI工具，支持代码片段搜索和API集成。', desc_en: 'AI tool that understands and extracts GitHub code, supports code snippet search and API integration.', website: 'https://www.blackbox.ai', icon: './icons/blackbox.ai.png' },
+      { id: 12, name: 'Aider', vendor: 'Aider', score: 7.6, price: 'free', colors: ['#059669','#10B981'], tags: ['开源', '命令行', '多语言'], desc: '开源AI编程助手，支持多语言，命令行友好，适合远程开发。', desc_en: 'Open-source AI coding assistant, multi-language support, CLI-friendly, great for remote development.', website: 'https://aider.chat', icon: './icons/github_Aider-AI.png' },
+      { id: 13, name: 'Continue', vendor: 'Continue', score: 7.7, price: 'free', colors: ['#8B5CF6','#A78BFA'], tags: ['开源', 'VS Code', '本地'], desc: '开源的AI代码助手，VS Code和JetBrains扩展，支持本地部署和自定义模型。', desc_en: 'Open-source AI code assistant, VS Code and JetBrains extensions, supports local deployment and custom models.', website: 'https://continue.dev', icon: './icons/continue.dev.png' },
+      { id: 14, name: 'Devin', vendor: 'Cognition', score: 8.0, price: 'paid', colors: ['#6366F1','#818CF8'], tags: ['自主编码', '端到端', '软件工程师'], desc: 'AI软件工程师，可以独立完成整个项目开发和调试。', desc_en: 'AI software engineer that can independently complete entire project development and debugging.', website: 'https://devin.ai', icon: './icons/devin.ai.png' },
+      { id: 15, name: 'SWE-agent', vendor: '普林斯顿SNP', score: 7.8, price: 'free', colors: ['#0EA5E9','#38BDF8'], tags: ['开源', 'SWE-bench', '学术'], desc: '普林斯顿开源SWE-bench测试Agent，性能优秀。', desc_en: 'Princeton\'s open-source SWE-bench testing agent with excellent performance.', website: 'https://github.com/princeton-nlp/SWE-agent', icon: './icons/github.com.png' },
+      { id: 16, name: 'CodeGeex', vendor: 'AI21', score: 7.4, price: 'freemium', colors: ['#F97316','#FB923C'], tags: ['多语言', '代码生成', 'IDE插件'], desc: 'AI21出品的代码生成工具，支持多种IDE。', desc_en: 'By AI21, code generation tool supporting multiple IDEs.', website: 'https://codegeex.ai', icon: './icons/codegeex.ai.png' },
+      { id: 17, name: 'Junie', vendor: 'JetBrains', score: 7.3, price: 'paid', colors: ['#F97316','#FB923C'], tags: ['IDE集成', '企业级', '代码分析'], desc: 'JetBrains最新AI编码助手，深度集成IDE。', desc_en: 'JetBrains\' latest AI coding assistant, deeply integrated with IDE.', website: 'https://www.jetbrains.com/junie/', icon: './icons/jetbrains.com.png' }
     ];
 
     // 大模型编程能力排行
@@ -1834,9 +1828,7 @@
     // 编程语言排行（数据源: TIOBE/Stack Overflow调查/GitHub Octoverse 2025-2026）
     const languages = [
       { id: 1, name: 'Python', rank: 1, score: 100.0, type: '脚本语言', colors: ['#3776AB','#FFD43B'], desc: 'TIOBE榜首，AI/数据科学绝对霸主，GitHub增长最快语言。数据源: tiobe.com', desc_en: 'TIOBE #1, absolute leader in AI/data science, fastest growing language on GitHub.', icon: './icons/python.org.png' },
-      { id: 2, icon: './icons/javascript.png' },
       { id: 3, name: 'TypeScript', rank: 3, score: 88.0, type: '编译语言', colors: ['#3178C6','#00599C'], desc: 'GitHub第一语言，JS超集，大型项目首选。数据源: octoverse.github.com', desc_en: "GitHub's #1 language, JS superset, preferred for large projects.", icon: './icons/typescriptlang.org.png' },
-      { id: 4, icon: './icons/c.png' },
       { id: 5, name: 'Java', rank: 5, score: 83.0, type: '编译语言', colors: ['#ED8B00','#5382A6'], desc: 'TIOBE第三，企业级应用主力，Android开发语言。数据源: tiobe.com', desc_en: 'TIOBE #3, enterprise application mainstay, primary Android language.', icon: './icons/oracle.com.png' },
       { id: 6, name: 'C++', rank: 6, score: 80.5, type: '编译语言', colors: ['#00599C','#00599C'], desc: 'TIOBE第四，系统编程、游戏开发、高性能计算。数据源: tiobe.com', desc_en: 'TIOBE #4, systems programming, game development, high-performance computing.', icon: './icons/isocpp.org.png' },
       { id: 7, name: 'Go', rank: 7, score: 78.0, type: '编译语言', colors: ['#00ADD8','#008080'], desc: '云原生首选，并发支持优秀，SO最受推崇语言第五。数据源: survey.stackoverflow.co', desc_en: 'Cloud-native preferred, excellent concurrency support.', icon: './icons/go.dev.png' },
@@ -1851,7 +1843,6 @@
       { id: 16, name: 'MATLAB', rank: 16, score: 38.0, type: '科学计算', colors: ['#0076A8','#0076A8'], desc: '工程仿真、科学计算标配，MATLAB生态系统强大。数据源: tiobe.com', desc_en: 'Standard for engineering simulation and scientific computing.', icon: './icons/mathworks.com.png' },
       { id: 17, name: 'Scala', rank: 17, score: 35.0, type: '编译语言', colors: ['#DC322F','#DC322F'], desc: 'JVM系函数式语言，大数据处理 Spark 主力语言。数据源: tiobe.com', desc_en: 'JVM functional language, Spark main language for big data.', icon: './icons/scala-lang.org.png' },
       { id: 18, name: 'Objective-C', rank: 18, score: 32.0, type: '编译语言', colors: ['#438EFF','#438EFF'], desc: 'Apple历史语言， legacy iOS/macOS 代码维护。数据源: tiobe.com', desc_en: "Apple's legacy language, maintaining legacy iOS/macOS code.", icon: './icons/developer.apple.com.png' },
-      { id: 19, icon: './icons/perl.png' },
       { id: 20, name: 'Dart', rank: 20, score: 26.0, type: '编译语言', colors: ['#0175C2','#0175C2'], desc: 'Flutter 主力语言，跨平台 UI 开发新秀。数据源: tiobe.com', desc_en: "Flutter's primary language, rising star in cross-platform UI.", icon: './icons/dart.dev.png' },
       { id: 21, name: 'Zig', rank: 21, score: 20.0, type: '编译语言', colors: ['#F7A41D','#F7A41D'], desc: '系统编程新星，替代C的性能与现代安全。数据源: tiobe.com', desc_en: 'Rising star in systems programming, C replacement with modern safety.', icon: './icons/ziglang.org.png' },
       { id: 22, name: 'Elixir', rank: 22, score: 18.0, type: '函数语言', colors: ['#6E4A7E','#6E4A7E'], desc: 'Erlang VM上的函数式语言，高并发电信系统。数据源: tiobe.com', desc_en: 'Functional language on Erlang VM, high-concurrency telecom systems.', icon: './icons/elixir-lang.org.png' },
