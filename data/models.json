@@ -10,8 +10,8 @@
         "#D97706",
         "#F59E0B"
       ],
-      "desc": "SWE-bench Verified榜首，93.9%通过率。数据源: datalearner.com",
-      "desc_en": "DataLearner SWE-bench Verified #1, 93.9% pass rate.",
+      "desc": "SWE-bench Verified榜首，93.9%通过率。数据源: swebench.com",
+      "desc_en": "SWE-bench SWE-bench Verified #1, 93.9% pass rate.",
       "icon": "./icons/anthropic.com.png"
     },
     {
@@ -24,7 +24,7 @@
         "#D97706",
         "#F59E0B"
       ],
-      "desc": "Anthropic最新旗舰，87.6%通过率。数据源: datalearner.com",
+      "desc": "Anthropic最新旗舰，87.6%通过率。数据源: swebench.com",
       "icon": "./icons/anthropic.com.png"
     },
     {
@@ -37,7 +37,7 @@
         "#D97706",
         "#F59E0B"
       ],
-      "desc": "Anthropic主力模型，82.0%通过率。数据源: datalearner.com",
+      "desc": "Anthropic主力模型，82.0%通过率。数据源: swebench.com",
       "icon": "./icons/anthropic.com.png"
     },
     {
@@ -50,7 +50,7 @@
         "#D97706",
         "#F59E0B"
       ],
-      "desc": "Anthropic高性价比模型。数据源: datalearner.com",
+      "desc": "Anthropic高性价比模型。数据源: swebench.com",
       "icon": "./icons/anthropic.com.png"
     },
     {
@@ -63,7 +63,7 @@
         "#D97706",
         "#F59E0B"
       ],
-      "desc": "Anthropic旗舰级表现。数据源: datalearner.com",
+      "desc": "Anthropic旗舰级表现。数据源: swebench.com",
       "icon": "./icons/anthropic.com.png"
     },
     {
@@ -76,7 +76,7 @@
         "#D97706",
         "#F59E0B"
       ],
-      "desc": "Anthropic稳定版本。数据源: datalearner.com",
+      "desc": "Anthropic稳定版本。数据源: swebench.com",
       "icon": "./icons/anthropic.com.png"
     },
     {
@@ -89,7 +89,7 @@
         "#6366F1",
         "#818CF8"
       ],
-      "desc": "国产开源旗舰。数据源: datalearner.com",
+      "desc": "国产开源旗舰。数据源: swebench.com",
       "desc_en": "Chinese open-source flagship.",
       "icon": "./icons/github_deepseek-ai.png"
     },
@@ -103,7 +103,7 @@
         "#3B82F6",
         "#60A5FA"
       ],
-      "desc": "Google旗舰模型。数据源: datalearner.com",
+      "desc": "Google旗舰模型。数据源: swebench.com",
       "icon": "./icons/google.com.png"
     },
     {
@@ -116,7 +116,7 @@
         "#D97706",
         "#F59E0B"
       ],
-      "desc": "Anthropic经典版本。数据源: datalearner.com",
+      "desc": "Anthropic经典版本。数据源: swebench.com",
       "icon": "./icons/anthropic.com.png"
     },
     {
@@ -129,7 +129,7 @@
         "#EC4899",
         "#F472B6"
       ],
-      "desc": "国产黑马模型。数据源: datalearner.com",
+      "desc": "国产黑马模型。数据源: swebench.com",
       "desc_en": "Chinese dark horse model.",
       "icon": "./icons/minimaxi.com.png"
     }
@@ -145,8 +145,8 @@
         "#3B82F6",
         "#60A5FA"
       ],
-      "desc": "DataLearner LiveCodeBench榜首，92.0%通过率。数据源: datalearner.com",
-      "desc_en": "DataLearner LiveCodeBench #1, 92.0% pass rate.",
+      "desc": "LiveCodeBench榜首，92.0%通过率。数据源: livecodebench.com",
+      "desc_en": "LiveCodeBench LiveCodeBench #1, 92.0% pass rate.",
       "icon": "./icons/google.com.png"
     },
     {
@@ -159,7 +159,7 @@
         "#3B82F6",
         "#60A5FA"
       ],
-      "desc": "Google最新旗舰，91.7%通过率。数据源: datalearner.com",
+      "desc": "Google最新旗舰，91.7%通过率。数据源: livecodebench.com",
       "icon": "./icons/google.com.png"
     },
     {
@@ -172,7 +172,7 @@
         "#D97706",
         "#F59E0B"
       ],
-      "desc": "Anthropic最强推理模型。数据源: datalearner.com",
+      "desc": "Anthropic最强推理模型。数据源: livecodebench.com",
       "icon": "./icons/anthropic.com.png"
     },
     {
@@ -185,7 +185,7 @@
         "#10A37F",
         "#34D399"
       ],
-      "desc": "国产AI新秀。数据源: datalearner.com",
+      "desc": "国产AI新秀。数据源: livecodebench.com",
       "desc_en": "Chinese AI newcomer.",
       "icon": "./icons/stepfun.com.png"
     },
@@ -199,7 +199,7 @@
         "#EC4899",
         "#F472B6"
       ],
-      "desc": "阿里思考型旗舰。数据源: datalearner.com",
+      "desc": "阿里思考型旗舰。数据源: livecodebench.com",
       "icon": "./icons/qwenlm.com.png"
     },
     {
@@ -212,7 +212,7 @@
         "#10A37F",
         "#34D399"
       ],
-      "desc": "OpenAI代码专用模型。数据源: datalearner.com",
+      "desc": "OpenAI代码专用模型。数据源: livecodebench.com",
       "icon": "./icons/openai.com.png"
     },
     {
@@ -225,7 +225,7 @@
         "#EC4899",
         "#F472B6"
       ],
-      "desc": "阿里开源旗舰。数据源: datalearner.com",
+      "desc": "阿里开源旗舰。数据源: livecodebench.com",
       "icon": "./icons/qwenlm.com.png"
     },
     {
@@ -238,7 +238,7 @@
         "#D97706",
         "#F59E0B"
       ],
-      "desc": "Anthropic经典旗舰。数据源: datalearner.com",
+      "desc": "Anthropic经典旗舰。数据源: livecodebench.com",
       "icon": "./icons/anthropic.com.png"
     }
   ],
@@ -253,8 +253,8 @@
         "#D97706",
         "#F59E0B"
       ],
-      "desc": "DataLearner SWE-Bench Pro榜首，77.8%通过率。数据源: datalearner.com",
-      "desc_en": "DataLearner SWE-Bench Pro #1, 77.8% pass rate.",
+      "desc": "SWE-Bench Pro榜首，77.8%通过率。数据源: swebench.com",
+      "desc_en": "SWE-bench SWE-Bench Pro #1, 77.8% pass rate.",
       "icon": "./icons/anthropic.com.png"
     },
     {
@@ -267,7 +267,7 @@
         "#D97706",
         "#F59E0B"
       ],
-      "desc": "Anthropic专业版。数据源: datalearner.com",
+      "desc": "Anthropic专业版。数据源: swebench.com",
       "icon": "./icons/anthropic.com.png"
     },
     {
@@ -280,7 +280,7 @@
         "#10A37F",
         "#34D399"
       ],
-      "desc": "国产旗舰，超长上下文。数据源: datalearner.com",
+      "desc": "国产旗舰，超长上下文。数据源: swebench.com",
       "desc_en": "Chinese flagship, ultra-long context.",
       "icon": "./icons/cdn.meekapp.com.png"
     },
@@ -294,7 +294,7 @@
         "#10A37F",
         "#34D399"
       ],
-      "desc": "OpenAI最新旗舰。数据源: datalearner.com",
+      "desc": "OpenAI最新旗舰。数据源: swebench.com",
       "icon": "./icons/openai.com.png"
     },
     {
@@ -307,7 +307,7 @@
         "#EC4899",
         "#F472B6"
       ],
-      "desc": "国产高性能模型。数据源: datalearner.com",
+      "desc": "国产高性能模型。数据源: swebench.com",
       "desc_en": "Chinese high-performance model.",
       "icon": "./icons/minimaxi.com.png"
     },
@@ -321,7 +321,7 @@
         "#6366F1",
         "#818CF8"
       ],
-      "desc": "DeepSeek专业版。数据源: datalearner.com",
+      "desc": "DeepSeek专业版。数据源: swebench.com",
       "desc_en": "DeepSeek professional version.",
       "icon": "./icons/github_deepseek-ai.png"
     },
@@ -335,7 +335,7 @@
         "#6366F1",
         "#818CF8"
       ],
-      "desc": "DeepSeek轻量版。数据源: datalearner.com",
+      "desc": "DeepSeek轻量版。数据源: swebench.com",
       "desc_en": "DeepSeek lightweight version.",
       "icon": "./icons/github_deepseek-ai.png"
     },
@@ -349,7 +349,7 @@
         "#EC4899",
         "#F472B6"
       ],
-      "desc": "阿里开源代码模型。数据源: datalearner.com",
+      "desc": "阿里开源代码模型。数据源: swebench.com",
       "icon": "./icons/qwenlm.com.png"
     },
     {
@@ -362,7 +362,7 @@
         "#10A37F",
         "#34D399"
       ],
-      "desc": "智谱最新版本。数据源: datalearner.com",
+      "desc": "智谱最新版本。数据源: swebench.com",
       "icon": "./icons/zhipuai.cn.png"
     }
   ],
@@ -377,8 +377,8 @@
         "#D97706",
         "#F59E0B"
       ],
-      "desc": "DataLearner多语言榜首，87.3%通过率。数据源: datalearner.com",
-      "desc_en": "DataLearner multilingual #1, 87.3% pass rate.",
+      "desc": "SWE-bench Multilingual榜首，87.3%通过率。数据源: swebench.com",
+      "desc_en": "SWE-bench multilingual #1, 87.3% pass rate.",
       "icon": "./icons/anthropic.com.png"
     },
     {
@@ -391,7 +391,7 @@
         "#10A37F",
         "#34D399"
       ],
-      "desc": "国产旗舰，中文代码强。数据源: datalearner.com",
+      "desc": "国产旗舰，中文代码强。数据源: swebench.com",
       "desc_en": "Chinese flagship, strong at Chinese code.",
       "icon": "./icons/cdn.meekapp.com.png"
     },
@@ -405,7 +405,7 @@
         "#6366F1",
         "#818CF8"
       ],
-      "desc": "国产开源旗舰。数据源: datalearner.com",
+      "desc": "国产开源旗舰。数据源: swebench.com",
       "desc_en": "Chinese open-source flagship.",
       "icon": "./icons/github_deepseek-ai.png"
     },
@@ -419,7 +419,7 @@
         "#6366F1",
         "#818CF8"
       ],
-      "desc": "DeepSeek轻量版。数据源: datalearner.com",
+      "desc": "DeepSeek轻量版。数据源: swebench.com",
       "desc_en": "DeepSeek lightweight version.",
       "icon": "./icons/github_deepseek-ai.png"
     },
@@ -433,7 +433,7 @@
         "#EC4899",
         "#F472B6"
       ],
-      "desc": "阿里27B参数模型。数据源: datalearner.com",
+      "desc": "阿里27B参数模型。数据源: swebench.com",
       "icon": "./icons/qwenlm.com.png"
     },
     {
@@ -446,7 +446,7 @@
         "#EC4899",
         "#F472B6"
       ],
-      "desc": "阿里35B参数模型。数据源: datalearner.com",
+      "desc": "阿里35B参数模型。数据源: swebench.com",
       "icon": "./icons/qwenlm.com.png"
     }
   ]
