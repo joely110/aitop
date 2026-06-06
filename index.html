@@ -666,7 +666,15 @@
       align-items: center;
       gap: 4px;
     }
-    .share-btn:hover { color: var(--primary); border-color: var(--primary); }
+    .share-btn:hover {
+      color: var(--primary);
+      border-color: var(--primary);
+      background: var(--primary-light);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(99, 102, 241, 0.15);
+    }
+    .share-btn:active { transform: translateY(0); box-shadow: none; }
+    .share-btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 
     /* Share popup (mini dropdown) */
     .share-popup {
@@ -768,8 +776,15 @@
       cursor: pointer;
       text-align: left;
       text-decoration: none;
+      transition: all 0.2s;
     }
-    .floating-share-grid a:hover, .floating-share-grid button:hover { border-color: var(--primary); color: var(--primary); }
+    .floating-share-grid a:hover, .floating-share-grid button:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-light);
+      transform: translateY(-1px);
+    }
+    .floating-share-grid a:active, .floating-share-grid button:active { transform: translateY(0); }
     .floating-share-grid svg { width: 14px; height: 14px; flex-shrink: 0; }
 
     /* Toast notification */
@@ -5513,13 +5528,32 @@ const databases = {
       copyText(url).then(ok => showToast(ok ? t('shareCopied') : t('shareCopyFailed')));
     }
 
+    function truncateForTwitter(text, maxLen) {
+      if (text.length <= maxLen) return text;
+      // Try to truncate at a line break for cleaner result
+      const truncated = text.substring(0, maxLen - 1);
+      const lastNewline = truncated.lastIndexOf('\n');
+      if (lastNewline > maxLen - 50) return truncated.substring(0, lastNewline) + '…';
+      return truncated + '…';
+    }
+
     function shareToTwitter(modelId, category) {
       const cat = category || currentModelCategory;
       const mod = (models[cat] || []).find(m => m.id === modelId);
       if (!mod) return;
       const url = buildShareUrl(cat, modelId);
-      const text = fillTemplate(t('shareSingleTweet'), { name: mod.name, score: mod.score, benchmark: getBenchmarkName(cat), url });
-      window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank', 'width=580,height=520');
+      const text = truncateForTwitter(
+        fillTemplate(t('shareSingleTweet'), { name: mod.name, score: mod.score, benchmark: getBenchmarkName(cat), url }),
+        280
+      );
+      // Use Web Share API on mobile if available
+      if (navigator.share && /Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+        navigator.share({ text: text.replace(url, '').trim(), url, title: mod.name }).catch(() => {
+          window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank', 'width=580,height=520');
+        });
+      } else {
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank', 'width=580,height=520');
+      }
     }
 
     function shareToLinkedIn(modelId, category) {
@@ -5557,8 +5591,17 @@ const databases = {
         vars['n' + (i + 1)] = list[i].name;
         vars['s' + (i + 1)] = list[i].score + '%';
       }
-      const text = fillTemplate(t('shareCategoryTweet'), vars);
-      window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank', 'width=580,height=520');
+      const text = truncateForTwitter(
+        fillTemplate(t('shareCategoryTweet'), vars),
+        280
+      );
+      if (navigator.share && /Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+        navigator.share({ text: text.replace(url, '').trim(), url, title: getBenchmarkName(cat) }).catch(() => {
+          window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank', 'width=580,height=520');
+        });
+      } else {
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank', 'width=580,height=520');
+      }
     }
 
     function copyCategoryLink(category) {
@@ -5646,6 +5689,43 @@ const databases = {
       });
     }
 
+    function nativeShare(title, text, url) {
+      if (navigator.share) {
+        navigator.share({ title, text, url }).catch(err => {
+          if (err.name !== 'AbortError') showToast(t('shareErrPrefix') + err.message);
+        });
+        return true;
+      }
+      return false;
+    }
+
+    function showShareModal(modelId, category) {
+      const cat = category || currentModelCategory;
+      const mod = (models[cat] || []).find(m => m.id === modelId);
+      if (!mod) return;
+      const url = buildShareUrl(cat, modelId);
+      const text = fillTemplate(t('shareSingleTweet'), { name: mod.name, score: mod.score, benchmark: getBenchmarkName(cat), url });
+      // Try native share first
+      if (nativeShare(mod.name, text.replace(url, '').trim(), url)) return;
+      // Fallback: open Twitter intent
+      shareToTwitter(modelId, category);
+    }
+
+    function showCategoryShareModal() {
+      const cat = currentModelCategory;
+      const list = (models[cat] || []).slice(0, 5);
+      if (list.length < 5) return;
+      const url = buildShareUrl(cat, null);
+      const vars = { benchmark: getBenchmarkName(cat), url };
+      for (let i = 0; i < 5; i++) {
+        vars['n' + (i + 1)] = list[i].name;
+        vars['s' + (i + 1)] = list[i].score + '%';
+      }
+      const text = fillTemplate(t('shareCategoryTweet'), vars);
+      if (nativeShare(getBenchmarkName(cat), text.replace(url, '').trim(), url)) return;
+      shareCategoryToTwitter(cat);
+    }
+
     function toggleRowSharePopup(modelId, category, event) {
       event.stopPropagation();
       closeAllSharePopups();
@@ -5664,6 +5744,7 @@ const databases = {
         <a href="https://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(fillTemplate(t('shareWeiboText'), { name: mod.name, score: mod.score, benchmark: getBenchmarkName(cat), url }))}" target="_blank"><i data-lucide="globe" style="color:#E6162D;"></i> ${t('sharePlatformWeibo')}</a>
         <button onclick="copyText('${url}');showToast(t('shareCopied'))"><i data-lucide="link"></i> ${t('shareCopyLink')}</button>
         <button onclick="generateShareImage(${modelId}, '${cat}')"><i data-lucide="image"></i> ${t('shareGenImage')}</button>
+        ${navigator.share ? `<button onclick="showShareModal(${modelId}, '${cat}')" style="color:var(--accent);border-top:1px solid var(--border);margin-top:2px;padding-top:8px;"><i data-lucide="more-horizontal"></i> ${t('shareMore')}</button>` : ''}
       `;
       const btn = event.currentTarget;
       btn.parentElement.appendChild(popup);
@@ -5703,6 +5784,8 @@ const databases = {
       if (cat && ['swe-bench', 'livecode', 'swe-pro', 'multilingual'].includes(cat)) {
         currentModelCategory = cat;
         renderModelsTab(cat);
+        // Update OG meta tags for sharing
+        updateOGMeta(cat, id);
         if (id) {
           setTimeout(() => {
             const row = document.querySelector('[data-model-row="' + id + '"]');
@@ -5714,8 +5797,67 @@ const databases = {
             }
           }, 500);
         }
+      } else {
+        // Reset to default OG meta
+        updateOGMeta(null, null);
       }
     }
+
+    function updateOGMeta(cat, id) {
+      const isZh = currentLang === 'zh';
+      let title, desc, url;
+      const baseUrl = location.origin + location.pathname;
+      if (cat && id) {
+        const mod = (models[cat] || []).find(m => m.id === parseInt(id));
+        if (mod) {
+          title = isZh
+            ? `${mod.name} 拿了 ${mod.score}% - AIDevHub 大模型编程能力榜`
+            : `${mod.name} scored ${mod.score}% - AIDevHub LLM Coding Leaderboard`;
+          desc = isZh
+            ? `${mod.vendor} 的 ${mod.name} 在 ${getBenchmarkName(cat)} 中拿了 ${mod.score}% 通过率。查看完整排行榜。`
+            : `${mod.vendor}'s ${mod.name} scored ${mod.score}% on ${getBenchmarkName(cat)}. View full leaderboard.`;
+          url = baseUrl + '#llm?cat=' + cat + '&id=' + id;
+        }
+      } else if (cat) {
+        const catName = CATEGORY_NAMES[cat] ? CATEGORY_NAMES[cat][currentLang] : cat;
+        const top = (models[cat] || [])[0];
+        title = isZh
+          ? `${catName} 大模型编程能力榜 - AIDevHub`
+          : `${catName} LLM Coding Leaderboard - AIDevHub`;
+        desc = isZh
+          ? `${catName} 榜单: ${top ? top.name + ' ' + top.score + '% 排第一' : '查看完整排名'}`
+          : `${catName} ranking: ${top ? top.name + ' ' + top.score + '% is #1' : 'View full ranking'}`;
+        url = baseUrl + '#llm?cat=' + cat;
+      } else {
+        title = isZh
+          ? 'AIDevHub - 开发者工具排行榜2026'
+          : 'AIDevHub - Developer Tools Leaderboard 2026';
+        desc = isZh
+          ? '2026年最新开发者工具排行榜，涵盖AI编程工具、大模型、编程语言、数据库。'
+          : 'Latest 2026 developer tools leaderboard: AI coding tools, LLMs, programming languages, databases.';
+        url = baseUrl;
+      }
+      // Update meta tags
+      setMeta('property', 'og:title', title);
+      setMeta('property', 'og:description', desc);
+      setMeta('property', 'og:url', url);
+      setMeta('name', 'twitter:title', title);
+      setMeta('name', 'twitter:description', desc);
+      setMeta('name', 'twitter:url', url);
+      // Update document.title
+      document.title = title;
+    }
+
+    function setMeta(attr, key, value) {
+      let el = document.querySelector(`meta[${attr}="${key}"]`);
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('content', value);
+    }
+
     window.addEventListener('hashchange', parseDeepLink);
     setTimeout(parseDeepLink, 200);
 
@@ -5912,6 +6054,7 @@ const databases = {
         sharePlatformLinkedIn: 'LinkedIn',
         sharePlatformReddit: 'Reddit',
         sharePlatformWeibo: '微博',
+        shareMore: '更多…',
         shareSingleTweet: '🚀 {name} 在 {benchmark} 拿了 {score}% 通过率!\n\n📊 完整排行: {url}\n\n#AI #LLM',
         shareCategoryTweet: '🏆 {benchmark} 榜单 TOP 5:\n🥇 {n1} {s1}\n🥈 {n2} {s2}\n🥉 {n3} {s3}\n4. {n4} {s4}\n5. {n5} {s5}\n\n完整排行: {url}\n\n#AI #LLM',
         shareLinkedInTitle: '{name} 在 {benchmark} 拿了 {score}%! 查看完整榜单',
@@ -6108,6 +6251,7 @@ const databases = {
         sharePlatformLinkedIn: 'LinkedIn',
         sharePlatformReddit: 'Reddit',
         sharePlatformWeibo: '微博',
+        shareMore: 'More…',
         shareSingleTweet: '🚀 {name} scored {score}% on {benchmark}!\n\n📊 Full leaderboard: {url}\n\n#AI #LLM',
         shareCategoryTweet: '🏆 TOP 5 in {benchmark}:\n🥇 {n1} {s1}\n🥈 {n2} {s2}\n🥉 {n3} {s3}\n4. {n4} {s4}\n5. {n5} {s5}\n\nFull leaderboard: {url}\n\n#AI #LLM',
         shareLinkedInTitle: '{name} scored {score}% on {benchmark}',
