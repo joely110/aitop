@@ -5583,11 +5583,11 @@ const databases = {
 
     function shareCategoryToTwitter(category) {
       const cat = category || currentModelCategory;
-      const list = (models[cat] || []).slice(0, 5);
-      if (list.length < 5) return;
+      const list = (models[cat] || []).slice(0, 10);
+      if (list.length < 10) return;
       const url = buildShareUrl(cat, null);
       const vars = { benchmark: getBenchmarkName(cat), url };
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 10; i++) {
         vars['n' + (i + 1)] = list[i].name;
         vars['s' + (i + 1)] = list[i].score + '%';
       }
@@ -5719,8 +5719,8 @@ const databases = {
 
     function generateCategoryImage(category) {
       const cat = category || currentModelCategory;
-      const list = (models[cat] || []).slice(0, 5);
-      if (list.length < 5) return;
+      const list = (models[cat] || []).slice(0, 10);
+      if (list.length < 10) return;
       showToast(t('shareImgGen'));
       preloadIcons(list).then(iconMap => {
         const rows = list.map((m, i) => {
@@ -5780,9 +5780,9 @@ const databases = {
       models: {
         titleZh: '大模型编程能力排行',
         titleEn: 'LLM Coding Leaderboard',
-        subtitleZh: 'TOP 5 大模型代码能力榜',
-        subtitleEn: 'TOP 5 LLM Coding Models',
-        getList: () => (models[currentModelCategory] || []).slice(0, 5),
+        subtitleZh: 'TOP 10 大模型代码能力榜',
+        subtitleEn: 'TOP 10 LLM Coding Models',
+        getList: () => (models[currentModelCategory] || []).slice(0, 10),
         getItemUrl: (item) => buildShareUrl(currentModelCategory, item.id),
         getItemName: (item) => item.name,
         getItemIcon: (item) => item.icon,
@@ -5798,14 +5798,14 @@ const databases = {
       tools: {
         titleZh: 'AI 编程工具排行',
         titleEn: 'AI Coding Tools Leaderboard',
-        subtitleZh: 'TOP 5 AI 编程助手',
-        subtitleEn: 'TOP 5 AI Coding Tools',
+        subtitleZh: 'TOP 10 AI 编程助手',
+        subtitleEn: 'TOP 10 AI Coding Tools',
         getList: () => {
           let f = tools;
           if (currentFilter && currentFilter !== 'all') {
             f = tools.filter(t => t.price === currentFilter || (currentFilter === 'open' && t.price === 'open'));
           }
-          return f.slice(0, 5);
+          return f.slice(0, 10);
         },
         getItemUrl: () => location.origin + location.pathname + '#tools',
         getItemName: (item) => item.name,
@@ -5822,9 +5822,9 @@ const databases = {
       languages: {
         titleZh: '编程语言流行度排行',
         titleEn: 'Programming Language Rankings',
-        subtitleZh: 'TOP 5 编程语言 (TIOBE 指数)',
-        subtitleEn: 'TOP 5 Programming Languages',
-        getList: () => (languages || []).slice(0, 5),
+        subtitleZh: 'TOP 10 编程语言 (TIOBE 指数)',
+        subtitleEn: 'TOP 10 Programming Languages',
+        getList: () => (languages || []).slice(0, 10),
         getItemUrl: () => location.origin + location.pathname + '#languages',
         getItemName: (item) => item.name,
         getItemIcon: (item) => item.icon,
@@ -5840,9 +5840,9 @@ const databases = {
       databases: {
         titleZh: '数据库排行',
         titleEn: 'Database Rankings',
-        subtitleZh: 'TOP 5 数据库',
-        subtitleEn: 'TOP 5 Databases',
-        getList: () => (databases[currentDbCategory] || []).slice(0, 5),
+        subtitleZh: 'TOP 10 数据库',
+        subtitleEn: 'TOP 10 Databases',
+        getList: () => (databases[currentDbCategory] || []).slice(0, 10),
         getItemUrl: () => location.origin + location.pathname + '#databases',
         getItemName: (item) => item.name,
         getItemIcon: (item) => item.icon,
@@ -5858,14 +5858,14 @@ const databases = {
       github: {
         titleZh: 'GitHub AI 开源项目',
         titleEn: 'GitHub AI Open Source Projects',
-        subtitleZh: 'TOP 5 AI 开源项目',
-        subtitleEn: 'TOP 5 AI Open Source Projects',
+        subtitleZh: 'TOP 10 AI 开源项目',
+        subtitleEn: 'TOP 10 AI Open Source Projects',
         getList: () => {
           let f = githubApps;
           if (currentGithubFilter && currentGithubFilter !== 'all') {
             f = githubApps.filter(app => app.category === currentGithubFilter);
           }
-          return f.slice(0, 5);
+          return f.slice(0, 10);
         },
         getItemUrl: () => location.origin + location.pathname + '#github',
         getItemName: (item) => item.name,
@@ -5973,11 +5973,11 @@ const databases = {
 
     function showCategoryShareModal() {
       const cat = currentModelCategory;
-      const list = (models[cat] || []).slice(0, 5);
-      if (list.length < 5) return;
+      const list = (models[cat] || []).slice(0, 10);
+      if (list.length < 10) return;
       const url = buildShareUrl(cat, null);
       const vars = { benchmark: getBenchmarkName(cat), url };
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 10; i++) {
         vars['n' + (i + 1)] = list[i].name;
         vars['s' + (i + 1)] = list[i].score + '%';
       }
@@ -6309,7 +6309,7 @@ const databases = {
         shareRowTitle: '分享',
         shareFloatingTitle: '分享',
         shareImgScore: '评分',
-        shareImgTop5Title: 'TOP 5 大模型代码能力榜',
+        shareImgTop5Title: 'TOP 10 大模型代码能力榜',
         shareImgLeaderboard: '排行榜',
         sharePlatformTwitter: '𝕏 Twitter',
         sharePlatformLinkedIn: 'LinkedIn',
@@ -6317,7 +6317,7 @@ const databases = {
         sharePlatformWeibo: '微博',
         shareMore: '更多…',
         shareSingleTweet: '🚀 {name} 在 {benchmark} 拿了 {score}% 通过率!\n\n📊 完整排行: {url}\n\n#AI #LLM',
-        shareCategoryTweet: '🏆 {benchmark} 榜单 TOP 5:\n🥇 {n1} {s1}\n🥈 {n2} {s2}\n🥉 {n3} {s3}\n4. {n4} {s4}\n5. {n5} {s5}\n\n完整排行: {url}\n\n#AI #LLM',
+        shareCategoryTweet: '🏆 {benchmark} 榜单 TOP 10:\n🥇 {n1} {s1}\n🥈 {n2} {s2}\n🥉 {n3} {s3}\n4. {n4} {s4}\n5. {n5} {s5}\n6. {n6} {s6}\n7. {n7} {s7}\n8. {n8} {s8}\n9. {n9} {s9}\n🔟 {n10} {s10}\n\n完整排行: {url}\n\n#AI #LLM',
         shareLinkedInTitle: '{name} 在 {benchmark} 拿了 {score}%! 查看完整榜单',
         shareRedditTitle: '{name} 在 {benchmark} 拿了 {score}%',
         shareWeiboText: '🚀 {name} 在 {benchmark} 拿了 {score}%! 完整榜单: {url} #AI#大模型',
@@ -6507,7 +6507,7 @@ const databases = {
         shareRowTitle: 'Share',
         shareFloatingTitle: 'Share',
         shareImgScore: 'SCORE',
-        shareImgTop5Title: 'TOP 5 LLM Coding Models',
+        shareImgTop5Title: 'TOP 10 LLM Coding Models',
         shareImgLeaderboard: 'Leaderboard',
         sharePlatformTwitter: '𝕏 Twitter',
         sharePlatformLinkedIn: 'LinkedIn',
@@ -6515,7 +6515,7 @@ const databases = {
         sharePlatformWeibo: '微博',
         shareMore: 'More…',
         shareSingleTweet: '🚀 {name} scored {score}% on {benchmark}!\n\n📊 Full leaderboard: {url}\n\n#AI #LLM',
-        shareCategoryTweet: '🏆 TOP 5 in {benchmark}:\n🥇 {n1} {s1}\n🥈 {n2} {s2}\n🥉 {n3} {s3}\n4. {n4} {s4}\n5. {n5} {s5}\n\nFull leaderboard: {url}\n\n#AI #LLM',
+        shareCategoryTweet: '🏆 TOP 10 in {benchmark}:\n🥇 {n1} {s1}\n🥈 {n2} {s2}\n🥉 {n3} {s3}\n4. {n4} {s4}\n5. {n5} {s5}\n6. {n6} {s6}\n7. {n7} {s7}\n8. {n8} {s8}\n9. {n9} {s9}\n🔟 {n10} {s10}\n\nFull leaderboard: {url}\n\n#AI #LLM',
         shareLinkedInTitle: '{name} scored {score}% on {benchmark}',
         shareRedditTitle: '{name}: {score}% on {benchmark} leaderboard',
         shareWeiboText: '🚀 {name} 在 {benchmark} 拿了 {score}%! 完整榜单: {url} #AI#大模型',
@@ -7435,7 +7435,7 @@ const databases = {
       if (list.length < 1) return;
       const url = getCurrentShareUrl();
       const vars = { benchmark: currentLang === 'zh' ? cfg.titleZh : cfg.titleEn, url };
-      for (let i = 0; i < Math.min(5, list.length); i++) {
+      for (let i = 0; i < Math.min(10, list.length); i++) {
         vars['n' + (i + 1)] = list[i].name;
         vars['s' + (i + 1)] = cfg.scoreFormat(cfg.getItemScore(list[i])) + cfg.scoreUnit;
       }
