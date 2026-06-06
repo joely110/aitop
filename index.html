@@ -5610,42 +5610,75 @@ const databases = {
       copyText(url).then(ok => showToast(ok ? t('shareCopied') : t('shareCopyFailed')));
     }
 
+    // Convert an image URL to a base64 data URL to avoid CORS/taint issues when html2canvas captures
+    // For file:// protocol, canvas gets tainted with img crossOrigin. Use direct img without conversion.
+    function imageToBase64(url) {
+      // Return the URL as-is - html2canvas will use allowTaint: true to render the image directly
+      return Promise.resolve(url);
+    }
+
+    // Preload all icons for a list of models and return a map {modelId: iconUrl}
+    async function preloadIcons(modelList) {
+      const map = {};
+      // Pre-create Image objects to warm the browser cache before html2canvas capture
+      await Promise.all(modelList.map(async m => {
+        if (m.icon) {
+          await new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => { map[m.id] = m.icon; resolve(); };
+            img.onerror = () => { map[m.id] = null; resolve(); };
+            img.src = m.icon;
+          });
+        }
+      }));
+      return map;
+    }
+
     function generateShareImage(modelId, category) {
       const cat = category || currentModelCategory;
       const mod = (models[cat] || []).find(m => m.id === modelId);
       if (!mod || typeof html2canvas === 'undefined') return;
-      const container = document.createElement('div');
-      container.style.cssText = 'position:fixed;left:-9999px;top:0;width:600px;padding:30px;background:linear-gradient(135deg,#1e1b4b,#312e81);color:white;font-family:-apple-system,BlinkMacSystemFont,sans-serif;border-radius:16px;';
-      container.innerHTML = `
-        <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
-          ${mod.icon ? `<img src="${mod.icon}" style="width:64px;height:64px;border-radius:12px;background:white;padding:4px;" crossorigin="anonymous" />` : ''}
-          <div style="flex:1;">
-            <div style="font-size:24px;font-weight:800;margin-bottom:4px;">${mod.name}</div>
-            <div style="font-size:14px;opacity:0.85;">${mod.vendor} · ${getBenchmarkName(cat)}</div>
-          </div>
-          <div style="text-align:center;">
-            <div style="font-size:42px;font-weight:800;color:#fbbf24;">${mod.score}</div>
-            <div style="font-size:11px;opacity:0.7;margin-top:2px;">${t('shareImgScore')}</div>
-          </div>
-        </div>
-        <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:14px;margin-bottom:14px;font-size:13px;line-height:1.5;">${currentLang === 'zh' ? mod.desc : (mod.desc_en || mod.desc)}</div>
-        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.2);padding-top:14px;">
-          <div style="font-size:20px;font-weight:700;">AIDevHub</div>
-          <div style="font-size:12px;opacity:0.7;">aitop.virexstar.com</div>
-        </div>
-      `;
-      document.body.appendChild(container);
       showToast(t('shareImgGen'));
-      html2canvas(container, { backgroundColor: null, scale: 2 }).then(canvas => {
-        const link = document.createElement('a');
-        link.download = `AIDevHub-${mod.name.replace(/[^\w]/g, '_')}-${cat}.png`;
-        link.href = canvas.toDataURL('image/png');
-        link.click();
-        document.body.removeChild(container);
-        showToast(t('shareImgSaved'));
-      }).catch(err => {
-        document.body.removeChild(container);
-        showToast(t('shareErrPrefix') + err.message);
+      preloadIcons([mod]).then(iconMap => {
+        const iconSrc = iconMap[mod.id];
+        const container = document.createElement('div');
+        container.style.cssText = 'position:fixed;left:-9999px;top:0;width:600px;padding:30px;background:linear-gradient(135deg,#1e1b4b,#312e81);color:white;font-family:-apple-system,BlinkMacSystemFont,sans-serif;border-radius:16px;';
+        const iconHTML = iconSrc
+          ? `<img src="${iconSrc}" style="width:64px;height:64px;border-radius:12px;background:white;padding:4px;" />`
+          : (mod.name[0] ? `<div style="width:64px;height:64px;border-radius:12px;background:white;color:#312e81;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:28px;">${mod.name[0]}</div>` : '');
+        container.innerHTML = `
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+            ${iconHTML}
+            <div style="flex:1;">
+              <div style="font-size:24px;font-weight:800;margin-bottom:4px;">${mod.name}</div>
+              <div style="font-size:14px;opacity:0.85;">${mod.vendor} · ${getBenchmarkName(cat)}</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:42px;font-weight:800;color:#fbbf24;">${mod.score}</div>
+              <div style="font-size:11px;opacity:0.7;margin-top:2px;">${t('shareImgScore')}</div>
+            </div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:14px;margin-bottom:14px;font-size:13px;line-height:1.5;">${currentLang === 'zh' ? mod.desc : (mod.desc_en || mod.desc)}</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.2);padding-top:14px;">
+            <div style="font-size:20px;font-weight:700;">AIDevHub</div>
+            <div style="font-size:12px;opacity:0.7;">aitop.virexstar.com</div>
+          </div>
+        `;
+        document.body.appendChild(container);
+        // Wait a frame for layout
+        setTimeout(() => {
+          html2canvas(container, { backgroundColor: null, scale: 2, useCORS: true, allowTaint: true }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = `AIDevHub-${mod.name.replace(/[^\w]/g, '_')}-${cat}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            document.body.removeChild(container);
+            showToast(t('shareImgSaved'));
+          }).catch(err => {
+            document.body.removeChild(container);
+            showToast(t('shareErrPrefix') + err.message);
+          });
+        }, 100);
       });
     }
 
@@ -5653,39 +5686,49 @@ const databases = {
       const cat = category || currentModelCategory;
       const list = (models[cat] || []).slice(0, 5);
       if (list.length < 5) return;
-      const container = document.createElement('div');
-      container.style.cssText = 'position:fixed;left:-9999px;top:0;width:600px;padding:30px;background:linear-gradient(135deg,#1e1b4b,#312e81);color:white;font-family:-apple-system,BlinkMacSystemFont,sans-serif;border-radius:16px;';
-      const rows = list.map((m, i) => `
-        <div style="display:flex;align-items:center;gap:12px;padding:8px 0;${i < 4 ? 'border-bottom:1px solid rgba(255,255,255,0.1);' : ''}">
-          <div style="width:36px;height:36px;background:linear-gradient(135deg,#fbbf24,#f59e0b);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;">${i+1}</div>
-          ${m.icon ? `<img src="${m.icon}" style="width:32px;height:32px;border-radius:6px;background:white;padding:2px;" crossorigin="anonymous" />` : ''}
-          <div style="flex:1;font-size:14px;font-weight:600;">${m.name}</div>
-          <div style="font-size:18px;font-weight:800;color:#fbbf24;">${m.score}</div>
-        </div>
-      `).join('');
-      container.innerHTML = `
-        <div style="margin-bottom:18px;">
-          <div style="font-size:13px;opacity:0.7;margin-bottom:4px;">🏆 ${getBenchmarkName(cat)} ${t('shareImgLeaderboard')}</div>
-          <div style="font-size:28px;font-weight:800;">${t('shareImgTop5Title')}</div>
-        </div>
-        <div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:12px 16px;">${rows}</div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.2);">
-          <div style="font-size:20px;font-weight:700;">AIDevHub</div>
-          <div style="font-size:12px;opacity:0.7;">aitop.virexstar.com</div>
-        </div>
-      `;
-      document.body.appendChild(container);
       showToast(t('shareImgGen'));
-      html2canvas(container, { backgroundColor: null, scale: 2 }).then(canvas => {
-        const link = document.createElement('a');
-        link.download = `AIDevHub-TOP5-${cat}.png`;
-        link.href = canvas.toDataURL('image/png');
-        link.click();
-        document.body.removeChild(container);
-        showToast(t('shareImgSaved'));
-      }).catch(err => {
-        document.body.removeChild(container);
-        showToast(t('shareErrPrefix') + err.message);
+      preloadIcons(list).then(iconMap => {
+        const rows = list.map((m, i) => {
+          const iconSrc = iconMap[m.id];
+          const iconHTML = iconSrc
+            ? `<img src="${iconSrc}" style="width:32px;height:32px;border-radius:6px;background:white;padding:2px;" />`
+            : (m.name[0] ? `<div style="width:32px;height:32px;border-radius:6px;background:white;color:#312e81;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;">${m.name[0]}</div>` : '');
+          return `
+            <div style="display:flex;align-items:center;gap:12px;padding:8px 0;${i < 4 ? 'border-bottom:1px solid rgba(255,255,255,0.1);' : ''}">
+              <div style="width:36px;height:36px;background:linear-gradient(135deg,#fbbf24,#f59e0b);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;">${i+1}</div>
+              ${iconHTML}
+              <div style="flex:1;font-size:14px;font-weight:600;">${m.name}</div>
+              <div style="font-size:18px;font-weight:800;color:#fbbf24;">${m.score}</div>
+            </div>
+          `;
+        }).join('');
+        const container = document.createElement('div');
+        container.style.cssText = 'position:fixed;left:-9999px;top:0;width:600px;padding:30px;background:linear-gradient(135deg,#1e1b4b,#312e81);color:white;font-family:-apple-system,BlinkMacSystemFont,sans-serif;border-radius:16px;';
+        container.innerHTML = `
+          <div style="margin-bottom:18px;">
+            <div style="font-size:13px;opacity:0.7;margin-bottom:4px;">🏆 ${getBenchmarkName(cat)} ${t('shareImgLeaderboard')}</div>
+            <div style="font-size:28px;font-weight:800;">${t('shareImgTop5Title')}</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:12px 16px;">${rows}</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.2);">
+            <div style="font-size:20px;font-weight:700;">AIDevHub</div>
+            <div style="font-size:12px;opacity:0.7;">aitop.virexstar.com</div>
+          </div>
+        `;
+        document.body.appendChild(container);
+        setTimeout(() => {
+          html2canvas(container, { backgroundColor: null, scale: 2, useCORS: true, allowTaint: true }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = `AIDevHub-TOP5-${cat}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            document.body.removeChild(container);
+            showToast(t('shareImgSaved'));
+          }).catch(err => {
+            document.body.removeChild(container);
+            showToast(t('shareErrPrefix') + err.message);
+          });
+        }, 100);
       });
     }
 
