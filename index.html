@@ -5634,6 +5634,33 @@ const databases = {
       return map;
     }
 
+    // Try to generate canvas image. If canvas is tainted (file:// protocol or CORS issue),
+    // retry with images replaced by letter avatars. Returns data URL.
+    async function tryGenerateImage(container, filename, fallbackContainer) {
+      try {
+        const canvas = await html2canvas(container, { backgroundColor: null, scale: 2, useCORS: false, allowTaint: true });
+        const dataUrl = canvas.toDataURL('image/png');
+        document.body.removeChild(container);
+        return { dataUrl, usedFallback: false };
+      } catch (e1) {
+        // Canvas tainted → remove container and retry with fallback (no images, just letters)
+        try { document.body.removeChild(container); } catch (e) {}
+        if (fallbackContainer) {
+          document.body.appendChild(fallbackContainer);
+          try {
+            const canvas2 = await html2canvas(fallbackContainer, { backgroundColor: null, scale: 2 });
+            const dataUrl2 = canvas2.toDataURL('image/png');
+            document.body.removeChild(fallbackContainer);
+            return { dataUrl: dataUrl2, usedFallback: true };
+          } catch (e2) {
+            try { document.body.removeChild(fallbackContainer); } catch (e) {}
+            throw e2;
+          }
+        }
+        throw e1;
+      }
+    }
+
     function generateShareImage(modelId, category) {
       const cat = category || currentModelCategory;
       const mod = (models[cat] || []).find(m => m.id === modelId);
@@ -5643,9 +5670,8 @@ const databases = {
         const iconSrc = iconMap[mod.id];
         const container = document.createElement('div');
         container.style.cssText = 'position:fixed;left:-9999px;top:0;width:600px;padding:30px;background:linear-gradient(135deg,#1e1b4b,#312e81);color:white;font-family:-apple-system,BlinkMacSystemFont,sans-serif;border-radius:16px;';
-        const iconHTML = iconSrc
-          ? `<img src="${iconSrc}" style="width:64px;height:64px;border-radius:12px;background:white;padding:4px;" />`
-          : (mod.name[0] ? `<div style="width:64px;height:64px;border-radius:12px;background:white;color:#312e81;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:28px;">${mod.name[0]}</div>` : '');
+        const fallbackIcon = mod.name[0] ? `<div style="width:64px;height:64px;border-radius:12px;background:white;color:#312e81;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:28px;">${mod.name[0]}</div>` : '';
+        const iconHTML = iconSrc ? `<img src="${iconSrc}" style="width:64px;height:64px;border-radius:12px;background:white;padding:4px;" />` : fallbackIcon;
         container.innerHTML = `
           <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
             ${iconHTML}
@@ -5664,18 +5690,27 @@ const databases = {
             <div style="font-size:12px;opacity:0.7;">aitop.virexstar.com</div>
           </div>
         `;
+        // Fallback container (no images, only letter avatars)
+        const fallbackContainer = document.createElement('div');
+        fallbackContainer.style.cssText = container.style.cssText;
+        fallbackContainer.innerHTML = container.innerHTML.split('<img').reduce((acc, part, i) => {
+          if (i === 0) return part;
+          return acc.replace(/<img[^>]*\/>/, fallbackIcon) + '\n' + part;
+        }, '');
+        // Simpler: replace img with letter avatar in fallback
+        fallbackContainer.innerHTML = container.innerHTML;
+        fallbackContainer.querySelectorAll('img').forEach(img => img.outerHTML = fallbackIcon);
+
         document.body.appendChild(container);
-        // Wait a frame for layout
         setTimeout(() => {
-          html2canvas(container, { backgroundColor: null, scale: 2, useCORS: true, allowTaint: true }).then(canvas => {
+          tryGenerateImage(container, `AIDevHub-${mod.name.replace(/[^\w]/g, '_')}-${cat}.png`, fallbackContainer).then(({ dataUrl, usedFallback }) => {
             const link = document.createElement('a');
             link.download = `AIDevHub-${mod.name.replace(/[^\w]/g, '_')}-${cat}.png`;
-            link.href = canvas.toDataURL('image/png');
+            link.href = dataUrl;
             link.click();
-            document.body.removeChild(container);
-            showToast(t('shareImgSaved'));
+            if (usedFallback) showToast(t('shareImgSavedFallback') || t('shareImgSaved'));
+            else showToast(t('shareImgSaved'));
           }).catch(err => {
-            document.body.removeChild(container);
             showToast(t('shareErrPrefix') + err.message);
           });
         }, 100);
@@ -5690,9 +5725,9 @@ const databases = {
       preloadIcons(list).then(iconMap => {
         const rows = list.map((m, i) => {
           const iconSrc = iconMap[m.id];
-          const iconHTML = iconSrc
-            ? `<img src="${iconSrc}" style="width:32px;height:32px;border-radius:6px;background:white;padding:2px;" />`
-            : (m.name[0] ? `<div style="width:32px;height:32px;border-radius:6px;background:white;color:#312e81;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;">${m.name[0]}</div>` : '');
+          const letter = m.name[0] || '';
+          const fallbackIcon = `<div style="width:32px;height:32px;border-radius:6px;background:white;color:#312e81;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;">${letter}</div>`;
+          const iconHTML = iconSrc ? `<img src="${iconSrc}" style="width:32px;height:32px;border-radius:6px;background:white;padding:2px;" />` : fallbackIcon;
           return `
             <div style="display:flex;align-items:center;gap:12px;padding:8px 0;${i < 4 ? 'border-bottom:1px solid rgba(255,255,255,0.1);' : ''}">
               <div style="width:36px;height:36px;background:linear-gradient(135deg,#fbbf24,#f59e0b);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;">${i+1}</div>
@@ -5715,17 +5750,25 @@ const databases = {
             <div style="font-size:12px;opacity:0.7;">aitop.virexstar.com</div>
           </div>
         `;
+        // Fallback container (no images, only letter avatars)
+        const fallbackContainer = document.createElement('div');
+        fallbackContainer.style.cssText = container.style.cssText;
+        fallbackContainer.innerHTML = container.innerHTML;
+        fallbackContainer.querySelectorAll('img').forEach(img => {
+          const m = list.find(mm => img.src && img.src.includes(encodeURIComponent(mm.icon || '').split('%2F').pop() || ''));
+          const letter = m?.name?.[0] || '?';
+          img.outerHTML = `<div style="width:32px;height:32px;border-radius:6px;background:white;color:#312e81;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;">${letter}</div>`;
+        });
+
         document.body.appendChild(container);
         setTimeout(() => {
-          html2canvas(container, { backgroundColor: null, scale: 2, useCORS: true, allowTaint: true }).then(canvas => {
+          tryGenerateImage(container, `AIDevHub-TOP5-${cat}.png`, fallbackContainer).then(({ dataUrl, usedFallback }) => {
             const link = document.createElement('a');
             link.download = `AIDevHub-TOP5-${cat}.png`;
-            link.href = canvas.toDataURL('image/png');
+            link.href = dataUrl;
             link.click();
-            document.body.removeChild(container);
             showToast(t('shareImgSaved'));
           }).catch(err => {
-            document.body.removeChild(container);
             showToast(t('shareErrPrefix') + err.message);
           });
         }, 100);
@@ -6084,6 +6127,7 @@ const databases = {
         shareGenImage: '生成分享图',
         shareCopied: '链接已复制!',
         shareImgSaved: '分享图已保存!',
+        shareImgSavedFallback: '分享图已保存 (file:// 模式下使用字母头像)',
         shareImgGen: '正在生成分享图...',
         shareCopiedModel: '已复制: ',
         shareCopyFailed: '复制失败',
@@ -6281,6 +6325,7 @@ const databases = {
         shareGenImage: 'Generate Image',
         shareCopied: 'Link copied!',
         shareImgSaved: 'Image saved!',
+        shareImgSavedFallback: 'Image saved (letter avatar used in file:// mode)',
         shareImgGen: 'Generating image...',
         shareCopiedModel: 'Copied: ',
         shareCopyFailed: 'Copy failed',
