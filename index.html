@@ -111,6 +111,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <style>
     :root {
       --bg: #FFFFFF;
@@ -650,6 +651,147 @@
       transition: background 0.2s;
     }
     .action-btn:hover { background: var(--primary-hover); }
+
+    /* Share button (icon-only, smaller than action-btn) */
+    .share-btn {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 7px 10px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .share-btn:hover { color: var(--primary); border-color: var(--primary); }
+
+    /* Share popup (mini dropdown) */
+    .share-popup {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 4px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      padding: 6px;
+      z-index: 100;
+      min-width: 180px;
+    }
+    [data-theme="dark"] .share-popup { box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+    .share-popup a, .share-popup button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 8px 10px;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      font-size: 13px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-align: left;
+      text-decoration: none;
+    }
+    .share-popup a:hover, .share-popup button:hover { background: var(--bg); }
+    .share-popup svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+    /* Share modal share-buttons row */
+    .modal-share-row {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .modal-share-row .share-btn { padding: 8px 14px; font-size: 12px; }
+
+    /* Floating share widget */
+    .floating-share {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 50;
+    }
+    .floating-share-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      box-shadow: 0 4px 16px rgba(99,102,241,0.4);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .floating-share-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(99,102,241,0.5); }
+    .floating-share-panel {
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      padding: 12px;
+      min-width: 240px;
+      display: none;
+    }
+    [data-theme="dark"] .floating-share-panel { box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+    .floating-share-panel.open { display: block; }
+    .floating-share-panel h4 { font-size: 13px; margin-bottom: 8px; color: var(--text-secondary); }
+    .floating-share-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .floating-share-grid a, .floating-share-grid button {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-align: left;
+      text-decoration: none;
+    }
+    .floating-share-grid a:hover, .floating-share-grid button:hover { border-color: var(--primary); color: var(--primary); }
+    .floating-share-grid svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--text);
+      color: var(--bg-card);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      z-index: 2000;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+      pointer-events: none;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* Position helper for relative share-popup */
+    .action-cell { position: relative; }
 
     .load-more-container {
       display: flex;
@@ -5196,7 +5338,7 @@ const databases = {
       const mods = models[category] || [];
 
       container.innerHTML = mods.map((mod, idx) => `
-        <div class="table-row" data-id="${mod.id}">
+        <div class="table-row" data-id="${mod.id}" data-model-row="${mod.id}">
           <div class="rank ${idx < 3 ? 'rank-' + (idx+1) : ''}">${idx + 1}</div>
           <div class="tool-info">
             <div class="tool-logo" style="background: linear-gradient(135deg, ${mod.colors[0]}, ${mod.colors[1]})">${mod.icon ? `<img src="${mod.icon}" alt="${mod.name}" onerror="this.parentElement.textContent='${mod.name[0]}';this.remove();" />` : mod.name[0]}</div>
@@ -5207,7 +5349,10 @@ const databases = {
           </div>
           <div class="chart-cell"><canvas id="model-chart-${mod.id}" height="60"></canvas></div>
           <div class="score">${mod.passRate.replace('%', '')}</div>
-          <div><button class="action-btn" onclick="showModelDetail(${mod.id}, '${category}')">${t('btnDetail')}</button></div>
+          <div class="action-cell" style="display:flex;gap:6px;align-items:center;">
+            <button class="action-btn" onclick="showModelDetail(${mod.id}, '${category}')">${t('btnDetail')}</button>
+            <button class="share-btn row-share-btn" onclick="toggleRowSharePopup(${mod.id}, '${category}', event)" title="Share"><i data-lucide="share-2" style="width:14px;height:14px;"></i></button>
+          </div>
         </div>
       `).join('');
 
@@ -5268,6 +5413,14 @@ const databases = {
         <div style="text-align:center;">
           <a href="https://www.datalearner.com/en/leaderboards/category/code" target="_blank" rel="noopener" class="action-btn" style="display:inline-block;text-decoration:none;padding:8px 20px;font-size:13px;">${t('viewDataSource')}</a>
         </div>
+        <div class="modal-share-row">
+          <button class="share-btn" onclick="copyModelLink(${mod.id}, '${category}')"><i data-lucide="link" style="width:14px;height:14px;"></i> ${t('shareCopyLink')}</button>
+          <button class="share-btn" onclick="shareToTwitter(${mod.id}, '${category}')" style="color:#1DA1F2;border-color:#1DA1F2;"><i data-lucide="twitter" style="width:14px;height:14px;"></i> 𝕏</button>
+          <button class="share-btn" onclick="shareToLinkedIn(${mod.id}, '${category}')" style="color:#0A66C2;border-color:#0A66C2;"><i data-lucide="linkedin" style="width:14px;height:14px;"></i> LinkedIn</button>
+          <button class="share-btn" onclick="shareToReddit(${mod.id}, '${category}')" style="color:#FF4500;border-color:#FF4500;"><i data-lucide="message-circle" style="width:14px;height:14px;"></i> Reddit</button>
+          <button class="share-btn" onclick="shareToWeibo(${mod.id}, '${category}')" style="color:#E6162D;border-color:#E6162D;"><i data-lucide="globe" style="width:14px;height:14px;"></i> 微博</button>
+          <button class="share-btn" onclick="generateShareImage(${mod.id}, '${category}')" style="color:var(--accent);border-color:var(--accent);"><i data-lucide="image" style="width:14px;height:14px;"></i> ${t('shareGenImage')}</button>
+        </div>
       `;
 
       modal.classList.add('active');
@@ -5300,6 +5453,269 @@ const databases = {
 
       lucide.createIcons();
     }
+
+    // ==================== SHARE FUNCTIONS ====================
+    const CATEGORY_NAMES = {
+      'swe-bench': { zh: 'SWE-bench Verified', en: 'SWE-bench Verified' },
+      'livecode': { zh: 'LiveCodeBench', en: 'LiveCodeBench' },
+      'swe-pro': { zh: 'SWE-Bench Pro', en: 'SWE-Bench Pro' },
+      'multilingual': { zh: 'SWE-bench Multilingual', en: 'SWE-bench Multilingual' }
+    };
+
+    function buildShareUrl(category, modelId) {
+      const base = location.origin + location.pathname;
+      let url = base + '#llm?cat=' + category;
+      if (modelId) url += '&id=' + modelId;
+      return url;
+    }
+
+    function getBenchmarkName(category) {
+      return CATEGORY_NAMES[category] ? CATEGORY_NAMES[category][currentLang || 'en'] : category;
+    }
+
+    function fillTemplate(tpl, vars) {
+      return tpl.replace(/\{(\w+)\}/g, (_, k) => vars[k] !== undefined ? vars[k] : '');
+    }
+
+    function showToast(msg) {
+      let toast = document.getElementById('toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'toast';
+        toast.className = 'toast';
+        document.body.appendChild(toast);
+      }
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toast._timer);
+      toast._timer = setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    async function copyText(text) {
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+      } catch (e) {}
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); document.body.removeChild(ta); return true; }
+      catch (e) { document.body.removeChild(ta); return false; }
+    }
+
+    function copyModelLink(modelId, category) {
+      const url = buildShareUrl(category || currentModelCategory, modelId);
+      copyText(url).then(ok => showToast(ok ? t('shareCopied') : 'Copy failed'));
+    }
+
+    function shareToTwitter(modelId, category) {
+      const cat = category || currentModelCategory;
+      const mod = (models[cat] || []).find(m => m.id === modelId);
+      if (!mod) return;
+      const url = buildShareUrl(cat, modelId);
+      const text = fillTemplate(t('shareSingleTweet'), { name: mod.name, score: mod.score, benchmark: getBenchmarkName(cat), url });
+      window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank', 'width=580,height=520');
+    }
+
+    function shareToLinkedIn(modelId, category) {
+      const cat = category || currentModelCategory;
+      const url = buildShareUrl(cat, modelId);
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank', 'width=580,height=520');
+    }
+
+    function shareToReddit(modelId, category) {
+      const cat = category || currentModelCategory;
+      const url = buildShareUrl(cat, modelId);
+      const mod = (models[cat] || []).find(m => m.id === modelId);
+      const title = mod ? (mod.name + ': ' + mod.score + '% on ' + getBenchmarkName(cat)) : 'AIDevHub';
+      window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title), '_blank', 'width=720,height=580');
+    }
+
+    function shareToWeibo(modelId, category) {
+      const cat = category || currentModelCategory;
+      const mod = (models[cat] || []).find(m => m.id === modelId);
+      if (!mod) return;
+      const url = buildShareUrl(cat, modelId);
+      const text = fillTemplate(t('shareWeiboText'), { name: mod.name, score: mod.score, benchmark: getBenchmarkName(cat), url });
+      window.open('https://service.weibo.com/share/share.php?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(text), '_blank', 'width=580,height=520');
+    }
+
+    function shareCategoryToTwitter(category) {
+      const cat = category || currentModelCategory;
+      const list = (models[cat] || []).slice(0, 5);
+      if (list.length < 5) return;
+      const url = buildShareUrl(cat, null);
+      const vars = { benchmark: getBenchmarkName(cat), url };
+      for (let i = 0; i < 5; i++) {
+        vars['n' + (i + 1)] = list[i].name;
+        vars['s' + (i + 1)] = list[i].score + '%';
+      }
+      const text = fillTemplate(t('shareCategoryTweet'), vars);
+      window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank', 'width=580,height=520');
+    }
+
+    function copyCategoryLink(category) {
+      const cat = category || currentModelCategory;
+      const url = buildShareUrl(cat, null);
+      copyText(url).then(ok => showToast(ok ? t('shareCopied') : 'Copy failed'));
+    }
+
+    function generateShareImage(modelId, category) {
+      const cat = category || currentModelCategory;
+      const mod = (models[cat] || []).find(m => m.id === modelId);
+      if (!mod || typeof html2canvas === 'undefined') return;
+      const container = document.createElement('div');
+      container.style.cssText = 'position:fixed;left:-9999px;top:0;width:600px;padding:30px;background:linear-gradient(135deg,#1e1b4b,#312e81);color:white;font-family:-apple-system,BlinkMacSystemFont,sans-serif;border-radius:16px;';
+      container.innerHTML = `
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+          ${mod.icon ? `<img src="${mod.icon}" style="width:64px;height:64px;border-radius:12px;background:white;padding:4px;" crossorigin="anonymous" />` : ''}
+          <div style="flex:1;">
+            <div style="font-size:24px;font-weight:800;margin-bottom:4px;">${mod.name}</div>
+            <div style="font-size:14px;opacity:0.85;">${mod.vendor} · ${getBenchmarkName(cat)}</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:42px;font-weight:800;color:#fbbf24;">${mod.score}</div>
+            <div style="font-size:11px;opacity:0.7;margin-top:2px;">SCORE</div>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:14px;margin-bottom:14px;font-size:13px;line-height:1.5;">${currentLang === 'zh' ? mod.desc : (mod.desc_en || mod.desc)}</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.2);padding-top:14px;">
+          <div style="font-size:20px;font-weight:700;">AIDevHub</div>
+          <div style="font-size:12px;opacity:0.7;">aitop.virexstar.com</div>
+        </div>
+      `;
+      document.body.appendChild(container);
+      showToast(t('shareImgGen'));
+      html2canvas(container, { backgroundColor: null, scale: 2 }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `AIDevHub-${mod.name.replace(/[^\w]/g, '_')}-${cat}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        document.body.removeChild(container);
+        showToast(t('shareImgSaved'));
+      }).catch(err => {
+        document.body.removeChild(container);
+        showToast('Error: ' + err.message);
+      });
+    }
+
+    function generateCategoryImage(category) {
+      const cat = category || currentModelCategory;
+      const list = (models[cat] || []).slice(0, 5);
+      if (list.length < 5) return;
+      const container = document.createElement('div');
+      container.style.cssText = 'position:fixed;left:-9999px;top:0;width:600px;padding:30px;background:linear-gradient(135deg,#1e1b4b,#312e81);color:white;font-family:-apple-system,BlinkMacSystemFont,sans-serif;border-radius:16px;';
+      const rows = list.map((m, i) => `
+        <div style="display:flex;align-items:center;gap:12px;padding:8px 0;${i < 4 ? 'border-bottom:1px solid rgba(255,255,255,0.1);' : ''}">
+          <div style="width:36px;height:36px;background:linear-gradient(135deg,#fbbf24,#f59e0b);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;">${i+1}</div>
+          ${m.icon ? `<img src="${m.icon}" style="width:32px;height:32px;border-radius:6px;background:white;padding:2px;" crossorigin="anonymous" />` : ''}
+          <div style="flex:1;font-size:14px;font-weight:600;">${m.name}</div>
+          <div style="font-size:18px;font-weight:800;color:#fbbf24;">${m.score}</div>
+        </div>
+      `).join('');
+      container.innerHTML = `
+        <div style="margin-bottom:18px;">
+          <div style="font-size:13px;opacity:0.7;margin-bottom:4px;">🏆 ${getBenchmarkName(cat)} Leaderboard</div>
+          <div style="font-size:28px;font-weight:800;">TOP 5 LLM Coding Models</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:12px 16px;">${rows}</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.2);">
+          <div style="font-size:20px;font-weight:700;">AIDevHub</div>
+          <div style="font-size:12px;opacity:0.7;">aitop.virexstar.com</div>
+        </div>
+      `;
+      document.body.appendChild(container);
+      showToast(t('shareImgGen'));
+      html2canvas(container, { backgroundColor: null, scale: 2 }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `AIDevHub-TOP5-${cat}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        document.body.removeChild(container);
+        showToast(t('shareImgSaved'));
+      }).catch(err => {
+        document.body.removeChild(container);
+        showToast('Error: ' + err.message);
+      });
+    }
+
+    function toggleRowSharePopup(modelId, category, event) {
+      event.stopPropagation();
+      closeAllSharePopups();
+      const cat = category || currentModelCategory;
+      const mod = (models[cat] || []).find(m => m.id === modelId);
+      if (!mod) return;
+      const url = buildShareUrl(cat, modelId);
+      const text = fillTemplate(t('shareSingleTweet'), { name: mod.name, score: mod.score, benchmark: getBenchmarkName(cat), url });
+      const popup = document.createElement('div');
+      popup.className = 'share-popup';
+      popup.dataset.sharePopup = '1';
+      popup.innerHTML = `
+        <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}" target="_blank"><i data-lucide="twitter" style="color:#1DA1F2;"></i> 𝕏 Twitter</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}" target="_blank"><i data-lucide="linkedin" style="color:#0A66C2;"></i> LinkedIn</a>
+        <a href="https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(mod.name + ' ' + mod.score + '%')}" target="_blank"><i data-lucide="message-circle" style="color:#FF4500;"></i> Reddit</a>
+        <a href="https://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(fillTemplate(t('shareWeiboText'), { name: mod.name, score: mod.score, benchmark: getBenchmarkName(cat), url }))}" target="_blank"><i data-lucide="globe" style="color:#E6162D;"></i> 微博</a>
+        <button onclick="copyText('${url}');showToast(t('shareCopied'))"><i data-lucide="link"></i> ${t('shareCopyLink')}</button>
+        <button onclick="generateShareImage(${modelId}, '${cat}')"><i data-lucide="image"></i> ${t('shareGenImage')}</button>
+      `;
+      const btn = event.currentTarget;
+      btn.parentElement.appendChild(popup);
+      setTimeout(() => lucide.createIcons(), 0);
+    }
+
+    function closeAllSharePopups() {
+      document.querySelectorAll('[data-share-popup]').forEach(p => p.remove());
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('[data-share-popup]') && !e.target.closest('.row-share-btn')) {
+        closeAllSharePopups();
+      }
+    });
+
+    function toggleFloatingShare() {
+      const panel = document.getElementById('floatingSharePanel');
+      if (panel) panel.classList.toggle('open');
+    }
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.floating-share')) {
+        const panel = document.getElementById('floatingSharePanel');
+        if (panel) panel.classList.remove('open');
+      }
+    });
+
+    // ==================== URL DEEP LINKING ====================
+    function parseDeepLink() {
+      const hash = location.hash;
+      if (!hash || !hash.startsWith('#llm')) return;
+      const queryStr = hash.includes('?') ? hash.split('?')[1] : '';
+      const params = new URLSearchParams(queryStr);
+      const cat = params.get('cat');
+      const id = params.get('id');
+      if (currentTab !== 'models' && typeof switchTab === 'function') switchTab('models');
+      if (cat && ['swe-bench', 'livecode', 'swe-pro', 'multilingual'].includes(cat)) {
+        currentModelCategory = cat;
+        renderModelsTab(cat);
+        if (id) {
+          setTimeout(() => {
+            const row = document.querySelector('[data-model-row="' + id + '"]');
+            if (row) {
+              row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              row.style.outline = '2px solid var(--primary)';
+              row.style.outlineOffset = '-2px';
+              setTimeout(() => { row.style.outline = ''; row.style.outlineOffset = ''; }, 3000);
+            }
+          }, 500);
+        }
+      }
+    }
+    window.addEventListener('hashchange', parseDeepLink);
+    setTimeout(parseDeepLink, 200);
 
     let currentDbCategory = 'rdbms';
 
@@ -5477,6 +5893,17 @@ const databases = {
         btnVisitWebsite: '访问官网 →',
         modalRadarTitle: '评分详情',
         viewDataSource: '查看数据来源 →',
+        shareCopyLink: '复制链接',
+        shareGenImage: '生成分享图',
+        shareCopied: '链接已复制!',
+        shareImgSaved: '分享图已保存!',
+        shareImgGen: '正在生成分享图...',
+        shareCopiedModel: '已复制: ',
+        shareSingleTweet: '🚀 {name} 在 {benchmark} 拿了 {score}% 通过率!\n\n📊 完整排行: {url}\n\n#AI #LLM',
+        shareCategoryTweet: '🏆 {benchmark} 榜单 TOP 5:\n🥇 {n1} {s1}\n🥈 {n2} {s2}\n🥉 {n3} {s3}\n4. {n4} {s4}\n5. {n5} {s5}\n\n完整排行: {url}\n\n#AI #LLM',
+        shareLinkedInTitle: '{name} scored {score}% on {benchmark}',
+        shareRedditTitle: '{name}: {score}% on {benchmark} leaderboard',
+        shareWeiboText: '🚀 {name} 在 {benchmark} 拿了 {score}%! 完整榜单: {url} #AI#大模型',
         radarTools: ['代码生成', '上下文理解', '速度性能', '价格', '集成便捷'],
         radarToolsEn: ['Quality', 'Speed', 'Ease', 'Price', 'Integration'],
         radarLangEn: ['Popularity', 'Learnability', 'Jobs', 'Salary', 'Prospects'],
@@ -5651,6 +6078,17 @@ const databases = {
         btnVisitWebsite: 'Visit Website →',
         modalRadarTitle: 'Score Details',
         viewDataSource: 'View Data Source →',
+        shareCopyLink: 'Copy Link',
+        shareGenImage: 'Generate Image',
+        shareCopied: 'Link copied!',
+        shareImgSaved: 'Image saved!',
+        shareImgGen: 'Generating image...',
+        shareCopiedModel: 'Copied: ',
+        shareSingleTweet: '🚀 {name} scored {score}% on {benchmark}!\n\n📊 Full leaderboard: {url}\n\n#AI #LLM',
+        shareCategoryTweet: '🏆 TOP 5 in {benchmark}:\n🥇 {n1} {s1}\n🥈 {n2} {s2}\n🥉 {n3} {s3}\n4. {n4} {s4}\n5. {n5} {s5}\n\nFull leaderboard: {url}\n\n#AI #LLM',
+        shareLinkedInTitle: '{name} scored {score}% on {benchmark}',
+        shareRedditTitle: '{name}: {score}% on {benchmark} leaderboard',
+        shareWeiboText: '🚀 {name} 在 {benchmark} 拿了 {score}%! 完整榜单: {url} #AI#大模型',
         radarTools: ['Code Generation', 'Context', 'Speed', 'Price', 'Integration'],
         radarModels: ['Code Ability', 'Speed', 'Context', 'Accuracy', 'Multi-lang'],
         radarLang: ['Popularity', 'Learnability', 'Ecosystem', 'Jobs', 'Trend'],
@@ -6514,6 +6952,41 @@ const databases = {
 
     // Init
     init();
+  </script>
+
+  <!-- Floating share widget (shown only on LLM Rankings) -->
+  <div class="floating-share" id="floatingShare" style="display:none;">
+    <div class="floating-share-panel" id="floatingSharePanel">
+      <h4>📤 Share <span id="floatingShareCat">SWE-Bench Pro</span> Leaderboard</h4>
+      <div class="floating-share-grid">
+        <a href="#" onclick="event.preventDefault();shareCategoryToTwitter(currentModelCategory);"><i data-lucide="twitter" style="color:#1DA1F2;"></i> 𝕏 Twitter</a>
+        <a href="#" onclick="event.preventDefault();const u=buildShareUrl(currentModelCategory,null);window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(u),'_blank','width=580,height=520');"><i data-lucide="linkedin" style="color:#0A66C2;"></i> LinkedIn</a>
+        <a href="#" onclick="event.preventDefault();const u=buildShareUrl(currentModelCategory,null);const list=models[currentModelCategory]||[];const top=list[0];const title=top?(top.name+' '+top.score+'%'):'AIDevHub';window.open('https://www.reddit.com/submit?url='+encodeURIComponent(u)+'&title='+encodeURIComponent(title),'_blank','width=720,height=580');"><i data-lucide="message-circle" style="color:#FF4500;"></i> Reddit</a>
+        <a href="#" onclick="event.preventDefault();const u=buildShareUrl(currentModelCategory,null);const text='🤖 '+document.title+'\n\n📊 View full leaderboard: '+u+'\n\n#AI #LLM';window.open('https://service.weibo.com/share/share.php?url='+encodeURIComponent(u)+'&title='+encodeURIComponent(text),'_blank','width=580,height=520');"><i data-lucide="globe" style="color:#E6162D;"></i> 微博</a>
+        <button onclick="copyCategoryLink(currentModelCategory);document.getElementById('floatingSharePanel').classList.remove('open');"><i data-lucide="link"></i> 复制链接</button>
+        <button onclick="generateCategoryImage(currentModelCategory);document.getElementById('floatingSharePanel').classList.remove('open');"><i data-lucide="image"></i> 生成分享图</button>
+      </div>
+    </div>
+    <button class="floating-share-btn" onclick="toggleFloatingShare()" title="Share">
+      <i data-lucide="share-2" style="width:24px;height:24px;"></i>
+    </button>
+  </div>
+  <script>
+    // Show floating share only when on LLM Rankings section
+    function updateFloatingShareVisibility() {
+      const el = document.getElementById('floatingShare');
+      if (!el) return;
+      const hash = location.hash || '';
+      const isModels = hash.startsWith('#llm') || hash === '' || hash === '#home';
+      el.style.display = isModels ? 'block' : 'none';
+      // Update category name
+      const catEl = document.getElementById('floatingShareCat');
+      const names = { 'swe-bench': 'SWE-bench Verified', 'livecode': 'LiveCodeBench', 'swe-pro': 'SWE-Bench Pro', 'multilingual': 'SWE-bench Multilingual' };
+      if (catEl) catEl.textContent = names[currentModelCategory] || 'Leaderboard';
+    }
+    window.addEventListener('hashchange', updateFloatingShareVisibility);
+    setInterval(updateFloatingShareVisibility, 1000);
+    setTimeout(() => { lucide.createIcons(); updateFloatingShareVisibility(); }, 200);
   </script>
 </body>
 </html>
