@@ -5775,6 +5775,180 @@ const databases = {
       });
     }
 
+    // ==================== UNIFIED SHARE IMAGE FOR ALL TABS ====================
+    const SHARE_TAB_CONFIG = {
+      models: {
+        titleZh: '大模型编程能力排行',
+        titleEn: 'LLM Coding Leaderboard',
+        subtitleZh: 'TOP 5 大模型代码能力榜',
+        subtitleEn: 'TOP 5 LLM Coding Models',
+        getList: () => (models[currentModelCategory] || []).slice(0, 5),
+        getItemUrl: (item) => buildShareUrl(currentModelCategory, item.id),
+        getItemName: (item) => item.name,
+        getItemIcon: (item) => item.icon,
+        getItemSecondary: (item) => item.vendor,
+        getItemSubtext: (item) => '',
+        getItemScore: (item) => item.score,
+        scoreColor: '#fbbf24',
+        scoreFormat: (s) => String(s),
+        scoreUnit: '',
+        headerEmoji: '🏆',
+        filename: () => `AIDevHub-TOP5-LLM-${currentModelCategory}.png`
+      },
+      tools: {
+        titleZh: 'AI 编程工具排行',
+        titleEn: 'AI Coding Tools Leaderboard',
+        subtitleZh: 'TOP 5 AI 编程助手',
+        subtitleEn: 'TOP 5 AI Coding Tools',
+        getList: () => {
+          let f = tools;
+          if (currentFilter && currentFilter !== 'all') {
+            f = tools.filter(t => t.price === currentFilter || (currentFilter === 'open' && t.price === 'open'));
+          }
+          return f.slice(0, 5);
+        },
+        getItemUrl: () => location.origin + location.pathname + '#tools',
+        getItemName: (item) => item.name,
+        getItemIcon: (item) => item.icon,
+        getItemSecondary: (item) => item.vendor,
+        getItemSubtext: (item) => '',
+        getItemScore: (item) => item.score,
+        scoreColor: '#fbbf24',
+        scoreFormat: (s) => String(s),
+        scoreUnit: '/10',
+        headerEmoji: '🛠️',
+        filename: () => 'AIDevHub-TOP5-Tools.png'
+      },
+      languages: {
+        titleZh: '编程语言流行度排行',
+        titleEn: 'Programming Language Rankings',
+        subtitleZh: 'TOP 5 编程语言 (TIOBE 指数)',
+        subtitleEn: 'TOP 5 Programming Languages',
+        getList: () => (languages || []).slice(0, 5),
+        getItemUrl: () => location.origin + location.pathname + '#languages',
+        getItemName: (item) => item.name,
+        getItemIcon: (item) => item.icon,
+        getItemSecondary: (item) => currentLang === 'zh' ? item.type : (item.typeEn || item.type),
+        getItemSubtext: (item) => currentLang === 'zh' ? `TIOBE 排名 #${item.rank}` : `TIOBE Rank #${item.rank}`,
+        getItemScore: (item) => item.score,
+        scoreColor: '#22d3ee',
+        scoreFormat: (s) => String(s),
+        scoreUnit: '%',
+        headerEmoji: '💻',
+        filename: () => 'AIDevHub-TOP5-Languages.png'
+      },
+      databases: {
+        titleZh: '数据库排行',
+        titleEn: 'Database Rankings',
+        subtitleZh: 'TOP 5 数据库',
+        subtitleEn: 'TOP 5 Databases',
+        getList: () => (databases[currentDbCategory] || []).slice(0, 5),
+        getItemUrl: () => location.origin + location.pathname + '#databases',
+        getItemName: (item) => item.name,
+        getItemIcon: (item) => item.icon,
+        getItemSecondary: (item) => item.vendor || (currentLang === 'zh' ? item.type : (item.typeEn || item.type)),
+        getItemSubtext: (item) => '',
+        getItemScore: (item) => item.score,
+        scoreColor: '#a78bfa',
+        scoreFormat: (s) => String(s),
+        scoreUnit: ' pts',
+        headerEmoji: '🗄️',
+        filename: () => `AIDevHub-TOP5-Databases-${currentDbCategory}.png`
+      },
+      github: {
+        titleZh: 'GitHub AI 开源项目',
+        titleEn: 'GitHub AI Open Source Projects',
+        subtitleZh: 'TOP 5 AI 开源项目',
+        subtitleEn: 'TOP 5 AI Open Source Projects',
+        getList: () => {
+          let f = githubApps;
+          if (currentGithubFilter && currentGithubFilter !== 'all') {
+            f = githubApps.filter(app => app.category === currentGithubFilter);
+          }
+          return f.slice(0, 5);
+        },
+        getItemUrl: () => location.origin + location.pathname + '#github',
+        getItemName: (item) => item.name,
+        getItemIcon: (item) => item.icon,
+        getItemSecondary: (item) => item.repo,
+        getItemSubtext: (item) => currentLang === 'zh' ? (item.category || '') : (item.language || ''),
+        getItemScore: (item) => item.stars,
+        scoreColor: '#F59E0B',
+        scoreFormat: (s) => s >= 1000 ? (s/1000).toFixed(1) + 'k' : String(s),
+        scoreUnit: ' ⭐',
+        headerEmoji: '⭐',
+        filename: () => 'AIDevHub-TOP5-GitHub-AI.png'
+      }
+    };
+
+    function generateTabShareImage(tabKey) {
+      const cfg = SHARE_TAB_CONFIG[tabKey];
+      if (!cfg) { showToast(t('shareErrPrefix') + 'Unknown tab: ' + tabKey); return; }
+      const list = cfg.getList();
+      if (list.length < 1) { showToast(t('shareErrPrefix') + 'No data'); return; }
+      showToast(t('shareImgGen'));
+      preloadIcons(list).then(iconMap => {
+        const isZh = currentLang === 'zh';
+        const title = isZh ? cfg.titleZh : cfg.titleEn;
+        const subtitle = isZh ? cfg.subtitleZh : cfg.subtitleEn;
+        const rows = list.map((m, i) => {
+          const iconSrc = iconMap[m.id];
+          const letter = cfg.getItemName(m)?.[0] || '?';
+          const fallbackIcon = `<div style="width:32px;height:32px;border-radius:6px;background:white;color:#312e81;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;">${letter}</div>`;
+          const iconHTML = iconSrc ? `<img src="${iconSrc}" style="width:32px;height:32px;border-radius:6px;background:white;padding:2px;" />` : fallbackIcon;
+          const secondary = cfg.getItemSecondary(m);
+          const subtext = cfg.getItemSubtext(m);
+          const secondaryLine = subtext || secondary;
+          return `
+            <div style="display:flex;align-items:center;gap:12px;padding:8px 0;${i < 4 ? 'border-bottom:1px solid rgba(255,255,255,0.1);' : ''}">
+              <div style="width:36px;height:36px;background:linear-gradient(135deg,#fbbf24,#f59e0b);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;">${i+1}</div>
+              ${iconHTML}
+              <div style="flex:1;min-width:0;">
+                <div style="font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${cfg.getItemName(m)}</div>
+                ${secondaryLine ? `<div style="font-size:11px;opacity:0.7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${secondaryLine}</div>` : ''}
+              </div>
+              <div style="font-size:18px;font-weight:800;color:${cfg.scoreColor};">${cfg.scoreFormat(cfg.getItemScore(m))}${cfg.scoreUnit}</div>
+            </div>
+          `;
+        }).join('');
+        const container = document.createElement('div');
+        container.style.cssText = 'position:fixed;left:-9999px;top:0;width:600px;padding:30px;background:linear-gradient(135deg,#1e1b4b,#312e81);color:white;font-family:-apple-system,BlinkMacSystemFont,sans-serif;border-radius:16px;';
+        container.innerHTML = `
+          <div style="margin-bottom:18px;">
+            <div style="font-size:13px;opacity:0.7;margin-bottom:4px;">${cfg.headerEmoji} ${title}</div>
+            <div style="font-size:28px;font-weight:800;">${subtitle}</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:12px 16px;">${rows}</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.2);">
+            <div style="font-size:20px;font-weight:800;">AIDevHub</div>
+            <div style="font-size:12px;opacity:0.7;">aitop.virexstar.com</div>
+          </div>
+        `;
+        const fallbackContainer = document.createElement('div');
+        fallbackContainer.style.cssText = container.style.cssText;
+        fallbackContainer.innerHTML = container.innerHTML;
+        fallbackContainer.querySelectorAll('img').forEach((img, idx) => {
+          const m = list[idx];
+          const letter = m ? (cfg.getItemName(m)?.[0] || '?') : '?';
+          img.outerHTML = `<div style="width:32px;height:32px;border-radius:6px;background:white;color:#312e81;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;">${letter}</div>`;
+        });
+
+        document.body.appendChild(container);
+        setTimeout(() => {
+          const filename = cfg.filename();
+          tryGenerateImage(container, filename, fallbackContainer).then(({ dataUrl, usedFallback }) => {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = dataUrl;
+            link.click();
+            showToast(t('shareImgSaved'));
+          }).catch(err => {
+            showToast(t('shareErrPrefix') + err.message);
+          });
+        }, 100);
+      });
+    }
+
     function nativeShare(title, text, url) {
       if (navigator.share) {
         navigator.share({ title, text, url }).catch(err => {
@@ -7213,17 +7387,17 @@ const databases = {
     init();
   </script>
 
-  <!-- Floating share widget (shown only on LLM Rankings) -->
+  <!-- Floating share widget (shown on all tabs) -->
   <div class="floating-share" id="floatingShare" style="display:none;">
     <div class="floating-share-panel" id="floatingSharePanel">
-      <h4>📤 <span data-i18n="shareFloatingTitle">Share</span> <span id="floatingShareCat">SWE-Bench Pro</span> <span data-i18n="shareImgLeaderboard">Leaderboard</span></h4>
+      <h4>📤 <span data-i18n="shareFloatingTitle">Share</span> <span id="floatingShareTab">Leaderboard</span> <span data-i18n="shareImgLeaderboard">Leaderboard</span></h4>
       <div class="floating-share-grid">
-        <a href="#" onclick="event.preventDefault();shareCategoryToTwitter(currentModelCategory);"><i data-lucide="twitter" style="color:#1DA1F2;"></i> <span data-i18n="sharePlatformTwitter">𝕏 Twitter</span></a>
-        <a href="#" onclick="event.preventDefault();const u=buildShareUrl(currentModelCategory,null);window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(u),'_blank','width=580,height=520');"><i data-lucide="linkedin" style="color:#0A66C2;"></i> <span data-i18n="sharePlatformLinkedIn">LinkedIn</span></a>
-        <a href="#" onclick="event.preventDefault();const u=buildShareUrl(currentModelCategory,null);const list=models[currentModelCategory]||[];const top=list[0];const title=top?(top.name+' '+top.score+'%'):'AIDevHub';window.open('https://www.reddit.com/submit?url='+encodeURIComponent(u)+'&title='+encodeURIComponent(title),'_blank','width=720,height=580');"><i data-lucide="message-circle" style="color:#FF4500;"></i> <span data-i18n="sharePlatformReddit">Reddit</span></a>
-        <a href="#" onclick="event.preventDefault();const u=buildShareUrl(currentModelCategory,null);const text='🤖 '+document.title+'\n\n📊 View full leaderboard: '+u+'\n\n#AI #LLM';window.open('https://service.weibo.com/share/share.php?url='+encodeURIComponent(u)+'&title='+encodeURIComponent(text),'_blank','width=580,height=520');"><i data-lucide="globe" style="color:#E6162D;"></i> <span data-i18n="sharePlatformWeibo">微博</span></a>
-        <button onclick="copyCategoryLink(currentModelCategory);document.getElementById('floatingSharePanel').classList.remove('open');"><i data-lucide="link"></i> <span data-i18n="shareCopyLink">复制链接</span></button>
-        <button onclick="generateCategoryImage(currentModelCategory);document.getElementById('floatingSharePanel').classList.remove('open');"><i data-lucide="image"></i> <span data-i18n="shareGenImage">生成分享图</span></button>
+        <a href="#" id="floatingShareTwitter"><i data-lucide="twitter" style="color:#1DA1F2;"></i> <span data-i18n="sharePlatformTwitter">𝕏 Twitter</span></a>
+        <a href="#" id="floatingShareLinkedIn"><i data-lucide="linkedin" style="color:#0A66C2;"></i> <span data-i18n="sharePlatformLinkedIn">LinkedIn</span></a>
+        <a href="#" id="floatingShareReddit"><i data-lucide="message-circle" style="color:#FF4500;"></i> <span data-i18n="sharePlatformReddit">Reddit</span></a>
+        <a href="#" id="floatingShareWeibo"><i data-lucide="globe" style="color:#E6162D;"></i> <span data-i18n="sharePlatformWeibo">微博</span></a>
+        <button id="floatingShareCopy"><i data-lucide="link"></i> <span data-i18n="shareCopyLink">复制链接</span></button>
+        <button id="floatingShareImage"><i data-lucide="image"></i> <span data-i18n="shareGenImage">生成分享图</span></button>
       </div>
     </div>
     <button class="floating-share-btn" onclick="toggleFloatingShare()" title="Share">
@@ -7231,28 +7405,128 @@ const databases = {
     </button>
   </div>
   <script>
-    // Show floating share only when on LLM Rankings section
-    function updateFloatingShareVisibility() {
+    // Show floating share on all sections (not just LLM Rankings)
+    function getCurrentShareTab() {
+      const hash = location.hash || '';
+      if (hash.startsWith('#llm') || hash.startsWith('#models')) return 'models';
+      if (hash.startsWith('#tools')) return 'tools';
+      if (hash.startsWith('#languages')) return 'languages';
+      if (hash.startsWith('#databases')) return 'databases';
+      if (hash.startsWith('#github')) return 'github';
+      // Default to models if no hash
+      if (hash === '' || hash === '#' || hash === '#home') return 'models';
+      return null;
+    }
+
+    function getCurrentShareUrl() {
+      const tab = getCurrentShareTab();
+      if (!tab) return null;
+      if (tab === 'models') return buildShareUrl(currentModelCategory, null);
+      return location.origin + location.pathname + '#' + tab;
+    }
+
+    function shareCurrentTabToTwitter() {
+      const tab = getCurrentShareTab();
+      if (!tab) return;
+      if (tab === 'models') { shareCategoryToTwitter(currentModelCategory); return; }
+      const cfg = SHARE_TAB_CONFIG[tab];
+      if (!cfg) return;
+      const list = cfg.getList();
+      if (list.length < 1) return;
+      const url = getCurrentShareUrl();
+      const vars = { benchmark: currentLang === 'zh' ? cfg.titleZh : cfg.titleEn, url };
+      for (let i = 0; i < Math.min(5, list.length); i++) {
+        vars['n' + (i + 1)] = list[i].name;
+        vars['s' + (i + 1)] = cfg.scoreFormat(cfg.getItemScore(list[i])) + cfg.scoreUnit;
+      }
+      const text = truncateForTwitter(
+        fillTemplate(t('shareCategoryTweet'), vars),
+        280
+      );
+      window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank', 'width=580,height=520');
+    }
+
+    function shareCurrentTabLinkedIn() {
+      const url = getCurrentShareUrl();
+      if (!url) return;
+      const tab = getCurrentShareTab();
+      const cfg = SHARE_TAB_CONFIG[tab];
+      const list = cfg ? cfg.getList() : [];
+      const top = list[0];
+      const title = top ? (currentLang === 'zh' ? `🏆 ${cfg.titleZh} TOP 1: ${top.name}` : `🏆 ${cfg.titleEn} TOP 1: ${top.name}`) : 'AIDevHub';
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title), '_blank', 'width=580,height=520');
+    }
+
+    function shareCurrentTabReddit() {
+      const url = getCurrentShareUrl();
+      if (!url) return;
+      const tab = getCurrentShareTab();
+      const cfg = SHARE_TAB_CONFIG[tab];
+      const list = cfg ? cfg.getList() : [];
+      const top = list[0];
+      const title = top ? (currentLang === 'zh' ? `${cfg.titleZh}: ${top.name} ${cfg.scoreFormat(cfg.getItemScore(top))}${cfg.scoreUnit}` : `${cfg.titleEn}: ${top.name} ${cfg.scoreFormat(cfg.getItemScore(top))}${cfg.scoreUnit}`) : 'AIDevHub';
+      window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title), '_blank', 'width=720,height=580');
+    }
+
+    function shareCurrentTabWeibo() {
+      const url = getCurrentShareUrl();
+      if (!url) return;
+      const tab = getCurrentShareTab();
+      const cfg = SHARE_TAB_CONFIG[tab];
+      const list = cfg ? cfg.getList() : [];
+      const top = list[0];
+      const text = top
+        ? `🤖 ${currentLang === 'zh' ? cfg.titleZh : cfg.titleEn}: TOP 1 是 ${top.name} ${cfg.scoreFormat(cfg.getItemScore(top))}${cfg.scoreUnit}!\n\n📊 View full leaderboard: ${url}\n\n#AI #大模型`
+        : `🤖 AIDevHub\n\n📊 View full leaderboard: ${url}\n\n#AI #大模型`;
+      window.open('https://service.weibo.com/share/share.php?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(text), '_blank', 'width=580,height=520');
+    }
+
+    function copyCurrentTabLink() {
+      const url = getCurrentShareUrl();
+      if (!url) return;
+      copyText(url).then(ok => showToast(ok ? t('shareCopied') : t('shareCopyFailed')));
+    }
+
+    function generateCurrentTabImage() {
+      const tab = getCurrentShareTab();
+      if (!tab) return;
+      generateTabShareImage(tab);
+    }
+
+    function updateFloatingShare() {
       const el = document.getElementById('floatingShare');
       if (!el) return;
-      const hash = location.hash || '';
-      const isModels = hash.startsWith('#llm') || hash === '' || hash === '#home';
-      el.style.display = isModels ? 'block' : 'none';
-      // Update category name
-      const catEl = document.getElementById('floatingShareCat');
-      const names = { 'swe-bench': 'SWE-bench Verified', 'livecode': 'LiveCodeBench', 'swe-pro': 'SWE-Bench Pro', 'multilingual': 'SWE-bench Multilingual' };
-      if (catEl) catEl.textContent = names[currentModelCategory] || 'Leaderboard';
-      // Update i18n data attributes (so panel updates when language changes)
+      const tab = getCurrentShareTab();
+      el.style.display = tab ? 'block' : 'none';
+      // Update tab name
+      const tabEl = document.getElementById('floatingShareTab');
+      if (tabEl && SHARE_TAB_CONFIG[tab]) {
+        tabEl.textContent = currentLang === 'zh' ? SHARE_TAB_CONFIG[tab].titleZh : SHARE_TAB_CONFIG[tab].titleEn;
+      }
+      // Wire up actions (only once)
+      const wireOnce = (id, fn) => {
+        const node = document.getElementById(id);
+        if (node && !node._wired) { node._wired = true; node.addEventListener('click', e => { e.preventDefault(); fn(); }); }
+      };
+      wireOnce('floatingShareTwitter', shareCurrentTabToTwitter);
+      wireOnce('floatingShareLinkedIn', shareCurrentTabLinkedIn);
+      wireOnce('floatingShareReddit', shareCurrentTabReddit);
+      wireOnce('floatingShareWeibo', shareCurrentTabWeibo);
+      wireOnce('floatingShareCopy', copyCurrentTabLink);
+      wireOnce('floatingShareImage', generateCurrentTabImage);
+      // Update i18n data attributes
       el.querySelectorAll('[data-i18n]').forEach(node => {
         const key = node.getAttribute('data-i18n');
         if (t(key)) node.textContent = t(key);
       });
-      // Re-render lucide icons after text changes
       if (typeof lucide !== 'undefined') lucide.createIcons();
     }
-    window.addEventListener('hashchange', updateFloatingShareVisibility);
-    setInterval(updateFloatingShareVisibility, 1000);
-    setTimeout(() => { lucide.createIcons(); updateFloatingShareVisibility(); }, 200);
+    // Backward compat alias
+    function updateFloatingShareVisibility() { updateFloatingShare(); }
+
+    window.addEventListener('hashchange', updateFloatingShare);
+    setInterval(updateFloatingShare, 1000);
+    setTimeout(() => { lucide.createIcons(); updateFloatingShare(); }, 200);
   </script>
 </body>
 </html>
