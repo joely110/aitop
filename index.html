@@ -5351,7 +5351,7 @@ const databases = {
           <div class="score">${mod.passRate.replace('%', '')}</div>
           <div class="action-cell" style="display:flex;gap:6px;align-items:center;">
             <button class="action-btn" onclick="showModelDetail(${mod.id}, '${category}')">${t('btnDetail')}</button>
-            <button class="share-btn row-share-btn" onclick="toggleRowSharePopup(${mod.id}, '${category}', event)" title="Share"><i data-lucide="share-2" style="width:14px;height:14px;"></i></button>
+            <button class="share-btn row-share-btn" onclick="toggleRowSharePopup(${mod.id}, '${category}', event)" title="${t('shareRowTitle')}"><i data-lucide="share-2" style="width:14px;height:14px;"></i></button>
           </div>
         </div>
       `).join('');
@@ -5415,10 +5415,10 @@ const databases = {
         </div>
         <div class="modal-share-row">
           <button class="share-btn" onclick="copyModelLink(${mod.id}, '${category}')"><i data-lucide="link" style="width:14px;height:14px;"></i> ${t('shareCopyLink')}</button>
-          <button class="share-btn" onclick="shareToTwitter(${mod.id}, '${category}')" style="color:#1DA1F2;border-color:#1DA1F2;"><i data-lucide="twitter" style="width:14px;height:14px;"></i> 𝕏</button>
-          <button class="share-btn" onclick="shareToLinkedIn(${mod.id}, '${category}')" style="color:#0A66C2;border-color:#0A66C2;"><i data-lucide="linkedin" style="width:14px;height:14px;"></i> LinkedIn</button>
-          <button class="share-btn" onclick="shareToReddit(${mod.id}, '${category}')" style="color:#FF4500;border-color:#FF4500;"><i data-lucide="message-circle" style="width:14px;height:14px;"></i> Reddit</button>
-          <button class="share-btn" onclick="shareToWeibo(${mod.id}, '${category}')" style="color:#E6162D;border-color:#E6162D;"><i data-lucide="globe" style="width:14px;height:14px;"></i> 微博</button>
+          <button class="share-btn" onclick="shareToTwitter(${mod.id}, '${category}')" style="color:#1DA1F2;border-color:#1DA1F2;"><i data-lucide="twitter" style="width:14px;height:14px;"></i> ${t('sharePlatformTwitter')}</button>
+          <button class="share-btn" onclick="shareToLinkedIn(${mod.id}, '${category}')" style="color:#0A66C2;border-color:#0A66C2;"><i data-lucide="linkedin" style="width:14px;height:14px;"></i> ${t('sharePlatformLinkedIn')}</button>
+          <button class="share-btn" onclick="shareToReddit(${mod.id}, '${category}')" style="color:#FF4500;border-color:#FF4500;"><i data-lucide="message-circle" style="width:14px;height:14px;"></i> ${t('sharePlatformReddit')}</button>
+          <button class="share-btn" onclick="shareToWeibo(${mod.id}, '${category}')" style="color:#E6162D;border-color:#E6162D;"><i data-lucide="globe" style="width:14px;height:14px;"></i> ${t('sharePlatformWeibo')}</button>
           <button class="share-btn" onclick="generateShareImage(${mod.id}, '${category}')" style="color:var(--accent);border-color:var(--accent);"><i data-lucide="image" style="width:14px;height:14px;"></i> ${t('shareGenImage')}</button>
         </div>
       `;
@@ -5510,7 +5510,7 @@ const databases = {
 
     function copyModelLink(modelId, category) {
       const url = buildShareUrl(category || currentModelCategory, modelId);
-      copyText(url).then(ok => showToast(ok ? t('shareCopied') : 'Copy failed'));
+      copyText(url).then(ok => showToast(ok ? t('shareCopied') : t('shareCopyFailed')));
     }
 
     function shareToTwitter(modelId, category) {
@@ -5525,14 +5525,16 @@ const databases = {
     function shareToLinkedIn(modelId, category) {
       const cat = category || currentModelCategory;
       const url = buildShareUrl(cat, modelId);
-      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank', 'width=580,height=520');
+      const mod = (models[cat] || []).find(m => m.id === modelId);
+      const title = mod ? fillTemplate(t('shareLinkedInTitle'), { name: mod.name, score: mod.score, benchmark: getBenchmarkName(cat) }) : 'AIDevHub';
+      window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title), '_blank', 'width=580,height=520');
     }
 
     function shareToReddit(modelId, category) {
       const cat = category || currentModelCategory;
       const url = buildShareUrl(cat, modelId);
       const mod = (models[cat] || []).find(m => m.id === modelId);
-      const title = mod ? (mod.name + ': ' + mod.score + '% on ' + getBenchmarkName(cat)) : 'AIDevHub';
+      const title = mod ? fillTemplate(t('shareRedditTitle'), { name: mod.name, score: mod.score, benchmark: getBenchmarkName(cat) }) : 'AIDevHub';
       window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title), '_blank', 'width=720,height=580');
     }
 
@@ -5562,7 +5564,7 @@ const databases = {
     function copyCategoryLink(category) {
       const cat = category || currentModelCategory;
       const url = buildShareUrl(cat, null);
-      copyText(url).then(ok => showToast(ok ? t('shareCopied') : 'Copy failed'));
+      copyText(url).then(ok => showToast(ok ? t('shareCopied') : t('shareCopyFailed')));
     }
 
     function generateShareImage(modelId, category) {
@@ -5580,7 +5582,7 @@ const databases = {
           </div>
           <div style="text-align:center;">
             <div style="font-size:42px;font-weight:800;color:#fbbf24;">${mod.score}</div>
-            <div style="font-size:11px;opacity:0.7;margin-top:2px;">SCORE</div>
+            <div style="font-size:11px;opacity:0.7;margin-top:2px;">${t('shareImgScore')}</div>
           </div>
         </div>
         <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:14px;margin-bottom:14px;font-size:13px;line-height:1.5;">${currentLang === 'zh' ? mod.desc : (mod.desc_en || mod.desc)}</div>
@@ -5600,7 +5602,7 @@ const databases = {
         showToast(t('shareImgSaved'));
       }).catch(err => {
         document.body.removeChild(container);
-        showToast('Error: ' + err.message);
+        showToast(t('shareErrPrefix') + err.message);
       });
     }
 
@@ -5620,8 +5622,8 @@ const databases = {
       `).join('');
       container.innerHTML = `
         <div style="margin-bottom:18px;">
-          <div style="font-size:13px;opacity:0.7;margin-bottom:4px;">🏆 ${getBenchmarkName(cat)} Leaderboard</div>
-          <div style="font-size:28px;font-weight:800;">TOP 5 LLM Coding Models</div>
+          <div style="font-size:13px;opacity:0.7;margin-bottom:4px;">🏆 ${getBenchmarkName(cat)} ${t('shareImgLeaderboard')}</div>
+          <div style="font-size:28px;font-weight:800;">${t('shareImgTop5Title')}</div>
         </div>
         <div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:12px 16px;">${rows}</div>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.2);">
@@ -5640,7 +5642,7 @@ const databases = {
         showToast(t('shareImgSaved'));
       }).catch(err => {
         document.body.removeChild(container);
-        showToast('Error: ' + err.message);
+        showToast(t('shareErrPrefix') + err.message);
       });
     }
 
@@ -5656,10 +5658,10 @@ const databases = {
       popup.className = 'share-popup';
       popup.dataset.sharePopup = '1';
       popup.innerHTML = `
-        <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}" target="_blank"><i data-lucide="twitter" style="color:#1DA1F2;"></i> 𝕏 Twitter</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}" target="_blank"><i data-lucide="linkedin" style="color:#0A66C2;"></i> LinkedIn</a>
-        <a href="https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(mod.name + ' ' + mod.score + '%')}" target="_blank"><i data-lucide="message-circle" style="color:#FF4500;"></i> Reddit</a>
-        <a href="https://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(fillTemplate(t('shareWeiboText'), { name: mod.name, score: mod.score, benchmark: getBenchmarkName(cat), url }))}" target="_blank"><i data-lucide="globe" style="color:#E6162D;"></i> 微博</a>
+        <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}" target="_blank"><i data-lucide="twitter" style="color:#1DA1F2;"></i> ${t('sharePlatformTwitter')}</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}" target="_blank"><i data-lucide="linkedin" style="color:#0A66C2;"></i> ${t('sharePlatformLinkedIn')}</a>
+        <a href="https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(mod.name + ' ' + mod.score + '%')}" target="_blank"><i data-lucide="message-circle" style="color:#FF4500;"></i> ${t('sharePlatformReddit')}</a>
+        <a href="https://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(fillTemplate(t('shareWeiboText'), { name: mod.name, score: mod.score, benchmark: getBenchmarkName(cat), url }))}" target="_blank"><i data-lucide="globe" style="color:#E6162D;"></i> ${t('sharePlatformWeibo')}</a>
         <button onclick="copyText('${url}');showToast(t('shareCopied'))"><i data-lucide="link"></i> ${t('shareCopyLink')}</button>
         <button onclick="generateShareImage(${modelId}, '${cat}')"><i data-lucide="image"></i> ${t('shareGenImage')}</button>
       `;
@@ -5899,10 +5901,21 @@ const databases = {
         shareImgSaved: '分享图已保存!',
         shareImgGen: '正在生成分享图...',
         shareCopiedModel: '已复制: ',
+        shareCopyFailed: '复制失败',
+        shareErrPrefix: '错误: ',
+        shareRowTitle: '分享',
+        shareFloatingTitle: '分享',
+        shareImgScore: '评分',
+        shareImgTop5Title: 'TOP 5 大模型代码能力榜',
+        shareImgLeaderboard: '排行榜',
+        sharePlatformTwitter: '𝕏 Twitter',
+        sharePlatformLinkedIn: 'LinkedIn',
+        sharePlatformReddit: 'Reddit',
+        sharePlatformWeibo: '微博',
         shareSingleTweet: '🚀 {name} 在 {benchmark} 拿了 {score}% 通过率!\n\n📊 完整排行: {url}\n\n#AI #LLM',
         shareCategoryTweet: '🏆 {benchmark} 榜单 TOP 5:\n🥇 {n1} {s1}\n🥈 {n2} {s2}\n🥉 {n3} {s3}\n4. {n4} {s4}\n5. {n5} {s5}\n\n完整排行: {url}\n\n#AI #LLM',
-        shareLinkedInTitle: '{name} scored {score}% on {benchmark}',
-        shareRedditTitle: '{name}: {score}% on {benchmark} leaderboard',
+        shareLinkedInTitle: '{name} 在 {benchmark} 拿了 {score}%! 查看完整榜单',
+        shareRedditTitle: '{name} 在 {benchmark} 拿了 {score}%',
         shareWeiboText: '🚀 {name} 在 {benchmark} 拿了 {score}%! 完整榜单: {url} #AI#大模型',
         radarTools: ['代码生成', '上下文理解', '速度性能', '价格', '集成便捷'],
         radarToolsEn: ['Quality', 'Speed', 'Ease', 'Price', 'Integration'],
@@ -6084,6 +6097,17 @@ const databases = {
         shareImgSaved: 'Image saved!',
         shareImgGen: 'Generating image...',
         shareCopiedModel: 'Copied: ',
+        shareCopyFailed: 'Copy failed',
+        shareErrPrefix: 'Error: ',
+        shareRowTitle: 'Share',
+        shareFloatingTitle: 'Share',
+        shareImgScore: 'SCORE',
+        shareImgTop5Title: 'TOP 5 LLM Coding Models',
+        shareImgLeaderboard: 'Leaderboard',
+        sharePlatformTwitter: '𝕏 Twitter',
+        sharePlatformLinkedIn: 'LinkedIn',
+        sharePlatformReddit: 'Reddit',
+        sharePlatformWeibo: '微博',
         shareSingleTweet: '🚀 {name} scored {score}% on {benchmark}!\n\n📊 Full leaderboard: {url}\n\n#AI #LLM',
         shareCategoryTweet: '🏆 TOP 5 in {benchmark}:\n🥇 {n1} {s1}\n🥈 {n2} {s2}\n🥉 {n3} {s3}\n4. {n4} {s4}\n5. {n5} {s5}\n\nFull leaderboard: {url}\n\n#AI #LLM',
         shareLinkedInTitle: '{name} scored {score}% on {benchmark}',
@@ -6154,6 +6178,9 @@ const databases = {
       // Update language dropdown selection
       const langSelect = document.querySelector('select[onchange="toggleLang(this.value)"]');
       if (langSelect) langSelect.value = currentLang;
+
+      // Update floating share panel i18n
+      if (typeof updateFloatingShareVisibility === 'function') updateFloatingShareVisibility();
 
       // Update nav
       const navMap = { home: 'navHomeLink', tools: 'navToolsLink', models: 'navModelsLink', languages: 'navLangLink', databases: 'navDbLink', github: 'navGithubLink' };
@@ -6957,14 +6984,14 @@ const databases = {
   <!-- Floating share widget (shown only on LLM Rankings) -->
   <div class="floating-share" id="floatingShare" style="display:none;">
     <div class="floating-share-panel" id="floatingSharePanel">
-      <h4>📤 Share <span id="floatingShareCat">SWE-Bench Pro</span> Leaderboard</h4>
+      <h4>📤 <span data-i18n="shareFloatingTitle">Share</span> <span id="floatingShareCat">SWE-Bench Pro</span> <span data-i18n="shareImgLeaderboard">Leaderboard</span></h4>
       <div class="floating-share-grid">
-        <a href="#" onclick="event.preventDefault();shareCategoryToTwitter(currentModelCategory);"><i data-lucide="twitter" style="color:#1DA1F2;"></i> 𝕏 Twitter</a>
-        <a href="#" onclick="event.preventDefault();const u=buildShareUrl(currentModelCategory,null);window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(u),'_blank','width=580,height=520');"><i data-lucide="linkedin" style="color:#0A66C2;"></i> LinkedIn</a>
-        <a href="#" onclick="event.preventDefault();const u=buildShareUrl(currentModelCategory,null);const list=models[currentModelCategory]||[];const top=list[0];const title=top?(top.name+' '+top.score+'%'):'AIDevHub';window.open('https://www.reddit.com/submit?url='+encodeURIComponent(u)+'&title='+encodeURIComponent(title),'_blank','width=720,height=580');"><i data-lucide="message-circle" style="color:#FF4500;"></i> Reddit</a>
-        <a href="#" onclick="event.preventDefault();const u=buildShareUrl(currentModelCategory,null);const text='🤖 '+document.title+'\n\n📊 View full leaderboard: '+u+'\n\n#AI #LLM';window.open('https://service.weibo.com/share/share.php?url='+encodeURIComponent(u)+'&title='+encodeURIComponent(text),'_blank','width=580,height=520');"><i data-lucide="globe" style="color:#E6162D;"></i> 微博</a>
-        <button onclick="copyCategoryLink(currentModelCategory);document.getElementById('floatingSharePanel').classList.remove('open');"><i data-lucide="link"></i> 复制链接</button>
-        <button onclick="generateCategoryImage(currentModelCategory);document.getElementById('floatingSharePanel').classList.remove('open');"><i data-lucide="image"></i> 生成分享图</button>
+        <a href="#" onclick="event.preventDefault();shareCategoryToTwitter(currentModelCategory);"><i data-lucide="twitter" style="color:#1DA1F2;"></i> <span data-i18n="sharePlatformTwitter">𝕏 Twitter</span></a>
+        <a href="#" onclick="event.preventDefault();const u=buildShareUrl(currentModelCategory,null);window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(u),'_blank','width=580,height=520');"><i data-lucide="linkedin" style="color:#0A66C2;"></i> <span data-i18n="sharePlatformLinkedIn">LinkedIn</span></a>
+        <a href="#" onclick="event.preventDefault();const u=buildShareUrl(currentModelCategory,null);const list=models[currentModelCategory]||[];const top=list[0];const title=top?(top.name+' '+top.score+'%'):'AIDevHub';window.open('https://www.reddit.com/submit?url='+encodeURIComponent(u)+'&title='+encodeURIComponent(title),'_blank','width=720,height=580');"><i data-lucide="message-circle" style="color:#FF4500;"></i> <span data-i18n="sharePlatformReddit">Reddit</span></a>
+        <a href="#" onclick="event.preventDefault();const u=buildShareUrl(currentModelCategory,null);const text='🤖 '+document.title+'\n\n📊 View full leaderboard: '+u+'\n\n#AI #LLM';window.open('https://service.weibo.com/share/share.php?url='+encodeURIComponent(u)+'&title='+encodeURIComponent(text),'_blank','width=580,height=520');"><i data-lucide="globe" style="color:#E6162D;"></i> <span data-i18n="sharePlatformWeibo">微博</span></a>
+        <button onclick="copyCategoryLink(currentModelCategory);document.getElementById('floatingSharePanel').classList.remove('open');"><i data-lucide="link"></i> <span data-i18n="shareCopyLink">复制链接</span></button>
+        <button onclick="generateCategoryImage(currentModelCategory);document.getElementById('floatingSharePanel').classList.remove('open');"><i data-lucide="image"></i> <span data-i18n="shareGenImage">生成分享图</span></button>
       </div>
     </div>
     <button class="floating-share-btn" onclick="toggleFloatingShare()" title="Share">
@@ -6983,6 +7010,13 @@ const databases = {
       const catEl = document.getElementById('floatingShareCat');
       const names = { 'swe-bench': 'SWE-bench Verified', 'livecode': 'LiveCodeBench', 'swe-pro': 'SWE-Bench Pro', 'multilingual': 'SWE-bench Multilingual' };
       if (catEl) catEl.textContent = names[currentModelCategory] || 'Leaderboard';
+      // Update i18n data attributes (so panel updates when language changes)
+      el.querySelectorAll('[data-i18n]').forEach(node => {
+        const key = node.getAttribute('data-i18n');
+        if (t(key)) node.textContent = t(key);
+      });
+      // Re-render lucide icons after text changes
+      if (typeof lucide !== 'undefined') lucide.createIcons();
     }
     window.addEventListener('hashchange', updateFloatingShareVisibility);
     setInterval(updateFloatingShareVisibility, 1000);
