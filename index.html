@@ -5201,6 +5201,13 @@ const databases = {
     // ==================== TAB SWITCHING ====================
     function switchTab(tab) {
       currentTab = tab;
+      // Update URL hash to match current tab (using history.replaceState to avoid scroll)
+      try {
+        const newHash = tab === 'home' ? '' : '#' + (tab === 'models' ? 'llm' : tab);
+        if (newHash !== location.hash) {
+          history.replaceState(null, '', location.pathname + newHash);
+        }
+      } catch (e) { /* ignore */ }
 
       // Update page title and meta for SEO
       const titles = {
@@ -6120,6 +6127,24 @@ const databases = {
 
     window.addEventListener('hashchange', parseDeepLink);
     setTimeout(parseDeepLink, 200);
+
+    // Parse tab from URL hash on page load
+    function parseTabHash() {
+      const hash = location.hash || '';
+      if (!hash || hash === '#' || hash === '#home') return false;
+      // Skip LLM deep links (handled by parseDeepLink)
+      if (hash.startsWith('#llm')) return false;
+      // Map hash to tab key
+      const tabMap = { '#tools': 'tools', '#languages': 'languages', '#databases': 'databases', '#github': 'github' };
+      const tab = tabMap[hash.split('?')[0]];
+      if (tab && typeof switchTab === 'function') {
+        switchTab(tab);
+        return true;
+      }
+      return false;
+    }
+    window.addEventListener('hashchange', parseTabHash);
+    setTimeout(parseTabHash, 100);
 
     let currentDbCategory = 'rdbms';
 
@@ -7413,9 +7438,16 @@ const databases = {
       if (hash.startsWith('#languages')) return 'languages';
       if (hash.startsWith('#databases')) return 'databases';
       if (hash.startsWith('#github')) return 'github';
-      // Default to models if no hash
-      if (hash === '' || hash === '#' || hash === '#home') return 'models';
-      return null;
+      // Fallback: use currentTab variable (set by switchTab)
+      if (typeof currentTab !== 'undefined' && currentTab) {
+        if (currentTab === 'models') return 'models';
+        if (currentTab === 'tools') return 'tools';
+        if (currentTab === 'languages') return 'languages';
+        if (currentTab === 'databases') return 'databases';
+        if (currentTab === 'github') return 'github';
+      }
+      // Default fallback
+      return 'models';
     }
 
     function getCurrentShareUrl() {
