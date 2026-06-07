@@ -6341,11 +6341,12 @@ const databases = {
         sharePlatformReddit: 'Reddit',
         sharePlatformWeibo: '微博',
         shareMore: '更多…',
+        shareWeiboText: '🚀 {name} 在 {benchmark} 拿了 {score}%! 完整榜单: {url} #AI#大模型',
+        shareWeiboTabText: '🤖 {title}: TOP 1 是 {name} {score}!\n\n📊 完整榜单: {url}\n\n#AI#大模型',
         shareSingleTweet: '🚀 {name} 在 {benchmark} 拿了 {score}% 通过率!\n\n📊 完整排行: {url}\n\n#AI #LLM',
         shareCategoryTweet: '🏆 {benchmark} 榜单 TOP 10:\n🥇 {n1} {s1}\n🥈 {n2} {s2}\n🥉 {n3} {s3}\n4. {n4} {s4}\n5. {n5} {s5}\n6. {n6} {s6}\n7. {n7} {s7}\n8. {n8} {s8}\n9. {n9} {s9}\n🔟 {n10} {s10}\n\n完整排行: {url}\n\n#AI #LLM',
         shareLinkedInTitle: '{name} 在 {benchmark} 拿了 {score}%! 查看完整榜单',
         shareRedditTitle: '{name} 在 {benchmark} 拿了 {score}%',
-        shareWeiboText: '🚀 {name} 在 {benchmark} 拿了 {score}%! 完整榜单: {url} #AI#大模型',
         radarTools: ['代码生成', '上下文理解', '速度性能', '价格', '集成便捷'],
         radarToolsEn: ['Quality', 'Speed', 'Ease', 'Price', 'Integration'],
         radarLangEn: ['Popularity', 'Learnability', 'Jobs', 'Salary', 'Prospects'],
@@ -6539,11 +6540,12 @@ const databases = {
         sharePlatformReddit: 'Reddit',
         sharePlatformWeibo: '微博',
         shareMore: 'More…',
+        shareWeiboText: '🚀 {name} scored {score}% on {benchmark}! Full leaderboard: {url} #AI#LLM',
+        shareWeiboTabText: '🤖 {title}: TOP 1 is {name} {score}!\n\n📊 Full leaderboard: {url}\n\n#AI#LLM',
         shareSingleTweet: '🚀 {name} scored {score}% on {benchmark}!\n\n📊 Full leaderboard: {url}\n\n#AI #LLM',
         shareCategoryTweet: '🏆 TOP 10 in {benchmark}:\n🥇 {n1} {s1}\n🥈 {n2} {s2}\n🥉 {n3} {s3}\n4. {n4} {s4}\n5. {n5} {s5}\n6. {n6} {s6}\n7. {n7} {s7}\n8. {n8} {s8}\n9. {n9} {s9}\n🔟 {n10} {s10}\n\nFull leaderboard: {url}\n\n#AI #LLM',
         shareLinkedInTitle: '{name} scored {score}% on {benchmark}',
         shareRedditTitle: '{name}: {score}% on {benchmark} leaderboard',
-        shareWeiboText: '🚀 {name} 在 {benchmark} 拿了 {score}%! 完整榜单: {url} #AI#大模型',
         radarTools: ['Code Generation', 'Context', 'Speed', 'Price', 'Integration'],
         radarModels: ['Code Ability', 'Speed', 'Context', 'Accuracy', 'Multi-lang'],
         radarLang: ['Popularity', 'Learnability', 'Ecosystem', 'Jobs', 'Trend'],
@@ -7507,9 +7509,11 @@ const databases = {
       const cfg = SHARE_TAB_CONFIG[tab];
       const list = cfg ? cfg.getList() : [];
       const top = list[0];
-      const text = top
-        ? `🤖 ${currentLang === 'zh' ? cfg.titleZh : cfg.titleEn}: TOP 1 是 ${top.name} ${cfg.scoreFormat(cfg.getItemScore(top))}${cfg.scoreUnit}!\n\n📊 View full leaderboard: ${url}\n\n#AI #大模型`
-        : `🤖 AIDevHub\n\n📊 View full leaderboard: ${url}\n\n#AI #大模型`;
+      const title = top ? (currentLang === 'zh' ? cfg.titleZh : cfg.titleEn) : 'AIDevHub';
+      const vars = top
+        ? { title, name: top.name, score: cfg.scoreFormat(cfg.getItemScore(top)) + cfg.scoreUnit, url }
+        : { title: 'AIDevHub', name: '', score: '', url };
+      const text = fillTemplate(t('shareWeiboTabText'), vars);
       window.open('https://service.weibo.com/share/share.php?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(text), '_blank', 'width=580,height=520');
     }
 
