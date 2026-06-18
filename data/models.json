@@ -1,6 +1,19 @@
 {
   "swe-bench": [
     {
+      "name": "Claude Fable 5",
+      "vendor": "Anthropic",
+      "score": 95,
+      "passRate": "95%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "icon": "./icons/anthropic.com.png",
+      "id": 1,
+      "desc": "SWE-bench Verified榜单第1名，95%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
       "name": "Claude Mythos Preview",
       "vendor": "Anthropic",
       "score": 93.9,
@@ -10,8 +23,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 1,
-      "desc": "SWE-bench Verified榜单第1名，93.9%通过率。数据源: datalearner.com"
+      "id": 2,
+      "desc": "SWE-bench Verified榜单第2名，93.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Opus 4.8",
@@ -23,8 +36,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 2,
-      "desc": "SWE-bench Verified榜单第2名，88.6%通过率。数据源: datalearner.com"
+      "id": 3,
+      "desc": "SWE-bench Verified榜单第3名，88.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Opus 4.7",
@@ -36,8 +49,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 3,
-      "desc": "SWE-bench Verified榜单第3名，87.6%通过率。数据源: datalearner.com"
+      "id": 4,
+      "desc": "SWE-bench Verified榜单第4名，87.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Sonnet 4.5",
@@ -49,8 +62,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 4,
-      "desc": "SWE-bench Verified榜单第4名，82%通过率。数据源: datalearner.com"
+      "id": 5,
+      "desc": "SWE-bench Verified榜单第5名，82%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Sonnet 5",
@@ -62,8 +75,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 5,
-      "desc": "SWE-bench Verified榜单第5名，82%通过率。数据源: datalearner.com"
+      "id": 6,
+      "desc": "SWE-bench Verified榜单第6名，82%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Opus 4.5",
@@ -75,8 +88,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 6,
-      "desc": "SWE-bench Verified榜单第6名，80.9%通过率。数据源: datalearner.com"
+      "id": 7,
+      "desc": "SWE-bench Verified榜单第7名，80.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Opus 4.6",
@@ -88,8 +101,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 7,
-      "desc": "SWE-bench Verified榜单第7名，80.84%通过率。数据源: datalearner.com"
+      "id": 8,
+      "desc": "SWE-bench Verified榜单第8名，80.84%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 3.1 Pro Preview",
@@ -101,8 +114,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 8,
-      "desc": "SWE-bench Verified榜单第8名，80.6%通过率。数据源: datalearner.com"
+      "id": 9,
+      "desc": "SWE-bench Verified榜单第9名，80.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-V4-Pro",
@@ -114,8 +127,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 9,
-      "desc": "SWE-bench Verified榜单第9名，80.6%通过率。数据源: datalearner.com"
+      "id": 10,
+      "desc": "SWE-bench Verified榜单第10名，80.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.7-Max-Preview",
@@ -127,8 +140,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 10,
-      "desc": "SWE-bench Verified榜单第10名，80.4%通过率。数据源: datalearner.com"
+      "id": 11,
+      "desc": "SWE-bench Verified榜单第11名，80.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Sonnet 4",
@@ -140,8 +153,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 11,
-      "desc": "SWE-bench Verified榜单第11名，80.2%通过率。数据源: datalearner.com"
+      "id": 12,
+      "desc": "SWE-bench Verified榜单第12名，80.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "MiniMax M2.5",
@@ -153,8 +166,8 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "id": 12,
-      "desc": "SWE-bench Verified榜单第12名，80.2%通过率。数据源: datalearner.com"
+      "id": 13,
+      "desc": "SWE-bench Verified榜单第13名，80.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi K2.6",
@@ -166,8 +179,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 13,
-      "desc": "SWE-bench Verified榜单第13名，80.2%通过率。数据源: datalearner.com"
+      "id": 14,
+      "desc": "SWE-bench Verified榜单第14名，80.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5.2",
@@ -179,8 +192,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 14,
-      "desc": "SWE-bench Verified榜单第14名，80%通过率。数据源: datalearner.com"
+      "id": 15,
+      "desc": "SWE-bench Verified榜单第15名，80%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Sonnet 4.6",
@@ -192,21 +205,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 15,
-      "desc": "SWE-bench Verified榜单第15名，79.6%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Pro",
-      "vendor": "DeepSeek-AI",
-      "score": 79.4,
-      "passRate": "79.4%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
       "id": 16,
-      "desc": "SWE-bench Verified榜单第16名，79.4%通过率。数据源: datalearner.com"
+      "desc": "SWE-bench Verified榜单第16名，79.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-V4-Flash",
@@ -219,20 +219,7 @@
       ],
       "icon": "./icons/github_deepseek-ai.png",
       "id": 17,
-      "desc": "SWE-bench Verified榜单第17名，79%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Qwen3.6-Max-Preview",
-      "vendor": "阿里巴巴",
-      "score": 78.8,
-      "passRate": "78.8%",
-      "colors": [
-        "#EC4899",
-        "#F472B6"
-      ],
-      "icon": "./icons/github_QwenLM.png",
-      "id": 18,
-      "desc": "SWE-bench Verified榜单第18名，78.8%通过率。数据源: datalearner.com"
+      "desc": "SWE-bench Verified榜单第17名，79%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen 3.6 Plus Preview",
@@ -244,21 +231,21 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 19,
-      "desc": "SWE-bench Verified榜单第19名，78.8%通过率。数据源: datalearner.com"
+      "id": 18,
+      "desc": "SWE-bench Verified榜单第18名，78.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
-      "name": "DeepSeek-V4-Flash",
-      "vendor": "DeepSeek-AI",
-      "score": 78.6,
-      "passRate": "78.6%",
+      "name": "Qwen3.6-Max-Preview",
+      "vendor": "阿里巴巴",
+      "score": 78.8,
+      "passRate": "78.8%",
       "colors": [
-        "#6366F1",
-        "#818CF8"
+        "#EC4899",
+        "#F472B6"
       ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 20,
-      "desc": "SWE-bench Verified榜单第20名，78.6%通过率。数据源: datalearner.com"
+      "icon": "./icons/github_QwenLM.png",
+      "id": 19,
+      "desc": "SWE-bench Verified榜单第19名，78.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM-5",
@@ -270,8 +257,8 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 21,
-      "desc": "SWE-bench Verified榜单第21名，77.8%通过率。数据源: datalearner.com"
+      "id": 20,
+      "desc": "SWE-bench Verified榜单第20名，77.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Muse Spark",
@@ -283,21 +270,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/github_meta-llama.png",
-      "id": 22,
-      "desc": "SWE-bench Verified榜单第22名，77.4%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Claude Sonnet 4.5",
-      "vendor": "Anthropic",
-      "score": 77.2,
-      "passRate": "77.2%",
-      "colors": [
-        "#D97706",
-        "#F59E0B"
-      ],
-      "icon": "./icons/anthropic.com.png",
-      "id": 23,
-      "desc": "SWE-bench Verified榜单第23名，77.2%通过率。数据源: datalearner.com"
+      "id": 21,
+      "desc": "SWE-bench Verified榜单第21名，77.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.6-27B",
@@ -309,8 +283,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 24,
-      "desc": "SWE-bench Verified榜单第24名，77.2%通过率。数据源: datalearner.com"
+      "id": 22,
+      "desc": "SWE-bench Verified榜单第22名，77.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5.1-Codex-Max",
@@ -322,8 +296,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 25,
-      "desc": "SWE-bench Verified榜单第25名，76.8%通过率。数据源: datalearner.com"
+      "id": 23,
+      "desc": "SWE-bench Verified榜单第23名，76.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi K2.5",
@@ -335,8 +309,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 26,
-      "desc": "SWE-bench Verified榜单第26名，76.8%通过率。数据源: datalearner.com"
+      "id": 24,
+      "desc": "SWE-bench Verified榜单第24名，76.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.5-397B-A17B",
@@ -348,8 +322,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 27,
-      "desc": "SWE-bench Verified榜单第27名，76.4%通过率。数据源: datalearner.com"
+      "id": 25,
+      "desc": "SWE-bench Verified榜单第25名，76.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5.1",
@@ -361,21 +335,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 28,
-      "desc": "SWE-bench Verified榜单第28名，76.3%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "GPT-5.1",
-      "vendor": "OpenAI",
-      "score": 76.3,
-      "passRate": "76.3%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/openai.com.png",
-      "id": 29,
-      "desc": "SWE-bench Verified榜单第29名，76.3%通过率。数据源: datalearner.com"
+      "id": 26,
+      "desc": "SWE-bench Verified榜单第26名，76.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 3.0 Pro (Preview 11-2025)",
@@ -387,11 +348,11 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 30,
-      "desc": "SWE-bench Verified榜单第30名，76.2%通过率。数据源: datalearner.com"
+      "id": 27,
+      "desc": "SWE-bench Verified榜单第27名，76.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
-      "name": "Qwen3-Max-",
+      "name": "Qwen3-Max-Thinking",
       "vendor": "阿里巴巴",
       "score": 75.3,
       "passRate": "75.3%",
@@ -400,8 +361,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 31,
-      "desc": "SWE-bench Verified榜单第31名，75.3%通过率。数据源: datalearner.com"
+      "id": 28,
+      "desc": "SWE-bench Verified榜单第28名，75.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "o3-pro",
@@ -413,8 +374,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 32,
-      "desc": "SWE-bench Verified榜单第32名，75%通过率。数据源: datalearner.com"
+      "id": 29,
+      "desc": "SWE-bench Verified榜单第29名，75%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "M2.1",
@@ -426,8 +387,8 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "id": 33,
-      "desc": "SWE-bench Verified榜单第33名，74.8%通过率。数据源: datalearner.com"
+      "id": 30,
+      "desc": "SWE-bench Verified榜单第30名，74.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Opus 4.1",
@@ -439,8 +400,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 34,
-      "desc": "SWE-bench Verified榜单第34名，74.5%通过率。数据源: datalearner.com"
+      "id": 31,
+      "desc": "SWE-bench Verified榜单第31名，74.5%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5 Codex",
@@ -452,8 +413,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 35,
-      "desc": "SWE-bench Verified榜单第35名，74.5%通过率。数据源: datalearner.com"
+      "id": 32,
+      "desc": "SWE-bench Verified榜单第32名，74.5%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Step 3.5 Flash",
@@ -465,8 +426,8 @@
         "#34D399"
       ],
       "icon": "./icons/stepfun.com.png",
-      "id": 36,
-      "desc": "SWE-bench Verified榜单第36名，74.4%通过率。数据源: datalearner.com"
+      "id": 33,
+      "desc": "SWE-bench Verified榜单第33名，74.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM-4.7",
@@ -478,34 +439,8 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 37,
-      "desc": "SWE-bench Verified榜单第37名，73.8%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Flash",
-      "vendor": "DeepSeek-AI",
-      "score": 73.7,
-      "passRate": "73.7%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 38,
-      "desc": "SWE-bench Verified榜单第38名，73.7%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Pro",
-      "vendor": "DeepSeek-AI",
-      "score": 73.6,
-      "passRate": "73.6%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 39,
-      "desc": "SWE-bench Verified榜单第39名，73.6%通过率。数据源: datalearner.com"
+      "id": 34,
+      "desc": "SWE-bench Verified榜单第34名，73.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Grok 4 Heavy",
@@ -517,8 +452,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/x.ai.png",
-      "id": 40,
-      "desc": "SWE-bench Verified榜单第40名，73.5%通过率。数据源: datalearner.com"
+      "id": 35,
+      "desc": "SWE-bench Verified榜单第35名，73.5%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.6-35B-A3B",
@@ -530,8 +465,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 41,
-      "desc": "SWE-bench Verified榜单第41名，73.4%通过率。数据源: datalearner.com"
+      "id": 36,
+      "desc": "SWE-bench Verified榜单第36名，73.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Haiku 4.5",
@@ -543,8 +478,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 42,
-      "desc": "SWE-bench Verified榜单第42名，73.3%通过率。数据源: datalearner.com"
+      "id": 37,
+      "desc": "SWE-bench Verified榜单第37名，73.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek V3.2",
@@ -556,8 +491,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 43,
-      "desc": "SWE-bench Verified榜单第43名，73.1%通过率。数据源: datalearner.com"
+      "id": 38,
+      "desc": "SWE-bench Verified榜单第38名，73.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5",
@@ -569,21 +504,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 44,
-      "desc": "SWE-bench Verified榜单第44名，72.8%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Claude Sonnet 4",
-      "vendor": "Anthropic",
-      "score": 72.7,
-      "passRate": "72.7%",
-      "colors": [
-        "#D97706",
-        "#F59E0B"
-      ],
-      "icon": "./icons/anthropic.com.png",
-      "id": 45,
-      "desc": "SWE-bench Verified榜单第45名，72.7%通过率。数据源: datalearner.com"
+      "id": 39,
+      "desc": "SWE-bench Verified榜单第39名，72.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Opus 4",
@@ -595,8 +517,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 46,
-      "desc": "SWE-bench Verified榜单第46名，72.5%通过率。数据源: datalearner.com"
+      "id": 40,
+      "desc": "SWE-bench Verified榜单第40名，72.5%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.5-27B",
@@ -608,8 +530,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 47,
-      "desc": "SWE-bench Verified榜单第47名，72.4%通过率。数据源: datalearner.com"
+      "id": 41,
+      "desc": "SWE-bench Verified榜单第41名，72.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Grok 4 Code",
@@ -621,11 +543,11 @@
         "#A78BFA"
       ],
       "icon": "./icons/x.ai.png",
-      "id": 48,
-      "desc": "SWE-bench Verified榜单第48名，72%通过率。数据源: datalearner.com"
+      "id": 42,
+      "desc": "SWE-bench Verified榜单第42名，72%通过率。数据源: datalearner.com (2026-06)"
     },
     {
-      "name": "Kimi K2",
+      "name": "Kimi K2 Thinking",
       "vendor": "Moonshot AI",
       "score": 71.3,
       "passRate": "71.3%",
@@ -634,8 +556,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 49,
-      "desc": "SWE-bench Verified榜单第49名，71.3%通过率。数据源: datalearner.com"
+      "id": 43,
+      "desc": "SWE-bench Verified榜单第43名，71.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Grok Code Fast 1",
@@ -647,8 +569,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/x.ai.png",
-      "id": 50,
-      "desc": "SWE-bench Verified榜单第50名，70.8%通过率。数据源: datalearner.com"
+      "id": 44,
+      "desc": "SWE-bench Verified榜单第44名，70.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3-Coder-Next",
@@ -660,8 +582,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 51,
-      "desc": "SWE-bench Verified榜单第51名，70.6%通过率。数据源: datalearner.com"
+      "id": 45,
+      "desc": "SWE-bench Verified榜单第45名，70.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5.1 Codex",
@@ -673,8 +595,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 52,
-      "desc": "SWE-bench Verified榜单第52名，70.4%通过率。数据源: datalearner.com"
+      "id": 46,
+      "desc": "SWE-bench Verified榜单第46名，70.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Sonnet 3.7",
@@ -686,21 +608,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 53,
-      "desc": "SWE-bench Verified榜单第53名，70.3%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek V3.2",
-      "vendor": "DeepSeek-AI",
-      "score": 70.2,
-      "passRate": "70.2%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 54,
-      "desc": "SWE-bench Verified榜单第54名，70.2%通过率。数据源: datalearner.com"
+      "id": 47,
+      "desc": "SWE-bench Verified榜单第47名，70.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3 Max (Preview)",
@@ -712,8 +621,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 55,
-      "desc": "SWE-bench Verified榜单第55名，69.6%通过率。数据源: datalearner.com"
+      "id": 48,
+      "desc": "SWE-bench Verified榜单第48名，69.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "MiniMax M2",
@@ -725,8 +634,8 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "id": 56,
-      "desc": "SWE-bench Verified榜单第56名，69.4%通过率。数据源: datalearner.com"
+      "id": 49,
+      "desc": "SWE-bench Verified榜单第49名，69.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi K2 0905",
@@ -738,21 +647,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 57,
-      "desc": "SWE-bench Verified榜单第57名，69.2%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Kimi K2 0905",
-      "vendor": "Moonshot AI",
-      "score": 69.2,
-      "passRate": "69.2%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/kimi.png",
-      "id": 58,
-      "desc": "SWE-bench Verified榜单第58名，69.2%通过率。数据源: datalearner.com"
+      "id": 50,
+      "desc": "SWE-bench Verified榜单第50名，69.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "OpenAI o3",
@@ -764,8 +660,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 59,
-      "desc": "SWE-bench Verified榜单第59名，69.1%通过率。数据源: datalearner.com"
+      "id": 51,
+      "desc": "SWE-bench Verified榜单第51名，69.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 3.0 Flash",
@@ -777,8 +673,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 60,
-      "desc": "SWE-bench Verified榜单第60名，68.7%通过率。数据源: datalearner.com"
+      "id": 52,
+      "desc": "SWE-bench Verified榜单第52名，68.7%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-V3.1 Terminus",
@@ -790,8 +686,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 61,
-      "desc": "SWE-bench Verified榜单第61名，68.4%通过率。数据源: datalearner.com"
+      "id": 53,
+      "desc": "SWE-bench Verified榜单第53名，68.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "OpenAI o4 - mini",
@@ -803,8 +699,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 62,
-      "desc": "SWE-bench Verified榜单第62名，68.1%通过率。数据源: datalearner.com"
+      "id": 54,
+      "desc": "SWE-bench Verified榜单第54名，68.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM-4.6",
@@ -816,21 +712,8 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 63,
-      "desc": "SWE-bench Verified榜单第63名，68%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "GLM-4.6",
-      "vendor": "智谱AI",
-      "score": 68,
-      "passRate": "68%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/zhipuai.cn.png",
-      "id": 64,
-      "desc": "SWE-bench Verified榜单第64名，68%通过率。数据源: datalearner.com"
+      "id": 55,
+      "desc": "SWE-bench Verified榜单第55名，68%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek V3.2-Exp",
@@ -842,8 +725,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 65,
-      "desc": "SWE-bench Verified榜单第65名，67.8%通过率。数据源: datalearner.com"
+      "id": 56,
+      "desc": "SWE-bench Verified榜单第56名，67.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 2.5-Pro",
@@ -855,8 +738,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 66,
-      "desc": "SWE-bench Verified榜单第66名，67.2%通过率。数据源: datalearner.com"
+      "id": 57,
+      "desc": "SWE-bench Verified榜单第57名，67.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3-Coder-480B-A35B",
@@ -868,8 +751,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 67,
-      "desc": "SWE-bench Verified榜单第67名，67%通过率。数据源: datalearner.com"
+      "id": 58,
+      "desc": "SWE-bench Verified榜单第58名，67%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-V3.1",
@@ -881,8 +764,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 68,
-      "desc": "SWE-bench Verified榜单第68名，66%通过率。数据源: datalearner.com"
+      "id": 59,
+      "desc": "SWE-bench Verified榜单第59名，66%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM-4.5",
@@ -894,8 +777,8 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 69,
-      "desc": "SWE-bench Verified榜单第69名，64.2%通过率。数据源: datalearner.com"
+      "id": 60,
+      "desc": "SWE-bench Verified榜单第60名，64.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 2.5 Pro Experimental 03-25",
@@ -907,8 +790,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 70,
-      "desc": "SWE-bench Verified榜单第70名，63.8%通过率。数据源: datalearner.com"
+      "id": 61,
+      "desc": "SWE-bench Verified榜单第61名，63.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini-2.5-Pro-Preview-05-06",
@@ -920,21 +803,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 71,
-      "desc": "SWE-bench Verified榜单第71名，63.2%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Claude Sonnet 3.7",
-      "vendor": "Anthropic",
-      "score": 62.3,
-      "passRate": "62.3%",
-      "colors": [
-        "#D97706",
-        "#F59E0B"
-      ],
-      "icon": "./icons/anthropic.com.png",
-      "id": 72,
-      "desc": "SWE-bench Verified榜单第72名，62.3%通过率。数据源: datalearner.com"
+      "id": 62,
+      "desc": "SWE-bench Verified榜单第62名，63.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Devstral Medium",
@@ -946,21 +816,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/mistral.ai.png",
-      "id": 73,
-      "desc": "SWE-bench Verified榜单第73名，61.6%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Haiku 4.5",
-      "vendor": "Anthropic",
-      "score": 60.6,
-      "passRate": "60.6%",
-      "colors": [
-        "#D97706",
-        "#F59E0B"
-      ],
-      "icon": "./icons/anthropic.com.png",
-      "id": 74,
-      "desc": "SWE-bench Verified榜单第74名，60.6%通过率。数据源: datalearner.com"
+      "id": 63,
+      "desc": "SWE-bench Verified榜单第63名，61.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT OSS 120B",
@@ -972,8 +829,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 75,
-      "desc": "SWE-bench Verified榜单第75名，60.1%通过率。数据源: datalearner.com"
+      "id": 64,
+      "desc": "SWE-bench Verified榜单第64名，60.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM-4.7-Flash",
@@ -985,8 +842,8 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 76,
-      "desc": "SWE-bench Verified榜单第76名，59.2%通过率。数据源: datalearner.com"
+      "id": 65,
+      "desc": "SWE-bench Verified榜单第65名，59.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Grok 4",
@@ -998,21 +855,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/x.ai.png",
-      "id": 77,
-      "desc": "SWE-bench Verified榜单第77名，58.6%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-R1-0528",
-      "vendor": "DeepSeek-AI",
-      "score": 57.6,
-      "passRate": "57.6%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 78,
-      "desc": "SWE-bench Verified榜单第78名，57.6%通过率。数据源: datalearner.com"
+      "id": 66,
+      "desc": "SWE-bench Verified榜单第66名，58.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM-4.5-Air",
@@ -1024,8 +868,21 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 79,
-      "desc": "SWE-bench Verified榜单第79名，57.6%通过率。数据源: datalearner.com"
+      "id": 67,
+      "desc": "SWE-bench Verified榜单第67名，57.6%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "DeepSeek-R1-0528",
+      "vendor": "DeepSeek-AI",
+      "score": 57.6,
+      "passRate": "57.6%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "icon": "./icons/github_deepseek-ai.png",
+      "id": 68,
+      "desc": "SWE-bench Verified榜单第68名，57.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "MiniMax-M1-80k",
@@ -1037,8 +894,8 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "id": 80,
-      "desc": "SWE-bench Verified榜单第80名，56%通过率。数据源: datalearner.com"
+      "id": 69,
+      "desc": "SWE-bench Verified榜单第69名，56%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "MiniMax-M1-40k",
@@ -1050,8 +907,8 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "id": 81,
-      "desc": "SWE-bench Verified榜单第81名，55.6%通过率。数据源: datalearner.com"
+      "id": 70,
+      "desc": "SWE-bench Verified榜单第70名，55.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-4.1",
@@ -1063,8 +920,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 82,
-      "desc": "SWE-bench Verified榜单第82名，54.6%通过率。数据源: datalearner.com"
+      "id": 71,
+      "desc": "SWE-bench Verified榜单第71名，54.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Grok 4.1",
@@ -1076,8 +933,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/x.ai.png",
-      "id": 83,
-      "desc": "SWE-bench Verified榜单第83名，54.6%通过率。数据源: datalearner.com"
+      "id": 72,
+      "desc": "SWE-bench Verified榜单第72名，54.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 2.5 Flash-Preview-09-2025",
@@ -1089,8 +946,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 84,
-      "desc": "SWE-bench Verified榜单第84名，54%通过率。数据源: datalearner.com"
+      "id": 73,
+      "desc": "SWE-bench Verified榜单第73名，54%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Devstral Small 1.1",
@@ -1102,8 +959,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/mistral.ai.png",
-      "id": 85,
-      "desc": "SWE-bench Verified榜单第85名，53.6%通过率。数据源: datalearner.com"
+      "id": 74,
+      "desc": "SWE-bench Verified榜单第74名，53.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi K2",
@@ -1115,8 +972,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 86,
-      "desc": "SWE-bench Verified榜单第86名，51.8%通过率。数据源: datalearner.com"
+      "id": 75,
+      "desc": "SWE-bench Verified榜单第75名，51.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3-Coder-Flash",
@@ -1128,8 +985,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 87,
-      "desc": "SWE-bench Verified榜单第87名，51.6%通过率。数据源: datalearner.com"
+      "id": 76,
+      "desc": "SWE-bench Verified榜单第76名，51.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 2.5 Flash",
@@ -1141,8 +998,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 88,
-      "desc": "SWE-bench Verified榜单第88名，50%通过率。数据源: datalearner.com"
+      "id": 77,
+      "desc": "SWE-bench Verified榜单第77名，50%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "OpenAI o3-mini (high)",
@@ -1154,8 +1011,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 89,
-      "desc": "SWE-bench Verified榜单第89名，49.3%通过率。数据源: datalearner.com"
+      "id": 78,
+      "desc": "SWE-bench Verified榜单第78名，49.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-R1",
@@ -1167,8 +1024,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 90,
-      "desc": "SWE-bench Verified榜单第90名，49.2%通过率。数据源: datalearner.com"
+      "id": 79,
+      "desc": "SWE-bench Verified榜单第79名，49.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude 3.5 Sonnet New",
@@ -1180,21 +1037,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 91,
-      "desc": "SWE-bench Verified榜单第91名，49%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Gemini 2.5 Flash",
-      "vendor": "Google Deep Mind",
-      "score": 48.9,
-      "passRate": "48.9%",
-      "colors": [
-        "#3B82F6",
-        "#60A5FA"
-      ],
-      "icon": "./icons/google.com.png",
-      "id": 92,
-      "desc": "SWE-bench Verified榜单第92名，48.9%通过率。数据源: datalearner.com"
+      "id": 80,
+      "desc": "SWE-bench Verified榜单第80名，49%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "OpenAI o1",
@@ -1206,8 +1050,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 93,
-      "desc": "SWE-bench Verified榜单第93名，48.9%通过率。数据源: datalearner.com"
+      "id": 81,
+      "desc": "SWE-bench Verified榜单第81名，48.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Devstral Small 1.0",
@@ -1219,21 +1063,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/mistral.ai.png",
-      "id": 94,
-      "desc": "SWE-bench Verified榜单第94名，46.8%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "OpenAI o1",
-      "vendor": "OpenAI",
-      "score": 41,
-      "passRate": "41%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/openai.com.png",
-      "id": 95,
-      "desc": "SWE-bench Verified榜单第95名，41%通过率。数据源: datalearner.com"
+      "id": 82,
+      "desc": "SWE-bench Verified榜单第82名，46.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "OpenAI o3-mini",
@@ -1245,8 +1076,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 96,
-      "desc": "SWE-bench Verified榜单第96名，40.8%通过率。数据源: datalearner.com"
+      "id": 83,
+      "desc": "SWE-bench Verified榜单第83名，40.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-V3-0324",
@@ -1258,8 +1089,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 97,
-      "desc": "SWE-bench Verified榜单第97名，38.8%通过率。数据源: datalearner.com"
+      "id": 84,
+      "desc": "SWE-bench Verified榜单第84名，38.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-4.5",
@@ -1271,8 +1102,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 98,
-      "desc": "SWE-bench Verified榜单第98名，38%通过率。数据源: datalearner.com"
+      "id": 85,
+      "desc": "SWE-bench Verified榜单第85名，38%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3-235B-A22B",
@@ -1284,8 +1115,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 99,
-      "desc": "SWE-bench Verified榜单第99名，34.4%通过率。数据源: datalearner.com"
+      "id": 86,
+      "desc": "SWE-bench Verified榜单第86名，34.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT OSS 20B",
@@ -1297,8 +1128,86 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 100,
-      "desc": "SWE-bench Verified榜单第100名，34%通过率。数据源: datalearner.com"
+      "id": 87,
+      "desc": "SWE-bench Verified榜单第87名，34%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "GPT-4o",
+      "vendor": "OpenAI",
+      "score": 31,
+      "passRate": "31%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "icon": "./icons/openai.com.png",
+      "id": 88,
+      "desc": "SWE-bench Verified榜单第88名，31%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "GPT-4o(2024-11-20)",
+      "vendor": "OpenAI",
+      "score": 31,
+      "passRate": "31%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "icon": "./icons/openai.com.png",
+      "id": 89,
+      "desc": "SWE-bench Verified榜单第89名，31%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Gemini 2.5 Flash-Lite",
+      "vendor": "Google Deep Mind",
+      "score": 27.6,
+      "passRate": "27.6%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "id": 90,
+      "desc": "SWE-bench Verified榜单第90名，27.6%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "GPT-4.1 mini",
+      "vendor": "OpenAI",
+      "score": 23.6,
+      "passRate": "23.6%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "icon": "./icons/openai.com.png",
+      "id": 91,
+      "desc": "SWE-bench Verified榜单第91名，23.6%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Qwen3-30B-A3B-2507",
+      "vendor": "阿里巴巴",
+      "score": 22,
+      "passRate": "22%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "icon": "./icons/github_QwenLM.png",
+      "id": 92,
+      "desc": "SWE-bench Verified榜单第92名，22%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Gemini 2.0 Flash Experimental",
+      "vendor": "DeepMind",
+      "score": 21.4,
+      "passRate": "21.4%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "id": 93,
+      "desc": "SWE-bench Verified榜单第93名，21.4%通过率。数据源: datalearner.com (2026-06)"
     }
   ],
   "livecode": [
@@ -1313,7 +1222,7 @@
       ],
       "icon": "./icons/github_deepseek-ai.png",
       "id": 1,
-      "desc": "LiveCodeBench榜单第1名，93.5%通过率。数据源: datalearner.com"
+      "desc": "LiveCodeBench榜单第1名，93.5%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 3.0 Pro (Preview 11-2025)",
@@ -1326,7 +1235,7 @@
       ],
       "icon": "./icons/google.com.png",
       "id": 2,
-      "desc": "LiveCodeBench榜单第2名，92%通过率。数据源: datalearner.com"
+      "desc": "LiveCodeBench榜单第2名，92%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 3.1 Pro Preview",
@@ -1339,20 +1248,7 @@
       ],
       "icon": "./icons/google.com.png",
       "id": 3,
-      "desc": "LiveCodeBench榜单第3名，91.7%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Qwen3.7-Max-Preview",
-      "vendor": "阿里巴巴",
-      "score": 91.6,
-      "passRate": "91.6%",
-      "colors": [
-        "#EC4899",
-        "#F472B6"
-      ],
-      "icon": "./icons/github_QwenLM.png",
-      "id": 4,
-      "desc": "LiveCodeBench榜单第4名，91.6%通过率。数据源: datalearner.com"
+      "desc": "LiveCodeBench榜单第3名，91.7%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-V4-Flash",
@@ -1364,21 +1260,21 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 5,
-      "desc": "LiveCodeBench榜单第5名，91.6%通过率。数据源: datalearner.com"
+      "id": 4,
+      "desc": "LiveCodeBench榜单第4名，91.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
-      "name": "DeepSeek-V4-Pro",
-      "vendor": "DeepSeek-AI",
-      "score": 89.8,
-      "passRate": "89.8%",
+      "name": "Qwen3.7-Max-Preview",
+      "vendor": "阿里巴巴",
+      "score": 91.6,
+      "passRate": "91.6%",
       "colors": [
-        "#6366F1",
-        "#818CF8"
+        "#EC4899",
+        "#F472B6"
       ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 6,
-      "desc": "LiveCodeBench榜单第6名，89.8%通过率。数据源: datalearner.com"
+      "icon": "./icons/github_QwenLM.png",
+      "id": 5,
+      "desc": "LiveCodeBench榜单第5名，91.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi K2.6",
@@ -1390,21 +1286,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 7,
-      "desc": "LiveCodeBench榜单第7名，89.6%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Flash",
-      "vendor": "DeepSeek-AI",
-      "score": 88.4,
-      "passRate": "88.4%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 8,
-      "desc": "LiveCodeBench榜单第8名，88.4%通过率。数据源: datalearner.com"
+      "id": 6,
+      "desc": "LiveCodeBench榜单第6名，89.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 2.5 Deep Think",
@@ -1416,8 +1299,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 9,
-      "desc": "LiveCodeBench榜单第9名，87.6%通过率。数据源: datalearner.com"
+      "id": 7,
+      "desc": "LiveCodeBench榜单第7名，87.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.6-Max-Preview",
@@ -1429,8 +1312,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 10,
-      "desc": "LiveCodeBench榜单第10名，87.1%通过率。数据源: datalearner.com"
+      "id": 8,
+      "desc": "LiveCodeBench榜单第8名，87.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen 3.6 Plus Preview",
@@ -1442,8 +1325,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 11,
-      "desc": "LiveCodeBench榜单第11名，87.1%通过率。数据源: datalearner.com"
+      "id": 9,
+      "desc": "LiveCodeBench榜单第9名，87.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Opus 4.5",
@@ -1455,8 +1338,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 12,
-      "desc": "LiveCodeBench榜单第12名，87%通过率。数据源: datalearner.com"
+      "id": 10,
+      "desc": "LiveCodeBench榜单第10名，87%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Step 3.5 Flash",
@@ -1468,11 +1351,11 @@
         "#34D399"
       ],
       "icon": "./icons/stepfun.com.png",
-      "id": 13,
-      "desc": "LiveCodeBench榜单第13名，86.4%通过率。数据源: datalearner.com"
+      "id": 11,
+      "desc": "LiveCodeBench榜单第11名，86.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
-      "name": "Qwen3-Max-",
+      "name": "Qwen3-Max-Thinking",
       "vendor": "阿里巴巴",
       "score": 85.9,
       "passRate": "85.9%",
@@ -1481,8 +1364,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 14,
-      "desc": "LiveCodeBench榜单第14名，85.9%通过率。数据源: datalearner.com"
+      "id": 12,
+      "desc": "LiveCodeBench榜单第12名，85.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5.1 Codex",
@@ -1494,8 +1377,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 15,
-      "desc": "LiveCodeBench榜单第15名，85.5%通过率。数据源: datalearner.com"
+      "id": 13,
+      "desc": "LiveCodeBench榜单第13名，85.5%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi K2.5",
@@ -1507,8 +1390,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 16,
-      "desc": "LiveCodeBench榜单第16名，85%通过率。数据源: datalearner.com"
+      "id": 14,
+      "desc": "LiveCodeBench榜单第14名，85%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM-4.7",
@@ -1520,8 +1403,8 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 17,
-      "desc": "LiveCodeBench榜单第17名，84.9%通过率。数据源: datalearner.com"
+      "id": 15,
+      "desc": "LiveCodeBench榜单第15名，84.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM-4.6",
@@ -1533,8 +1416,8 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 18,
-      "desc": "LiveCodeBench榜单第18名，84.5%通过率。数据源: datalearner.com"
+      "id": 16,
+      "desc": "LiveCodeBench榜单第16名，84.5%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.6-27B",
@@ -1546,8 +1429,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 19,
-      "desc": "LiveCodeBench榜单第19名，83.9%通过率。数据源: datalearner.com"
+      "id": 17,
+      "desc": "LiveCodeBench榜单第17名，83.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.5-397B-A17B",
@@ -1559,8 +1442,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 20,
-      "desc": "LiveCodeBench榜单第20名，83.6%通过率。数据源: datalearner.com"
+      "id": 18,
+      "desc": "LiveCodeBench榜单第18名，83.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek V3.2",
@@ -1572,11 +1455,11 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 21,
-      "desc": "LiveCodeBench榜单第21名，83.3%通过率。数据源: datalearner.com"
+      "id": 19,
+      "desc": "LiveCodeBench榜单第19名，83.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
-      "name": "Kimi K2",
+      "name": "Kimi K2 Thinking",
       "vendor": "Moonshot AI",
       "score": 83.1,
       "passRate": "83.1%",
@@ -1585,8 +1468,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 22,
-      "desc": "LiveCodeBench榜单第22名，83.1%通过率。数据源: datalearner.com"
+      "id": 20,
+      "desc": "LiveCodeBench榜单第20名，83.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "MiniMax M2",
@@ -1598,21 +1481,8 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "id": 23,
-      "desc": "LiveCodeBench榜单第23名，83%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "GLM-4.6",
-      "vendor": "智谱AI",
-      "score": 82.8,
-      "passRate": "82.8%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/zhipuai.cn.png",
-      "id": 24,
-      "desc": "LiveCodeBench榜单第24名，82.8%通过率。数据源: datalearner.com"
+      "id": 21,
+      "desc": "LiveCodeBench榜单第21名，83%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Grok 4",
@@ -1624,8 +1494,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/x.ai.png",
-      "id": 25,
-      "desc": "LiveCodeBench榜单第25名，82%通过率。数据源: datalearner.com"
+      "id": 22,
+      "desc": "LiveCodeBench榜单第22名，82%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Grok 4.1 Fast",
@@ -1637,8 +1507,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/x.ai.png",
-      "id": 26,
-      "desc": "LiveCodeBench榜单第26名，82%通过率。数据源: datalearner.com"
+      "id": 23,
+      "desc": "LiveCodeBench榜单第23名，82%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.5-27B",
@@ -1650,8 +1520,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 27,
-      "desc": "LiveCodeBench榜单第27名，80.7%通过率。数据源: datalearner.com"
+      "id": 24,
+      "desc": "LiveCodeBench榜单第24名，80.7%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.6-35B-A3B",
@@ -1663,8 +1533,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 28,
-      "desc": "LiveCodeBench榜单第28名，80.4%通过率。数据源: datalearner.com"
+      "id": 25,
+      "desc": "LiveCodeBench榜单第25名，80.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 2.5 Pro Deep Think",
@@ -1676,8 +1546,21 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 29,
-      "desc": "LiveCodeBench榜单第29名，80.4%通过率。数据源: datalearner.com"
+      "id": 26,
+      "desc": "LiveCodeBench榜单第26名，80.4%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "DeepSeek-V3.1 Terminus",
+      "vendor": "DeepSeek-AI",
+      "score": 80,
+      "passRate": "80%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "icon": "./icons/github_deepseek-ai.png",
+      "id": 27,
+      "desc": "LiveCodeBench榜单第27名，80%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemma 4 31B",
@@ -1689,21 +1572,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 30,
-      "desc": "LiveCodeBench榜单第30名，80%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V3.1 Terminus",
-      "vendor": "DeepSeek-AI",
-      "score": 80,
-      "passRate": "80%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 31,
-      "desc": "LiveCodeBench榜单第31名，80%通过率。数据源: datalearner.com"
+      "id": 28,
+      "desc": "LiveCodeBench榜单第28名，80%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Grok 4 Fast",
@@ -1715,8 +1585,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/x.ai.png",
-      "id": 32,
-      "desc": "LiveCodeBench榜单第32名，80%通过率。数据源: datalearner.com"
+      "id": 29,
+      "desc": "LiveCodeBench榜单第29名，80%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Grok-3 - Reasoning Beta",
@@ -1728,8 +1598,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/x.ai.png",
-      "id": 33,
-      "desc": "LiveCodeBench榜单第33名，79.4%通过率。数据源: datalearner.com"
+      "id": 30,
+      "desc": "LiveCodeBench榜单第30名，79.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini-2.5-Pro-Preview-05-06",
@@ -1741,8 +1611,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 34,
-      "desc": "LiveCodeBench榜单第34名，77.1%通过率。数据源: datalearner.com"
+      "id": 31,
+      "desc": "LiveCodeBench榜单第31名，77.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemma 4 26B A4B",
@@ -1754,8 +1624,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 35,
-      "desc": "LiveCodeBench榜单第35名，77.1%通过率。数据源: datalearner.com"
+      "id": 32,
+      "desc": "LiveCodeBench榜单第32名，77.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 2.5-Pro",
@@ -1767,8 +1637,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 36,
-      "desc": "LiveCodeBench榜单第36名，77.1%通过率。数据源: datalearner.com"
+      "id": 33,
+      "desc": "LiveCodeBench榜单第33名，77.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Opus 4.6",
@@ -1780,8 +1650,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 37,
-      "desc": "LiveCodeBench榜单第37名，76%通过率。数据源: datalearner.com"
+      "id": 34,
+      "desc": "LiveCodeBench榜单第34名，76%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "OpenAI o3",
@@ -1793,21 +1663,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 38,
-      "desc": "LiveCodeBench榜单第38名，75.8%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V3.1 Terminus",
-      "vendor": "DeepSeek-AI",
-      "score": 74.9,
-      "passRate": "74.9%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 39,
-      "desc": "LiveCodeBench榜单第39名，74.9%通过率。数据源: datalearner.com"
+      "id": 35,
+      "desc": "LiveCodeBench榜单第35名，75.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-V3.1",
@@ -1819,8 +1676,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 40,
-      "desc": "LiveCodeBench榜单第40名，74.8%通过率。数据源: datalearner.com"
+      "id": 36,
+      "desc": "LiveCodeBench榜单第36名，74.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek V3.2-Exp",
@@ -1832,11 +1689,11 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 41,
-      "desc": "LiveCodeBench榜单第41名，74.1%通过率。数据源: datalearner.com"
+      "id": 37,
+      "desc": "LiveCodeBench榜单第37名，74.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
-      "name": "Qwen3-235B-A22B-",
+      "name": "Qwen3-235B-A22B-Thinking",
       "vendor": "阿里巴巴",
       "score": 74.1,
       "passRate": "74.1%",
@@ -1845,11 +1702,11 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 42,
-      "desc": "LiveCodeBench榜单第42名，74.1%通过率。数据源: datalearner.com"
+      "id": 38,
+      "desc": "LiveCodeBench榜单第38名，74.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
-      "name": "Qwen3-235B-A22B--2507",
+      "name": "Qwen3-235B-A22B-Thinking-2507",
       "vendor": "阿里巴巴",
       "score": 74.1,
       "passRate": "74.1%",
@@ -1858,8 +1715,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 43,
-      "desc": "LiveCodeBench榜单第43名，74.1%通过率。数据源: datalearner.com"
+      "id": 39,
+      "desc": "LiveCodeBench榜单第39名，74.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi-k1.6-IOI-high",
@@ -1871,8 +1728,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 44,
-      "desc": "LiveCodeBench榜单第44名，73.8%通过率。数据源: datalearner.com"
+      "id": 40,
+      "desc": "LiveCodeBench榜单第40名，73.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-R1-0528",
@@ -1884,8 +1741,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 45,
-      "desc": "LiveCodeBench榜单第45名，73.3%通过率。数据源: datalearner.com"
+      "id": 41,
+      "desc": "LiveCodeBench榜单第41名，73.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM-4.5",
@@ -1897,8 +1754,8 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 46,
-      "desc": "LiveCodeBench榜单第46名，72.9%通过率。数据源: datalearner.com"
+      "id": 42,
+      "desc": "LiveCodeBench榜单第42名，72.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "OpenAI o1",
@@ -1910,8 +1767,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 47,
-      "desc": "LiveCodeBench榜单第47名，71%通过率。数据源: datalearner.com"
+      "id": 43,
+      "desc": "LiveCodeBench榜单第43名，71%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Sonnet 4.5",
@@ -1923,8 +1780,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 48,
-      "desc": "LiveCodeBench榜单第48名，71%通过率。数据源: datalearner.com"
+      "id": 44,
+      "desc": "LiveCodeBench榜单第44名，71%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM-4.5-Air",
@@ -1936,8 +1793,8 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 49,
-      "desc": "LiveCodeBench榜单第49名，70.7%通过率。数据源: datalearner.com"
+      "id": 45,
+      "desc": "LiveCodeBench榜单第45名，70.7%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3-235B-A22B",
@@ -1949,21 +1806,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 50,
-      "desc": "LiveCodeBench榜单第50名，70.7%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Qwen3-235B-A22B",
-      "vendor": "阿里巴巴",
-      "score": 70.7,
-      "passRate": "70.7%",
-      "colors": [
-        "#EC4899",
-        "#F472B6"
-      ],
-      "icon": "./icons/github_QwenLM.png",
-      "id": 51,
-      "desc": "LiveCodeBench榜单第51名，70.7%通过率。数据源: datalearner.com"
+      "id": 46,
+      "desc": "LiveCodeBench榜单第46名，70.7%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Grok 3",
@@ -1975,8 +1819,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/x.ai.png",
-      "id": 52,
-      "desc": "LiveCodeBench榜单第52名，70.6%通过率。数据源: datalearner.com"
+      "id": 47,
+      "desc": "LiveCodeBench榜单第47名，70.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 2.5 Pro Experimental 03-25",
@@ -1988,8 +1832,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 53,
-      "desc": "LiveCodeBench榜单第53名，70.4%通过率。数据源: datalearner.com"
+      "id": 48,
+      "desc": "LiveCodeBench榜单第48名，70.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "OpenAI o3-mini (high)",
@@ -2001,8 +1845,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 54,
-      "desc": "LiveCodeBench榜单第54名，69.5%通过率。数据源: datalearner.com"
+      "id": 49,
+      "desc": "LiveCodeBench榜单第49名，69.5%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "OpenAI o3-mini (medium)",
@@ -2014,8 +1858,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 55,
-      "desc": "LiveCodeBench榜单第55名，67.4%通过率。数据源: datalearner.com"
+      "id": 50,
+      "desc": "LiveCodeBench榜单第50名，67.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Step3",
@@ -2027,8 +1871,8 @@
         "#34D399"
       ],
       "icon": "./icons/stepfun.com.png",
-      "id": 56,
-      "desc": "LiveCodeBench榜单第56名，67.1%通过率。数据源: datalearner.com"
+      "id": 51,
+      "desc": "LiveCodeBench榜单第51名，67.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Pangu Embedded",
@@ -2040,8 +1884,8 @@
         "#EF4444"
       ],
       "icon": "./icons/huawei.com.png",
-      "id": 57,
-      "desc": "LiveCodeBench榜单第57名，67.1%通过率。数据源: datalearner.com"
+      "id": 52,
+      "desc": "LiveCodeBench榜单第52名，67.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Sonnet 4",
@@ -2053,8 +1897,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 58,
-      "desc": "LiveCodeBench榜单第58名，66%通过率。数据源: datalearner.com"
+      "id": 53,
+      "desc": "LiveCodeBench榜单第53名，66%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-R1",
@@ -2066,8 +1910,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 59,
-      "desc": "LiveCodeBench榜单第59名，65.9%通过率。数据源: datalearner.com"
+      "id": 54,
+      "desc": "LiveCodeBench榜单第54名，65.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi-k1.6-IOI",
@@ -2079,8 +1923,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 60,
-      "desc": "LiveCodeBench榜单第60名，65.9%通过率。数据源: datalearner.com"
+      "id": 55,
+      "desc": "LiveCodeBench榜单第55名，65.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3-32B",
@@ -2092,8 +1936,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 61,
-      "desc": "LiveCodeBench榜单第61名，65.7%通过率。数据源: datalearner.com"
+      "id": 56,
+      "desc": "LiveCodeBench榜单第56名，65.7%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "QwQ-Max-Preview",
@@ -2105,8 +1949,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 62,
-      "desc": "LiveCodeBench榜单第62名，65.6%通过率。数据源: datalearner.com"
+      "id": 57,
+      "desc": "LiveCodeBench榜单第57名，65.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "MiniMax-M1-80k",
@@ -2118,8 +1962,8 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "id": 63,
-      "desc": "LiveCodeBench榜单第63名，65%通过率。数据源: datalearner.com"
+      "id": 58,
+      "desc": "LiveCodeBench榜单第58名，65%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Hunyuan-T1",
@@ -2131,8 +1975,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/tencent.com.png",
-      "id": 64,
-      "desc": "LiveCodeBench榜单第64名，64.9%通过率。数据源: datalearner.com"
+      "id": 59,
+      "desc": "LiveCodeBench榜单第59名，64.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Hunyuan-A13B-Instruct",
@@ -2144,8 +1988,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/tencent.com.png",
-      "id": 65,
-      "desc": "LiveCodeBench榜单第65名，63.9%通过率。数据源: datalearner.com"
+      "id": 60,
+      "desc": "LiveCodeBench榜单第60名，63.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "MiniMax-M1-40k",
@@ -2157,8 +2001,8 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "id": 66,
-      "desc": "LiveCodeBench榜单第66名，62.3%通过率。数据源: datalearner.com"
+      "id": 61,
+      "desc": "LiveCodeBench榜单第61名，62.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Haiku 4.5",
@@ -2170,8 +2014,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 67,
-      "desc": "LiveCodeBench榜单第67名，62%通过率。数据源: datalearner.com"
+      "id": 62,
+      "desc": "LiveCodeBench榜单第62名，62%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3-8B",
@@ -2183,8 +2027,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 68,
-      "desc": "LiveCodeBench榜单第68名，61.8%通过率。数据源: datalearner.com"
+      "id": 63,
+      "desc": "LiveCodeBench榜单第63名，61.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Pangu Pro MoE",
@@ -2196,8 +2040,8 @@
         "#EF4444"
       ],
       "icon": "./icons/huawei.com.png",
-      "id": 69,
-      "desc": "LiveCodeBench榜单第69名，59.6%通过率。数据源: datalearner.com"
+      "id": 64,
+      "desc": "LiveCodeBench榜单第64名，59.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Magistral-Medium-2506",
@@ -2209,21 +2053,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/mistral.ai.png",
-      "id": 70,
-      "desc": "LiveCodeBench榜单第70名，59.36%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Claude Sonnet 4.5",
-      "vendor": "Anthropic",
-      "score": 59,
-      "passRate": "59%",
-      "colors": [
-        "#D97706",
-        "#F59E0B"
-      ],
-      "icon": "./icons/anthropic.com.png",
-      "id": 71,
-      "desc": "LiveCodeBench榜单第71名，59%通过率。数据源: datalearner.com"
+      "id": 65,
+      "desc": "LiveCodeBench榜单第65名，59.36%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3 Max (Preview)",
@@ -2235,21 +2066,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 72,
-      "desc": "LiveCodeBench榜单第72名，57.5%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Qwen3-8B",
-      "vendor": "阿里巴巴",
-      "score": 57.5,
-      "passRate": "57.5%",
-      "colors": [
-        "#EC4899",
-        "#F472B6"
-      ],
-      "icon": "./icons/github_QwenLM.png",
-      "id": 73,
-      "desc": "LiveCodeBench榜单第73名，57.5%通过率。数据源: datalearner.com"
+      "id": 66,
+      "desc": "LiveCodeBench榜单第66名，57.5%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Hunyuan-7B",
@@ -2261,21 +2079,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/tencent.com.png",
-      "id": 74,
-      "desc": "LiveCodeBench榜单第74名，57%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Pro",
-      "vendor": "DeepSeek-AI",
-      "score": 56.8,
-      "passRate": "56.8%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 75,
-      "desc": "LiveCodeBench榜单第75名，56.8%通过率。数据源: datalearner.com"
+      "id": 67,
+      "desc": "LiveCodeBench榜单第67名，57%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Opus 4",
@@ -2287,8 +2092,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 76,
-      "desc": "LiveCodeBench榜单第76名，56.6%通过率。数据源: datalearner.com"
+      "id": 68,
+      "desc": "LiveCodeBench榜单第68名，56.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3-Next",
@@ -2300,34 +2105,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 77,
-      "desc": "LiveCodeBench榜单第77名，56.6%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V3.1",
-      "vendor": "DeepSeek-AI",
-      "score": 56.4,
-      "passRate": "56.4%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 78,
-      "desc": "LiveCodeBench榜单第78名，56.4%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "GLM-4.6",
-      "vendor": "智谱AI",
-      "score": 56,
-      "passRate": "56%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/zhipuai.cn.png",
-      "id": 79,
-      "desc": "LiveCodeBench榜单第79名，56%通过率。数据源: datalearner.com"
+      "id": 69,
+      "desc": "LiveCodeBench榜单第69名，56.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Magistral-Small-2506",
@@ -2339,8 +2118,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/mistral.ai.png",
-      "id": 80,
-      "desc": "LiveCodeBench榜单第80名，55.84%通过率。数据源: datalearner.com"
+      "id": 70,
+      "desc": "LiveCodeBench榜单第70名，55.84%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 2.5 Flash",
@@ -2352,24 +2131,11 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 81,
-      "desc": "LiveCodeBench榜单第81名，55.4%通过率。数据源: datalearner.com"
+      "id": 71,
+      "desc": "LiveCodeBench榜单第71名，55.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
-      "name": "DeepSeek-V4-Flash",
-      "vendor": "DeepSeek-AI",
-      "score": 55.2,
-      "passRate": "55.2%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 82,
-      "desc": "LiveCodeBench榜单第82名，55.2%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Qwen3-4B--2507",
+      "name": "Qwen3-4B-Thinking-2507",
       "vendor": "阿里巴巴",
       "score": 55.2,
       "passRate": "55.2%",
@@ -2378,21 +2144,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 83,
-      "desc": "LiveCodeBench榜单第83名，55.2%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek V3.2-Exp",
-      "vendor": "DeepSeek-AI",
-      "score": 55,
-      "passRate": "55%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 84,
-      "desc": "LiveCodeBench榜单第84名，55%通过率。数据源: datalearner.com"
+      "id": 72,
+      "desc": "LiveCodeBench榜单第72名，55.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5-mini",
@@ -2404,8 +2157,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 85,
-      "desc": "LiveCodeBench榜单第85名，55%通过率。数据源: datalearner.com"
+      "id": 73,
+      "desc": "LiveCodeBench榜单第73名，55%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi K2",
@@ -2417,8 +2170,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 86,
-      "desc": "LiveCodeBench榜单第86名，53.7%通过率。数据源: datalearner.com"
+      "id": 74,
+      "desc": "LiveCodeBench榜单第74名，53.7%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "OpenAI o1-mini",
@@ -2430,8 +2183,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 87,
-      "desc": "LiveCodeBench榜单第87名，52%通过率。数据源: datalearner.com"
+      "id": 75,
+      "desc": "LiveCodeBench榜单第75名，52%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3-235B-A22B-2507",
@@ -2443,8 +2196,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 88,
-      "desc": "LiveCodeBench榜单第88名，51.8%通过率。数据源: datalearner.com"
+      "id": 76,
+      "desc": "LiveCodeBench榜单第76名，51.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM-4-9B-Chat",
@@ -2456,8 +2209,8 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 89,
-      "desc": "LiveCodeBench榜单第89名，51.8%通过率。数据源: datalearner.com"
+      "id": 77,
+      "desc": "LiveCodeBench榜单第77名，51.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen2.5-32B",
@@ -2469,21 +2222,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 90,
-      "desc": "LiveCodeBench榜单第90名，51.2%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Haiku 4.5",
-      "vendor": "Anthropic",
-      "score": 51,
-      "passRate": "51%",
-      "colors": [
-        "#D97706",
-        "#F59E0B"
-      ],
-      "icon": "./icons/anthropic.com.png",
-      "id": 91,
-      "desc": "LiveCodeBench榜单第91名，51%通过率。数据源: datalearner.com"
+      "id": 78,
+      "desc": "LiveCodeBench榜单第78名，51.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Llama 4 Behemoth Instruct",
@@ -2495,8 +2235,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/github_meta-llama.png",
-      "id": 92,
-      "desc": "LiveCodeBench榜单第92名，49.4%通过率。数据源: datalearner.com"
+      "id": 79,
+      "desc": "LiveCodeBench榜单第79名，49.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-V3-0324",
@@ -2508,21 +2248,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 93,
-      "desc": "LiveCodeBench榜单第93名，49.2%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Claude Sonnet 4",
-      "vendor": "Anthropic",
-      "score": 48.5,
-      "passRate": "48.5%",
-      "colors": [
-        "#D97706",
-        "#F59E0B"
-      ],
-      "icon": "./icons/anthropic.com.png",
-      "id": 94,
-      "desc": "LiveCodeBench榜单第94名，48.5%通过率。数据源: datalearner.com"
+      "id": 80,
+      "desc": "LiveCodeBench榜单第80名，49.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-4.5",
@@ -2534,8 +2261,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 95,
-      "desc": "LiveCodeBench榜单第95名，46.4%通过率。数据源: datalearner.com"
+      "id": 81,
+      "desc": "LiveCodeBench榜单第81名，46.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Llama 4 Maverick Instruct",
@@ -2547,8 +2274,8 @@
         "#A78BFA"
       ],
       "icon": "./icons/github_meta-llama.png",
-      "id": 96,
-      "desc": "LiveCodeBench榜单第96名，43.4%通过率。数据源: datalearner.com"
+      "id": 82,
+      "desc": "LiveCodeBench榜单第82名，43.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3-30B-A3B-2507",
@@ -2560,21 +2287,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 97,
-      "desc": "LiveCodeBench榜单第97名，43.2%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Gemini 2.5 Flash",
-      "vendor": "Google Deep Mind",
-      "score": 41.1,
-      "passRate": "41.1%",
-      "colors": [
-        "#3B82F6",
-        "#60A5FA"
-      ],
-      "icon": "./icons/google.com.png",
-      "id": 98,
-      "desc": "LiveCodeBench榜单第98名，41.1%通过率。数据源: datalearner.com"
+      "id": 83,
+      "desc": "LiveCodeBench榜单第83名，43.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-4.1",
@@ -2586,8 +2300,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 99,
-      "desc": "LiveCodeBench榜单第99名，40.5%通过率。数据源: datalearner.com"
+      "id": 84,
+      "desc": "LiveCodeBench榜单第84名，40.5%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "ERNIE-4.5-300B-A47B",
@@ -2599,11 +2313,271 @@
         "#818CF8"
       ],
       "icon": "./icons/baidu.com.png",
+      "id": 85,
+      "desc": "LiveCodeBench榜单第85名，38.8%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "ERNIE-4.5-VL-424B-A47B-Base",
+      "vendor": "百度",
+      "score": 38.8,
+      "passRate": "38.8%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "icon": "./icons/baidu.com.png",
+      "id": 86,
+      "desc": "LiveCodeBench榜单第86名，38.8%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Claude 3.5 Sonnet New",
+      "vendor": "Anthropic",
+      "score": 38.7,
+      "passRate": "38.7%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "icon": "./icons/anthropic.com.png",
+      "id": 87,
+      "desc": "LiveCodeBench榜单第87名，38.7%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Codestral 25.01",
+      "vendor": "MistralAI",
+      "score": 37.9,
+      "passRate": "37.9%",
+      "colors": [
+        "#8B5CF6",
+        "#A78BFA"
+      ],
+      "icon": "./icons/mistral.ai.png",
+      "id": 88,
+      "desc": "LiveCodeBench榜单第88名，37.9%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "GPT-4o(2025-03-27)",
+      "vendor": "OpenAI",
+      "score": 35.8,
+      "passRate": "35.8%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "icon": "./icons/openai.com.png",
+      "id": 89,
+      "desc": "LiveCodeBench榜单第89名，35.8%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "GPT-4o",
+      "vendor": "OpenAI",
+      "score": 35.1,
+      "passRate": "35.1%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "icon": "./icons/openai.com.png",
+      "id": 90,
+      "desc": "LiveCodeBench榜单第90名，35.1%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Qwen3-4B-2507",
+      "vendor": "阿里巴巴",
+      "score": 35.1,
+      "passRate": "35.1%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "icon": "./icons/github_QwenLM.png",
+      "id": 91,
+      "desc": "LiveCodeBench榜单第91名，35.1%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "DeepSeek-V3",
+      "vendor": "DeepSeek-AI",
+      "score": 34.6,
+      "passRate": "34.6%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "icon": "./icons/github_deepseek-ai.png",
+      "id": 92,
+      "desc": "LiveCodeBench榜单第92名，34.6%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Gemini 2.5 Flash-Lite",
+      "vendor": "Google Deep Mind",
+      "score": 34.3,
+      "passRate": "34.3%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "id": 93,
+      "desc": "LiveCodeBench榜单第93名，34.3%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Llama3.3-70B-Instruct",
+      "vendor": "Facebook AI研究实验室",
+      "score": 33.3,
+      "passRate": "33.3%",
+      "colors": [
+        "#8B5CF6",
+        "#A78BFA"
+      ],
+      "icon": "./icons/github_meta-llama.png",
+      "id": 94,
+      "desc": "LiveCodeBench榜单第94名，33.3%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Llama3.1-70B-Instruct",
+      "vendor": "Facebook AI研究实验室",
+      "score": 33.3,
+      "passRate": "33.3%",
+      "colors": [
+        "#8B5CF6",
+        "#A78BFA"
+      ],
+      "icon": "./icons/github_meta-llama.png",
+      "id": 95,
+      "desc": "LiveCodeBench榜单第95名，33.3%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Llama 4 Scout Instruct",
+      "vendor": "Facebook AI研究实验室",
+      "score": 32.8,
+      "passRate": "32.8%",
+      "colors": [
+        "#8B5CF6",
+        "#A78BFA"
+      ],
+      "icon": "./icons/github_meta-llama.png",
+      "id": 96,
+      "desc": "LiveCodeBench榜单第96名，32.8%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Hunyuan-TurboS",
+      "vendor": "腾讯AI实验室",
+      "score": 32,
+      "passRate": "32%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/tencent.com.png",
+      "id": 97,
+      "desc": "LiveCodeBench榜单第97名，32%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Codestral",
+      "vendor": "MistralAI",
+      "score": 31.5,
+      "passRate": "31.5%",
+      "colors": [
+        "#8B5CF6",
+        "#A78BFA"
+      ],
+      "icon": "./icons/mistral.ai.png",
+      "id": 98,
+      "desc": "LiveCodeBench榜单第98名，31.5%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Llama3.1-405B Instruct",
+      "vendor": "Facebook AI研究实验室",
+      "score": 30.2,
+      "passRate": "30.2%",
+      "colors": [
+        "#8B5CF6",
+        "#A78BFA"
+      ],
+      "icon": "./icons/github_meta-llama.png",
+      "id": 99,
+      "desc": "LiveCodeBench榜单第99名，30.2%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Gemma 3 - 27B (IT)",
+      "vendor": "Google Deep Mind",
+      "score": 29.7,
+      "passRate": "29.7%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
       "id": 100,
-      "desc": "LiveCodeBench榜单第100名，38.8%通过率。数据源: datalearner.com"
+      "desc": "LiveCodeBench榜单第100名，29.7%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Gemini 2.0 Flash Experimental",
+      "vendor": "DeepMind",
+      "score": 29.1,
+      "passRate": "29.1%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "id": 101,
+      "desc": "LiveCodeBench榜单第101名，29.1%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Qwen3-30B-A3B",
+      "vendor": "阿里巴巴",
+      "score": 29,
+      "passRate": "29%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "icon": "./icons/github_QwenLM.png",
+      "id": 102,
+      "desc": "LiveCodeBench榜单第102名，29%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Gemini 2.0 Flash-Lite",
+      "vendor": "DeepMind",
+      "score": 28.9,
+      "passRate": "28.9%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "id": 103,
+      "desc": "LiveCodeBench榜单第103名，28.9%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "Gemma 3 - 12B (IT)",
+      "vendor": "Google Deep Mind",
+      "score": 24.6,
+      "passRate": "24.6%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "id": 104,
+      "desc": "LiveCodeBench榜单第104名，24.6%通过率。数据源: datalearner.com (2026-06)"
     }
   ],
   "swe-pro": [
+    {
+      "name": "Claude Fable 5",
+      "vendor": "Anthropic",
+      "score": 80.3,
+      "passRate": "80.3%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "icon": "./icons/anthropic.com.png",
+      "id": 1,
+      "desc": "SWE-Bench Pro榜单第1名，80.3%通过率。数据源: datalearner.com (2026-06)"
+    },
     {
       "name": "Claude Mythos Preview",
       "vendor": "Anthropic",
@@ -2614,8 +2588,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 1,
-      "desc": "SWE-Bench Pro榜单第1名，77.8%通过率。数据源: datalearner.com"
+      "id": 2,
+      "desc": "SWE-Bench Pro榜单第2名，77.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Opus 4.8",
@@ -2627,8 +2601,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 2,
-      "desc": "SWE-Bench Pro榜单第2名，69.2%通过率。数据源: datalearner.com"
+      "id": 3,
+      "desc": "SWE-Bench Pro榜单第3名，69.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Opus 4.7",
@@ -2640,8 +2614,21 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 3,
-      "desc": "SWE-Bench Pro榜单第3名，64.3%通过率。数据源: datalearner.com"
+      "id": 4,
+      "desc": "SWE-Bench Pro榜单第4名，64.3%通过率。数据源: datalearner.com (2026-06)"
+    },
+    {
+      "name": "GLM-5.2",
+      "vendor": "智谱AI",
+      "score": 62.1,
+      "passRate": "62.1%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "icon": "./icons/zhipuai.cn.png",
+      "id": 5,
+      "desc": "SWE-Bench Pro榜单第5名，62.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.7-Max-Preview",
@@ -2653,11 +2640,11 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 4,
-      "desc": "SWE-Bench Pro榜单第4名，60.6%通过率。数据源: datalearner.com"
+      "id": 6,
+      "desc": "SWE-Bench Pro榜单第6名，60.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
-      "name": "Minimax M3",
+      "name": "MiniMax M3",
       "vendor": "MiniMaxAI",
       "score": 59,
       "passRate": "59%",
@@ -2666,8 +2653,8 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "id": 5,
-      "desc": "SWE-Bench Pro榜单第5名，59%通过率。数据源: datalearner.com"
+      "id": 7,
+      "desc": "SWE-Bench Pro榜单第7名，59%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi K2.6",
@@ -2679,8 +2666,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 6,
-      "desc": "SWE-Bench Pro榜单第6名，58.6%通过率。数据源: datalearner.com"
+      "id": 8,
+      "desc": "SWE-Bench Pro榜单第8名，58.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5.5",
@@ -2692,8 +2679,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 7,
-      "desc": "SWE-Bench Pro榜单第7名，58.6%通过率。数据源: datalearner.com"
+      "id": 9,
+      "desc": "SWE-Bench Pro榜单第9名，58.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM 5.1",
@@ -2705,8 +2692,8 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 8,
-      "desc": "SWE-Bench Pro榜单第8名，58.4%通过率。数据源: datalearner.com"
+      "id": 10,
+      "desc": "SWE-Bench Pro榜单第10名，58.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5.4",
@@ -2718,8 +2705,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 9,
-      "desc": "SWE-Bench Pro榜单第9名，57.7%通过率。数据源: datalearner.com"
+      "id": 11,
+      "desc": "SWE-Bench Pro榜单第11名，57.7%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.6-Max-Preview",
@@ -2731,8 +2718,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 10,
-      "desc": "SWE-Bench Pro榜单第10名，57.3%通过率。数据源: datalearner.com"
+      "id": 12,
+      "desc": "SWE-Bench Pro榜单第12名，57.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5.3 Codex",
@@ -2744,34 +2731,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 11,
-      "desc": "SWE-Bench Pro榜单第11名，56.8%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Qwen3.6-Max-Preview",
-      "vendor": "阿里巴巴",
-      "score": 56.6,
-      "passRate": "56.6%",
-      "colors": [
-        "#EC4899",
-        "#F472B6"
-      ],
-      "icon": "./icons/github_QwenLM.png",
-      "id": 12,
-      "desc": "SWE-Bench Pro榜单第12名，56.6%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "Qwen 3.6 Plus Preview",
-      "vendor": "阿里巴巴",
-      "score": 56.6,
-      "passRate": "56.6%",
-      "colors": [
-        "#EC4899",
-        "#F472B6"
-      ],
-      "icon": "./icons/github_QwenLM.png",
       "id": 13,
-      "desc": "SWE-Bench Pro榜单第13名，56.6%通过率。数据源: datalearner.com"
+      "desc": "SWE-Bench Pro榜单第13名，56.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen 3.6 Plus Preview",
@@ -2784,7 +2745,7 @@
       ],
       "icon": "./icons/github_QwenLM.png",
       "id": 14,
-      "desc": "SWE-Bench Pro榜单第14名，56.6%通过率。数据源: datalearner.com"
+      "desc": "SWE-Bench Pro榜单第14名，56.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "MiniMax-M2.7",
@@ -2797,7 +2758,7 @@
       ],
       "icon": "./icons/minimaxi.com.png",
       "id": 15,
-      "desc": "SWE-Bench Pro榜单第15名，56.2%通过率。数据源: datalearner.com"
+      "desc": "SWE-Bench Pro榜单第15名，56.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5.2",
@@ -2810,7 +2771,7 @@
       ],
       "icon": "./icons/openai.com.png",
       "id": 16,
-      "desc": "SWE-Bench Pro榜单第16名，55.6%通过率。数据源: datalearner.com"
+      "desc": "SWE-Bench Pro榜单第16名，55.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-V4-Pro",
@@ -2823,7 +2784,7 @@
       ],
       "icon": "./icons/github_deepseek-ai.png",
       "id": 17,
-      "desc": "SWE-Bench Pro榜单第17名，55.4%通过率。数据源: datalearner.com"
+      "desc": "SWE-Bench Pro榜单第17名，55.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "MiniMax M2.5",
@@ -2836,7 +2797,7 @@
       ],
       "icon": "./icons/minimaxi.com.png",
       "id": 18,
-      "desc": "SWE-Bench Pro榜单第18名，55.4%通过率。数据源: datalearner.com"
+      "desc": "SWE-Bench Pro榜单第18名，55.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 3.5 Flash",
@@ -2849,20 +2810,7 @@
       ],
       "icon": "./icons/google.com.png",
       "id": 19,
-      "desc": "SWE-Bench Pro榜单第19名，55.1%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Pro",
-      "vendor": "DeepSeek-AI",
-      "score": 54.4,
-      "passRate": "54.4%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 20,
-      "desc": "SWE-Bench Pro榜单第20名，54.4%通过率。数据源: datalearner.com"
+      "desc": "SWE-Bench Pro榜单第19名，55.1%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5.4 mini",
@@ -2874,8 +2822,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 21,
-      "desc": "SWE-Bench Pro榜单第21名，54.4%通过率。数据源: datalearner.com"
+      "id": 20,
+      "desc": "SWE-Bench Pro榜单第20名，54.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 3.1 Pro Preview",
@@ -2887,8 +2835,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 22,
-      "desc": "SWE-Bench Pro榜单第22名，54.2%通过率。数据源: datalearner.com"
+      "id": 21,
+      "desc": "SWE-Bench Pro榜单第21名，54.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.6-27B",
@@ -2900,8 +2848,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 23,
-      "desc": "SWE-Bench Pro榜单第23名，53.5%通过率。数据源: datalearner.com"
+      "id": 22,
+      "desc": "SWE-Bench Pro榜单第22名，53.5%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-V4-Flash",
@@ -2913,8 +2861,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 24,
-      "desc": "SWE-Bench Pro榜单第24名，52.6%通过率。数据源: datalearner.com"
+      "id": 23,
+      "desc": "SWE-Bench Pro榜单第23名，52.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5.4 nano",
@@ -2926,34 +2874,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 25,
-      "desc": "SWE-Bench Pro榜单第25名，52.4%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Flash",
-      "vendor": "DeepSeek-AI",
-      "score": 52.3,
-      "passRate": "52.3%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 26,
-      "desc": "SWE-Bench Pro榜单第26名，52.3%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Pro",
-      "vendor": "DeepSeek-AI",
-      "score": 52.1,
-      "passRate": "52.1%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 27,
-      "desc": "SWE-Bench Pro榜单第27名，52.1%通过率。数据源: datalearner.com"
+      "id": 24,
+      "desc": "SWE-Bench Pro榜单第24名，52.4%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.5-397B-A17B",
@@ -2965,8 +2887,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 28,
-      "desc": "SWE-Bench Pro榜单第28名，50.9%通过率。数据源: datalearner.com"
+      "id": 25,
+      "desc": "SWE-Bench Pro榜单第25名，50.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5.1",
@@ -2978,8 +2900,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 29,
-      "desc": "SWE-Bench Pro榜单第29名，50.8%通过率。数据源: datalearner.com"
+      "id": 26,
+      "desc": "SWE-Bench Pro榜单第26名，50.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi K2.5",
@@ -2991,8 +2913,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 30,
-      "desc": "SWE-Bench Pro榜单第30名，50.7%通过率。数据源: datalearner.com"
+      "id": 27,
+      "desc": "SWE-Bench Pro榜单第27名，50.7%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Gemini 3.0 Flash",
@@ -3004,8 +2926,8 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "id": 31,
-      "desc": "SWE-Bench Pro榜单第31名，49.6%通过率。数据源: datalearner.com"
+      "id": 28,
+      "desc": "SWE-Bench Pro榜单第28名，49.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.6-35B-A3B",
@@ -3017,21 +2939,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 32,
-      "desc": "SWE-Bench Pro榜单第32名，49.5%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Flash",
-      "vendor": "DeepSeek-AI",
-      "score": 49.1,
-      "passRate": "49.1%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 33,
-      "desc": "SWE-Bench Pro榜单第33名，49.1%通过率。数据源: datalearner.com"
+      "id": 29,
+      "desc": "SWE-Bench Pro榜单第29名，49.5%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3-Coder-Next",
@@ -3043,8 +2952,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 34,
-      "desc": "SWE-Bench Pro榜单第34名，44.3%通过率。数据源: datalearner.com"
+      "id": 30,
+      "desc": "SWE-Bench Pro榜单第30名，44.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Sonnet 4.5",
@@ -3056,8 +2965,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 35,
-      "desc": "SWE-Bench Pro榜单第35名，43.6%通过率。数据源: datalearner.com"
+      "id": 31,
+      "desc": "SWE-Bench Pro榜单第31名，43.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Sonnet 4",
@@ -3069,8 +2978,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 36,
-      "desc": "SWE-Bench Pro榜单第36名，42.7%通过率。数据源: datalearner.com"
+      "id": 32,
+      "desc": "SWE-Bench Pro榜单第32名，42.7%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek V3.2",
@@ -3082,8 +2991,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 37,
-      "desc": "SWE-Bench Pro榜单第37名，40.9%通过率。数据源: datalearner.com"
+      "id": 33,
+      "desc": "SWE-Bench Pro榜单第33名，40.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GLM-4.7",
@@ -3095,8 +3004,8 @@
         "#34D399"
       ],
       "icon": "./icons/zhipuai.cn.png",
-      "id": 38,
-      "desc": "SWE-Bench Pro榜单第38名，40.6%通过率。数据源: datalearner.com"
+      "id": 34,
+      "desc": "SWE-Bench Pro榜单第34名，40.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Haiku 4.5",
@@ -3108,8 +3017,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 39,
-      "desc": "SWE-Bench Pro榜单第39名，39.45%通过率。数据源: datalearner.com"
+      "id": 35,
+      "desc": "SWE-Bench Pro榜单第35名，39.45%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "GPT-5",
@@ -3121,8 +3030,8 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "id": 40,
-      "desc": "SWE-Bench Pro榜单第40名，36.3%通过率。数据源: datalearner.com"
+      "id": 36,
+      "desc": "SWE-Bench Pro榜单第36名，36.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "M2.1",
@@ -3134,8 +3043,8 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "id": 41,
-      "desc": "SWE-Bench Pro榜单第41名，32.6%通过率。数据源: datalearner.com"
+      "id": 37,
+      "desc": "SWE-Bench Pro榜单第37名，32.6%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi K2 0905",
@@ -3147,8 +3056,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 42,
-      "desc": "SWE-Bench Pro榜单第42名，27.67%通过率。数据源: datalearner.com"
+      "id": 38,
+      "desc": "SWE-Bench Pro榜单第38名，27.67%通过率。数据源: datalearner.com (2026-06)"
     }
   ],
   "multilingual": [
@@ -3163,7 +3072,7 @@
       ],
       "icon": "./icons/anthropic.com.png",
       "id": 1,
-      "desc": "SWE-bench Multilingual榜单第1名，87.3%通过率。数据源: datalearner.com"
+      "desc": "SWE-bench Multilingual榜单第1名，87.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Composer 2.5",
@@ -3176,7 +3085,7 @@
       ],
       "icon": "./icons/cursor.com.png",
       "id": 2,
-      "desc": "SWE-bench Multilingual榜单第2名，79.8%通过率。数据源: datalearner.com"
+      "desc": "SWE-bench Multilingual榜单第2名，79.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.7-Max-Preview",
@@ -3189,7 +3098,7 @@
       ],
       "icon": "./icons/github_QwenLM.png",
       "id": 3,
-      "desc": "SWE-bench Multilingual榜单第3名，78.3%通过率。数据源: datalearner.com"
+      "desc": "SWE-bench Multilingual榜单第3名，78.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi K2.6",
@@ -3202,7 +3111,7 @@
       ],
       "icon": "./icons/kimi.png",
       "id": 4,
-      "desc": "SWE-bench Multilingual榜单第4名，76.7%通过率。数据源: datalearner.com"
+      "desc": "SWE-bench Multilingual榜单第4名，76.7%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-V4-Pro",
@@ -3215,20 +3124,7 @@
       ],
       "icon": "./icons/github_deepseek-ai.png",
       "id": 5,
-      "desc": "SWE-bench Multilingual榜单第5名，76.2%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Pro",
-      "vendor": "DeepSeek-AI",
-      "score": 74.1,
-      "passRate": "74.1%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 6,
-      "desc": "SWE-bench Multilingual榜单第6名，74.1%通过率。数据源: datalearner.com"
+      "desc": "SWE-bench Multilingual榜单第5名，76.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.6-Max-Preview",
@@ -3240,8 +3136,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 7,
-      "desc": "SWE-bench Multilingual榜单第7名，73.8%通过率。数据源: datalearner.com"
+      "id": 6,
+      "desc": "SWE-bench Multilingual榜单第6名，73.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen 3.6 Plus Preview",
@@ -3253,8 +3149,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 8,
-      "desc": "SWE-bench Multilingual榜单第8名，73.8%通过率。数据源: datalearner.com"
+      "id": 7,
+      "desc": "SWE-bench Multilingual榜单第7名，73.8%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Composer 2",
@@ -3266,8 +3162,8 @@
         "#34D399"
       ],
       "icon": "./icons/cursor.com.png",
-      "id": 9,
-      "desc": "SWE-bench Multilingual榜单第9名，73.7%通过率。数据源: datalearner.com"
+      "id": 8,
+      "desc": "SWE-bench Multilingual榜单第8名，73.7%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "DeepSeek-V4-Flash",
@@ -3279,8 +3175,8 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "id": 10,
-      "desc": "SWE-bench Multilingual榜单第10名，73.3%通过率。数据源: datalearner.com"
+      "id": 9,
+      "desc": "SWE-bench Multilingual榜单第9名，73.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Kimi K2.5",
@@ -3292,8 +3188,8 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "id": 11,
-      "desc": "SWE-bench Multilingual榜单第11名，73%通过率。数据源: datalearner.com"
+      "id": 10,
+      "desc": "SWE-bench Multilingual榜单第10名，73%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Claude Opus 4.6",
@@ -3305,8 +3201,8 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "id": 12,
-      "desc": "SWE-bench Multilingual榜单第12名，72%通过率。数据源: datalearner.com"
+      "id": 11,
+      "desc": "SWE-bench Multilingual榜单第11名，72%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.6-27B",
@@ -3318,47 +3214,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 13,
-      "desc": "SWE-bench Multilingual榜单第13名，71.3%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Flash",
-      "vendor": "DeepSeek-AI",
-      "score": 70.2,
-      "passRate": "70.2%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 14,
-      "desc": "SWE-bench Multilingual榜单第14名，70.2%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Pro",
-      "vendor": "DeepSeek-AI",
-      "score": 69.8,
-      "passRate": "69.8%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 15,
-      "desc": "SWE-bench Multilingual榜单第15名，69.8%通过率。数据源: datalearner.com"
-    },
-    {
-      "name": "DeepSeek-V4-Flash",
-      "vendor": "DeepSeek-AI",
-      "score": 69.7,
-      "passRate": "69.7%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "id": 16,
-      "desc": "SWE-bench Multilingual榜单第16名，69.7%通过率。数据源: datalearner.com"
+      "id": 12,
+      "desc": "SWE-bench Multilingual榜单第12名，71.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.5-397B-A17B",
@@ -3370,8 +3227,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 17,
-      "desc": "SWE-bench Multilingual榜单第17名，69.3%通过率。数据源: datalearner.com"
+      "id": 13,
+      "desc": "SWE-bench Multilingual榜单第13名，69.3%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Qwen3.6-35B-A3B",
@@ -3383,8 +3240,8 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "id": 18,
-      "desc": "SWE-bench Multilingual榜单第18名，67.2%通过率。数据源: datalearner.com"
+      "id": 14,
+      "desc": "SWE-bench Multilingual榜单第14名，67.2%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Composer 1.5",
@@ -3396,8 +3253,8 @@
         "#34D399"
       ],
       "icon": "./icons/cursor.com.png",
-      "id": 19,
-      "desc": "SWE-bench Multilingual榜单第19名，65.9%通过率。数据源: datalearner.com"
+      "id": 15,
+      "desc": "SWE-bench Multilingual榜单第15名，65.9%通过率。数据源: datalearner.com (2026-06)"
     },
     {
       "name": "Composer 1",
@@ -3409,8 +3266,8 @@
         "#34D399"
       ],
       "icon": "./icons/cursor.com.png",
-      "id": 20,
-      "desc": "SWE-bench Multilingual榜单第20名，56.9%通过率。数据源: datalearner.com"
+      "id": 16,
+      "desc": "SWE-bench Multilingual榜单第16名，56.9%通过率。数据源: datalearner.com (2026-06)"
     }
   ]
 }
