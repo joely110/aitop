@@ -2,19 +2,32 @@
   "swe-bench": [
     {
       "id": 1,
-      "name": "Claude Fable 5",
+      "name": "Claude Opus 5",
       "vendor": "Anthropic",
-      "score": 95.0,
-      "passRate": "95%",
+      "score": 96.0,
+      "passRate": "96.0%",
       "colors": [
         "#D97706",
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第1名，95%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第1名，96.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 2,
+      "name": "Claude Fable 5",
+      "vendor": "Anthropic",
+      "score": 95.0,
+      "passRate": "95.0%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "icon": "./icons/anthropic.com.png",
+      "desc": "SWE-bench Verified榜单第2名，95.0%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 3,
       "name": "Claude Mythos Preview",
       "vendor": "Anthropic",
       "score": 93.9,
@@ -24,10 +37,10 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第2名，93.9%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第3名，93.9%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Claude Opus 4.8",
       "vendor": "Anthropic",
       "score": 88.6,
@@ -37,10 +50,10 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第3名，88.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第4名，88.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Opus 4.7",
       "vendor": "Anthropic",
       "score": 87.6,
@@ -50,10 +63,10 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第4名，87.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第5名，87.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "Claude Sonnet 5",
       "vendor": "Anthropic",
       "score": 85.2,
@@ -63,23 +76,23 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第5名，85.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第6名，85.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "Claude Sonnet 4.5",
       "vendor": "Anthropic",
       "score": 82.0,
-      "passRate": "82%",
+      "passRate": "82.0%",
       "colors": [
         "#D97706",
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第6名，82%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第7名，82.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "Opus 4.5",
       "vendor": "Anthropic",
       "score": 80.9,
@@ -89,25 +102,25 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第7名，80.9%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第8名，80.9%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 8,
+      "id": 9,
       "name": "Claude Opus 4.6",
       "vendor": "Anthropic",
-      "score": 80.84,
-      "passRate": "80.84%",
+      "score": 80.8,
+      "passRate": "80.8%",
       "colors": [
         "#D97706",
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第8名，80.84%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第9名，80.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 9,
+      "id": 10,
       "name": "Gemini 3.1 Pro Preview",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 80.6,
       "passRate": "80.6%",
       "colors": [
@@ -115,10 +128,10 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "desc": "SWE-bench Verified榜单第9名，80.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第10名，80.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 10,
+      "id": 11,
       "name": "DeepSeek-V4-Pro",
       "vendor": "DeepSeek-AI",
       "score": 80.6,
@@ -128,10 +141,10 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Verified榜单第10名，80.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第11名，80.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 11,
+      "id": 12,
       "name": "Qwen3.7-Max-Preview",
       "vendor": "阿里巴巴",
       "score": 80.4,
@@ -141,36 +154,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第11名，80.4%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 12,
-      "name": "Claude Sonnet 4",
-      "vendor": "Anthropic",
-      "score": 80.2,
-      "passRate": "80.2%",
-      "colors": [
-        "#D97706",
-        "#F59E0B"
-      ],
-      "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第12名，80.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第12名，80.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 13,
-      "name": "MiniMax M2.5",
-      "vendor": "MiniMaxAI",
-      "score": 80.2,
-      "passRate": "80.2%",
-      "colors": [
-        "#EC4899",
-        "#F472B6"
-      ],
-      "icon": "./icons/minimaxi.com.png",
-      "desc": "SWE-bench Verified榜单第13名，80.2%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 14,
       "name": "Kimi K2.6",
       "vendor": "Moonshot AI",
       "score": 80.2,
@@ -180,23 +167,49 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
+      "desc": "SWE-bench Verified榜单第13名，80.2%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 14,
+      "name": "MiniMax M2.5",
+      "vendor": "MiniMaxAI",
+      "score": 80.2,
+      "passRate": "80.2%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "icon": "./icons/minimaxi.com.png",
       "desc": "SWE-bench Verified榜单第14名，80.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 15,
+      "name": "Claude Sonnet 4",
+      "vendor": "Anthropic",
+      "score": 80.2,
+      "passRate": "80.2%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "icon": "./icons/anthropic.com.png",
+      "desc": "SWE-bench Verified榜单第15名，80.2%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 16,
       "name": "GPT-5.2",
       "vendor": "OpenAI",
       "score": 80.0,
-      "passRate": "80%",
+      "passRate": "80.0%",
       "colors": [
         "#10A37F",
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第15名，80%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第16名，80.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 16,
+      "id": 17,
       "name": "Claude Sonnet 4.6",
       "vendor": "Anthropic",
       "score": 79.6,
@@ -206,37 +219,24 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第16名，79.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第17名，79.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 17,
+      "id": 18,
       "name": "DeepSeek-V4-Flash",
       "vendor": "DeepSeek-AI",
       "score": 79.0,
-      "passRate": "79%",
+      "passRate": "79.0%",
       "colors": [
         "#6366F1",
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Verified榜单第17名，79%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 18,
-      "name": "Qwen 3.6 Plus Preview",
-      "vendor": "阿里巴巴",
-      "score": 78.8,
-      "passRate": "78.8%",
-      "colors": [
-        "#EC4899",
-        "#F472B6"
-      ],
-      "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第18名，78.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第18名，79.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 19,
-      "name": "Qwen3.6-Max-Preview",
+      "name": "Qwen 3.6 Plus Preview",
       "vendor": "阿里巴巴",
       "score": 78.8,
       "passRate": "78.8%",
@@ -249,45 +249,58 @@
     },
     {
       "id": 20,
+      "name": "Qwen3.6-Max-Preview",
+      "vendor": "阿里巴巴",
+      "score": 78.8,
+      "passRate": "78.8%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "icon": "./icons/github_QwenLM.png",
+      "desc": "SWE-bench Verified榜单第20名，78.8%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 21,
       "name": "Hy3",
       "vendor": "腾讯AI实验室",
       "score": 78.0,
-      "passRate": "78%",
+      "passRate": "78.0%",
       "colors": [
         "#3B82F6",
         "#60A5FA"
       ],
-      "icon": "./icons/tencent.com.png",
-      "desc": "SWE-bench Verified榜单第20名，78%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/tencent.png",
+      "desc": "SWE-bench Verified榜单第21名，78.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 21,
+      "id": 22,
       "name": "GLM-5",
       "vendor": "智谱AI",
       "score": 77.8,
       "passRate": "77.8%",
       "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "SWE-bench Verified榜单第21名，77.8%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 22,
-      "name": "Muse Spark",
-      "vendor": "Facebook AI研究实验室",
-      "score": 77.4,
-      "passRate": "77.4%",
-      "colors": [
         "#8B5CF6",
         "#A78BFA"
       ],
-      "icon": "./icons/github_meta-llama.png",
-      "desc": "SWE-bench Verified榜单第22名，77.4%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/zhipuai.png",
+      "desc": "SWE-bench Verified榜单第22名，77.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 23,
+      "name": "Muse Spark",
+      "vendor": "Facebook AI Research",
+      "score": 77.4,
+      "passRate": "77.4%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/meta.com.png",
+      "desc": "SWE-bench Verified榜单第23名，77.4%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 24,
       "name": "Qwen3.6-27B",
       "vendor": "阿里巴巴",
       "score": 77.2,
@@ -297,10 +310,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第23名，77.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第24名，77.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 24,
+      "id": 25,
       "name": "GPT-5.1-Codex-Max",
       "vendor": "OpenAI",
       "score": 76.8,
@@ -310,10 +323,10 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第24名，76.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第25名，76.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 25,
+      "id": 26,
       "name": "Kimi K2.5",
       "vendor": "Moonshot AI",
       "score": 76.8,
@@ -323,10 +336,23 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "desc": "SWE-bench Verified榜单第25名，76.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第26名，76.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 26,
+      "id": 27,
+      "name": "Doubao Seed 2.0 Pro",
+      "vendor": "ByteDance Seed",
+      "score": 76.5,
+      "passRate": "76.5%",
+      "colors": [
+        "#F97316",
+        "#FB923C"
+      ],
+      "icon": "./icons/bytedance.png",
+      "desc": "SWE-bench Verified榜单第27名，76.5%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 28,
       "name": "Qwen3.5-397B-A17B",
       "vendor": "阿里巴巴",
       "score": 76.4,
@@ -336,10 +362,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第26名，76.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第28名，76.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 27,
+      "id": 29,
       "name": "GPT-5.1",
       "vendor": "OpenAI",
       "score": 76.3,
@@ -349,12 +375,12 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第27名，76.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第29名，76.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 28,
+      "id": 30,
       "name": "Gemini 3.0 Pro (Preview 11-2025)",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 76.2,
       "passRate": "76.2%",
       "colors": [
@@ -362,10 +388,10 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "desc": "SWE-bench Verified榜单第28名，76.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第30名，76.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 29,
+      "id": 31,
       "name": "Qwen3-Max-Thinking",
       "vendor": "阿里巴巴",
       "score": 75.3,
@@ -375,23 +401,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第29名，75.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第31名，75.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 30,
-      "name": "o3-pro",
-      "vendor": "OpenAI",
-      "score": 75.0,
-      "passRate": "75%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第30名，75%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 31,
+      "id": 32,
       "name": "M2.1",
       "vendor": "MiniMaxAI",
       "score": 74.8,
@@ -401,10 +414,10 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "desc": "SWE-bench Verified榜单第31名，74.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第32名，74.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 32,
+      "id": 33,
       "name": "Opus 4.1",
       "vendor": "Anthropic",
       "score": 74.5,
@@ -414,10 +427,10 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第32名，74.5%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第33名，74.5%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 33,
+      "id": 34,
       "name": "GPT-5 Codex",
       "vendor": "OpenAI",
       "score": 74.5,
@@ -427,75 +440,49 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第33名，74.5%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第34名，74.5%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 34,
+      "id": 35,
       "name": "Step 3.5 Flash",
       "vendor": "StepFunAI",
       "score": 74.4,
       "passRate": "74.4%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/stepfun.com.png",
-      "desc": "SWE-bench Verified榜单第34名，74.4%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/stepfun.png",
+      "desc": "SWE-bench Verified榜单第35名，74.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 35,
+      "id": 36,
       "name": "GLM-4.7",
       "vendor": "智谱AI",
       "score": 73.8,
       "passRate": "73.8%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "SWE-bench Verified榜单第35名，73.8%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 36,
-      "name": "DeepSeek-V4-Flash Standard",
-      "vendor": "DeepSeek-AI",
-      "score": 73.7,
-      "passRate": "73.7%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Verified榜单第36名，73.7%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/zhipuai.png",
+      "desc": "SWE-bench Verified榜单第36名，73.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 37,
-      "name": "DeepSeek-V4-Pro Standard",
-      "vendor": "DeepSeek-AI",
-      "score": 73.6,
-      "passRate": "73.6%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Verified榜单第37名，73.6%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 38,
       "name": "Grok 4 Heavy",
       "vendor": "xAI",
       "score": 73.5,
       "passRate": "73.5%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#1F2937",
+        "#4B5563"
       ],
       "icon": "./icons/x.ai.png",
-      "desc": "SWE-bench Verified榜单第38名，73.5%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第37名，73.5%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 39,
+      "id": 38,
       "name": "Qwen3.6-35B-A3B",
       "vendor": "阿里巴巴",
       "score": 73.4,
@@ -505,10 +492,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第39名，73.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第38名，73.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 40,
+      "id": 39,
       "name": "Haiku 4.5",
       "vendor": "Anthropic",
       "score": 73.3,
@@ -518,10 +505,10 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第40名，73.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第39名，73.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 41,
+      "id": 40,
       "name": "DeepSeek V3.2",
       "vendor": "DeepSeek-AI",
       "score": 73.1,
@@ -531,10 +518,10 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Verified榜单第41名，73.1%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第40名，73.1%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 42,
+      "id": 41,
       "name": "GPT-5",
       "vendor": "OpenAI",
       "score": 72.8,
@@ -544,23 +531,10 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第42名，72.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第41名，72.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 43,
-      "name": "Claude Opus 4",
-      "vendor": "Anthropic",
-      "score": 72.5,
-      "passRate": "72.5%",
-      "colors": [
-        "#D97706",
-        "#F59E0B"
-      ],
-      "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第43名，72.5%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 44,
+      "id": 42,
       "name": "Qwen3.5-27B",
       "vendor": "阿里巴巴",
       "score": 72.4,
@@ -570,23 +544,23 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第44名，72.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第42名，72.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 45,
+      "id": 43,
       "name": "Grok 4 Code",
       "vendor": "xAI",
       "score": 72.0,
-      "passRate": "72%",
+      "passRate": "72.0%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#1F2937",
+        "#4B5563"
       ],
       "icon": "./icons/x.ai.png",
-      "desc": "SWE-bench Verified榜单第45名，72%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第43名，72.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 46,
+      "id": 44,
       "name": "Kimi K2 Thinking",
       "vendor": "Moonshot AI",
       "score": 71.3,
@@ -596,23 +570,23 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "desc": "SWE-bench Verified榜单第46名，71.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第44名，71.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 47,
+      "id": 45,
       "name": "Grok Code Fast 1",
       "vendor": "xAI",
       "score": 70.8,
       "passRate": "70.8%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#1F2937",
+        "#4B5563"
       ],
       "icon": "./icons/x.ai.png",
-      "desc": "SWE-bench Verified榜单第47名，70.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第45名，70.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 48,
+      "id": 46,
       "name": "Qwen3-Coder-Next",
       "vendor": "阿里巴巴",
       "score": 70.6,
@@ -622,10 +596,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第48名，70.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第46名，70.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 49,
+      "id": 47,
       "name": "GPT-5.1 Codex",
       "vendor": "OpenAI",
       "score": 70.4,
@@ -635,10 +609,10 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第49名，70.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第47名，70.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 50,
+      "id": 48,
       "name": "Qwen3 Max (Preview)",
       "vendor": "阿里巴巴",
       "score": 69.6,
@@ -648,10 +622,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第50名，69.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第48名，69.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 51,
+      "id": 49,
       "name": "MiniMax M2",
       "vendor": "MiniMaxAI",
       "score": 69.4,
@@ -661,10 +635,10 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "desc": "SWE-bench Verified榜单第51名，69.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第49名，69.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 52,
+      "id": 50,
       "name": "Kimi K2 0905",
       "vendor": "Moonshot AI",
       "score": 69.2,
@@ -674,10 +648,10 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "desc": "SWE-bench Verified榜单第52名，69.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第50名，69.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 53,
+      "id": 51,
       "name": "OpenAI o3",
       "vendor": "OpenAI",
       "score": 69.1,
@@ -687,12 +661,12 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第53名，69.1%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第51名，69.1%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 54,
+      "id": 52,
       "name": "Gemini 3.0 Flash",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 68.7,
       "passRate": "68.7%",
       "colors": [
@@ -700,10 +674,10 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "desc": "SWE-bench Verified榜单第54名，68.7%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第52名，68.7%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 55,
+      "id": 53,
       "name": "DeepSeek-V3.1 Terminus",
       "vendor": "DeepSeek-AI",
       "score": 68.4,
@@ -713,36 +687,23 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Verified榜单第55名，68.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第53名，68.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 56,
-      "name": "OpenAI o4 - mini",
-      "vendor": "OpenAI",
-      "score": 68.1,
-      "passRate": "68.1%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第56名，68.1%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 57,
+      "id": 54,
       "name": "GLM-4.6",
       "vendor": "智谱AI",
       "score": 68.0,
-      "passRate": "68%",
+      "passRate": "68.0%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "SWE-bench Verified榜单第57名，68%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/zhipuai.png",
+      "desc": "SWE-bench Verified榜单第54名，68.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 58,
+      "id": 55,
       "name": "DeepSeek V3.2-Exp",
       "vendor": "DeepSeek-AI",
       "score": 67.8,
@@ -752,12 +713,12 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Verified榜单第58名，67.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第55名，67.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 59,
+      "id": 56,
       "name": "Gemini 2.5-Pro",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 67.2,
       "passRate": "67.2%",
       "colors": [
@@ -765,51 +726,51 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "desc": "SWE-bench Verified榜单第59名，67.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第56名，67.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 60,
+      "id": 57,
       "name": "Qwen3-Coder-480B-A35B",
       "vendor": "阿里巴巴",
       "score": 67.0,
-      "passRate": "67%",
+      "passRate": "67.0%",
       "colors": [
         "#EC4899",
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第60名，67%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第57名，67.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 61,
+      "id": 58,
       "name": "DeepSeek-V3.1",
       "vendor": "DeepSeek-AI",
       "score": 66.0,
-      "passRate": "66%",
+      "passRate": "66.0%",
       "colors": [
         "#6366F1",
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Verified榜单第61名，66%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第58名，66.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 62,
+      "id": 59,
       "name": "GLM-4.5",
       "vendor": "智谱AI",
       "score": 64.2,
       "passRate": "64.2%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "SWE-bench Verified榜单第62名，64.2%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/zhipuai.png",
+      "desc": "SWE-bench Verified榜单第59名，64.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 63,
+      "id": 60,
       "name": "Gemini 2.5 Pro Experimental 03-25",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 63.8,
       "passRate": "63.8%",
       "colors": [
@@ -817,36 +778,23 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "desc": "SWE-bench Verified榜单第63名，63.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第60名，63.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 64,
-      "name": "Gemini-2.5-Pro-Preview-05-06",
-      "vendor": "Google Deep Mind",
-      "score": 63.2,
-      "passRate": "63.2%",
-      "colors": [
-        "#3B82F6",
-        "#60A5FA"
-      ],
-      "icon": "./icons/google.com.png",
-      "desc": "SWE-bench Verified榜单第64名，63.2%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 65,
+      "id": 61,
       "name": "Devstral Medium",
       "vendor": "MistralAI",
       "score": 61.6,
       "passRate": "61.6%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#F97316",
+        "#FB923C"
       ],
       "icon": "./icons/mistral.ai.png",
-      "desc": "SWE-bench Verified榜单第65名，61.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第61名，61.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 66,
+      "id": 62,
       "name": "GPT OSS 120B",
       "vendor": "OpenAI",
       "score": 60.1,
@@ -856,36 +804,49 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第66名，60.1%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第62名，60.1%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 67,
+      "id": 63,
       "name": "GLM-4.7-Flash",
       "vendor": "智谱AI",
       "score": 59.2,
       "passRate": "59.2%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "SWE-bench Verified榜单第67名，59.2%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/zhipuai.png",
+      "desc": "SWE-bench Verified榜单第63名，59.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 68,
+      "id": 64,
       "name": "Grok 4",
       "vendor": "xAI",
       "score": 58.6,
       "passRate": "58.6%",
       "colors": [
+        "#1F2937",
+        "#4B5563"
+      ],
+      "icon": "./icons/x.ai.png",
+      "desc": "SWE-bench Verified榜单第64名，58.6%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 65,
+      "name": "GLM-4.5-Air",
+      "vendor": "智谱AI",
+      "score": 57.6,
+      "passRate": "57.6%",
+      "colors": [
         "#8B5CF6",
         "#A78BFA"
       ],
-      "icon": "./icons/x.ai.png",
-      "desc": "SWE-bench Verified榜单第68名，58.6%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/zhipuai.png",
+      "desc": "SWE-bench Verified榜单第65名，57.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 69,
+      "id": 66,
       "name": "DeepSeek-R1-0528",
       "vendor": "DeepSeek-AI",
       "score": 57.6,
@@ -895,36 +856,23 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Verified榜单第69名，57.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第66名，57.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 70,
-      "name": "GLM-4.5-Air",
-      "vendor": "智谱AI",
-      "score": 57.6,
-      "passRate": "57.6%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "SWE-bench Verified榜单第70名，57.6%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 71,
+      "id": 67,
       "name": "MiniMax-M1-80k",
       "vendor": "MiniMaxAI",
       "score": 56.0,
-      "passRate": "56%",
+      "passRate": "56.0%",
       "colors": [
         "#EC4899",
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "desc": "SWE-bench Verified榜单第71名，56%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第67名，56.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 72,
+      "id": 68,
       "name": "MiniMax-M1-40k",
       "vendor": "MiniMaxAI",
       "score": 55.6,
@@ -934,62 +882,49 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "desc": "SWE-bench Verified榜单第72名，55.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第68名，55.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 73,
-      "name": "GPT-4.1",
-      "vendor": "OpenAI",
-      "score": 54.6,
-      "passRate": "54.6%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第73名，54.6%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 74,
+      "id": 69,
       "name": "Grok 4.1",
       "vendor": "xAI",
       "score": 54.6,
       "passRate": "54.6%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#1F2937",
+        "#4B5563"
       ],
       "icon": "./icons/x.ai.png",
-      "desc": "SWE-bench Verified榜单第74名，54.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第69名，54.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 75,
+      "id": 70,
       "name": "Gemini 2.5 Flash-Preview-09-2025",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 54.0,
-      "passRate": "54%",
+      "passRate": "54.0%",
       "colors": [
         "#3B82F6",
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "desc": "SWE-bench Verified榜单第75名，54%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第70名，54.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 76,
+      "id": 71,
       "name": "Devstral Small 1.1",
       "vendor": "MistralAI",
       "score": 53.6,
       "passRate": "53.6%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#F97316",
+        "#FB923C"
       ],
       "icon": "./icons/mistral.ai.png",
-      "desc": "SWE-bench Verified榜单第76名，53.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第71名，53.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 77,
+      "id": 72,
       "name": "Kimi K2",
       "vendor": "Moonshot AI",
       "score": 51.8,
@@ -999,10 +934,10 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "desc": "SWE-bench Verified榜单第77名，51.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第72名，51.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 78,
+      "id": 73,
       "name": "Qwen3-Coder-Flash",
       "vendor": "阿里巴巴",
       "score": 51.6,
@@ -1012,36 +947,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第78名，51.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第73名，51.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 79,
-      "name": "Gemini 2.5 Flash",
-      "vendor": "Google Deep Mind",
-      "score": 50.0,
-      "passRate": "50%",
-      "colors": [
-        "#3B82F6",
-        "#60A5FA"
-      ],
-      "icon": "./icons/google.com.png",
-      "desc": "SWE-bench Verified榜单第79名，50%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 80,
-      "name": "OpenAI o3-mini (high)",
-      "vendor": "OpenAI",
-      "score": 49.3,
-      "passRate": "49.3%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第80名，49.3%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 81,
+      "id": 74,
       "name": "DeepSeek-R1",
       "vendor": "DeepSeek-AI",
       "score": 49.2,
@@ -1051,49 +960,36 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Verified榜单第81名，49.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第74名，49.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 82,
+      "id": 75,
       "name": "Claude 3.5 Sonnet New",
       "vendor": "Anthropic",
       "score": 49.0,
-      "passRate": "49%",
+      "passRate": "49.0%",
       "colors": [
         "#D97706",
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第82名，49%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第75名，49.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 83,
-      "name": "OpenAI o1",
-      "vendor": "OpenAI",
-      "score": 48.9,
-      "passRate": "48.9%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第83名，48.9%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 84,
+      "id": 76,
       "name": "Devstral Small 1.0",
       "vendor": "MistralAI",
       "score": 46.8,
       "passRate": "46.8%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#F97316",
+        "#FB923C"
       ],
       "icon": "./icons/mistral.ai.png",
-      "desc": "SWE-bench Verified榜单第84名，46.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第76名，46.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 85,
+      "id": 77,
       "name": "OpenAI o3-mini",
       "vendor": "OpenAI",
       "score": 40.8,
@@ -1103,10 +999,10 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第85名，40.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第77名，40.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 86,
+      "id": 78,
       "name": "DeepSeek-V3-0324",
       "vendor": "DeepSeek-AI",
       "score": 38.8,
@@ -1116,23 +1012,10 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Verified榜单第86名，38.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第78名，38.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 87,
-      "name": "GPT-4.5",
-      "vendor": "OpenAI",
-      "score": 38.0,
-      "passRate": "38%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第87名，38%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 88,
+      "id": 79,
       "name": "Qwen3-235B-A22B",
       "vendor": "阿里巴巴",
       "score": 34.4,
@@ -1142,98 +1025,46 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第88名，34.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第79名，34.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 89,
+      "id": 80,
       "name": "GPT OSS 20B",
       "vendor": "OpenAI",
       "score": 34.0,
-      "passRate": "34%",
+      "passRate": "34.0%",
       "colors": [
         "#10A37F",
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第89名，34%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第80名，34.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 90,
+      "id": 81,
       "name": "GPT-4o",
       "vendor": "OpenAI",
       "score": 31.0,
-      "passRate": "31%",
+      "passRate": "31.0%",
       "colors": [
         "#10A37F",
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第90名，31%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第81名，31.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 91,
-      "name": "Gemini 2.5 Flash-Lite",
-      "vendor": "Google Deep Mind",
-      "score": 27.6,
-      "passRate": "27.6%",
-      "colors": [
-        "#3B82F6",
-        "#60A5FA"
-      ],
-      "icon": "./icons/google.com.png",
-      "desc": "SWE-bench Verified榜单第91名，27.6%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 92,
-      "name": "GPT-4.1 mini",
-      "vendor": "OpenAI",
-      "score": 23.6,
-      "passRate": "23.6%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/openai.com.png",
-      "desc": "SWE-bench Verified榜单第92名，23.6%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 93,
+      "id": 82,
       "name": "Qwen3-30B-A3B-2507",
       "vendor": "阿里巴巴",
       "score": 22.0,
-      "passRate": "22%",
+      "passRate": "22.0%",
       "colors": [
         "#EC4899",
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Verified榜单第93名，22%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 94,
-      "name": "Gemini 2.0 Flash Experimental",
-      "vendor": "Google Deep Mind",
-      "score": 21.4,
-      "passRate": "21.4%",
-      "colors": [
-        "#3B82F6",
-        "#60A5FA"
-      ],
-      "icon": "./icons/google.com.png",
-      "desc": "SWE-bench Verified榜单第94名，21.4%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 95,
-      "name": "Claude Sonnet 3.7",
-      "vendor": "Anthropic",
-      "score": 20.3,
-      "passRate": "20.3%",
-      "colors": [
-        "#D97706",
-        "#F59E0B"
-      ],
-      "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Verified榜单第95名，20.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Verified榜单第82名，22.0%通过率。数据源: datalearner.com (2026-07)"
     }
   ],
   "livecode": [
@@ -1253,20 +1084,20 @@
     {
       "id": 2,
       "name": "Gemini 3.0 Pro (Preview 11-2025)",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 92.0,
-      "passRate": "92%",
+      "passRate": "92.0%",
       "colors": [
         "#3B82F6",
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "desc": "LiveCodeBench榜单第2名，92%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第2名，92.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 3,
       "name": "Gemini 3.1 Pro Preview",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 91.7,
       "passRate": "91.7%",
       "colors": [
@@ -1278,19 +1109,6 @@
     },
     {
       "id": 4,
-      "name": "Qwen3.7-Max-Preview",
-      "vendor": "阿里巴巴",
-      "score": 91.6,
-      "passRate": "91.6%",
-      "colors": [
-        "#EC4899",
-        "#F472B6"
-      ],
-      "icon": "./icons/github_QwenLM.png",
-      "desc": "LiveCodeBench榜单第4名，91.6%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 5,
       "name": "DeepSeek-V4-Flash",
       "vendor": "DeepSeek-AI",
       "score": 91.6,
@@ -1300,6 +1118,19 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
+      "desc": "LiveCodeBench榜单第4名，91.6%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 5,
+      "name": "Qwen3.7-Max-Preview",
+      "vendor": "阿里巴巴",
+      "score": 91.6,
+      "passRate": "91.6%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "icon": "./icons/github_QwenLM.png",
       "desc": "LiveCodeBench榜单第5名，91.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
@@ -1318,7 +1149,7 @@
     {
       "id": 7,
       "name": "Gemini 2.5 Deep Think",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 87.6,
       "passRate": "87.6%",
       "colors": [
@@ -1359,13 +1190,13 @@
       "name": "Opus 4.5",
       "vendor": "Anthropic",
       "score": 87.0,
-      "passRate": "87%",
+      "passRate": "87.0%",
       "colors": [
         "#D97706",
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "LiveCodeBench榜单第10名，87%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第10名，87.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 11,
@@ -1374,10 +1205,10 @@
       "score": 86.4,
       "passRate": "86.4%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/stepfun.com.png",
+      "icon": "./icons/stepfun.png",
       "desc": "LiveCodeBench榜单第11名，86.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
@@ -1411,13 +1242,13 @@
       "name": "Kimi K2.5",
       "vendor": "Moonshot AI",
       "score": 85.0,
-      "passRate": "85%",
+      "passRate": "85.0%",
       "colors": [
         "#10A37F",
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "desc": "LiveCodeBench榜单第14名，85%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第14名，85.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 15,
@@ -1426,10 +1257,10 @@
       "score": 84.9,
       "passRate": "84.9%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/zhipuai.cn.png",
+      "icon": "./icons/zhipuai.png",
       "desc": "LiveCodeBench榜单第15名，84.9%通过率。数据源: datalearner.com (2026-07)"
     },
     {
@@ -1439,10 +1270,10 @@
       "score": 84.5,
       "passRate": "84.5%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/zhipuai.cn.png",
+      "icon": "./icons/zhipuai.png",
       "desc": "LiveCodeBench榜单第16名，84.5%通过率。数据源: datalearner.com (2026-07)"
     },
     {
@@ -1502,39 +1333,39 @@
       "name": "MiniMax M2",
       "vendor": "MiniMaxAI",
       "score": 83.0,
-      "passRate": "83%",
+      "passRate": "83.0%",
       "colors": [
         "#EC4899",
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "desc": "LiveCodeBench榜单第21名，83%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第21名，83.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 22,
       "name": "Grok 4",
       "vendor": "xAI",
       "score": 82.0,
-      "passRate": "82%",
+      "passRate": "82.0%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#1F2937",
+        "#4B5563"
       ],
       "icon": "./icons/x.ai.png",
-      "desc": "LiveCodeBench榜单第22名，82%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第22名，82.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 23,
       "name": "Grok 4.1 Fast",
       "vendor": "xAI",
       "score": 82.0,
-      "passRate": "82%",
+      "passRate": "82.0%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#1F2937",
+        "#4B5563"
       ],
       "icon": "./icons/x.ai.png",
-      "desc": "LiveCodeBench榜单第23名，82%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第23名，82.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 24,
@@ -1564,123 +1395,97 @@
     },
     {
       "id": 26,
-      "name": "Gemini 2.5 Pro Deep Think",
-      "vendor": "Google Deep Mind",
-      "score": 80.4,
-      "passRate": "80.4%",
-      "colors": [
-        "#3B82F6",
-        "#60A5FA"
-      ],
-      "icon": "./icons/google.com.png",
-      "desc": "LiveCodeBench榜单第26名，80.4%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 27,
-      "name": "Gemma 4 31B",
-      "vendor": "Google Deep Mind",
-      "score": 80.0,
-      "passRate": "80%",
-      "colors": [
-        "#3B82F6",
-        "#60A5FA"
-      ],
-      "icon": "./icons/google.com.png",
-      "desc": "LiveCodeBench榜单第27名，80%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 28,
       "name": "DeepSeek-V3.1 Terminus",
       "vendor": "DeepSeek-AI",
       "score": 80.0,
-      "passRate": "80%",
+      "passRate": "80.0%",
       "colors": [
         "#6366F1",
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "LiveCodeBench榜单第28名，80%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第26名，80.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 29,
+      "id": 27,
+      "name": "Gemma 4 31B",
+      "vendor": "DeepMind",
+      "score": 80.0,
+      "passRate": "80.0%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "desc": "LiveCodeBench榜单第27名，80.0%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 28,
       "name": "Grok 4 Fast",
       "vendor": "xAI",
       "score": 80.0,
-      "passRate": "80%",
+      "passRate": "80.0%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#1F2937",
+        "#4B5563"
       ],
       "icon": "./icons/x.ai.png",
-      "desc": "LiveCodeBench榜单第29名，80%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第28名，80.0%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 29,
+      "name": "Gemma 4 26B A4B",
+      "vendor": "DeepMind",
+      "score": 77.1,
+      "passRate": "77.1%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "desc": "LiveCodeBench榜单第29名，77.1%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 30,
-      "name": "Grok-3 - Reasoning Beta",
-      "vendor": "xAI",
-      "score": 79.4,
-      "passRate": "79.4%",
+      "name": "Gemini 2.5-Pro",
+      "vendor": "Google DeepMind",
+      "score": 77.1,
+      "passRate": "77.1%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#3B82F6",
+        "#60A5FA"
       ],
-      "icon": "./icons/x.ai.png",
-      "desc": "LiveCodeBench榜单第30名，79.4%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/google.com.png",
+      "desc": "LiveCodeBench榜单第30名，77.1%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 31,
-      "name": "Gemma 4 26B A4B",
-      "vendor": "Google Deep Mind",
-      "score": 77.1,
-      "passRate": "77.1%",
+      "name": "ERNIE 5.0",
+      "vendor": "百度",
+      "score": 76.2,
+      "passRate": "76.2%",
       "colors": [
         "#3B82F6",
         "#60A5FA"
       ],
-      "icon": "./icons/google.com.png",
-      "desc": "LiveCodeBench榜单第31名，77.1%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/baidu.com.png",
+      "desc": "LiveCodeBench榜单第31名，76.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 32,
-      "name": "Gemini 2.5-Pro",
-      "vendor": "Google Deep Mind",
-      "score": 77.1,
-      "passRate": "77.1%",
-      "colors": [
-        "#3B82F6",
-        "#60A5FA"
-      ],
-      "icon": "./icons/google.com.png",
-      "desc": "LiveCodeBench榜单第32名，77.1%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 33,
-      "name": "Gemini-2.5-Pro-Preview-05-06",
-      "vendor": "Google Deep Mind",
-      "score": 77.1,
-      "passRate": "77.1%",
-      "colors": [
-        "#3B82F6",
-        "#60A5FA"
-      ],
-      "icon": "./icons/google.com.png",
-      "desc": "LiveCodeBench榜单第33名，77.1%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 34,
       "name": "Claude Opus 4.6",
       "vendor": "Anthropic",
       "score": 76.0,
-      "passRate": "76%",
+      "passRate": "76.0%",
       "colors": [
         "#D97706",
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "LiveCodeBench榜单第34名，76%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第32名，76.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 35,
+      "id": 33,
       "name": "OpenAI o3",
       "vendor": "OpenAI",
       "score": 75.8,
@@ -1690,23 +1495,10 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "LiveCodeBench榜单第35名，75.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第33名，75.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 36,
-      "name": "DeepSeek-V3.1 Terminus Standard",
-      "vendor": "DeepSeek-AI",
-      "score": 74.9,
-      "passRate": "74.9%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "desc": "LiveCodeBench榜单第36名，74.9%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 37,
+      "id": 34,
       "name": "DeepSeek-V3.1",
       "vendor": "DeepSeek-AI",
       "score": 74.8,
@@ -1716,10 +1508,10 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "LiveCodeBench榜单第37名，74.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第34名，74.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 38,
+      "id": 35,
       "name": "DeepSeek V3.2-Exp",
       "vendor": "DeepSeek-AI",
       "score": 74.1,
@@ -1729,10 +1521,10 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "LiveCodeBench榜单第38名，74.1%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第35名，74.1%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 39,
+      "id": 36,
       "name": "Qwen3-235B-A22B-Thinking",
       "vendor": "阿里巴巴",
       "score": 74.1,
@@ -1742,10 +1534,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "LiveCodeBench榜单第39名，74.1%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第36名，74.1%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 40,
+      "id": 37,
       "name": "Qwen3-235B-A22B-Thinking-2507",
       "vendor": "阿里巴巴",
       "score": 74.1,
@@ -1755,23 +1547,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "LiveCodeBench榜单第40名，74.1%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第37名，74.1%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 41,
-      "name": "Kimi-k1.6-IOI-high",
-      "vendor": "Moonshot AI",
-      "score": 73.8,
-      "passRate": "73.8%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/kimi.png",
-      "desc": "LiveCodeBench榜单第41名，73.8%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 42,
+      "id": 38,
       "name": "DeepSeek-R1-0528",
       "vendor": "DeepSeek-AI",
       "score": 73.3,
@@ -1781,62 +1560,49 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "LiveCodeBench榜单第42名，73.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第38名，73.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 43,
+      "id": 39,
       "name": "GLM-4.5",
       "vendor": "智谱AI",
       "score": 72.9,
       "passRate": "72.9%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "LiveCodeBench榜单第43名，72.9%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/zhipuai.png",
+      "desc": "LiveCodeBench榜单第39名，72.9%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 44,
-      "name": "OpenAI o1",
-      "vendor": "OpenAI",
-      "score": 71.0,
-      "passRate": "71%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/openai.com.png",
-      "desc": "LiveCodeBench榜单第44名，71%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 45,
+      "id": 40,
       "name": "Claude Sonnet 4.5",
       "vendor": "Anthropic",
       "score": 71.0,
-      "passRate": "71%",
+      "passRate": "71.0%",
       "colors": [
         "#D97706",
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "LiveCodeBench榜单第45名，71%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第40名，71.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 46,
+      "id": 41,
       "name": "GLM-4.5-Air",
       "vendor": "智谱AI",
       "score": 70.7,
       "passRate": "70.7%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "LiveCodeBench榜单第46名，70.7%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/zhipuai.png",
+      "desc": "LiveCodeBench榜单第41名，70.7%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 47,
+      "id": 42,
       "name": "Qwen3-235B-A22B",
       "vendor": "阿里巴巴",
       "score": 70.7,
@@ -1846,25 +1612,12 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "LiveCodeBench榜单第47名，70.7%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第42名，70.7%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 48,
-      "name": "Grok 3",
-      "vendor": "xAI",
-      "score": 70.6,
-      "passRate": "70.6%",
-      "colors": [
-        "#8B5CF6",
-        "#A78BFA"
-      ],
-      "icon": "./icons/x.ai.png",
-      "desc": "LiveCodeBench榜单第48名，70.6%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 49,
+      "id": 43,
       "name": "Gemini 2.5 Pro Experimental 03-25",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 70.4,
       "passRate": "70.4%",
       "colors": [
@@ -1872,75 +1625,49 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "desc": "LiveCodeBench榜单第49名，70.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第43名，70.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 50,
-      "name": "OpenAI o3-mini (high)",
-      "vendor": "OpenAI",
-      "score": 69.5,
-      "passRate": "69.5%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/openai.com.png",
-      "desc": "LiveCodeBench榜单第50名，69.5%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 51,
-      "name": "OpenAI o3-mini (medium)",
-      "vendor": "OpenAI",
-      "score": 67.4,
-      "passRate": "67.4%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/openai.com.png",
-      "desc": "LiveCodeBench榜单第51名，67.4%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 52,
+      "id": 44,
       "name": "Step3",
       "vendor": "StepFunAI",
       "score": 67.1,
       "passRate": "67.1%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/stepfun.com.png",
-      "desc": "LiveCodeBench榜单第52名，67.1%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/stepfun.png",
+      "desc": "LiveCodeBench榜单第44名，67.1%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 53,
+      "id": 45,
       "name": "Pangu Embedded",
       "vendor": "华为",
       "score": 67.1,
       "passRate": "67.1%",
       "colors": [
-        "#DC2626",
-        "#EF4444"
+        "#EF4444",
+        "#F87171"
       ],
       "icon": "./icons/huawei.com.png",
-      "desc": "LiveCodeBench榜单第53名，67.1%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第45名，67.1%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 54,
+      "id": 46,
       "name": "Claude Sonnet 4",
       "vendor": "Anthropic",
       "score": 66.0,
-      "passRate": "66%",
+      "passRate": "66.0%",
       "colors": [
         "#D97706",
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "LiveCodeBench榜单第54名，66%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第46名，66.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 55,
+      "id": 47,
       "name": "DeepSeek-R1",
       "vendor": "DeepSeek-AI",
       "score": 65.9,
@@ -1950,23 +1677,10 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "LiveCodeBench榜单第55名，65.9%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第47名，65.9%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 56,
-      "name": "Kimi-k1.6-IOI",
-      "vendor": "Moonshot AI",
-      "score": 65.9,
-      "passRate": "65.9%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/kimi.png",
-      "desc": "LiveCodeBench榜单第56名，65.9%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 57,
+      "id": 48,
       "name": "Qwen3-32B",
       "vendor": "阿里巴巴",
       "score": 65.7,
@@ -1976,36 +1690,23 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "LiveCodeBench榜单第57名，65.7%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第48名，65.7%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 58,
-      "name": "QwQ-Max-Preview",
-      "vendor": "阿里巴巴",
-      "score": 65.6,
-      "passRate": "65.6%",
-      "colors": [
-        "#EC4899",
-        "#F472B6"
-      ],
-      "icon": "./icons/github_QwenLM.png",
-      "desc": "LiveCodeBench榜单第58名，65.6%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 59,
+      "id": 49,
       "name": "MiniMax-M1-80k",
       "vendor": "MiniMaxAI",
       "score": 65.0,
-      "passRate": "65%",
+      "passRate": "65.0%",
       "colors": [
         "#EC4899",
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "desc": "LiveCodeBench榜单第59名，65%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第49名，65.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 60,
+      "id": 50,
       "name": "Hunyuan-T1",
       "vendor": "腾讯AI实验室",
       "score": 64.9,
@@ -2014,11 +1715,11 @@
         "#3B82F6",
         "#60A5FA"
       ],
-      "icon": "./icons/tencent.com.png",
-      "desc": "LiveCodeBench榜单第60名，64.9%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/tencent.png",
+      "desc": "LiveCodeBench榜单第50名，64.9%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 61,
+      "id": 51,
       "name": "Hunyuan-A13B-Instruct",
       "vendor": "腾讯AI实验室",
       "score": 63.9,
@@ -2027,11 +1728,11 @@
         "#3B82F6",
         "#60A5FA"
       ],
-      "icon": "./icons/tencent.com.png",
-      "desc": "LiveCodeBench榜单第61名，63.9%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/tencent.png",
+      "desc": "LiveCodeBench榜单第51名，63.9%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 62,
+      "id": 52,
       "name": "MiniMax-M1-40k",
       "vendor": "MiniMaxAI",
       "score": 62.3,
@@ -2041,23 +1742,23 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "desc": "LiveCodeBench榜单第62名，62.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第52名，62.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 63,
+      "id": 53,
       "name": "Haiku 4.5",
       "vendor": "Anthropic",
       "score": 62.0,
-      "passRate": "62%",
+      "passRate": "62.0%",
       "colors": [
         "#D97706",
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "LiveCodeBench榜单第63名，62%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第53名，62.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 64,
+      "id": 54,
       "name": "Qwen3-8B",
       "vendor": "阿里巴巴",
       "score": 61.8,
@@ -2067,36 +1768,23 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "LiveCodeBench榜单第64名，61.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第54名，61.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 65,
+      "id": 55,
       "name": "Pangu Pro MoE",
       "vendor": "华为",
       "score": 59.6,
       "passRate": "59.6%",
       "colors": [
-        "#DC2626",
-        "#EF4444"
+        "#EF4444",
+        "#F87171"
       ],
       "icon": "./icons/huawei.com.png",
-      "desc": "LiveCodeBench榜单第65名，59.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第55名，59.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 66,
-      "name": "Magistral-Medium-2506",
-      "vendor": "MistralAI",
-      "score": 59.36,
-      "passRate": "59.36%",
-      "colors": [
-        "#8B5CF6",
-        "#A78BFA"
-      ],
-      "icon": "./icons/mistral.ai.png",
-      "desc": "LiveCodeBench榜单第66名，59.36%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 67,
+      "id": 56,
       "name": "Qwen3 Max (Preview)",
       "vendor": "阿里巴巴",
       "score": 57.5,
@@ -2106,49 +1794,23 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "LiveCodeBench榜单第67名，57.5%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第56名，57.5%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 68,
+      "id": 57,
       "name": "Hunyuan-7B",
       "vendor": "腾讯AI实验室",
       "score": 57.0,
-      "passRate": "57%",
+      "passRate": "57.0%",
       "colors": [
         "#3B82F6",
         "#60A5FA"
       ],
-      "icon": "./icons/tencent.com.png",
-      "desc": "LiveCodeBench榜单第68名，57%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/tencent.png",
+      "desc": "LiveCodeBench榜单第57名，57.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 69,
-      "name": "DeepSeek-V4-Pro Standard",
-      "vendor": "DeepSeek-AI",
-      "score": 56.8,
-      "passRate": "56.8%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "desc": "LiveCodeBench榜单第69名，56.8%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 70,
-      "name": "Claude Opus 4",
-      "vendor": "Anthropic",
-      "score": 56.6,
-      "passRate": "56.6%",
-      "colors": [
-        "#D97706",
-        "#F59E0B"
-      ],
-      "icon": "./icons/anthropic.com.png",
-      "desc": "LiveCodeBench榜单第70名，56.6%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 71,
+      "id": 58,
       "name": "Qwen3-Next",
       "vendor": "阿里巴巴",
       "score": 56.6,
@@ -2158,62 +1820,23 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "LiveCodeBench榜单第71名，56.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第58名，56.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 72,
-      "name": "GLM-4.6 Standard",
-      "vendor": "智谱AI",
-      "score": 56.0,
-      "passRate": "56%",
-      "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "LiveCodeBench榜单第72名，56%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 73,
+      "id": 59,
       "name": "Magistral-Small-2506",
       "vendor": "MistralAI",
-      "score": 55.84,
-      "passRate": "55.84%",
+      "score": 55.8,
+      "passRate": "55.8%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#F97316",
+        "#FB923C"
       ],
       "icon": "./icons/mistral.ai.png",
-      "desc": "LiveCodeBench榜单第73名，55.84%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第59名，55.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 74,
-      "name": "Gemini 2.5 Flash",
-      "vendor": "Google Deep Mind",
-      "score": 55.4,
-      "passRate": "55.4%",
-      "colors": [
-        "#3B82F6",
-        "#60A5FA"
-      ],
-      "icon": "./icons/google.com.png",
-      "desc": "LiveCodeBench榜单第74名，55.4%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 75,
-      "name": "DeepSeek-V4-Flash Standard",
-      "vendor": "DeepSeek-AI",
-      "score": 55.2,
-      "passRate": "55.2%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "desc": "LiveCodeBench榜单第75名，55.2%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 76,
+      "id": 60,
       "name": "Qwen3-4B-Thinking-2507",
       "vendor": "阿里巴巴",
       "score": 55.2,
@@ -2223,36 +1846,23 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "LiveCodeBench榜单第76名，55.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第60名，55.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 77,
-      "name": "DeepSeek V3.2-Exp Standard",
-      "vendor": "DeepSeek-AI",
-      "score": 55.0,
-      "passRate": "55%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "desc": "LiveCodeBench榜单第77名，55%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 78,
+      "id": 61,
       "name": "GPT-5-mini",
       "vendor": "OpenAI",
       "score": 55.0,
-      "passRate": "55%",
+      "passRate": "55.0%",
       "colors": [
         "#10A37F",
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "LiveCodeBench榜单第78名，55%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第61名，55.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 79,
+      "id": 62,
       "name": "Kimi K2",
       "vendor": "Moonshot AI",
       "score": 53.7,
@@ -2262,23 +1872,23 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "desc": "LiveCodeBench榜单第79名，53.7%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第62名，53.7%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 80,
-      "name": "OpenAI o1-mini",
-      "vendor": "OpenAI",
+      "id": 63,
+      "name": "Gemma 4 E4B",
+      "vendor": "DeepMind",
       "score": 52.0,
-      "passRate": "52%",
+      "passRate": "52.0%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#3B82F6",
+        "#60A5FA"
       ],
-      "icon": "./icons/openai.com.png",
-      "desc": "LiveCodeBench榜单第80名，52%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/google.com.png",
+      "desc": "LiveCodeBench榜单第63名，52.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 81,
+      "id": 64,
       "name": "Qwen3-235B-A22B-2507",
       "vendor": "阿里巴巴",
       "score": 51.8,
@@ -2288,23 +1898,23 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "LiveCodeBench榜单第81名，51.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第64名，51.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 82,
+      "id": 65,
       "name": "GLM-4-9B-Chat",
       "vendor": "智谱AI",
       "score": 51.8,
       "passRate": "51.8%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "LiveCodeBench榜单第82名，51.8%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/zhipuai.png",
+      "desc": "LiveCodeBench榜单第65名，51.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 83,
+      "id": 66,
       "name": "Qwen2.5-32B",
       "vendor": "阿里巴巴",
       "score": 51.2,
@@ -2314,23 +1924,23 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "LiveCodeBench榜单第83名，51.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第66名，51.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 84,
+      "id": 67,
       "name": "Llama 4 Behemoth Instruct",
-      "vendor": "Facebook AI研究实验室",
+      "vendor": "Facebook AI Research",
       "score": 49.4,
       "passRate": "49.4%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#3B82F6",
+        "#60A5FA"
       ],
-      "icon": "./icons/github_meta-llama.png",
-      "desc": "LiveCodeBench榜单第84名，49.4%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/meta.com.png",
+      "desc": "LiveCodeBench榜单第67名，49.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 85,
+      "id": 68,
       "name": "DeepSeek-V3-0324",
       "vendor": "DeepSeek-AI",
       "score": 49.2,
@@ -2340,33 +1950,241 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "LiveCodeBench榜单第85名，49.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第68名，49.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 86,
-      "name": "Claude Sonnet 4 Standard",
+      "id": 69,
+      "name": "Gemma 4 E2B",
+      "vendor": "DeepMind",
+      "score": 44.0,
+      "passRate": "44.0%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "desc": "LiveCodeBench榜单第69名，44.0%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 70,
+      "name": "Llama 4 Maverick Instruct",
+      "vendor": "Facebook AI Research",
+      "score": 43.4,
+      "passRate": "43.4%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/meta.com.png",
+      "desc": "LiveCodeBench榜单第70名，43.4%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 71,
+      "name": "Qwen3-30B-A3B-2507",
+      "vendor": "阿里巴巴",
+      "score": 43.2,
+      "passRate": "43.2%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "icon": "./icons/github_QwenLM.png",
+      "desc": "LiveCodeBench榜单第71名，43.2%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 72,
+      "name": "ERNIE-4.5-VL-424B-A47B-Base",
+      "vendor": "百度",
+      "score": 38.8,
+      "passRate": "38.8%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/baidu.com.png",
+      "desc": "LiveCodeBench榜单第72名，38.8%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 73,
+      "name": "ERNIE-4.5-300B-A47B",
+      "vendor": "百度",
+      "score": 38.8,
+      "passRate": "38.8%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/baidu.com.png",
+      "desc": "LiveCodeBench榜单第73名，38.8%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 74,
+      "name": "Claude 3.5 Sonnet New",
       "vendor": "Anthropic",
-      "score": 48.5,
-      "passRate": "48.5%",
+      "score": 38.7,
+      "passRate": "38.7%",
       "colors": [
         "#D97706",
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "LiveCodeBench榜单第86名，48.5%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第74名，38.7%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 87,
-      "name": "GPT-4.5",
+      "id": 75,
+      "name": "GPT-4o(2025-03-27)",
       "vendor": "OpenAI",
-      "score": 46.4,
-      "passRate": "46.4%",
+      "score": 35.8,
+      "passRate": "35.8%",
       "colors": [
         "#10A37F",
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "LiveCodeBench榜单第87名，46.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "LiveCodeBench榜单第75名，35.8%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 76,
+      "name": "GPT-4o",
+      "vendor": "OpenAI",
+      "score": 35.1,
+      "passRate": "35.1%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "icon": "./icons/openai.com.png",
+      "desc": "LiveCodeBench榜单第76名，35.1%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 77,
+      "name": "Qwen3-4B-2507",
+      "vendor": "阿里巴巴",
+      "score": 35.1,
+      "passRate": "35.1%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "icon": "./icons/github_QwenLM.png",
+      "desc": "LiveCodeBench榜单第77名，35.1%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 78,
+      "name": "DeepSeek-V3",
+      "vendor": "DeepSeek-AI",
+      "score": 34.6,
+      "passRate": "34.6%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "icon": "./icons/github_deepseek-ai.png",
+      "desc": "LiveCodeBench榜单第78名，34.6%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 79,
+      "name": "Llama3.1-70B-Instruct",
+      "vendor": "Facebook AI Research",
+      "score": 33.3,
+      "passRate": "33.3%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/meta.com.png",
+      "desc": "LiveCodeBench榜单第79名，33.3%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 80,
+      "name": "Llama3.3-70B-Instruct",
+      "vendor": "Facebook AI Research",
+      "score": 33.3,
+      "passRate": "33.3%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/meta.com.png",
+      "desc": "LiveCodeBench榜单第80名，33.3%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 81,
+      "name": "Llama 4 Scout Instruct",
+      "vendor": "Facebook AI Research",
+      "score": 32.8,
+      "passRate": "32.8%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/meta.com.png",
+      "desc": "LiveCodeBench榜单第81名，32.8%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 82,
+      "name": "Codestral",
+      "vendor": "MistralAI",
+      "score": 31.5,
+      "passRate": "31.5%",
+      "colors": [
+        "#F97316",
+        "#FB923C"
+      ],
+      "icon": "./icons/mistral.ai.png",
+      "desc": "LiveCodeBench榜单第82名，31.5%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 83,
+      "name": "Llama3.1-405B Instruct",
+      "vendor": "Facebook AI Research",
+      "score": 30.2,
+      "passRate": "30.2%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/meta.com.png",
+      "desc": "LiveCodeBench榜单第83名，30.2%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 84,
+      "name": "Gemma 3 - 27B (IT)",
+      "vendor": "Google DeepMind",
+      "score": 29.7,
+      "passRate": "29.7%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "desc": "LiveCodeBench榜单第84名，29.7%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 85,
+      "name": "Qwen3-30B-A3B",
+      "vendor": "阿里巴巴",
+      "score": 29.0,
+      "passRate": "29.0%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "icon": "./icons/github_QwenLM.png",
+      "desc": "LiveCodeBench榜单第85名，29.0%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 86,
+      "name": "Gemma 3 - 12B (IT)",
+      "vendor": "Google DeepMind",
+      "score": 24.6,
+      "passRate": "24.6%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "desc": "LiveCodeBench榜单第86名，24.6%通过率。数据源: datalearner.com (2026-07)"
     }
   ],
   "swe-pro": [
@@ -2385,6 +2203,19 @@
     },
     {
       "id": 2,
+      "name": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "score": 79.2,
+      "passRate": "79.2%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "icon": "./icons/anthropic.com.png",
+      "desc": "SWE-Bench Pro榜单第2名，79.2%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 3,
       "name": "Claude Mythos Preview",
       "vendor": "Anthropic",
       "score": 77.8,
@@ -2394,10 +2225,10 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-Bench Pro榜单第2名，77.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第3名，77.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Claude Opus 4.8",
       "vendor": "Anthropic",
       "score": 69.2,
@@ -2407,23 +2238,36 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-Bench Pro榜单第3名，69.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第4名，69.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Grok 4.5",
       "vendor": "xAI",
       "score": 64.7,
       "passRate": "64.7%",
       "colors": [
-        "#8B5CF6",
-        "#A78BFA"
+        "#1F2937",
+        "#4B5563"
       ],
       "icon": "./icons/x.ai.png",
-      "desc": "SWE-Bench Pro榜单第4名，64.7%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第5名，64.7%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 5,
+      "id": 6,
+      "name": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "score": 64.6,
+      "passRate": "64.6%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "icon": "./icons/openai.com.png",
+      "desc": "SWE-Bench Pro榜单第6名，64.6%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 7,
       "name": "Opus 4.7",
       "vendor": "Anthropic",
       "score": 64.3,
@@ -2433,36 +2277,36 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-Bench Pro榜单第5名，64.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第7名，64.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 6,
+      "id": 8,
       "name": "GLM-5.2",
       "vendor": "智谱AI",
       "score": 62.1,
       "passRate": "62.1%",
       "colors": [
-        "#10A37F",
-        "#34D399"
-      ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "SWE-Bench Pro榜单第6名，62.1%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 7,
-      "name": "Muse Spark 1.1",
-      "vendor": "Facebook AI研究实验室",
-      "score": 61.5,
-      "passRate": "61.5%",
-      "colors": [
         "#8B5CF6",
         "#A78BFA"
       ],
-      "icon": "./icons/github_meta-llama.png",
-      "desc": "SWE-Bench Pro榜单第7名，61.5%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/zhipuai.png",
+      "desc": "SWE-Bench Pro榜单第8名，62.1%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 8,
+      "id": 9,
+      "name": "Muse Spark 1.1",
+      "vendor": "Facebook AI Research",
+      "score": 61.5,
+      "passRate": "61.5%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/meta.com.png",
+      "desc": "SWE-Bench Pro榜单第9名，61.5%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 10,
       "name": "Qwen3.7-Max-Preview",
       "vendor": "阿里巴巴",
       "score": 60.6,
@@ -2472,23 +2316,36 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-Bench Pro榜单第8名，60.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第10名，60.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 9,
+      "id": 11,
       "name": "MiniMax M3",
       "vendor": "MiniMaxAI",
       "score": 59.0,
-      "passRate": "59%",
+      "passRate": "59.0%",
       "colors": [
         "#EC4899",
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "desc": "SWE-Bench Pro榜单第9名，59%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第11名，59.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 10,
+      "id": 12,
+      "name": "Gemini 3.6 Flash",
+      "vendor": "Google DeepMind",
+      "score": 58.7,
+      "passRate": "58.7%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "desc": "SWE-Bench Pro榜单第12名，58.7%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 13,
       "name": "Kimi K2.6",
       "vendor": "Moonshot AI",
       "score": 58.6,
@@ -2498,10 +2355,10 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "desc": "SWE-Bench Pro榜单第10名，58.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第13名，58.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 11,
+      "id": 14,
       "name": "GPT-5.5",
       "vendor": "OpenAI",
       "score": 58.6,
@@ -2511,23 +2368,23 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-Bench Pro榜单第11名，58.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第14名，58.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 12,
+      "id": 15,
       "name": "GLM 5.1",
       "vendor": "智谱AI",
       "score": 58.4,
       "passRate": "58.4%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "SWE-Bench Pro榜单第12名，58.4%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/zhipuai.png",
+      "desc": "SWE-Bench Pro榜单第15名，58.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 13,
+      "id": 16,
       "name": "Hy3",
       "vendor": "腾讯AI实验室",
       "score": 57.9,
@@ -2536,11 +2393,11 @@
         "#3B82F6",
         "#60A5FA"
       ],
-      "icon": "./icons/tencent.com.png",
-      "desc": "SWE-Bench Pro榜单第13名，57.9%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/tencent.png",
+      "desc": "SWE-Bench Pro榜单第16名，57.9%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 14,
+      "id": 17,
       "name": "GPT-5.4",
       "vendor": "OpenAI",
       "score": 57.7,
@@ -2550,11 +2407,11 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-Bench Pro榜单第14名，57.7%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第17名，57.7%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 15,
-      "name": "Qwen3.6-Max-Preview Deep Thinking",
+      "id": 18,
+      "name": "Qwen3.6-Max-Preview",
       "vendor": "阿里巴巴",
       "score": 57.3,
       "passRate": "57.3%",
@@ -2563,10 +2420,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-Bench Pro榜单第15名，57.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第18名，57.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 16,
+      "id": 19,
       "name": "GPT-5.3 Codex",
       "vendor": "OpenAI",
       "score": 56.8,
@@ -2576,10 +2433,10 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-Bench Pro榜单第16名，56.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第19名，56.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 17,
+      "id": 20,
       "name": "Qwen 3.6 Plus Preview",
       "vendor": "阿里巴巴",
       "score": 56.6,
@@ -2589,23 +2446,23 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-Bench Pro榜单第17名，56.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第20名，56.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 18,
-      "name": "Qwen3.6-Max-Preview",
-      "vendor": "阿里巴巴",
-      "score": 56.6,
-      "passRate": "56.6%",
+      "id": 21,
+      "name": "Step 3.7 Flash",
+      "vendor": "StepFunAI",
+      "score": 56.3,
+      "passRate": "56.3%",
       "colors": [
-        "#EC4899",
-        "#F472B6"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-Bench Pro榜单第18名，56.6%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/stepfun.png",
+      "desc": "SWE-Bench Pro榜单第21名，56.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 19,
+      "id": 22,
       "name": "MiniMax-M2.7",
       "vendor": "MiniMaxAI",
       "score": 56.2,
@@ -2615,10 +2472,10 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "desc": "SWE-Bench Pro榜单第19名，56.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第22名，56.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 20,
+      "id": 23,
       "name": "GPT-5.2",
       "vendor": "OpenAI",
       "score": 55.6,
@@ -2628,10 +2485,10 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-Bench Pro榜单第20名，55.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第23名，55.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 21,
+      "id": 24,
       "name": "DeepSeek-V4-Pro",
       "vendor": "DeepSeek-AI",
       "score": 55.4,
@@ -2641,10 +2498,10 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-Bench Pro榜单第21名，55.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第24名，55.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 22,
+      "id": 25,
       "name": "MiniMax M2.5",
       "vendor": "MiniMaxAI",
       "score": 55.4,
@@ -2654,12 +2511,12 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "desc": "SWE-Bench Pro榜单第22名，55.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第25名，55.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 23,
+      "id": 26,
       "name": "Gemini 3.5 Flash",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 55.1,
       "passRate": "55.1%",
       "colors": [
@@ -2667,10 +2524,10 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "desc": "SWE-Bench Pro榜单第23名，55.1%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第26名，55.1%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 24,
+      "id": 27,
       "name": "GPT-5.4 mini",
       "vendor": "OpenAI",
       "score": 54.4,
@@ -2680,12 +2537,12 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-Bench Pro榜单第24名，54.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第27名，54.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 25,
+      "id": 28,
       "name": "Gemini 3.1 Pro Preview",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 54.2,
       "passRate": "54.2%",
       "colors": [
@@ -2693,10 +2550,23 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "desc": "SWE-Bench Pro榜单第25名，54.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第28名，54.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 26,
+      "id": 29,
+      "name": "Gemini 3.5 Flash-Lite",
+      "vendor": "Google DeepMind",
+      "score": 54.2,
+      "passRate": "54.2%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "icon": "./icons/google.com.png",
+      "desc": "SWE-Bench Pro榜单第29名，54.2%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 30,
       "name": "Qwen3.6-27B",
       "vendor": "阿里巴巴",
       "score": 53.5,
@@ -2706,10 +2576,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-Bench Pro榜单第26名，53.5%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第30名，53.5%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 27,
+      "id": 31,
       "name": "DeepSeek-V4-Flash",
       "vendor": "DeepSeek-AI",
       "score": 52.6,
@@ -2719,10 +2589,10 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-Bench Pro榜单第27名，52.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第31名，52.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 28,
+      "id": 32,
       "name": "GPT-5.4 nano",
       "vendor": "OpenAI",
       "score": 52.4,
@@ -2732,36 +2602,10 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-Bench Pro榜单第28名，52.4%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第32名，52.4%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 29,
-      "name": "DeepSeek-V4-Flash Standard",
-      "vendor": "DeepSeek-AI",
-      "score": 52.3,
-      "passRate": "52.3%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-Bench Pro榜单第29名，52.3%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 30,
-      "name": "DeepSeek-V4-Pro Standard",
-      "vendor": "DeepSeek-AI",
-      "score": 52.1,
-      "passRate": "52.1%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-Bench Pro榜单第30名，52.1%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 31,
+      "id": 33,
       "name": "Qwen3.5-397B-A17B",
       "vendor": "阿里巴巴",
       "score": 50.9,
@@ -2771,10 +2615,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-Bench Pro榜单第31名，50.9%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第33名，50.9%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 32,
+      "id": 34,
       "name": "GPT-5.1",
       "vendor": "OpenAI",
       "score": 50.8,
@@ -2784,10 +2628,10 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-Bench Pro榜单第32名，50.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第34名，50.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 33,
+      "id": 35,
       "name": "Kimi K2.5",
       "vendor": "Moonshot AI",
       "score": 50.7,
@@ -2797,12 +2641,12 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "desc": "SWE-Bench Pro榜单第33名，50.7%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第35名，50.7%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 34,
+      "id": 36,
       "name": "Gemini 3.0 Flash",
-      "vendor": "Google Deep Mind",
+      "vendor": "Google DeepMind",
       "score": 49.6,
       "passRate": "49.6%",
       "colors": [
@@ -2810,10 +2654,10 @@
         "#60A5FA"
       ],
       "icon": "./icons/google.com.png",
-      "desc": "SWE-Bench Pro榜单第34名，49.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第36名，49.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 35,
+      "id": 37,
       "name": "Qwen3.6-35B-A3B",
       "vendor": "阿里巴巴",
       "score": 49.5,
@@ -2823,23 +2667,23 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-Bench Pro榜单第35名，49.5%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第37名，49.5%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 36,
-      "name": "DeepSeek-V4-Flash More Standard",
-      "vendor": "DeepSeek-AI",
-      "score": 49.1,
-      "passRate": "49.1%",
+      "id": 38,
+      "name": "Doubao Seed 2.0 Pro",
+      "vendor": "ByteDance Seed",
+      "score": 46.9,
+      "passRate": "46.9%",
       "colors": [
-        "#6366F1",
-        "#818CF8"
+        "#F97316",
+        "#FB923C"
       ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-Bench Pro榜单第36名，49.1%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/bytedance.png",
+      "desc": "SWE-Bench Pro榜单第38名，46.9%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 37,
+      "id": 39,
       "name": "Qwen3-Coder-Next",
       "vendor": "阿里巴巴",
       "score": 44.3,
@@ -2849,10 +2693,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-Bench Pro榜单第37名，44.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第39名，44.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 38,
+      "id": 40,
       "name": "Claude Sonnet 4.5",
       "vendor": "Anthropic",
       "score": 43.6,
@@ -2862,10 +2706,10 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-Bench Pro榜单第38名，43.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第40名，43.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 39,
+      "id": 41,
       "name": "Claude Sonnet 4",
       "vendor": "Anthropic",
       "score": 42.7,
@@ -2875,10 +2719,10 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-Bench Pro榜单第39名，42.7%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第41名，42.7%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 40,
+      "id": 42,
       "name": "DeepSeek V3.2",
       "vendor": "DeepSeek-AI",
       "score": 40.9,
@@ -2888,36 +2732,36 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-Bench Pro榜单第40名，40.9%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第42名，40.9%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 41,
+      "id": 43,
       "name": "GLM-4.7",
       "vendor": "智谱AI",
       "score": 40.6,
       "passRate": "40.6%",
       "colors": [
-        "#10A37F",
-        "#34D399"
+        "#8B5CF6",
+        "#A78BFA"
       ],
-      "icon": "./icons/zhipuai.cn.png",
-      "desc": "SWE-Bench Pro榜单第41名，40.6%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/zhipuai.png",
+      "desc": "SWE-Bench Pro榜单第43名，40.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 42,
+      "id": 44,
       "name": "Haiku 4.5",
       "vendor": "Anthropic",
-      "score": 39.45,
-      "passRate": "39.45%",
+      "score": 39.5,
+      "passRate": "39.5%",
       "colors": [
         "#D97706",
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-Bench Pro榜单第42名，39.45%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第44名，39.5%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 43,
+      "id": 45,
       "name": "GPT-5",
       "vendor": "OpenAI",
       "score": 36.3,
@@ -2927,10 +2771,10 @@
         "#34D399"
       ],
       "icon": "./icons/openai.com.png",
-      "desc": "SWE-Bench Pro榜单第43名，36.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第45名，36.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 44,
+      "id": 46,
       "name": "M2.1",
       "vendor": "MiniMaxAI",
       "score": 32.6,
@@ -2940,25 +2784,38 @@
         "#F472B6"
       ],
       "icon": "./icons/minimaxi.com.png",
-      "desc": "SWE-Bench Pro榜单第44名，32.6%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第46名，32.6%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 45,
+      "id": 47,
       "name": "Kimi K2 0905",
       "vendor": "Moonshot AI",
-      "score": 27.67,
-      "passRate": "27.67%",
+      "score": 27.7,
+      "passRate": "27.7%",
       "colors": [
         "#10A37F",
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "desc": "SWE-Bench Pro榜单第45名，27.67%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-Bench Pro榜单第47名，27.7%通过率。数据源: datalearner.com (2026-07)"
     }
   ],
   "multilingual": [
     {
       "id": 1,
+      "name": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "score": 89.5,
+      "passRate": "89.5%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "icon": "./icons/anthropic.com.png",
+      "desc": "SWE-bench Multilingual榜单第1名，89.5%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 2,
       "name": "Claude Mythos Preview",
       "vendor": "Anthropic",
       "score": 87.3,
@@ -2968,10 +2825,10 @@
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Multilingual榜单第1名，87.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Multilingual榜单第2名，87.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Composer 2.5",
       "vendor": "Cursor",
       "score": 79.8,
@@ -2981,10 +2838,10 @@
         "#A78BFA"
       ],
       "icon": "./icons/cursor.com.png",
-      "desc": "SWE-bench Multilingual榜单第2名，79.8%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Multilingual榜单第3名，79.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Qwen3.7-Max-Preview",
       "vendor": "阿里巴巴",
       "score": 78.3,
@@ -2994,10 +2851,10 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Multilingual榜单第3名，78.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Multilingual榜单第4名，78.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Kimi K2.6",
       "vendor": "Moonshot AI",
       "score": 76.7,
@@ -3007,10 +2864,10 @@
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "desc": "SWE-bench Multilingual榜单第4名，76.7%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Multilingual榜单第5名，76.7%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "DeepSeek-V4-Pro",
       "vendor": "DeepSeek-AI",
       "score": 76.2,
@@ -3020,10 +2877,10 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Multilingual榜单第5名，76.2%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Multilingual榜单第6名，76.2%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "Hy3",
       "vendor": "腾讯AI实验室",
       "score": 75.8,
@@ -3032,25 +2889,12 @@
         "#3B82F6",
         "#60A5FA"
       ],
-      "icon": "./icons/tencent.com.png",
-      "desc": "SWE-bench Multilingual榜单第6名，75.8%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 7,
-      "name": "Qwen3.6-Max-Preview",
-      "vendor": "阿里巴巴",
-      "score": 73.8,
-      "passRate": "73.8%",
-      "colors": [
-        "#EC4899",
-        "#F472B6"
-      ],
-      "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Multilingual榜单第7名，73.8%通过率。数据源: datalearner.com (2026-07)"
+      "icon": "./icons/tencent.png",
+      "desc": "SWE-bench Multilingual榜单第7名，75.8%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 8,
-      "name": "Qwen 3.6 Plus Preview",
+      "name": "Qwen3.6-Max-Preview",
       "vendor": "阿里巴巴",
       "score": 73.8,
       "passRate": "73.8%",
@@ -3063,6 +2907,19 @@
     },
     {
       "id": 9,
+      "name": "Qwen 3.6 Plus Preview",
+      "vendor": "阿里巴巴",
+      "score": 73.8,
+      "passRate": "73.8%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "icon": "./icons/github_QwenLM.png",
+      "desc": "SWE-bench Multilingual榜单第9名，73.8%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 10,
       "name": "Composer 2",
       "vendor": "Cursor",
       "score": 73.7,
@@ -3072,10 +2929,10 @@
         "#A78BFA"
       ],
       "icon": "./icons/cursor.com.png",
-      "desc": "SWE-bench Multilingual榜单第9名，73.7%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Multilingual榜单第10名，73.7%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 10,
+      "id": 11,
       "name": "DeepSeek-V4-Flash",
       "vendor": "DeepSeek-AI",
       "score": 73.3,
@@ -3085,36 +2942,49 @@
         "#818CF8"
       ],
       "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Multilingual榜单第10名，73.3%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Multilingual榜单第11名，73.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 11,
+      "id": 12,
       "name": "Kimi K2.5",
       "vendor": "Moonshot AI",
       "score": 73.0,
-      "passRate": "73%",
+      "passRate": "73.0%",
       "colors": [
         "#10A37F",
         "#34D399"
       ],
       "icon": "./icons/kimi.png",
-      "desc": "SWE-bench Multilingual榜单第11名，73%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Multilingual榜单第12名，73.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 12,
+      "id": 13,
       "name": "Claude Opus 4.6",
       "vendor": "Anthropic",
       "score": 72.0,
-      "passRate": "72%",
+      "passRate": "72.0%",
       "colors": [
         "#D97706",
         "#F59E0B"
       ],
       "icon": "./icons/anthropic.com.png",
-      "desc": "SWE-bench Multilingual榜单第12名，72%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Multilingual榜单第13名，72.0%通过率。数据源: datalearner.com (2026-07)"
     },
     {
-      "id": 13,
+      "id": 14,
+      "name": "Doubao Seed 2.0 Pro",
+      "vendor": "ByteDance Seed",
+      "score": 71.7,
+      "passRate": "71.7%",
+      "colors": [
+        "#F97316",
+        "#FB923C"
+      ],
+      "icon": "./icons/bytedance.png",
+      "desc": "SWE-bench Multilingual榜单第14名，71.7%通过率。数据源: datalearner.com (2026-07)"
+    },
+    {
+      "id": 15,
       "name": "Qwen3.6-27B",
       "vendor": "阿里巴巴",
       "score": 71.3,
@@ -3124,33 +2994,7 @@
         "#F472B6"
       ],
       "icon": "./icons/github_QwenLM.png",
-      "desc": "SWE-bench Multilingual榜单第13名，71.3%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 14,
-      "name": "DeepSeek-V4-Pro Standard",
-      "vendor": "DeepSeek-AI",
-      "score": 69.8,
-      "passRate": "69.8%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Multilingual榜单第14名，69.8%通过率。数据源: datalearner.com (2026-07)"
-    },
-    {
-      "id": 15,
-      "name": "DeepSeek-V4-Flash Standard",
-      "vendor": "DeepSeek-AI",
-      "score": 69.7,
-      "passRate": "69.7%",
-      "colors": [
-        "#6366F1",
-        "#818CF8"
-      ],
-      "icon": "./icons/github_deepseek-ai.png",
-      "desc": "SWE-bench Multilingual榜单第15名，69.7%通过率。数据源: datalearner.com (2026-07)"
+      "desc": "SWE-bench Multilingual榜单第15名，71.3%通过率。数据源: datalearner.com (2026-07)"
     },
     {
       "id": 16,
