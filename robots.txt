@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://virexstar.com/sitemap.xml
+Sitemap: https://aitop.virexstar.com/sitemap.xml
