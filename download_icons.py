@@ -23,9 +23,10 @@ MANIFEST_FILE = os.path.join(ICONS_DIR, 'manifest.json')
 
 # Alternative sources for icons
 ICON_SOURCES = [
-    'https://logo.clearbit.com/{domain}',           # Primary
-    'https://www.google.com/s2/favicons?domain={domain}&sz=64',  # Google fallback
-    'https://{domain}/favicon.ico',                   # Direct favicon
+    'https://icons.duckduckgo.com/ip3/{domain}.ico',  # Primary (300x300, reliable)
+    'https://www.google.com/s2/favicons?domain={domain}&sz=128',  # Google fallback
+    'https://icon.horse/icon/{domain}',                # Tertiary fallback
+    'https://{domain}/favicon.ico',                    # Direct favicon (last resort)
 ]
 
 # Map of known domains to better icon sources
@@ -68,18 +69,34 @@ def sanitize_filename(url):
     # Hash as fallback
     return f"{hashlib.md5(url.encode()).hexdigest()[:16]}.png"
 
-def download_icon(url, filepath, timeout=10):
-    """Download a single icon with fallback sources"""
+def download_icon(url, filepath, timeout=12):
+    """Download a single icon with fallback sources.
+
+    Note: logo.clearbit.com shut down in 2025, so we no longer use it.
+    Accepts either an original clearbit URL (we extract the domain) or any
+    direct image URL, and verifies the result is a real image (not an HTML
+    error page that some sites return).
+    """
     if not url or not isinstance(url, str) or not url.startswith('http'):
         return False
 
-    # Extract domain for alternative sources
+    # Extract domain for alternative sources. Supports legacy clearbit URLs
+    # (https://logo.clearbit.com/<domain>) and direct favicon URLs.
+    domain = None
     match = re.search(r'logo\.clearbit\.com/([^/]+)', url)
     if match:
         domain = match.group(1)
+    else:
+        match = re.search(r'https?://([^/]+)', url)
+        if match:
+            domain = match.group(1).replace('www.', '')
+
+    if domain:
         sources = [
+            f'https://icons.duckduckgo.com/ip3/{domain}.ico',
+            f'https://www.google.com/s2/favicons?domain={domain}&sz=128',
+            f'https://icon.horse/icon/{domain}',
             url,
-            f'https://www.google.com/s2/favicons?domain={domain}&sz=64',
             f'https://{domain}/favicon.ico',
         ]
     else:
@@ -95,11 +112,23 @@ def download_icon(url, filepath, timeout=10):
             )
             with urllib.request.urlopen(req, timeout=timeout) as response:
                 data = response.read()
-                if len(data) > 500:  # Ignore tiny favicons
-                    with open(filepath, 'wb') as f:
-                        f.write(data)
-                    return True
-        except Exception as e:
+            if len(data) <= 500:
+                continue
+            # Reject HTML error pages (some sites return HTML for unknown favicons).
+            # Real image formats start with known magic bytes.
+            head = data[:8]
+            is_image = (
+                head[:8] == b'\x89PNG\r\n\x1a\n' or           # PNG
+                head[:3] == b'\xff\xd8\xff' or                 # JPEG
+                head[:4] == b'GIF8' or                         # GIF
+                head[:4] == b'RIFF' and head[8:12] == b'WEBP'  # WEBP
+            )
+            if not is_image:
+                continue
+            with open(filepath, 'wb') as f:
+                f.write(data)
+            return True
+        except Exception:
             continue
 
     return False

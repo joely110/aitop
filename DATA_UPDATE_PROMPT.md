@@ -131,11 +131,12 @@
 
 ## 注意事项
 
-1. 图标URL使用 `https://logo.clearbit.com/{domain}` 格式
+1. 图标URL使用 `https://logo.clearbit.com/{domain}` 格式（⚠️ Clearbit Logo API 已于 2025 年下线，仅作为占位/标识域名用；实际下载请运行 `python3 download_icons.py`，脚本会用 DuckDuckGo/Google/icon.horse 多源 fallback）
 2. GitHub项目头像使用 `https://github.com/{owner}.png?size=64` 格式
 3. 描述中必须包含数据来源
 4. 保持中英文双语
 5. 按要求更新 `lastUpdated` 时间戳
+6. **图标文件名必须与 `icons/` 目录下实际文件名完全一致**（区分大小写、`.cn`/`.com` 后缀）。历史上出现过把 `zhipuai.cn.png` 写成 `zhipuai.png`、`tencent.com.png` 写成 `tencent.png` 导致图标加载不出来（页面降级为字母头像）的问题。更新数据后务必运行 `python3 check_icons.py` 校验所有图标引用都能命中文件。
 
 ## 执行步骤
 
@@ -144,3 +145,5 @@
 3. 合并更新数据，保持ID一致性
 4. 验证JSON格式正确性
 5. 更新文件并记录更新时间
+6. 运行 `python3 download_icons.py` 下载新增图标（Clearbit 已失效，脚本会自动 fallback）
+7. 运行 `python3 check_icons.py` 校验所有图标引用都能命中 `icons/` 下的文件 —— 有缺失会返回非 0 退出码，必须修复后再提交

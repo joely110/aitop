@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+ruvector.db
+agentdb.rvf*
+.ruvector/
+*.rvf
+*.DS_Store
