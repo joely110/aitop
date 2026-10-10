@@ -1,1084 +1,1426 @@
 {
-    "rdbms":  [
-                  {
-                      "id":  1,
-                      "name":  "Oracle",
-                      "vendor":  "Oracle",
-                      "score":  1123.43,
-                      "type":  "商业关系型",
-                      "colors":  [
-                                     "#F80000",
-                                     "#F80000"
-                                 ],
-                      "desc":  "DB-Engines第一，1123.43分，企业级应用最广泛。数据源: db-engines.com",
-                      "icon":  "./icons/oracle.com.png"
-                  },
-                  {
-                      "id":  2,
-                      "name":  "MySQL",
-                      "vendor":  "Oracle",
-                      "score":  842.32,
-                      "type":  "开源关系型",
-                      "colors":  [
-                                     "#00758F",
-                                     "#4479A1"
-                                 ],
-                      "desc":  "DB-Engines第二，842.32分，最流行的开源数据库。数据源: db-engines.com",
-                      "icon":  "./icons/mysql.com.png"
-                  },
-                  {
-                      "id":  3,
-                      "name":  "SQL Server",
-                      "vendor":  "Microsoft",
-                      "score":  694.56,
-                      "type":  "商业关系型",
-                      "colors":  [
-                                     "#CC2927",
-                                     "#0078D4"
-                                 ],
-                      "desc":  "DB-Engines第三，694.56分，微软企业级数据库。数据源: db-engines.com",
-                      "icon":  "./icons/microsoft.com.png"
-                  },
-                  {
-                      "id":  4,
-                      "name":  "PostgreSQL",
-                      "vendor":  "PGDG",
-                      "score":  684.58,
-                      "type":  "开源关系型",
-                      "colors":  [
-                                     "#336791",
-                                     "#336791"
-                                 ],
-                      "desc":  "DB-Engines第四，684.58分，功能最强大的开源RDBMS。数据源: db-engines.com",
-                      "icon":  "./icons/postgresql.org.png"
-                  },
-                  {
-                      "id":  5,
-                      "name":  "Snowflake",
-                      "vendor":  "Snowflake",
-                      "score":  215.89,
-                      "type":  "云数仓",
-                      "colors":  [
-                                     "#29B5E8",
-                                     "#29B5E8"
-                                 ],
-                      "desc":  "DB-Engines第六，215.89分，云原生数据仓库。数据源: db-engines.com",
-                      "icon":  "./icons/snowflake.com.png"
-                  },
-                  {
-                      "id":  6,
-                      "name":  "IBM Db2",
-                      "vendor":  "IBM",
-                      "score":  112.07,
-                      "type":  "商业关系型",
-                      "colors":  [
-                                     "#0078D4",
-                                     "#0052A5"
-                                 ],
-                      "desc":  "DB-Engines第九，112.07分，企业级数据库。数据源: db-engines.com",
-                      "icon":  "./icons/ibm.com.png"
-                  },
-                  {
-                      "id":  7,
-                      "name":  "SQLite",
-                      "vendor":  "SQLite Consortium",
-                      "score":  95.94,
-                      "type":  "嵌入式关系型",
-                      "colors":  [
-                                     "#003545",
-                                     "#003545"
-                                 ],
-                      "desc":  "DB-Engines第十一，95.94分，轻量级嵌入式数据库。数据源: db-engines.com",
-                      "icon":  "https://logo.clearbit.com/sqlite.org"
-                  },
-                  {
-                      "id":  8,
-                      "name":  "MariaDB",
-                      "vendor":  "MariaDB",
-                      "score":  79.08,
-                      "type":  "开源关系型",
-                      "colors":  [
-                                     "#003545",
-                                     "#003545"
-                                 ],
-                      "desc":  "DB-Engines第十三，79.08分，MySQL兼容开源分支。数据源: db-engines.com",
-                      "icon":  "./icons/mariadb.org.png"
-                  },
-                  {
-                      "id":  9,
-                      "name":  "Apache Hive",
-                      "vendor":  "Apache",
-                      "score":  71.09,
-                      "type":  "Hadoop数仓",
-                      "colors":  [
-                                     "#D4A017",
-                                     "#D4A017"
-                                 ],
-                      "desc":  "DB-Engines第十五，71.09分，Hadoop生态SQL。数据源: db-engines.com",
-                      "icon":  "./icons/hive.apache.org.png"
-                  },
-                  {
-                      "id":  10,
-                      "name":  "Azure SQL Database",
-                      "vendor":  "Microsoft",
-                      "score":  70.77,
-                      "type":  "云关系型",
-                      "colors":  [
-                                     "#0078D4",
-                                     "#0078D4"
-                                 ],
-                      "desc":  "DB-Engines第十六，70.77分，Azure云数据库。数据源: db-engines.com",
-                      "icon":  "./icons/microsoft.com.png"
-                  },
-                  {
-                      "id":  11,
-                      "name":  "Microsoft Access",
-                      "vendor":  "Microsoft",
-                      "score":  64.3,
-                      "type":  "桌面关系型",
-                      "colors":  [
-                                     "#CC2927",
-                                     "#0078D4"
-                                 ],
-                      "desc":  "DB-Engines第十七，64.3分，Office数据库。数据源: db-engines.com",
-                      "icon":  "./icons/microsoft.com.png"
-                  },
-                  {
-                      "id":  12,
-                      "name":  "BigQuery",
-                      "vendor":  "Google",
-                      "score":  52.7,
-                      "type":  "Serverless数仓",
-                      "colors":  [
-                                     "#4285F4",
-                                     "#34A853"
-                                 ],
-                      "desc":  "DB-Engines第十九，52.7分，Google云数仓。数据源: db-engines.com",
-                      "icon":  "./icons/cloud.google.com.png"
-                  },
-                  {
-                      "id":  13,
-                      "name":  "SAP HANA",
-                      "vendor":  "SAP",
-                      "score":  31.55,
-                      "type":  "内存数据库",
-                      "colors":  [
-                                     "#0FAAFF",
-                                     "#003366"
-                                 ],
-                      "desc":  "DB-Engines第二十二，31.55分，SAP内存数据库。数据源: db-engines.com",
-                      "icon":  "https://logo.clearbit.com/sap.com"
-                  },
-                  {
-                      "id":  14,
-                      "name":  "Teradata",
-                      "vendor":  "Teradata",
-                      "score":  31.22,
-                      "type":  "分析数仓",
-                      "colors":  [
-                                     "#FF6B00",
-                                     "#FF6B00"
-                                 ],
-                      "desc":  "DB-Engines第二十三，31.22分，企业级数仓。数据源: db-engines.com",
-                      "icon":  "./icons/teradata.com.png"
-                  },
-                  {
-                      "id":  15,
-                      "name":  "ClickHouse",
-                      "vendor":  "ClickHouse Inc",
-                      "score":  24.95,
-                      "type":  "OLAP列式",
-                      "colors":  [
-                                     "#FFCC00",
-                                     "#FFCC00"
-                                 ],
-                      "desc":  "DB-Engines第二十六，24.95分，OLAP列式数据库。数据源: db-engines.com",
-                      "icon":  "./icons/clickhouse.com.png"
-                  },
-                  {
-                      "id":  16,
-                      "name":  "DuckDB",
-                      "vendor":  "DuckDB Foundation",
-                      "score":  10.3,
-                      "type":  "嵌入式分析",
-                      "colors":  [
-                                     "#00D2FF",
-                                     "#003366"
-                                 ],
-                      "desc":  "DB-Engines第四十二，10.3分，嵌入式分析数据库。数据源: db-engines.com",
-                      "icon":  "./icons/duckdb.org.png"
-                  },
-                  {
-                      "id":  17,
-                      "name":  "Amazon Aurora",
-                      "vendor":  "AWS",
-                      "score":  9.8,
-                      "type":  "云原生关系型",
-                      "colors":  [
-                                     "#FF9900",
-                                     "#232F3E"
-                                 ],
-                      "desc":  "DB-Engines第四十三，9.8分，AWS云原生数据库。数据源: db-engines.com",
-                      "icon":  "./icons/aws.amazon.com.png"
-                  },
-                  {
-                      "id":  18,
-                      "name":  "H2",
-                      "vendor":  "H2 Database Group",
-                      "score":  9.15,
-                      "type":  "Java嵌入式",
-                      "colors":  [
-                                     "#1E3A5F",
-                                     "#4A90D9"
-                                 ],
-                      "desc":  "DB-Engines第四十六，9.15分，Java嵌入式数据库。数据源: db-engines.com",
-                      "icon":  "./icons/h2database.com.png"
-                  }
-              ],
-    "kv":  [
-               {
-                   "id":  1,
-                   "name":  "Redis",
-                   "vendor":  "Redis Ltd",
-                   "score":  156.51,
-                   "type":  "内存键值",
-                   "colors":  [
-                                  "#DC382D",
-                                  "#DC382D"
-                              ],
-                   "desc":  "DB-Engines第八，156.51分，高性能内存键值存储。数据源: db-engines.com",
-                   "icon":  "./icons/redis.com.png"
-               },
-               {
-                   "id":  2,
-                   "name":  "DynamoDB",
-                   "vendor":  "AWS",
-                   "score":  54.19,
-                   "type":  "托管键值",
-                   "colors":  [
-                                  "#FF9900",
-                                  "#232F3E"
-                              ],
-                   "desc":  "DB-Engines第十八，54.19分，AWS全托管Serverless。数据源: db-engines.com",
-                   "icon":  "./icons/aws.amazon.com.png"
-               },
-               {
-                   "id":  3,
-                   "name":  "Memcached",
-                   "vendor":  "Memcached Project",
-                   "score":  14.26,
-                   "type":  "内存缓存",
-                   "colors":  [
-                                  "#4A4A4A",
-                                  "#4A4A4A"
-                              ],
-                   "desc":  "DB-Engines第三十八，14.26分，简单高效的内存缓存。数据源: db-engines.com",
-                   "icon":  "https://logo.clearbit.com/memcached.org"
-               },
-               {
-                   "id":  4,
-                   "name":  "etcd",
-                   "vendor":  "CNCF",
-                   "score":  7.1,
-                   "type":  "分布式键值",
-                   "colors":  [
-                                  "#4A4A4A",
-                                  "#4A4A4A"
-                              ],
-                   "desc":  "DB-Engines第五十三，7.1分，Kubernetes底层存储。数据源: db-engines.com",
-                   "icon":  "./icons/etcd.io.png"
-               },
-               {
-                   "id":  5,
-                   "name":  "Hazelcast",
-                   "vendor":  "Hazelcast Inc",
-                   "score":  4.61,
-                   "type":  "内存计算",
-                   "colors":  [
-                                  "#00D2FF",
-                                  "#1E3A5F"
-                              ],
-                   "desc":  "DB-Engines第六十八，4.61分，分布式内存计算平台。数据源: db-engines.com",
-                   "icon":  "./icons/hazelcast.com.png"
-               },
-               {
-                   "id":  6,
-                   "name":  "RocksDB",
-                   "vendor":  "Meta",
-                   "score":  3.94,
-                   "type":  "嵌入式键值",
-                   "colors":  [
-                                  "#4A4A4A",
-                                  "#4A4A4A"
-                              ],
-                   "desc":  "DB-Engines第七十四，3.94分，Facebook开源嵌入式KV。数据源: db-engines.com",
-                   "icon":  "./icons/rocksdb.org.png"
-               },
-               {
-                   "id":  7,
-                   "name":  "Riak KV",
-                   "vendor":  "Basho",
-                   "score":  3.12,
-                   "type":  "分布式键值",
-                   "colors":  [
-                                  "#4A4A4A",
-                                  "#4A4A4A"
-                              ],
-                   "desc":  "DB-Engines第八十七，3.12分，高可用分布式KV。数据源: db-engines.com",
-                   "icon":  "./icons/riak.com.png"
-               },
-               {
-                   "id":  8,
-                   "name":  "Ehcache",
-                   "vendor":  "Apache",
-                   "score":  2.74,
-                   "type":  "Java缓存",
-                   "colors":  [
-                                  "#4A4A4A",
-                                  "#4A4A4A"
-                              ],
-                   "desc":  "DB-Engines第九十六，2.74分，Java缓存框架。数据源: db-engines.com",
-                   "icon":  "https://logo.clearbit.com/ehcache.org"
-               }
-           ],
-    "document":  [
-                     {
-                         "id":  1,
-                         "name":  "MongoDB",
-                         "vendor":  "MongoDB Inc",
-                         "score":  384.88,
-                         "type":  "文档数据库",
-                         "colors":  [
-                                        "#02303A",
-                                        "#47A248"
-                                    ],
-                         "desc":  "DB-Engines第五，384.88分，最流行的文档数据库。数据源: db-engines.com",
-                         "icon":  "./icons/mongodb.com.png"
-                     },
-                     {
-                         "id":  2,
-                         "name":  "Firebase Realtime Database",
-                         "vendor":  "Google",
-                         "score":  15.85,
-                         "type":  "实时文档",
-                         "colors":  [
-                                        "#FF8C00",
-                                        "#FF8C00"
-                                    ],
-                         "desc":  "DB-Engines第三十七，15.85分，Firebase实时数据库。数据源: db-engines.com",
-                         "icon":  "./icons/google.com.png"
-                     },
-                     {
-                         "id":  3,
-                         "name":  "Cloud Firestore",
-                         "vendor":  "Google",
-                         "score":  8.96,
-                         "type":  "云文档",
-                         "colors":  [
-                                        "#4285F4",
-                                        "#34A853"
-                                    ],
-                         "desc":  "DB-Engines第四十八，8.96分，Google云文档数据库。数据源: db-engines.com",
-                         "icon":  "./icons/google.com.png"
-                     },
-                     {
-                         "id":  4,
-                         "name":  "Realm",
-                         "vendor":  "MongoDB",
-                         "score":  6.48,
-                         "type":  "移动文档",
-                         "colors":  [
-                                        "#02303A",
-                                        "#47A248"
-                                    ],
-                         "desc":  "DB-Engines第五十六，6.48分，移动端专用文档数据库。数据源: db-engines.com",
-                         "icon":  "./icons/mongodb.com.png"
-                     },
-                     {
-                         "id":  5,
-                         "name":  "CouchDB",
-                         "vendor":  "Apache",
-                         "score":  6.27,
-                         "type":  "文档数据库",
-                         "colors":  [
-                                        "#E48213",
-                                        "#E48213"
-                                    ],
-                         "desc":  "DB-Engines第五十八，6.27分，Apache文档数据库。数据源: db-engines.com",
-                         "icon":  "./icons/couchdb.apache.org.png"
-                     },
-                     {
-                         "id":  6,
-                         "name":  "Couchbase",
-                         "vendor":  "Couchbase Inc",
-                         "score":  9.69,
-                         "type":  "文档数据库",
-                         "colors":  [
-                                        "#1E3A5F",
-                                        "#1E3A5F"
-                                    ],
-                         "desc":  "DB-Engines第四十四，9.69分，高性能文档数据库。数据源: db-engines.com",
-                         "icon":  "./icons/couchbase.com.png"
-                     },
-                     {
-                         "id":  7,
-                         "name":  "Google Cloud Datastore",
-                         "vendor":  "Google",
-                         "score":  3.27,
-                         "type":  "托管文档",
-                         "colors":  [
-                                        "#4285F4",
-                                        "#34A853"
-                                    ],
-                         "desc":  "DB-Engines第八十六，3.27分，Google云文档存储。数据源: db-engines.com",
-                         "icon":  "./icons/google.com.png"
-                     },
-                     {
-                         "id":  8,
-                         "name":  "IBM Cloudant",
-                         "vendor":  "IBM",
-                         "score":  2.44,
-                         "type":  "托管文档",
-                         "colors":  [
-                                        "#0078D4",
-                                        "#0052A5"
-                                    ],
-                         "desc":  "DB-Engines第一百零七，2.44分，IBM托管文档数据库。数据源: db-engines.com",
-                         "icon":  "./icons/ibm.com.png"
-                     },
-                     {
-                         "id":  9,
-                         "name":  "RavenDB",
-                         "vendor":  "RavenDB",
-                         "score":  2.29,
-                         "type":  "文档数据库",
-                         "colors":  [
-                                        "#F7941D",
-                                        "#F7941D"
-                                    ],
-                         "desc":  "DB-Engines第一百一十二，2.29分，.NET原生文档数据库。数据源: db-engines.com",
-                         "icon":  "./icons/ravendb.net.png"
-                     },
-                     {
-                         "id":  10,
-                         "name":  "Amazon DocumentDB",
-                         "vendor":  "AWS",
-                         "score":  1.89,
-                         "type":  "托管文档",
-                         "colors":  [
-                                        "#FF9900",
-                                        "#232F3E"
-                                    ],
-                         "desc":  "DB-Engines第一百二十八，1.89分，AWS托管MongoDB兼容。数据源: db-engines.com",
-                         "icon":  "./icons/aws.amazon.com.png"
-                     }
-                 ],
-    "timeseries":  [
-                       {
-                           "id":  1,
-                           "name":  "InfluxDB",
-                           "vendor":  "InfluxData",
-                           "score":  21.37,
-                           "type":  "时序数据库",
-                           "colors":  [
-                                          "#0182FE",
-                                          "#0182FE"
-                                      ],
-                           "desc":  "DB-Engines第二十九，21.37分，时序数据库首选。数据源: db-engines.com",
-                           "icon":  "./icons/influxdata.com.png"
-                       },
-                       {
-                           "id":  2,
-                           "name":  "Prometheus",
-                           "vendor":  "CNCF",
-                           "score":  8.84,
-                           "type":  "监控时序",
-                           "colors":  [
-                                          "#E6522C",
-                                          "#E6522C"
-                                      ],
-                           "desc":  "DB-Engines第四十九，8.84分，云原生监控事实标准。数据源: db-engines.com",
-                           "icon":  "./icons/prometheus.io.png"
-                       },
-                       {
-                           "id":  3,
-                           "name":  "TimescaleDB",
-                           "vendor":  "Timescale",
-                           "score":  6.05,
-                           "type":  "时序PG扩展",
-                           "colors":  [
-                                          "#0182FE",
-                                          "#0182FE"
-                                      ],
-                           "desc":  "DB-Engines第六十一，6.05分，PostgreSQL时序扩展。数据源: db-engines.com",
-                           "icon":  "./icons/timescale.com.png"
-                       },
-                       {
-                           "id":  4,
-                           "name":  "Graphite",
-                           "vendor":  "Graphite Project",
-                           "score":  4.36,
-                           "type":  "监控时序",
-                           "colors":  [
-                                          "#4A4A4A",
-                                          "#4A4A4A"
-                                      ],
-                           "desc":  "DB-Engines第七十一，4.36分，监控指标存储。数据源: db-engines.com",
-                           "icon":  "./icons/graphiteapp.org.png"
-                       },
-                       {
-                           "id":  5,
-                           "name":  "QuestDB",
-                           "vendor":  "QuestDB",
-                           "score":  3.28,
-                           "type":  "高性能时序",
-                           "colors":  [
-                                          "#0182FE",
-                                          "#0182FE"
-                                      ],
-                           "desc":  "DB-Engines第八十五，3.28分，超高性能时序数据库。数据源: db-engines.com",
-                           "icon":  "./icons/questdb.io.png"
-                       },
-                       {
-                           "id":  6,
-                           "name":  "TDengine",
-                           "vendor":  "TDengine",
-                           "score":  3.1,
-                           "type":  "工业时序",
-                           "colors":  [
-                                          "#00D2FF",
-                                          "#003366"
-                                      ],
-                           "desc":  "DB-Engines第八十九，3.1分，国产工业时序数据库。数据源: db-engines.com",
-                           "icon":  "https://logo.clearbit.com/taosdata.com"
-                       },
-                       {
-                           "id":  7,
-                           "name":  "Apache IoTDB",
-                           "vendor":  "Apache",
-                           "score":  2.53,
-                           "type":  "IoT时序",
-                           "colors":  [
-                                          "#D4A017",
-                                          "#D4A017"
-                                      ],
-                           "desc":  "DB-Engines第一百零三，2.53分，Apache物联网时序数据库。数据源: db-engines.com",
-                           "icon":  "./icons/iotdb.apache.org.png"
-                       },
-                       {
-                           "id":  8,
-                           "name":  "Amazon Timestream",
-                           "vendor":  "AWS",
-                           "score":  1.28,
-                           "type":  "托管时序",
-                           "colors":  [
-                                          "#FF9900",
-                                          "#232F3E"
-                                      ],
-                           "desc":  "DB-Engines第一百六十四，1.28分，AWS托管时序数据库。数据源: db-engines.com",
-                           "icon":  "./icons/aws.amazon.com.png"
-                       }
-                   ],
-    "vector":  [
-                   {
-                       "id":  1,
-                       "name":  "Pinecone",
-                       "vendor":  "Pinecone Systems",
-                       "score":  9.32,
-                       "type":  "云向量",
-                       "colors":  [
-                                      "#4A4A4A",
-                                      "#4A4A4A"
-                                  ],
-                       "desc":  "DB-Engines第四十五，9.32分，云原生向量数据库。数据源: db-engines.com",
-                       "icon":  "./icons/pinecone.io.png"
-                   },
-                   {
-                       "id":  2,
-                       "name":  "Milvus",
-                       "vendor":  "Zilliz",
-                       "score":  6.54,
-                       "type":  "开源向量",
-                       "colors":  [
-                                      "#4A4A4A",
-                                      "#4A4A4A"
-                                  ],
-                       "desc":  "DB-Engines第五十五，6.54分，开源向量数据库。数据源: db-engines.com",
-                       "icon":  "./icons/milvus.io.png"
-                   },
-                   {
-                       "id":  3,
-                       "name":  "Qdrant",
-                       "vendor":  "Qdrant Team",
-                       "score":  6.21,
-                       "type":  "开源向量",
-                       "colors":  [
-                                      "#4A4A4A",
-                                      "#4A4A4A"
-                                  ],
-                       "desc":  "DB-Engines第五十九，6.21分，Rust高性能向量搜索。数据源: db-engines.com",
-                       "icon":  "./icons/qdrant.tech.png"
-                   },
-                   {
-                       "id":  4,
-                       "name":  "Weaviate",
-                       "vendor":  "Weaviate",
-                       "score":  4.88,
-                       "type":  "开源向量",
-                       "colors":  [
-                                      "#4A4A4A",
-                                      "#4A4A4A"
-                                  ],
-                       "desc":  "DB-Engines第六十六，4.88分，向量搜索引擎。数据源: db-engines.com",
-                       "icon":  "./icons/weaviate.io.png"
-                   },
-                   {
-                       "id":  5,
-                       "name":  "Chroma",
-                       "vendor":  "Chroma Team",
-                       "score":  3.01,
-                       "type":  "嵌入向量",
-                       "colors":  [
-                                      "#4A4A4A",
-                                      "#4A4A4A"
-                                  ],
-                       "desc":  "DB-Engines第九十一，3.01分，LLM友好向量数据库。数据源: db-engines.com",
-                       "icon":  "./icons/trychroma.com.png"
-                   },
-                   {
-                       "id":  6,
-                       "name":  "Elasticsearch",
-                       "vendor":  "Elastic",
-                       "score":  94.34,
-                       "type":  "向量搜索",
-                       "colors":  [
-                                      "#005571",
-                                      "#F4D03F"
-                                  ],
-                       "desc":  "DB-Engines第十二，94.34分，Elasticsearch向量搜索。数据源: db-engines.com",
-                       "icon":  "./icons/elastic.co.png"
-                   }
-               ],
-    "graph":  [
-                  {
-                      "id":  1,
-                      "name":  "Neo4j",
-                      "vendor":  "Neo4j Inc",
-                      "score":  49.59,
-                      "type":  "图数据库",
-                      "colors":  [
-                                     "#008496",
-                                     "#008496"
-                                 ],
-                      "desc":  "DB-Engines第二十，49.59分，图数据库领导者。数据源: db-engines.com",
-                      "icon":  "./icons/neo4j.com.png"
-                  },
-                  {
-                      "id":  2,
-                      "name":  "NebulaGraph",
-                      "vendor":  "Vesoft",
-                      "score":  1.93,
-                      "type":  "分布式图",
-                      "colors":  [
-                                     "#4A4A4A",
-                                     "#4A4A4A"
-                                 ],
-                      "desc":  "DB-Engines第一百二十四，1.93分，国产高性能图数据库。数据源: db-engines.com",
-                      "icon":  "./icons/vesoft.com.png"
-                  },
-                  {
-                      "id":  3,
-                      "name":  "JanusGraph",
-                      "vendor":  "JanusGraph",
-                      "score":  1.86,
-                      "type":  "分布式图",
-                      "colors":  [
-                                     "#4A4A4A",
-                                     "#4A4A4A"
-                                 ],
-                      "desc":  "DB-Engines第一百三十一，1.86分，Apache图数据库。数据源: db-engines.com",
-                      "icon":  "./icons/janusgraph.org.png"
-                  },
-                  {
-                      "id":  4,
-                      "name":  "TigerGraph",
-                      "vendor":  "TigerGraph",
-                      "score":  1.86,
-                      "type":  "分布式图",
-                      "colors":  [
-                                     "#4A4A4A",
-                                     "#4A4A4A"
-                                 ],
-                      "desc":  "DB-Engines第一百三十二，1.86分，高性能图数据库。数据源: db-engines.com",
-                      "icon":  "./icons/tigergraph.com.png"
-                  },
-                  {
-                      "id":  5,
-                      "name":  "Memgraph",
-                      "vendor":  "Memgraph",
-                      "score":  1.69,
-                      "type":  "实时图",
-                      "colors":  [
-                                     "#4A4A4A",
-                                     "#4A4A4A"
-                                 ],
-                      "desc":  "DB-Engines第一百三十七，1.69分，实时图数据库。数据源: db-engines.com",
-                      "icon":  "./icons/memgraph.com.png"
-                  },
-                  {
-                      "id":  6,
-                      "name":  "Dgraph",
-                      "vendor":  "Dgraph Labs",
-                      "score":  1.27,
-                      "type":  "分布式图",
-                      "colors":  [
-                                     "#4A4A4A",
-                                     "#4A4A4A"
-                                 ],
-                      "desc":  "DB-Engines第一百六十五，1.27分，分布式图数据库。数据源: db-engines.com",
-                      "icon":  "./icons/dgraph.io.png"
-                  },
-                  {
-                      "id":  7,
-                      "name":  "ArangoDB",
-                      "vendor":  "ArangoDB Inc",
-                      "score":  3.46,
-                      "type":  "多模图",
-                      "colors":  [
-                                     "#4A4A4A",
-                                     "#4A4A4A"
-                                 ],
-                      "desc":  "DB-Engines第八十一，3.46分，原生多模数据库。数据源: db-engines.com",
-                      "icon":  "./icons/arangodb.com.png"
-                  },
-                  {
-                      "id":  8,
-                      "name":  "Amazon Neptune",
-                      "vendor":  "AWS",
-                      "score":  2.66,
-                      "type":  "托管图",
-                      "colors":  [
-                                     "#FF9900",
-                                     "#232F3E"
-                                 ],
-                      "desc":  "DB-Engines第一百，2.66分，AWS托管图数据库。数据源: db-engines.com",
-                      "icon":  "./icons/aws.amazon.com.png"
-                  }
-              ],
-    "wideColumn":  [
-                       {
-                           "id":  1,
-                           "name":  "Apache HBase",
-                           "vendor":  "Apache",
-                           "score":  20.18,
-                           "type":  "列式NoSQL",
-                           "colors":  [
-                                          "#00ACE0",
-                                          "#00ACE0"
-                                      ],
-                           "desc":  "DB-Engines第三十二，20.18分，Hadoop生态NoSQL。数据源: db-engines.com",
-                           "icon":  "./icons/hbase.apache.org.png"
-                       },
-                       {
-                           "id":  2,
-                           "name":  "Apache Cassandra",
-                           "vendor":  "Apache",
-                           "score":  99.98,
-                           "type":  "列式分布",
-                           "colors":  [
-                                          "#1287B1",
-                                          "#1287B1"
-                                      ],
-                           "desc":  "DB-Engines第十，99.98分，高可用分布式数据库。数据源: db-engines.com",
-                           "icon":  "./icons/cassandra.apache.org.png"
-                       },
-                       {
-                           "id":  3,
-                           "name":  "ScyllaDB",
-                           "vendor":  "ScyllaDB",
-                           "score":  4.97,
-                           "type":  "Cassandra兼容",
-                           "colors":  [
-                                          "#4A4A4A",
-                                          "#4A4A4A"
-                                      ],
-                           "desc":  "DB-Engines第六十五，4.97分，C++高性能Cassandra兼容。数据源: db-engines.com",
-                           "icon":  "./icons/scylladb.com.png"
-                       },
-                       {
-                           "id":  4,
-                           "name":  "DataStax Enterprise",
-                           "vendor":  "DataStax",
-                           "score":  3.32,
-                           "type":  "Cassandra发行版",
-                           "colors":  [
-                                          "#4A4A4A",
-                                          "#4A4A4A"
-                                      ],
-                           "desc":  "DB-Engines第八十四，3.32分，DataStax Cassandra企业版。数据源: db-engines.com",
-                           "icon":  "./icons/datastax.com.png"
-                       },
-                       {
-                           "id":  5,
-                           "name":  "Azure Table Storage",
-                           "vendor":  "Microsoft",
-                           "score":  2.68,
-                           "type":  "托管宽列",
-                           "colors":  [
-                                          "#0078D4",
-                                          "#0078D4"
-                                      ],
-                           "desc":  "DB-Engines第九十八，2.68分，Azure表存储。数据源: db-engines.com",
-                           "icon":  "./icons/azure.microsoft.com.png"
-                       },
-                       {
-                           "id":  6,
-                           "name":  "Apache Accumulo",
-                           "vendor":  "Apache",
-                           "score":  2.57,
-                           "type":  "安全列式",
-                           "colors":  [
-                                          "#D4A017",
-                                          "#D4A017"
-                                      ],
-                           "desc":  "DB-Engines第一百零一，2.57分，Apache安全列式数据库。数据源: db-engines.com",
-                           "icon":  "./icons/accumulo.apache.org.png"
-                       },
-                       {
-                           "id":  7,
-                           "name":  "Google Bigtable",
-                           "vendor":  "Google",
-                           "score":  2.42,
-                           "type":  "列式存储",
-                           "colors":  [
-                                          "#4285F4",
-                                          "#34A853"
-                                      ],
-                           "desc":  "DB-Engines第一百零九，2.42分，Google内部列式存储。数据源: db-engines.com",
-                           "icon":  "./icons/google.com.png"
-                       }
-                   ],
-    "search":  [
-                   {
-                       "id":  1,
-                       "name":  "Splunk",
-                       "vendor":  "Splunk Inc",
-                       "score":  71.23,
-                       "type":  "搜索分析",
-                       "colors":  [
-                                      "#00E79A",
-                                      "#00E79A"
-                                  ],
-                       "desc":  "DB-Engines第十四，71.23分，机器数据分析平台。数据源: db-engines.com",
-                       "icon":  "./icons/splunk.com.png"
-                   },
-                   {
-                       "id":  2,
-                       "name":  "Apache Solr",
-                       "vendor":  "Apache",
-                       "score":  33.03,
-                       "type":  "搜索引擎",
-                       "colors":  [
-                                      "#F7931E",
-                                      "#F7931E"
-                                  ],
-                       "desc":  "DB-Engines第二十一，33.03分，Apache全文搜索。数据源: db-engines.com",
-                       "icon":  "./icons/solr.apache.org.png"
-                   },
-                   {
-                       "id":  3,
-                       "name":  "Algolia",
-                       "vendor":  "Algolia Inc",
-                       "score":  7.01,
-                       "type":  "搜索API",
-                       "colors":  [
-                                      "#5468FF",
-                                      "#5468FF"
-                                  ],
-                       "desc":  "DB-Engines第五十四，7.01分，搜索即服务API。数据源: db-engines.com",
-                       "icon":  "./icons/algolia.com.png"
-                   },
-                   {
-                       "id":  4,
-                       "name":  "Azure AI Search",
-                       "vendor":  "Microsoft",
-                       "score":  6.41,
-                       "type":  "云搜索",
-                       "colors":  [
-                                      "#0078D4",
-                                      "#0078D4"
-                                  ],
-                       "desc":  "DB-Engines第五十七，6.41分，Azure认知搜索。数据源: db-engines.com",
-                       "icon":  "./icons/azure.microsoft.com.png"
-                   },
-                   {
-                       "id":  5,
-                       "name":  "Sphinx",
-                       "vendor":  "Sphinx Search",
-                       "score":  5.77,
-                       "type":  "全文搜索",
-                       "colors":  [
-                                      "#4A4A4A",
-                                      "#4A4A4A"
-                                  ],
-                       "desc":  "DB-Engines第六十四，5.77分，SQL全文搜索引警。数据源: db-engines.com",
-                       "icon":  "https://logo.clearbit.com/sphinxsearch.com"
-                   },
-                   {
-                       "id":  6,
-                       "name":  "Meilisearch",
-                       "vendor":  "Meilisearch",
-                       "score":  2.65,
-                       "type":  "开源搜索",
-                       "colors":  [
-                                      "#FF8C00",
-                                      "#FF8C00"
-                                  ],
-                       "desc":  "DB-Engines第九十九，2.65分，Rust高性能搜索。数据源: db-engines.com",
-                       "icon":  "./icons/meilisearch.com.png"
-                   },
-                   {
-                       "id":  7,
-                       "name":  "Typesense",
-                       "vendor":  "Typesense",
-                       "score":  1.52,
-                       "type":  "开源搜索",
-                       "colors":  [
-                                      "#4A4A4A",
-                                      "#4A4A4A"
-                                  ],
-                       "desc":  "DB-Engines第一百四十二，1.52分，容错搜索引警。数据源: db-engines.com",
-                       "icon":  "./icons/typesense.com.png"
-                   }
-               ],
-    "bigdata":  [
-                    {
-                        "id":  1,
-                        "name":  "Snowflake",
-                        "vendor":  "Snowflake",
-                        "score":  215.89,
-                        "type":  "云数仓",
-                        "colors":  [
-                                       "#29B5E8",
-                                       "#29B5E8"
-                                   ],
-                        "desc":  "DB-Engines第六，215.89分，云原生数据仓库。数据源: db-engines.com",
-                        "icon":  "./icons/snowflake.com.png"
-                    },
-                    {
-                        "id":  2,
-                        "name":  "Databricks",
-                        "vendor":  "Databricks",
-                        "score":  165.81,
-                        "type":  "Lakehouse",
-                        "colors":  [
-                                       "#FF3621",
-                                       "#FF3621"
-                                   ],
-                        "desc":  "DB-Engines第七，165.81分，Lakehouse平台。数据源: db-engines.com",
-                        "icon":  "./icons/databricks.com.png"
-                    },
-                    {
-                        "id":  3,
-                        "name":  "Elasticsearch",
-                        "vendor":  "Elastic",
-                        "score":  94.34,
-                        "type":  "搜索引擎",
-                        "colors":  [
-                                       "#005571",
-                                       "#F4D03F"
-                                   ],
-                        "desc":  "DB-Engines第十二，94.34分，Elastic Stack核心。数据源: db-engines.com",
-                        "icon":  "./icons/elastic.co.png"
-                    },
-                    {
-                        "id":  4,
-                        "name":  "Apache Hive",
-                        "vendor":  "Apache",
-                        "score":  71.09,
-                        "type":  "Hadoop数仓",
-                        "colors":  [
-                                       "#D4A017",
-                                       "#D4A017"
-                                   ],
-                        "desc":  "DB-Engines第十五，71.09分，Hadoop数据仓库。数据源: db-engines.com",
-                        "icon":  "./icons/hive.apache.org.png"
-                    },
-                    {
-                        "id":  5,
-                        "name":  "BigQuery",
-                        "vendor":  "Google",
-                        "score":  52.7,
-                        "type":  "Serverless数仓",
-                        "colors":  [
-                                       "#4285F4",
-                                       "#34A853"
-                                   ],
-                        "desc":  "DB-Engines第十九，52.7分，Google Serverless数仓。数据源: db-engines.com",
-                        "icon":  "./icons/google.com.png"
-                    },
-                    {
-                        "id":  6,
-                        "name":  "Amazon Redshift",
-                        "vendor":  "AWS",
-                        "score":  16.77,
-                        "type":  "云数仓",
-                        "colors":  [
-                                       "#FF9900",
-                                       "#232F3E"
-                                   ],
-                        "desc":  "DB-Engines第三十六，16.77分，AWS数据仓库。数据源: db-engines.com",
-                        "icon":  "./icons/aws.amazon.com.png"
-                    },
-                    {
-                        "id":  7,
-                        "name":  "Azure Synapse",
-                        "vendor":  "Microsoft",
-                        "score":  17.19,
-                        "type":  "分析平台",
-                        "colors":  [
-                                       "#0078D4",
-                                       "#0078D4"
-                                   ],
-                        "desc":  "DB-Engines第三十五，17.19分，Azure统一分析平台。数据源: db-engines.com",
-                        "icon":  "./icons/azure.microsoft.com.png"
-                    },
-                    {
-                        "id":  8,
-                        "name":  "Firebolt",
-                        "vendor":  "Firebolt",
-                        "score":  3.85,
-                        "type":  "分析数仓",
-                        "colors":  [
-                                       "#FFD43B",
-                                       "#1E3A5F"
-                                   ],
-                        "desc":  "DB-Engines第七十三，3.85分，新一代云分析数仓。数据源: db-engines.com",
-                        "icon":  "./icons/firebolt.io.png"
-                    },
-                    {
-                        "id":  9,
-                        "name":  "Dremio",
-                        "vendor":  "Dremio",
-                        "score":  3.42,
-                        "type":  "数据湖",
-                        "colors":  [
-                                       "#5E5E5E",
-                                       "#4A4A4A"
-                                   ],
-                        "desc":  "DB-Engines第七十七，3.42分，开源数据湖引擎。数据源: db-engines.com"
-                    },
-                    {
-                        "id":  10,
-                        "name":  "StarRocks",
-                        "vendor":  "StarRocks",
-                        "score":  2.58,
-                        "type":  "OLAP引擎",
-                        "colors":  [
-                                       "#00D2FF",
-                                       "#003366"
-                                   ],
-                        "desc":  "DB-Engines第一百零二，2.58分，国产高性能OLAP。数据源: db-engines.com"
-                    }
-                ]
+  "rdbms": [
+    {
+      "id": 1,
+      "name": "Oracle",
+      "vendor": "Oracle",
+      "score": 1119.79,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第1名，1119.79分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #1, score: 1119.79",
+      "icon": "./icons/oracle.com.png"
+    },
+    {
+      "id": 2,
+      "name": "MySQL",
+      "vendor": "Oracle",
+      "score": 837.96,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第2名，837.96分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #2, score: 837.96",
+      "icon": "./icons/mysql.com.png"
+    },
+    {
+      "id": 3,
+      "name": "Microsoft SQL Server",
+      "vendor": "Microsoft",
+      "score": 694.47,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第3名，694.47分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #3, score: 694.47",
+      "icon": "./icons/microsoft.com.png"
+    },
+    {
+      "id": 4,
+      "name": "PostgreSQL",
+      "vendor": "PGDG",
+      "score": 688.75,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第4名，688.75分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #4, score: 688.75",
+      "icon": "./icons/postgresql.org.png"
+    },
+    {
+      "id": 5,
+      "name": "Snowflake",
+      "vendor": "Snowflake",
+      "score": 221.3,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第6名，221.3分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #6, score: 221.3",
+      "icon": "./icons/snowflake.com.png"
+    },
+    {
+      "id": 6,
+      "name": "IBM Db2",
+      "vendor": "IBM",
+      "score": 106.29,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第9名，106.29分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #9, score: 106.29",
+      "icon": "./icons/ibm.com.png"
+    },
+    {
+      "id": 7,
+      "name": "SQLite",
+      "vendor": "SQLite Consortium",
+      "score": 95.73,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第11名，95.73分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #11, score: 95.73",
+      "icon": "./icons/sqlite.png"
+    },
+    {
+      "id": 8,
+      "name": "MariaDB",
+      "vendor": "MariaDB",
+      "score": 75.6,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第13名，75.6分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #13, score: 75.6",
+      "icon": "./icons/mariadb.org.png"
+    },
+    {
+      "id": 9,
+      "name": "Apache Hive",
+      "vendor": "Apache",
+      "score": 69.58,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第14名，69.58分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #14, score: 69.58",
+      "icon": "./icons/hive.apache.org.png"
+    },
+    {
+      "id": 10,
+      "name": "Microsoft Azure SQL Database",
+      "vendor": "Microsoft",
+      "score": 68.55,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第16名，68.55分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #16, score: 68.55",
+      "icon": "./icons/microsoft.com.png"
+    },
+    {
+      "id": 11,
+      "name": "Microsoft Access",
+      "vendor": "Microsoft",
+      "score": 63.32,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第17名，63.32分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #17, score: 63.32",
+      "icon": "./icons/microsoft.com.png"
+    },
+    {
+      "id": 12,
+      "name": "Google BigQuery",
+      "vendor": "Google",
+      "score": 49.78,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第19名，49.78分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #19, score: 49.78",
+      "icon": "./icons/cloud.google.com.png"
+    },
+    {
+      "id": 13,
+      "name": "SAP HANA",
+      "vendor": "SAP",
+      "score": 32.4,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第22名，32.4分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #22, score: 32.4",
+      "icon": "./icons/sap.com.png"
+    },
+    {
+      "id": 14,
+      "name": "Teradata",
+      "vendor": "Teradata",
+      "score": 31.23,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第23名，31.23分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #23, score: 31.23",
+      "icon": "./icons/teradata.com.png"
+    },
+    {
+      "id": 15,
+      "name": "FileMaker",
+      "vendor": "FileMaker",
+      "score": 29.8,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第24名，29.8分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #24, score: 29.8",
+      "icon": "./icons/filemaker.png"
+    },
+    {
+      "id": 16,
+      "name": "ClickHouse",
+      "vendor": "ClickHouse Inc",
+      "score": 26.18,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第25名，26.18分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #25, score: 26.18",
+      "icon": "./icons/clickhouse.com.png"
+    },
+    {
+      "id": 17,
+      "name": "SAP Adaptive Server",
+      "vendor": "SAP",
+      "score": 24.87,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第26名，24.87分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #26, score: 24.87",
+      "icon": "./icons/sap.png"
+    },
+    {
+      "id": 18,
+      "name": "Apache Spark (SQL)",
+      "vendor": "Apache",
+      "score": 22.37,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第29名，22.37分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #29, score: 22.37",
+      "icon": "./icons/spark.png"
+    },
+    {
+      "id": 19,
+      "name": "Microsoft Fabric",
+      "vendor": "Microsoft",
+      "score": 18.99,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第32名，18.99分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #32, score: 18.99",
+      "icon": "./icons/microsoft.com.png"
+    },
+    {
+      "id": 20,
+      "name": "Firebird",
+      "vendor": "Firebird",
+      "score": 18.36,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第33名，18.36分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #33, score: 18.36",
+      "icon": "./icons/firebird.png"
+    },
+    {
+      "id": 21,
+      "name": "Amazon Redshift",
+      "vendor": "Amazon",
+      "score": 17.08,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第35名，17.08分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #35, score: 17.08",
+      "icon": "./icons/aws.amazon.com.png"
+    },
+    {
+      "id": 22,
+      "name": "Microsoft Azure Synapse Analytics",
+      "vendor": "Microsoft",
+      "score": 15.9,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第36名，15.9分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #36, score: 15.9",
+      "icon": "./icons/microsoft.com.png"
+    },
+    {
+      "id": 23,
+      "name": "Informix",
+      "vendor": "Informix",
+      "score": 13.29,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第38名，13.29分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #38, score: 13.29",
+      "icon": "./icons/informix.png"
+    },
+    {
+      "id": 24,
+      "name": "Apache Flink",
+      "vendor": "Apache",
+      "score": 11.57,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第40名，11.57分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #40, score: 11.57",
+      "icon": "./icons/flink.png"
+    },
+    {
+      "id": 25,
+      "name": "DuckDB",
+      "vendor": "DuckDB",
+      "score": 11.43,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第41名，11.43分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #41, score: 11.43",
+      "icon": "./icons/duckdb.org.png"
+    },
+    {
+      "id": 26,
+      "name": "Apache Impala",
+      "vendor": "Apache",
+      "score": 11.04,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第42名，11.04分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #42, score: 11.04",
+      "icon": "./icons/apache.png"
+    },
+    {
+      "id": 27,
+      "name": "Amazon Aurora",
+      "vendor": "AWS",
+      "score": 10.15,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第43名，10.15分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #43, score: 10.15",
+      "icon": "./icons/aws.amazon.com.png"
+    },
+    {
+      "id": 28,
+      "name": "H2",
+      "vendor": "H2",
+      "score": 9.15,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第47名，9.15分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #47, score: 9.15",
+      "icon": "./icons/h2database.com.png"
+    },
+    {
+      "id": 29,
+      "name": "Trino",
+      "vendor": "Trino",
+      "score": 8.0,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第49名，8.0分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #49, score: 8.0",
+      "icon": "./icons/trino.png"
+    },
+    {
+      "id": 30,
+      "name": "Vertica",
+      "vendor": "Vertica",
+      "score": 7.91,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第50名，7.91分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #50, score: 7.91",
+      "icon": "./icons/vertica.com.png"
+    },
+    {
+      "id": 31,
+      "name": "dBASE",
+      "vendor": "dBASE",
+      "score": 7.04,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第55名，7.04分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #55, score: 7.04",
+      "icon": "./icons/db.png"
+    },
+    {
+      "id": 32,
+      "name": "Presto",
+      "vendor": "Presto",
+      "score": 6.23,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第61名，6.23分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #61, score: 6.23",
+      "icon": "./icons/presto.png"
+    },
+    {
+      "id": 33,
+      "name": "Netezza",
+      "vendor": "Netezza",
+      "score": 5.87,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第62名，5.87分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #62, score: 5.87",
+      "icon": "./icons/netezza.png"
+    },
+    {
+      "id": 34,
+      "name": "Greenplum",
+      "vendor": "Greenplum",
+      "score": 5.75,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第64名，5.75分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #64, score: 5.75",
+      "icon": "./icons/greenplum.png"
+    },
+    {
+      "id": 35,
+      "name": "Oracle Essbase",
+      "vendor": "Oracle",
+      "score": 4.29,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第72名，4.29分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #72, score: 4.29",
+      "icon": "./icons/oracle.com.png"
+    },
+    {
+      "id": 36,
+      "name": "Interbase",
+      "vendor": "Interbase",
+      "score": 3.76,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第77名，3.76分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #77, score: 3.76",
+      "icon": "./icons/interbase.png"
+    },
+    {
+      "id": 37,
+      "name": "OpenEdge",
+      "vendor": "OpenEdge",
+      "score": 3.45,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第79名，3.45分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #79, score: 3.45",
+      "icon": "./icons/progress.png"
+    },
+    {
+      "id": 38,
+      "name": "SAP SQL Anywhere",
+      "vendor": "SAP",
+      "score": 3.32,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第81名，3.32分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #81, score: 3.32",
+      "icon": "./icons/sap.png"
+    },
+    {
+      "id": 39,
+      "name": "Alibaba Cloud PolarDB",
+      "vendor": "Alibaba",
+      "score": 3.16,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第85名，3.16分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #85, score: 3.16",
+      "icon": "./icons/alibaba.png"
+    },
+    {
+      "id": 40,
+      "name": "Microsoft Azure Data Explorer",
+      "vendor": "Microsoft",
+      "score": 3.13,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第86名，3.13分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #86, score: 3.13",
+      "icon": "./icons/microsoft.com.png"
+    },
+    {
+      "id": 41,
+      "name": "SingleStore",
+      "vendor": "SingleStore",
+      "score": 3.06,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第88名，3.06分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #88, score: 3.06",
+      "icon": "./icons/singlestore.png"
+    },
+    {
+      "id": 42,
+      "name": "Ingres",
+      "vendor": "Ingres",
+      "score": 3.03,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第91名，3.03分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #91, score: 3.03",
+      "icon": "./icons/ingres.png"
+    },
+    {
+      "id": 43,
+      "name": "Apache Derby",
+      "vendor": "Apache",
+      "score": 2.98,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第93名，2.98分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #93, score: 2.98",
+      "icon": "./icons/derby.png"
+    },
+    {
+      "id": 44,
+      "name": "Google Cloud Spanner",
+      "vendor": "Google",
+      "score": 2.92,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第94名，2.92分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #94, score: 2.92",
+      "icon": "./icons/cloud.google.com.png"
+    },
+    {
+      "id": 45,
+      "name": "HyperSQL",
+      "vendor": "HyperSQL",
+      "score": 2.5,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第104名，2.5分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #104, score: 2.5",
+      "icon": "./icons/hypersql.png"
+    },
+    {
+      "id": 46,
+      "name": "SAP IQ",
+      "vendor": "SAP",
+      "score": 2.24,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第116名，2.24分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #116, score: 2.24",
+      "icon": "./icons/sap.png"
+    },
+    {
+      "id": 47,
+      "name": "YugabyteDB",
+      "vendor": "YugabyteDB",
+      "score": 2.21,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第117名，2.21分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #117, score: 2.21",
+      "icon": "./icons/yugabytedb.png"
+    },
+    {
+      "id": 48,
+      "name": "4D",
+      "vendor": "4D",
+      "score": 2.09,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第120名，2.09分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #120, score: 2.09",
+      "icon": "./icons/4d.png"
+    },
+    {
+      "id": 49,
+      "name": "Citus",
+      "vendor": "Citus",
+      "score": 2.08,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第122名，2.08分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #122, score: 2.08",
+      "icon": "./icons/citusdata.png"
+    },
+    {
+      "id": 50,
+      "name": "Apache Phoenix",
+      "vendor": "Apache",
+      "score": 2.02,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第125名，2.02分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #125, score: 2.02",
+      "icon": "./icons/apache.png"
+    },
+    {
+      "id": 51,
+      "name": "GBase",
+      "vendor": "GBase",
+      "score": 1.87,
+      "type": "关系型",
+      "colors": [
+        "#336791",
+        "#4479A1"
+      ],
+      "desc": "DB-Engines第131名，1.87分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #131, score: 1.87",
+      "icon": "./icons/gbase.png"
+    }
+  ],
+  "document": [
+    {
+      "id": 1,
+      "name": "MongoDB",
+      "vendor": "MongoDB Inc",
+      "score": 374.64,
+      "type": "文档数据库",
+      "colors": [
+        "#02303A",
+        "#47A248"
+      ],
+      "desc": "DB-Engines第5名，374.64分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #5, score: 374.64",
+      "icon": "./icons/mongodb.com.png"
+    },
+    {
+      "id": 2,
+      "name": "Firebase Realtime Database",
+      "vendor": "Google",
+      "score": 15.55,
+      "type": "文档数据库",
+      "colors": [
+        "#02303A",
+        "#47A248"
+      ],
+      "desc": "DB-Engines第37名，15.55分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #37, score: 15.55",
+      "icon": "./icons/google.com.png"
+    },
+    {
+      "id": 3,
+      "name": "Google Cloud Firestore",
+      "vendor": "Google",
+      "score": 8.73,
+      "type": "文档数据库",
+      "colors": [
+        "#02303A",
+        "#47A248"
+      ],
+      "desc": "DB-Engines第48名，8.73分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #48, score: 8.73",
+      "icon": "./icons/cloud.google.com.png"
+    },
+    {
+      "id": 4,
+      "name": "Realm",
+      "vendor": "Realm",
+      "score": 6.73,
+      "type": "文档数据库",
+      "colors": [
+        "#02303A",
+        "#47A248"
+      ],
+      "desc": "DB-Engines第56名，6.73分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #56, score: 6.73",
+      "icon": "./icons/mongodb.com.png"
+    },
+    {
+      "id": 5,
+      "name": "CouchDB",
+      "vendor": "Apache",
+      "score": 6.24,
+      "type": "文档数据库",
+      "colors": [
+        "#02303A",
+        "#47A248"
+      ],
+      "desc": "DB-Engines第60名，6.24分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #60, score: 6.24",
+      "icon": "./icons/couchdb.apache.org.png"
+    },
+    {
+      "id": 6,
+      "name": "Google Cloud Datastore",
+      "vendor": "Google",
+      "score": 3.32,
+      "type": "文档数据库",
+      "colors": [
+        "#02303A",
+        "#47A248"
+      ],
+      "desc": "DB-Engines第82名，3.32分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #82, score: 3.32",
+      "icon": "./icons/cloud.google.com.png"
+    },
+    {
+      "id": 7,
+      "name": "RethinkDB",
+      "vendor": "RethinkDB",
+      "score": 2.49,
+      "type": "文档数据库",
+      "colors": [
+        "#02303A",
+        "#47A248"
+      ],
+      "desc": "DB-Engines第106名，2.49分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #106, score: 2.49",
+      "icon": "./icons/rethinkdb.png"
+    },
+    {
+      "id": 8,
+      "name": "IBM Cloudant",
+      "vendor": "IBM",
+      "score": 2.43,
+      "type": "文档数据库",
+      "colors": [
+        "#02303A",
+        "#47A248"
+      ],
+      "desc": "DB-Engines第109名，2.43分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #109, score: 2.43",
+      "icon": "./icons/ibm.com.png"
+    },
+    {
+      "id": 9,
+      "name": "RavenDB",
+      "vendor": "RavenDB",
+      "score": 2.27,
+      "type": "文档数据库",
+      "colors": [
+        "#02303A",
+        "#47A248"
+      ],
+      "desc": "DB-Engines第114名，2.27分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #114, score: 2.27",
+      "icon": "./icons/ravendb.net.png"
+    },
+    {
+      "id": 10,
+      "name": "CloudKit",
+      "vendor": "CloudKit",
+      "score": 2.17,
+      "type": "文档数据库",
+      "colors": [
+        "#02303A",
+        "#47A248"
+      ],
+      "desc": "DB-Engines第118名，2.17分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #118, score: 2.17",
+      "icon": "./icons/apple.png"
+    }
+  ],
+  "kv": [
+    {
+      "id": 1,
+      "name": "Redis",
+      "vendor": "Redis Ltd",
+      "score": 156.09,
+      "type": "键值存储",
+      "colors": [
+        "#DC382D",
+        "#DC382D"
+      ],
+      "desc": "DB-Engines第8名，156.09分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #8, score: 156.09",
+      "icon": "./icons/redis.com.png"
+    },
+    {
+      "id": 2,
+      "name": "Memcached",
+      "vendor": "Memcached",
+      "score": 12.96,
+      "type": "键值存储",
+      "colors": [
+        "#DC382D",
+        "#DC382D"
+      ],
+      "desc": "DB-Engines第39名，12.96分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #39, score: 12.96",
+      "icon": "./icons/memcached.png"
+    },
+    {
+      "id": 3,
+      "name": "etcd",
+      "vendor": "etcd",
+      "score": 7.35,
+      "type": "键值存储",
+      "colors": [
+        "#DC382D",
+        "#DC382D"
+      ],
+      "desc": "DB-Engines第52名，7.35分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #52, score: 7.35",
+      "icon": "./icons/etcd.io.png"
+    },
+    {
+      "id": 4,
+      "name": "Hazelcast",
+      "vendor": "Hazelcast",
+      "score": 4.58,
+      "type": "键值存储",
+      "colors": [
+        "#DC382D",
+        "#DC382D"
+      ],
+      "desc": "DB-Engines第68名，4.58分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #68, score: 4.58",
+      "icon": "./icons/hazelcast.com.png"
+    },
+    {
+      "id": 5,
+      "name": "RocksDB",
+      "vendor": "RocksDB",
+      "score": 4.25,
+      "type": "键值存储",
+      "colors": [
+        "#DC382D",
+        "#DC382D"
+      ],
+      "desc": "DB-Engines第73名，4.25分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #73, score: 4.25",
+      "icon": "./icons/rocksdb.org.png"
+    },
+    {
+      "id": 6,
+      "name": "Riak KV",
+      "vendor": "Riak",
+      "score": 3.07,
+      "type": "键值存储",
+      "colors": [
+        "#DC382D",
+        "#DC382D"
+      ],
+      "desc": "DB-Engines第87名，3.07分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #87, score: 3.07",
+      "icon": "./icons/riak.com.png"
+    },
+    {
+      "id": 7,
+      "name": "Valkey",
+      "vendor": "Valkey",
+      "score": 2.86,
+      "type": "键值存储",
+      "colors": [
+        "#DC382D",
+        "#DC382D"
+      ],
+      "desc": "DB-Engines第95名，2.86分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #95, score: 2.86",
+      "icon": "./icons/valkey.png"
+    },
+    {
+      "id": 8,
+      "name": "Ehcache",
+      "vendor": "Ehcache",
+      "score": 2.74,
+      "type": "键值存储",
+      "colors": [
+        "#DC382D",
+        "#DC382D"
+      ],
+      "desc": "DB-Engines第100名，2.74分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #100, score: 2.74",
+      "icon": "./icons/ehcache.png"
+    },
+    {
+      "id": 9,
+      "name": "GemFire",
+      "vendor": "GemFire",
+      "score": 2.54,
+      "type": "键值存储",
+      "colors": [
+        "#DC382D",
+        "#DC382D"
+      ],
+      "desc": "DB-Engines第102名，2.54分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #102, score: 2.54",
+      "icon": "./icons/gemfire.png"
+    },
+    {
+      "id": 10,
+      "name": "LMDB",
+      "vendor": "LMDB",
+      "score": 1.93,
+      "type": "键值存储",
+      "colors": [
+        "#DC382D",
+        "#DC382D"
+      ],
+      "desc": "DB-Engines第127名，1.93分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #127, score: 1.93",
+      "icon": "./icons/lmdb.png"
+    }
+  ],
+  "wideColumn": [
+    {
+      "id": 1,
+      "name": "Apache Cassandra",
+      "vendor": "Apache",
+      "score": 98.86,
+      "type": "宽列存储",
+      "colors": [
+        "#1287B1",
+        "#1287B1"
+      ],
+      "desc": "DB-Engines第10名，98.86分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #10, score: 98.86",
+      "icon": "./icons/cassandra.apache.org.png"
+    },
+    {
+      "id": 2,
+      "name": "Apache HBase",
+      "vendor": "Apache",
+      "score": 18.22,
+      "type": "宽列存储",
+      "colors": [
+        "#1287B1",
+        "#1287B1"
+      ],
+      "desc": "DB-Engines第34名，18.22分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #34, score: 18.22",
+      "icon": "./icons/hbase.apache.org.png"
+    },
+    {
+      "id": 3,
+      "name": "ScyllaDB",
+      "vendor": "ScyllaDB",
+      "score": 4.76,
+      "type": "宽列存储",
+      "colors": [
+        "#1287B1",
+        "#1287B1"
+      ],
+      "desc": "DB-Engines第66名，4.76分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #66, score: 4.76",
+      "icon": "./icons/scylladb.com.png"
+    },
+    {
+      "id": 4,
+      "name": "Datastax Enterprise",
+      "vendor": "Datastax",
+      "score": 3.17,
+      "type": "宽列存储",
+      "colors": [
+        "#1287B1",
+        "#1287B1"
+      ],
+      "desc": "DB-Engines第84名，3.17分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #84, score: 3.17",
+      "icon": "./icons/datastax.png"
+    },
+    {
+      "id": 5,
+      "name": "Microsoft Azure Table Storage",
+      "vendor": "Microsoft",
+      "score": 2.65,
+      "type": "宽列存储",
+      "colors": [
+        "#1287B1",
+        "#1287B1"
+      ],
+      "desc": "DB-Engines第101名，2.65分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #101, score: 2.65",
+      "icon": "./icons/microsoft.com.png"
+    },
+    {
+      "id": 6,
+      "name": "Apache Accumulo",
+      "vendor": "Apache",
+      "score": 2.51,
+      "type": "宽列存储",
+      "colors": [
+        "#1287B1",
+        "#1287B1"
+      ],
+      "desc": "DB-Engines第103名，2.51分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #103, score: 2.51",
+      "icon": "./icons/accumulo.apache.org.png"
+    }
+  ],
+  "search": [
+    {
+      "id": 1,
+      "name": "Splunk",
+      "vendor": "Splunk Inc",
+      "score": 69.25,
+      "type": "搜索引擎",
+      "colors": [
+        "#F7931E",
+        "#F7931E"
+      ],
+      "desc": "DB-Engines第15名，69.25分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #15, score: 69.25",
+      "icon": "./icons/splunk.com.png"
+    },
+    {
+      "id": 2,
+      "name": "Apache Solr",
+      "vendor": "Apache",
+      "score": 32.41,
+      "type": "搜索引擎",
+      "colors": [
+        "#F7931E",
+        "#F7931E"
+      ],
+      "desc": "DB-Engines第21名，32.41分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #21, score: 32.41",
+      "icon": "./icons/solr.apache.org.png"
+    },
+    {
+      "id": 3,
+      "name": "Algolia",
+      "vendor": "Algolia Inc",
+      "score": 6.45,
+      "type": "搜索引擎",
+      "colors": [
+        "#F7931E",
+        "#F7931E"
+      ],
+      "desc": "DB-Engines第57名，6.45分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #57, score: 6.45",
+      "icon": "./icons/algolia.com.png"
+    },
+    {
+      "id": 4,
+      "name": "Microsoft Azure AI Search",
+      "vendor": "Microsoft",
+      "score": 6.33,
+      "type": "搜索引擎",
+      "colors": [
+        "#F7931E",
+        "#F7931E"
+      ],
+      "desc": "DB-Engines第58名，6.33分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #58, score: 6.33",
+      "icon": "./icons/microsoft.com.png"
+    },
+    {
+      "id": 5,
+      "name": "Sphinx",
+      "vendor": "Sphinx",
+      "score": 5.84,
+      "type": "搜索引擎",
+      "colors": [
+        "#F7931E",
+        "#F7931E"
+      ],
+      "desc": "DB-Engines第63名，5.84分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #63, score: 5.84",
+      "icon": "./icons/sphinxsearch.png"
+    },
+    {
+      "id": 6,
+      "name": "Coveo",
+      "vendor": "Coveo",
+      "score": 2.15,
+      "type": "搜索引擎",
+      "colors": [
+        "#F7931E",
+        "#F7931E"
+      ],
+      "desc": "DB-Engines第119名，2.15分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #119, score: 2.15",
+      "icon": "./icons/coveo.png"
+    }
+  ],
+  "graph": [
+    {
+      "id": 1,
+      "name": "Neo4j",
+      "vendor": "Neo4j Inc",
+      "score": 48.88,
+      "type": "图数据库",
+      "colors": [
+        "#008496",
+        "#008496"
+      ],
+      "desc": "DB-Engines第20名，48.88分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #20, score: 48.88",
+      "icon": "./icons/neo4j.com.png"
+    }
+  ],
+  "spatial": [
+    {
+      "id": 1,
+      "name": "PostGIS",
+      "vendor": "PostGIS",
+      "score": 23.96,
+      "type": "空间数据库",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第27名，23.96分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #27, score: 23.96",
+      "icon": "./icons/postgis.png"
+    }
+  ],
+  "timeseries": [
+    {
+      "id": 1,
+      "name": "InfluxDB",
+      "vendor": "InfluxData",
+      "score": 21.22,
+      "type": "时序数据库",
+      "colors": [
+        "#0182FE",
+        "#0182FE"
+      ],
+      "desc": "DB-Engines第31名，21.22分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #31, score: 21.22",
+      "icon": "./icons/influxdata.com.png"
+    },
+    {
+      "id": 2,
+      "name": "Prometheus",
+      "vendor": "Prometheus",
+      "score": 9.72,
+      "type": "时序数据库",
+      "colors": [
+        "#0182FE",
+        "#0182FE"
+      ],
+      "desc": "DB-Engines第45名，9.72分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #45, score: 9.72",
+      "icon": "./icons/prometheus.io.png"
+    },
+    {
+      "id": 3,
+      "name": "TimescaleDB",
+      "vendor": "Timescale",
+      "score": 6.32,
+      "type": "时序数据库",
+      "colors": [
+        "#0182FE",
+        "#0182FE"
+      ],
+      "desc": "DB-Engines第59名，6.32分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #59, score: 6.32",
+      "icon": "./icons/timescale.com.png"
+    },
+    {
+      "id": 4,
+      "name": "Graphite",
+      "vendor": "Graphite",
+      "score": 4.2,
+      "type": "时序数据库",
+      "colors": [
+        "#0182FE",
+        "#0182FE"
+      ],
+      "desc": "DB-Engines第74名，4.2分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #74, score: 4.2",
+      "icon": "./icons/graphiteapp.org.png"
+    },
+    {
+      "id": 5,
+      "name": "QuestDB",
+      "vendor": "QuestDB",
+      "score": 3.05,
+      "type": "时序数据库",
+      "colors": [
+        "#0182FE",
+        "#0182FE"
+      ],
+      "desc": "DB-Engines第89名，3.05分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #89, score: 3.05",
+      "icon": "./icons/questdb.io.png"
+    },
+    {
+      "id": 6,
+      "name": "TDengine",
+      "vendor": "TDengine",
+      "score": 3.04,
+      "type": "时序数据库",
+      "colors": [
+        "#0182FE",
+        "#0182FE"
+      ],
+      "desc": "DB-Engines第90名，3.04分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #90, score: 3.04",
+      "icon": "./icons/tdengine.png"
+    }
+  ],
+  "vector": [
+    {
+      "id": 1,
+      "name": "Pinecone",
+      "vendor": "Pinecone Systems",
+      "score": 9.63,
+      "type": "向量数据库",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第46名，9.63分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #46, score: 9.63",
+      "icon": "./icons/pinecone.io.png"
+    },
+    {
+      "id": 2,
+      "name": "Milvus",
+      "vendor": "Milvus",
+      "score": 7.09,
+      "type": "向量数据库",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第53名，7.09分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #53, score: 7.09",
+      "icon": "./icons/milvus.io.png"
+    },
+    {
+      "id": 3,
+      "name": "Qdrant",
+      "vendor": "Qdrant",
+      "score": 7.06,
+      "type": "向量数据库",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第54名，7.06分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #54, score: 7.06",
+      "icon": "./icons/qdrant.tech.png"
+    },
+    {
+      "id": 4,
+      "name": "Weaviate",
+      "vendor": "Weaviate",
+      "score": 5.14,
+      "type": "向量数据库",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第65名，5.14分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #65, score: 5.14",
+      "icon": "./icons/weaviate.io.png"
+    },
+    {
+      "id": 5,
+      "name": "Chroma",
+      "vendor": "Chroma",
+      "score": 3.03,
+      "type": "向量数据库",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第92名，3.03分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #92, score: 3.03",
+      "icon": "./icons/trychroma.com.png"
+    }
+  ],
+  "content": [
+    {
+      "id": 1,
+      "name": "Apache Jackrabbit",
+      "vendor": "Apache",
+      "score": 3.77,
+      "type": "内容存储",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第76名，3.77分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #76, score: 3.77",
+      "icon": "./icons/apache.png"
+    }
+  ],
+  "multivalue": [
+    {
+      "id": 1,
+      "name": "Adabas",
+      "vendor": "Adabas",
+      "score": 2.83,
+      "type": "多值数据库",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第98名，2.83分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #98, score: 2.83",
+      "icon": "./icons/adabas.png"
+    },
+    {
+      "id": 2,
+      "name": "UniData,UniVerse",
+      "vendor": "UniData,UniVerse",
+      "score": 2.27,
+      "type": "多值数据库",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第115名，2.27分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #115, score: 2.27",
+      "icon": "./icons/rocket.png"
+    }
+  ],
+  "rdf": [
+    {
+      "id": 1,
+      "name": "Apache Jena - TDB",
+      "vendor": "Apache",
+      "score": 2.38,
+      "type": "RDF存储",
+      "colors": [
+        "#4A4A4A",
+        "#4A4A4A"
+      ],
+      "desc": "DB-Engines第110名，2.38分。数据源: db-engines.com (2026-10)",
+      "desc_en": "DB-Engines #110, score: 2.38",
+      "icon": "./icons/apache.png"
+    }
+  ]
 }

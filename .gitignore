@@ -5,3 +5,4 @@ agentdb.rvf*
 .ruvector/
 *.rvf
 *.DS_Store
+.workbuddy-ai/

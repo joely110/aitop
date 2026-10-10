@@ -1,1592 +1,1676 @@
 {
-    "swe-bench":  [
-                      {
-                          "id":  1,
-                          "name":  "Claude Opus 5",
-                          "vendor":  "Anthropic",
-                          "score":  96,
-                          "passRate":  "96%",
-                          "colors":  [
-                                         "#D97706",
-                                         "#F59E0B"
-                                     ],
-                          "desc":  "SWE-bench Verified榜首，96%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #1, 96% pass rate.",
-                          "icon":  "./icons/anthropic.com.png"
-                      },
-                      {
-                          "id":  2,
-                          "name":  "Claude Fable 5",
-                          "vendor":  "Anthropic",
-                          "score":  95,
-                          "passRate":  "95%",
-                          "colors":  [
-                                         "#D97706",
-                                         "#F59E0B"
-                                     ],
-                          "desc":  "SWE-bench Verified第二，95%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #2, 95% pass rate.",
-                          "icon":  "./icons/anthropic.com.png"
-                      },
-                      {
-                          "id":  3,
-                          "name":  "Claude Mythos Preview",
-                          "vendor":  "Anthropic",
-                          "score":  93.9,
-                          "passRate":  "93.9%",
-                          "colors":  [
-                                         "#D97706",
-                                         "#F59E0B"
-                                     ],
-                          "desc":  "SWE-bench Verified第三，93.9%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #3, 93.9% pass rate.",
-                          "icon":  "./icons/anthropic.com.png"
-                      },
-                      {
-                          "id":  4,
-                          "name":  "Claude Opus 4.8",
-                          "vendor":  "Anthropic",
-                          "score":  88.6,
-                          "passRate":  "88.6%",
-                          "colors":  [
-                                         "#D97706",
-                                         "#F59E0B"
-                                     ],
-                          "desc":  "SWE-bench Verified第四，88.6%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #4, 88.6% pass rate.",
-                          "icon":  "./icons/anthropic.com.png"
-                      },
-                      {
-                          "id":  5,
-                          "name":  "Opus 4.7",
-                          "vendor":  "Anthropic",
-                          "score":  87.6,
-                          "passRate":  "87.6%",
-                          "colors":  [
-                                         "#D97706",
-                                         "#F59E0B"
-                                     ],
-                          "desc":  "SWE-bench Verified第五，87.6%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #5, 87.6% pass rate.",
-                          "icon":  "./icons/anthropic.com.png"
-                      },
-                      {
-                          "id":  6,
-                          "name":  "Claude Sonnet 5",
-                          "vendor":  "Anthropic",
-                          "score":  85.2,
-                          "passRate":  "85.2%",
-                          "colors":  [
-                                         "#D97706",
-                                         "#F59E0B"
-                                     ],
-                          "desc":  "SWE-bench Verified第六，85.2%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #6, 85.2% pass rate.",
-                          "icon":  "./icons/anthropic.com.png"
-                      },
-                      {
-                          "id":  7,
-                          "name":  "Claude Sonnet 4.5",
-                          "vendor":  "Anthropic",
-                          "score":  82,
-                          "passRate":  "82%",
-                          "colors":  [
-                                         "#D97706",
-                                         "#F59E0B"
-                                     ],
-                          "desc":  "SWE-bench Verified第七，82%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #7, 82% pass rate.",
-                          "icon":  "./icons/anthropic.com.png"
-                      },
-                      {
-                          "id":  8,
-                          "name":  "Opus 4.5",
-                          "vendor":  "Anthropic",
-                          "score":  80.9,
-                          "passRate":  "80.9%",
-                          "colors":  [
-                                         "#D97706",
-                                         "#F59E0B"
-                                     ],
-                          "desc":  "SWE-bench Verified第八，80.9%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #8, 80.9% pass rate.",
-                          "icon":  "./icons/anthropic.com.png"
-                      },
-                      {
-                          "id":  9,
-                          "name":  "Claude Opus 4.6",
-                          "vendor":  "Anthropic",
-                          "score":  80.84,
-                          "passRate":  "80.84%",
-                          "colors":  [
-                                         "#D97706",
-                                         "#F59E0B"
-                                     ],
-                          "desc":  "SWE-bench Verified第九，80.84%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #9, 80.84% pass rate.",
-                          "icon":  "./icons/anthropic.com.png"
-                      },
-                      {
-                          "id":  10,
-                          "name":  "Gemini 3.1 Pro Preview",
-                          "vendor":  "Google",
-                          "score":  80.6,
-                          "passRate":  "80.6%",
-                          "colors":  [
-                                         "#3B82F6",
-                                         "#60A5FA"
-                                     ],
-                          "desc":  "SWE-bench Verified第十，80.6%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #10, 80.6% pass rate.",
-                          "icon":  "./icons/google.com.png"
-                      },
-                      {
-                          "id":  11,
-                          "name":  "DeepSeek-V4-Pro",
-                          "vendor":  "DeepSeek-AI",
-                          "score":  80.6,
-                          "passRate":  "80.6%",
-                          "colors":  [
-                                         "#6366F1",
-                                         "#818CF8"
-                                     ],
-                          "desc":  "SWE-bench Verified第11，80.6%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #11, 80.6% pass rate.",
-                          "icon":  "./icons/github_deepseek-ai.png"
-                      },
-                      {
-                          "id":  12,
-                          "name":  "Qwen3.7 Max",
-                          "vendor":  "Alibaba",
-                          "score":  80.4,
-                          "passRate":  "80.4%",
-                          "colors":  [
-                                         "#EC4899",
-                                         "#F472B6"
-                                     ],
-                          "desc":  "SWE-bench Verified第12，80.4%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #12, 80.4% pass rate.",
-                          "icon":  "./icons/github_QwenLM.png"
-                      },
-                      {
-                          "id":  13,
-                          "name":  "Claude Sonnet 4",
-                          "vendor":  "Anthropic",
-                          "score":  80.2,
-                          "passRate":  "80.2%",
-                          "colors":  [
-                                         "#D97706",
-                                         "#F59E0B"
-                                     ],
-                          "desc":  "SWE-bench Verified第13，80.2%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #13, 80.2% pass rate.",
-                          "icon":  "./icons/anthropic.com.png"
-                      },
-                      {
-                          "id":  14,
-                          "name":  "MiniMax M2.5",
-                          "vendor":  "MiniMaxAI",
-                          "score":  80.2,
-                          "passRate":  "80.2%",
-                          "colors":  [
-                                         "#6366F1",
-                                         "#818CF8"
-                                     ],
-                          "desc":  "SWE-bench Verified第14，80.2%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #14, 80.2% pass rate.",
-                          "icon":  "./icons/minimaxi.com.png"
-                      },
-                      {
-                          "id":  15,
-                          "name":  "Kimi K2.6",
-                          "vendor":  "Moon8641 AI",
-                          "score":  80.2,
-                          "passRate":  "80.2%",
-                          "colors":  [
-                                         "#10A37F",
-                                         "#34D399"
-                                     ],
-                          "desc":  "SWE-bench Verified第15，80.2%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #15, 80.2% pass rate.",
-                          "icon":  "./icons/kimi.png"
-                      },
-                      {
-                          "id":  16,
-                          "name":  "GPT-5.2",
-                          "vendor":  "OpenAI",
-                          "score":  80,
-                          "passRate":  "80%",
-                          "colors":  [
-                                         "#10A37F",
-                                         "#34D399"
-                                     ],
-                          "desc":  "SWE-bench Verified第16，80%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #16, 80% pass rate.",
-                          "icon":  "./icons/openai.com.png"
-                      },
-                      {
-                          "id":  17,
-                          "name":  "Claude Sonnet 4.6",
-                          "vendor":  "Anthropic",
-                          "score":  79.6,
-                          "passRate":  "79.6%",
-                          "colors":  [
-                                         "#D97706",
-                                         "#F59E0B"
-                                     ],
-                          "desc":  "SWE-bench Verified第17，79.6%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #17, 79.6% pass rate.",
-                          "icon":  "./icons/anthropic.com.png"
-                      },
-                      {
-                          "id":  18,
-                          "name":  "DeepSeek-V4-Flash",
-                          "vendor":  "DeepSeek-AI",
-                          "score":  79,
-                          "passRate":  "79%",
-                          "colors":  [
-                                         "#6366F1",
-                                         "#818CF8"
-                                     ],
-                          "desc":  "SWE-bench Verified第18，79%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #18, 79% pass rate.",
-                          "icon":  "./icons/github_deepseek-ai.png"
-                      },
-                      {
-                          "id":  19,
-                          "name":  "Qwen3.6-Max-Preview",
-                          "vendor":  "Alibaba",
-                          "score":  78.8,
-                          "passRate":  "78.8%",
-                          "colors":  [
-                                         "#EC4899",
-                                         "#F472B6"
-                                     ],
-                          "desc":  "SWE-bench Verified第19，78.8%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #19, 78.8% pass rate.",
-                          "icon":  "./icons/github_QwenLM.png"
-                      },
-                      {
-                          "id":  20,
-                          "name":  "Qwen 3.6 Plus Preview",
-                          "vendor":  "Alibaba",
-                          "score":  78.8,
-                          "passRate":  "78.8%",
-                          "colors":  [
-                                         "#EC4899",
-                                         "#F472B6"
-                                     ],
-                          "desc":  "SWE-bench Verified第20，78.8%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #20, 78.8% pass rate.",
-                          "icon":  "./icons/github_QwenLM.png"
-                      },
-                      {
-                          "id":  21,
-                          "name":  "Hy3",
-                          "vendor":  "Tencent",
-                          "score":  78,
-                          "passRate":  "78%",
-                          "colors":  [
-                                         "#10A37F",
-                                         "#34D399"
-                                     ],
-                          "desc":  "SWE-bench Verified第21，78%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #21, 78% pass rate.",
-                          "icon":  "./icons/tencent.com.png"
-                      },
-                      {
-                          "id":  22,
-                          "name":  "GLM-5",
-                          "vendor":  "ZhipuAI",
-                          "score":  77.8,
-                          "passRate":  "77.8%",
-                          "colors":  [
-                                         "#10A37F",
-                                         "#34D399"
-                                     ],
-                          "desc":  "SWE-bench Verified第22，77.8%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #22, 77.8% pass rate.",
-                          "icon":  "./icons/zhipuai.cn.png"
-                      },
-                      {
-                          "id":  23,
-                          "name":  "Inkling",
-                          "vendor":  "ThinkingMachines",
-                          "score":  77.6,
-                          "passRate":  "77.6%",
-                          "colors":  [
-                                         "#6366F1",
-                                         "#818CF8"
-                                     ],
-                          "desc":  "SWE-bench Verified第23，77.6%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #23, 77.6% pass rate.",
-                          "icon":  "./icons/default.png"
-                      },
-                      {
-                          "id":  24,
-                          "name":  "Muse Spark",
-                          "vendor":  "Meta",
-                          "score":  77.4,
-                          "passRate":  "77.4%",
-                          "colors":  [
-                                         "#6366F1",
-                                         "#818CF8"
-                                     ],
-                          "desc":  "SWE-bench Verified第24，77.4%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #24, 77.4% pass rate.",
-                          "icon":  "./icons/github_meta-llama.png"
-                      },
-                      {
-                          "id":  25,
-                          "name":  "Qwen3.6-27B",
-                          "vendor":  "Alibaba",
-                          "score":  77.2,
-                          "passRate":  "77.2%",
-                          "colors":  [
-                                         "#EC4899",
-                                         "#F472B6"
-                                     ],
-                          "desc":  "SWE-bench Verified第25，77.2%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #25, 77.2% pass rate.",
-                          "icon":  "./icons/github_QwenLM.png"
-                      },
-                      {
-                          "id":  26,
-                          "name":  "Kimi K2.5",
-                          "vendor":  "Moon8641 AI",
-                          "score":  76.8,
-                          "passRate":  "76.8%",
-                          "colors":  [
-                                         "#10A37F",
-                                         "#34D399"
-                                     ],
-                          "desc":  "SWE-bench Verified第26，76.8%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #26, 76.8% pass rate.",
-                          "icon":  "./icons/kimi.png"
-                      },
-                      {
-                          "id":  27,
-                          "name":  "GPT-5.1-Codex-Max",
-                          "vendor":  "OpenAI",
-                          "score":  76.8,
-                          "passRate":  "76.8%",
-                          "colors":  [
-                                         "#10A37F",
-                                         "#34D399"
-                                     ],
-                          "desc":  "SWE-bench Verified第27，76.8%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #27, 76.8% pass rate.",
-                          "icon":  "./icons/openai.com.png"
-                      },
-                      {
-                          "id":  28,
-                          "name":  "Doubao Seed 2.0 Pro",
-                          "vendor":  "ByteDance",
-                          "score":  76.5,
-                          "passRate":  "76.5%",
-                          "colors":  [
-                                         "#10A37F",
-                                         "#34D399"
-                                     ],
-                          "desc":  "SWE-bench Verified第28，76.5%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #28, 76.5% pass rate.",
-                          "icon":  "./icons/bytedance.com.png"
-                      },
-                      {
-                          "id":  29,
-                          "name":  "Qwen3.5-397B-A17B",
-                          "vendor":  "Alibaba",
-                          "score":  76.4,
-                          "passRate":  "76.4%",
-                          "colors":  [
-                                         "#EC4899",
-                                         "#F472B6"
-                                     ],
-                          "desc":  "SWE-bench Verified第29，76.4%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #29, 76.4% pass rate.",
-                          "icon":  "./icons/github_QwenLM.png"
-                      },
-                      {
-                          "id":  30,
-                          "name":  "GPT-5.1",
-                          "vendor":  "OpenAI",
-                          "score":  76.3,
-                          "passRate":  "76.3%",
-                          "colors":  [
-                                         "#10A37F",
-                                         "#34D399"
-                                     ],
-                          "desc":  "SWE-bench Verified第30，76.3%通过率。数据源: datalearner.com",
-                          "desc_en":  "SWE-bench Verified #30, 76.3% pass rate.",
-                          "icon":  "./icons/openai.com.png"
-                      }
-                  ],
-    "livecode":  [
-                     {
-                         "id":  1,
-                         "name":  "DeepSeek-V4-Pro",
-                         "vendor":  "DeepSeek-AI",
-                         "score":  93.5,
-                         "passRate":  "93.5%",
-                         "colors":  [
-                                        "#6366F1",
-                                        "#818CF8"
-                                    ],
-                         "desc":  "LiveCodeBench榜首，93.5%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #1, 93.5% pass rate.",
-                         "icon":  "./icons/github_deepseek-ai.png"
-                     },
-                     {
-                         "id":  2,
-                         "name":  "Gemini 3.0 Pro (Preview 11-2025)",
-                         "vendor":  "Google",
-                         "score":  92,
-                         "passRate":  "92%",
-                         "colors":  [
-                                        "#3B82F6",
-                                        "#60A5FA"
-                                    ],
-                         "desc":  "LiveCodeBench第二，92%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #2, 92% pass rate.",
-                         "icon":  "./icons/google.com.png"
-                     },
-                     {
-                         "id":  3,
-                         "name":  "Qwen3.8-Flash-Next",
-                         "vendor":  "Alibaba",
-                         "score":  91.9,
-                         "passRate":  "91.9%",
-                         "colors":  [
-                                        "#EC4899",
-                                        "#F472B6"
-                                    ],
-                         "desc":  "LiveCodeBench第三，91.9%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #3, 91.9% pass rate.",
-                         "icon":  "./icons/github_QwenLM.png"
-                     },
-                     {
-                         "id":  4,
-                         "name":  "Gemini 3.1 Pro Preview",
-                         "vendor":  "Google",
-                         "score":  91.7,
-                         "passRate":  "91.7%",
-                         "colors":  [
-                                        "#3B82F6",
-                                        "#60A5FA"
-                                    ],
-                         "desc":  "LiveCodeBench第四，91.7%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #4, 91.7% pass rate.",
-                         "icon":  "./icons/google.com.png"
-                     },
-                     {
-                         "id":  5,
-                         "name":  "Qwen3.7 Max",
-                         "vendor":  "Alibaba",
-                         "score":  91.6,
-                         "passRate":  "91.6%",
-                         "colors":  [
-                                        "#EC4899",
-                                        "#F472B6"
-                                    ],
-                         "desc":  "LiveCodeBench第五，91.6%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #5, 91.6% pass rate.",
-                         "icon":  "./icons/github_QwenLM.png"
-                     },
-                     {
-                         "id":  6,
-                         "name":  "DeepSeek-V4-Flash",
-                         "vendor":  "DeepSeek-AI",
-                         "score":  91.6,
-                         "passRate":  "91.6%",
-                         "colors":  [
-                                        "#6366F1",
-                                        "#818CF8"
-                                    ],
-                         "desc":  "LiveCodeBench第六，91.6%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #6, 91.6% pass rate.",
-                         "icon":  "./icons/github_deepseek-ai.png"
-                     },
-                     {
-                         "id":  7,
-                         "name":  "Qwen3.8-27B",
-                         "vendor":  "Alibaba",
-                         "score":  90.3,
-                         "passRate":  "90.3%",
-                         "colors":  [
-                                        "#EC4899",
-                                        "#F472B6"
-                                    ],
-                         "desc":  "LiveCodeBench第七，90.3%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #7, 90.3% pass rate.",
-                         "icon":  "./icons/github_QwenLM.png"
-                     },
-                     {
-                         "id":  8,
-                         "name":  "Kimi K2.6",
-                         "vendor":  "Moon8641 AI",
-                         "score":  89.6,
-                         "passRate":  "89.6%",
-                         "colors":  [
-                                        "#10A37F",
-                                        "#34D399"
-                                    ],
-                         "desc":  "LiveCodeBench第八，89.6%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #8, 89.6% pass rate.",
-                         "icon":  "./icons/kimi.png"
-                     },
-                     {
-                         "id":  9,
-                         "name":  "Nemotron 3 Ultra",
-                         "vendor":  "NVIDIA",
-                         "score":  89,
-                         "passRate":  "89%",
-                         "colors":  [
-                                        "#76B900",
-                                        "#76B900"
-                                    ],
-                         "desc":  "LiveCodeBench第九，89%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #9, 89% pass rate.",
-                         "icon":  "./icons/nvidia.com.png"
-                     },
-                     {
-                         "id":  10,
-                         "name":  "Gemini 2.5 Deep Think",
-                         "vendor":  "Google",
-                         "score":  87.6,
-                         "passRate":  "87.6%",
-                         "colors":  [
-                                        "#3B82F6",
-                                        "#60A5FA"
-                                    ],
-                         "desc":  "LiveCodeBench第十，87.6%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #10, 87.6% pass rate.",
-                         "icon":  "./icons/google.com.png"
-                     },
-                     {
-                         "id":  11,
-                         "name":  "Qwen3.6-Max-Preview",
-                         "vendor":  "Alibaba",
-                         "score":  87.1,
-                         "passRate":  "87.1%",
-                         "colors":  [
-                                        "#EC4899",
-                                        "#F472B6"
-                                    ],
-                         "desc":  "LiveCodeBench第11，87.1%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #11, 87.1% pass rate.",
-                         "icon":  "./icons/github_QwenLM.png"
-                     },
-                     {
-                         "id":  12,
-                         "name":  "Qwen 3.6 Plus Preview",
-                         "vendor":  "Alibaba",
-                         "score":  87.1,
-                         "passRate":  "87.1%",
-                         "colors":  [
-                                        "#EC4899",
-                                        "#F472B6"
-                                    ],
-                         "desc":  "LiveCodeBench第12，87.1%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #12, 87.1% pass rate.",
-                         "icon":  "./icons/github_QwenLM.png"
-                     },
-                     {
-                         "id":  13,
-                         "name":  "Opus 4.5",
-                         "vendor":  "Anthropic",
-                         "score":  87,
-                         "passRate":  "87%",
-                         "colors":  [
-                                        "#D97706",
-                                        "#F59E0B"
-                                    ],
-                         "desc":  "LiveCodeBench第13，87%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #13, 87% pass rate.",
-                         "icon":  "./icons/anthropic.com.png"
-                     },
-                     {
-                         "id":  14,
-                         "name":  "Step 3.5 Flash",
-                         "vendor":  "StepFunAI",
-                         "score":  86.4,
-                         "passRate":  "86.4%",
-                         "colors":  [
-                                        "#6366F1",
-                                        "#818CF8"
-                                    ],
-                         "desc":  "LiveCodeBench第14，86.4%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #14, 86.4% pass rate.",
-                         "icon":  "./icons/stepfun.com.png"
-                     },
-                     {
-                         "id":  15,
-                         "name":  "Qwen3-Max-Thinking",
-                         "vendor":  "Alibaba",
-                         "score":  85.9,
-                         "passRate":  "85.9%",
-                         "colors":  [
-                                        "#EC4899",
-                                        "#F472B6"
-                                    ],
-                         "desc":  "LiveCodeBench第15，85.9%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #15, 85.9% pass rate.",
-                         "icon":  "./icons/github_QwenLM.png"
-                     },
-                     {
-                         "id":  16,
-                         "name":  "GPT-5.1 Codex",
-                         "vendor":  "OpenAI",
-                         "score":  85.5,
-                         "passRate":  "85.5%",
-                         "colors":  [
-                                        "#10A37F",
-                                        "#34D399"
-                                    ],
-                         "desc":  "LiveCodeBench第16，85.5%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #16, 85.5% pass rate.",
-                         "icon":  "./icons/openai.com.png"
-                     },
-                     {
-                         "id":  17,
-                         "name":  "Kimi K2.5",
-                         "vendor":  "Moon8641 AI",
-                         "score":  85,
-                         "passRate":  "85%",
-                         "colors":  [
-                                        "#10A37F",
-                                        "#34D399"
-                                    ],
-                         "desc":  "LiveCodeBench第17，85%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #17, 85% pass rate.",
-                         "icon":  "./icons/kimi.png"
-                     },
-                     {
-                         "id":  18,
-                         "name":  "GLM-4.7",
-                         "vendor":  "ZhipuAI",
-                         "score":  84.9,
-                         "passRate":  "84.9%",
-                         "colors":  [
-                                        "#10A37F",
-                                        "#34D399"
-                                    ],
-                         "desc":  "LiveCodeBench第18，84.9%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #18, 84.9% pass rate.",
-                         "icon":  "./icons/zhipuai.cn.png"
-                     },
-                     {
-                         "id":  19,
-                         "name":  "GLM-4.6",
-                         "vendor":  "ZhipuAI",
-                         "score":  84.5,
-                         "passRate":  "84.5%",
-                         "colors":  [
-                                        "#10A37F",
-                                        "#34D399"
-                                    ],
-                         "desc":  "LiveCodeBench第19，84.5%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #19, 84.5% pass rate.",
-                         "icon":  "./icons/zhipuai.cn.png"
-                     },
-                     {
-                         "id":  20,
-                         "name":  "Qwen3.6-27B",
-                         "vendor":  "Alibaba",
-                         "score":  83.9,
-                         "passRate":  "83.9%",
-                         "colors":  [
-                                        "#EC4899",
-                                        "#F472B6"
-                                    ],
-                         "desc":  "LiveCodeBench第20，83.9%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #20, 83.9% pass rate.",
-                         "icon":  "./icons/github_QwenLM.png"
-                     },
-                     {
-                         "id":  21,
-                         "name":  "Qwen3.5-397B-A17B",
-                         "vendor":  "Alibaba",
-                         "score":  83.6,
-                         "passRate":  "83.6%",
-                         "colors":  [
-                                        "#EC4899",
-                                        "#F472B6"
-                                    ],
-                         "desc":  "LiveCodeBench第21，83.6%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #21, 83.6% pass rate.",
-                         "icon":  "./icons/github_QwenLM.png"
-                     },
-                     {
-                         "id":  22,
-                         "name":  "DeepSeek V3.2",
-                         "vendor":  "DeepSeek-AI",
-                         "score":  83.3,
-                         "passRate":  "83.3%",
-                         "colors":  [
-                                        "#6366F1",
-                                        "#818CF8"
-                                    ],
-                         "desc":  "LiveCodeBench第22，83.3%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #22, 83.3% pass rate.",
-                         "icon":  "./icons/github_deepseek-ai.png"
-                     },
-                     {
-                         "id":  23,
-                         "name":  "Kimi K2 Thinking",
-                         "vendor":  "Moon8641 AI",
-                         "score":  83.1,
-                         "passRate":  "83.1%",
-                         "colors":  [
-                                        "#10A37F",
-                                        "#34D399"
-                                    ],
-                         "desc":  "LiveCodeBench第23，83.1%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #23, 83.1% pass rate.",
-                         "icon":  "./icons/kimi.png"
-                     },
-                     {
-                         "id":  24,
-                         "name":  "MiniMax M2",
-                         "vendor":  "MiniMaxAI",
-                         "score":  83,
-                         "passRate":  "83%",
-                         "colors":  [
-                                        "#6366F1",
-                                        "#818CF8"
-                                    ],
-                         "desc":  "LiveCodeBench第24，83%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #24, 83% pass rate.",
-                         "icon":  "./icons/minimaxi.com.png"
-                     },
-                     {
-                         "id":  25,
-                         "name":  "Grok 4",
-                         "vendor":  "xAI",
-                         "score":  82,
-                         "passRate":  "82%",
-                         "colors":  [
-                                        "#1E293B",
-                                        "#334155"
-                                    ],
-                         "desc":  "LiveCodeBench第25，82%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #25, 82% pass rate.",
-                         "icon":  "./icons/x.ai.png"
-                     },
-                     {
-                         "id":  26,
-                         "name":  "Grok 4.1 Fast",
-                         "vendor":  "xAI",
-                         "score":  82,
-                         "passRate":  "82%",
-                         "colors":  [
-                                        "#1E293B",
-                                        "#334155"
-                                    ],
-                         "desc":  "LiveCodeBench第26，82%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #26, 82% pass rate.",
-                         "icon":  "./icons/x.ai.png"
-                     },
-                     {
-                         "id":  27,
-                         "name":  "Qwen3.5-27B",
-                         "vendor":  "Alibaba",
-                         "score":  80.7,
-                         "passRate":  "80.7%",
-                         "colors":  [
-                                        "#EC4899",
-                                        "#F472B6"
-                                    ],
-                         "desc":  "LiveCodeBench第27，80.7%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #27, 80.7% pass rate.",
-                         "icon":  "./icons/github_QwenLM.png"
-                     },
-                     {
-                         "id":  28,
-                         "name":  "Gemini 2.5 Pro Deep Think",
-                         "vendor":  "Google",
-                         "score":  80.4,
-                         "passRate":  "80.4%",
-                         "colors":  [
-                                        "#3B82F6",
-                                        "#60A5FA"
-                                    ],
-                         "desc":  "LiveCodeBench第28，80.4%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #28, 80.4% pass rate.",
-                         "icon":  "./icons/google.com.png"
-                     },
-                     {
-                         "id":  29,
-                         "name":  "Qwen3.6-35B-A3B",
-                         "vendor":  "Alibaba",
-                         "score":  80.4,
-                         "passRate":  "80.4%",
-                         "colors":  [
-                                        "#EC4899",
-                                        "#F472B6"
-                                    ],
-                         "desc":  "LiveCodeBench第29，80.4%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #29, 80.4% pass rate.",
-                         "icon":  "./icons/github_QwenLM.png"
-                     },
-                     {
-                         "id":  30,
-                         "name":  "Grok 4 Fast",
-                         "vendor":  "xAI",
-                         "score":  80,
-                         "passRate":  "80%",
-                         "colors":  [
-                                        "#1E293B",
-                                        "#334155"
-                                    ],
-                         "desc":  "LiveCodeBench第30，80%通过率。数据源: datalearner.com",
-                         "desc_en":  "LiveCodeBench #30, 80% pass rate.",
-                         "icon":  "./icons/x.ai.png"
-                     }
-                 ],
-    "swe-pro":  [
-                    {
-                        "id":  1,
-                        "name":  "Claude Fable 5",
-                        "vendor":  "Anthropic",
-                        "score":  80.3,
-                        "passRate":  "80.3%",
-                        "colors":  [
-                                       "#D97706",
-                                       "#F59E0B"
-                                   ],
-                        "desc":  "SWE-Bench Pro榜首，80.3%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #1, 80.3% pass rate.",
-                        "icon":  "./icons/anthropic.com.png"
-                    },
-                    {
-                        "id":  2,
-                        "name":  "Claude Opus 5",
-                        "vendor":  "Anthropic",
-                        "score":  79.2,
-                        "passRate":  "79.2%",
-                        "colors":  [
-                                       "#D97706",
-                                       "#F59E0B"
-                                   ],
-                        "desc":  "SWE-Bench Pro第二，79.2%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #2, 79.2% pass rate.",
-                        "icon":  "./icons/anthropic.com.png"
-                    },
-                    {
-                        "id":  3,
-                        "name":  "Claude Mythos Preview",
-                        "vendor":  "Anthropic",
-                        "score":  77.8,
-                        "passRate":  "77.8%",
-                        "colors":  [
-                                       "#D97706",
-                                       "#F59E0B"
-                                   ],
-                        "desc":  "SWE-Bench Pro第三，77.8%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #3, 77.8% pass rate.",
-                        "icon":  "./icons/anthropic.com.png"
-                    },
-                    {
-                        "id":  4,
-                        "name":  "Claude Opus 4.8",
-                        "vendor":  "Anthropic",
-                        "score":  69.2,
-                        "passRate":  "69.2%",
-                        "colors":  [
-                                       "#D97706",
-                                       "#F59E0B"
-                                   ],
-                        "desc":  "SWE-Bench Pro第四，69.2%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #4, 69.2% pass rate.",
-                        "icon":  "./icons/anthropic.com.png"
-                    },
-                    {
-                        "id":  5,
-                        "name":  "Qwen3.8-Max",
-                        "vendor":  "Alibaba",
-                        "score":  67.7,
-                        "passRate":  "67.7%",
-                        "colors":  [
-                                       "#EC4899",
-                                       "#F472B6"
-                                   ],
-                        "desc":  "SWE-Bench Pro第五，67.7%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #5, 67.7% pass rate.",
-                        "icon":  "./icons/github_QwenLM.png"
-                    },
-                    {
-                        "id":  6,
-                        "name":  "Hy4 preview",
-                        "vendor":  "Tencent",
-                        "score":  65.7,
-                        "passRate":  "65.7%",
-                        "colors":  [
-                                       "#10A37F",
-                                       "#34D399"
-                                   ],
-                        "desc":  "SWE-Bench Pro第六，65.7%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #6, 65.7% pass rate.",
-                        "icon":  "./icons/tencent.com.png"
-                    },
-                    {
-                        "id":  7,
-                        "name":  "Grok 4.5",
-                        "vendor":  "xAI",
-                        "score":  64.7,
-                        "passRate":  "64.7%",
-                        "colors":  [
-                                       "#1E293B",
-                                       "#334155"
-                                   ],
-                        "desc":  "SWE-Bench Pro第七，64.7%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #7, 64.7% pass rate.",
-                        "icon":  "./icons/x.ai.png"
-                    },
-                    {
-                        "id":  8,
-                        "name":  "GPT-5.6 Sol",
-                        "vendor":  "OpenAI",
-                        "score":  64.6,
-                        "passRate":  "64.6%",
-                        "colors":  [
-                                       "#10A37F",
-                                       "#34D399"
-                                   ],
-                        "desc":  "SWE-Bench Pro第八，64.6%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #8, 64.6% pass rate.",
-                        "icon":  "./icons/openai.com.png"
-                    },
-                    {
-                        "id":  9,
-                        "name":  "Opus 4.7",
-                        "vendor":  "Anthropic",
-                        "score":  64.3,
-                        "passRate":  "64.3%",
-                        "colors":  [
-                                       "#D97706",
-                                       "#F59E0B"
-                                   ],
-                        "desc":  "SWE-Bench Pro第九，64.3%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #9, 64.3% pass rate.",
-                        "icon":  "./icons/anthropic.com.png"
-                    },
-                    {
-                        "id":  10,
-                        "name":  "Qwen3.8-Flash-Next",
-                        "vendor":  "Alibaba",
-                        "score":  62.5,
-                        "passRate":  "62.5%",
-                        "colors":  [
-                                       "#EC4899",
-                                       "#F472B6"
-                                   ],
-                        "desc":  "SWE-Bench Pro第十，62.5%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #10, 62.5% pass rate.",
-                        "icon":  "./icons/github_QwenLM.png"
-                    },
-                    {
-                        "id":  11,
-                        "name":  "GLM-5.2",
-                        "vendor":  "ZhipuAI",
-                        "score":  62.1,
-                        "passRate":  "62.1%",
-                        "colors":  [
-                                       "#10A37F",
-                                       "#34D399"
-                                   ],
-                        "desc":  "SWE-Bench Pro第11，62.1%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #11, 62.1% pass rate.",
-                        "icon":  "./icons/zhipuai.cn.png"
-                    },
-                    {
-                        "id":  12,
-                        "name":  "Qwen3.8-27B",
-                        "vendor":  "Alibaba",
-                        "score":  61.7,
-                        "passRate":  "61.7%",
-                        "colors":  [
-                                       "#EC4899",
-                                       "#F472B6"
-                                   ],
-                        "desc":  "SWE-Bench Pro第12，61.7%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #12, 61.7% pass rate.",
-                        "icon":  "./icons/github_QwenLM.png"
-                    },
-                    {
-                        "id":  13,
-                        "name":  "Muse Spark 1.1",
-                        "vendor":  "Meta",
-                        "score":  61.5,
-                        "passRate":  "61.5%",
-                        "colors":  [
-                                       "#6366F1",
-                                       "#818CF8"
-                                   ],
-                        "desc":  "SWE-Bench Pro第13，61.5%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #13, 61.5% pass rate.",
-                        "icon":  "./icons/github_meta-llama.png"
-                    },
-                    {
-                        "id":  14,
-                        "name":  "Qwen3.7 Max",
-                        "vendor":  "Alibaba",
-                        "score":  60.6,
-                        "passRate":  "60.6%",
-                        "colors":  [
-                                       "#EC4899",
-                                       "#F472B6"
-                                   ],
-                        "desc":  "SWE-Bench Pro第14，60.6%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #14, 60.6% pass rate.",
-                        "icon":  "./icons/github_QwenLM.png"
-                    },
-                    {
-                        "id":  15,
-                        "name":  "MiniMax M3",
-                        "vendor":  "MiniMaxAI",
-                        "score":  59,
-                        "passRate":  "59%",
-                        "colors":  [
-                                       "#6366F1",
-                                       "#818CF8"
-                                   ],
-                        "desc":  "SWE-Bench Pro第15，59%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #15, 59% pass rate.",
-                        "icon":  "./icons/minimaxi.com.png"
-                    },
-                    {
-                        "id":  16,
-                        "name":  "Gemini 3.6 Flash",
-                        "vendor":  "Google",
-                        "score":  58.7,
-                        "passRate":  "58.7%",
-                        "colors":  [
-                                       "#3B82F6",
-                                       "#60A5FA"
-                                   ],
-                        "desc":  "SWE-Bench Pro第16，58.7%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #16, 58.7% pass rate.",
-                        "icon":  "./icons/google.com.png"
-                    },
-                    {
-                        "id":  17,
-                        "name":  "Kimi K2.6",
-                        "vendor":  "Moon8641 AI",
-                        "score":  58.6,
-                        "passRate":  "58.6%",
-                        "colors":  [
-                                       "#10A37F",
-                                       "#34D399"
-                                   ],
-                        "desc":  "SWE-Bench Pro第17，58.6%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #17, 58.6% pass rate.",
-                        "icon":  "./icons/kimi.png"
-                    },
-                    {
-                        "id":  18,
-                        "name":  "GPT-5.5",
-                        "vendor":  "OpenAI",
-                        "score":  58.6,
-                        "passRate":  "58.6%",
-                        "colors":  [
-                                       "#10A37F",
-                                       "#34D399"
-                                   ],
-                        "desc":  "SWE-Bench Pro第18，58.6%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #18, 58.6% pass rate.",
-                        "icon":  "./icons/openai.com.png"
-                    },
-                    {
-                        "id":  19,
-                        "name":  "GLM 5.1",
-                        "vendor":  "ZhipuAI",
-                        "score":  58.4,
-                        "passRate":  "58.4%",
-                        "colors":  [
-                                       "#10A37F",
-                                       "#34D399"
-                                   ],
-                        "desc":  "SWE-Bench Pro第19，58.4%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #19, 58.4% pass rate.",
-                        "icon":  "./icons/zhipuai.cn.png"
-                    },
-                    {
-                        "id":  20,
-                        "name":  "Hy3",
-                        "vendor":  "Tencent",
-                        "score":  57.9,
-                        "passRate":  "57.9%",
-                        "colors":  [
-                                       "#10A37F",
-                                       "#34D399"
-                                   ],
-                        "desc":  "SWE-Bench Pro第20，57.9%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #20, 57.9% pass rate.",
-                        "icon":  "./icons/tencent.com.png"
-                    },
-                    {
-                        "id":  21,
-                        "name":  "GPT-5.4",
-                        "vendor":  "OpenAI",
-                        "score":  57.7,
-                        "passRate":  "57.7%",
-                        "colors":  [
-                                       "#10A37F",
-                                       "#34D399"
-                                   ],
-                        "desc":  "SWE-Bench Pro第21，57.7%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #21, 57.7% pass rate.",
-                        "icon":  "./icons/openai.com.png"
-                    },
-                    {
-                        "id":  22,
-                        "name":  "Qwen3.6-Max-Preview",
-                        "vendor":  "Alibaba",
-                        "score":  57.3,
-                        "passRate":  "57.3%",
-                        "colors":  [
-                                       "#EC4899",
-                                       "#F472B6"
-                                   ],
-                        "desc":  "SWE-Bench Pro第22，57.3%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #22, 57.3% pass rate.",
-                        "icon":  "./icons/github_QwenLM.png"
-                    },
-                    {
-                        "id":  23,
-                        "name":  "GPT-5.3 Codex",
-                        "vendor":  "OpenAI",
-                        "score":  56.8,
-                        "passRate":  "56.8%",
-                        "colors":  [
-                                       "#10A37F",
-                                       "#34D399"
-                                   ],
-                        "desc":  "SWE-Bench Pro第23，56.8%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #23, 56.8% pass rate.",
-                        "icon":  "./icons/openai.com.png"
-                    },
-                    {
-                        "id":  24,
-                        "name":  "Qwen 3.6 Plus Preview",
-                        "vendor":  "Alibaba",
-                        "score":  56.6,
-                        "passRate":  "56.6%",
-                        "colors":  [
-                                       "#EC4899",
-                                       "#F472B6"
-                                   ],
-                        "desc":  "SWE-Bench Pro第24，56.6%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #24, 56.6% pass rate.",
-                        "icon":  "./icons/github_QwenLM.png"
-                    },
-                    {
-                        "id":  25,
-                        "name":  "Step 3.7 Flash",
-                        "vendor":  "StepFunAI",
-                        "score":  56.3,
-                        "passRate":  "56.3%",
-                        "colors":  [
-                                       "#6366F1",
-                                       "#818CF8"
-                                   ],
-                        "desc":  "SWE-Bench Pro第25，56.3%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #25, 56.3% pass rate.",
-                        "icon":  "./icons/stepfun.com.png"
-                    },
-                    {
-                        "id":  26,
-                        "name":  "MiniMax-M2.7",
-                        "vendor":  "MiniMaxAI",
-                        "score":  56.2,
-                        "passRate":  "56.2%",
-                        "colors":  [
-                                       "#6366F1",
-                                       "#818CF8"
-                                   ],
-                        "desc":  "SWE-Bench Pro第26，56.2%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #26, 56.2% pass rate.",
-                        "icon":  "./icons/minimaxi.com.png"
-                    },
-                    {
-                        "id":  27,
-                        "name":  "GPT-5.2",
-                        "vendor":  "OpenAI",
-                        "score":  55.6,
-                        "passRate":  "55.6%",
-                        "colors":  [
-                                       "#10A37F",
-                                       "#34D399"
-                                   ],
-                        "desc":  "SWE-Bench Pro第27，55.6%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #27, 55.6% pass rate.",
-                        "icon":  "./icons/openai.com.png"
-                    },
-                    {
-                        "id":  28,
-                        "name":  "MiniMax M2.5",
-                        "vendor":  "MiniMaxAI",
-                        "score":  55.4,
-                        "passRate":  "55.4%",
-                        "colors":  [
-                                       "#6366F1",
-                                       "#818CF8"
-                                   ],
-                        "desc":  "SWE-Bench Pro第28，55.4%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #28, 55.4% pass rate.",
-                        "icon":  "./icons/minimaxi.com.png"
-                    },
-                    {
-                        "id":  29,
-                        "name":  "DeepSeek-V4-Pro",
-                        "vendor":  "DeepSeek-AI",
-                        "score":  55.4,
-                        "passRate":  "55.4%",
-                        "colors":  [
-                                       "#6366F1",
-                                       "#818CF8"
-                                   ],
-                        "desc":  "SWE-Bench Pro第29，55.4%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #29, 55.4% pass rate.",
-                        "icon":  "./icons/github_deepseek-ai.png"
-                    },
-                    {
-                        "id":  30,
-                        "name":  "Gemini 3.5 Flash",
-                        "vendor":  "Google",
-                        "score":  55.1,
-                        "passRate":  "55.1%",
-                        "colors":  [
-                                       "#3B82F6",
-                                       "#60A5FA"
-                                   ],
-                        "desc":  "SWE-Bench Pro第30，55.1%通过率。数据源: datalearner.com",
-                        "desc_en":  "SWE-Bench Pro #30, 55.1% pass rate.",
-                        "icon":  "./icons/google.com.png"
-                    }
-                ],
-    "multilingual":  [
-                         {
-                             "id":  1,
-                             "name":  "Claude Opus 5",
-                             "vendor":  "Anthropic",
-                             "score":  89.5,
-                             "passRate":  "89.5%",
-                             "colors":  [
-                                            "#D97706",
-                                            "#F59E0B"
-                                        ],
-                             "desc":  "SWE-bench Multilingual榜首，89.5%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #1, 89.5% pass rate.",
-                             "icon":  "./icons/anthropic.com.png"
-                         },
-                         {
-                             "id":  2,
-                             "name":  "Claude Mythos Preview",
-                             "vendor":  "Anthropic",
-                             "score":  87.3,
-                             "passRate":  "87.3%",
-                             "colors":  [
-                                            "#D97706",
-                                            "#F59E0B"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第二，87.3%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #2, 87.3% pass rate.",
-                             "icon":  "./icons/anthropic.com.png"
-                         },
-                         {
-                             "id":  3,
-                             "name":  "Hy4 preview",
-                             "vendor":  "Tencent",
-                             "score":  82.9,
-                             "passRate":  "82.9%",
-                             "colors":  [
-                                            "#10A37F",
-                                            "#34D399"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第三，82.9%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #3, 82.9% pass rate.",
-                             "icon":  "./icons/tencent.com.png"
-                         },
-                         {
-                             "id":  4,
-                             "name":  "Qwen3.8-Flash-Next",
-                             "vendor":  "Alibaba",
-                             "score":  81,
-                             "passRate":  "81%",
-                             "colors":  [
-                                            "#EC4899",
-                                            "#F472B6"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第四，81%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #4, 81% pass rate.",
-                             "icon":  "./icons/github_QwenLM.png"
-                         },
-                         {
-                             "id":  5,
-                             "name":  "Composer 2.5",
-                             "vendor":  "Cursor",
-                             "score":  79.8,
-                             "passRate":  "79.8%",
-                             "colors":  [
-                                            "#7C3AED",
-                                            "#A78BFA"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第五，79.8%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #5, 79.8% pass rate.",
-                             "icon":  "./icons/cursor.com.png"
-                         },
-                         {
-                             "id":  6,
-                             "name":  "Qwen3.7 Max",
-                             "vendor":  "Alibaba",
-                             "score":  78.3,
-                             "passRate":  "78.3%",
-                             "colors":  [
-                                            "#EC4899",
-                                            "#F472B6"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第六，78.3%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #6, 78.3% pass rate.",
-                             "icon":  "./icons/github_QwenLM.png"
-                         },
-                         {
-                             "id":  7,
-                             "name":  "Kimi K2.6",
-                             "vendor":  "Moon8641 AI",
-                             "score":  76.7,
-                             "passRate":  "76.7%",
-                             "colors":  [
-                                            "#10A37F",
-                                            "#34D399"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第七，76.7%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #7, 76.7% pass rate.",
-                             "icon":  "./icons/kimi.png"
-                         },
-                         {
-                             "id":  8,
-                             "name":  "MiniMax-M2.7",
-                             "vendor":  "MiniMaxAI",
-                             "score":  76.5,
-                             "passRate":  "76.5%",
-                             "colors":  [
-                                            "#6366F1",
-                                            "#818CF8"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第八，76.5%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #8, 76.5% pass rate.",
-                             "icon":  "./icons/minimaxi.com.png"
-                         },
-                         {
-                             "id":  9,
-                             "name":  "DeepSeek-V4-Pro",
-                             "vendor":  "DeepSeek-AI",
-                             "score":  76.2,
-                             "passRate":  "76.2%",
-                             "colors":  [
-                                            "#6366F1",
-                                            "#818CF8"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第九，76.2%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #9, 76.2% pass rate.",
-                             "icon":  "./icons/github_deepseek-ai.png"
-                         },
-                         {
-                             "id":  10,
-                             "name":  "Hy3",
-                             "vendor":  "Tencent",
-                             "score":  75.8,
-                             "passRate":  "75.8%",
-                             "colors":  [
-                                            "#10A37F",
-                                            "#34D399"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第十，75.8%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #10, 75.8% pass rate.",
-                             "icon":  "./icons/tencent.com.png"
-                         },
-                         {
-                             "id":  11,
-                             "name":  "Qwen3.6-Max-Preview",
-                             "vendor":  "Alibaba",
-                             "score":  73.8,
-                             "passRate":  "73.8%",
-                             "colors":  [
-                                            "#EC4899",
-                                            "#F472B6"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第11，73.8%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #11, 73.8% pass rate.",
-                             "icon":  "./icons/github_QwenLM.png"
-                         },
-                         {
-                             "id":  12,
-                             "name":  "Qwen 3.6 Plus Preview",
-                             "vendor":  "Alibaba",
-                             "score":  73.8,
-                             "passRate":  "73.8%",
-                             "colors":  [
-                                            "#EC4899",
-                                            "#F472B6"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第12，73.8%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #12, 73.8% pass rate.",
-                             "icon":  "./icons/github_QwenLM.png"
-                         },
-                         {
-                             "id":  13,
-                             "name":  "Composer 2",
-                             "vendor":  "Cursor",
-                             "score":  73.7,
-                             "passRate":  "73.7%",
-                             "colors":  [
-                                            "#7C3AED",
-                                            "#A78BFA"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第13，73.7%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #13, 73.7% pass rate.",
-                             "icon":  "./icons/cursor.com.png"
-                         },
-                         {
-                             "id":  14,
-                             "name":  "DeepSeek-V4-Flash",
-                             "vendor":  "DeepSeek-AI",
-                             "score":  73.3,
-                             "passRate":  "73.3%",
-                             "colors":  [
-                                            "#6366F1",
-                                            "#818CF8"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第14，73.3%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #14, 73.3% pass rate.",
-                             "icon":  "./icons/github_deepseek-ai.png"
-                         },
-                         {
-                             "id":  15,
-                             "name":  "Kimi K2.5",
-                             "vendor":  "Moon8641 AI",
-                             "score":  73,
-                             "passRate":  "73%",
-                             "colors":  [
-                                            "#10A37F",
-                                            "#34D399"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第15，73%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #15, 73% pass rate.",
-                             "icon":  "./icons/kimi.png"
-                         },
-                         {
-                             "id":  16,
-                             "name":  "Claude Opus 4.6",
-                             "vendor":  "Anthropic",
-                             "score":  72,
-                             "passRate":  "72%",
-                             "colors":  [
-                                            "#D97706",
-                                            "#F59E0B"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第16，72%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #16, 72% pass rate.",
-                             "icon":  "./icons/anthropic.com.png"
-                         },
-                         {
-                             "id":  17,
-                             "name":  "Doubao Seed 2.0 Pro",
-                             "vendor":  "ByteDance",
-                             "score":  71.7,
-                             "passRate":  "71.7%",
-                             "colors":  [
-                                            "#10A37F",
-                                            "#34D399"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第17，71.7%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #17, 71.7% pass rate.",
-                             "icon":  "./icons/bytedance.com.png"
-                         },
-                         {
-                             "id":  18,
-                             "name":  "Qwen3.6-27B",
-                             "vendor":  "Alibaba",
-                             "score":  71.3,
-                             "passRate":  "71.3%",
-                             "colors":  [
-                                            "#EC4899",
-                                            "#F472B6"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第18，71.3%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #18, 71.3% pass rate.",
-                             "icon":  "./icons/github_QwenLM.png"
-                         },
-                         {
-                             "id":  19,
-                             "name":  "Qwen3.5-397B-A17B",
-                             "vendor":  "Alibaba",
-                             "score":  69.3,
-                             "passRate":  "69.3%",
-                             "colors":  [
-                                            "#EC4899",
-                                            "#F472B6"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第19，69.3%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #19, 69.3% pass rate.",
-                             "icon":  "./icons/github_QwenLM.png"
-                         },
-                         {
-                             "id":  20,
-                             "name":  "Nemotron 3 Ultra",
-                             "vendor":  "NVIDIA",
-                             "score":  67.7,
-                             "passRate":  "67.7%",
-                             "colors":  [
-                                            "#76B900",
-                                            "#76B900"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第20，67.7%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #20, 67.7% pass rate.",
-                             "icon":  "./icons/nvidia.com.png"
-                         },
-                         {
-                             "id":  21,
-                             "name":  "Qwen3.6-35B-A3B",
-                             "vendor":  "Alibaba",
-                             "score":  67.2,
-                             "passRate":  "67.2%",
-                             "colors":  [
-                                            "#EC4899",
-                                            "#F472B6"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第21，67.2%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #21, 67.2% pass rate.",
-                             "icon":  "./icons/github_QwenLM.png"
-                         },
-                         {
-                             "id":  22,
-                             "name":  "Composer 1.5",
-                             "vendor":  "Cursor",
-                             "score":  65.9,
-                             "passRate":  "65.9%",
-                             "colors":  [
-                                            "#7C3AED",
-                                            "#A78BFA"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第22，65.9%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #22, 65.9% pass rate.",
-                             "icon":  "./icons/cursor.com.png"
-                         },
-                         {
-                             "id":  23,
-                             "name":  "Composer 1",
-                             "vendor":  "Cursor",
-                             "score":  56.9,
-                             "passRate":  "56.9%",
-                             "colors":  [
-                                            "#7C3AED",
-                                            "#A78BFA"
-                                        ],
-                             "desc":  "SWE-bench Multilingual第23，56.9%通过率。数据源: datalearner.com",
-                             "desc_en":  "SWE-bench Multilingual #23, 56.9% pass rate.",
-                             "icon":  "./icons/cursor.com.png"
-                         }
-                     ]
+  "swe-bench": [
+    {
+      "id": 1,
+      "name": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "score": 96,
+      "passRate": "96%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Verified第1，96%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #1, 96% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 2,
+      "name": "Claude Fable 5",
+      "vendor": "Anthropic",
+      "score": 95,
+      "passRate": "95%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Verified第2，95%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #2, 95% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 3,
+      "name": "Claude Mythos Preview",
+      "vendor": "Anthropic",
+      "score": 93.9,
+      "passRate": "93.9%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Verified第3，93.9%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #3, 93.9% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 4,
+      "name": "Claude Opus 4.8",
+      "vendor": "Anthropic",
+      "score": 88.6,
+      "passRate": "88.6%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Verified第4，88.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #4, 88.6% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 5,
+      "name": "Claude Opus 4.7",
+      "vendor": "Anthropic",
+      "score": 87.6,
+      "passRate": "87.6%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Verified第5，87.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #5, 87.6% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 6,
+      "name": "Claude Sonnet 5",
+      "vendor": "Anthropic",
+      "score": 85.2,
+      "passRate": "85.2%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Verified第6，85.2%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #6, 85.2% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 7,
+      "name": "Claude Sonnet 4.5",
+      "vendor": "Anthropic",
+      "score": 82,
+      "passRate": "82%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Verified第7，82%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #7, 82% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 8,
+      "name": "Claude Opus 4.5",
+      "vendor": "Anthropic",
+      "score": 80.9,
+      "passRate": "80.9%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Verified第8，80.9%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #8, 80.9% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 9,
+      "name": "Claude Opus 4.6",
+      "vendor": "Anthropic",
+      "score": 80.84,
+      "passRate": "80.84%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Verified第9，80.84%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #9, 80.84% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 10,
+      "name": "Gemini 3.1 Pro Preview",
+      "vendor": "Google",
+      "score": 80.6,
+      "passRate": "80.6%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "desc": "SWE-bench Verified第10，80.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #10, 80.6% pass rate.",
+      "icon": "./icons/google.com.png"
+    },
+    {
+      "id": 11,
+      "name": "DeepSeek-V4-Pro",
+      "vendor": "DeepSeek-AI",
+      "score": 80.6,
+      "passRate": "80.6%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "SWE-bench Verified第11，80.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #11, 80.6% pass rate.",
+      "icon": "./icons/github_deepseek-ai.png"
+    },
+    {
+      "id": 12,
+      "name": "Qwen3.7 Max",
+      "vendor": "阿里巴巴",
+      "score": 80.4,
+      "passRate": "80.4%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-bench Verified第12，80.4%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #12, 80.4% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 13,
+      "name": "Claude Sonnet 4",
+      "vendor": "Anthropic",
+      "score": 80.2,
+      "passRate": "80.2%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Verified第13，80.2%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #13, 80.2% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 14,
+      "name": "MiniMax M2.5",
+      "vendor": "MiniMaxAI",
+      "score": 80.2,
+      "passRate": "80.2%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "SWE-bench Verified第14，80.2%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #14, 80.2% pass rate.",
+      "icon": "./icons/minimaxi.com.png"
+    },
+    {
+      "id": 15,
+      "name": "Kimi K2.6",
+      "vendor": "Moonshot AI",
+      "score": 80.2,
+      "passRate": "80.2%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Verified第15，80.2%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #15, 80.2% pass rate.",
+      "icon": "./icons/kimi.png"
+    },
+    {
+      "id": 16,
+      "name": "GPT-5.2",
+      "vendor": "OpenAI",
+      "score": 80,
+      "passRate": "80%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Verified第16，80%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #16, 80% pass rate.",
+      "icon": "./icons/openai.com.png"
+    },
+    {
+      "id": 17,
+      "name": "Claude Sonnet 4.6",
+      "vendor": "Anthropic",
+      "score": 79.6,
+      "passRate": "79.6%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Verified第17，79.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #17, 79.6% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 18,
+      "name": "DeepSeek-V4-Flash",
+      "vendor": "DeepSeek-AI",
+      "score": 79,
+      "passRate": "79%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "SWE-bench Verified第18，79%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #18, 79% pass rate.",
+      "icon": "./icons/github_deepseek-ai.png"
+    },
+    {
+      "id": 19,
+      "name": "Qwen 3.6 Plus Preview",
+      "vendor": "阿里巴巴",
+      "score": 78.8,
+      "passRate": "78.8%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-bench Verified第19，78.8%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #19, 78.8% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 20,
+      "name": "Qwen3.6-Max-Preview",
+      "vendor": "阿里巴巴",
+      "score": 78.8,
+      "passRate": "78.8%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-bench Verified第20，78.8%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #20, 78.8% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 21,
+      "name": "Hy3",
+      "vendor": "腾讯AI实验室",
+      "score": 78,
+      "passRate": "78%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Verified第21，78%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #21, 78% pass rate.",
+      "icon": "./icons/tencent.com.png"
+    },
+    {
+      "id": 22,
+      "name": "GLM-5",
+      "vendor": "智谱AI",
+      "score": 77.8,
+      "passRate": "77.8%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Verified第22，77.8%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #22, 77.8% pass rate.",
+      "icon": "./icons/zhipuai.cn.png"
+    },
+    {
+      "id": 23,
+      "name": "Inkling",
+      "vendor": "Thinking Machines Lab",
+      "score": 77.6,
+      "passRate": "77.6%",
+      "colors": [
+        "#8B5CF6",
+        "#A78BFA"
+      ],
+      "desc": "SWE-bench Verified第23，77.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #23, 77.6% pass rate.",
+      "icon": "./icons/thinkingmachines.ai.png"
+    },
+    {
+      "id": 24,
+      "name": "Muse Spark",
+      "vendor": "Facebook AI研究实验室",
+      "score": 77.4,
+      "passRate": "77.4%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "SWE-bench Verified第24，77.4%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #24, 77.4% pass rate.",
+      "icon": "./icons/github_meta-llama.png"
+    },
+    {
+      "id": 25,
+      "name": "Qwen3.6-27B",
+      "vendor": "阿里巴巴",
+      "score": 77.2,
+      "passRate": "77.2%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-bench Verified第25，77.2%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #25, 77.2% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 26,
+      "name": "GPT-5.1-Codex-Max",
+      "vendor": "OpenAI",
+      "score": 76.8,
+      "passRate": "76.8%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Verified第26，76.8%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #26, 76.8% pass rate.",
+      "icon": "./icons/openai.com.png"
+    },
+    {
+      "id": 27,
+      "name": "Kimi K2.5",
+      "vendor": "Moonshot AI",
+      "score": 76.8,
+      "passRate": "76.8%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Verified第27，76.8%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #27, 76.8% pass rate.",
+      "icon": "./icons/kimi.png"
+    },
+    {
+      "id": 28,
+      "name": "Doubao Seed 2.0 Pro",
+      "vendor": "字节跳动",
+      "score": 76.5,
+      "passRate": "76.5%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Verified第28，76.5%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #28, 76.5% pass rate.",
+      "icon": "./icons/bytedance.com.png"
+    },
+    {
+      "id": 29,
+      "name": "Qwen3.5-397B-A17B",
+      "vendor": "阿里巴巴",
+      "score": 76.4,
+      "passRate": "76.4%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-bench Verified第29，76.4%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #29, 76.4% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 30,
+      "name": "GPT-5.1",
+      "vendor": "OpenAI",
+      "score": 76.3,
+      "passRate": "76.3%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Verified第30，76.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Verified #30, 76.3% pass rate.",
+      "icon": "./icons/openai.com.png"
+    }
+  ],
+  "livecode": [
+    {
+      "id": 1,
+      "name": "DeepSeek-V4-Pro",
+      "vendor": "DeepSeek-AI",
+      "score": 93.5,
+      "passRate": "93.5%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "LiveCodeBench第1，93.5%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #1, 93.5% pass rate.",
+      "icon": "./icons/github_deepseek-ai.png"
+    },
+    {
+      "id": 2,
+      "name": "Gemini 3.0 Pro (Preview 11-2025)",
+      "vendor": "Google",
+      "score": 92,
+      "passRate": "92%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "desc": "LiveCodeBench第2，92%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #2, 92% pass rate.",
+      "icon": "./icons/google.com.png"
+    },
+    {
+      "id": 3,
+      "name": "Qwen3.8-Flash-Next",
+      "vendor": "阿里巴巴",
+      "score": 91.9,
+      "passRate": "91.9%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "LiveCodeBench第3，91.9%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #3, 91.9% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 4,
+      "name": "Gemini 3.1 Pro Preview",
+      "vendor": "Google",
+      "score": 91.7,
+      "passRate": "91.7%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "desc": "LiveCodeBench第4，91.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #4, 91.7% pass rate.",
+      "icon": "./icons/google.com.png"
+    },
+    {
+      "id": 5,
+      "name": "DeepSeek-V4-Flash",
+      "vendor": "DeepSeek-AI",
+      "score": 91.6,
+      "passRate": "91.6%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "LiveCodeBench第5，91.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #5, 91.6% pass rate.",
+      "icon": "./icons/github_deepseek-ai.png"
+    },
+    {
+      "id": 6,
+      "name": "Qwen3.7 Max",
+      "vendor": "阿里巴巴",
+      "score": 91.6,
+      "passRate": "91.6%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "LiveCodeBench第6，91.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #6, 91.6% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 7,
+      "name": "Qwen3.8-27B",
+      "vendor": "阿里巴巴",
+      "score": 90.3,
+      "passRate": "90.3%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "LiveCodeBench第7，90.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #7, 90.3% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 8,
+      "name": "Ternary Bonsai 2 27B",
+      "vendor": "PrismML",
+      "score": 90.07,
+      "passRate": "90.07%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "LiveCodeBench第8，90.07%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #8, 90.07% pass rate.",
+      "icon": ""
+    },
+    {
+      "id": 9,
+      "name": "Kimi K2.6",
+      "vendor": "Moonshot AI",
+      "score": 89.6,
+      "passRate": "89.6%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "LiveCodeBench第9，89.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #9, 89.6% pass rate.",
+      "icon": "./icons/kimi.png"
+    },
+    {
+      "id": 10,
+      "name": "Nemotron 3 Ultra",
+      "vendor": "NVIDIA",
+      "score": 89,
+      "passRate": "89%",
+      "colors": [
+        "#76B900",
+        "#76B900"
+      ],
+      "desc": "LiveCodeBench第10，89%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #10, 89% pass rate.",
+      "icon": "./icons/nvidia.com.png"
+    },
+    {
+      "id": 11,
+      "name": "MAI-Thinking-1",
+      "vendor": "微软",
+      "score": 87.7,
+      "passRate": "87.7%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "desc": "LiveCodeBench第11，87.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #11, 87.7% pass rate.",
+      "icon": "./icons/microsoft.com.png"
+    },
+    {
+      "id": 12,
+      "name": "Gemini 2.5 Deep Think",
+      "vendor": "Google",
+      "score": 87.6,
+      "passRate": "87.6%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "desc": "LiveCodeBench第12，87.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #12, 87.6% pass rate.",
+      "icon": "./icons/google.com.png"
+    },
+    {
+      "id": 13,
+      "name": "Qwen3.6-Max-Preview",
+      "vendor": "阿里巴巴",
+      "score": 87.1,
+      "passRate": "87.1%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "LiveCodeBench第13，87.1%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #13, 87.1% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 14,
+      "name": "Qwen 3.6 Plus Preview",
+      "vendor": "阿里巴巴",
+      "score": 87.1,
+      "passRate": "87.1%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "LiveCodeBench第14，87.1%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #14, 87.1% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 15,
+      "name": "Claude Opus 4.5",
+      "vendor": "Anthropic",
+      "score": 87,
+      "passRate": "87%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "LiveCodeBench第15，87%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #15, 87% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 16,
+      "name": "Step 3.5 Flash",
+      "vendor": "StepFunAI",
+      "score": 86.4,
+      "passRate": "86.4%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "LiveCodeBench第16，86.4%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #16, 86.4% pass rate.",
+      "icon": "./icons/stepfun.com.png"
+    },
+    {
+      "id": 17,
+      "name": "Qwen3-Max-Thinking",
+      "vendor": "阿里巴巴",
+      "score": 85.9,
+      "passRate": "85.9%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "LiveCodeBench第17，85.9%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #17, 85.9% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 18,
+      "name": "GPT-5.1 Codex",
+      "vendor": "OpenAI",
+      "score": 85.5,
+      "passRate": "85.5%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "LiveCodeBench第18，85.5%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #18, 85.5% pass rate.",
+      "icon": "./icons/openai.com.png"
+    },
+    {
+      "id": 19,
+      "name": "Kimi K2.5",
+      "vendor": "Moonshot AI",
+      "score": 85,
+      "passRate": "85%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "LiveCodeBench第19，85%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #19, 85% pass rate.",
+      "icon": "./icons/kimi.png"
+    },
+    {
+      "id": 20,
+      "name": "GLM-4.7",
+      "vendor": "智谱AI",
+      "score": 84.9,
+      "passRate": "84.9%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "LiveCodeBench第20，84.9%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #20, 84.9% pass rate.",
+      "icon": "./icons/zhipuai.cn.png"
+    },
+    {
+      "id": 21,
+      "name": "GLM-4.6",
+      "vendor": "智谱AI",
+      "score": 84.5,
+      "passRate": "84.5%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "LiveCodeBench第21，84.5%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #21, 84.5% pass rate.",
+      "icon": "./icons/zhipuai.cn.png"
+    },
+    {
+      "id": 22,
+      "name": "Qwen3.6-27B",
+      "vendor": "阿里巴巴",
+      "score": 83.9,
+      "passRate": "83.9%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "LiveCodeBench第22，83.9%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #22, 83.9% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 23,
+      "name": "Qwen3.5-397B-A17B",
+      "vendor": "阿里巴巴",
+      "score": 83.6,
+      "passRate": "83.6%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "LiveCodeBench第23，83.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #23, 83.6% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 24,
+      "name": "DeepSeek V3.2",
+      "vendor": "DeepSeek-AI",
+      "score": 83.3,
+      "passRate": "83.3%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "LiveCodeBench第24，83.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #24, 83.3% pass rate.",
+      "icon": "./icons/github_deepseek-ai.png"
+    },
+    {
+      "id": 25,
+      "name": "Kimi K2 Thinking",
+      "vendor": "Moonshot AI",
+      "score": 83.1,
+      "passRate": "83.1%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "LiveCodeBench第25，83.1%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #25, 83.1% pass rate.",
+      "icon": "./icons/kimi.png"
+    },
+    {
+      "id": 26,
+      "name": "MiniMax M2",
+      "vendor": "MiniMaxAI",
+      "score": 83,
+      "passRate": "83%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "LiveCodeBench第26，83%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #26, 83% pass rate.",
+      "icon": "./icons/minimaxi.com.png"
+    },
+    {
+      "id": 27,
+      "name": "Grok 4.1 Fast",
+      "vendor": "xAI",
+      "score": 82,
+      "passRate": "82%",
+      "colors": [
+        "#1E293B",
+        "#334155"
+      ],
+      "desc": "LiveCodeBench第27，82%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #27, 82% pass rate.",
+      "icon": "./icons/x.ai.png"
+    },
+    {
+      "id": 28,
+      "name": "Qwen3.5-27B",
+      "vendor": "阿里巴巴",
+      "score": 80.7,
+      "passRate": "80.7%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "LiveCodeBench第28，80.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #28, 80.7% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 29,
+      "name": "Qwen3.6-35B-A3B",
+      "vendor": "阿里巴巴",
+      "score": 80.4,
+      "passRate": "80.4%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "LiveCodeBench第29，80.4%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #29, 80.4% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 30,
+      "name": "Gemini 2.5 Pro Deep Think",
+      "vendor": "Google",
+      "score": 80.4,
+      "passRate": "80.4%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "desc": "LiveCodeBench第30，80.4%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "LiveCodeBench #30, 80.4% pass rate.",
+      "icon": "./icons/google.com.png"
+    }
+  ],
+  "swe-pro": [
+    {
+      "id": 1,
+      "name": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "score": 89.9,
+      "passRate": "89.9%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-Bench Pro第1，89.9%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #1, 89.9% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 2,
+      "name": "Claude Sonnet 5.5",
+      "vendor": "Anthropic",
+      "score": 81.3,
+      "passRate": "81.3%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-Bench Pro第2，81.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #2, 81.3% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 3,
+      "name": "Claude Fable 5.1",
+      "vendor": "Anthropic",
+      "score": 81.2,
+      "passRate": "81.2%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-Bench Pro第3，81.2%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #3, 81.2% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 4,
+      "name": "Claude Fable 5",
+      "vendor": "Anthropic",
+      "score": 80.3,
+      "passRate": "80.3%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-Bench Pro第4，80.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #4, 80.3% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 5,
+      "name": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "score": 79.2,
+      "passRate": "79.2%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-Bench Pro第5，79.2%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #5, 79.2% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 6,
+      "name": "Claude Mythos Preview",
+      "vendor": "Anthropic",
+      "score": 77.8,
+      "passRate": "77.8%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-Bench Pro第6，77.8%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #6, 77.8% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 7,
+      "name": "Claude Opus 4.8",
+      "vendor": "Anthropic",
+      "score": 69.2,
+      "passRate": "69.2%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-Bench Pro第7，69.2%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #7, 69.2% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 8,
+      "name": "Qwen3.8-Max",
+      "vendor": "阿里巴巴",
+      "score": 67.7,
+      "passRate": "67.7%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-Bench Pro第8，67.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #8, 67.7% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 9,
+      "name": "Hy4 preview",
+      "vendor": "腾讯AI实验室",
+      "score": 65.7,
+      "passRate": "65.7%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-Bench Pro第9，65.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #9, 65.7% pass rate.",
+      "icon": "./icons/tencent.com.png"
+    },
+    {
+      "id": 10,
+      "name": "Grok 4.5",
+      "vendor": "xAI",
+      "score": 64.7,
+      "passRate": "64.7%",
+      "colors": [
+        "#1E293B",
+        "#334155"
+      ],
+      "desc": "SWE-Bench Pro第10，64.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #10, 64.7% pass rate.",
+      "icon": "./icons/x.ai.png"
+    },
+    {
+      "id": 11,
+      "name": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "score": 64.6,
+      "passRate": "64.6%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-Bench Pro第11，64.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #11, 64.6% pass rate.",
+      "icon": "./icons/openai.com.png"
+    },
+    {
+      "id": 12,
+      "name": "Claude Opus 4.7",
+      "vendor": "Anthropic",
+      "score": 64.3,
+      "passRate": "64.3%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-Bench Pro第12，64.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #12, 64.3% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 13,
+      "name": "Qwen3.8-Flash-Next",
+      "vendor": "阿里巴巴",
+      "score": 62.5,
+      "passRate": "62.5%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-Bench Pro第13，62.5%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #13, 62.5% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 14,
+      "name": "GLM-5.2",
+      "vendor": "智谱AI",
+      "score": 62.1,
+      "passRate": "62.1%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-Bench Pro第14，62.1%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #14, 62.1% pass rate.",
+      "icon": "./icons/zhipuai.cn.png"
+    },
+    {
+      "id": 15,
+      "name": "Qwen3.8-27B",
+      "vendor": "阿里巴巴",
+      "score": 61.7,
+      "passRate": "61.7%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-Bench Pro第15，61.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #15, 61.7% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 16,
+      "name": "Muse Spark 1.1",
+      "vendor": "Facebook AI研究实验室",
+      "score": 61.5,
+      "passRate": "61.5%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "SWE-Bench Pro第16，61.5%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #16, 61.5% pass rate.",
+      "icon": "./icons/github_meta-llama.png"
+    },
+    {
+      "id": 17,
+      "name": "Qwen3.7 Max",
+      "vendor": "阿里巴巴",
+      "score": 60.6,
+      "passRate": "60.6%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-Bench Pro第17，60.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #17, 60.6% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 18,
+      "name": "MiniMax M3",
+      "vendor": "MiniMaxAI",
+      "score": 59,
+      "passRate": "59%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "SWE-Bench Pro第18，59%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #18, 59% pass rate.",
+      "icon": "./icons/minimaxi.com.png"
+    },
+    {
+      "id": 19,
+      "name": "Gemini 3.6 Flash",
+      "vendor": "Google",
+      "score": 58.7,
+      "passRate": "58.7%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "desc": "SWE-Bench Pro第19，58.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #19, 58.7% pass rate.",
+      "icon": "./icons/google.com.png"
+    },
+    {
+      "id": 20,
+      "name": "Kimi K2.6",
+      "vendor": "Moonshot AI",
+      "score": 58.6,
+      "passRate": "58.6%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-Bench Pro第20，58.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #20, 58.6% pass rate.",
+      "icon": "./icons/kimi.png"
+    },
+    {
+      "id": 21,
+      "name": "GPT-5.5",
+      "vendor": "OpenAI",
+      "score": 58.6,
+      "passRate": "58.6%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-Bench Pro第21，58.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #21, 58.6% pass rate.",
+      "icon": "./icons/openai.com.png"
+    },
+    {
+      "id": 22,
+      "name": "GLM 5.1",
+      "vendor": "智谱AI",
+      "score": 58.4,
+      "passRate": "58.4%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-Bench Pro第22，58.4%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #22, 58.4% pass rate.",
+      "icon": "./icons/zhipuai.cn.png"
+    },
+    {
+      "id": 23,
+      "name": "Hy3",
+      "vendor": "腾讯AI实验室",
+      "score": 57.9,
+      "passRate": "57.9%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-Bench Pro第23，57.9%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #23, 57.9% pass rate.",
+      "icon": "./icons/tencent.com.png"
+    },
+    {
+      "id": 24,
+      "name": "GPT-5.4",
+      "vendor": "OpenAI",
+      "score": 57.7,
+      "passRate": "57.7%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-Bench Pro第24，57.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #24, 57.7% pass rate.",
+      "icon": "./icons/openai.com.png"
+    },
+    {
+      "id": 25,
+      "name": "Qwen3.6-Max-Preview",
+      "vendor": "阿里巴巴",
+      "score": 57.3,
+      "passRate": "57.3%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-Bench Pro第25，57.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #25, 57.3% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 26,
+      "name": "GPT-5.3 Codex",
+      "vendor": "OpenAI",
+      "score": 56.8,
+      "passRate": "56.8%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-Bench Pro第26，56.8%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #26, 56.8% pass rate.",
+      "icon": "./icons/openai.com.png"
+    },
+    {
+      "id": 27,
+      "name": "Qwen 3.6 Plus Preview",
+      "vendor": "阿里巴巴",
+      "score": 56.6,
+      "passRate": "56.6%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-Bench Pro第27，56.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #27, 56.6% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 28,
+      "name": "Step 3.7 Flash",
+      "vendor": "StepFunAI",
+      "score": 56.3,
+      "passRate": "56.3%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "SWE-Bench Pro第28，56.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #28, 56.3% pass rate.",
+      "icon": "./icons/stepfun.com.png"
+    },
+    {
+      "id": 29,
+      "name": "MiniMax-M2.7",
+      "vendor": "MiniMaxAI",
+      "score": 56.2,
+      "passRate": "56.2%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "SWE-Bench Pro第29，56.2%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #29, 56.2% pass rate.",
+      "icon": "./icons/minimaxi.com.png"
+    },
+    {
+      "id": 30,
+      "name": "GPT-5.2",
+      "vendor": "OpenAI",
+      "score": 55.6,
+      "passRate": "55.6%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-Bench Pro第30，55.6%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-Bench Pro #30, 55.6% pass rate.",
+      "icon": "./icons/openai.com.png"
+    }
+  ],
+  "multilingual": [
+    {
+      "id": 1,
+      "name": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "score": 93.9,
+      "passRate": "93.9%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Multilingual第1，93.9%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #1, 93.9% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 2,
+      "name": "Claude Sonnet 5.5",
+      "vendor": "Anthropic",
+      "score": 90.3,
+      "passRate": "90.3%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Multilingual第2，90.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #2, 90.3% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 3,
+      "name": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "score": 89.5,
+      "passRate": "89.5%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Multilingual第3，89.5%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #3, 89.5% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 4,
+      "name": "Claude Fable 5.1",
+      "vendor": "Anthropic",
+      "score": 89.1,
+      "passRate": "89.1%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Multilingual第4，89.1%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #4, 89.1% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 5,
+      "name": "Claude Mythos Preview",
+      "vendor": "Anthropic",
+      "score": 87.3,
+      "passRate": "87.3%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Multilingual第5，87.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #5, 87.3% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 6,
+      "name": "Intern-S2-397B",
+      "vendor": "上海人工智能实验室",
+      "score": 84,
+      "passRate": "84%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "desc": "SWE-bench Multilingual第6，84%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #6, 84% pass rate.",
+      "icon": "./icons/intern-ai.png"
+    },
+    {
+      "id": 7,
+      "name": "Hy4 preview",
+      "vendor": "腾讯AI实验室",
+      "score": 82.9,
+      "passRate": "82.9%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Multilingual第7，82.9%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #7, 82.9% pass rate.",
+      "icon": "./icons/tencent.com.png"
+    },
+    {
+      "id": 8,
+      "name": "Qwen3.8-Flash-Next",
+      "vendor": "阿里巴巴",
+      "score": 81,
+      "passRate": "81%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-bench Multilingual第8，81%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #8, 81% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 9,
+      "name": "Composer 2.5",
+      "vendor": "Cursor",
+      "score": 79.8,
+      "passRate": "79.8%",
+      "colors": [
+        "#7C3AED",
+        "#A78BFA"
+      ],
+      "desc": "SWE-bench Multilingual第9，79.8%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #9, 79.8% pass rate.",
+      "icon": "./icons/cursor.com.png"
+    },
+    {
+      "id": 10,
+      "name": "Qwen3.7 Max",
+      "vendor": "阿里巴巴",
+      "score": 78.3,
+      "passRate": "78.3%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-bench Multilingual第10，78.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #10, 78.3% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 11,
+      "name": "Kimi K2.6",
+      "vendor": "Moonshot AI",
+      "score": 76.7,
+      "passRate": "76.7%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Multilingual第11，76.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #11, 76.7% pass rate.",
+      "icon": "./icons/kimi.png"
+    },
+    {
+      "id": 12,
+      "name": "MiniMax-M2.7",
+      "vendor": "MiniMaxAI",
+      "score": 76.5,
+      "passRate": "76.5%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "SWE-bench Multilingual第12，76.5%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #12, 76.5% pass rate.",
+      "icon": "./icons/minimaxi.com.png"
+    },
+    {
+      "id": 13,
+      "name": "DeepSeek-V4-Pro",
+      "vendor": "DeepSeek-AI",
+      "score": 76.2,
+      "passRate": "76.2%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "SWE-bench Multilingual第13，76.2%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #13, 76.2% pass rate.",
+      "icon": "./icons/github_deepseek-ai.png"
+    },
+    {
+      "id": 14,
+      "name": "Hy3",
+      "vendor": "腾讯AI实验室",
+      "score": 75.8,
+      "passRate": "75.8%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Multilingual第14，75.8%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #14, 75.8% pass rate.",
+      "icon": "./icons/tencent.com.png"
+    },
+    {
+      "id": 15,
+      "name": "Qwen3.6-Max-Preview",
+      "vendor": "阿里巴巴",
+      "score": 73.8,
+      "passRate": "73.8%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-bench Multilingual第15，73.8%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #15, 73.8% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 16,
+      "name": "Qwen 3.6 Plus Preview",
+      "vendor": "阿里巴巴",
+      "score": 73.8,
+      "passRate": "73.8%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-bench Multilingual第16，73.8%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #16, 73.8% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 17,
+      "name": "Composer 2",
+      "vendor": "Cursor",
+      "score": 73.7,
+      "passRate": "73.7%",
+      "colors": [
+        "#7C3AED",
+        "#A78BFA"
+      ],
+      "desc": "SWE-bench Multilingual第17，73.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #17, 73.7% pass rate.",
+      "icon": "./icons/cursor.com.png"
+    },
+    {
+      "id": 18,
+      "name": "DeepSeek-V4-Flash",
+      "vendor": "DeepSeek-AI",
+      "score": 73.3,
+      "passRate": "73.3%",
+      "colors": [
+        "#6366F1",
+        "#818CF8"
+      ],
+      "desc": "SWE-bench Multilingual第18，73.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #18, 73.3% pass rate.",
+      "icon": "./icons/github_deepseek-ai.png"
+    },
+    {
+      "id": 19,
+      "name": "Kimi K2.5",
+      "vendor": "Moonshot AI",
+      "score": 73,
+      "passRate": "73%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Multilingual第19，73%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #19, 73% pass rate.",
+      "icon": "./icons/kimi.png"
+    },
+    {
+      "id": 20,
+      "name": "Claude Opus 4.6",
+      "vendor": "Anthropic",
+      "score": 72,
+      "passRate": "72%",
+      "colors": [
+        "#D97706",
+        "#F59E0B"
+      ],
+      "desc": "SWE-bench Multilingual第20，72%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #20, 72% pass rate.",
+      "icon": "./icons/anthropic.com.png"
+    },
+    {
+      "id": 21,
+      "name": "Doubao Seed 2.0 Pro",
+      "vendor": "字节跳动",
+      "score": 71.7,
+      "passRate": "71.7%",
+      "colors": [
+        "#10A37F",
+        "#34D399"
+      ],
+      "desc": "SWE-bench Multilingual第21，71.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #21, 71.7% pass rate.",
+      "icon": "./icons/bytedance.com.png"
+    },
+    {
+      "id": 22,
+      "name": "Qwen3.6-27B",
+      "vendor": "阿里巴巴",
+      "score": 71.3,
+      "passRate": "71.3%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-bench Multilingual第22，71.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #22, 71.3% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 23,
+      "name": "Qwen3.5-397B-A17B",
+      "vendor": "阿里巴巴",
+      "score": 69.3,
+      "passRate": "69.3%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-bench Multilingual第23，69.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #23, 69.3% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 24,
+      "name": "Nemotron 3 Ultra",
+      "vendor": "NVIDIA",
+      "score": 67.7,
+      "passRate": "67.7%",
+      "colors": [
+        "#76B900",
+        "#76B900"
+      ],
+      "desc": "SWE-bench Multilingual第24，67.7%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #24, 67.7% pass rate.",
+      "icon": "./icons/nvidia.com.png"
+    },
+    {
+      "id": 25,
+      "name": "Qwen3.6-35B-A3B",
+      "vendor": "阿里巴巴",
+      "score": 67.2,
+      "passRate": "67.2%",
+      "colors": [
+        "#EC4899",
+        "#F472B6"
+      ],
+      "desc": "SWE-bench Multilingual第25，67.2%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #25, 67.2% pass rate.",
+      "icon": "./icons/github_QwenLM.png"
+    },
+    {
+      "id": 26,
+      "name": "Composer 1.5",
+      "vendor": "Cursor",
+      "score": 65.9,
+      "passRate": "65.9%",
+      "colors": [
+        "#7C3AED",
+        "#A78BFA"
+      ],
+      "desc": "SWE-bench Multilingual第26，65.9%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #26, 65.9% pass rate.",
+      "icon": "./icons/cursor.com.png"
+    },
+    {
+      "id": 27,
+      "name": "MAI-Code-1-Flash",
+      "vendor": "微软",
+      "score": 65.5,
+      "passRate": "65.5%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "desc": "SWE-bench Multilingual第27，65.5%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #27, 65.5% pass rate.",
+      "icon": "./icons/microsoft.com.png"
+    },
+    {
+      "id": 28,
+      "name": "Composer 1",
+      "vendor": "Cursor",
+      "score": 56.9,
+      "passRate": "56.9%",
+      "colors": [
+        "#7C3AED",
+        "#A78BFA"
+      ],
+      "desc": "SWE-bench Multilingual第28，56.9%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #28, 56.9% pass rate.",
+      "icon": "./icons/cursor.com.png"
+    },
+    {
+      "id": 29,
+      "name": "Spark-X2.5-4B",
+      "vendor": "科大讯飞",
+      "score": 53.3,
+      "passRate": "53.3%",
+      "colors": [
+        "#3B82F6",
+        "#60A5FA"
+      ],
+      "desc": "SWE-bench Multilingual第29，53.3%通过率。数据源: datalearner.com (2026-10)",
+      "desc_en": "SWE-bench Multilingual #29, 53.3% pass rate.",
+      "icon": "./icons/iflytek.com.png"
+    }
+  ]
 }
